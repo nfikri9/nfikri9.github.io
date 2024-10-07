@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Numbers</title>
+    <link rel="stylesheet" href="Numbers.css">
+  </head>
+  <body>
+    <section id="Challenge-1">
+      <h3>Challenge 1 (Multiples of 3 or 5)</h3>
+      <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. <br>
+         Find the sum of all the multiples of 3 or 5 below the input parameter value number.
+      </p>
+      <div>
+        <label for="Input-1">Input</label>
+        <input id="Input-1" type="number" placeholder="Enter your input">
+        <button onclick="calculation1()">ENTER</button> <br>
+        <span id="Display-1-Multiples3"></span> <br>
+        <span id="Display-1-Multiples5"></span> <br>
+        <span id="Display-1-Multiples3Or5"></span> <br>
+        <span id="Answer-1"></span>
+      </div>
+      <div>
+        <button onclick="displayInsight1()">INSIGHT</button>
+        <ol id="Insight-1">
+          <li><b>Natural Numbers</b> are counting numbers from 1 to infinity. <br>
+              To ensure all the numbers are tested before reaching input value, <code>for</code> statement is used. <br>
+              The initial value is set to 1, the condition is true until reaching input value, then the initial value is incremented by 1.
+          </li>
+          <li><b>Multiples of Numbers</b> can be determined when products are formed from a certain number multiplies with an integer. <br>
+              This condition statement <code>input%number === 0</code> is required. <br>
+              Whenever the remainder of modulo operation is strictly equal to 0, the input is indeed the multiplies of the number.
+          </li>
+          <li><b>Sum</b> is an addition of all numbers. <br>
+              Since it involves several numbers to be added, an array is initialized with empty array. <br>
+              A variable for sum is initialized with 0, so that there is a value for the first index of the array to be added. <br>
+              To add all the numbers that are listed in array, <code>for</code> statement is used. <br>
+              The initial value is set to 0 (indicates the first index of the array), the condition is true until reached all indexes,
+              then the initial value is incremented by 1. <br>
+              The sum calculation <code>mySum += myArray[index]</code> is nested within <code>for</code> statement.
+          </li>
+        </ol>
+      </div>
+
+    </section>
+    <script src="Numbers.js"></script>
+  </body>
+</html>
