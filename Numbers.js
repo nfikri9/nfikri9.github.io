@@ -67,3 +67,32 @@ function fiboEvenSum(input) {
     document.getElementById("Display-2-ListFibo").innerText = "List of Fibonacci Number" + " = " + fibo;
     return sumOfEven;
   };
+
+// CHALLENGE 3
+function displayInsight3(){
+    let myDisplay3 = document.getElementById("Insight-3");
+    if (myDisplay3.style.display == "none") { myDisplay3.style.display = "inline"; }
+    else { myDisplay3.style.display = "none"; }
+}
+
+function calculation3(){
+    let myInput = document.getElementById("Input-3").value;
+    document.getElementById("Answer-3").innerText = "The largest prime factor is " + largestPrimeFactor(myInput);
+}
+
+function largestPrimeFactor(number) {
+    let prime = 2;
+    let index = 1;
+    let max = 0;
+    while(prime <= number){
+      if (number%prime === 0){
+        max = prime;
+        number /= prime;
+      }
+      else {
+        prime++;
+      }
+    }
+    console.log(max);
+    return max;
+}
