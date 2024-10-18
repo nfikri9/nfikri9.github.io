@@ -1,0 +1,13 @@
+/* STYLING LINE'S OF CODES */
+.level2 { padding-left: 10px;}
+.level3 { padding-left: 25px;}
+.level4 { padding-left: 40px;}
+
+/* STYLING TABLES */
+table, th, td {border: 1px solid black;}
+
+body { background-color: lightgrey;}
+
+.standard { width: auto; height: auto; 
+            border: 1px solid black;
+          }

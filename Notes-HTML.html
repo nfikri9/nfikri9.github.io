@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!--Browser Tab-->
+<title>HYPERTEXT MARKUP LANGUAGE</title>
+<link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
+
+<!--Others-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Notes-HTML.css">
+</head>
+
+<body>
+  <!--NAVIGATE BAR-->
+  <a href="#">HTML</a> ||| <a href="Notes-CSS.html">CSS</a> ||| <a href="Notes-JS.html">JavaScript</a> |||
+  <a href="Notes-Gif">Git</a> ||| <a href="Notes-BS">Bootstrap</a>|||<a href="Notes-React.html">React</a> |||
+
+  <section>
+    <h3>HTML TABLE STRUCTURE</h3>
+    <div class="standard"><code>
+      &lt;table&gt;                                                                     <br>
+      <span class="level2">&lt;caption&gt; <em>My Caption</em> &lt;/caption&gt;</span>  <br>
+      <span class="level2">&lt;colgroup&gt;</span>                                      <br>
+      <span class="level3">&lt;col&gt;</span>                                           <br>
+      <span class="level3"><em>...</em></span>                                          <br>
+      <span class="level2">&lt;/colgroup&gt;</span>                                     <br>
+      <span class="level2">&lt;thead&gt;</span>                                         <br>
+      <span class="level3">&lt;tr&gt;</span>                                            <br>
+      <span class="level4">&lt;th&gt; <em>My Header Information</em> &lt;/th&gt;</span> <br>
+      <span class="level4">...</span>                                                   <br>
+      <span class="level3">&lt;/tr&gt;</span>                                           <br>
+      <span class="level3">...</span>                                                   <br>
+      <span class="level2">&lt;/thead&gt;</span>                                        <br>
+      <span class="level2">&lt;tbody&gt;</span>                                         <br>
+      <span class="level3">&lt;tr&gt;</span>                                            <br>
+      <span class="level4">&lt;td&gt; <em>My Data Information</em> &lt;/td&gt;</span>   <br>
+      <span class="level4">...</span>                                                   <br>
+      <span class="level3">&lt;/tr&gt;</span>                                           <br>
+      <span class="level3">...</span>                                                   <br>
+      <span class="level2">&lt;/tbody&gt;</span>                                        <br>
+      <span class="level2">&lt;tfooter&gt;</span>                                       <br>
+      <span class="level3">&lt;tr&gt;</span>                                            <br>
+      <span class="level4">&lt;td&gt; <em>My Data Information</em> &lt;/td&gt;</span>   <br>
+      <span class="level4">...</span>                                                   <br>
+      <span class="level3">&lt;/tr&gt;</span>                                           <br>
+      <span class="level3">... </span>                                                  <br>
+      <span class="level2">&lt;/tfooter&gt;</span>                                      <br>
+      &lt;/table&gt;
+    </code></div>
+
+    <h3>RELATED ELEMENTS</h3>
+    <div class="standard">
+      <table>
+        <tr><th>HTML TAGS</th><th>DESCRIPTIONS</th><th>DEFAULT CSS SETTINGS</th><th>RELATED REFERENCES</th></tr>
+
+        <tr><td><code>&lt;table&gt; <em>My Contents</em> &lt;/table&gt;</code></td>
+            <td><li>[REQUIRED] The &lt;table&gt; tag defines an HTML table</li>
+                <li>An HTML table consists of one &lt;table&gt; element, and one or more &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; elements</li>
+                <li>An HTML table may also include &lt;caption&gt;, &lt;colgroup&gt;, &lt;col&gt;, &lt;thead&gt;, &lt;tbody&gt;, and &lt;tfoot&gt; elements</li>
+            </td>
+            <td><code>table { <br>
+                      display: table; <br>
+                      border-collapse: separate; <br>
+                      border-spacing: 2px; <br>
+                      border-color: gray; <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li>HTML DOM</li></td>
+        </tr>
+
+        <tr><td><code>&lt;tr&gt; <em>My Rows</em> &lt;/tr&gt;</code></td>
+            <td><li>[REQUIRED] The <code>&lt;tr&gt;</code> tag defines a row in an HTML table</li>
+                <li>A <code>&lt;tr&gt;</code> element contains one or more <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code> elements</li>
+            </td>
+            <td><code>tr {                     <br>
+                      display: table-row;      <br>
+                      vertical-align: inherit; <br>
+                      border-color: inherit;   <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li>HTML DOM</li></td>
+        </tr>
+
+        <tr><td><code>&lt;th&gt; <em>My Headers</em> &lt;/th&gt;</code></td>
+            <td><li>[REQUIRED] The <code>&lt;th&gt;</code> tag defines a header cell in an HTML table</li>
+                <li>The <code>&lt;th&gt;</code> tag contains header information</li> <br>
+                <li><b>Related Attributes:</b>
+                    <ul><li><code>&lt;th abbr="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                        <li><code>&lt;th colspan="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                        <li><code>&lt;th headers="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                        <li><code>&lt;th rowspan="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                        <li><code>&lt;th scope="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                    </ul>
+                </li>
+            </td>
+            <td><code>th {                     <br>
+                      display: table-cell;     <br>
+                      vertical-align: inherit; <br>
+                      font-weight: bold;       <br>
+                      text-align: center;      <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li>HTML DOM</li></td>
+        </tr>
+
+        <tr><td><code>&lt;td&gt; <em>My Data</em> &lt;/td&gt;</code></td>
+            <td><li>[REQUIRED] The <code>&lt;td&gt;</code> tag defines a standard data cell in an HTML table</li>
+                <li>The <code>&lt;td&gt;</code> tag contains data</li> <br>
+                <li><b>Related Attributes:</b>
+                    <ul><li><code>&lt;td colspan="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                        <li><code>&lt;td headers="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                        <li><code>&lt;td rowspan="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                    </ul>
+                </li>
+            </td>
+            <td><code>td {                     <br>
+                      display: table-cell;     <br>
+                      vertical-align: inherit; <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li>HTML DOM</li></td>
+        </tr>
+
+        <tr><td><code>&lt;caption&gt; <em>My Caption</em> &lt;/caption&gt;</code></td>
+            <td><li>[RECOMMENDED] The <code>&lt;caption&gt;</code> tag defines a table caption</li>
+                <li>The <code>&lt;caption&gt;</code> tag must be inserted immediately after the <code>&lt;table&gt;</code> tag</li>
+            </td>
+            <td><code>caption {               <br>
+                      display: table-caption; <br>
+                      text-align: center;     <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li>HTML DOM</li></td>
+        </tr>
+
+        <tr><td><code>&lt;colgroup&gt; <em>My Group</em> &lt;/colgroup&gt;</code></td>
+            <td><li>[OPTIONAL] The <code>&lt;colgroup&gt;</code> tag specifies a group of one or more columns in a table for formatting</li>
+                <li>The <code>&lt;colgroup&gt;</code> tag is useful for applying styles to entire columns, instead of repeating the styles for <br>
+                    each cell, for each row
+                </li> <br>
+                <li><b>Related Attributes:</b>
+                    <ul><li><code>&lt;colgroup span="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                    </ul>
+                </li>
+            </td>
+            <td><code>colgroup { <br>
+                      display: table-column-group; <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li>HTML DOM</li></td>
+        </tr>
+        
+        <tr><td><code>&lt;col&gt;</code></td>
+            <td><li>[OPTIONAL] The <code>&lt;col&gt;</code> tag specifies column properties for each column within a <code>&lt;colgroup&gt;</code> element</li>
+                <li>The <code>&lt;col&gt;</code> tag is useful for applying styles to entire columns, instead of repeating the styles <br>
+                    for each cell, for each row
+                </li> <br>
+                <li><b>Related Attributes:</b>
+                    <ul><li><code>&lt;col span="<em>My Value</em>"&gt;</code> - <b>KIV</b></li>
+                    </ul>
+                </li>
+            </td>
+            <td><code>col {                  <br>
+                      display: table-column; <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li>HTML DOM</li></td>
+        </tr>
+
+        <tr><td><code>&lt;thead&gt; <em>My Group</em> &lt;/thead&gt;</code></td>
+            <td><li>[OPTIONAL] The <code>&lt;thead&gt;</code> tag is used to group header content in an HTML table</li>
+                <li>The <code>&lt;thead&gt;</code> element is used in conjunction with the <code>&lt;tbody&gt;</code> and <code>&lt;tfoot&gt;</code> elements <br>
+                    to specify each part of a table
+                </li>
+                <li>Browsers can use these elements to enable scrolling of the table body independently of the header and footer</li>
+                <li>Also, when printing a large table that spans multiple pages, these elements can enable <br>
+                    the table header and footer to be printed at the top and bottom of each page
+                </li>
+            </td>
+            <td><code>thead {                      <br>
+                      display: table-header-group; <br>
+                      vertical-align: middle;      <br>
+                      border-color: inherit;       <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li><del>HTML DOM</del></li></td>
+        </tr>
+
+        <tr><td><code>&lt;tbody&gt; <em>My Group</em> &lt;/tbody&gt;</code></td>
+            <td><li>[OPTIONAL] The <code>&lt;tbody&gt;</code> tag is used to group the body content in an HTML table</li>
+                <li>The <code>&lt;tbody&gt;</code> element is used in conjunction with the <code>&lt;thead&gt;</code> and <code>&lt;tfoot&gt;</code> elements <br>
+                    to specify each part of a table
+                </li>
+                <li>Browsers can use these elements to enable scrolling of the table body independently of the header and footer</li>
+                <li>Also, when printing a large table that spans multiple pages, these elements can enable <br>
+                  the table header and footer to be printed at the top and bottom of each page
+                </li>
+            </td>
+            <td><code>tbody {                   <br>
+                      display: table-row-group; <br>
+                      vertical-align: middle;   <br>
+                      border-color: inherit;    <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li><del>HTML DOM</del></li></td>
+        </tr>
+
+        <tr><td><code>&lt;tfoot&gt; <em>My Group</em> &lt;/tfoot&gt;</code></td>
+            <td><li>[OPTIONAL] The <code>&lt;tfoot&gt;</code> tag is used to group footer content in an HTML table</li>
+              <li>The <code>&lt;tfoot&gt;</code> element is used in conjunction with the <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> elements <br>
+                  to specify each part of a table
+              </li>
+              <li>Browsers can use these elements to enable scrolling of the table body independently of the header and footer</li>
+              <li>Also, when printing a large table that spans multiple pages, these elements can enable <br>
+                the table header and footer to be printed at the top and bottom of each page
+              </li>
+            </td>
+            <td><code>tfoot {                      <br>
+                      display: table-footer-group; <br>
+                      vertical-align: middle;      <br>
+                      border-color: inherit;       <br>
+                      }
+            </code></td>
+            <td><li>HTML Global Attributes</li><li>HTML Event Attributes</li><li><del>HTML DOM</del></li></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+</body>
+
+</html>
