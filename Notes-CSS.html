@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!--Browser Tab-->
+<title>CASCADING STYLE SHEETS</title>
+<link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
+
+<!--Others-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Notes-CSS.css">
+</head>
+
+<body>
+  <!--NAVIGATE BAR-->
+  <a href="Notes-HTML.html">HTML</a> ||| <a href="#">CSS</a> ||| <a href="Notes-JS.html">JavaScript</a> |||
+  <a href="Notes-Gif">Git</a> ||| <a href="Notes-BS">Bootstrap</a>|||<a href="Notes-React.html">React</a> |||
+
+  <section>
+    <h3>BOX MODEL</h3>
+    <div id="Box-Model" style="width: 100px; height: 100px; border: 1px solid black;"></div>
+    <div>
+      <code><em>My Selectors</em> {
+        <label for="Input-Height">height: <input id="Input-Height" type="text" placeholder="My Height Value"> ;</label>            <br>
+        <label class="Level3" for="Input-Width">width: <input id="Input-Width" type="text" placeholder="My Width Value"> ;</label> <br>
+        <span class="Level2"></span>}
+      </code>
+      <button onclick="myBoxModel()">MODIFY</button>
+    </div>
+  </section>
+
+  <section>
+    <h3>SIZE</h3>
+    <table>
+      <tr><th>CSS PROPERTIES</th><th>DESCRIPTIONS</th></tr>
+
+      <tr><td><code><em>My Selector</em> { height: <em>My Value</em>; }</code></td>
+          <td><li>The <code>height</code> property sets the height of an element</li>
+              <li>Usually, the <code>height</code> property is used together with <code>width</code> property</li>
+              <li>The height of an element does not include padding, borders, or margins</li>
+              <li>If <code>height</code> property is omitted, the browser set it as <code>height: auto;</code></li>
+              <li>If the content does not fit within the specified height, the content will overflow (use <code>overflow</code> property)</li>
+              <br>
+              <li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code><em>CSS Length Values</em></code></li>
+                    <li><code>auto</code>
+                      <ul><li><b>[DEFAULT]</b> The browser will adjust the element's height automatically to allow its content to be displayed correctly</li>
+                          <li>If there is no content inside the element, the browser sets <code>height: 0;</code></li>
+                          <li>If there are contents inside the element, the browsers sets the height based on its content's height</li>
+                      </ul>
+                    </li>
+                    <li><code>fit-content</code></li>
+                    <li><code>max-content</code></li>
+                    <li><code>min-content</code></li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+
+      <tr><td><code><em>My Selector</em> { width: <em>My Value</em>; }</code></td>
+          <td><li>The <code>width</code> property sets the width of an element</li>
+              <li>Usually, the <code>width</code> property is used together with <code>height</code> property</li>
+              <li>The width of an element does not include padding, borders, or margins</li>
+              <li>If <code>width</code> property is omitted, the browser set it as <code>width: auto;</code></li>
+              <li>If the content does not fit within the specified width, the contents will be displayed on the next line</li> <br>
+              <li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code><em>CSS Length Values</em></code></li>
+                    <li><code>auto</code>
+                      <ul><li><b>[DEFAULT]</b> The bowser will adjust element's width automatically based on its <code>display</code> property</li>
+                          <li>Example, if the element is block element, its width is 100% full stretched to its parent</li>
+                          <li>Example, if the element is inline element, its width will be adjusted based on its contents width</li>
+                      </ul>
+                    </li>
+                    <li><code>fit-content</code></li>
+                    <li><code>max-content</code></li>
+                    <li><code>min-content</code></li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+
+      <tr><td><code><em>My Selector</em> { min-height: <em>My Value</em>; }</code></td>
+          <td><li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code><em>CSS Length Values</em></code></li>
+                    <li><code>auto</code></li>
+                    <li><code>fit-content</code></li>
+                    <li><code>max-content</code></li>
+                    <li><code>min-content</code></li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+
+      <tr><td><code><em>My Selector</em> { max-height: <em>My Value</em>; }</code></td>
+          <td><li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code><em>CSS Length Values</em></code></li>
+                    <li><code>fit-content</code></li>
+                    <li><code>max-content</code></li>
+                    <li><code>min-content</code></li>
+                    <li><code>none</code></li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+
+      <tr><td><code><em>My Selector</em> { min-width: <em>My Value</em>; }</code></td>
+          <td><li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code><em>CSS Length Values</em></code></li>
+                    <li><code>auto</code></li>
+                    <li><code>fit-content</code></li>
+                    <li><code>max-content</code></li>
+                    <li><code>min-content</code></li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+
+      <tr><td><code><em>My Selector</em> { max-width: <em>My Value</em>; }</code></td>
+          <td><li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code><em>CSS Length Values</em></code></li>
+                    <li><code>fit-content</code></li>
+                    <li><code>max-content</code></li>
+                    <li><code>min-content</code></li>
+                    <li><code>none</code></li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h3>CSS DATA TYPES</h3>
+    <table>
+      <caption><b>CSS GLOBAL</b></caption>
+      <tr><th>CSS VALUES</th><th>DESCRIPTIONS</th></tr>
+      <tr><td><code>calc()</code></td><td>???</td></tr>
+      <tr><td><code>inherit</code></td><td>The <code>initial</code> keyword is used to set a CSS property to its default value</td></tr>
+      <tr><td><code>initial</code></td><td>The <code>inherit</code> keyword specifies that a CSS property should inherit its value from its parent element</td></tr>
+      <tr><td><code>unset</code></td><td>???</td></tr>
+      <tr><td><code>var()</code></td><td>???</td></tr>
+    </table> <br>
+
+    <table>
+      <caption><b>CSS LENGTH</b></caption>
+      <tr><th>CSS VALUES</th><th>DESCRIPTIONS</th></tr>
+      <tr><td>Absolute Lengths Unit</td>
+          <td><li>The absolute length units are fixed and will appear as exactly that size</li>
+              <li>Absolute length units are not relative to anything else</li>
+              <li>Absolute length units are <b>not recommended</b> for use on screen, because screen sizes vary so much</li>
+              <li>Absolute length units are not suit well for responsive web design</li>
+              <li>However, they can be used if the output medium is known, such as for print layout</li> <br>
+              <li><b>Related Values:</b>
+                <ul><li>Centimeters (<code>cm</code>)</li>
+                    <li>Millimeters (<code>mm</code>)</li>
+                    <li>Quarter-millimeters (<code>Q</code>)</li>
+                    <li>Inches (<code>in</code>)</li>
+                    <li>Picas (<code>pc</code>)</li>
+                    <li>Points (<code>pt</code>)</li>
+                    <li>Pixels (<code>px</code>)</li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+      <tr><td>Relative Lengths Unit</td>
+          <td><li>Relative length units are based on font, container, or viewport sizes</li>
+              <li>Relative length units scale better between different rendering medium</li>
+              <li>Relative length units are <b>recommended</b> for building responsive web design</li> <br>
+              <li><b>Related Values:</b>
+                <ul><li>Relative length units based on font
+                      <ul><li><code>cap</code>
+                            <ul><li>Represents the "cap height" (nominal height of capital letters) of the element's font</li></ul>
+                          </li>
+                          <li><code>ch</code>
+                            <ul><li>Represents the width of the glyph 0 (zero) in the element's font</li>
+                                <li>In cases where determining the measure of the 0 glyph is impossible or impractical, it must be assumed
+                                    to be 0.5em wide by 1em tall
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code>em</code>
+                            <ul><li>Represents the calculated font-size of the element</li>
+                                <li>If used on the font-size property itself, it represents the inherited font-size of the element</li>
+                            </ul>
+                          </li>
+                          <li><code>ex</code>
+                            <ul><li>Represents the x-height of the element's font</li>
+                                <li>In fonts with the x letter, this is generally the height of lowercase letters in the font; 1ex ≈ 0.5em in many fonts</li>
+                            </ul>
+                          </li>
+                          <li><code>ic</code>
+                            <ul><li>Equal to the used advance measure of the "水" glyph (CJK water ideograph), found in the font used to render it</li></ul>
+                          </li>
+                          <li><code>lh</code>
+                            <ul><li>Equal to the computed value of the line-height property of the element on which it is used, converted to an absolute length</li>
+                                <li>This unit enables length calculations based on the theoretical size of an ideal empty line</li>
+                                <li>However, the size of actual line boxes may differ based on their content</li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li>Relative length units based on root's element font
+                      <ul><li><code>rcap</code><ul><li>Equal to the "cap height" (nominal height of capital letters) of the root element's font</li></ul></li>
+                          <li><code>rch</code><ul><li>Equal to the width of the glyph 0 (zero) in the root element's font</li></ul></li>
+                          <li><code>rem</code>
+                            <ul><li>Represents the font-size of the root element (typically &lt;html&gt;)</li>
+                                <li>When used within the root element font-size, it represents its initial value</li>
+                                <li>A common browser default is 16px, but user-defined preferences may modify this</li>
+                            </ul>
+                          </li>
+                          <li><code>rex</code><ul><li>Represents the x-height of the root element's font</li></ul></li>
+                          <li><code>ric</code><ul><li>Equal to the value of ic unit on the root element's font</li></ul></li>
+                          <li><code>rlh</code>
+                            <ul><li>Equal to the value of lh unit on the root element's font</li>
+                                <li>This unit enables length calculations based on the theoretical size of an ideal empty line</li>
+                                <li>However, the size of actual line boxes may differ based on their content</li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li>Relative length units based on viewport
+                      <ul><li><code>sv</code>
+                            <ul><li>The small viewport size is represented by the sv prefix and results in the sv* viewport-percentage length units</li>
+                                <li>The sizes of the small viewport-percentage units are fixed, and therefore stable, unless the viewport itself is resized</li>
+                                <li>When you want the smallest possible viewport in response to browser interfaces expanding dynamically, you should
+                                    use the small viewport size
+                                </li>
+                                <li>The small viewport size allows the content you design to fill the entire viewport when browser interfaces are expanded</li>
+                                <li>Choosing this size might also possibly leave empty spaces when browser interfaces retract</li>
+                                <li>For example, an element that is sized using viewport-percentage units based on the small viewport size,
+                                    the element will fill the screen perfectly without any of its content being obscured when all the dynamic browser interfaces are shown
+                                </li>
+                                <li>When those browser interfaces are hidden, however, there might be extra space visible around the element</li>
+                                <li>Therefore, the small viewport-percentage units are "safer" to use in general,
+                                    but might not produce the most attractive layout after a user starts interacting with the page
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code>lv</code>
+                            <ul><li>The large viewport unit is represented by the lv prefix and results in the lv* viewport-percentage units</li>
+                                <li>The sizes of the large viewport-percentage units are fixed and therefore stable, unless the viewport itself is resized</li>
+                                <li>When you want the largest possible viewport in response to browser interfaces retracting dynamically,
+                                    you should use the large viewport size
+                                </li>
+                                <li>The large viewport size allows the content you design to fill the entire viewport when browser interfaces are retracting</li>
+                                <li>You need to be aware that the content might get hidden when browser interfaces expand</li>
+                                <li>For example, on mobile phones where screen real-estate is at a premium, browsers often hide part or all of the
+                                    title and address bar after a user starts scrolling the page
+                                </li>
+                                <li>When an element is sized using a viewport-percentage unit based on the large viewport size, the content of the element
+                                    will fill the entire visible page when these browser interfaces are hidden
+                                </li>
+                                <li>However, when these retractable browser interfaces are shown, they can hide the content that is sized
+                                    or positioned using the large viewport-percentage units
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code>dv</code>
+                            <ul><li>The dynamic viewport unit is represented by the dv prefix and results in the dv* viewport-percentage units</li>
+                                <li>The sizes of the dynamic viewport-percentage units are not stable, even when the viewport itself is unchanged</li>
+                                <li>When you want the viewport to be automatically sized in response to browser interfaces dynamically expanding or 
+                                    retracting, you can use the dynamic viewport size
+                                </li>
+                                <li>The dynamic viewport size allows the content you design to fit exactly within the viewport, irrespective of
+                                    the presence of dynamic browser interfaces
+                                </li>
+                                <li>While the dynamic viewport size can give you more control and flexibility, using viewport-percentage units based
+                                    on the dynamic viewport size can cause the content to resize while a user is scrolling a page
+                                </li>
+                                <li>This can lead to degradation of the user interface and cause a performance hit</li>
+                            </ul>
+                          </li>
+                          <li>Default
+                            <ul><li>The default viewport size is defined by the browser</li>
+                                <li>The behavior of the resulting viewport-percentage unit could be equivalent to the viewport-percentage unit based
+                                    on the small viewport size, the large viewport size, an intermediate size between the two, or the dynamic viewport size
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code>vh</code>
+                            <ul><li>Represents a percentage of the height of the viewport's initial containing block</li>
+                                <li>1vh is 1% of the viewport height</li>
+                                <li>For example, if the viewport height is 300px, then a value of 70vh on a property will be 210px</li>
+                                <li>The respective viewport-percentage units for small, large, and dynamic viewport sizes are svh, lvh, and dvh</li>
+                                <li>vh represents the viewport-percentage length unit based on the browser's default viewport size</li>
+                            </ul>
+                          </li>
+                          <li><code>vw</code>
+                            <ul><li>Represents a percentage of the width of the viewport's initial containing block</li>
+                                <li>1vw is 1% of the viewport width</li>
+                                <li>For example, if the viewport width is 800px, then a value of 50vw on a property will be 400px</li>
+                                <li>For small, large, and dynamic viewport sizes, the respective viewport-percentage units are svw, lvw, and dvw</li>
+                                <li>vw represents the viewport-percentage length unit based on the browser's default viewport size</li>
+                            </ul>
+                          </li>
+                          <li><code>vmax</code>
+                            <ul><li>Represents in percentage the largest of vw and vh</li>
+                                <li>For small, large, and dynamic viewport sizes, the respective viewport-percentage units are svmax, lvmax, and dvmax</li>
+                                <li>vmax represents the viewport-percentage length unit based on the browser's default viewport size</li>
+                            </ul>
+                          </li>
+                          <li><code>vmin</code>
+                            <ul><li>Represents in percentage the smallest of vw and vh</li>
+                                <li>For small, large, and dynamic viewport sizes, the respective viewport-percentage units are svmin, lvmin, and dvmin</li>
+                                <li>vmin represents the viewport-percentage length unit based on the browser's default viewport size</li>
+                            </ul>
+                          </li>
+                          <li><code>vb</code>
+                            <ul><li>Represents the percentage of the size of the initial containing block, in the direction of the root element's block axis</li>
+                                <li>For small, large, and dynamic viewport sizes, the respective viewport-percentage units are svb, lvb, and dvb</li>
+                                <li>vb represents the viewport-percentage length unit based on the browser's default viewport size</li>
+                            </ul>
+                          </li>
+                          <li><code>vi</code>
+                            <ul><li>Represents a percentage of the size of the initial containing block, in the direction of the root element's inline axis</li>
+                                <li>For small, large, and dynamic viewport sizes, the respective viewport-percentage units are svi, lvi, and dvi</li>
+                                <li>vi represents the viewport-percentage length unit based on the browser's default viewport size</li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li>Container query length units
+                      <ul><li><code>cqw</code>
+                            <ul><li>Represents a percentage of the width of the query container</li>
+                                <li>1cqw is 1% of the query container's width</li>
+                                <li>For example, if the query container's width is 800px, then a value of 50cqw on a property will be 400px</li>
+                            </ul>
+                          </li>
+                          <li><code>cqh</code>
+                            <ul><li>Represents a percentage of the height of the query container</li>
+                                <li>1cqh is 1% of the query container's height</li>
+                                <li>For example, if the query container's height is 300px, then a value of 10cqh on a property will be 30px</li>
+                            </ul>
+                          </li>
+                          <li><code>cqi</code>
+                            <ul><li>Represents a percentage of the inline size of the query container</li>
+                                <li>1cqi is 1% of the query container's inline size</li>
+                                <li>For example, if the query container's inline size is 800px, then a value of 50cqi on a property will be 400px</li>
+                            </ul>
+                          </li>
+                          <li><code>cqb</code>
+                            <ul><li>Represents a percentage of the block size of the query container</li>
+                                <li>1cqb is 1% of the query container's block size</li>
+                                <li>For example, if the query container's block size is 300px, then a value of 10cqb on a property will be 30px</li>
+                            </ul>
+                          </li>
+                          <li><code>cqmin</code>
+                            <ul><li>Represents a percentage of the smaller value of either the query container's inline size or block size</li>
+                                <li>1cqmin is 1% of the smaller value of either the query container's inline size or block size</li>
+                                <li>For example, if the query container's inline size is 800px and its block size is 300px,
+                                    then a value of 50cqmin on a property will be 150px
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code>cqmax</code>
+                            <ul><li>Represents a percentage of the larger value of either the query container's inline size or block size</li>
+                                <li>1cqmax is 1% of the larger value of either the query container's inline size or block size</li>
+                                <li>For example, if the query container's inline size is 800px and its block size is 300px,
+                                    then a value of 50cqmax on a property will be 400px
+                                </li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+    </table> <br>
+
+    <table>
+      <caption><b>CSS COLOR</b></caption>
+      <tr><th>CSS VALUES</th><th>DESCRIPTIONS</th></tr>
+      <tr><td>???</td><td>???</td></tr>
+    </table>
+  </section>
+
+  <!--IMPORTING EXTERNAL JS SCRIPT-->
+  <script src="Notes-CSS.js"></script>
+
+</body>
+</html>

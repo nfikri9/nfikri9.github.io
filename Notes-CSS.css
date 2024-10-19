@@ -1,10 +1,9 @@
-/* STYLING LINE'S OF CODES */
-.level2 { padding-left: 10px; }
-.level3 { padding-left: 25px; }
-.level4 { padding-left: 40px; }
-
 /* STYLING TABLES */
 table, th, td { border: 1px solid black; }
+
+/* STYLING LINES OF CODES */
+.Level2 { padding-left: 94px; }
+.Level3 { padding-left: 110px; }
 
 body { background-color: lightgrey; }
 
