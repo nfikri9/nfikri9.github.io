@@ -19,11 +19,16 @@
 
   <section>
     <h3>BOX MODEL</h3>
-    <div id="Box-Model" style="width: 100px; height: 100px; border: 1px solid black;"></div>
+    <div id="Box-Model" style="height:100px; width: 100px; border: 1px solid black;">
+       Sample
+    </div>
     <div>
       <code><em>My Selectors</em> {
-        <label for="Input-Height">height: <input id="Input-Height" type="text" placeholder="My Height Value"> ;</label>            <br>
-        <label class="Level3" for="Input-Width">width: <input id="Input-Width" type="text" placeholder="My Width Value"> ;</label> <br>
+        <label for="Input-Height">height: <input id="Input-Height" type="text" placeholder="My Height Value"> ;</label>                                            <br>
+        <label class="Level3" for="Input-Width">width: <input id="Input-Width" type="text" placeholder="My Width Value"> ;</label>                                 <br>
+        <label class="Level3" for="Input-Padding">padding: <input id="Input-Padding" type="text" placeholder="My Padding Value"> ;</label>                         <br>
+        <label class="Level3" for="Input-Border">border: <input id="Input-Border" type="text" placeholder="My Border Value"> ;</label>                             <br>
+        <label class="Level3" for="Input-Border-Radius">border-radius: <input id="Input-Border-Radius" type="text" placeholder="My Border Radius Value"> ;</label> <br>
         <span class="Level2"></span>}
       </code>
       <button onclick="myBoxModel()">MODIFY</button>
@@ -56,6 +61,59 @@
                     <li><code>min-content</code></li>
                 </ul>
               </li>
+              <li>Other related <code>height</code> properties:
+                <ol><li><code><em>My Selector</em> { min-height: <em>My Value</em>; }</code>
+                      <ul><li>The <code>min-height</code> property defines the minimum height of an element</li>
+                          <li>If the content is smaller than the minimum height, the minimum height will be applied</li>
+                          <li>If the content is larger than the minimum height, the <code>min-height</code> property has no effect and <br> 
+                              adjust the height based on content's height
+                          </li>
+                          <li>When there are <code>min-height</code> and <code>height</code> properties placed together, the <code>min-height</code> <br>
+                              will override <code>height</code> property if <code>min-height</code>'s value is greater than <code>height</code>'s value
+                          </li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>auto</code>
+                                  <ul><li><b>[DEFAULT]</b> The browser will adjust the element's height automatically to allow its content to be displayed correctly</li>
+                                      <li>If there is no content inside the element, the browser sets <code>min-height: 0;</code></li>
+                                      <li>If there are contents inside the element, the browsers sets the height based on its content's height</li>
+                                  </ul>
+                                </li>
+                                <li><code>fit-content</code></li>
+                                <li><code>max-content</code></li>
+                                <li><code>min-content</code></li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li><code><em>My Selector</em> { max-height: <em>My Value</em>; }</code>
+                      <ul><li>The <code>max-height</code> property defines the maximum height of an element</li>
+                          <li>If the content is smaller than the maximum height, the <code>max-height</code> property has no effect and <br>
+                              adjust the height based on content's height
+                          </li>
+                          <li>If the content is greater than the maximum height, the maximum height will be applied, <br>
+                              and it will results contents to be overflowed (use <code>overflow</code> property)
+                          </li>
+                          <li>When they are <code>max-height</code> and <code>height</code> properties are placed together, the <code>max-height</code> will override <code>height</code>
+                              <br> if the <code>max-height</code>'s value is less than <code>height</code>'s value
+                          </li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>none</code>
+                                  <ul><li><b>[DEFAULT]</b> No maximum height</li>
+                                  </ul>
+                                </li>
+                                <li><code>fit-content</code></li>
+                                <li><code>max-content</code></li>
+                                <li><code>min-content</code></li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li>
+                </ol>
+              </li>
           </td>
       </tr>
 
@@ -79,56 +137,46 @@
                     <li><code>min-content</code></li>
                 </ul>
               </li>
-          </td>
-      </tr>
-
-      <tr><td><code><em>My Selector</em> { min-height: <em>My Value</em>; }</code></td>
-          <td><li><b>Related Values:</b>
-                <ul><li><code><em>CSS Global Values</em></code></li>
-                    <li><code><em>CSS Length Values</em></code></li>
-                    <li><code>auto</code></li>
-                    <li><code>fit-content</code></li>
-                    <li><code>max-content</code></li>
-                    <li><code>min-content</code></li>
-                </ul>
-              </li>
-          </td>
-      </tr>
-
-      <tr><td><code><em>My Selector</em> { max-height: <em>My Value</em>; }</code></td>
-          <td><li><b>Related Values:</b>
-                <ul><li><code><em>CSS Global Values</em></code></li>
-                    <li><code><em>CSS Length Values</em></code></li>
-                    <li><code>fit-content</code></li>
-                    <li><code>max-content</code></li>
-                    <li><code>min-content</code></li>
-                    <li><code>none</code></li>
-                </ul>
-              </li>
-          </td>
-      </tr>
-
-      <tr><td><code><em>My Selector</em> { min-width: <em>My Value</em>; }</code></td>
-          <td><li><b>Related Values:</b>
-                <ul><li><code><em>CSS Global Values</em></code></li>
-                    <li><code><em>CSS Length Values</em></code></li>
-                    <li><code>auto</code></li>
-                    <li><code>fit-content</code></li>
-                    <li><code>max-content</code></li>
-                    <li><code>min-content</code></li>
-                </ul>
-              </li>
-          </td>
-      </tr>
-
-      <tr><td><code><em>My Selector</em> { max-width: <em>My Value</em>; }</code></td>
-          <td><li><b>Related Values:</b>
-                <ul><li><code><em>CSS Global Values</em></code></li>
-                    <li><code><em>CSS Length Values</em></code></li>
-                    <li><code>fit-content</code></li>
-                    <li><code>max-content</code></li>
-                    <li><code>min-content</code></li>
-                    <li><code>none</code></li>
+              <li>Other related <code>width</code> properties:
+                <ul><li><code><em>My Selector</em> { min-width: <em>My Value</em>; }</code>
+                      <ul><li>The <code>min-width</code> property defines the minimum width of an element</li>
+                          <li>If the content is smaller than the minimum width, the minimum width will be applied and applying responsive web until <br>
+                              reaching the breakpoint of its <code>min-width</code>
+                          </li>
+                          <li>If the content is larger than the minimum width, the <code>min-width</code> property has no effect and the contents <br>
+                              will be displayed on the next line
+                          </li>
+                          <li>When there are <code>min-width</code> and <code>width</code> properties are placed together, the property who got higher value will overrides the another</li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>auto</code><ul><li><b>[DEFAULT]</b> The browser will adjust the element's width responsively to the screen size</li></ul>
+                                </li>
+                                <li><code>fit-content</code></li>
+                                <li><code>max-content</code></li>
+                                <li><code>min-content</code></li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li><code><em>My Selector</em> { max-width: <em>My Value</em>; }</code>
+                      <ul><li>The <code>max-width</code> property defines the maximum width of an element</li>
+                          <li>If the content is larger than the maximum width, it will automatically change the height of the element</li>
+                          <li>If the content is smaller than the maximum width, the <code>max-width</code> property has no effect and applying responsive web until <br>
+                              reaching the breakpoint of its <code>max-width</code>
+                          </li>
+                          <li>When there are <code>max-width</code> and <code>width</code> properties are placed together, the property who got lower value will overrides the another</li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>none</code> <ul><li><b>[DEFAULT]</b> No maximum width, the browser will adjust the element's width responsively to the screen size</li></ul></li>
+                                <li><code>fit-content</code></li>
+                                <li><code>max-content</code></li>
+                                <li><code>min-content</code></li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li>
                 </ul>
               </li>
           </td>
@@ -136,6 +184,157 @@
     </table>
   </section>
 
+  <section>
+    <h3>PADDING, BORDER, MARGIN</h3>
+    <table>
+      <tr><th>CSS PROPERTIES</th><th>DESCRIPTIONS</th></tr>
+
+      <tr><td><code><em>My Selector</em> { padding: <em>My Values</em>; }</code></td>
+          <td><li>The <code>padding</code> property defines the space between the element's content and its border</li>
+              <li>Other related <code>padding</code> properties:
+                <ul><li><code><em>My Selector</em> { padding-top: <em>My Value</em>; }</code></li>
+                    <li><code><em>My Selector</em> { padding-right: <em>My Value</em>; }</code></li>
+                    <li><code><em>My Selector</em> { padding-bottom: <em>My Value</em>; }</code></li>
+                    <li><code><em>My Selector</em> { padding-left: <em>My Value</em>; }</code></li>
+                </ul>
+              </li>
+              <li>The <code>padding</code> property can have multiple values (multiple sides) within single property
+                <ul><li>4 values = <code>padding: <em>Padding-Top Padding-Right Padding-Bottom Padding-Left</em>;</code></li>
+                    <li>3 values = <code>padding: <em>Padding-Top Padding-Horizontal Padding-Bottom</em>;</code></li>
+                    <li>2 values = <code>padding: <em>Padding-Vertical Padding-Horizontal</em>;</code></li>
+                    <li>1 value = <code>padding: <em>Padding-All</em>;</code></li>
+                </ul>
+              </li>
+              <li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code><em>CSS Length Values</em></code></li>
+                    <li><code>0</code> - <b>[DEFAULT]</b> No padding</li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+
+      <tr><td><code><em>My Selector</em> { border: <em>My Values</em>; }</code></td>
+          <td><li>The <code>border</code> property defines border's characteristics of an element</li>
+              <li>The <code>border</code> property can have multiple values (multiple properties) within single property
+                <ul><li><code><em>My Selector</em> { border: <em>Border-Width Border-Style Border-Color</em>; }</code></li></ul>
+              </li>
+              <li>Other related <code>border</code> properties:
+                <ol><li><code><em>My Selector</em> { border-width: <em>My Values</em>; }</code>
+                      <ul><li>The <code>border-width</code> property sets the width of an element's borders</li>
+                          <li>Other related <code>border-width</code> properties:
+                            <ul><li><code><em>My Selector</em> { border-top-width: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-right-width: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-bottom-width: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-left-width: <em>My Value</em>; }</code></li>
+                            </ul>
+                          </li>
+                          <li>The <code>border-width</code> property can have multiple values (multiple sides) within single property
+                            <ul><li>4 values = <code>border-width: <em>Border-Top-Width Border-Right-Width Border-Bottom-Width Border-Left-Width</em>;</code></li>
+                                <li>3 values = <code>border-width: <em>Border-Top-Width Border-Horizontal-Width Border-Bottom-Width</em>;</code></li>
+                                <li>2 values = <code>border-width: <em>Border-Vertical-Width Border-Horizontal-Width</em>;</code></li>
+                                <li>1 value = <code>border-width: <em>Border-All-Width</em>;</code></li>
+                            </ul>
+                          </li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>medium</code> - <b>[DEFAULT]</b> Specifies a medium border</li>
+                                <li><code>thick</code> - Specifies a thick border</li>
+                                <li><code>thin</code> - Specifies a thin border</li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li><code><em>My Selector</em> { border-style: <em>My Values</em>; }</code>
+                      <ul><li>The <code>border-style</code> property sets the style of an element's borders</li>
+                          <li>Other related <code>border-style</code> properties:
+                            <ul><li><code><em>My Selector</em> { border-top-style: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-right-style: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-bottom-style: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-left-style: <em>My Value</em>; }</code></li>
+                            </ul>
+                          </li>
+                          <li>The <code>border-style</code> property can have multiple values (multiple sides) within single property
+                            <ul><li>4 values = <code>border-style: <em>Border-Top-Style Border-Right-Style Border-Bottom-Style Border-Left-Style</em>;</code></li>
+                                <li>3 values = <code>border-style: <em>Border-Top-Style Border-Horizontal-Style Border-Bottom-Style</em>;</code></li>
+                                <li>2 values = <code>border-style: <em>Border-Vertical-Style Border-Horizontal-Style</em>;</code></li>
+                                <li>1 value = <code>border-style: <em>Border-All-Style</em>;</code></li>
+                            </ul>
+                          </li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>none</code> - <b>[DEFAULT]</b> Specifies no border</li>
+                                <li><code>dashed</code> - Specifies a dashed border</li>
+                                <li><code>dotted</code> - Specifies a dotted border</li>
+                                <li><code>double</code> - Specifies a double border</li>
+                                <li><code>groove</code> - Specifies a 3D grooved border (the effect depends on the <code>border-color</code> value)</li>
+                                <li><code>hidden</code> - The same as <code>none</code>, except in border conflict resolution for table elements</li>
+                                <li><code>inset</code> - Specifies a 3D inset border (the effect depends on the <code>border-color</code> value)</li>
+                                <li><code>outset</code> - Specifies a 3D outset border (the effect depends on the <code>border-color</code> value)</li>
+                                <li><code>ridge</code> - Specifies a 3D ridged border (the effect depends on the <code>border-color</code> value)</li>
+                                <li><code>solid</code> - Specifies a solid border</li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li><code><em>My Selector</em> { border-color: <em>My Values</em>; }</code>
+                      <ul><li>The <code>border-color</code> property sets the color of an element's borders</li>
+                          <li>Other related <code>border-color</code> properties:
+                            <ul><li><code><em>My Selector</em> { border-top-color: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-right-color: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-bottom-color: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-left-color: <em>My Value</em>; }</code></li>
+                            </ul>
+                          </li>
+                          <li>The <code>border-color</code> property can have multiple values (multiple sides) within single property
+                            <ul><li>4 values = <code>border-color: <em>Border-Top-Color Border-Right-Color Border-Bottom-Color Border-Left-Color</em>;</code></li>
+                                <li>3 values = <code>border-color: <em>Border-Top-Color Border-Horizontal-Color Border-Bottom-Color</em>;</code></li>
+                                <li>2 values = <code>border-color: <em>Border-Vertical-Color Border-Horizontal-Color</em>;</code></li>
+                                <li>1 value = <code>border-color: <em>Border-All-Color</em>;</code></li>
+                            </ul>
+                          </li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Color Values</em></code></li>
+                                <li><code>currentColor</code></li>
+                                <li><code>transparent</code></li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li><code><em>My Selector</em> { border-radius: <em>My Values</em>; }</code>
+                      <ul><li>The <code>border-radius</code> property defines the radius of the element's corners (add rounded corners to elements)</li>
+                          <li>Other related <code>border-radius</code> properties:
+                            <ul><li><code><em>My Selector</em> { border-top-left-radius: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-top-right-radius: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-bottom-right-radius: <em>My Value</em>; }</code></li>
+                                <li><code><em>My Selector</em> { border-bottom-left-radius: <em>My Value</em>; }</code></li>
+                            </ul>
+                          </li>
+                          <li>The <code>border-radius</code> property can have multiple values (multiple sides) within single property
+                            <ul><li>4 values = <code>border-radius: <em>Border-Top-Left-Radius Border-Top-Right-Radius Border-Bottom-Right-Radius Border-Bottom-Left-Radius</em>;</code></li>
+                                <li>3 values = <code>border-radius: <em>Border-Top-Left-Radius Border-Diagonal-Right-Left-Radius Border-Bottom-Right-Radius</em>;</code></li>
+                                <li>2 values = <code>border-radius: <em>Border-Diagonal-Left-Right-Radius Border-Diagonal-Right-Left-Radius</em>;</code></li>
+                                <li>1 value = <code>border-radius: <em>Border-All-Radius</em>;</code></li>
+                            </ul>
+                          </li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>0</code> - <b>[DEFAULT]</b> No border radius</li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li>
+                </ol>
+              </li>
+          </td>
+      </tr>
+    </table>
+  </section>
+  
   <section>
     <h3>CSS DATA TYPES</h3>
     <table>
@@ -378,7 +577,67 @@
     <table>
       <caption><b>CSS COLOR</b></caption>
       <tr><th>CSS VALUES</th><th>DESCRIPTIONS</th></tr>
-      <tr><td>???</td><td>???</td></tr>
+      <tr><td>Color Functions</td>
+          <td><li><b>Related Values:</b>
+                <ul><li>color()</li>
+                    <li>color-relative()</li>
+                    <li>color-mix()</li>
+                    <li>color-mix-hue()</li>
+                    <li>hsl()</li>
+                    <li>hsl-relative()</li>
+                    <li>hsla()</li>
+                    <li>hwb()</li>
+                    <li>hwb-relative()</li>
+                    <li>lab()</li>
+                    <li>lab-relative()</li>
+                    <li>lch()</li>
+                    <li>lch-relative()</li>
+                    <li>oklab()</li>
+                    <li>oklab-relative()</li>
+                    <li>oklch()</li>
+                    <li>oklch-relative()</li>
+                    <li>rgb()</li>
+                    <li>rgb-relative()</li>
+                    <li>rgba()</li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+      <tr><td>Color Keywords</td>
+          <td><li><b>Related Values</b>
+                <ul><li><b>A</b> - aliceblue, antiquewhite, aqua, aquamarine, azure</li>
+                    <li><b>B</b> - beige, bisque, black, blanchedalmond, blue, blueviolet, brown, burlywood</li>
+                    <li><b>C</b> - cadetblue, chartreuse, chocolate, coral, cornflowerblue, cornsilk, crimson, cyan</li>
+                    <li><b>D</b> - darkblue, darkcyan, darkgoldenrod, darkgray, darkgreen, darkgrey, darkkhaki, darkmagenta, darkolivegreen,
+                                   darkorange, darkorchid, darkred, darksalmon, darkseagreen, darkslateblue, darkslategray, darkslategrey,
+                                   darkturquoise, darkviolet, deeppink, deepskyblue, dimgray, dimgrey, dodgerblue
+                    </li>
+                    <li><b>F</b> - firebrick, floralwhite, forestgreen, fuchsia</li>
+                    <li><b>G</b> - gainsboro, ghostwhite, gold, goldenrod, gray, green, greenyellow, grey</li>
+                    <li><b>H</b> - honeydew, hotpink</li>
+                    <li><b>I</b> - indianred, indigo, ivory</li>
+                    <li><b>K</b> - khaki</li>
+                    <li><b>L</b> - lavender, lavenderblush, lawngreen, lemonchiffon, lightblue, lightcoral, lightcyan, lightgoldenrodyellow,
+                                   lightgray, lightgreen, lightgrey, lightpink, lightsalmon, lightseagreen, lightskyblue, lightslategray,
+                                   lightslategrey, lightsteelblue, lightyellow, lime, limegreen, linen
+                    </li>
+                    <li><b>M</b> - magenta, maroon, mediumaquamarine, mediumblue, mediumorchid, mediumpurple, mediumseagreen, mediumslateblue,
+                                   mediumspringgreen, mediumturquoise, mediumvioletred, midnightblue, mintcream, mistyrose, moccasin
+                    </li>
+                    <li><b>N</b> - navajowhite, navy</li>
+                    <li><b>O</b> - oldlace, olive, olivedrab, orange, orangered, orchid</li>
+                    <li><b>P</b> - palegoldenrod, palegreen, paleturquoise, palevioletred, papayawhip, peachpuff, peru, pink, plum, powderblue, purple</li>
+                    <li><b>R</b> - rebeccapurple, red, rosybrown, royalblue</li>
+                    <li><b>S</b> - saddlebrown, salmon, sandybrown, seagreen, seashell, sienna, silver, skyblue, slateblue, slategray, slategrey,
+                                   snow, springgreen, steelblue
+                    </li>
+                    <li><b>T</b> - tan, teal, thistle, tomato, turquoise</li>
+                    <li><b>V</b> - violet</li>
+                    <li><b>Y</b> - yellow, yellowgreen</li>
+                </ul>
+              </li>
+          </td>
+      </tr>
     </table>
   </section>
 
