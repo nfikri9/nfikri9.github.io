@@ -1,12 +1,13 @@
-/* STYLING TABLES */
+/* FIXED CSS STYLING */
+body { background-color: lightgrey; }
 table, th, td { border: 1px solid black; }
-
-/* STYLING LINES OF CODES */
+.Parent-Box { height: 400px;
+              width: 500px;
+              border: 1px solid black;
+            }
 .Level2 { padding-left: 94px; }
 .Level3 { padding-left: 110px; }
 
-body { background-color: lightgrey; }
-
-.standard { width: auto; height: auto; 
+.standard { width: auto; height: auto;
             border: 1px solid black;
           }

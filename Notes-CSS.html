@@ -19,16 +19,27 @@
 
   <section>
     <h3>BOX MODEL</h3>
-    <div id="Box-Model" style="height:100px; width: 100px; border: 1px solid black;">
-       Sample
+    <div class="Parent-Box">
+      <div id="Box-Model" style="height:100px; width: 100px; border: 1px solid black;">
+        Sample
+     </div>
     </div>
     <div>
       <code><em>My Selectors</em> {
-        <label for="Input-Height">height: <input id="Input-Height" type="text" placeholder="My Height Value"> ;</label>                                            <br>
-        <label class="Level3" for="Input-Width">width: <input id="Input-Width" type="text" placeholder="My Width Value"> ;</label>                                 <br>
-        <label class="Level3" for="Input-Padding">padding: <input id="Input-Padding" type="text" placeholder="My Padding Value"> ;</label>                         <br>
-        <label class="Level3" for="Input-Border">border: <input id="Input-Border" type="text" placeholder="My Border Value"> ;</label>                             <br>
-        <label class="Level3" for="Input-Border-Radius">border-radius: <input id="Input-Border-Radius" type="text" placeholder="My Border Radius Value"> ;</label> <br>
+        <label for="Input-Height">height: <input id="Input-Height" type="text" placeholder="My Height Value"> ;</label>                                                <br>
+        <label class="Level3" for="Input-Width">width: <input id="Input-Width" type="text" placeholder="My Width Value"> ;</label>                                     <br>
+        <label class="Level3" for="Input-Border">border: <input id="Input-Border" type="text" placeholder="My Border Value"> ;</label>                                 <br>
+        <label class="Level3" for="Input-Border-Radius">border-radius: <input id="Input-Border-Radius" type="text" placeholder="My Border Radius Value"> ;</label>     <br>
+        <label class="Level3" for="Input-Padding">padding: <input id="Input-Padding" type="text" placeholder="My Padding Value"> ;</label>                             <br>
+        <label class="Level3" for="Input-Margin">margin: <input id="Input-Margin" type="text" placeholder="My Margin Value"> ;</label>                                 <br>
+        <label class="Level3" for="Input-Box-Shadow">box-shadow: <input id="Input-Box-Shadow" type="text" placeholder="My Box Shadow Value"> ;</label>                 <br>
+        <label class="Level3" for="Input-Outline">outline: <input id="Input-Outline" type="text" placeholder="My Outline Value"> ;</label>                             <br>
+        <label class="Level3" for="Input-Outline-Offset">outline-offset: <input id="Input-Outline-Offset" type="text" placeholder="My Outline Offset Value"> ;</label> <br>
+        <label class="Level3" for="Input-Position">position: <input id="Input-Position" type="text" placeholder="My Position Value"> ;</label>                         <br>
+        <label class="Level3" for="Input-Top">top: <input id="Input-Top" type="text" placeholder="My Top Value"> ;</label>                                             <br>
+        <label class="Level3" for="Input-Bottom">bottom: <input id="Input-Bottom" type="text" placeholder="My Bottom Value"> ;</label>                                 <br>
+        <label class="Level3" for="Input-Left">left: <input id="Input-Left" type="text" placeholder="My Left Value"> ;</label>                                         <br>
+        <label class="Level3" for="Input-Right">right: <input id="Input-Right" type="text" placeholder="My Right Value"> ;</label>                                     <br>
         <span class="Level2"></span>}
       </code>
       <button onclick="myBoxModel()">MODIFY</button>
@@ -324,6 +335,250 @@
                             <ul><li><code><em>CSS Global Values</em></code></li>
                                 <li><code><em>CSS Length Values</em></code></li>
                                 <li><code>0</code> - <b>[DEFAULT]</b> No border radius</li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li>
+                </ol>
+              </li>
+          </td>
+      </tr>
+
+      <tr><td><code><em>My Selector</em> { margin: <em>My Values</em>; }</code></td>
+          <td><li>The <code>margin</code> property sets the margins for an element related to its parent container</li>
+              <li>Other related <code>margin</code> properties:
+                <ul><li><code><em>My Selector</em> { margin-top: <em>My Value</em>; }</code></li>
+                    <li><code><em>My Selector</em> { margin-right: <em>My Value</em>; }</code></li>
+                    <li><code><em>My Selector</em> { margin-bottom: <em>My Value</em>; }</code></li>
+                    <li><code><em>My Selector</em> { margin-left: <em>My Value</em>; }</code></li>
+                </ul>
+              </li>
+              <li>The <code>margin</code> property can have multiple values (multiple sides) within single property
+                <ul><li>4 values = <code>margin: { <em>Margin-Top Margin-Right Margin-Bottom Margin-Left</em>; }</code></li>
+                    <li>3 values = <code>margin: { <em>Margin-Top Margin-Horizontal Margin-Bottom</em>; }</code></li>
+                    <li>2 values = <code>margin: { <em>Margin-Vertical Margin-Horizontal</em>; }</code></li>
+                    <li>1 value = <code>margin: { <em>Margin-All</em>; }</code></li>
+                </ul>
+              </li>
+              <li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code><em>CSS Length Values</em></code></li>
+                    <li><code>0</code> - <b>[DEFAULT]</b> No margin</li>
+                    <li><code>auto</code></li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h3>POSITIONS</h3>
+    <table>
+      <tr><th>CSS PROPERTIES</th><th>DESCRIPTIONS</th></tr>
+      <tr><td><code><em>My Selector</em> { position: <em>My Value</em>; }</code></td>
+          <td><li>The <code>position</code> property specifies the type of positioning method used for an element</li>
+              <li>Elements are then positioned using the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties</li>
+              <li>However, these properties will not work unless the <code>position</code> property is set first</li>
+              <li>They also work differently depending on the position value</li> <br>
+              <li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code>static</code>
+                      <ul><li><b>[DEFAULT]</b> - The element is positioned static</li>
+                          <li>The element is always positioned according to the normal flow of the page</li>
+                          <li>Static positioned elements are <b>not affected</b> by the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties</li>
+                      </ul>
+                    </li>
+                    <li><code>relative</code>
+                      <ul><li>The element is positioned relative to its normal position</li>
+                          <li>Setting the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties of a relatively-positioned
+                              element will cause it to be adjusted away from its normal position
+                          </li>
+                          <li>Other content will not be adjusted to fit into any gap left by the element</li>
+                      </ul>
+                    </li>
+                    <li><code>fixed</code>
+                      <ul><li>The element is positioned relative to the viewport (the element always stays in the same place even if the page is scrolled)</li>
+                          <li>The <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties are used to position the element</li>
+                          <li>A fixed element does not leave a gap in the page where it would normally have been located</li>
+                      </ul>
+                    </li>
+                    <li><code>absolute</code>
+                      <ul><li>The element is positioned relative to the nearest ancestor's element</li>
+                          <li><b>Best Practice:</b> The ancestor's element must have <code>position: relative;</code> properties to make
+                              the element with <code>position: absolute;</code> to work
+                          </li>
+                          <li>If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling</li>
+                          <li>Absolute positioned elements are removed from the normal flow, and can overlap elements</li>
+                      </ul>
+                    </li>
+                    <li><code>sticky</code>
+                      <ul><li>The element is positioned based on the user's scroll position</li>
+                          <li>A sticky element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position</li>
+                          <li>It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place</li>
+                          <li><b>[REQUIRED]</b> Must specify at least one of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties
+                              for sticky positioning to work
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+      <tr><td><code><em>My Selector</em> { inset: <em>My Values</em>; }</code></td>
+          <td><li>The <code>inset</code> property sets the distance between an element and the parent element</li>
+              <li>Other related <code>inset</code> properties:
+                <ul><li><code><em>My Selector</em> { inset: top; }</code></li>
+                    <li><code><em>My Selector</em> { inset: right; }</code></li>
+                    <li><code><em>My Selector</em> { inset: bottom; }</code></li>
+                    <li><code><em>My Selector</em> { inset: left; }</code></li>
+                </ul>
+              </li>
+              <li>The <code>inset</code> property can have multiple values (multiple sides) within single property
+                <ul><li>4 values = <code>inset: top right bottom left;</code></li>
+                    <li>3 values = <code>inset: top Horizontal-Sides bottom;</code></li>
+                    <li>2 values = <code>inset: Vertical-Sides Horizontal-Sides;</code></li>
+                    <li>1 value = <code>inset: All-Sides;</code></li>
+                </ul>
+              </li>
+              <li><b>Related Values:</b>
+                <ul><li><code><em>CSS Global Values</em></code></li>
+                    <li><code>CSS Length Values</code></li>
+                    <li><code>auto</code> - <b>[DEFAULT]</b> The element's default inset distance</li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h3>OTHERS</h3>
+    <table>
+      <tr><th>CSS PROPERTIES</th><th>DESCRIPTIONS</th></tr>
+      <tr><td><code><em>My Selector</em> { box-shadow: <em>My Values</em>; }</code></td>
+          <td><li>The <code>box-shadow</code> property attaches one or more shadows to an element</li>
+              <li>The <code>box-shadow</code> property can have multiple values (multiple parameters) within single property
+                <ul><li><code><em>My Selector</em> { box-shadow: <em>Shadow-Horizontal Shadow-Vertical Shadow-Blur Shadow-Spread-Radius Shadow-Color inset</em>; }</code>
+                      <ul><li><code><em>Shadow-Horizontal</em></code>
+                            <ul><li><b>[REQUIRED]</b> The <code><em>Shadow-Horizontal</em></code> parameter specifies horizontal shadow of an element</li>
+                                <li><b>Related Values:</b> <!--inset none-->
+                                  <ul><li><code><em>CSS Global Values</em></code></li>
+                                      <li><code><em>CSS Length Values</em></code></li>
+                                  </ul>
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code><em>Shadow-Vertical</em></code>
+                            <ul><li><b>[REQUIRED]</b> The parameter <code><em>Shadow-Vertical</em></code> specifies vertical shadow of an element</li>
+                                <li><b>Related Values:</b>
+                                  <ul><li><code><em>CSS Global Values</em></code></li>
+                                      <li><code><em>CSS Length Values</em></code></li>
+                                  </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><code><em>Shadow-Blur</em></code>
+                            <ul><li><b>[OPTIONAL]</b> The parameter <code><em>Shadow-Blur</em></code> specifies blur effect for shadow of an element</li>
+                                <li>The higher the number, the more blurred the shadow will be</li>
+                                <li><b>Related Values:</b>
+                                  <ul><li><code><em>CSS Global Values</em></code></li>
+                                      <li><code><em>CSS Length Values</em></code></li>
+                                  </ul>
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code><em>Shadow-Spread-Radius</em></code>
+                            <ul><li><b>[OPTIONAL]</b>The <code><em>Shadow-Spread-Radius</em></code> parameter specifies spread radius for shadow of an element</li>
+                                <li>A positive value increases the size of the shadow, a negative value decreases the size of the shadow</li>
+                                <li><b>Related Values:</b>
+                                  <ul><li><code><em>CSS Global Values</em></code></li>
+                                      <li><code><em>CSS Length Values</em></code></li>
+                                  </ul>
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code><em>Shadow-Color</em></code>
+                            <ul><li><b>[RECOMMENDED]</b> The <code><em>Shadow-Color</em></code> parameter specifies shadow color of an element</li>
+                                <li><b>Related Values:</b>
+                                  <ul><li><code><em>CSS Global Values</em></code></li>
+                                      <li><code><em>CSS Color Values</em></code></li>
+                                      <li><b>[DEFAULT]</b> The default color of the shadow is the current <code>text-color</code></li>
+                                  </ul>
+                                </li>
+                            </ul>
+                          </li>
+                          <li><code>inset</code>
+                            <ul><li><b>[OPTIONAL]</b> The <code>inset</code> parameter changes the shadow from an outer shadow to an inner shadow</li>
+                                <li>If the paramter is omitted, display box shadows as an outer shadow</li>
+                                <li><b>Related Values:</b>
+                                  <ul><li><code>inset</code> - Display box shadows as an inner shadow</li>
+                                  </ul>
+                                </li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              </li>
+          </td>
+      </tr>
+
+      <tr><td><code><em>My Selector</em> { outline: <em>My Values</em>; }</code></td>
+          <td><li>The <code>outline</code> property specifies characteriestics of a line that is drawn around elements, outside the borders, to make the element "stand out"</li>
+              <li>The <code>outline</code> property can have multiple values (multiple properties) within single property
+                <ul><li><code><em>My Selector</em> { outline: <em>Outline-Width Outline-Style Outline-Color</em>; }</code></li></ul>
+              </li>
+              <li>Other related <code>outline</code> properties:
+                <ol><li><code><em>My Selector</em> { outline-width: <em>My Values</em>; }</code>
+                      <ul><li>The <code>outline-width</code> property specifies the width of an outline</li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>medium</code> - <b>[DEFAULT]</b> Specifies a medium outline width</li>
+                                <li><code>thick</code></li>
+                                <li><code>thin</code></li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li><code><em>My Selector</em> { outline-style: <em>My Values</em>; }</code>
+                      <ul><li>The <code>outline-style</code> property specifies the style of an outline</li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code>none</code> - <b>[DEFAULT]</b> Specifies no outline</li>
+                                <li><code>auto</code> - Specifies an auto outline</li>
+                                <li><code>dashed</code> - Specifies a dashed outline</li>
+                                <li><code>dotted</code> - Specifies a dotted outline</li>
+                                <li><code>double</code> - Specifies a double outliner</li>
+                                <li><code>groove</code> - Specifies a 3D grooved outline (the effect depends on the <code>outline-color</code> value)</li>
+                                <li><code>hidden</code> - Specifies a hidden outline</li>
+                                <li><code>inset</code> - Specifies a 3D inset outline (the effect depends on the <code>outline-color</code> value)</li>
+                                <li><code>outset</code> - Specifies a 3D outset outline (the effect depends on the <code>outline-color</code> value)</li>
+                                <li><code>ridge</code> - Specifies a 3D ridged outline (the effect depends on the <code>outline-color</code> value)</li>
+                                <li><code>solid</code> - Specifies a solid outline</li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li><code><em>My Selector</em> { outline-color: <em>My Values</em>; }</code>
+                      <ul><li>The <code>outline-color</code> property specifies the color of an outline</li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code>CSS Color Values</code></li>
+                                <li><code>currentColor</code></li>
+                                <li><code>transparent</code></li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li> <br>
+                    <li><code><em>My Selector</em> { outline-offset: <em>My Value</em>; }</code>
+                      <ul><li>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element</li>
+                          <li>The space between an element and its outline is transparent</li>
+                          <li><b>Related Values:</b>
+                            <ul><li><code><em>CSS Global Values</em></code></li>
+                                <li><code><em>CSS Length Values</em></code></li>
+                                <li><code>0</code> - <b>[DEFAULT]</b> No distance</li>
                             </ul>
                           </li>
                       </ul>
