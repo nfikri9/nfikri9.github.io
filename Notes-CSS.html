@@ -18,6 +18,301 @@
   <a href="Notes-Gif">Git</a> ||| <a href="Notes-BS">Bootstrap</a>|||<a href="Notes-React.html">React</a> |||
 
   <section>
+  <h3>TYPOGRAPHY</h3>
+  <table>
+  <tr><th>CSS PROPERTIES</th><th>DESCRIPTIONS</th></tr>
+
+  <tr><td><code>font</code></td>
+  <td><code><label for="Input-Font">font: <input id="Input-Font" type="text" placeholder="My Values"> ;</label></code>
+  <button onclick="ClickHandlerFont()">MODIFY</button><div id="Output-Font">This is the result!<br>This is the result!</div>
+  <div>The <code>font</code> property is a shorthand property that defines characteristics of the font/text<br>
+  <code><em>My Selector</em> { font: font-style font-variant font-weight font-size/line-height font-family; }</code><br>
+  <b>[REQUIRED]</b> The <code>font-size</code> and <code>font-family</code> values are required
+  </div>
+
+  <p><b>RELATED PROPERTIES</b></p>
+  <ol><li><code><label for="Input-Font-Style">font-style: </label><input id="Input-Font-Style" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFontStyle()">MODIFY</button><div id="Output-Font-Style">This is the result!</div>
+  <ul><li>The <code>font-style</code> property specifies the font style for a text</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>normal</code> - <b>[DEFAULT]</b> The browser displays a normal font style</li>
+  <li><code>italic</code> - The browser displays an italic font style</li>
+  <li><code>oblique</code> - The browser displays an oblique font style</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Font-Variant">font-variant: </label><input id="Input-Font-Variant" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFontVariant()">MODIFY</button><div id="Output-Font-Variant">This is the result!</div>
+  <ul><li>The <code>font-variant</code> property specifies whether or not a text should be displayed in a small-caps font</li>
+  <li>All lowercase letters are converted to uppercase letters</li>
+  <li>The converted uppercase letters appears in a smaller font size than the original uppercase letters in the text</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>normal</code> - <b>[DEFAULT]</b> The browser displays a normal font</li>
+  <li><code>small-caps</code> - The browser displays a small-caps font</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Font-Weight">font-weight: </label><input id="Input-Font-Weight" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFontWeight()">MODIFY</button><div id="Output-Font-Weight">This is the result!</div>
+  <ul><li>The <code>font-weight</code> property sets the thickness of characters in text</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>Numbers</em></code> - Defines thickness of characters via any number (<code>1 &le; font-weight &le; 1000</code>)</li>
+  <li><code>normal</code> - <b>[DEFAULT]</b> Defines normal characters (<code>500</code>)</li>
+  <li><code>lighter </code> - Defines lighter characters</li>
+  <li><code>bold</code> - Defines thick characters (<code>&ge;550</code>)</li>
+  <li><code>bolder</code> - Defines thicker characters</li>
+  </ul></li></ul></li><br>
+  
+  <li><code><label for="Input-Font-Size">font-size: </label><input id="Input-Font-Size" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFontSize()">MODIFY</button><div id="Output-Font-Size">This is the result!</div>
+  <ul><li>The <code>font-size</code> property sets the size of a font</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code>medium</code> - <b>[DEFAULT]</b> Sets the font to a medium size</li>
+  <li><code>xx-small</code> - Sets the font to an xx-small size</li>
+  <li><code>x-small</code> - Sets the font to an extra small size</li>
+  <li><code>small</code> - Sets the font to a small size</li>
+  <li><code>large</code> - Sets the font to a large size</li>
+  <li><code>x-large</code> - Sets the font to an extra large size</li>
+  <li><code>xx-large</code> - Sets the font to an xx-large size</li>
+  <li><code>smaller</code> - Sets the font to a smaller size than the parent element</li>
+  <li><code>larger</code> - Sets the font to a larger size than the parent element</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Line-Height">line-height: </label><input id="Input-Line-Height" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerLineHeight()">MODIFY</button><div id="Output-Line-Height">This is the result! <br> This is the result!</div>
+  <ul><li>The <code>line-height</code> property specifies the height of a line</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code><em>Numbers</em></code> - A number that will be multiplied with the current <code>font-size</code> to set the line height</li>
+  <li><code>normal</code> - <b>[DEFAULT]</b> A normal line height</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Font-Family">font-family: </label><input id="Input-Font-Family" type="text" placeholder="My Values"> ;</code>
+  <button onclick="ClickHandlerFontFamily()">MODIFY</button><div id="Output-Font-Family">This is the result!</div>
+  <ul><li>The <code>font-family</code> property specifies the font for an element</li>
+  <li>The <code>font-family</code> property can hold several values (font names) as a "fallback" system</li>
+  <li>If the browser does not support the first font, it tries the next font</li>
+  <li>Separate each value with a comma</li>
+  <li>If a font name contains white-space, it must be quoted</li>
+  <li>Single quotes must be used when using the <code>style</code>style attribute in HTML</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Font-Family Values</em></code></li>
+  <li><b>[DEFAULT]</b> Depends on the browser</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Font-Kerning">font-kerning: </label><input id="Input-Font-Kerning" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFontKerning()">MODIFY</button><div id="Output-Font-Kerning">"THIS IS THE 'RESULT'!"</div>
+  <ul><li>The <code>font-kerning</code> property controls the usage of the kerning information stored in a font</li>
+  <li>Kerning defines how letters are spaced</li>
+  <li>For fonts that do not include kerning data, this property will have no visible effect</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The browser determines whether font kerning should be applied or not</li>
+  <li><code>normal</code> - Specifies that font kerning is applied</li>
+  <li><code>none</code> - Specifies that font kerning is not applied</li>
+  </ul></li></ul></li><br>
+
+  </ol></td></tr>
+
+  <tr><td><code>text-*</code></td>
+  <td><p><b>RELATED PROPERTIES</b></p>
+  <ol><li><code><label for="Input-Text-Align">text-align: </label><input id="Input-Text-Align" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextAlign()">MODIFY</button><div id="Output-Text-Align">This is the result!</div>
+  <ul><li>The <code>text-align</code> property specifies the horizontal alignment of text in an element</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>center</code> - Center the text in horizontal alignment</li>
+  <li><code>justify</code> - Stretches the lines so that each line has equal width (like in newspapers and magazines)</li>
+  <li><code>start</code> - Align the text at the start</li>
+  <li><code>end</code> - Align the text at the end</li>
+  <li><code>left</code> - Aligns the text to the left</li>
+  <li><code>right</code> - Aligns the text to the right</li>
+  </ul></li></ul>
+
+  <p><b>RELATED PROPERTY</b></p>
+  <ul><li><code><label for="Input-Text-Align-Last">text-align-last: </label><input id="Input-Text-Align-Last" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextAlignLast()">MODIFY</button><div id="Output-Text-Align-Last">This is the result!<br>This is the result!</div>
+  <ul><li>The <code>text-align-last</code> property specifies how to align the last line of a text</li>
+  <li>Notice that the <code>text-align-last</code> property sets the alignment for all last lines within the selected element</li>
+  <li><b>[EXAMPLE]</b> If there is a <code>&lt;div&gt;</code> with 3 <code>&lt;p&gt;</code> in it, <code>text-align-last</code> will apply to the
+  last line of <b>EACH</b> of the paragraphs</li>
+  <li>To use <code>text-align-last</code> on only the last paragraph in the container, use <code>:last child</code></li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The last line is justified and aligned left</li>
+  <li><code>center</code> - The last line is center-aligned</li>
+  <li><code>justify</code> - The last line is justified as the rest of the lines</li>
+  <li><code>start</code> - The last line is aligned at the beginning of the line</li>
+  <li><code>end</code> - The last line is aligned at the end of the line</li>
+  <li><code>left</code> - The last line is aligned to the left</li>
+  <li><code>right</code> - The last line is aligned to the right</li>
+  </ul></li></ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Decoration">text-decoration: </label><input id="Input-Text-Decoration" type="text" placeholder="My Values"> ;</code>
+  <button onclick="ClickHandlerTextDecoration()">MODIFY</button><div id="Output-Text-Decoration">This is the result!</div>
+  <div>The <code>text-decoration</code> property  is a shorthand property that specifies the decoration added to text<br>
+  <code><em>My Selector</em> { text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness; }</code>
+  </div>
+
+  <p><b>RELATED PROPERTIES</b></p>
+  <ul><li><code><label for="Input-Text-Decoration-Line">text-decoration-line: </label><input id="Input-Text-Decoration-Line" type="text" placeholder="My Values"> ;</code>
+  <button onclick="ClickHandlerTextDecorationLine()">MODIFY</button><div id="Output-Text-Decoration-Line">This is the result!</div>
+  <ul><li>The <code>text-decoration-line</code> property sets the kind of text decoration to use</li>
+  <li>The <code>text-decoration-line</code> property can also combine more than one value</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>none</code> - <b>[DEFAULT]</b> Specifies no line for the text-decoration</li>
+  <li><code>line-through</code> - Specifies that a line will be displayed through the text</li>
+  <li><code>overline</code> - Specifies that a line will be displayed over the text</li>
+  <li><code>underline</code> - Specifies that a line will be displayed under the text</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Decoration-Color">text-decoration-color: </label><input id="Input-Text-Decoration-Color" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextDecorationColor()">MODIFY</button><div id="Output-Text-Decoration-Color" style="text-decoration-line: line-through;">This is the result!</div>
+  <ul><li>The <code>text-decoration-color</code> property specifies the color of the text-decoration</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code>
+  <li><code><em>CSS Color Values</em></code></li>
+  <li><code>currentColor</code></li>
+  <li><code>transparent</code></li>
+  </li></ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Decoration-Style">text-decoration-style: </label><input id="Input-Text-Decoration-Style" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextDecorationStyle()">MODIFY</button><div id="Output-Text-Decoration-Style" style="text-decoration-line: line-through;">This is the result!</div>
+  <ul><li>The <code>text-decoration-style</code> property sets the style of the text decoration</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>solid</code> - <b>[DEFAULT]</b> The line will display as a single line</li>
+  <li><code>dashed</code> - The line will display as a dashed line</li>
+  <li><code>dotted</code> - The line will display as a dotted line</li>
+  <li><code>double</code> - The line will display as a double line</li>
+  <li><code>wavy</code> - The line will display as a wavy line</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Decoration-Thickness">text-decoration-thickness: </label><input id="Input-Text-Decoration-Thickness" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextDecorationThickness()">MODIFY</button><div id="Output-Text-Decoration-Thickness" style="text-decoration-line: line-through;">This is the result!</div>
+  <ul><li>The <code>text-decoration-thickness</code> property specifies the thickness of the decoration line</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The browser chooses the thickness of the decoration line</li>
+  </ul></li></ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Emphasis">text-emphasis: </label><input id="Input-Text-Emphasis" type="text" placeholder="My Values"> ;</code>
+  <button onclick="ClickHandlerTextEmphasis()">MODIFY</button><div id="Output-Text-Emphasis">This is the result!</div>
+  <div>The <code>text-emphasis</code> property is a shorthand property used to apply emphasis marks to text<br>
+  <code><em>My Selector</em> { text-emphasis: text-emphasis-style text-emphasis-color; }</code>
+  </div>
+
+  <p><b>RELATED PROPERTIES</b></p>
+  <ul><li><code><label for="Input-Text-Emphasis-Style">text-emphasis-style: </label><input id="Input-Text-Emphasis-Style" type="text" placeholder="My Values"> ;</code>
+  <button onclick="ClickHandlerTextEmphasisStyle()">MODIFY</button><div id="Output-Text-Emphasis-Style">This is the result!</div>
+  <ul><li>The <code>text-emphasis-style</code> property sets the style of emphasis marks</li>
+  <li>The size of the emphasis marks is about 50% of the size of the font</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>none</code> - No emphasis marks are applied</li>
+  <li><code>filled</code> - The emphasis marks are filled with a solid color</li>
+  <li><code>open</code> - The emphasis marks are hollow</li>
+  <li><code>dot</code> - The emphasis marks are small circles</li>
+  <li><code>circle</code> - The emphasis marks are circles</li>
+  <li><code>double-circle</code> - The emphasis marks are double circles</li>
+  <li><code>triangle</code> - The emphasis marks are triangles</li>
+  <li><code>sesame</code> - The emphasis marks are sesames</li>
+  <li><code>"<em>Strings</em>"</code> - The emphasis marks are the given string (one character)</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Emphasis-Color">text-emphasis-color: </label><input id="Input-Text-Emphasis-Color" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextEmphasisColor()">MODIFY</button><div id="Output-Text-Emphasis-Color" style="text-emphasis-style: triangle;">This is the result!</div>
+  <ul><li>The <code>text-emphasis-color</code> property sets the color of emphasis marks</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Color Values</em></code></li>
+  <li><code>currentColor</code></li>
+  <li><code>transparent</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Emphasis-Position">text-emphasis-position: </label><input id="Input-Text-Emphasis-Position" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextEmphasisPosition()">MODIFY</button><div id="Output-Text-Emphasis-Position" style="text-emphasis-style: triangle;">This is the result!</div>
+  <ul><li>The <code>text-emphasis-position</code> property specifies the position of the emphasis marks</li>
+  <li>Use the <code>writing-mode</code> property to specify horizontal or vertical writing mode</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>over</code> - The emphasis marks are applied over the text when <code>writing-mode: horizontal;</code></li>
+  <li><code>under</code> - The emphasis marks are applied under the text when <code>writing-mode: horizontal;</code></li>
+  <li><code>left</code> - The emphasis marks are applied to the left of the text when <code>writing-mode: vertical;</code></li>
+  <li><code>right</code> - The emphasis marks are applied to the right of the text when <code>writing-mode: vertical;</code></li>
+  </ul></li></ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Indent">text-indent: </label><input id="Input-Text-Indent" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextIndent()">MODIFY</button><div id="Output-Text-Indent">This is the result!<br>This is the result!</div>
+  <ul><li>The <code>text-indent</code> property specifies the indentation of the first line in a text-block</li>
+  <li>Negative values are allowed which the first line will be indented to the left</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code>0</code> - <b>[DEFAULT]</b></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Justify">text-justify: </label><input id="Input-Text-Justify" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerTextJustify()">MODIFY</button><div id="Output-Text-Justify">This is the result!</div>
+  <ul><li>The <code>text-justify</code> property specifies the justification method of text when <code>text-align: justify;</code></li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>auto</code></li>
+  <li><code>distribute</code></li>
+  <li><code>distribute-all-lines</code></li>
+  <li><code>inter-cluster</code></li>
+  <li><code>inter-ideograph</code></li>
+  <li><code>inter-word</code></li>
+  <li><code>kashida</code></li>
+  <li><code>newspaper</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Text-Orientation">text-orientation: </label><input id="Input-Text-Orientation"> ;</code>
+  <button onclick="ClickHandlerTextOrientation()">MODIFY</button><div id="Output-Text-Orientation">This is the result!</div>
+  <ul><li>KIV</li></ul>
+  </li><br>
+
+  <li><code><label for="Input-Text-Overflow">text-orientation: </label><input id="Input-Text-Overflow"> ;</code>
+  <button onclick="ClickHandlerTextOverflow()">MODIFY</button><div id="Output-Text-Overflow">This is the result!</div>
+  <ul><li>KIV</li></ul>
+  </li><br>
+
+  <li><code><label for="Input-Text-Shadow">text-orientation: </label><input id="Input-Text-Shadow"> ;</code>
+  <button onclick="ClickHandlerTextShadow()">MODIFY</button><div id="Output-Text-Shadow">This is the result!</div>
+  <ul><li>KIV</li></ul>
+  </li><br>
+
+  <li><code><label for="Input-Text-Transform">text-orientation: </label><input id="Input-Text-Transform"> ;</code>
+  <button onclick="ClickHandlerTextTransform()">MODIFY</button><div id="Output-Text-Transform">This is the result!</div>
+  <ul><li>KIV</li></ul>
+  </li><br>
+
+  <li><code><label for="Input-Text-Underline-Offset">text-orientation: </label><input id="Input-Text-Underline-Offset"> ;</code>
+  <button onclick="ClickHandlerTextUnderlineOffset()">MODIFY</button><div id="Output-Text-Underline-Offset">This is the result!</div>
+  <ul><li>KIV</li></ul>
+  </li><br>
+
+  <li><code><label for="Input-Text-Underline-Position">text-orientation: </label><input id="Input-Text-Underline-Position"> ;</code>
+  <button onclick="ClickHandlerTextUnderlinePosition()">MODIFY</button><div id="Output-Text-Underline-Position">This is the result!</div>
+  <ul><li>KIV</li></ul>
+  </li><br>
+
+  </ol>
+  </td>
+  </tr>
+
+  <tr><td>KIV</td><td>writing-mode</td></tr>
+  </table>
+  </section>
+
+  <section>
     <h3>BOX MODEL</h3>
     <div class="Parent-Box">
       <div id="Box-Model" style="height:100px; width: 100px; border: 1px solid black;">
