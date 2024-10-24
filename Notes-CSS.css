@@ -1,13 +1,13 @@
 /* FIXED CSS STYLING */
 body { background-color: lightgrey; }
 table, th, td { border: 1px solid black; }
-.Parent-Box { height: 400px;
-              width: 500px;
+.Parent-Box { height: 500px; width: 500px;
               border: 1px solid black;
+              margin: auto;
             }
+.Child-Box { height: 100px; width: 100px;
+             border: 1px solid black;
+             margin: 10px;
+           }
 .Level2 { padding-left: 94px; }
 .Level3 { padding-left: 110px; }
-
-.standard { width: auto; height: auto;
-            border: 1px solid black;
-          }

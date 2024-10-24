@@ -18,6 +18,118 @@
   <a href="Notes-Gif">Git</a> ||| <a href="Notes-BS">Bootstrap</a>|||<a href="Notes-React.html">React</a> |||
 
   <section>
+  <h3>BOX MODEL</h3>
+  <div class="Parent-Box">
+  <div class="Child-Box">Item 1</div>
+  <div class="Child-Box">Item 2</div>
+  <div class="Child-Box">Item 3</div>
+  </div>
+  
+  <table>
+  <tr><th>CSS PROPERTIES</th><th>DESCRIPTIONS</th></tr>
+
+  <tr><td><code>display</code></td>
+  <td><ul><li><code><label for="Input-Display">display: </label><input id="Input-Display" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerDisplay()">MODIFY</button><br></li>
+  <li>The <code>display</code> property specifies the display behavior (the type of rendering box) of an element</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>inline</code> - <b>[DEFAULT]</b> Displays an element as an inline element
+      ( Like <code>&lt;span&gt;</code>, any <code>height</code> and <code>width</code> properties will have no effect )</li>
+  <li><code>block</code> - Displays an element as a block element ( Like <code>&lt;p&gt;</code>, it starts on a new line, and takes up the whole width )</li>
+  <li><code>contents</code> - Makes the container disappear, making the child elements children of the element the next level up in the DOM</li>
+  <li><code>flex</code> - Displays an element as a block-level flex container</li>
+  <li><code>flexbox</code></li>
+  <li><code>flow-root</code></li>
+  <li><code>grid</code> - Displays an element as a block-level grid container</li>
+  <li><code>inline-block</code> - Displays an element as an inline-level block container 
+      ( The element itself is formatted as an inline element, but values for <code>height</code> and <code>width</code> properties can be applied )</li>
+  <li><code>inline-flex</code> - Displays an element as an inline-level flex container</li>
+  <li><code>inline-flexbox</code></li>
+  <li><code>inline-grid</code> - Displays an element as an inline-level grid container</li>
+  <li><code>inline-table</code> - The element is displayed as an inline-level table</li>
+  <li><code>list-item</code> - Set the element behave like a <code>&lt;li&gt;</code> element</li>
+  <li><code>none</code> - The element is completely removed</li>
+  <li><code>ruby</code></li>
+  <li><code>ruby-base</code></li>
+  <li><code>ruby-base-container</code></li>
+  <li><code>ruby-text</code></li>
+  <li><code>ruby-text-container</code></li>
+  <li><code>run-in</code> - Displays an element as either block or inline, depending on context</li>
+  <li><code>table</code> - Set the element behave like a <code>&lt;table&gt;</code> element</li>
+  <li><code>table-caption</code> - Set the element behave like a <code>&lt;caption&gt;</code> element</li>
+  <li><code>table-column-group - Set the element behave like a <code>&lt;colgroup&gt;</code> element</code></li>
+  <li><code>table-header-group</code> - Set the element behave like a <code>&lt;thead&gt;</code> element</li>
+  <li><code>table-row-group</code> - Set the element behave like a <code>&lt;tbody&gt;</code> element</li>
+  <li><code>table-footer-group</code> - Set the element behave like a <code>&lt;tfoot&gt;</code> element</li>
+  <li><code>table-row</code> - Set the element behave like a <code>&lt;tr&gt;</code> element</li>
+  <li><code>table-cell</code> - Set the element behave like a <code>&lt;td&gt;</code> element</li>
+  <li><code>table-column</code> - Set the element behave like a <code>&lt;col&gt;</code> element</li>
+  </ul></li></ul></td></tr>
+
+  <tr><td><code>flex-*</code></td>
+  <td><p><b>[REQUIRED]</b> The container must have property <code>display: flex;</code> in order to make all other related properties to be working</p>
+  <ol><li><code>flex: flex-grow flex-shrink flex-basis; /* These properties are applied to items */</code>
+  <p><b>RELATED PROPERTIES</b></p>
+  <ul><li><code><label for="Input-Flex-Grow">flex-grow: </label><input id="Input-Flex-Grow" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFlexGrow()">MODIFY</button>
+  <ul><li>The <code>flex-grow</code> property specifies how much the item will grow relative to the rest of the flexible items inside the same container</li>
+  <li>The <code>flex-grow</code> property is <b>designed to distribute positive free space</b> in the container (when the <b>item is not overflowed</b>)</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>Numbers</em> - Greater the number, the item will grow more relative to the rest of the flexible items</code></li>
+  <li><code>0</code> - <b>[DEFAULT]</b> The item has no change</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Flex-Shrink">flex-shrink: </label><input id="Input-Flex-Shrink" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFlexShrink()">MODIFY</button>
+  <ul><li>The <code>flex-shrink</code> property specifies how the item will shrink relative to the rest of the flexible items inside the same container</li>
+  <li>The <code>flex-shrink</code> property is <b>designed to distribute negative free space</b> in the container (when the <b>item is overflowed</b>)</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>Numbers</em></code> - Greater the number, the item will shrink more relative to the rest of the flexible items</li>
+  <li><code>1</code> - <b>[DEFAULT]</b> The item is shrink relative to the rest of the flexible items</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Flex-Basis">flex-basis: </label><input id="Input-Flex-Basis" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFlexBasis()">MODIFY</button>
+  <ul><li>The <code>flex-basis</code> property specifies the initial length of a flexible item</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values;</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The length is equal to the length of the flexible item
+      ( If the item has no length specified, the length will be according to its content )
+  </li>
+  <li><code>content</code></li>
+  </ul></li></ul></li> </ul></li><br>
+
+  <li><code>flex-flow: flex-direction flex-wrap; /* These properties are applied to container */</code>
+  <p><b>RELATED PROPERTIES</b></p>
+  <ul><li><code><label for="Input-Flex-Direction">flex-direction: </label><input id="Input-Flex-Direction" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFlexDirection()">MODIFY</button>
+  <ul><li>The <code>flex-direction</code> property specifies the direction of the flexible items</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>row</code> - <b>[DEFAULT]</b> The flexible items are displayed horizontally, as a row</li>
+  <li><code>row-reverse</code> - Same as row, but in reverse order</li>
+  <li><code>column</code> - The flexible items are displayed vertically, as a column</li>
+  <li><code>column-reverse</code> - Same as column, but in reverse order</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Flex-Wrap">flex-wrap: </label><input id="Input-Flex-Wrap" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerFlexWrap()">MODIFY</button>
+  <ul><li>The <code>flex-wrap</code> property specifies whether the flexible items should be wrapped or not</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>nowrap</code> - <b>[DEFAULT]</b> Specifies that the flexible items will not wrap</li>
+  <li><code>wrap</code> - Specifies that the flexible items will wrap if necessary</li>
+  <li><code>wrap-reverse</code> - Specifies that the flexible items will wrap, if necessary, in reverse order</li>
+  </ul></li></ul></li> </ul></li> </ol></td></tr>
+  </table>
+
+  </section>
+
+  <section>
   <h3>TYPOGRAPHY</h3>
   <table>
   <tr><th>CSS PROPERTIES</th><th>DESCRIPTIONS</th></tr>

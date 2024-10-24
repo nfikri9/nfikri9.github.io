@@ -34,7 +34,13 @@ function myGlobal() {
     myTextEmphasisColor: document.getElementById("Input-Text-Emphasis-Color").value,
     myTextEmphasisPosition: document.getElementById("Input-Text-Emphasis-Position").value,
     myTextIndent: document.getElementById("Input-Text-Indent").value,
-    myTextJustify: document.getElementById("Input-Text-Justify").value
+    myTextJustify: document.getElementById("Input-Text-Justify").value,
+    myDisplay: document.getElementById("Input-Display").value,
+    myFlexGrow: document.getElementById("Input-Flex-Grow").value,
+    myFlexShrink: document.getElementById("Input-Flex-Shrink").value,
+    myFlexBasis: document.getElementById("Input-Flex-Basis").value,
+    myFlexDirection: document.getElementById("Input-Flex-Direction").value,
+    myFlexWrap: document.getElementById("Input-Flex-Wrap").value
   };
   return globalInput;
 }
@@ -63,6 +69,16 @@ function ClickHandlerTextEmphasisColor(myInput) { document.getElementById("Outpu
 function ClickHandlerTextEmphasisPosition(myInput) { document.getElementById("Output-Text-Emphasis-Position").style.textEmphasisPosition = myGlobal(myInput).myTextEmphasisPosition; }
 function ClickHandlerTextIndent(myInput) { document.getElementById("Output-Text-Indent").style.textIndent = myGlobal(myInput).myTextIndent; }
 function ClickHandlerTextJustify(myInput) { document.getElementById("Output-Text-Justify").style.textJustify = myGlobal(myInput).myTextJustify; }
+
+//////////////////////////////////
+// BOX MODEL RELATED PROPERTIES //
+//////////////////////////////////
+function ClickHandlerDisplay(myInput) { document.getElementsByClassName("Parent-Box")[0].style.display = myGlobal(myInput).myDisplay; }
+function ClickHandlerFlexGrow(myInput) { document.getElementsByClassName("Child-Box")[0].style.flexGrow = myGlobal(myInput).myFlexGrow; }
+function ClickHandlerFlexShrink(myInput) { document.getElementsByClassName("Child-Box")[0].style.flexShrink = myGlobal(myInput).myFlexShrink; }
+function ClickHandlerFlexBasis(myInput) { document.getElementsByClassName("Child-Box")[0].style.flexBasis = myGlobal(myInput).myFlexBasis; }
+function ClickHandlerFlexDirection(myInput) { document.getElementsByClassName("Parent-Box")[0].style.flexDirection = myGlobal(myInput).myFlexDirection; }
+function ClickHandlerFlexWrap(myInput) { document.getElementsByClassName("Parent-Box")[0].style.flexWrap = myGlobal(myInput).myFlexWrap; }
 
 function myBoxModel(myInput) {
   document.getElementById("Box-Model").style.height = myGlobal(myInput).myHeight;
