@@ -23,6 +23,7 @@
   <div class="Child-Box">Item 1</div>
   <div class="Child-Box">Item 2</div>
   <div class="Child-Box">Item 3</div>
+  <div class="Child-Box">Item 4</div>
   </div>
   
   <table>
@@ -69,7 +70,7 @@
 
   <tr><td><code>flex-*</code></td>
   <td><p><b>[REQUIRED]</b> The container must have property <code>display: flex;</code> in order to make all other related properties to be working</p>
-  <ol><li><code>flex: flex-grow flex-shrink flex-basis; /* These properties are applied to items */</code>
+  <ol><li><code>flex: flex-grow flex-shrink flex-basis; <b>/* These properties are applied to items */</b></code>
   <p><b>RELATED PROPERTIES</b></p>
   <ul><li><code><label for="Input-Flex-Grow">flex-grow: </label><input id="Input-Flex-Grow" type="text" placeholder="My Value"> ;</code>
   <button onclick="ClickHandlerFlexGrow()">MODIFY</button>
@@ -103,7 +104,7 @@
   <li><code>content</code></li>
   </ul></li></ul></li> </ul></li><br>
 
-  <li><code>flex-flow: flex-direction flex-wrap; /* These properties are applied to container */</code>
+  <li><code>flex-flow: flex-direction flex-wrap; <b>/* These properties are applied to container */</b></code>
   <p><b>RELATED PROPERTIES</b></p>
   <ul><li><code><label for="Input-Flex-Direction">flex-direction: </label><input id="Input-Flex-Direction" type="text" placeholder="My Value"> ;</code>
   <button onclick="ClickHandlerFlexDirection()">MODIFY</button>
@@ -125,8 +126,288 @@
   <li><code>wrap</code> - Specifies that the flexible items will wrap if necessary</li>
   <li><code>wrap-reverse</code> - Specifies that the flexible items will wrap, if necessary, in reverse order</li>
   </ul></li></ul></li> </ul></li> </ol></td></tr>
-  </table>
 
+  <tr><td><code>grid-*</code></td>
+  <td><b>[REQUIRED]</b> The container must have property <code>display: grid;</code> in order to make all other related properties to be working
+  <ol><li><code>grid: grid-template-rows / grid-template-columns / grid-template-areas / grid-auto-rows / grid-auto-columns / grid-auto-flow;
+  <b>/* These properties are applied to container */</b><br>
+  grid-template: grid-template-rows / grid-template-columns / grid-template-areas; <b>/* These properties are applied to container */</b>
+  </code>
+  <p><b>RELATED PROPERTIES</b></p>
+  <ul><li><code><label for="Input-Grid-Template-Rows">grid-template-rows: </label><input id="Input-Grid-Template-Rows" type="text" placeholder="Row1 Row2 ..."> ;</code>
+  <button onclick="ClickHandlerGridTemplateRows()">MODIFY</button>
+  <ul><li>The <code>grid-template-rows</code> property specifies the number (and the heights) of the rows in a grid layout</li>
+  <li>The values are a space-separated list, where each value specifies the height of the respective row</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code>none</code> - <b>[DEFAULT]</b>No size is set ( Rows are created if needed )</li>
+  <li><code>auto</code> - The size of the rows is determined by the size of the container, and on the size of the content of the items in the row</li>
+  <li><code>max-content</code> - Sets the size of each row to depend on the largest item in the row</li>
+  <li><code>min-content</code> - Sets the size of each row to depend on the smallest item in the row</li>
+  <li><code>minmax()</code> - Sets a size range greater than or equal to <code>min</code> and less than or equal to <code>max</code></li>
+  <li><code>repeat()</code></li>
+  <li><code>subgrid</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Grid-Template-Columns">grid-template-columns: </label><input id="Input-Grid-Template-Columns" type="text" placeholder="Column1 Column2 ..."> ;</code>
+  <button onclick="ClickHandlerGridTemplateColumns()">MODIFY</button>
+  <ul><li>The <code>grid-template-columns</code> property specifies the number (and the widths) of columns in a grid layout</li>
+  <li>The values are a space separated list, where each value specifies the size of the respective column</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code>none</code> - <b>[DEFAULT]</b> Columns are created if needed</li>
+  <li><code>auto</code> - The size of the columns is determined by the size of the container and on the size of the content of the items in the column</li>
+  <li><code>max-content</code> - Sets the size of each column to depend on the largest item in the column</li>
+  <li><code>min-content</code> - Sets the size of each column to depend on the smallest item in the column</li>
+  <li><code>minmax()</code> - Sets a size range greater than or equal to <code>min</code> and less than or equal to <code>max</code></li>
+  <li><code>repeat()</code></li>
+  <li><code>subgrid</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Grid-Template-Areas">grid-template-areas: </label><input id="Input-Grid-Template-Areas" type="text" placeholder="My Values" disabled> ;</code>
+  <button onclick="ClickHandlerGridTemplateAreas()" disabled>MODIFY</button>
+  <ul><li>The <code>grid-template-areas</code> property specifies areas within the grid layout</li>
+  <li>The grid items can be named by using the <code>grid-area</code> property, and then reference to the name in the <code>grid-template-areas</code> property</li>
+  <li>Each area is defined by apostrophes <code>'</code> and a grid item with no name is defined by period sign <code>...</code></li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>none</code> - <b>[DEFAULT]</b> - No named grid areas</li>
+  <li><code><em>Strings</em></code> - Any custom names of the grid areas</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Grid-Auto-Rows">grid-auto-rows: </label><input id="Input-Grid-Auto-Rows" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerGridAutoRows()">MODIFY</button>
+  <ul><li>The <code>grid-auto-rows</code> property sets a size for the rows in a grid container</li>
+  <li>This property affects only rows with the size not set</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The size of the rows is determined by the size of the largest item in the row</li>
+  <li><code>max-content</code> - Sets the size of each row to depend on the largest item in the row</li>
+  <li><code>min-content</code> - Sets the size of each row to depend on the smallest item in the row</li>
+  <li><code>minmax()</code> - Sets a size range greater than or equal to <code>min</code> and less than or equal to <code>max</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Grid-Auto-Columns">grid-auto-columns: </label><input id="Input-Grid-Auto-Columns" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerGridAutoColumns()">MODIFY</button>
+  <ul><li>The <code>grid-auto-columns</code> property sets a size for the columns in a grid container</li>
+  <li>This property affects only columns with the size not set</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>CSS Length Values</em></code></li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The size of the columns is determined by the size of the container</li>
+  <li><code>max-content</code> - Sets the size of each column depending on the largest item in the column</li>
+  <li><code>min-content</code> - Sets the size of each column depending on the smallest item in the column</li>
+  <li><code>minmax()</code> - Sets a size range greater than or equal to <code>min</code> and less than or equal to <code>max</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Grid-Auto-Flow">grid-auto-flow: </label><input id="Input-Grid-Auto-Flow" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerGridAutoFlow()">MODIFY</button>
+  <ul><li>The <code>grid-auto-flow</code> property controls how auto-placed items get inserted in the grid</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>row</code> - <b>[DEFAULT]</b> Places items by filling each row</li>
+  <li><code>column</code> - Places items by filling each column</li>
+  <li><code>dense</code> - Place items to fill any holes in the grid</li>
+  </ul></li></ul></li> </ul></li><br>
+
+  <li><code>grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end; <b>/* These properties are applied to items */</b><br>
+  grid-column: grid-column-start / grid-column-end; <b>/* These properties are applied to items */</b><br>
+  grid-row: grid-row-start / grid-row-end; <b>/* These properties are applied to items */</b>
+  </code>
+  <p><b>RELATED PROPERTIES</b></p>
+  <ul><li><code><label for="Input-Grid-Row-Start">grid-row-start: </label><input id="Input-Grid-Row-Start" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerGridRowStart()">MODIFY</button>
+  <ul><li>The <code>grid-row-start</code> property defines on which row-line the item will start</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>Row Line</em></code> - Specifies on which row to start the display of the item</li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The item will be placed by following the flow</li>
+  <li><code>span <em>n</em></code> - Specifies the number of rows the item will span</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Grid-Column-Start">grid-column-start :</label><input id="Input-Grid-Column-Start" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerGridColumnStart()">MODIFY</button>
+  <ul><li>The <code>grid-column-start</code> property defines on which column-line the item will start</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>Column Line</em></code> - Specifies on which column to start the display of the item</li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The item will be placed following the flow</li>
+  <li><code>span <em>n</em></code> - Specifies the number of columns the item will span</li>
+  </ul></li></ul></li><br>   
+
+  <li><code><label for="Input-Grid-Row-End">grid-row-end: </label><input id="Input-Grid-Row-End" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerGridRowEnd()">MODIFY</button>
+  <ul><li>The <code>grid-row-end</code> property defines how many rows an item will span, or on which row-line the item will end</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>Row Line</em></code> - Specifies on which row to end the display of the item</li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The item will span one row</li>
+  <li><code>span <em>n</em></code> - Specifies the number of rows the item will span</li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Grid-Column-End">grid-column-end: </label><input id="Input-Grid-Column-End" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerGridColumnEnd()">MODIFY</button>
+  <ul><li>The <code>grid-column-end</code> property defines how many columns an item will span, or on which column-line the item will end</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code><em>Column Line</em></code> - Specifies on which column to end the display of the item</li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The item will span one column</li>
+  <li><code>span <em>n</em></code> - Specifies the number of columns the item will span</li>
+  </ul></li></ul></li><br>
+
+  </ul></li> </ol></td></tr>
+
+  <tr><td><code>justify-*</code></td>
+  <td><ol><li><code><label for="Input-Justify-Content">justify-content: </label><input id="Input-Justify-Content" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerJustifyContent()">MODIFY</button>
+  <ul><li>The <code>justify-content</code> property aligns all items within the same container horizontally</li>
+  <li>This property is applied either on the flex or grid container</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>flex-start</code> - <b>[DEFAULT]</b> Items are positioned at the beginning of the container</li>
+  <li><code>flex-end</code> - Items are positioned at the end of the container</li>
+  <li><code>center</code> - Items are positioned in the center of the container</li>
+  <li><code>space-between</code> - Items will have space between them</li>
+  <li><code>space-around</code> - Items will have space before, between, and after them</li>
+  <li><code>space-evenly</code> - Items will have equal space around them</li>
+  <li><code>baseline</code></li>
+  <li><code>first-baseline</code></li>
+  <li><code>last-baseline</code></li>
+  <li><code>start</code></li>
+  <li><code>end</code></li>
+  <li><code>left</code></li>
+  <li><code>right</code></li>
+  <li><code>safe</code></li>
+  <li><code>unsafe</code></li>
+  <li><code>stretch</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Justify-Items">justify-items: </label><input id="Input-Justify-Items" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerJustifyItems()">MODIFY</button>
+  <ul><li>The <code>justify-items</code> property is set on the grid container to give the items alignment in the inline direction</li>
+  <li>For this property to have any alignment effect, the grid items need available space around themselves in the inline direction</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>legacy</code> - <b>[DEFAULT]</b></li>
+  <li><code>normal</code> - Dependant on layout context, but similar to 'stretch' for grid layout</li>
+  <li><code>stretch</code> - Stretches to fill the grid cell if inline-size (width) is not set</li>
+  <li><code>start</code> - Align items at the start in the inline direction</li>
+  <li><code>end</code> - Align items at the end in the inline direction</li>
+  <li><code>left</code> - Align items to the left</li>
+  <li><code>right</code> - Align items to the right</li>
+  <li><code>center</code> - Align items to the center</li>
+  <li><code>auto</code></li>
+  <li><code>baseline</code></li>
+  <li><code>first-baseline</code></li>
+  <li><code>last-baseline</code></li>
+  <li><code>flex-start</code></li>
+  <li><code>flex-end</code></li>
+  <li><code>safe</code></li>
+  <li><code>unsafe</code></li>
+  <li><code>self-start</code></li>
+  <li><code>self-end</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Justify-Self">justify-self: </label><input id="Input-Justify-Self" type="text" placeholder="My Value"></code>
+  <button onclick="ClickHandlerJustifySelf()">MODIFY</button>
+  <ul><li>The <code>justify-self</code> property aligns a grid item within its grid cell in the inline direction</li>
+  <li>For this property to have any alignment effect, the grid item need available space around itself in the inline direction</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> Grid container justify-self property value is inherited</li>
+  <li><code>left</code> - Align items to the left</li>
+  <li><code>right</code> - Align items to the right</li>
+  <li><code>start</code> - Align items at the start in the inline direction</li>
+  <li><code>end</code> - Align items at the end in the inline direction</li>
+  <li><code>center</code> - Align items to the center</li>
+  <li><code>stretch</code> - Stretches to fill the grid cell if inline-size (width) is not set</li>
+  <li><code>normal</code></li>
+  <li><code>baseline</code></li>
+  <li><code>first-baseline</code></li>
+  <li><code>last-baseline</code></li>
+  <li><code>flex-start</code></li>
+  <li><code>flex-end</code></li>
+  <li><code>save</code></li>
+  <li><code>unsave</code></li>
+  <li><code>self-start</code></li>
+  <li><code>self-end</code></li>
+  </ul></li></ul></li> </ol></td></tr>
+
+  <tr><td><code>align-*</code></td>
+  <td><ol><li><code><label for="Input-Align-Content">align-content: </label><input id="Input-Align-Content" type="text" placeholder="My Value"> ;</code>
+  <button onclick="ClickHandlerAlignContent()">MODIFY</button>
+  <ul><li>The <code>align-content</code> property specifies how lines are distributed along the cross axis in a container</li>
+  <li>In flexbox layout, the main axis is in the flex-direction (default is 'row', horizontal), and the cross axis is
+      perpendicular to the main axis (default is 'column', vertical)
+  </li>
+  <li>The <code>align-content</code> property can also be used on either a flex or grid container to align items in the block direction</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>stretch</code> - <b>[DEFAULT]</b> Lines stretch to take up the remaining space</li>
+  <li><code>center</code> - Lines are packed toward the center of the flex container</li>
+  <li><code>space-around</code> - Lines are evenly distributed in the flex container, with half-size spaces on either end</li>
+  <li><code>space-between</code> - Lines are evenly distributed in the flex container</li>
+  <li><code>space-evenly</code> - Lines are evenly distributed in the flex container, with equal space around them</li>
+  <li><code>flex-end</code> - Lines are packed toward the end of the flex container</li>
+  <li><code>flex-start</code> - Lines are packed toward the start of the flex container</li>
+  <li><code>normal</code></li>
+  <li><code>start</code></li>
+  <li><code>end</code></li>
+  <li><code>baseline</code></li>
+  <li><code>first-baseline</code></li>
+  <li><code>last-baseline</code></li>
+  <li><code>safe</code></li>
+  <li><code>unsafe</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Align-Items">align-items: </label><input id="Input-Align-Items" type="text" placeholder="My Values"></code> ;
+  <button onclick="ClickHandlerAlignItems()">MODIFY</button>
+  <ul><li>The <code>align-items</code> property specifies the default alignment for items inside a flexbox or grid container</li>
+  <li>In a flexbox container, the flexbox items are aligned on the cross axis, which is vertical by default (opposite of flex-direction)</li>
+  <li>In a grid container, the grid items are aligned in the block direction</li>
+  <li>For this property to have any alignment effect, the items need available space around themselves in the appropriate direction</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>normal</code> - <b>[DEFAULT]</b> Behaves like 'stretch' for flexbox and grid items, or 'start' for grid items with a defined block size</li>
+  <li><code>stretch</code> - Items are stretched to fit the container</li>
+  <li><code>center</code> - Items are positioned at the center of the container</li>
+  <li><code>flex-start</code> - Items are positioned at the beginning of the container</li>
+  <li><code>flex-end</code> - Items are positioned at the end of the container</li>
+  <li><code>start</code> - Items are positioned at the beginning of their individual grid cells, in the block direction</li>
+  <li><code>end</code> - Items are positioned at the end of the their individual grid cells, in the block direction</li>
+  <li><code>baseline</code></li>
+  <li><code>first-baseline</code></li>
+  <li><code>last-baseline</code></li>
+  <li><code>safe</code></li>
+  <li><code>unsafe</code></li>
+  <li><code>self-start</code></li>
+  <li><code>self-end</code></li>
+  </ul></li></ul></li><br>
+
+  <li><code><label for="Input-Align-Self">align-self: </label><input id="Input-Align-Self" type="text" placeholder="My Values"> ;</code>
+  <button onclick="ClickHandlerAlignSelf()">MODIFY</button>
+  <ul><li>The <code>align-self</code> property specifies the alignment in the block direction for the selected item inside a flexbox or grid container</li>
+  <li>The <code>align-self</code> property overrides the grid or flexible container's align-items property</li>
+  <li><b>Related Values:</b>
+  <ul><li><code><em>CSS Global Values</em></code></li>
+  <li><code>auto</code> - <b>[DEFAULT]</b> The element inherits its parent container's align-items property, or "stretch" if it has no parent container</li>
+  <li><code>center</code> - The element is positioned at the center of the container</li>
+  <li><code>stretch</code> - The element is positioned to fit the container</li>
+  <li><code>flex-start</code> - The element is positioned at the beginning of the container</li>
+  <li><code>flex-end</code> - The element is positioned at the end of the container</li>
+  <li><code>baseline</code> - The element is positioned at the baseline of the container</li>
+  <li><code>first-baseline</code></li>
+  <li><code>last-baseline</code></li>
+  <li><code>safe</code></li>
+  <li><code>unsafe</code></li>
+  <li><code>self-start</code></li>
+  <li><code>self-end</code></li>
+  <li><code>normal</code></li>
+  </ul></li></ul></li> </ol></td></tr>
+  </table>
   </section>
 
   <section>
