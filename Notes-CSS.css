@@ -1,3 +1,10 @@
+body { margin: 0;}
+.My-Navigate-Bar { height: auto; width: 100%;
+                   border: 1px solid black;
+                   display: flex;
+                   position: fixed; top: 0;
+                 }
+
 /* FIXED CSS STYLING */
 body { background-color: lightgrey; }
 table, th, td { border: 1px solid black; }
