@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 <!--Browser Tab-->
@@ -16,11 +16,40 @@
   <!--NAVIGATE BAR-->
   <a href="#">HTML</a> ||| <a href="Notes-CSS.html">CSS</a> ||| <a href="Notes-JS.html">JavaScript</a> |||
   <a href="Notes-Gif">Git</a> ||| <a href="Notes-BS">Bootstrap</a>|||<a href="Notes-React.html">React</a> |||
-
-  <section>
+  
+  <section id="HTML-Fundamental-Structures">
   <h1>HTML FUNDAMENTAL STRUCTURES</h1>
-  <code>&lt;!DOCTYPE&gt;</code><br>
-  <code>&lt;html&gt; <em>My Contents</em> &lt;/html&gt;</code><br>
+
+  <div id="HTML-Declaration" class="Box">
+  <h3><code>&lt;!DOCTYPE&gt;</code></h3>
+  <p>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration <br>
+     The declaration is not an HTML tag, but it is an "information" to the browser about what document type to expect <br>
+     Therefore, this <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this is an HTML 5 document </p>
+  <p><mark><b>NOTES:</b></mark>
+  <ul><li>The <code>&lt;!DOCTYPE&gt;</code> declaration is NOT case sensitive</li>
+  </ul></p></div>
+
+  <div id="HTML-HTML-Tag" class="Box">
+  <h3><code>&lt;html&gt; <em>My Contents</em> &lt;/html&gt;</code></h3>
+  <p>The <code>&lt;html&gt;</code> tag represents the root of an HTML document <br>
+     The <code>&lt;html&gt;</code> tag is the container for all other HTML elements, except for the <code>&lt;!DOCTYPE&gt;</code> declaration </p>
+  <p><b>Related Attributes:</b>
+  <ul><li><code><em>HTML Global Attributes</em></code></li>
+  <li><code><em>HTML DOM</em></code></li>
+  <li><code>xmlns = "<em>My Value</em>"</code>
+  <ul><li>The <code>xmlns</code> attribute specifies the XML namespace for a document</li>
+  <li><b>Related Values:</b>
+  <ul><li><code>http://www.w3.org/1999/xhtml</code></li>
+  </ul></li> </ul></li> </ul></p>
+  <p><b>Default CSS Settings</b> <br>
+  <code>html { display: block; } <br>
+        html:focus { outline: none; }</code> </p>
+  <p><mark><b>NOTES:</b></mark>
+  <ul><li>Best practice to include <code>lang</code> attribute
+  <ul><li>Always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page</li>
+  <li>This is meant to assist search engines and browsers</li>
+  </ul></li></ul></p></div>
+  <!--
   <code>&lt;head&gt; <em>My Contents</em> &lt;/head&gt;</code><br>
   <code>&lt;body&gt; <em>My Contents</em> &lt;/body&gt;</code><br>
   <code>&lt;header&gt; <em>My Contents</em> &lt;/header&gt;</code><br>
@@ -43,7 +72,338 @@
   <code>&lt;base&gt;</code><br>
   <code>&lt;style&gt; <em>My Contents</em> &lt;/style&gt;</code><br>
   <code>&lt;script&gt; <em>My Contents</em> &lt;/script&gt;</code><br>
-  <code>&lt;noscript&gt; <em>My Contents</em> &lt;/noscript&gt;</code><br>
+  <code>&lt;noscript&gt; <em>My Contents</em> &lt;/noscript&gt;</code><br> -->
+  </section>
+
+  <section id="HTML-Semantic-Elements-Text">
+  <h1>HTML SEMANTIC ELEMENTS (TEXT)</h1>
+  <div id="Comment-Tag" class="Box">
+  <h3><code>&lt;!-- <em>My Text</em> --&gt;</code></h3>
+  <p>The comment tag is used to insert comments in the source code<br>
+     Comments are not displayed in the browsers<br>
+     Developers can use comments to explain their code, which can help them when they edit the source code at a later date<br>
+     This is especially useful if they have a lot of code</p> </div>
+  
+  <div id="Heading-Tag" class="Box">
+  <h3><code>&lt;h1&gt; <em>My Text</em> &lt;/h1&gt;</code></h3>
+  <p>The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags are used to define HTML headings<br>
+     The <code>&lt;h1&gt;</code> tag defines the most important heading while the <code>&lt;h6&gt;</code> tag defines the least important heading</p>
+  <p><b>Related Attribute(s):</b>
+  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
+  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
+  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
+  </ul></p>
+  <p><b>Default CSS Setting(s):</b><br>
+  <code>h1 { display: block; margin: 0.67em 0; font-size: 2em; font-weight: bold; }  <br>
+        h2 { display: block; margin: 0.83em 0; font-size: 1.5em; font-weight: bold; }<br>
+        h3 { display: block; margin: 1em 0; font-size: 1.17em; font-weight: bold; }  <br>
+        h4 { display: block; margin: 1.33em 0; font-size: 1em; font-weight: bold; }  <br>
+        h5 { display: block; margin: 1.67em 0; font-size: .83em; font-weight: bold; }<br>
+        h6 { display: block; margin: 2.33em 0; font-size: .67em; font-weight: bold; }
+  </code></p>
+  <p><mark><b>INSIGHTS:</b></mark>
+  <ul><li>The <code>&lt;h1&gt;</code> tag usage
+  <ul><li>It is recommended to use only one <code>&lt;h1&gt;</code> tag per page</li>
+  <li>This should represent the main heading/subject for the whole page</li>
+  </ul></li>
+  <li>The flow of heading levels
+  <ul><li>Do not skip heading levels, start with <code>&lt;h1&gt;</code>, then use <code>&lt;h2&gt;</code>, and so on</li>
+  </ul></li> </ul></p> </div>
+
+  <div id="Paragraph-Tag" class="Box">
+  <h3><code>&lt;p&gt; <em>My Text</em> &lt;/p&gt;</code></h3>
+  <p>The <code>&lt;p&gt;</code> tag defines a paragraph</p>
+  <p><b>Related Attribute(s):</b>
+  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
+  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
+  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
+  </ul></p>
+  <p><b>Default CSS Setting(s):</b><br>
+  <code>p { display: block; margin: 1em 0; }
+  </code></p> </div>
+
+  <div id="Code-Tag" class="Box">
+  <h3><code>&lt;code&gt; <em>My Text</em> &lt;/code&gt;</code></h3>
+  <p>The <code>&lt;code&gt;</code> tag is used to define a piece of computer code</p>
+  <p><b>Related Attribute(s):</b>
+  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
+  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
+  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
+  </ul></p>
+  <p><b>Default CSS Setting(s):</b><br>
+  <code>code { font-family: monospace; }</code> 
+  </p> </div>
+
+  <div id="Emphasize-Tag" class="Box">
+  <h3><code>&lt;em&gt; <em>My Text</em> &lt;/em&gt;</code></h3>
+  <p>The <code>&lt;em&gt;</code> tag is used to define emphasized text</p>
+  <p><b>Related Attribute(s):</b>
+  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
+  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
+  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
+  </ul></p>
+  <p><b>Default CSS Setting(s):</b><br>
+  <code>em { font-style: italic; }</code>
+  </p> </div>
+  <!--
+  <code>&lt;q&gt; <em>My Text</em> &lt;/q&gt;</code>
+  <code>&lt;blockquote&gt; <em>My Text</em> &lt;/blockquote&gt;</code>
+  <code>&lt;address&gt; <em>My Text</em> &lt;/address&gt;</code>
+  <code>&lt;abbr&gt; <em>My Text</em> &lt;/abbr&gt;</code>
+  <code>&lt;dfn&gt; <em>My Text</em> &lt;/dfn&gt;</code>
+  <code>&lt;cite&gt; <em>My Text</em> &lt;/cite&gt;</code>
+  <code>&lt;time&gt; <em>My Text</em> &lt;/time&gt;</code>
+  <code>&lt;var&gt; <em>My Text</em> &lt;/var&gt;</code>
+  <code>&lt;samp&gt; <em>My Text</em> &lt;/samp&gt;</code>
+  <code>&lt;kbd&gt; <em>My Text</em> &lt;/kbd&gt;</code>
+  <code>&lt;pre&gt; <em>My Text</em> &lt;/pre&gt;</code>
+  <code>&lt;strong&gt; <em>My Text</em> &lt;/strong&gt;</code>
+  <code>&lt;ins&gt; <em>My Text</em> &lt;/ins&gt;</code>
+  <code>&lt;del&gt; <em>My Text</em> &lt;/del&gt;</code>
+  <code>&lt;sup&gt; <em>My Text</em> &lt;/sup&gt;</code>
+  <code>&lt;sub&gt; <em>My Text</em> &lt;/sub&gt;</code> -->
+  </section>
+
+  <section id="HTML-Utilities">
+  <h1>HTML UTILITIES</h1>
+  <div id="Mark-Tag" class="Box">
+  <h3><code>&lt;mark&gt; <em>My Text</em> &lt;/mark&gt;</code></h3>
+  <p>The <code>&lt;mark&gt;</code> tag defines text that should be marked or highlighted</p>
+  <p><b>Related Attribute(s)</b>:
+  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
+  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
+  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
+  </ul></p>
+  <p><b>Default CSS Setting(s):</b><br>
+  <code>mark { background-color: yellow; color: black; }</code>
+  </p> </div>
+
+  <div id="Bold-Tag" class="Box">
+  <h3><code>&lt;b&gt; <em>My Text</em> &lt;/b&gt;</code></h3>
+  <p>The <code>&lt;b&gt;</code> tag specifies bold text without any extra importance</p>
+  <p><b>Related Attribute(s)</b>:
+  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
+  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
+  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
+  </ul></p>
+  <p><b>Default CSS Setting(s)</b><br>
+  <code>b { font-weight: bold; }</code>
+  </p> </div>
+
+  <div id="Italic-Tag" class="Box">
+  <h3><code>&lt;i&gt; <em>My Text</em> &lt;/i&gt;</code></h3>
+  <p>The <code>&lt;i&gt;</code> tag defines a part of text in an alternate voice or mood<br>
+     The <code>&lt;i&gt;</code> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc</p>
+  <p><b>Related Attribute(s)</b>:
+  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
+  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
+  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
+  </ul></p>
+  <p><b>Default CSS Setting(s):</b><br>
+  <code>i { font-style: italic; }</code>
+  </p> </div>
+  <!--
+  <code>&lt;progress&gt; <em>My Text</em> &lt;/progress&gt;</code>
+  <code>&lt;meter&gt; <em>My Text</em> &lt;/meter&gt;</code>
+  <code>&lt;small&gt; <em>My Text</em> &lt;/small&gt;</code>
+  <code>&lt;bdi&gt; <em>My Text</em> &lt;/bdi&gt;</code>
+  <code>&lt;bdo&gt; <em>My Text</em> &lt;/bdo&gt;</code>
+  <code>&lt;u&gt; <em>My Text</em> &lt;/u&gt;</code>
+  <code>&lt;s&gt; <em>My Text</em> &lt;/s&gt;</code>
+  <code>&lt;hr&gt;</code>
+  <code>&lt;br&gt;</code>
+  <code>&lt;wbr&gt;</code>  -->
+  </section>
+
+  <section id="HTML-Global-Attributes">
+  <h1>HTML GLOBAL ATTRIBUTES</h1>
+  <div id="Attribute-Class" class="Box">
+  <h3><code>class</code> Attribute</h3>
+  <p>The <code>class</code> attribute specifies one or more class names for an element</p>
+  <p><b>Related Value(s):</b>
+  <ul><li><code><em>myClass</em></code>
+  <ul><li>Specifies one or more class names for an element</li>
+  <li>The class names must begin with a letter A-Z or a-z</li>
+  <li>The class names can be followed by: letters (A-Za-z), digits (0-9), hyphens ("-"), and underscores ("_")</li>
+  </ul></li> </ul></p>
+  <p><mark><b>INSIGHTS:</b></mark> <br>
+  <ul><li>Syntax of writing multiple classes for an element
+  <ul><li>To specify multiple classes, separate the class names with a space</li>
+  <li>This allows developers to combine several CSS classes for one HTML element</li>
+  <li>Example, <code>&lt;div class="<em>myClass1 myClass2 myClass3</em>"&gt;</code></li>
+  </ul></li>
+  <li>Mostly used as node
+  <ul><li>The <code>class</code> attribute is mostly used to point to a class in a style sheet</li>
+  <li>It can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class</li>
+  </ul></li> </ul></p> </div>
+
+  <div id="Attribute-Id" class="Box">
+  <h3><code>id</code> Attribute</h3>
+  <p>The <code>id</code> attribute specifies a unique id for an HTML element</p>
+  <p><b>Related Value(s):</b>
+  <ul><li><code><em>myId</em></code>
+  <ul><li>Specifies a unique id for the element</li>
+  <li>The id name must contain at least one character</li>
+  <li>The id name must not contain any space characters</li>
+  </ul></li> </ul></p>
+  <p><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Unique Id
+  <ul><li>The value must be unique within the HTML document, which only one specific id can exist in the document</li>
+  </ul></li>
+  <li>Mostly used as node
+  <ul><li>The <code>id</code> attribute is mostly used to point to a style in a style sheet</li>
+  <li>It can also be used by a JavaScript (via the HTML DOM) to manipulate the element with the specific id</li>
+  </ul></li> </ul></p> </div>
+
+  <div id="Attribute-Language" class="Box">
+  <h3><code>lang</code> Attribute</h3>
+  <p>The <code>lang</code> attribute specifies the language of the element's content</p>
+  <p><b>Related Value(s)</b>:
+  <ul><li><code><em><a href="https://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">HTML Language Codes</a></em></code>
+  <ul><li>Specifies the language code for the element's content</li>
+  <li>Common examples are <code>"en"</code> for English, <code>"fr"</code> for French, and so on</li>
+  </ul></li> </ul></p> </div>
+
+  <div id="Attribute-Style" class="Box">
+  <h3><code>style</code> Attribute</h3>
+  <p>The <code>style</code> attribute specifies an inline style for an element</p>
+  <p><b>Related Value(s):</b>
+  <ul><li><code><em><a href="Notes-CSS.html" target="_blank">CSS Properties</a></em></code>
+  <ul><li>Defines an inline style for an element</li>
+  </ul></li> </ul></p>
+  <p><b><mark>INSIGHTS:</mark></b>
+  <ul><li>Syntax of writing multiple properties and values
+  <ul><li>One or more CSS properties and values separated by semicolons</li>
+  <li>Example, <code>&lt;div style="color:blue; text-align:center;"&gt;</code></li>
+  </ul></li>
+  <li>Overrides any style set globally
+  <ul><li>The <code>style</code> attribute will override any style set globally, like styles specified in the <code>&lt;style&gt;</code> tag or in an external style sheet</li>
+  <li>The <code>style</code> attribute can be used on any HTML element</li>
+  <li>It will validate on any HTML element, however, it is not necessarily useful</li>
+  </ul></li> </ul></p> </div>
+  <!--
+  <code>accesskey</code>
+  <code>contenteditable</code>
+  <code>data-*</code>
+  <code>dir</code>
+  <code>draggable</code>
+  <code>enterkeyhint</code>
+  <code>hidden</code>
+  <code>inert</code>
+  <code>inputmode</code>
+  <code>popover</code>
+  <code>spellcheck</code>
+  <code>tabindex</code>
+  <code>title</code>
+  <code>translate</code> -->
+  </section>
+
+<!--
+  <section id="HTML-Event-Attributes">
+  <h1>HTML EVENT ATTRIBUTES</h1>
+  <div id="Windows-Event-Attributes">
+  <h3>Windows Event Attributes</h3>
+  <code>onafterprint</code>   = Script to be run after the document is printed<br>
+  <code>onbeforeprint</code>  = Script to be run before the document is printed<br>
+  <code>onbeforeunload</code> = Script to be run when the document is about to be unloaded<br>
+  <code>onerror</code>        = Script to be run when an error occurs<br>
+  <code>onhashchange</code>   = Script to be run when there has been changes to the anchor part of the a URL<br>
+  <code>onload</code>         = Fires after the page is finished loading<br>
+  <code>onmessage</code>      = Script to be run when the message is triggered<br>
+  <code>onoffline</code>      = Script to be run when the browser starts to work offline<br>
+  <code>ononline</code>       = Script to be run when the browser starts to work online<br>
+  <code>onpagehide</code>     = Script to be run when a user navigates away from a page<br>
+  <code>onpageshow</code>     = Script to be run when a user navigates to a page<br>
+  <code>onpopstate</code>     = Script to be run when the window's history changes<br>
+  <code>onresize</code>       = Fires when the browser window is resized<br>
+  <code>onstorage</code>      = Script to be run when a Web Storage area is updated<br>
+  <code>onunload</code>       = Fires once a page has unloaded (or the browser window has been closed)<br>
+  </div>
+
+  <div id="Form-Event-Attributes">
+  <h3>Form Event Attributes</h3>
+  <code>onblur</code>        = Fires the moment that the element loses focus<br>
+  <code>onchange</code>      = Fires the moment when the value of the element is changed<br>
+  <code>oncontextmenu</code> = Script to be run when a context menu is triggered<br>
+  <code>onfocus</code>       = Fires the moment when the element gets focus<br>
+  <code>oninput</code>       = Script to be run when an element gets user input<br>
+  <code>oninvalid</code>     = Script to be run when an element is invalid<br>
+  <code>onreset</code>       = Fires when the Reset button in a form is clicked<br>
+  <code>onsearch</code>      = Fires when the user writes something in a search field<br>
+  <code>onselect</code>      = Fires after some text has been selected in an element<br>
+  <code>onsubmit</code>      = Fires when a form is submitted<br>
+  </div>
+
+  <div id="Keyboard-Event-Attributes">
+  <h3>Keyboard Event Attributes</h3>
+  <code>onkeydown</code>  = Fires when a user is pressing a key<br>
+  <code>onkeypress</code> = Fires when a user presses a key<br>
+  <code>onkeyup</code>    = Fires when a user releases a key<br>
+  </div>
+
+  <div id="Mouse-Event-Attributes">
+  <h3>Mouse Event Attributes</h3>
+  <code>onclick</code>      = Fires on a mouse click on the element<br>
+  <code>ondblclick</code>   = Fires on a mouse double-click on the element<br>
+  <code>onmousedown</code>  = Fires when a mouse button is pressed down on an element<br>
+  <code>onmousemove</code>  = Fires when the mouse pointer is moving while it is over an element<br>
+  <code>onmouseout</code>   = Fires when the mouse pointer moves out of an element<br>
+  <code>onmouseover</code>  = Fires when the mouse pointer moves over an element<br>
+  <code>onmouseup</code>    = Fires when a mouse button is released over an element<br>
+  <code>onmousewheel</code> = Deprecated. Use the onwheel attribute instead<br>
+  <code>onwheel</code>      = Fires when the mouse wheel rolls up or down over an element<br>
+  </div>
+
+  <div id="Drag-Event-Attributes">
+  <h3>Drag Event Attributes</h3>
+  <code>ondrag</code>      = Script to be run when an element is dragged<br>
+  <code>ondragend</code>   = Script to be run at the end of a drag operation<br>
+  <code>ondragenter</code> = Script to be run when an element has been dragged to a valid drop target<br>
+  <code>ondragleave</code> = Script to be run when an element leaves a valid drop target<br>
+  <code>ondragover</code>  = Script to be run when an element is being dragged over a valid drop target<br>
+  <code>ondragstart</code> = Script to be run at the start of a drag operation<br>
+  <code>ondrop</code>	     = Script to be run when dragged element is being dropped<br>
+  <code>onscroll</code>	   = Script to be run when an element's scrollbar is being scrolled<br>
+  </div>
+
+  <div id="Clipboard-Event-Attributes">
+  <h3>Clipboard Event Attributes</h3>
+  <code>oncopy</code>  = Fires when the user copies the content of an element<br>
+  <code>oncut</code>   = Fires when the user cuts the content of an element<br>
+  <code>onpaste</code> = Fires when the user pastes some content in an element<br>
+  </div>
+
+  <div id="Media-Event-Attributes">
+  <h3>Media Event Attributes</h3>
+  <code>onabort</code>          = Script to be run on abort<br>
+  <code>oncanplay</code>        = Script to be run when a file is ready to start playing (when it has buffered enough to begin)<br>
+  <code>oncanplaythrough</code> = Script to be run when a file can be played all the way to the end without pausing for buffering<br>
+  <code>oncuechange</code>      = Script to be run when the cue changes in a <code>&lt;track&gt;</code> element<br>
+  <code>ondurationchange</code> = Script to be run when the length of the media changes<br>
+  <code>onemptied</code>        = Script to be run when something bad happens and the file is suddenly unavailable (like unexpectedly disconnects)<br>
+  <code>onended</code>          = Script to be run when the media has reach the end (a useful event for messages like "thanks for listening")<br>
+  <code>onerror</code>          = Script to be run when an error occurs when the file is being loaded<br>
+  <code>onloadeddata</code>     = Script to be run when media data is loaded<br>
+  <code>onloadedmetadata</code> = Script to be run when meta data (like dimensions and duration) are loaded<br>
+  <code>onloadstart</code>      = Script to be run just as the file begins to load before anything is actually loaded<br>
+  <code>onpause</code>          = Script to be run when the media is paused either by the user or programmatically<br>
+  <code>onplay</code>           = Script to be run when the media is ready to start playing<br>
+  <code>onplaying</code>        = Script to be run when the media actually has started playing<br>
+  <code>onprogress</code>       = Script to be run when the browser is in the process of getting the media data<br>
+  <code>onratechange</code>     = Script to be run each time the playback rate changes (like when a user switches to a slow motion or fast forward mode)<br>
+  <code>onseeked</code>         = Script to be run when the seeking attribute is set to false indicating that seeking has ended<br>
+  <code>onseeking</code>        = Script to be run when the seeking attribute is set to true indicating that seeking is active<br>
+  <code>onstalled</code>        = Script to be run when the browser is unable to fetch the media data for whatever reason<br>
+  <code>onsuspend</code>        = Script to be run when fetching the media data is stopped before it is completely loaded for whatever reason<br>
+  <code>ontimeupdate</code>     = Script to be run when the playing position has changed (like when the user fast forwards to a different point in the media)<br>
+  <code>onvolumechange</code>   = Script to be run each time the volume is changed which (includes setting the volume to "mute")<br>
+  <code>onwaiting</code>        = Script to be run when the media has paused but is expected to resume (like when the media pauses to buffer more data)<br>
+  </div>
+
+  <div id="Misc-Event-Attributes">
+  <h3>Misc Event Attributes</h3>
+  <code>ontoggle</code> = Fires when the user opens or closes the <code>&lt;details&gt;</code> element
+  </div>
   </section>
 
   <section>
@@ -77,84 +437,50 @@
   </section>
 
   <section>
-  <h1>HTML SEMANTIC ELEMENTS (TEXT)</h1>
-  <code>&lt;!-- <em>My Text</em> --&gt;</code><br>
-  <code>&lt;h1&gt; <em>My Text</em> &lt;/h1&gt;</code><br>
-  <code>&lt;p&gt; <em>My Text</em> &lt;/p&gt;</code><br>
-  <code>&lt;q&gt; <em>My Text</em> &lt;/q&gt;</code><br>
-  <code>&lt;blockquote&gt; <em>My Text</em> &lt;/blockquote&gt;</code><br>
-  <code>&lt;address&gt; <em>My Text</em> &lt;/address&gt;</code><br>
-  <code>&lt;abbr&gt; <em>My Text</em> &lt;/abbr&gt;</code><br>
-  <code>&lt;dfn&gt; <em>My Text</em> &lt;/dfn&gt;</code><br>
-  <code>&lt;cite&gt; <em>My Text</em> &lt;/cite&gt;</code><br>
-  <code>&lt;time&gt; <em>My Text</em> &lt;/time&gt;</code><br>
-  <code>&lt;code&gt; <em>My Text</em> &lt;/code&gt;</code><br>
-  <code>&lt;var&gt; <em>My Text</em> &lt;/var&gt;</code><br>
-  <code>&lt;samp&gt; <em>My Text</em> &lt;/samp&gt;</code><br>
-  <code>&lt;kbd&gt; <em>My Text</em> &lt;/kbd&gt;</code><br>
-  <code>&lt;pre&gt; <em>My Text</em> &lt;/pre&gt;</code><br>
-  <code>&lt;strong&gt; <em>My Text</em> &lt;/strong&gt;</code><br>
-  <code>&lt;em&gt; <em>My Text</em> &lt;/em&gt;</code><br>
-  <code>&lt;ins&gt; <em>My Text</em> &lt;/ins&gt;</code><br>
-  <code>&lt;del&gt; <em>My Text</em> &lt;/del&gt;</code><br>
-  <code>&lt;sup&gt; <em>My Text</em> &lt;/sup&gt;</code><br>
-  <code>&lt;sub&gt; <em>My Text</em> &lt;/sub&gt;</code><br>
+  <h1>HTML LISTS</h1>
+  <code>&lt;ol&gt; <em>My Contents</em> &lt;/ol&gt;</code><br>
+  <code>&lt;ul&gt; <em>My Contents</em> &lt;/ul&gt;</code><br>
+  <code>&lt;menu&gt; <em>My Contents</em> &lt;/menu&gt;</code><br>
+  <code>&lt;li&gt; <em>My Contents</em> &lt;/li&gt;</code><br>
+  <code>&lt;dl&gt; <em>My Contents</em> &lt;/dl&gt;</code><br>
+  <code>&lt;dt&gt; <em>My Contents</em> &lt;/dt&gt;</code><br>
+  <code>&lt;dd&gt; <em>My Contents</em> &lt;/dd&gt;</code><br>
+  </section>
+  
+  <section>
+  <h1>IMAGE STRUCTURES</h1>
+  <code>&lt;figure&gt; <em>My Contents</em> &lt;/figure&gt;</code><br>
+  <code>&lt;img&gt;</code><br>
+  <code>&lt;figcaption&gt; <em>My Contents</em> &lt;/figcaption&gt;</code><br>
+  <code>&lt;map&gt; <em>My Contents</em> &lt;/map&gt;</code><br>
+  <code>&lt;area&gt; <em>My Contents</em> &lt;/area&gt;</code><br>
+  </section>
+  
+  <section>
+  <h1>AUDIO/VIDEO STRUCTURES</h1>
+  <code>&lt;audio&gt; <em>My Contents</em> &lt;/audio&gt;</code><br>
+  <code>&lt;video&gt; <em>My Contents</em> &lt;/video&gt;</code><br>
+  <code>&lt;source&gt; <em>My Contents</em> &lt;/source&gt;</code><br>
+  <code>&lt;track&gt; <em>My Contents</em> &lt;/track&gt;</code><br>
   </section>
 
   <section>
-  <h1>HTML UTILITIES</h1>
-  <code>&lt;progress&gt; <em>My Text</em> &lt;/progress&gt;</code><br>
-  <code>&lt;meter&gt; <em>My Text</em> &lt;/meter&gt;</code><br>
-  <code>&lt;mark&gt; <em>My Text</em> &lt;/mark&gt;</code><br>
-  <code>&lt;small&gt; <em>My Text</em> &lt;/small&gt;</code><br>
-  <code>&lt;bdi&gt; <em>My Text</em> &lt;/bdi&gt;</code><br>
-  <code>&lt;bdo&gt; <em>My Text</em> &lt;/bdo&gt;</code><br>
-  <code>&lt;b&gt; <em>My Text</em> &lt;/b&gt;</code><br>
-  <code>&lt;i&gt; <em>My Text</em> &lt;/i&gt;</code><br>
-  <code>&lt;u&gt; <em>My Text</em> &lt;/u&gt;</code><br>
-  <code>&lt;s&gt; <em>My Text</em> &lt;/s&gt;</code><br>
-  <code>&lt;hr&gt;</code><br>
-  <code>&lt;br&gt;</code><br>
-  <code>&lt;wbr&gt;</code><br>
+  <h1>RUBY ANNOTATION STRUCTURES</h1>
+  <code>&lt;ruby&gt; <em>My Contents</em> &lt;/ruby&gt;</code><br>
+  <code>&lt;rt&gt; <em>My Contents</em> &lt;/rt&gt;</code><br>
+  <code>&lt;rp&gt; <em>My Contents</em> &lt;/rp&gt;</code><br>
   </section>
 
-<!-- <code>&lt;&gt; <em></em> &lt;/&gt;</code><br>
-<details>	Defines additional details that the user can view or hide
-<summary>	Defines a visible heading for a <details> element
-
-<ol>	Defines an ordered list
-<ul>	Defines an unordered list
-<menu>	Defines an unordered list
-<li>	Defines a list item
-<dl>	Defines a description list
-<dt>	Defines a term/name in a description list
-<dd>	Defines a description/value of a term in a description list
-
-<figure>        Specifies self-contained content
-<img>	        Defines an image
-<figcaption>    Defines a caption for a <figure> element
-<map>           Defines an image map
-<area>	        Defines an area inside an image map
-
-<video>     Defines embedded video content
-<audio>     Defines embedded sound content
-<source>    Defines multiple media resources for media elements (<video> and <audio>)
-<track>     Defines text tracks for media elements (<video> and <audio>)
-
-<embed>     Defines a container for an external application
-<object>	Defines a container for an external application
-<param>     Defines a parameter for an object
-
-<ruby>	Defines a ruby annotation (for East Asian typography)
-<rt>	Defines an explanation/pronunciation of characters (for East Asian typography)
-<rp>	Defines what to show in browsers that do not support ruby annotations
-
-<a>	        Defines a hyperlink
-<iframe>	Defines an inline frame
-<canvas>	Used to draw graphics, on the fly, via scripting (usually JavaScript)
-<data>	    Adds a machine-readable translation of a given content
-<dialog>	Defines a dialog box or window
+  <code>&lt;details&gt; <em>My Contents</em> &lt;/details&gt;</code><br>
+  <code>&lt;summary&gt; <em>My Text</em> &lt;/summary&gt;</code><br>
+  <code>&lt;embed&gt; <em>My Contents</em> &lt;/embed&gt;</code><br>
+  <code>&lt;object&gt; <em>My Contents</em> &lt;/object&gt;</code><br>
+  <code>&lt;param&gt; <em>My Contents</em> &lt;/param&gt;</code><br>
+  <code>&lt;a&gt; <em>My Contents</em> &lt;/a&gt;</code><br>
+  <code>&lt;iframe&gt; <em>My Contents</em> &lt;/iframe&gt;</code><br>
+  <code>&lt;canvas&gt; <em>My Contents</em> &lt;/canvas&gt;</code><br>
+  <code>&lt;data&gt; <em>My Contents</em> &lt;/data&gt;</code><br>
+  <code>&lt;dialog&gt; <em>My Contents</em> &lt;/dialog&gt;</code><br>
 -->
 </body>
-
 </html>
