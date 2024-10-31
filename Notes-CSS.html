@@ -25,34 +25,34 @@
   </div>
   </nav>
 
-  <!------------->
-  <!--BOX MODEL-->
-  <!------------->
-  <section id="Box-Model">
-  <h1>BOX MODEL</h1>
-  <div id="Box-Dimension" class="Box">
-  <h3>Box Dimension</h3>
+  <!----------------->
+  <!--CSS BOX MODEL-->
+  <!----------------->
+  <section id="CSS-Box-Model">
+  <h1>CSS BOX MODEL</h1>
+  <div id="Element-Dimension" class="Box">
+  <h3>ELEMENT DIMENSIONS</h3>
   <p><b>Related Properties:</b>
+
+  <!-- HEIGHT -->
   <ul><li><code>height: <em>myValue</em>;</code>
   <ul><li>The <code>height</code> property sets the height of an element</li>
   <li><b>Related Value(s):</b>
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code>
-  <ul><li>A <b>default value</b> where the element will automatically adjust its height to allow its content to be displayed correctly</li>
-  </ul></li>
+  <li><code>auto</code> ( A <b>default value</b> where the element will automatically adjust its height to allow its content to be displayed correctly )</li>
   <!--  <li><code>fit-content</code></li>
   <li><code>max-content</code></li>
   <li><code>min-content</code></li> -->
   </ul></li> </ul></li> <br>
+
+  <!-- WIDTH -->
   <li><code>width: <em>myValue</em>;</code>
   <ul><li>The <code>width</code> property sets the width of an element</li>
   <li><b>Related Value(s):</b>
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code>
-  <ul><li>A <b>default value</b> where the element will automatically adjust its width based on <code>display</code> property's default value</li>
-  </ul></li>
+  <li><code>auto</code> ( A <b>default value</b> where the element will automatically adjust its width based on <code>display</code> property's default value )</li>
   <!--  <li><code>fit-content</code></li>
   <li><code>min-content</code></li>
   <li><code>max-content</code></li>  -->
@@ -63,12 +63,14 @@
   <li><code>max-width: <em>myValue</em>;</code></li>
   <li><code>aspect-ratio: <em>myValue</em>;</code></li>
   <li><code>box-sizing: <em>myValue</em>;</code></li>  -->
-  </ul></p>
+  </ul></p> </div>
   
-  <h3>Box Spacing</h3>
-  <div style="border: 1px solid black; height: 100px; width: 100px; margin: auto;">DO NOT DELETE, YET!</div>
+  <div id="Element-Spacing" class="Box">
+  <h3>ELEMENT SPACING</h3>
   <p><b>Related Properties</b>
-  <ul><li><code>padding: <em>myValue</em>;</code>
+
+  <!-- PADDING -->
+  <ul><li><code>padding: <em>myValues</em>;</code>
   <ul><li>The <code>padding</code> property specifies space around an element's content, inside of any defined borders</li>
   <li>There are other properties related to <code>padding</code> property that can be written as its values
   <ul><li>4 values = <code>padding: padding-top padding-right padding-bottom padding-left;</code></li>
@@ -81,11 +83,31 @@
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
   <li><code>0</code> ( A <b>default value</b> where there is no padding )</li>
   </ul></li> </ul></li> <br>
+
+  <!-- MARGIN -->
+  <li><code>margin: <em>myValues</em>;</code>
+  <ul><li>The <code>margin</code> property specifies space around elements, outside of any defined borders</li>
+  <li>There are other properties related to <code>margin</code> property that can be written as its values
+  <ul><li>4 values = <code>margin: margin-top margin-right margin-bottom margin-left;</code></li>
+  <li>3 values = <code>margin: margin-top margin-<em>Horizontal</em> margin-bottom;</code></li>
+  <li>2 values = <code>margin: margin-<em>Vertical</em> margin-<em>Horizontal</em>;</code></li>
+  <li>1 value = <code>margin: margin-<em>All</em>;</code></li>
+  </ul></li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> ( A <b>default value</b> where there is no margin specified )</li>
+  <li><code>auto</code> ( Horizontally center the element within its container )</li> 
+  </ul></li> </ul></li> <br>
+
+  <!-- BORDER -->
   <li><code>border: border-width border-style border-color;</code>                             <br>
       <code>border-top: border-top-width border-top-style border-top-color;</code>             <br>
       <code>border-right: border-right-width border-right-style border-right-color;</code>     <br>
       <code>border-bottom: border-bottom-width border-bottom-style border-bottom-color;</code> <br>
       <code>border-left: border-left-width border-left-style border-left-color;</code>
+  
+  <!-- BORDER WIDTH -->
   <ul><li><code>border-width: <em>myValues</em>;</code>
   <ul><li>The <code>border-width</code> property specifies the width of an element's borders</li>
   <li>There are other properties related to <code>border-width</code> property that can be written as its values
@@ -100,7 +122,9 @@
   <li><code>medium</code> ( A <b>default value</b> where the width of the border is medium )</li>
   <!--  <li><code>thin</code> ( The width of the border is thin )</li>
   <li><code>thick</code> ( The width of the border is thick )</li>  -->
-  </ul></li> </ul></li>
+  </ul></li> </ul></li> <br>
+
+  <!-- BORDER STYLE -->
   <li><code>border-style: <em>myValues</em>;</code>
   <ul><li>The <code>border-style</code> property specifies the style of an element's borders</li>
   <li>There are other properties related to <code>border-style</code> property that can be written as its values
@@ -121,7 +145,9 @@
   <li><code>inset</code> ( The style of the border is 3D inset - the effect depends on the <code>border-color</code> value )</li>
   <li><code>outset</code> ( The style of the border is 3D outset - the effect depends on the <code>border-color</code> value )</li>
   <li><code>ridge</code> ( The style of the border is 3D ridge - the effect depends on the <code>border-color</code> value  )</li>  -->
-  </ul></li> </ul></li>
+  </ul></li> </ul></li> <br>
+
+  <!-- BORDER COLOR -->
   <li><code>border-color: <em>myValues</em>;</code>
   <ul><li>The <code>border-color</code> property specifies the color of an element's borders</li>
   <li>There are other properties related to <code>border-color</code> property that can be written as its values
@@ -135,26 +161,125 @@
   <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
   <li><code>currentColor</code> ( A <b>default value</b> where the border color is based on the value of the <code>color</code> property of the element )</li>
   <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li>
-  </ul></li>
-  <!--  <li><code>margin: margin-top margin-right margin-bottom margin-left;</code><br></li>  -->
-  </ul></p>
-  
-  <!--<h3>Box Position</h3>
-  <p><b>Related Properties:</b>
-  <ul><li><code>position: <em>myValue</em>;</code></li>
-  <li><code>inset: top right bottom left;</code></li>
-  <li><code>float: <em>myValue</em>;</code></li>
-  <li><code>clear: <em>myValue</em>;</code></li>
-  </ul></p>-->
+  </ul></li> </ul></li> </ul></li> <br>
 
-  <!--<h3>Misc</h3>
+  <!-- BORDER RADIUS-->
+  <li><code>border-radius: <em>myValues</em>;</code>
+  <ul><li>The <code>border-radius</code> property defines the radius of the element's corners</li>
+  <li>There are other properties related to <code>border-radius</code> property that can be written as its values
+  <ul><li>4 values = <code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code></li>
+  <li>3 values = <code>border-radius: border-top-left-radius border-<em>Diagonal-Top-Bottom</em>-radius border-bottom-right-radius;</code></li>
+  <li>2 values = <code>border-radius: border-<em>Diagonal-Left-Right</em>-radius border-<em>Diagonal-Right-Left</em>-radius;</code></li>
+  <li>1 value = <code>border-radius: border-<em>All</em>-radius;</code></li>
+  </ul></li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> ( A <b>default value</b> where there is no border radius specified )</li>
+  </ul></li> </ul></li> </ul></p> </div>
+
+  <div id="Misc" class="Box">
+  <h3>MISC</h3>
   <p><b>Related Properties</b>
-  <ul><li><code>box-shadow: <em>myValue;</em></code></li>
-  <li><code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code></li>
-  <li><code>outline: outline-width outline-style outline-color;</code></li>
-  <li><code>outline-offset: <em>myValue</em>;</code></li>
-  </ul></p>-->
+
+  <!-- OUTLINE -->
+  <ul><li><code>outline: outline-width outline-style outline-color;</code>
+
+  <!-- OUTLINE WIDTH -->
+  <ul><li><code>outline-width: <em>myValue</em>;</code>
+  <ul><li>The <code>outline-width</code> property specifies the width of an outline, drawn around elements, outside the borders</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>medium</code> ( A <b>default value</b> where the width of the outline is medium )</li>
+  <!--  <li><code>thin</code> ( The width of the outline is thin )</li>
+  <li><code>thick</code> ( The width of the outline is thick )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- OUTLINE STYLE -->
+  <li><code>outline-style: <em>myValue</em>;</code>
+  <ul><li>The <code>outline-style</code> property specifies the style of an outline, drawn around elements, outside the borders</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>none</code> ( A <b>default value</b> where there is no specified outline )</li>
+  <li><code>solid</code> ( Specifies a solid outline )</li>
+  <!--  <li><code>auto</code> ( Specifies an auto outline )</li>
+  <li><code>dashed</code> ( Specifies a dashed outline )</li>
+  <li><code>dotted</code> ( Specifies a dotted outline )</li>
+  <li><code>double</code> ( Specifies a double outline )</li>
+  <li><code>groove</code> ( Specifies a 3D grooved outline - the effect depends on the outline-color value )</li>
+  <li><code>hidden</code> ( Specifies a hidden outline )</li>
+  <li><code>inset</code> ( Specifies a 3D inset outline - the effect depends on the outline-color value )</li>
+  <li><code>outset</code> ( Specifies a 3D outset outline - the effect depends on the outline-color value )</li>
+  <li><code>ridge</code> ( Specifies a 3D ridged outline - the effect depends on the outline-color value )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- OUTLINE COLOR -->
+  <li><code>outline-color: <em>myValue</em>;</code>
+  <ul><li>The <code>outline-color</code> property specifies the color of an outline, drawn around elements, outside the borders</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
+  <li><code>currentColor</code> ( A <b>default value</b> where the outline color is based on the value of the <code>color</code> property of the element )</li>
+  <!--  <li><code>transparent</code></li>  -->
+  </ul></li> </ul></li> </ul></li> <br>
+
+  <!-- OUTLINE OFFSET -->
+  <li><code>outline-offset: <em>myValue</em>;</code>
+  <ul><li>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> ( A <b>default value</b> where there is no specified outline offset )</li>
+  </ul></li> </ul></li> <br>
+  <li><code>box-shadow: <em>H-Offset V-Offset Blur-Radius Spread-Radius Color</em> inset;</code>
+  <ul><li>The <code>box-shadow</code> property specifies one or multiple shadows to an element</li>
+  <li><code><em>H-Offset</em></code>
+  <ul><li><b>Required</b> parameter which specifies the horizontal offset of the shadow</li>
+  <li>A positive value puts the shadow on the right side of the box</li>
+  <li>A negative value puts the shadow on the left side of the box</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>none</code> ( A <b>default value</b> where there is no shadow )</li>
+  </ul></li> </ul></li>
+  <li><code><em>V-Offset</em></code>
+  <ul><li><b>Required</b> parameter which specifies the vertical offset of the shadow</li>
+  <li>A positive value puts the shadow below the box</li>
+  <li>A negative value puts the shadow above the box</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>none</code> ( A <b>default value</b> where there is no shadow )</li>
+  </ul></li> </ul></li>
+  <li><code><em>Blur-Radius</em></code>
+  <ul><li><b>Optional</b> parameter which specifies the blur radius of the shadow</li>
+  <li>The higher the number, the more blurred the shadow will be</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> ( A <b>default value</b> where there is no blur radius specified )</li>
+  </ul></li> </ul></li>
+  <li><code><em>Spread-Radius</em></code>
+  <ul><li><b>Optional</b> parameter which specifies the spread radius of the shadow</li>
+  <li>A positive value increases the size of the spread radius shadow</li>
+  <li>A negative value decreases the size of the spread radius shadow</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> ( A <b>default value</b> where there is no spread radius specified )</li>
+  </ul></li> </ul></li>
+  <li><code><em>Color</em></code>
+  <ul><li><b>Optional</b> parameter which specifies the color of the shadow</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
+  <li><code>currentColor</code> ( A <b>default value</b> where the shadow color is based on the value of the <code>color</code> property of the element )</li>
+  <!--  <li><code>transparent</code></li>  -->
+  </ul></li> </ul></li>
+  <li><code>inset</code>
+  <ul><li><b>Optional</b> value which changes the shadow from an outer shadow to an inner shadow</li>
+  </ul></li> </ul></li> </ul></p> </div>
 
   <p><mark><b>INSIGHTS:</b></mark>
   <ul><li>Requires atleast one property related to box dimension
@@ -163,6 +288,7 @@
   <li>Actual dimensions
   <ul><li><code><em>Height Dimension</em> = "border-top-width" + "padding-top" + "height" + "padding-bottom" + "border-bottom-width"</code></li>
   <li><code><em>Width Dimension</em> = "border-left-width" + "padding-left" + "width" + "padding-right" + "border-right-width"</code></li>
+  <li>Property like <code>outline</code> does not affect element's dimensions and may overlap other content</li>
   </ul></li>
   <li>Overflowed contents
   <ul><li>If the content does not fit within the specified width, the contents will be displayed on the next line ( when the height property is specified ), 
@@ -170,7 +296,135 @@
   <li>If the content does not fit within the specified height, it will overflow</li>
   <li>Use <code>overflow</code> property to manage the overflowed contents</li>
   </ul></li>
-  </ul></p> </div></section>
+  <li>Margin collapse
+  <ul><li>The margin collapse happens due to top and bottom margins collapsed into a single margin that is equal to the largest of those two margins</li>
+  <li>The margin collapse only happens on vertical margin (top and bottom), this does not happen on horizontal margin (left and right)</li>
+  <li>Example, if Element A has <code>margin-bottom: 20px;</code> and Element B has <code>margin-top: 30px;</code> 
+      the vertical margin between Element A and Element B would be <code>30px</code></li>
+  <li>Instead of being <code>50px</code> ( <code>20px</code> from Element A's bottom margin + <code>30px</code> from Element B's top margin),
+      the actual vertical margin is <code>30px</code> due to margin collapse</li>
+  </ul></li> </ul></p> </section>
+
+  <!-------------------->
+  <!-- CSS BOX LAYOUT -->
+  <!-------------------->
+  <section id="CSS-Box-Layout">
+  <h1>CSS BOX LAYOUT</h1>
+  <div id="Element-Positioning" class="Box">
+  <h3>ELEMENT POSITIONING</h3>
+  <div style="border: 1px solid black; height: 100px; width: 100px; margin: auto;">DO NOT DELETE, YET!</div>
+  <p><b>Related Properties:</b>
+  <ul><li><code>position: <em>myValue</em>;</code>
+  <ul><li>The <code>position</code> property specifies the type of positioning method used for an element</li>
+  <li><b>Related Value(s)</b>:
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>static</code> ( A <b>default value</b> which the elements render in order, as they appear in the document flow )</li>
+  <li><code>absolute</code> ( The element is positioned relative to its first positioned (not static) ancestor element )</li>
+  <li><code>fixed</code> ( The element is positioned relative to the browser window )</li>
+  <li><code>relative</code> ( The element is positioned relative to its normal position )</li>
+  <li><code>sticky</code> ( The element is positioned based on the user's scroll position )</li>
+  </ul></li> </ul></li>
+  <!--  <li><code>inset: top right bottom left;</code></li>
+  <li><code>float: <em>myValue</em>;</code></li>
+  <li><code>clear: <em>myValue</em>;</code></li>  -->
+  </ul></p> </div>
+  <!--
+  <div id="Element-Behaviour" class="Box">
+  <h3>ELEMENT BEHAVIOUR</h3>
+  <p><b>Related Properties:</b>
+  <ul><li><code>display: <em>myValue</em>;</code></li>
+  <li><code>flex: flex-grow flex-shrink flex-basis;</code></li>
+  <li><code>flex-flow: flex-direction flex-wrap;</code></li>
+  <li><code>order: <em>myValue;</em></code></li>
+  <li><code>grid: grid-template-rows grid-template-columns grid-template-areas grid-auto-rows grid-auto-columns grid-auto-flow;</code></li>
+  <li><code>grid-area: grid-row-start grid-column-start grid-row-end grid-column-end;</code></li>
+  <li><code>grid-template: grid-template-rows grid-template-columns grid-template-areas;</code></li>
+  <li><code>grid-column: grid-column-start grid-column-end;</code></li>
+  <li><code>grid-row: grid-row-start grid-row-end;</code></li>
+  <li><code>gap: row-gap column-gap;</code></li>
+  <li><code>place-content: align-content justify-content;</code></li>
+  <li><code>place-items: align-items justify-items;</code></li>
+  <li><code>place-self: align-self justify-self;</code></li>
+  </ul></p> </div>
+
+  <div id="Inline-Block" class="Box">
+  <h3>INLINE & BLOCK ELEMENT</h3>
+  <p><b>Related Properties:</b>
+  <ul><li><code>inline-size | min-inline-size | max-inline-size</code></li>
+  <li><code>block-size | min-block-size | max-block-size</code></li>
+  <li><code>border-inline: border-inline-width border-inline-style border-inline-color;</code></li>
+  <li><code>border-inline-start: border-inline-start-width border-inline-start-style border-inline-start-color;</code></li>
+  <li><code>border-inline-end: border-inline-end-width border-inline-end-style border-inline-end-color</code></li>
+  <li><code>border-block: border-block-width border-block-style border-block-color;</code></li>
+  <li><code>border-block-start: border-block-start-width border-block-start-style border-block-start-color;</code></li>
+  <li><code>border-block-end: border-block-end-width border-block-end-style border-block-end-color;</code></li>
+  <li><code>border-start-start-radius | border-start-end-radius | border-end-start-radius | border-end-end-radius</code></li>
+  <li><code>inset-inline: inset-inline-start inset-inline-end;</code></li>
+  <li><code>inset-block: inset-block-start inset-block-end;</code></li>
+  <li><code>padding-inline: padding-inline-start padding-inline-end;</code></li>
+  <li><code>padding-block: padding-block-start padding-block-end;</code></li>
+  <li><code>margin-inline: margin-inline-start margin-inline-end;</code></li>
+  <li><code>margin-block: margin-block-start margin-block-end;</code></li>
+  <li><code>overscroll-behavior-inline | overscroll-behavior-block</code></li>
+  <li><code>scroll-padding-inline: scroll-padding-inline-start scroll-padding-inline-end;</code></li>
+  <li><code>scroll-padding-block: scroll-padding-block-start scroll-padding-block-end;</code></li>
+  <li><code>scroll-margin-inline: scroll-margin-inline-start scroll-margin-inline-end;</code></li>
+  <li><code>scroll-margin-block: scroll-margin-block-start scroll-margin-block-end;</code></li>
+  </ul></p> </div> -->
+  </section>
+
+  <!-------------------------------->
+  <!-- CSS ANIMATION & TRANSITION -->
+  <!-------------------------------->
+  <!--  <section id="Animation-Transition">
+  <h1>ANIMATION & TRANSITION</h1>
+  <code>animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state;</code><br>
+  <code>transition: transition-property transition-duration transition-timing-function transition-delay;</code><br>
+  </section>  -->
+
+  <!---------------------------->
+  <!-- BACKGROUND, IMAGE, SVG -->
+  <!---------------------------->
+  <!--  <section id="Background-Image-SVG">
+  <h1>BACKGROUND, IMAGE, SVG</h1>
+  <code>background: background-color background-image background-position background-size background-repeat background-origin background-clip background-attachment;</code><br>
+  <code>background-blend-mode | background-position-x | background-position-y</code><br>
+  <code>border-image: border-image-source border-image-slice border-image-width border-image-outset border-image-repeat;</code><br>
+  <code>mask: mask-image mask-mode mask-repeat mask-position mask-clip mask-origin mask-size mask-composite;</code><br>
+  <code>offset: offset-anchor offset-distance offset-path offset-position offset-rotate;</code><br>
+  <code>filter | backdrop-filter | opacity</code><br>
+  <code>marker | marker-start | marker-mid | marker-end</code><br>
+  <code>mask-type</code><br>
+  <code>paint-order</code><br>
+  <code>object-fit | object-position</code><br>
+  <code>mix-blend-mode</code><br>
+  <code>isolation</code><br>
+  <code>image-rendering</code><br>
+  <code>color-scheme</code><br>
+  <code>clip | clip-path</code><br>
+  </section>  -->
+
+  <!-------------------->
+  <!-- CSS TYPOGRAPHY -->
+  <!-------------------->
+  <!--  <section id="Typography">
+  <h1>TYPOGRAPHY</h1>
+  <code>color</code><br>
+  <code>font: font-style font-variant font-weight font-size/line-height font-family;</code><br>
+  <code>font-feature-settings | font-kerning | font-size-adjust | font-stretch | font-variant-caps</code><br>
+  <code>text-align | text-align-last</code><br>
+  <code>text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;</code><br>
+  <code>text-emphasis: text-emphasis-style text-emphasis-color; | text-emphasis-position</code><br>
+  <code>text-indent | text-justify | text-orientation | text-overflow | text-shadow | text-transform | text-underline-offset | text-underline-position</code><br>
+  <code>letter-spacing</code><br>
+  <code>unicode-bidi</code><br>
+  <code>direction</code><br>
+  <code>white-space</code><br>
+  <code>word-break | word-spacing | word-wrap</code><br>
+  <code>writing-mode</code><br>
+  <code>tab-size</code><br>
+  <code>hyphens | hyphenate-character</code><br>
+  </section>  -->
 
   <!--------------------->
   <!--CSS GLOBAL VALUES-->
@@ -263,21 +517,29 @@
   <h1>CSS COLOR VALUES</h1>
   </section>
 
-  <!--
-  @charset | @font-face | @import | @keyframes | @media | @property
-  all
-  backface-visibility
-  box-decoration-break | box-reflect
-  cursor
-  initial-letter
-  pointer-events
-  <code>quotes</code><br>
-  resize
-  user-select
-  vertical-align
-  visibility
-  zoom
-  z-index
+  <!--  @charset | @font-face | @import | @keyframes | @media | @property
+  <section id="OTHERS">
+  <code>columns: column-width column-count;</code><br>
+  <code>column-rule: column-rule-width column-rule-style column-rule-color;</code><br>
+  <code>column-fill | column-span</code><br>
+  <code>content | counter-set | counter-increment | counter-reset</code><br>
+  <code>list-style: list-style-type list-style-position list-style-image;</code><br>
+  <code>break-inside | break-before | break-after</code><br>
+  <code>page-break-inside | page-break-before | page-break-after</code><br>
+  <code>all</code>
+  <code>backface-visibility</code>
+  <code>box-decoration-break | box-reflect</code>
+  <code>cursor</code>
+  <code>initial-letter</code>
+  <code>pointer-events</code>
+  <code>quotes</code>
+  <code>resize</code>
+  <code>user-select</code>
+  <code>vertical-align</code>
+  <code>visibility</code>
+  <code>zoom</code>
+  <code>z-index</code>
+  </section>
 
   <div id="Box-Shape" class="Box">
   <h3>Box Shape</h3>
@@ -292,99 +554,12 @@
   <li><code>translate: <em>myValue</em>;</code></li>
   </ul></p> </div>
 
-  <div id="Box-Behaviour" class="Box">
-  <h3>Box Behaviour</h3>
-  <p><b>Related Properties:</b>
-  <ul><li><code>display: <em>myValue</em>;</code></li>
-  <li><code>flex: flex-grow flex-shrink flex-basis;</code></li>
-  <li><code>flex-flow: flex-direction flex-wrap;</code></li>
-  <li><code>order: <em>myValue;</em></code></li>
-  <li><code>grid: grid-template-rows grid-template-columns grid-template-areas grid-auto-rows grid-auto-columns grid-auto-flow;</code></li>
-  <li><code>grid-area: grid-row-start grid-column-start grid-row-end grid-column-end;</code></li>
-  <li><code>grid-template: grid-template-rows grid-template-columns grid-template-areas;</code></li>
-  <li><code>grid-column: grid-column-start grid-column-end;</code></li>
-  <li><code>grid-row: grid-row-start grid-row-end;</code></li>
-  </ul></p> </div>
-
-  <section id="Animation-Transition">
-  <h1>ANIMATION & TRANSITION</h1>
-  <code>animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state;</code><br>
-  <code>transition: transition-property transition-duration transition-timing-function transition-delay;</code><br>
-  </section>
-
-  <section id="Typography">
-  <h1>TYPOGRAPHY</h1>
-  <code>color</code><br>
-  <code>font: font-style font-variant font-weight font-size/line-height font-family;</code><br>
-  <code>font-feature-settings | font-kerning | font-size-adjust | font-stretch | font-variant-caps</code><br>
-  <code>text-align | text-align-last</code><br>
-  <code>text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;</code><br>
-  <code>text-emphasis: text-emphasis-style text-emphasis-color; | text-emphasis-position</code><br>
-  <code>text-indent | text-justify | text-orientation | text-overflow | text-shadow | text-transform | text-underline-offset | text-underline-position</code><br>
-  <code>letter-spacing</code><br>
-  <code>unicode-bidi</code><br>
-  <code>direction</code><br>
-  <code>white-space</code><br>
-  <code>word-break | word-spacing | word-wrap</code><br>
-  <code>writing-mode</code><br>
-  <code>tab-size</code><br>
-  <code>hyphens | hyphenate-character</code><br>
-  </section>
-
-  <section id="Flex-Grid">
-  <h1>FLEX & GRID</h1>
-  <code>gap: row-gap column-gap;</code><br>
-  <code>place-content: align-content justify-content;</code><br>
-  <code>place-items: align-items justify-items;</code><br>
-  <code>place-self: align-self justify-self;</code><br>
-  </section>
-  
-  <section id="Inline-Block">
-  <h1>INLINE & BLOCK</h1>
-  <code>inline-size | min-inline-size | max-inline-size</code><br>
-  <code>block-size | min-block-size | max-block-size</code><br>
-  <code>border-inline: border-inline-width border-inline-style border-inline-color;</code><br>
-  <code>border-inline-start: border-inline-start-width border-inline-start-style border-inline-start-color;</code><br>
-  <code>border-inline-end: border-inline-end-width border-inline-end-style border-inline-end-color</code><br>
-  <code>border-block: border-block-width border-block-style border-block-color;</code><br>
-  <code>border-block-start: border-block-start-width border-block-start-style border-block-start-color;</code><br>
-  <code>border-block-end: border-block-end-width border-block-end-style border-block-end-color;</code><br>
-  <code>border-start-start-radius | border-start-end-radius | border-end-start-radius | border-end-end-radius</code><br>
-  <code>inset-inline: inset-inline-start inset-inline-end;</code><br>
-  <code>inset-block: inset-block-start inset-block-end;</code><br>
-  <code>padding-inline: padding-inline-start padding-inline-end;</code><br>
-  <code>padding-block: padding-block-start padding-block-end;</code><br>
-  <code>margin-inline: margin-inline-start margin-inline-end;</code><br>
-  <code>margin-block: margin-block-start margin-block-end;</code><br>
-  <code>overscroll-behavior-inline | overscroll-behavior-block</code><br>
-  <code>scroll-padding-inline: scroll-padding-inline-start scroll-padding-inline-end;</code><br>
-  <code>scroll-padding-block: scroll-padding-block-start scroll-padding-block-end;</code><br>
-  <code>scroll-margin-inline: scroll-margin-inline-start scroll-margin-inline-end;</code><br>
-  <code>scroll-margin-block: scroll-margin-block-start scroll-margin-block-end;</code><br>
-  </section>
-
-  <section id="Background-Image-SVG">
-  <h1>BACKGROUND, IMAGE, SVG</h1>
-  <code>background: background-color background-image background-position background-size background-repeat background-origin background-clip background-attachment;</code><br>
-  <code>background-blend-mode | background-position-x | background-position-y</code><br>
-  <code>border-image: border-image-source border-image-slice border-image-width border-image-outset border-image-repeat;</code><br>
-  <code>mask: mask-image mask-mode mask-repeat mask-position mask-clip mask-origin mask-size mask-composite;</code><br>
-  <code>offset: offset-anchor offset-distance offset-path offset-position offset-rotate;</code><br>
-  <code>filter | backdrop-filter | opacity</code><br>
-  <code>marker | marker-start | marker-mid | marker-end</code><br>
-  <code>mask-type</code><br>
-  <code>paint-order</code><br>
-  <code>object-fit | object-position</code><br>
-  <code>mix-blend-mode</code><br>
-  <code>isolation</code><br>
-  <code>image-rendering</code><br>
-  <code>color-scheme</code><br>
-  <code>clip | clip-path</code><br>
-  </section>
-
   <section id="Table">
-  <h1>TABLE</h1>
+  <h1>Table</h1>
   <code>border-collapse | border-spacing</code>
+  <code>empty-cells</code><br>
+  <code>table-layout</code><br>
+  <code>caption-side</code><br>
   </section>
 
   <section id="Scroll">
@@ -397,27 +572,10 @@
   <code>scroll-margin: scroll-margin-top scroll-margin-right scroll-margin-bottom scroll-margin-left;</code><br>
   <code>scroll-padding: scroll-padding-top scroll-padding-right scroll-padding-bottom scroll-padding-left;</code><br>
   </section>
-
-  <section id="OTHERS">
-  <code>columns: column-width column-count;</code><br>
-  <code>column-rule: column-rule-width column-rule-style column-rule-color;</code><br>
-  <code>column-fill | column-span</code><br>
-  <code>content | counter-set | counter-increment | counter-reset</code><br>
-  <code>list-style: list-style-type list-style-position list-style-image;</code><br>
-  <code>break-inside | break-before | break-after</code><br>
-  <code>page-break-inside | page-break-before | page-break-after</code><br>
-  </section>
   
   <section>
   <h1>Input</h1>
   <code>accent-color | caret-color</code><br>
-  </section>
-
-  <section id="Table">
-  <h1>Table</h1>
-  <code>empty-cells</code><br>
-  <code>table-layout</code><br>
-  <code>caption-side</code><br>
   </section>
 
   <section id="Print">
