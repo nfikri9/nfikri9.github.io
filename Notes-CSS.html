@@ -312,22 +312,73 @@
   <h1>CSS BOX LAYOUT</h1>
   <div id="Element-Positioning" class="Box">
   <h3>ELEMENT POSITIONING</h3>
-  <div style="border: 1px solid black; height: 100px; width: 100px; margin: auto;">DO NOT DELETE, YET!</div>
   <p><b>Related Properties:</b>
+  
+  <!-- POSITION -->
   <ul><li><code>position: <em>myValue</em>;</code>
   <ul><li>The <code>position</code> property specifies the type of positioning method used for an element</li>
   <li><b>Related Value(s)</b>:
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>static</code> ( A <b>default value</b> which the elements render in order, as they appear in the document flow )</li>
-  <li><code>absolute</code> ( The element is positioned relative to its first positioned (not static) ancestor element )</li>
-  <li><code>fixed</code> ( The element is positioned relative to the browser window )</li>
-  <li><code>relative</code> ( The element is positioned relative to its normal position )</li>
-  <li><code>sticky</code> ( The element is positioned based on the user's scroll position )</li>
+  <li><code>static</code>
+  <ul><li>A <b>default value</b> which the element is always positioned according to the normal flow of the page</li>
+  <li>The <code>inset</code> property does not affects the position of the element</li>
+  </ul></li>
+  <li><code>relative</code>
+  <ul><li>The element is positioned relative to its normal position</li>
+  <li>Use the <code>inset</code> property to adjust the position of the element</li>
+  <li>Other content will not be adjusted to fit into any gap left by the element</li>
+  </ul></li>
+  <li><code>fixed</code>
+  <ul><li>The element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled</li>
+  <li>Use the <code>inset</code> property to adjust the position of the element</li>
+  <li>A fixed element does not leave a gap in the page where it would normally have been located</li>
+  </ul></li>
+  <li><code>absolute</code>
+  <ul><li>The element is positioned relative to the nearest positioned ancestor</li>
+  <li>Use the <code>inset</code> property to adjust the position of the element</li>
+  <li>If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling</li>
+  <li>Absolute positioned elements are removed from the normal flow, and can overlap elements</li>
+  </ul></li>
+  <li><code>sticky</code>
+  <ul><li>The element is positioned based on the user's scroll position</li>
+  <li>Use the <code>inset</code> property to adjust the position of the element</li>
+  <li>A sticky element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position</li>
+  <li>It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place</li>
+  </ul></li> </ul></li> </ul></li> <br>
+
+  <!-- INSET -->
+  <li><code>inset: <em>myValues</em>;</code>
+  <ul><li>The <code>inset</code> property sets the distance between an element and the parent element</li>
+  <li>There are other properties related to <code>inset</code> property that can be written as its value
+  <ul><li>4 values = <code>inset: top right bottom left;</code></li>
+  <li>3 values = <code>inset: top <em>Horizontal</em> bottom;</code></li>
+  <li>2 values = <code>inset: <em>Vertical</em> <em>Horizontal</em>;</code></li>
+  <li>1 value = <code>inset: <em>All</em>;</code></li>
+  </ul></li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>auto</code> ( A <b>default value</b>) which the element's default inset distance</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- FLOAT -->
+  <li><code>float: <em>myValue</em>;</code>
+  <ul><li>The <code>float</code> property specifies whether an element should float to the left, right, or not at all</li>
+  <li><b>Related Value(s)</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>none</code> ( A <b>default value</b> which the element does not float, will be displayed just where it occurs in the text )</li>
+  <li><code>left</code> ( The element floats to the left of its container )</li>
+  <li><code>right</code> ( The element floats to the right of its container )</li>
+  <!--  <li><code>inline-start</code></li>
+  <li><code>inline-end</code></li>  -->
   </ul></li> </ul></li>
-  <!--  <li><code>inset: top right bottom left;</code></li>
-  <li><code>float: <em>myValue</em>;</code></li>
-  <li><code>clear: <em>myValue</em>;</code></li>  -->
+  <!-- <li><code>clear: <em>myValue</em>;</code></li> -->
   </ul></p> </div>
+
+  <!--  <p><mark><b>INSIGHTS:</b></mark>
+  <ul><li>INSIGHTS FOR CSS BOX LAYOUT!!!</li>
+  </ul></p>  -->
+
   <!--
   <div id="Element-Behaviour" class="Box">
   <h3>ELEMENT BEHAVIOUR</h3>
@@ -373,6 +424,179 @@
   </ul></p> </div> -->
   </section>
 
+  <!-------------------->
+  <!-- CSS TYPOGRAPHY -->
+  <!-------------------->
+  <section id="Typography">
+  <h1>TYPOGRAPHY</h1>
+  <div id="Text-Font" class="Box">
+  <h3>TEXT & FONT</h3>
+  <p><b>Related Properties</b>
+
+  <!-- COLOR -->
+  <ul><li><code>color: <em>myValue</em>;</code>
+  <ul><li>The <code>color</code> property specifies the color of text</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
+  <!--  <li><code>currentColor</code></li>
+  <li><code>transparent</code></li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- FONT -->
+  <li><code>font: font-style font-variant font-weight font-size/line-height font-family;</code>
+
+  <!-- FONT STYLE -->
+  <ul><li><code>font-style: <em>myValue</em>;</code>
+  <ul><li>The <code>font-style</code> property specifies the font style for a text</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which the browser displays a normal font style )</li>
+  <li><code>italic</code> ( The browser displays an italic font style )</li>
+  <li><code>oblique</code> ( The browser displays an oblique font style )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- FONT VARIANT -->
+  <li><code>font-variant: <em>myValue</em>;</code>
+  <ul><li>The <code>font-variant</code> property specifies whether or not a text should be displayed in a small-caps font</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which the browser displays a normal font )</li>
+  <li><code>small-caps</code>
+  <ul><li>The browser displays a small-caps font</li>
+  <li>In a small-caps font, all lowercase letters are converted to uppercase letters</li>
+  <li>The converted uppercase letters appears in a smaller font size than the original uppercase letters in the text</li>
+  </ul></li> </ul></li> </ul></li> <br>
+
+  <!-- FONT WEIGHT -->
+  <li><code>font-weight: <em>myValue</em>;</code>
+  <ul><li>The <code>font-weight</code> property sets how thick or thin characters in text should be displayed</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>Default value</b> which displays normal characters )</li>
+  <li><code>lighter</code> ( Defines lighter characters )</li>
+  <li><code>bold</code> ( Defines thick characters )</li>
+  <li><code>bolder</code> ( Defines thicker characters )</li>
+  <li><code> 0 &le; <em>Numbers</em> &le; 1000</code>
+  </ul></li> </ul></li> <br>
+
+  <!-- FONT SIZE -->
+  <li><code>font-size: <em>myValue</em>;</code>
+  <ul><li>The <code>font-size</code> property sets the size of a font</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>medium</code> ( A <b>default value</b> which the font is set to a medium size )</li>
+  <li><code>xx-small</code> ( The font is set to an xx-small size )</li>
+  <li><code>x-small</code> ( The font is set to an extra small size )</li>
+  <li><code>small</code> ( The font is set to a small size )</li>
+  <li><code>large</code> ( The font is set to a large size )</li>
+  <li><code>x-large</code> ( The font is set to an extra large size )</li>
+  <li><code>xx-large</code> ( The font is set to an xx-large size )</li>
+  <li><code>smaller</code> ( The font is set to a smaller size than the parent element )</li>
+  <li><code>larger</code> ( The font is set to a larger size than the parent element )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- LINE HEIGHT -->
+  <li><code>line-height: <em>myValue</em>;</code>
+  <ul><li>The <code>line-height</code> property specifies the height of a line</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which line height is sets to normal )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- FONT FAMILY -->
+  <li><code>font-family: <em>myValues</em>;</code>
+  <ul><li>The <code>font-family</code> property specifies the font for an element</li>
+  <li>The <code>font-family</code> property can hold several font names</li>
+  <li>If the browser does not support the first font, it tries the next font</li>
+  <li>Separate each value with a comma</li>
+  <li>If a font name contains white-space, it must be quoted</li>
+  <li>Single quotes must be used when using the <code>style</code> attribute in HTML</li>
+  <li>There are two types of font family names:
+  <ul><li>Family Name = <code>times, courier, arial</code>, etc.</li>
+  <li>Generic Family = <code>serif, sans-serif, cursive, fantasy, monospace</code>, etc.</li>
+  </ul></li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>Arial</code></li>
+  <li><code>'Arial Narrow'</code></li>
+  <li><code>'Arial Narrow Bold'</code></li>
+  <li><code>Calibri</code></li>
+  <li><code>Cambria</code></li>
+  <li><code>Cochin</code></li>
+  <li><code>Courier</code></li>
+  <li><code>'Courier New'</code></li>
+  <li><code>cursive</code></li>
+  <li><code>fantasy</code></li>
+  <li><code>'Franklin Gothic Medium'</code></li>
+  <li><code>Geneva</code></li>
+  <li><code>Georgia</code></li>
+  <li><code>'Gill Sans'</code></li>
+  <li><code>'Gill Sans MT'</code></li>
+  <li><code>Haettenschweiler</code></li>
+  <li><code>Helvetica</code></li>
+  <li><code>Impact</code></li>
+  <li><code>'Lucida Grande'</code></li>
+  <li><code>'Lucida Sans'</code></li>
+  <li><code>'Lucida Sans Regular'</code></li>
+  <li><code>'Lucida Sans Unicode'</code></li>
+  <li><code>monospace</code></li>
+  <li><code>sans-serif</code></li>
+  <li><code>'Segoe UI'</code></li>
+  <li><code>serif</code></li>
+  <li><code>Tahoma</code></li>
+  <li><code>Times</code></li>
+  <li><code>'Times New Roman'</code></li>
+  <li><code>'Trebuchet MS'</code></li>
+  <li><code>Verdana</code></li>
+  </ul></li> </ul></li>
+
+  <!--  <li><code>text-align: <em>myValue</em>;</code></li>
+  <li><code>text-align-last: <em>myValue</em>;</code></li>
+  <li><code>text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;</code></li>
+  <li><code>text-emphasis: text-emphasis-style text-emphasis-color;</code></li>
+  <li><code>text-emphasis-position: <em>myValue</em>;</code></li>
+  <li><code>text-indent: <em>myValue</em>;</code></li>
+  <li><code>text-justify: <em>myValue</em>;</code></li>
+  <li><code>text-orientation: <em>myValue</em>;</code></li>
+  <li><code>text-overflow: <em>myValue</em>;</code></li>
+  <li><code>text-shadow: <em>myValue</em>;</code></li>
+  <li><code>text-transform: <em>myValue</em>;</code></li>
+  <li><code>text-underline-offset: <em>myValue</em>;</code></li>
+  <li><code>text-underline-position: <em>myValue</em>;</code></li>
+  <li><code>letter-spacing: <em>myValue</em>;</code></li>
+  <li><code>unicode-bidi: <em>myValue</em>;</code></li>
+  <li><code>direction: <em>myValue</em>;</code></li>
+  <li><code>white-space: <em>myValue</em>;</code></li>
+  <li><code>word-break: <em>myValue</em>;</code></li>
+  <li><code>word-spacing: <em>myValue</em>;</code></li>
+  <li><code>word-wrap: <em>myValue</em>;</code></li> 
+  <li><code>writing-mode: <em>myValue</em>;</code></li>
+  <li><code>tab-size: <em>myValue</em>;</code></li>
+  <li><code>hyphens: <em>myValue</em>;</code></li>
+  <li><code>hyphenate-character: <em>myValue</em>;</code></li>
+  <code>font-feature-settings | font-kerning | font-size-adjust | font-stretch | font-variant-caps</code><br> -->
+  </ul></li>
+  </ul></p> </div>
+
+  <p><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Common fallback system
+  <ul><li><code>Arial, Helvetica, sans-serif</code></li>
+  <li><code>Cambria, Cochin, Georgia, Times, 'Times New Roman', serif</code></li>
+  <li><code>'Courier New', Courier, monospace</code></li>
+  <li><code>'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif</code></li>
+  <li><code>Georgia, 'Times New Roman', Times, serif</code></li>
+  <li><code>'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif</code></li>
+  <li><code>Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif</code></li>
+  <li><code>'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif</code></li>
+  <li><code>'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</code></li>
+  <li><code>'Times New Roman', Times, serif</code></li>
+  <li><code>'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif</code></li>
+  <li><code>Verdana, Geneva, Tahoma, sans-serif</code></li>
+  </ul></li> </ul></p> </section>
+
   <!-------------------------------->
   <!-- CSS ANIMATION & TRANSITION -->
   <!-------------------------------->
@@ -402,28 +626,6 @@
   <code>image-rendering</code><br>
   <code>color-scheme</code><br>
   <code>clip | clip-path</code><br>
-  </section>  -->
-
-  <!-------------------->
-  <!-- CSS TYPOGRAPHY -->
-  <!-------------------->
-  <!--  <section id="Typography">
-  <h1>TYPOGRAPHY</h1>
-  <code>color</code><br>
-  <code>font: font-style font-variant font-weight font-size/line-height font-family;</code><br>
-  <code>font-feature-settings | font-kerning | font-size-adjust | font-stretch | font-variant-caps</code><br>
-  <code>text-align | text-align-last</code><br>
-  <code>text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;</code><br>
-  <code>text-emphasis: text-emphasis-style text-emphasis-color; | text-emphasis-position</code><br>
-  <code>text-indent | text-justify | text-orientation | text-overflow | text-shadow | text-transform | text-underline-offset | text-underline-position</code><br>
-  <code>letter-spacing</code><br>
-  <code>unicode-bidi</code><br>
-  <code>direction</code><br>
-  <code>white-space</code><br>
-  <code>word-break | word-spacing | word-wrap</code><br>
-  <code>writing-mode</code><br>
-  <code>tab-size</code><br>
-  <code>hyphens | hyphenate-character</code><br>
   </section>  -->
 
   <!--------------------->
@@ -506,16 +708,76 @@
   <li><code>cqb</code></li>
   <li><code>cqmin</code></li>
   <li><code>cqmax</code></li>
-  </ul></p>
-  </div>
-  </section>
+  </ul></p> </div> </section>
 
   <!-------------------->
   <!--CSS COLOR VALUES-->
   <!-------------------->
   <section id="CSS-Color-Values">
   <h1>CSS COLOR VALUES</h1>
-  </section>
+  <div id="Color-Strings" class="Box">
+  <h3><code><em>Color Strings</em></code></h3>
+  <code>aqua | aquamarine | mediumaquamarine</code>                                       <br>
+  <code>azure</code>                                                                      <br>
+  <code>blue | lightblue | mediumblue | darkblue</code>                                   <br>
+  <code>brown | rosybrown | saddlebrown | sandybrown</code>                               <br>
+  <code>coral | lightcoral</code>                                                         <br>
+  <code>cyan | lightcyan | darkcyan</code>                                                <br>
+  <code>gainsboro</code>                                                                  <br>
+  <code>gold | goldenrod | palegoldenrod | darkgoldenrod | lightgoldenrodyellow </code>   <br>
+  <code>gray | lightgray | dimgray | darkgray</code>                                      <br>
+  <code>green | palegreen | lightgreen | darkgreen</code>                                 <br>
+  <code>grey | lightgrey | dimgrey | darkgrey</code>                                      <br>
+  <code>honeydew</code>                                                                   <br>
+  <code>khaki | darkkhaki</code>                                                          <br>
+  <code>lavender | lavenderblush</code>                                                   <br>
+  <code>lime | limegreen</code>                                                           <br>
+  <code>magenta | darkmagenta</code>                                                      <br>
+  <code>maroon</code>                                                                     <br>
+  <code>navy</code>                                                                       <br>
+  <code>olive | olivedrab | darkolivegreen</code>                                         <br>
+  <code>oldlace</code>                                                                    <br>
+  <code>orange | darkorange | orangered</code>                                            <br>
+  <code>orchid | mediumorchid | darkorchid</code>                                         <br>
+  <code>pink | lightpink | deeppink | hotpink</code>                                      <br>
+  <code>purple | mediumpurple | rebeccapurple</code>                                      <br>
+  <code>red | darkred | indianred</code>                                                  <br>
+  <code>salmon | lightsalmon | darksalmon</code>                                          <br>
+  <code>seagreen | lightseagreen | mediumseagreen | darkseagreen</code>                   <br>
+  <code>skyblue | lightskyblue | deepskyblue</code>                                       <br>
+  <code>slateblue | mediumslateblue | darkslateblue</code>                                <br>
+  <code>slategray | lightslategray | darkslategray</code>                                 <br>
+  <code>slategrey | lightslategrey | darkslategrey</code>                                 <br>
+  <code>springgreen | mediumspringgreen</code>                                            <br>
+  <code>steelblue | lightsteelblue</code>                                                 <br>
+  <code>turquoise | paleturquoise | mediumturquoise | darkturquoise</code>                <br>
+  <code>violet | darkviolet | palevioletred | mediumvioletred</code>                      <br>
+  <code>wheat</code>                                                                      <br>
+  <code>white | antiquewhite | floralwhite | ghostwhite | navajowhite | whitesmoke</code> <br>
+  <code>yellow | lightyellow | yellowgreen</code>                                         <br>
+  
+  <code>aliceblue | cadetblue | cornflowerblue | dodgerblue | midnightblue | powderblue | royalblue</code> <br>
+  <code>forestgreen | lawngreen</code>                                                                     <br>
+  <code>blueviolet | greenyellow</code>                                                                    <br>
+  <code>beige | bisque | black | blanchedalmond | burlywood</code> <br>
+  <code>chartreuse | chocolate | cornsilk | crimson</code>         <br>
+  <code>firebrick | fuchsia</code>                                 <br>
+  <code>indigo | ivory</code>                                      <br>
+  <code>lemonchiffon | linen</code>                                <br>
+  <code>mintcream | mistyrose | moccasin</code>                    <br>
+  <code>papayawhip | peachpuff | peru | plum</code>                <br>
+  <code>seashell | sienna | silver | snow</code>                   <br>
+  <code>tan | teal | thistle | tomato</code>                       <br>
+  </div>
+
+  <div id="Color-Functions" class="Box">
+  <h3><code><em>Color Functions</em></code></h3>
+  <code>color() | color-relative() | color-mix() | color-mix-hue()</code><br>
+  <code>hsl() | hsl-relative() | hsla() | hwb() | hwb-relative()</code><br>
+  <code>lab() | lab-relative() | lch() | lch-relative()</code><br>
+  <code>oklab() | oklab-relative() | oklch() | oklch-relative()</code><br>
+  <code>rgb() | rgb-relative() | rgba()</code>
+  </div> </section>
 
   <!--  @charset | @font-face | @import | @keyframes | @media | @property
   <section id="OTHERS">
