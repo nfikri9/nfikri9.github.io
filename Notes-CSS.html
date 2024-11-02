@@ -375,60 +375,275 @@
   <!-- <li><code>clear: <em>myValue</em>;</code></li> -->
   </ul></p> </div>
 
-  <!--  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>INSIGHTS FOR CSS BOX LAYOUT!!!</li>
-  </ul></p>  -->
-
-  <!--
-  <div id="Element-Behaviour" class="Box">
-  <h3>ELEMENT BEHAVIOUR</h3>
+  <div id="Flex" class="Box">
+  <h3>FLEX LAYOUT</h3>
   <p><b>Related Properties:</b>
-  <ul><li><code>display: <em>myValue</em>;</code></li>
-  <li><code>flex: flex-grow flex-shrink flex-basis;</code></li>
+  <ul><li><code>flex: flex-grow flex-shrink flex-basis;</code></li>
   <li><code>flex-flow: flex-direction flex-wrap;</code></li>
   <li><code>order: <em>myValue;</em></code></li>
-  <li><code>grid: grid-template-rows grid-template-columns grid-template-areas grid-auto-rows grid-auto-columns grid-auto-flow;</code></li>
-  <li><code>grid-area: grid-row-start grid-column-start grid-row-end grid-column-end;</code></li>
-  <li><code>grid-template: grid-template-rows grid-template-columns grid-template-areas;</code></li>
-  <li><code>grid-column: grid-column-start grid-column-end;</code></li>
-  <li><code>grid-row: grid-row-start grid-row-end;</code></li>
-  <li><code>gap: row-gap column-gap;</code></li>
-  <li><code>place-content: align-content justify-content;</code></li>
-  <li><code>place-items: align-items justify-items;</code></li>
-  <li><code>place-self: align-self justify-self;</code></li>
   </ul></p> </div>
 
-  <div id="Inline-Block" class="Box">
-  <h3>INLINE & BLOCK ELEMENT</h3>
+  <div id="Grid" class="Box">
+  <h3>GRID LAYOUT</h3>
   <p><b>Related Properties:</b>
-  <ul><li><code>inline-size | min-inline-size | max-inline-size</code></li>
-  <li><code>block-size | min-block-size | max-block-size</code></li>
+  <ul><li><code>grid: grid-template-rows grid-template-columns grid-template-areas grid-auto-rows grid-auto-columns grid-auto-flow; <br>
+                grid-template: grid-template-rows grid-template-columns grid-template-areas;</code></li>
+  <li><code>grid-area: grid-row-start grid-column-start grid-row-end grid-column-end; <br>
+            grid-column: grid-column-start grid-column-end;                           <br>
+            grid-row: grid-row-start grid-row-end;</code></li>
+  </ul></p> </div>
+
+  <div id="Inline" class="Box">
+  <h3>INLINE LAYOUT</h3>
+  <p><b>Related Properties:</b>
+  <ul><li><code>inline-size: <em>myValue</em>;</code></li>
+  <li><code>min-inline-size: <em>myValue</em>;</code></li>
+  <li><code>max-inline-size: <em>myValue</em>;</code></li>
   <li><code>border-inline: border-inline-width border-inline-style border-inline-color;</code></li>
   <li><code>border-inline-start: border-inline-start-width border-inline-start-style border-inline-start-color;</code></li>
-  <li><code>border-inline-end: border-inline-end-width border-inline-end-style border-inline-end-color</code></li>
+  <li><code>border-inline-end: border-inline-end-width border-inline-end-style border-inline-end-color;</code></li>
+  <li><code>inset-inline: inset-inline-start inset-inline-end;</code></li>
+  <li><code>padding-inline: padding-inline-start padding-inline-end;</code></li>
+  <li><code>margin-inline: margin-inline-start margin-inline-end;</code></li>
+  <li><code>overscroll-behavior-inline: <em>myValue</em>;</code></li>
+  <li><code>scroll-padding-inline: scroll-padding-inline-start scroll-padding-inline-end;</code></li>
+  <li><code>scroll-margin-inline: scroll-margin-inline-start scroll-margin-inline-end;</code></li>
+  </ul></p> </div>
+
+  <div id="Block" class="Box">
+  <h3>BLOCK LAYOUT</h3>
+  <p><b>Related Properties:</b>
+  <ul><li><code>block-size: <em>myValue</em>;</code></li>
+  <li><code>min-block-size: <em>myValue</em>;</code></li>
+  <li><code>max-block-size: <em>myValue</em>;</code></li>
   <li><code>border-block: border-block-width border-block-style border-block-color;</code></li>
   <li><code>border-block-start: border-block-start-width border-block-start-style border-block-start-color;</code></li>
   <li><code>border-block-end: border-block-end-width border-block-end-style border-block-end-color;</code></li>
-  <li><code>border-start-start-radius | border-start-end-radius | border-end-start-radius | border-end-end-radius</code></li>
-  <li><code>inset-inline: inset-inline-start inset-inline-end;</code></li>
   <li><code>inset-block: inset-block-start inset-block-end;</code></li>
-  <li><code>padding-inline: padding-inline-start padding-inline-end;</code></li>
   <li><code>padding-block: padding-block-start padding-block-end;</code></li>
-  <li><code>margin-inline: margin-inline-start margin-inline-end;</code></li>
   <li><code>margin-block: margin-block-start margin-block-end;</code></li>
-  <li><code>overscroll-behavior-inline | overscroll-behavior-block</code></li>
-  <li><code>scroll-padding-inline: scroll-padding-inline-start scroll-padding-inline-end;</code></li>
+  <li><code>overscroll-behavior-block: <em>myValue</em>;</code></li>
   <li><code>scroll-padding-block: scroll-padding-block-start scroll-padding-block-end;</code></li>
-  <li><code>scroll-margin-inline: scroll-margin-inline-start scroll-margin-inline-end;</code></li>
   <li><code>scroll-margin-block: scroll-margin-block-start scroll-margin-block-end;</code></li>
-  </ul></p> </div> -->
+  <li><code>border-start-start-radius: <em>myValue</em>;</code></li>
+  <li><code>border-start-end-radius: <em>myValue</em>;</code></li>
+  <li><code>border-end-start-radius: <em>myValue</em>;</code></li>
+  <li><code>border-end-end-radius: <em>myValue</em>;</code></li>
+  </ul></p> </div>
+
+  <div id="Table" class="Box">
+  <h3>TABLE LAYOUT</h3>
+  <p><b>Related Properties:</b>
+  <ul><li><code>border-collapse: <em>myValue</em>;</code></li>
+  <li><code>border-spacing: <em>myValue</em>;</code></li>
+  <li><code>caption-side: <em>myValue</em>;</code></li>
+  <li><code>empty-cells: <em>myValue</em>;</code></li>
+  <li><code>table-layout: <em>myValue</em>;</code></li>
+  </ul></p> </div>
+
+  <div id="Content" class="Box">
+  <h3>CONTENTS LAYOUT</h3>
+  <p><b>Related Properties:</b>
+  <ul><li><code>place-content: align-content justify-content;</code></li>
+  <li><code>place-items: align-items justify-items;</code></li>
+  <li><code>place-self: align-self justify-self;</code></li>
+  <li><code>gap: row-gap column-gap;</code></li>
+  </ul></p> </div>
+
+  <!--  <p><mark><b>INSIGHTS:</b></mark>
+  <ul><li>INSIGHTS FOR CSS BOX LAYOUT!!!</li>
+  </ul></p>  -->
   </section>
+
+  <!-------------------------------->
+  <!-- CSS ANIMATION & TRANSITION -->
+  <!-------------------------------->
+  <section id="CSS-Animation-Transition">
+  <h1>CSS ANIMATION & TRANSITION</h1>
+  <div id="Animation" class="Box">
+  <h3>ANIMATION</h3>
+  <p><b>Related Properties:</b>
+
+  <!-- ANIMATION -->
+  <ul><li><code>animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction
+                animation-fill-mode animation-play-state;</code>
+
+  <!-- ANIMATION NAME -->
+  <ul><li><code>animation-name: <em>myValue</em>;</code>
+  <ul><li>The <code>animation-name</code> property specifies a name for the <code>@keyframes</code> animation</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><em>Strings</em> ( Any custom name for the animation )</code></li>
+  <li><code>none</code> ( A <b>default value</b> which there is no animation name specified )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- ANIMATION DURATION -->
+  <li><code>animation-duration: <em>myValue</em>;</code>
+  <ul><li>The <code>animation-duration</code> property defines how long an animation should take to complete one cycle</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><em>CSS Time Values</em></code> ( Written in millisecond, <code>ms</code> or second, <code>s</code>)</li>
+  <li><code>0</code> ( A <b>default value</b> which there is no duration specified for the animation )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- ANIMATION TIMING FUNCTION -->
+  <li><code>animation-timing-function: <em>myValue</em>;</code>
+  <ul><li>The <code>animation-timing-function</code> specifies the speed curve of an animation</li>
+  <li>The speed curve defines the time an animation uses to change from one set of CSS styles to another</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>ease</code> ( A <b>default value</b> which the animation has a slow start, then fast, before it ends slowly )</li>
+  <li><code>cubic-bezier(<em>n, n, n, n</em>)</code>
+  <ul><li>Define custom values in the cubic-bezier function</li>
+  <li>Possible values are numeric values from <code>0</code> to <code>1</code></li>
+  </ul></li>
+  <li><code>ease-in</code> ( The animation has a slow start )</li>
+  <li><code>ease-out</code> ( The animation has a slow end )</li>
+  <li><code>ease-in-out</code> ( The animation has both a slow start and a slow end )</li>
+  <li><code>linear</code> ( The animation has the same speed from start to end )</li>
+  <li><code>steps(<em>int</em>, start|end)</code>
+  <ul><li>Specifies a stepping function, with two parameters</li>
+  <li>The <code><em>int</em></code> parameter specifies the number of intervals in the function</li>
+  <li>It must be a positive integer (greater than 0)</li>
+  <li>The second parameter is optional, specifies the point at which the change of values occur within the interval</li>
+  <li>If the second parameter is omitted, it is given the value <code>end</code></li>
+  </ul></li>
+  <li><code>step-start</code> ( Equivalent to <code>steps(1, start)</code> )</li>
+  <li><code>step-end</code> ( Equivalent to <code>steps(1, end)</code> )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- ANIMATION DELAY -->
+  <li><code>animation-delay: <em>myValue</em>;</code>
+  <ul><li>The <code>animation-delay</code> property specifies a delay for the start of an animation</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><em>CSS Time Values</em></code> ( Written in millisecond, <code>ms</code> or second, <code>s</code>)</li>
+  <li><code>0</code> ( A <b>default value</b> which there is no delay specified for the animation )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- ANIMATION ITERATION COUNT -->
+  <li><code>animation-iteration-count: <em>myValue</em>;</code>
+  <ul><li>The <code>animation-iteration-count</code> property specifies the number of times an animation should be played</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><em>Numbers</em></code> ( Any numbers which defines how many times an animation should be played )</li>
+  <li><code>1</code> ( A <b>default value</b> which defines how many times an animation should be played )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- ANIMATION DIRECTION -->
+  <li><code>animation-direction: <em>myValue</em>;</code>
+  <ul><li>The <code>animation-direction</code> property defines whether an animation should be played forward, backward or in alternate cycles</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which the animation is played as normal, forwards )</li>
+  <li><code>reverse</code> ( The animation is played in reverse direction, backwards )</li>
+  <li><code>alternate</code> ( The animation is played forwards first, then backwards )</li>
+  <li><code>alternate-reverse</code> ( The animation is played backwards first, then forwards )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- ANIMATION FILL MODE -->
+  <li><code>animation-fill-mode: <em>myValue</em>;</code>
+  <ul><li>The <code>animation-fill-mode</code> property specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)</li>
+  <li>CSS animations do not affect the element before the first keyframe is played or after the last keyframe is played</li>
+  <li>The <code>animation-fill-mode</code> property can override this behavior</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>none</code> ( A <b>default value</b> which the animation will not apply any styles to the element before or after it is executing )</li>
+  <li><code>backwards</code> ( The element will get the style values that is set by the first keyframe, depends on
+      <code>animation-direction</code>, and retain this during the <code>animation-delay</code> period )</li>
+  <li><code>both</code> ( The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions )</li>
+  <li><code>forwards</code> ( The element will retain the style values that is set by the last keyframe, depends on 
+      <code>animation-direction</code> and <code>animation-iteration-count</code> )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- ANIMATION PLAY STATE -->
+  <li><code>animation-play-state: <em>myValue</em>;</code>
+  <ul><li>The <code>animation-play-state</code> property specifies whether the animation is running or paused</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>paused</code> ( Specifies that the animation is paused )</li>
+  <li><code>running</code> ( A <b>default value</b> which specifies that the animation is running )</li>
+  </ul></li> </ul></li> </ul></li> </ul></li> </ul></p> </div>
+
+  <div id="Transition" class="Box">
+  <h3>TRANSITION</h3>
+  <p><b>Related Properties:</b>
+  
+  <!-- TRANSITION -->
+  <ul><li><code>transition: transition-property transition-duration transition-timing-function transition-delay;</code>
+
+  <!-- TRANSITION PROPERTY -->
+  <ul><li><code>transition-property: <em>myValue</em>;</code>
+  <ul><li>The <code>transition-property</code> property specifies the name of the CSS property the transition effect is for</li>
+  <li>The transition effect will start when the specified CSS property changes</li>
+  <li>A transition effect could typically occur when a user hover over an element</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>all</code> ( A <b>default value</b> which all properties will get a transition effect )</li>
+  <li><code>none</code> ( No property will get a transition effect )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- TRANSITION DURATION -->
+  <li><code>transition-duration: <em>myValue</em>;</code>
+  <ul><li>The <code>transition-duration</code> property specifies how long a transition effect takes to complete</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><em>CSS Time Values</em></code> ( Written in millisecond, <code>ms</code> or second, <code>s</code>)</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- TRANSITION TIMING FUNCTION -->
+  <li><code>transition-timing-function: <em>myValue</em>;</code>
+  <ul><li>The <code>transition-timing-function</code> property specifies the speed curve of the transition effect</li>
+  <li>This property allows a transition effect to change speed over its duration</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>ease</code>
+  <ul><li>A <b>default value</b> which specifies a transition effect with a slow start, then fast, then end slowly</li>
+  <li>The effect is equivalent to <code>cubic-bezier(0.25, 0.1, 0.25, 1)</code></li>
+  </ul></li>
+  <li><code>cubic-bezier(<em>n, n, n, n</em>)</code>
+  <ul><li>Define custom values in the cubic-bezier function</li>
+  <li>Possible values are numeric values from 0 to 1</li>
+  </ul></li>
+  <li><code>ease-in</code>
+  <ul><li>Specifies a transition effect with a slow start</li>
+  <li>The effect is equivalent to <code>cubic-bezier(0.42, 0, 1, 1)</code></li>
+  </ul></li>
+  <li><code>ease-out</code>
+  <ul><li>Specifies a transition effect with a slow end</li>
+  <li>The effect is equivalent to <code>cubic-bezier(0, 0, 0.58, 1)</code></li>
+  </ul></li>
+  <li><code>ease-in-out</code>
+  <ul><li>Specifies a transition effect with a slow start and end</li>
+  <li>The effect is equivalent to <code>cubic-bezier(0.42, 0, 0.58, 1)</code></li>
+  </ul></li>
+  <li><code>linear</code>
+  <ul><li>Specifies a transition effect with the same speed from start to end</li>
+  <li>The effect is equivalent to <code>cubic-bezier(0, 0, 1, 1)</code></li>
+  </ul></li>
+  <li><code>step-end</code> <ul><li>Equivalent to <code>steps(1, end)</code></li></ul> </li>
+  <li><code>step-start</code> <ul><li>Equivalent to <code>steps(1, start)</code></li></ul> </li>
+  <li><code>steps(<em>int</em>, start|end)</code>
+  <ul><li>Specifies a stepping function, with two parameters</li>
+  <li>The first parameter specifies the number of intervals in the function. It must be a positive integer (greater than 0)</li>
+  <li>The second parameter is optional specifies the point at which the change of values occur within the interval</li>
+  <li>If the second parameter is omitted, it is given the value <code>end</code></li>
+  </ul></li> </ul></li> </ul></li> <br>
+
+  <!-- TRANSITION DELAY -->
+  <li><code>transition-delay: <em>myValue</em>;</code>
+  <ul><li>The <code>transition-delay</code> property specifies when the transition effect will start</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><em>CSS Time Values</em></code> ( Written in millisecond, <code>ms</code> or second, <code>s</code>)</li>
+  </ul></li> </ul></li>
+  </ul></li> </ul></p> </div></section>
 
   <!-------------------->
   <!-- CSS TYPOGRAPHY -->
   <!-------------------->
   <section id="Typography">
-  <h1>TYPOGRAPHY</h1>
+  <h1>CSS TYPOGRAPHY</h1>
   <div id="Text-Font" class="Box">
   <h3>TEXT & FONT</h3>
   <p><b>Related Properties</b>
@@ -453,7 +668,7 @@
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><code>normal</code> ( A <b>default value</b> which the browser displays a normal font style )</li>
   <li><code>italic</code> ( The browser displays an italic font style )</li>
-  <li><code>oblique</code> ( The browser displays an oblique font style )</li>
+  <!--  <li><code>oblique</code> ( The browser displays an oblique font style )</li>  -->
   </ul></li> </ul></li> <br>
 
   <!-- FONT VARIANT -->
@@ -462,11 +677,11 @@
   <li><b>Related Value(s):</b>
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><code>normal</code> ( A <b>default value</b> which the browser displays a normal font )</li>
-  <li><code>small-caps</code>
+  <!--  <li><code>small-caps</code>
   <ul><li>The browser displays a small-caps font</li>
   <li>In a small-caps font, all lowercase letters are converted to uppercase letters</li>
-  <li>The converted uppercase letters appears in a smaller font size than the original uppercase letters in the text</li>
-  </ul></li> </ul></li> </ul></li> <br>
+  <li>The converted uppercase letters appears in a smaller font size than the original uppercase letters in the text</li> -->
+  </ul></li> </ul></li> <br>
 
   <!-- FONT WEIGHT -->
   <li><code>font-weight: <em>myValue</em>;</code>
@@ -474,10 +689,10 @@
   <li><b>Related Value(s):</b>
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><code>normal</code> ( A <b>Default value</b> which displays normal characters )</li>
-  <li><code>lighter</code> ( Defines lighter characters )</li>
+  <!--  <li><code>lighter</code> ( Defines lighter characters )</li>
   <li><code>bold</code> ( Defines thick characters )</li>
   <li><code>bolder</code> ( Defines thicker characters )</li>
-  <li><code> 0 &le; <em>Numbers</em> &le; 1000</code>
+  <li><code> 0 &le; <em>Numbers</em> &le; 1000</code>  -->
   </ul></li> </ul></li> <br>
 
   <!-- FONT SIZE -->
@@ -487,14 +702,14 @@
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
   <li><code>medium</code> ( A <b>default value</b> which the font is set to a medium size )</li>
-  <li><code>xx-small</code> ( The font is set to an xx-small size )</li>
+  <!--  <li><code>xx-small</code> ( The font is set to an xx-small size )</li>
   <li><code>x-small</code> ( The font is set to an extra small size )</li>
   <li><code>small</code> ( The font is set to a small size )</li>
   <li><code>large</code> ( The font is set to a large size )</li>
   <li><code>x-large</code> ( The font is set to an extra large size )</li>
   <li><code>xx-large</code> ( The font is set to an xx-large size )</li>
   <li><code>smaller</code> ( The font is set to a smaller size than the parent element )</li>
-  <li><code>larger</code> ( The font is set to a larger size than the parent element )</li>
+  <li><code>larger</code> ( The font is set to a larger size than the parent element )</li>  -->
   </ul></li> </ul></li> <br>
 
   <!-- LINE HEIGHT -->
@@ -551,35 +766,385 @@
   <li><code>'Times New Roman'</code></li>
   <li><code>'Trebuchet MS'</code></li>
   <li><code>Verdana</code></li>
-  </ul></li> </ul></li>
+  </ul></li> </ul></li> </ul></li> <br>
 
-  <!--  <li><code>text-align: <em>myValue</em>;</code></li>
-  <li><code>text-align-last: <em>myValue</em>;</code></li>
-  <li><code>text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;</code></li>
-  <li><code>text-emphasis: text-emphasis-style text-emphasis-color;</code></li>
-  <li><code>text-emphasis-position: <em>myValue</em>;</code></li>
-  <li><code>text-indent: <em>myValue</em>;</code></li>
-  <li><code>text-justify: <em>myValue</em>;</code></li>
-  <li><code>text-orientation: <em>myValue</em>;</code></li>
-  <li><code>text-overflow: <em>myValue</em>;</code></li>
-  <li><code>text-shadow: <em>myValue</em>;</code></li>
-  <li><code>text-transform: <em>myValue</em>;</code></li>
-  <li><code>text-underline-offset: <em>myValue</em>;</code></li>
-  <li><code>text-underline-position: <em>myValue</em>;</code></li>
-  <li><code>letter-spacing: <em>myValue</em>;</code></li>
-  <li><code>unicode-bidi: <em>myValue</em>;</code></li>
-  <li><code>direction: <em>myValue</em>;</code></li>
-  <li><code>white-space: <em>myValue</em>;</code></li>
-  <li><code>word-break: <em>myValue</em>;</code></li>
-  <li><code>word-spacing: <em>myValue</em>;</code></li>
-  <li><code>word-wrap: <em>myValue</em>;</code></li> 
-  <li><code>writing-mode: <em>myValue</em>;</code></li>
-  <li><code>tab-size: <em>myValue</em>;</code></li>
-  <li><code>hyphens: <em>myValue</em>;</code></li>
-  <li><code>hyphenate-character: <em>myValue</em>;</code></li>
-  <code>font-feature-settings | font-kerning | font-size-adjust | font-stretch | font-variant-caps</code><br> -->
+  <!-- FONT KERNING -->
+  <li><code>font-kerning</code>
+  <ul><li>The <code>font-kerning</code> property controls the usage of the kerning information stored in a font</li>
+  <li>Kerning defines how letters are spaced</li>
+  <li>For fonts that do not include kerning data, this property will have no visible effect</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>auto</code> ( A <b>default value</b> which the browser determines whether font kerning should be applied or not )</li>
+  <li><code>normal</code> ( Specifies that font kerning is applied )</li>
+  <li><code>none</code> ( Specifies that font kerning is not applied )</li>
+  </ul></li> </ul></li> <br>
+
+  <!--  <li><code>font-feature-settings</code></li>
+  <li><code>font-size-adjust</code></li>
+  <li><code>font-stretch</code></li>
+  <li><code>font-variant-caps</code></li>  -->
+
+  <!-- TEXT ALIGN -->
+  <li><code>text-align: <em>myValue</em>;</code>
+  <ul><li>The <code>text-align</code> property specifies the horizontal alignment of text in an element</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>left</code> ( A <b>default value</b> where the text align is on the left when <code>direction: ltr;</code> )</li>
+  <li><code>right</code> ( A <b>default value</b> where the text align is on the right when <code>direction: ltr;</code> )</li>
+  <li><code>center</code> ( Text align is centered ) </li>
+  <li><code>justify</code> ( Stretches the lines so that each line has equal width, like in newspapers and magazines )</li>
+  <!--  <li><code>start</code> ( The text is aligned at the beginning of the line )</li>
+  <li><code>end</code> ( The text is aligned at the end of the line )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT ALIGN LAST -->
+  <li><code>text-align-last: <em>myValue</em>;</code>
+  <ul><li>The <code>text-align-last</code> property specifies how to align the last line of a text</li>
+  <li>The <code>text-align-last</code> property sets the alignment for all last lines within the selected element</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>auto</code> ( A <b>default value</b> where the last line is justified and aligned left )</li>
+  <!--  <li><code>center</code> ( The last line is center-aligned )</li>
+  <li><code>justify</code> ( The last line is justified as the rest of the lines )</li>
+  <li><code>left</code> ( The last line is aligned to the left )</li>
+  <li><code>right</code> ( The last line is aligned to the right )</li>
+  <li><code>start</code> ( The last line is aligned at the beginning of the line )</li>
+  <li><code>end</code> ( The last line is aligned at the end of the line)</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT DECORATION -->
+  <li><code>text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;</code>
+
+  <!-- TEXT DECORATION LINE -->
+  <ul><li><code>text-decoration-line: <em>myValue</em>;</code>
+  <ul><li>The <code>text-decoration-line</code> property sets the kind of text decoration to use</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>none</code> ( A <b>default value</b> which there is no text decoration line specified )</li>
+  <!--  <li><code>overline</code> ( Specifies that a line will be displayed over the text )</li>
+  <li><code>line-through</code> ( Specifies that a line will be displayed through the text )</li>
+  <li><code>underline</code> ( Specifies that a line will be displayed under the text )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT DECORATION COLOR -->
+  <li><code>text-decoration-color: <em>myValue</em>;</code>
+  <ul><li>The <code>text-decoration-color</code> property specifies the color of the text-decoration</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
+  <li><code>currentColor</code> ( A <b>default value</b> where the text decoration color is based on the value of the <code>color</code> property of the element )</li>
+  <!--  <li><code>transparent</code></li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT DECORATION STYLE -->
+  <li><code>text-decoration-style: <em>myValue</em>;</code>
+  <ul><li>The <code>text-decoration-style</code> property sets the style of the text decoration</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>solid</code> ( A <b>default value</b> which the line will display as a single line )</li>
+  <!--  <li><code>double</code> ( The line will display as a double line )</li>
+  <li><code>dashed</code> ( The line will display as a dashed line )</li>
+  <li><code>dotted</code> ( The line will display as a dotted line )</li>
+  <li><code>none</code> ( There is no text decoration style specified)</li>
+  <li><code>wavy</code> ( The line will display as a wavy line )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT DECORATION THICKNESS -->
+  <li><code>text-decoration-thickness: <em>myValue</em>;</code>
+  <ul><li>The <code>text-decoration-thickness</code> property specifies the thickness of the decoration line</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>auto</code> (A <b>default value</b> which the browser automatically chooses the thickness of the decoration line )</li>
+  </ul></li> </ul></li> </ul></li> <br>
+
+  <!-- TEXT EMPHASIS -->
+  <li><code>text-emphasis: text-emphasis-style text-emphasis-color;</code>
+
+  <!-- TEXT EMPHASIS STYLE -->
+  <ul><li><code>text-emphasis-style: <em>myValue</em>;</code>
+  <ul><li>The <code>text-emphasis-style</code> property sets the style of emphasis marks</li>
+  <li>The size of the emphasis marks is about 50% of the size of the font</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>'<em>Strings</em>'</code> ( The emphasis marks are the given string, one character )</li>
+  <li><code>none</code> ( A <b>default value</b> which no emphasis marks are applied )</li>
+  <!--  <li><code>filled</code> ( The emphasis marks are filled with a solid color )</li>
+  <li><code>open</code> ( The emphasis marks are hollow )</li>
+  <li><code>dot</code> ( The emphasis marks are small circles )</li>
+  <li><code>circle</code> ( The emphasis marks are circles )</li>
+  <li><code>double-circle</code> ( The emphasis marks are double circles )</li>
+  <li><code>triangle</code> ( The emphasis marks are triangles )</li>
+  <li><code>sesame</code> ( The emphasis marks are sesames )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <li><code>text-emphasis-color: <em>myValue</em>;</code>
+  <ul><li>The <code>text-emphasis-color</code> property sets the color of emphasis marks</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
+  <li><code>currentColor</code> ( A <b>default value</b> where the text emphasis color is based on the value of the <code>color</code> property of the element )</li>
+  <!--  <li><code>transparent</code></li>  -->
+  </ul></li> </ul></li> </ul></li> <br>
+
+  <!-- TEXT EMPHASIS POSITION -->
+  <li><code>text-emphasis-position: <em>myValue</em>;</code>
+  <ul><li>The <code>text-emphasis-position</code> property specifies the position of the emphasis marks</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>over</code> ( The emphasis marks are applied over the text in horizontal writing mode )</li>
+  <li><code>under</code> (  The emphasis marks are applied under the text in horizontal writing mode )</li>
+  <li><code>left</code> ( The emphasis marks are applied to the left of the text in vertical writing mode )</li>
+  <li><code>right</code> ( The emphasis marks are applied to the right of the text in vertical writing mode )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT INDENT -->
+  <li><code>text-indent: <em>myValue</em>;</code>
+  <ul><li>The <code>text-indent</code> property specifies the indentation of the first line in a text-block</li>
+  <li>The first line will be indented to the left if the value is negative</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> ( A <b>default value</b> where there is no text indentation )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT JUSTIFY -->
+  <li><code>text-justify: <em>myValue</em>;</code>
+  <ul><li>The <code>text-justify</code> property specifies the justification method of text when <code>text-align: justify;</code></li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>auto</code> ( A <b>default value</b> where the browser determines the justification algorithm )</li>
+  <!--  <li><code>distribute</code></li>
+  <li><code>distribute-all-lines</code></li>
+  <li><code>inter-character</code> ( Increases/Decreases the space between characters )</li>
+  <li><code>inter-cluster</code></li>
+  <li><code>inter-ideograph</code></li>
+  <li><code>inter-word</code> ( Increases/Decreases the space between words )</li>
+  <li><code>kashida</code></li>
+  <li><code>newspaper</code></li>
+  <li><code>none</code> ( Disables justification methods )</li> -->
+  </ul></li> </ul></li> <br>
+
+  <li><code>text-orientation: <em>myValue</em>;</code>
+  <ul><li>The <code>text-orientation</code> property specifies the orientation of characters</li>
+  <li><b>related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>mixed</code> ( A <b>default value</b> where characters are rotated 90 degrees clockwise )</li>
+  <!--  <li><code>sideways</code> ( Characters are orientated the same as the text lines are oriented with writing-mode vertical, 90 degrees clockwise )</li>
+  <li><code>sideways-right</code> ( Equal to property value sideways, kept for compatibility purposes )</li>
+  <li><code>upright</code> ( Characters are not rotated, but standing upright )</li>
+  <li><code>use-glyph-orientation</code> ( For use in SVG elements )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <li><code>text-overflow: <em>myValue</em>;</code>
+  <ul><li>The <code>text-overflow</code> property specifies how overflowed content that is not displayed should be signaled to the user</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><em>Strings</em></code> ( Render the given string to represent the clipped text )</li>
+  <li><code>clip</code> ( A <b>default value</b> where the text is clipped and not accessible )</li>
+  <!--  <li><code>ellipsis</code> ( Render an ellipsis ("...") to represent the clipped text )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT SHADOW -->
+  <li><code>text-shadow: <em>H-Offset V-Offset Blur-Radius Color</em>;</code>
+  <ul><li>The <code>text-shadow</code> property adds shadow to text</li>
+  <li><code><em>H-Offset</em></code>
+  <ul><li><b>Required</b> parameter which specifies the position of the horizontal shadow</li>
+  <li>Negative values are allowed</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  </ul></li> </ul></li>
+  <li><code><em>V-Offset</em></code>
+  <ul><li><b>Required</b> parameter which specifies the position of the vertical shadow</li>
+  <li>Negative values are allowed</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  </ul></li> </ul></li>
+  <li><code><em>Blur-Radius</em></code>
+  <ul><li><b>Optional</b> parameter which spcefies the blur radius of the shadow</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  </ul></li> </ul></li>
+  <li><code><em>Color</em></code>
+  <ul><li><b>Optional</b> parameter which specifies the color of the shadow</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
+  <!--  <li><code>currentColor</code></li>
+  <li><code>transparent</code></li>  -->
+  </ul></li> </ul></li> </ul></li> <br>
+
+  <!-- TEXT TRANSFORM -->
+  <li><code>text-transform: <em>myValue</em>;</code>
+  <ul><li>The <code>text-transform </code> property controls the capitalization of text</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>none</code> ( A <b>default value</b> which there is no capitalization )</li>
+  <!--  <li><code>capitalize</code> ( Transforms the first character of each word to uppercase )</li>
+  <li><code>lowercase</code> ( Transforms all characters to lowercase )</li>
+  <li><code>uppercase</code> ( Transforms all characters to uppercase )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT UNDERLINE OFFSET -->
+  <li><code>text-underline-offset: <em>myValue</em>;</code>
+  <ul><li>The <code>text-underline-offset</code> property specifies the offset distance of underline text decorations</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>auto</code> ( A <b>default value</b> which the browser sets the appropriate offset for the underline )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- TEXT UNDERLINE POSITION -->
+  <li><code>text-underline-position: <em>myValue</em>;</code>
+  <ul><li>The <code>text-underline-position</code> property specifies the position of underline text decorations</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>auto</code> ( A <b>default value</b> which the browser sets the position of the underline )</li>
+  <!--  <li><code>above</code> ( Sets the underline above the alphabetic baseline )</li>
+  <li><code>below</code> ( Sets the underline below the alphabetic baseline )</li>
+  <li><code>under</code> ( Sets the underline below the alphabetic baseline )</li>
+  <li><code>from-font</code> ( If the font file includes information about underline position, use that value, if not, use <code>auto</code> )</li>
+  <li><code>left</code> ( In vertical writing mode the underline will be placed to the left of the text while
+                          in horizontal writing mode the underline will be placed as auto )</li>
+  <li><code>right</code> ( In vertical writing mode the underline will be placed to the right of the text while
+                           in horizontal writing mode the underline will be placed as auto )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- LETTER SPACING -->
+  <li><code>letter-spacing: <em>myValue</em>;</code>
+  <ul><li>The <code>letter-spacing</code> property increases or decreases the space between characters in a text</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which defines normal space between characters )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- DIRECTION -->
+  <li><code>direction: <em>myValue</em>;</code>
+  <ul><li>The <code>direction</code> property specifies the text direction/writing direction within a block-level element</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>ltr</code> ( A <b>default value</b> which text direction goes from left-to-right )</li>
+  <li><code>rtl</code> ( Text direction goes from right-to-left )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- UNICODE BIDI -->
+  <li><code>unicode-bidi: <em>myValue</em>;</code>
+  <ul><li>The <code>unicode-bidi</code> property specifies whether the text should be overridden to support multiple languages in the same document</li>
+  <li>The <code>unicode-bidi</code> property is used together with the <code>direction</code> property</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which the element does not open an additional level of embedding )</li>
+  <!--  <li><code>bidi-override</code>
+  <ul><li>For inline elements, this creates an override</li>
+  <li>For block elements, this creates an override for inline-level descendants not within another block element</li>
   </ul></li>
-  </ul></p> </div>
+  <li><code>embed</code> ( For inline elements, this value opens an additional level of embedding )</li>
+  <li><code>isolate</code> ( The element is isolated from its siblings )</li>
+  <li><code>isolate-override</code></li>
+  <li><code>plaintext</code></li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- WHITE SPACE -->
+  <li><code>white-space: <em>myValue</em>;</code>
+  <ul><li>The <code>white-space</code> property specifies how white-space inside an element is handled</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>normal</code>
+  <ul><li>A <b>default value</b> which sequences of whitespace will collapse into a single whitespace</li>
+  <li>Text will wrap when necessary </li>
+  </ul></li>
+  <!--  <li><code>nowrap</code>
+  <ul><li>Sequences of whitespace will collapse into a single whitespace</li>
+  <li>Text will never wrap to the next line</li>
+  <li>The text continues on the same line until a <code>&lt;br&gt;</code> tag is encountered</li>
+  </ul></li>
+  <li><code>pre</code>
+  <ul><li>Whitespace is preserved by the browser</li>
+  <li>Text will only wrap on line breaks</li>
+  <li>Acts like the <code>&lt;pre&gt;</code> tag in HTML</li>
+  </ul></li>
+  <li><code>pre-line</code>
+  <ul><li>Sequences of whitespace will collapse into a single whitespace</li>
+  <li>Text will wrap when necessary, and on line breaks</li>
+  </ul></li>
+  <li><code>pre-wrap</code>
+  <ul><li>Whitespace is preserved by the browser</li>
+  <li>Text will wrap when necessary, and on line breaks</li> -->
+  </ul></li> </ul></li> <br>
+
+  <!-- WORD BREAK -->
+  <li><code>word-break: <em>myValue</em>;</code>
+  <ul><li>The <code>word-break</code> property specifies how words should break when reaching the end of a line</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which uses default line break rules )</li>
+  <!--  <li><code>break-all</code> ( To prevent overflow, word may be broken at any character )</li>
+  <li><code>keep-all</code> ( Word breaks should not be used for Chinese/Japanese/Korean (CJK) text, non-CJK text behavior is the same as value <code>normal</code> )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- WORD SPACING -->
+  <li><code>word-spacing: <em>myValue</em>;</code>
+  <ul><li>The <code>word-spacing</code> property increases or decreases the white space between words</li>
+  <li>Negative values are allowed</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which defines normal space between words, around <code>0.25em</code> )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- WORD WRAP -->
+  <li><code>word-wrap: <em>myValue</em>;</code>
+  <ul><li>The <code>word-wrap</code> property allows long words to be able to be broken and wrap onto the next line</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>normal</code> ( A <b>default value</b> which break words only at allowed break points )</li>
+  <!--  <li><code>break-word</code> ( Allows unbreakable words to be broken )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- WRITING MODE -->
+  <li><code>writing-mode: <em>myValue</em>;</code>
+  <ul><li>The <code>writing-mode</code> property specifies whether lines of text are laid out horizontally or vertically</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>horizontal-tb</code> ( Let the content flow horizontally from left to right, vertically from top to bottom )</li>
+  <li><code>sideways-lr</code></li>
+  <li><code>sideways-rl</code></li>
+  <li><code>vertical-lr</code> ( Let the content flow vertically from top to bottom, horizontally from left to right )</li>
+  <li><code>vertical-rl</code> ( Let the content flow vertically from top to bottom, horizontally from right to left )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- TAB SIZE -->
+  <li><code>tab-size: <em>myValue</em>;</code>
+  <ul><li>The <code>tab-size</code> property specifies the width of a tab character</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>8</code> ( A <b>default value</b> which the number of space-characters to be displayed for each tab-character )</li>
+  </ul></li> </ul></li> <br>
+
+  <!-- HYPHENS -->
+  <li><code>hyphens: <em>myValue</em>;</code>
+  <ul><li>The <code>hyphens</code> property defines whether hyphenation is allowed to create more soft wrap opportunities within a line of text</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>manual</code> ( A <b>default value</b> which Words are only hyphenated at <code>&hyphen;</code> or <code>&shy;</code>, if needed )</li>
+  <!--  <li><code>none</code> ( Words are not hyphenated )</li>
+  <li><code>auto</code> ( Words are hyphenated where the algorithm is decidin, if needed )</li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!---->
+  <li><code>hyphenate-character: <em>myValue</em>;</code>
+  <ul><li>The <code>hyphenate-character</code> property defines the character used at the end of line, before a hyphenation break</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><em>Strings</em></code> ( The character used at the end of line, before a hyphenation break )</li>
+  <li><code>auto</code> ( A <b>default value</b> which the browser selects an appropriate character based on the current typographic conventions )</li>
+  </ul></li> </ul></li> </ul></li> </ul></li> </ul></p> </div>
 
   <p><mark><b>INSIGHTS:</b></mark>
   <ul><li>Common fallback system
@@ -595,16 +1160,15 @@
   <li><code>'Times New Roman', Times, serif</code></li>
   <li><code>'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif</code></li>
   <li><code>Verdana, Geneva, Tahoma, sans-serif</code></li>
-  </ul></li> </ul></p> </section>
-
-  <!-------------------------------->
-  <!-- CSS ANIMATION & TRANSITION -->
-  <!-------------------------------->
-  <!--  <section id="Animation-Transition">
-  <h1>ANIMATION & TRANSITION</h1>
-  <code>animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state;</code><br>
-  <code>transition: transition-property transition-duration transition-timing-function transition-delay;</code><br>
-  </section>  -->
+  </ul></li>
+  <li>How <code>text-align-last</code> property works
+  <ul><li>If there is a <code>&lt;div&gt;</code> with three <code>&lt;p&gt;</code> in it, <code>text-align-last</code> will apply to the last line of each of the paragraphs</li>
+  <li>Use <code>:last-child</code> pseudo-class to apply <code>text-align-last</code> on only the last paragraph in the container</li>
+  </ul></li>
+  <li>Other properties that are required to ensure the <code>text-overflow</code> is working
+  <ul><li>Other properties required are <code>white-space: nowrap;</code> and <code>overflow: hidden;</code></li>
+  </ul></li>
+  </ul></p> </section>
 
   <!---------------------------->
   <!-- BACKGROUND, IMAGE, SVG -->
@@ -803,6 +1367,7 @@
   <code>z-index</code>
   </section>
 
+  <li><code>display: <em>myValue</em>;</code></li>
   <div id="Box-Shape" class="Box">
   <h3>Box Shape</h3>
   <p><b>Related Properties:</b>
@@ -814,15 +1379,7 @@
   <li><code>transform-origin: <em>myValue</em>;</code></li>
   <li><code>transform-style: <em>myValue</em>;</code></li>
   <li><code>translate: <em>myValue</em>;</code></li>
-  </ul></p> </div>
-
-  <section id="Table">
-  <h1>Table</h1>
-  <code>border-collapse | border-spacing</code>
-  <code>empty-cells</code><br>
-  <code>table-layout</code><br>
-  <code>caption-side</code><br>
-  </section>
+  </ul></p> </div>  
 
   <section id="Scroll">
   <h1>SCROLL</h1>
