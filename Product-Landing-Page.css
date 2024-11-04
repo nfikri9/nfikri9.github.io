@@ -1,0 +1,16 @@
+/* GLOBAL */
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+:root { --Main-Color: rgb(211,211,211); }
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body { background-color: var(--Main-Color);
+       font-family: 'Lato', sans-serif;
+       position: relative;
+     }
+a { text-decoration: none;}
+/* SCREEN SIZE
+@media only screen and (min-width: 576px)  { body { background-color: red; } }
+@media only screen and (min-width: 768px)  { body { background-color: green; } }
+@media only screen and (min-width: 992px)  { body { background-color: green; } }
+@media only screen and (min-width: 1200px) { body { background-color: blue; } }
+@media only screen and (min-width: 1400px) { body { background-color: orange; } } */

@@ -25,101 +25,183 @@
   </div>
   </nav>
 
-  <!----------------->
-  <!--CSS BOX MODEL-->
-  <!----------------->
+  <!------------------->
+  <!-- CSS SELECTORS -->
+  <!------------------->
+  <section id="CSS-Selectors">
+  <h1>CSS SELECTORS</h1>
+  <p>CSS selectors are used to select the HTML elements that need to be styled</p>
+
+  <!-- SIMPLE SELECTORS -->
+  <div class="Box"><h3>SIMPLE SELECTORS</h3>
+
+  <!-- ELEMENT SELECTORS -->
+  <ul><li>Element Selectors
+  <ul><li>The element selector selects HTML elements based on the element name</li>
+  <li><code>body { <em>CSS Codes</em>; } <br> div { <em>CSS Codes</em>; } <br> p { <em>CSS Codes</em>; }</code></li>
+  </ul></li> <br>
+
+  <!-- ID SELECTORS -->
+  <li>Id Selectors
+  <ul><li>The id selector uses the <code>id</code> attribute of an HTML element to select a specific element</li>
+  <li>The id of an element is unique within a page, so the id selector is used to select one unique element</li>
+  <li><code><em>#Container { CSS Codes; } <br> #Button-Link { CSS Codes; } <br> #myId { CSS Codes; }</em></code></li>
+  </ul></li> <br>
+
+  <!-- CLASS SELECTORS -->
+  <li>Class Selectors
+  <ul><li>The class selectors select HTML elements with a specific <code>class</code> attribute</li>
+  <li>Unlike id selectors, class selectors are used by multiple elements</li>
+  <li>HTML elements can also refer to more than one class</li>
+  <li><code><em>.image { CSS Codes; } <br> .Header-Top { CSS Codes; } <br> .myClass { CSS Codes; }</em></code></li>
+  <li>The class selectors also can select only one type of elements with multiple specific class</li>
+  <li><code><em>div.box { CSS Codes; } <br> span.myClass.StepA { CSS Codes; }</em></code></li>
+  </ul></li> <br>
+
+  <!-- GROUP SELECTORS -->
+  <li>Group Selectors
+  <ul><li>The grouping selectors select all the HTML elements with the same style definitions</li>
+  <li>To group selectors, separate each selector with a comma to minimize the code</li>
+  <li><code>div, <em>#myId, .myClass { CSS Codes; }</em></code></li>
+  </ul></li> <br>
+
+  <!-- UNIVERSAL SELECTOR -->
+  <li>Universal Selector
+  <ul><li>The universal selector selects all HTML elements on the page</li>
+  <li><code><em>* { CSS Codes; }</em></code></li>
+  </ul></li> </ul></div>
+  <!--  <div class="Box"><h3>COMBINATOR SELECTORS</h3></div>
+  <div class="Box"><h3>PSEUDO-CLASS SELECTORS</h3></div>
+  <div class="Box"><h3>PSEUDO-ELEMENTS SELECTORS</h3></div>
+  <div class="Box"><h3>ATTRIBUTE SELECTORS</h3></div>  -->
+  </section>
+
+  <!------------------->
+  <!-- CSS BOX MODEL -->
+  <!------------------->
   <section id="CSS-Box-Model">
   <h1>CSS BOX MODEL</h1>
-  <div id="Element-Dimension" class="Box">
-  <h3>ELEMENT DIMENSIONS</h3>
-  <p><b>Related Properties:</b>
 
   <!-- HEIGHT -->
-  <ul><li><code>height: <em>myValue</em>;</code>
-  <ul><li>The <code>height</code> property sets the height of an element</li>
-  <li><b>Related Value(s):</b>
+  <div id="Property-Height" class="Box">
+  <h3><code>height: <em>myValue</em>;</code></h3>
+  <ul><li>The <code>height</code> property sets the height of an element</li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code> ( A <b>default value</b> where the element will automatically adjust its height to allow its content to be displayed correctly )</li>
+  <li><code>auto</code> <ul><li>By default, the element will automatically adjust its height to allow its content to be displayed correctly</li></ul> </li>
   <!--  <li><code>fit-content</code></li>
   <li><code>max-content</code></li>
   <li><code>min-content</code></li> -->
-  </ul></li> </ul></li> <br>
+  </ul></li> <br>
+
+  <!--  <li><code>min-height: <em>myValue</em>;</code></li>
+  <li><code>max-height: <em>myValue</em>;</code></li>  -->
+
+  <li><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Valid values
+  <ul><li>Negative values are not allowed</li>
+  </ul></li> </ul></li> </ul></div>
 
   <!-- WIDTH -->
-  <li><code>width: <em>myValue</em>;</code>
-  <ul><li>The <code>width</code> property sets the width of an element</li>
-  <li><b>Related Value(s):</b>
+  <div id="Property-Width" class="Box">
+  <h3><code>width: <em>myValue</em>;</code></h3>
+  <ul><li>The <code>width</code> property sets the width of an element</li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code> ( A <b>default value</b> where the element will automatically adjust its width based on <code>display</code> property's default value )</li>
+  <li><code>auto</code>
+  <ul><li>By default, the element will automatically adjust its width based on element's <code>display: <em>Default</em>;</code></li>
+  </ul></li>
   <!--  <li><code>fit-content</code></li>
   <li><code>min-content</code></li>
   <li><code>max-content</code></li>  -->
-  </ul></li> </ul></li>
-  <!--  <li><code>min-height: <em>myValue</em>;</code></li>
-  <li><code>max-height: <em>myValue</em>;</code></li>
-  <li><code>min-width: <em>myValue</em>;</code></li>
-  <li><code>max-width: <em>myValue</em>;</code></li>
-  <li><code>aspect-ratio: <em>myValue</em>;</code></li>
-  <li><code>box-sizing: <em>myValue</em>;</code></li>  -->
-  </ul></p> </div>
-  
-  <div id="Element-Spacing" class="Box">
-  <h3>ELEMENT SPACING</h3>
-  <p><b>Related Properties</b>
+  </ul></li> <br>
+
+  <!--  <li><code>min-width: <em>myValue</em>;</code></li>
+  <li><code>max-width: <em>myValue</em>;</code></li>  -->
+
+  <li><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Valid values
+  <ul><li>Negative values are not allowed</li>
+  </ul></li> </ul></li> </ul></div>
 
   <!-- PADDING -->
-  <ul><li><code>padding: <em>myValues</em>;</code>
-  <ul><li>The <code>padding</code> property specifies space around an element's content, inside of any defined borders</li>
-  <li>There are other properties related to <code>padding</code> property that can be written as its values
+  <div id="Property-Padding" class="Box">
+  <h3><code>padding: <em>myValues</em>;</code></h3>
+  <ul><li>The <code>padding</code> property specifies space around an element's content, inside of any defined <code>border</code></li>
+  <li>There are some generic-side properties that can be written as its values
   <ul><li>4 values = <code>padding: padding-top padding-right padding-bottom padding-left;</code></li>
   <li>3 values = <code>padding: padding-top padding-<em>Horizontal</em> padding-bottom;</code></li>
   <li>2 values = <code>padding: padding-<em>Vertical</em> padding-<em>Horizontal</em>;</code></li>
   <li>1 value = <code>padding: padding-<em>All</em>;</code></li>
-  </ul></li>
-  <li><b>Related Value(s):</b>
+  </ul></li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> ( A <b>default value</b> where there is no padding )</li>
-  </ul></li> </ul></li> <br>
+  <li><code>0</code> <ul><li>By default, there is no specified padding</li></ul> </li>
+  </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Valid values
+  <ul><li>Negative values are not allowed</li>
+  </ul></li> </ul></li> </ul></div>
 
   <!-- MARGIN -->
-  <li><code>margin: <em>myValues</em>;</code>
-  <ul><li>The <code>margin</code> property specifies space around elements, outside of any defined borders</li>
-  <li>There are other properties related to <code>margin</code> property that can be written as its values
+  <div id="Property-Margin" class="Box">
+  <h3><code>margin: <em>myValues</em>;</code></h3>
+  <ul><li>The <code>margin</code> property specifies space around elements, outside of any defined <code>border</code></li>
+  <li>There are some generic-side properties that can be written as its values
   <ul><li>4 values = <code>margin: margin-top margin-right margin-bottom margin-left;</code></li>
   <li>3 values = <code>margin: margin-top margin-<em>Horizontal</em> margin-bottom;</code></li>
   <li>2 values = <code>margin: margin-<em>Vertical</em> margin-<em>Horizontal</em>;</code></li>
   <li>1 value = <code>margin: margin-<em>All</em>;</code></li>
-  </ul></li>
-  <li><b>Related Value(s):</b>
+  </ul></li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> ( A <b>default value</b> where there is no margin specified )</li>
-  <li><code>auto</code> ( Horizontally center the element within its container )</li> 
-  </ul></li> </ul></li> <br>
+  <li><code>0</code> <ul><li>By default, there is no specified margin</li></ul> </li>
+  <li><code>auto</code> <ul><li>Horizontally center the element within its container</li></ul> </li>
+  </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Valid values
+  <ul><li>Negative values are allowed</li>
+  </ul></li> <br>
+
+  <li>Margin collapse
+  <ul><li>The margin collapse happens due to <code>margin-top</code> and <code>margin-bottom</code> collapsed into a single margin
+          that is equal to the largest of those two margins</li>
+  <li>The margin collapse only happens on vertical margin (top and bottom)</li>
+  <li>This does not happen on horizontal margin (left and right)</li>
+  <li>Example, if Element A has <code>margin-bottom: 20px;</code> and Element B has <code>margin-top: 30px;</code> 
+      the vertical margin between Element A and Element B would be <code>30px</code></li>
+  <li>Instead of being <code>50px</code> ( <code>20px</code> from Element A's bottom margin + <code>30px</code> from Element B's top margin),
+      the actual vertical margin is <code>30px</code> due to margin collapse</li>
+  </ul></li> </ul></li> </ul></div>
 
   <!-- BORDER -->
-  <li><code>border: border-width border-style border-color;</code>                             <br>
-      <code>border-top: border-top-width border-top-style border-top-color;</code>             <br>
-      <code>border-right: border-right-width border-right-style border-right-color;</code>     <br>
-      <code>border-bottom: border-bottom-width border-bottom-style border-bottom-color;</code> <br>
-      <code>border-left: border-left-width border-left-style border-left-color;</code>
-  
+  <div id="Property-Border" class="Box">
+  <h3><code>border: border-width border-style border-color;</code></h3>
+
   <!-- BORDER WIDTH -->
   <ul><li><code>border-width: <em>myValues</em>;</code>
   <ul><li>The <code>border-width</code> property specifies the width of an element's borders</li>
-  <li>There are other properties related to <code>border-width</code> property that can be written as its values
+  <li>There are some generic-side properties that can be written as its values
   <ul><li>4 values = <code>border-width: border-top-width border-right-width border-bottom-width border-left-width;</code></li>
   <li>3 values = <code>border-width: border-top-width border-<em>Horizontal</em>-width border-bottom-width;</code></li>
   <li>2 values = <code>border-width: border-<em>Vertical</em>-width border-<em>Horizontal</em>-width;</code></li>
   <li>1 value = <code>border-width: border-<em>All</em>-width;</code></li>
-  </ul></li>
-  <li><b>Related Value(s):</b>
+  </ul></li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>medium</code> ( A <b>default value</b> where the width of the border is medium )</li>
+  <li><code>medium</code> <ul><li>By default, the width of the border is medium</li></ul> </li>
   <!--  <li><code>thin</code> ( The width of the border is thin )</li>
   <li><code>thick</code> ( The width of the border is thick )</li>  -->
   </ul></li> </ul></li> <br>
@@ -127,42 +209,125 @@
   <!-- BORDER STYLE -->
   <li><code>border-style: <em>myValues</em>;</code>
   <ul><li>The <code>border-style</code> property specifies the style of an element's borders</li>
-  <li>There are other properties related to <code>border-style</code> property that can be written as its values
+  <li>There are some generic-side properties that can be written as its values
   <ul><li>4 values = <code>border-style: border-top-style border-right-style border-bottom-style border-left-style;</code></li>
   <li>3 values = <code>border-style: border-top-style border-<em>Horizontal</em>-style border-bottom-style;</code></li>
   <li>2 values = <code>border-style: border-<em>Vertical</em>-style border-<em>Horizontal</em>-style;</code></li>
   <li>1 value = <code>border-style: border-<em>All</em>-style;</code></li>
-  </ul></li>
-  <li><b>Related Value(s)</b>
+  </ul></li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>none</code> ( A <b>default value</b> where there is no specified border style )</li>
-  <li><code>solid</code> ( The style of the border is solid )</li>
-  <!--<li><code>dashed</code> ( The style of the border is dashed )</li>
-  <li><code>dotted</code> ( The style of the border is dotted )</li>
-  <li><code>double</code> ( The style of the border is double )</li>
-  <li><code>groove</code> ( The style of the border is 3D groove - the effect depends on the <code>border-color</code> value )</li>
-  <li><code>hidden</code> ( The same as <code>none</code>, except in border conflict resolution for table elements )</li>
-  <li><code>inset</code> ( The style of the border is 3D inset - the effect depends on the <code>border-color</code> value )</li>
-  <li><code>outset</code> ( The style of the border is 3D outset - the effect depends on the <code>border-color</code> value )</li>
-  <li><code>ridge</code> ( The style of the border is 3D ridge - the effect depends on the <code>border-color</code> value  )</li>  -->
+  <li><code>none</code> <ul><li>By default, there is no specified border style</li></ul> </li>
+  <li><code>solid</code> <ul><li>The style of the border is solid</li></ul> </li>
+  <!--  <li><code>dashed</code> <ul><li>The style of the border is dashed</li></ul> </li>
+  <li><code>dotted</code> <ul><li>The style of the border is dotted</li></ul> </li>
+  <li><code>double</code> <ul><li>The style of the border is double</li></ul> </li>
+  <li><code>groove</code> <ul><li>The style of the border is 3D groove, which the effect is depends on the <code>border-color</code> value</li></ul> </li>
+  <li><code>hidden</code> <ul><li>The same as <code>none</code>, except in border conflict resolution for table elements</li></ul> </li>
+  <li><code>inset</code> <ul><li>The style of the border is 3D inset, which the effect is depends on the <code>border-color</code> value</li></ul> </li>
+  <li><code>outset</code> <ul><li>The style of the border is 3D outset, which the effect depends on the <code>border-color</code> value</li></ul> </li>
+  <li><code>ridge</code> <ul><li>The style of the border is 3D ridge, which the effect is depends on the <code>border-color</code> value</li></ul> </li>  -->
   </ul></li> </ul></li> <br>
 
   <!-- BORDER COLOR -->
   <li><code>border-color: <em>myValues</em>;</code>
   <ul><li>The <code>border-color</code> property specifies the color of an element's borders</li>
-  <li>There are other properties related to <code>border-color</code> property that can be written as its values
+  <li>There are some generic-side properties that can be written as its values
   <ul><li>4 values = <code>border-color: border-top-color border-right-color border-bottom-color border-left-color;</code></li>
   <li>3 values = <code>border-color: border-top-color border-<em>Horizontal</em>-color border-bottom-color;</code></li>
   <li>2 values = <code>border-color: border-<em>Vertical</em>-color border-<em>Horizontal</em>-color;</code></li>
   <li>1 value = <code>border-color: border-<em>All</em>-color;</code></li>
-  </ul></li>
-  <li><b>Related Value(s):</b>
+  </ul></li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <li><code>currentColor</code> ( A <b>default value</b> where the border color is based on the value of the <code>color</code> property of the element )</li>
+  <li><code>currentColor</code> <ul><li>By default, the border color is based on the value of the <code>color</code> property of the element</li></ul> </li>
   <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> </ul></li> <br>
+  </ul></li> </ul></li> <br>
 
+  <li><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Required parameters
+  <ul><li>The <code>border-width</code> and <code>border-style</code> properties are required</li>
+  <li>The <code>border-color</code> is optional and when omitted, the border color applied will be the color of the text</li>
+  </ul></li> <br>
+
+  <li>Similar related properties
+  <ul><li><code>border-top: border-top-width border-top-style border-top-color;</code></li>
+  <li><code>border-right: border-right-width border-right-style border-right-color;</code></li>
+  <li><code>border-bottom: border-bottom-width border-bottom-style border-bottom-color;</code></li>
+  <li><code>border-left: border-left-width border-left-style border-left-color;</code></li>
+  <li>The required parameters for each properties are same as stated above</li>
+  </ul></li> </ul></li> </ul></div>
+
+  <!-- BOX SIZING -->
+  <div id="Property-Box-Sizing" class="Box">
+  <h3><code>box-sizing: <em>myValue</em>;</code></h3>
+  <ul><li>The <code>box-sizing</code> property defines how the <code>width</code> and <code>height</code> of an element are calculated in box dimensions</li>
+  <li>The <code>padding</code> and <code>border</code> also may be included</li> <br>
+
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code><mark>border-box</mark></code>
+  <ul><li>By default, the <code>width</code> and <code>height</code> properties (and <code>min/max</code> properties) includes only the content</li>
+  <li>The element remain the same because <code>padding</code> and <code>border</code> are not included</li>
+  </ul></li> <br>
+  
+  <li><code>content-box</code>
+  <ul><li>The <code>width</code> and <code>height</code> properties (and <code>min/max</code> properties) includes content, <code>padding</code> and <code>border</code></li>
+  <li>The element will appears bigger than intended to be</li>
+  </ul></li> </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Box Dimensions
+  <ul><li><code><em>Height Dimension</em> = "border-top-width" + "padding-top" + height + "padding-bottom" + "border-bottom-width"</code></li>
+  <li><code><em>Width Dimension</em> = "border-left-width" + "padding-left" + width + "padding-right" + "border-right-width"</code></li>
+  <li>The element often appears bigger than intended to be because the <code>border</code> and <code>padding</code> properties are added</li>
+  <li>Best practice to include <code>box-sizing: border-box;</code> which padding and border both are included in the width and height</li>
+  </ul></li> </ul></li> </ul></div>
+
+  <!-- ASPECT RATIO 
+  <div id="Property-Aspect-Ratio" class="Box">
+  <h3><code>aspect-ratio: <em>myValue</em>;</code></h3>
+  </div>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+
+  
+  
+  
+
+
+
+
+
+  
+
+  
+  <div id="Element-Spacing" class="Box">
+  <h3>ELEMENT SPACING</h3>
+  <p><b>Related Properties</b>
   <!-- BORDER RADIUS-->
   <li><code>border-radius: <em>myValues</em>;</code>
   <ul><li>The <code>border-radius</code> property defines the radius of the element's corners</li>
@@ -286,8 +451,6 @@
   <ul><li>If the height of an element is specified but the width of the element is omitted, then the width is automatically set to its default value, and vice versa</li>
   </ul></li>
   <li>Actual dimensions
-  <ul><li><code><em>Height Dimension</em> = "border-top-width" + "padding-top" + "height" + "padding-bottom" + "border-bottom-width"</code></li>
-  <li><code><em>Width Dimension</em> = "border-left-width" + "padding-left" + "width" + "padding-right" + "border-right-width"</code></li>
   <li>Property like <code>outline</code> does not affect element's dimensions and may overlap other content</li>
   </ul></li>
   <li>Overflowed contents
@@ -296,14 +459,7 @@
   <li>If the content does not fit within the specified height, it will overflow</li>
   <li>Use <code>overflow</code> property to manage the overflowed contents</li>
   </ul></li>
-  <li>Margin collapse
-  <ul><li>The margin collapse happens due to top and bottom margins collapsed into a single margin that is equal to the largest of those two margins</li>
-  <li>The margin collapse only happens on vertical margin (top and bottom), this does not happen on horizontal margin (left and right)</li>
-  <li>Example, if Element A has <code>margin-bottom: 20px;</code> and Element B has <code>margin-top: 30px;</code> 
-      the vertical margin between Element A and Element B would be <code>30px</code></li>
-  <li>Instead of being <code>50px</code> ( <code>20px</code> from Element A's bottom margin + <code>30px</code> from Element B's top margin),
-      the actual vertical margin is <code>30px</code> due to margin collapse</li>
-  </ul></li> </ul></p> </section>
+   </ul></p> </section>
 
   <!-------------------->
   <!-- CSS BOX LAYOUT -->
@@ -375,7 +531,55 @@
   <!-- <li><code>clear: <em>myValue</em>;</code></li> -->
   </ul></p> </div>
 
-  <div id="Flex" class="Box">
+  <div id="Element-Behaviour" class="Box">
+  <h3>ELEMENT BEHAVIOUR</h3>
+  <p><b>Related Property</b>
+  <ul><li><code>display: <em>myValue</em>;</code>
+  <ul><li>The <code>display</code> property specifies the display behavior (the type of rendering box) of an element</li>
+  <li><b>Related Value(s):</b>
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>inline</code>
+  <ul><li>A <b>default value</b> which displays an element as an inline element</li>
+  <li>Like <code>&lt;span&gt;</code> any <code>height</code> and <code>width</code> properties will have no effect</li>
+  </ul></li>
+  <li><code>block</code>
+  <ul><li>Displays an element as a block element</li>
+  <li>Like <code>&lt;p&gt;</code> it starts on a new line, and takes up the whole width</li>
+  </ul></li>
+  <li><code>flex</code><ul><li>Displays an element as a block-level flex container</li></ul></li>
+  <li><code>grid</code><ul><li>Displays an element as a block-level grid container</li></ul></li>
+  <li><code>none</code><ul><li>The element is completely removed</li></ul></li>
+  <!--  
+  <li><code>contents</code><ul><li>Makes the container disappear, making the child elements children of the element the next level up in the DOM</li></ul></li>
+  <li><code>inline-block</code>
+  <ul><li>Displays an element as an inline-level block container</li>
+  <li>The element itself is formatted as an inline element, but the values for <code>height</code> and <code>width</code> properties can be applied</li>
+  </ul></li>
+  <li><code>inline-flex</code><ul><li>Displays an element as an inline-level flex container</li></ul></li>
+  <li><code>inline-grid</code><ul><li>Displays an element as an inline-level grid container</li></ul></li>
+  <li><code>inline-table</code><ul><li>The element is displayed as an inline-level table</li></ul></li>
+  <li><code>list-item</code><ul><li>Let the element behave like a <code>&lt;li&gt;</code> element</li></ul></li>
+  <li><code>run-in</code><ul><li>Displays an element as either block or inline, depending on context</li></ul></li>
+  <li><code>table</code><ul><li>Let the element behave like a <code>&lt;table&gt;</code> element</li></ul></li>
+  <li><code>table-caption</code><ul><li>Let the element behave like a <code>&lt;caption&gt;</code> element</li></ul></li>
+  <li><code>table-column-group</code><ul><li>Let the element behave like a <code>&lt;colgroup&gt;</code> element</li></ul></li>
+  <li><code>table-column</code><ul><li>Let the element behave like a <code>&lt;col&gt;</code> element</li></ul></li>
+  <li><code>table-header-group</code><ul><li>Let the element behave like a <code>&lt;thead&gt;</code> element</li></ul></li>
+  <li><code>table-row-group</code><ul><li>Let the element behave like a <code>&lt;tbody&gt;</code> element</li></ul></li>
+  <li><code>table-footer-group</code><ul><li>Let the element behave like a <code>&lt;tfoot&gt;</code> element</li></ul></li>
+  <li><code>table-row</code><ul><li>Let the element behave like a <code>&lt;tr&gt;</code> element</li></ul></li>
+  <li><code>table-cell</code><ul><li>Let the element behave like a <code>&lt;td&gt;</code> element</li></ul></li>
+  <li><code>flexbox</code></li>
+  <li><code>inline-flexbox</code></li>
+  <li><code>flow-root</code></li>
+  <li><code>ruby</code></li>
+  <li><code>ruby-base-container</code></li>
+  <li><code>ruby-base</code></li>
+  <li><code>ruby-text-container</code></li>
+  <li><code>ruby-text</code></li> -->
+  </ul></li> </ul></li> </ul></p> </div>
+
+  <!--  <div id="Flex" class="Box">
   <h3>FLEX LAYOUT</h3>
   <p><b>Related Properties:</b>
   <ul><li><code>flex: flex-grow flex-shrink flex-basis;</code></li>
@@ -441,6 +645,12 @@
   <li><code>table-layout: <em>myValue</em>;</code></li>
   </ul></p> </div>
 
+  <div id="List" class="Box">
+  <h3>LIST LAYOUT</h3>
+  <p><b>Related Properties:</b>
+  <ul><li><code>list-style: list-style-type list-style-position list-style-image;</code></li>
+  </ul></p> </div>
+  
   <div id="Content" class="Box">
   <h3>CONTENTS LAYOUT</h3>
   <p><b>Related Properties:</b>
@@ -448,7 +658,17 @@
   <li><code>place-items: align-items justify-items;</code></li>
   <li><code>place-self: align-self justify-self;</code></li>
   <li><code>gap: row-gap column-gap;</code></li>
-  </ul></p> </div>
+  <li><code>columns: column-width column-count;</code></li>
+  <li><code>column-rule: column-rule-width column-rule-style column-rule-color;</code></li>
+  <li><code>column-fill: <em>myValue</em>;</code></li>
+  <li><code>column-span: <em>myValue</em>;</code></li>
+  <li><code>content: <em>myValue</em>;</code></li>
+  <li><code>counter-set: <em>myValue</em>;</code></li>
+  <li><code>counter-increment: <em>myValue</em>;</code></li>
+  <li><code>counter-reset: <em>myValue</em>;</code></li>
+  <li><code>vertical-align: <em>myValue</em>;</code></li>
+  <li><code>z-index: <em>myValue</em>;</code></li>
+  </ul></p> </div>  -->
 
   <!--  <p><mark><b>INSIGHTS:</b></mark>
   <ul><li>INSIGHTS FOR CSS BOX LAYOUT!!!</li>
@@ -1137,14 +1357,24 @@
   <li><code>auto</code> ( Words are hyphenated where the algorithm is decidin, if needed )</li>  -->
   </ul></li> </ul></li> <br>
 
-  <!---->
+  <!-- HYPHENATE CHARACTER -->
   <li><code>hyphenate-character: <em>myValue</em>;</code>
   <ul><li>The <code>hyphenate-character</code> property defines the character used at the end of line, before a hyphenation break</li>
   <li><b>Related Value(s):</b>
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><code><em>Strings</em></code> ( The character used at the end of line, before a hyphenation break )</li>
   <li><code>auto</code> ( A <b>default value</b> which the browser selects an appropriate character based on the current typographic conventions )</li>
-  </ul></li> </ul></li> </ul></li> </ul></li> </ul></p> </div>
+  </ul></li> </ul></li>
+
+  <!-- INITIAL LETTER -->
+  <!--  <li><code>initial-letter: <em>myValue</em>;</code></li>  -->
+
+  <!-- QUOTES -->
+  <!--  <li><code>quotes: <em>myValue</em>;</code></li>  -->
+
+  <!-- USER SELECT -->
+  <!--  <li><code>user-select: <em>myValue</em>;</code></li>  -->
+  </ul></li> </ul></li> </ul></p> </div>
 
   <p><mark><b>INSIGHTS:</b></mark>
   <ul><li>Common fallback system
@@ -1167,30 +1397,74 @@
   </ul></li>
   <li>Other properties that are required to ensure the <code>text-overflow</code> is working
   <ul><li>Other properties required are <code>white-space: nowrap;</code> and <code>overflow: hidden;</code></li>
-  </ul></li>
-  </ul></p> </section>
+  </ul></li> </ul></p> </section>
 
   <!---------------------------->
   <!-- BACKGROUND, IMAGE, SVG -->
   <!---------------------------->
   <!--  <section id="Background-Image-SVG">
   <h1>BACKGROUND, IMAGE, SVG</h1>
-  <code>background: background-color background-image background-position background-size background-repeat background-origin background-clip background-attachment;</code><br>
-  <code>background-blend-mode | background-position-x | background-position-y</code><br>
-  <code>border-image: border-image-source border-image-slice border-image-width border-image-outset border-image-repeat;</code><br>
-  <code>mask: mask-image mask-mode mask-repeat mask-position mask-clip mask-origin mask-size mask-composite;</code><br>
-  <code>offset: offset-anchor offset-distance offset-path offset-position offset-rotate;</code><br>
-  <code>filter | backdrop-filter | opacity</code><br>
-  <code>marker | marker-start | marker-mid | marker-end</code><br>
-  <code>mask-type</code><br>
-  <code>paint-order</code><br>
-  <code>object-fit | object-position</code><br>
-  <code>mix-blend-mode</code><br>
-  <code>isolation</code><br>
-  <code>image-rendering</code><br>
-  <code>color-scheme</code><br>
-  <code>clip | clip-path</code><br>
+  <li><code>background: background-color background-image background-position background-size background-repeat background-origin background-clip background-attachment;</code></li>
+  <li><code>background-blend-mode: <em>myValue</em>;</code></li>
+  <li><code>background-position-x: <em>myValue</em>;</code></li>
+  <li><code>background-position-y: <em>myValue</em>;</code></li>
+  <li><code>border-image: border-image-source border-image-slice border-image-width border-image-outset border-image-repeat;</code></li>
+  <li><code>mask: mask-image mask-mode mask-repeat mask-position mask-clip mask-origin mask-size mask-composite;</code></li>
+  <li><code>offset: offset-anchor offset-distance offset-path offset-position offset-rotate;</code></li>
+  <li><code>filter: <em>myValue</em>;</code></li>
+  <li><code>backdrop-filter: <em>myValue</em>;</code></li>
+  <li><code>opacity: <em>myValue</em>;</code></li>
+  <li><code>marker: <em>myValue</em>;</code></li>
+  <li><code>marker-start: <em>myValue</em>;</code></li>
+  <li><code>marker-mid: <em>myValue</em>;</code></li>
+  <li><code>marker-end: <em>myValue</em>;</code></li>
+  <li><code>mask-type: <em>myValue</em>;</code></li>
+  <li><code>paint-order: <em>myValue</em>;</code></li>
+  <li><code>object-fit: <em>myValue</em>;</code></li>
+  <li><code>object-position: <em>myValue</em>;</code></li>
+  <li><code>mix-blend-mode: <em>myValue</em>;</code></li>
+  <li><code>isolation: <em>myValue</em>;</code></li>
+  <li><code>image-rendering: <em>myValue</em>;</code></li>
+  <li><code>color-scheme: <em>myValue</em>;</code></li>
+  <li><code>clip: <em>myValue</em>;</code></li>
+  <li><code>clip-path: <em>myValue</em>;</code></li>
   </section>  -->
+
+  <!-- MEDIA QUERY -->
+  <section id="Media-Query">
+  <h1>CSS MEDIA QUERY</h1>
+  <div class="Box">
+  <p><code>@media not|only <em>Media Type</em> and (<em>Media Feature</em> and|or|not <em>Media Feature</em>) {<em>CSS Codes;</em>}</code>
+  <ul><li><code>@media</code></li>
+  <li><code><em>MediaType</em></code>
+  <ul><li><code>screen</code></li>
+  <li><code>print</code></li>
+  </ul></li>
+  <li><code><em>MediaFeature</em></code>
+  <ul><li><code>orientation: landscape|portrait</code></li>
+  <li><code>min-width: <em>Screen Size</em></code></li>
+  <li><code>max-width: <em>Screen Size</em></code></li>
+  </ul></li>
+  <li><code>and</code></li>
+  <li><code>or</code></li>
+  <li><code>not</code></li>
+  <li><code>only</code></li>
+  </ul></p>
+
+  <p>Breakpoints
+  <ul><li><code><em>X-Small = Screen Size</em> &le; 575px</code></li>
+  <li><code><em>Small = Screen Size</em> &ge; 576px</code></li>
+  <li><code><em>Medium = Screen Size</em> &ge; 768px</code></li>
+  <li><code><em>Large = Screen Size</em> &ge; 992px</code></li>
+  <li><code><em>X-Large = Screen Size</em> &ge; 1200px</code></li>
+  <li><code><em>XX-Large = Screen Size</em> &ge; 1400px</code></li>
+  </ul></p>
+  
+  <p><b>INSIGHTS:</b>
+  <ul><li>Standard structure for <code>@media</code> rule
+  <ul><li>Place the <code>@media</code> rule at the very bottom of the CSS codes</li>
+  <li>List all breakpoints in increasing order</li>
+  </ul></li> </ul></p> </div></section>
 
   <!--------------------->
   <!--CSS GLOBAL VALUES-->
@@ -1214,9 +1488,41 @@
   </div>
 
   <div id="Var" class="Box">
-  <h3><code>var()</code></h3>
-  </div>
-  </section>
+  <h3><code>var(--<em>Name, Value</em>)</code></h3>
+  <p>The <code>var()</code> function is used to insert the value of a CSS variable <br>
+     CSS variables have access to the DOM, which means that developer can create variables with local or global scope,
+     change the variables with JavaScript, and change the variables based on media queries</p>
+  <p><b>Related Parameter(s)</b>
+  <ul><li><code><em>Name</em></code>
+  <ul><li><b>Required</b> parameter which specifies the variable name</li>
+  <li>The variable name must begin with two dashes (--) and it is case sensitive</li>
+  </ul></li>
+  <li><code><em>Value</em></code>
+  <ul><li><b>Optional</b> parameter which specifies the fallback value</li>
+  <li>The parameter is used if the variable is not found</li>
+  </ul></li> </ul></p>
+  <p><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Syntax for writing <code>var()</code> function
+  <ul><li>Global Variables
+  <ul><li>Global variables can be accessed/used through the entire document</li>
+  <li>To create a variable with global scope, declare it inside the <code>:root</code> selector</li>
+  <li>The <code>:root</code> selector matches the document's root element</li>
+  <li><code>:root { --<em>myVariable</em>: aqua; } <br> div { color: var(--<em>myVariable</em>); }</code></li>
+  </ul></li> <br>
+  <li>Local Variables
+  <ul><li>Local variables can be used only inside the selector where it is declared</li>
+  <li>To create a variable with local scope, declare it inside the selector that is going to use it</li>
+  <li><code>div { <br> --<em>myVariable</em>: beige; <br> color: var(--<em>myVariable</em>) <br> }</code></li>
+  </ul></li> <br>
+  <li>Local variables overrides global variables
+  <ul><li>Local variables overrides global variables when there is same variable declared inside selector</li>
+  </ul></li> </ul></li> <br>
+  <li>Advantages of <code>var()</code> function
+  <ul><li>Makes the code easier to read and more understandable</li>
+  <li>A good way to use CSS variables is when it comes to the colors of the design</li>
+  <li>Instead of copy and paste the same colors over and over again, developer can place them in variables</li>
+  </ul></li>
+  </ul></p> </div></section>
 
   <!--------------------->
   <!--CSS LENGTH VALUES-->
@@ -1336,40 +1642,33 @@
 
   <div id="Color-Functions" class="Box">
   <h3><code><em>Color Functions</em></code></h3>
-  <code>color() | color-relative() | color-mix() | color-mix-hue()</code><br>
-  <code>hsl() | hsl-relative() | hsla() | hwb() | hwb-relative()</code><br>
-  <code>lab() | lab-relative() | lch() | lch-relative()</code><br>
-  <code>oklab() | oklab-relative() | oklch() | oklch-relative()</code><br>
-  <code>rgb() | rgb-relative() | rgba()</code>
-  </div> </section>
+  <ul><li><code>color()</code></li>
+  <li><code>color-relative()</code></li>
+  <li><code>color-mix()</code></li>
+  <li><code>color-mix-hue()</code></li>
+  <li><code>hsl()</code></li>
+  <li><code>hsl-relative()</code></li>
+  <li><code>hsla()</code></li>
+  <li><code>hwb()</code></li>
+  <li><code>hwb-relative()</code></li>
+  <li><code>lab()</code></li>
+  <li><code>lab-relative()</code></li>
+  <li><code>lch()</code></li>
+  <li><code>lch-relative()</code></li>
+  <li><code>oklab()</code></li>
+  <li><code>oklab-relative()</code></li>
+  <li><code>oklch()</code></li>
+  <li><code>oklch-relative()</code></li>
+  <li><code>rgb()</code></li>
+  <li><code>rgb-relative()</code></li>
+  <li><code>rgba()</code></li>
+  <!-- REFERENCE = https://www.colorhexa.com/  -->
+  </ul> </div> </section>
 
   <!--  @charset | @font-face | @import | @keyframes | @media | @property
-  <section id="OTHERS">
-  <code>columns: column-width column-count;</code><br>
-  <code>column-rule: column-rule-width column-rule-style column-rule-color;</code><br>
-  <code>column-fill | column-span</code><br>
-  <code>content | counter-set | counter-increment | counter-reset</code><br>
-  <code>list-style: list-style-type list-style-position list-style-image;</code><br>
-  <code>break-inside | break-before | break-after</code><br>
-  <code>page-break-inside | page-break-before | page-break-after</code><br>
-  <code>all</code>
-  <code>backface-visibility</code>
-  <code>box-decoration-break | box-reflect</code>
-  <code>cursor</code>
-  <code>initial-letter</code>
-  <code>pointer-events</code>
-  <code>quotes</code>
-  <code>resize</code>
-  <code>user-select</code>
-  <code>vertical-align</code>
-  <code>visibility</code>
-  <code>zoom</code>
-  <code>z-index</code>
-  </section>
 
-  <li><code>display: <em>myValue</em>;</code></li>
   <div id="Box-Shape" class="Box">
-  <h3>Box Shape</h3>
+  <h3>BOX SHAPE</h3>
   <p><b>Related Properties:</b>
   <ul><li><code>perspective: <em>myValue</em>;</code></li>
   <li><code>perspective-origin: <em>myValue</em>;</code></li>
@@ -1379,29 +1678,66 @@
   <li><code>transform-origin: <em>myValue</em>;</code></li>
   <li><code>transform-style: <em>myValue</em>;</code></li>
   <li><code>translate: <em>myValue</em>;</code></li>
-  </ul></p> </div>  
+  <li><code>backface-visibility: <em>myValue</em>;</code></li>
+  </ul></p> </div>
 
-  <section id="Scroll">
-  <h1>SCROLL</h1>
-  <code>overflow | overflow-anchor | overflow-wrap | overflow-x | overflow-y</code><br>
-  <code>overscroll-behavior: overscroll-behavior-x overscroll-behavior-y;</code><br>
-  <code>scroll-behavior</code><br>
-  <code>scrollbar-color</code><br>
-  <code>scroll-snap-type | scroll-snap-align | scroll-snap-stop</code><br>
-  <code>scroll-margin: scroll-margin-top scroll-margin-right scroll-margin-bottom scroll-margin-left;</code><br>
-  <code>scroll-padding: scroll-padding-top scroll-padding-right scroll-padding-bottom scroll-padding-left;</code><br>
-  </section>
-  
-  <section>
-  <h1>Input</h1>
-  <code>accent-color | caret-color</code><br>
-  </section>
+  INPUT
+  <li><code>accent-color: <em>myValue</em>;</code></li>
+  <li>caret-color: <em>myValue</em>;</code></li>
 
-  <section id="Print">
-  <h1>PRINT</h1>
-  <code>orphans | widows</code><br>
-  </section>
-  -->
+  MOUSE CURSOR
+  <li><code>cursor: <em>myValue</em>;</code></li>
+  <li><code>pointer-events: <em>myValue</em>;</code></li>
+
+  OTHERS
+  <li><code>all: <em>myValue</em>;</code></li>
+  <li><code>box-decoration-break: <em>myValue</em>;</code></li>
+  <li><code>box-reflect: <em>myValue</em>;</code></li>
+  <li><code>resize: <em>myValue</em>;</code></li>
+  <li><code>visibility: <em>myValue</em>;</code></li>
+  <li><code>zoom: <em>myValue</em>;</code></li>
+
+  PAGE & PRINT
+  <li><code>break-inside: <em>myValue</em>;</code> (replace <code>page-break-inside</code> property)</li>
+  <li><code>break-before: <em>myValue</em>;</code> (replace <code>page-break-before</code> property)</li>
+  <li><code>break-after: <em>myValue</em>;</code> (replace <code>page-break-after</code> property)</li>
+  <li><code>orphans: <em>myValue</em>;</code></li> 
+  <li><code>widows: <em>myValue</em>;</code></li>
+
+  SCROLL
+  <li><code>overflow: <em>myValue</em>;</code></li>
+  <li><code>overflow-anchor: <em>myValue</em>;</code></li>
+  <li><code>overflow-wrap: <em>myValue</em>;</code></li>
+  <li><code>overflow-x: <em>myValue</em>;</code></li>
+  <li><code>overflow-y: <em>myValue</em>;</code></li>
+  <li><code>overscroll-behavior: overscroll-behavior-x overscroll-behavior-y;</code></li>
+  <li><code>scroll-behavior: <em>myValue</em>;</code></li>
+  <li><code>scrollbar-color: <em>myValue</em>;</code></li>
+  <li><code>scroll-snap-type: <em>myValue</em>;</code></li>
+  <li><code>scroll-snap-align: <em>myValue</em>;</code></li>
+  <li><code>scroll-snap-stop: <em>myValue</em>;</code></li>
+  <li><code>scroll-margin: scroll-margin-top scroll-margin-right scroll-margin-bottom scroll-margin-left;</code></li>
+  <li><code>scroll-padding: scroll-padding-top scroll-padding-right scroll-padding-bottom scroll-padding-left;</code></li>  -->
+
+  <!-- TRY & ERROR -->
+  <h3>[KIV] Knowledge discovery from doing personal project [KIV]</h3>
+  <p><mark><b>INSIGHTS:</b></mark>
+  <ul><li><b>Navigate Bar</b></li>
+  <ul><li><code><em>Navigate-Bar</em></code>
+  <ul><li><code>width: 100%; /* The width is fully fit related to its parent */</code></li>
+  <li><code>position: fixed; top: 0; /* Always displayed at 0 position from top of the viewport */</code></li>
+  </ul></li> <br>
+  <li><code>img</code>
+  <ul><li><code>height: 50px; width: 50px; /* Squared-size image */</code></li>
+  <li><code>border-radius: 50%; /* Rounded-shape image */</code></li>
+  <li><code>float: left; /* Displayed on the left side within <em>Navigate-Bar</em> */</code></li>
+  </ul></li> <br>
+  <li><code><em>Menu-Dropdown</em></code>
+  <ul><li><code>float: right; /* Displayed on the right side within <em>Navigate-Bar</em> */</code></li>
+  </ul></li> <br>
+  <li><code>a</code></li>
+  </ul>
+  </ul></p>
 
   <!--IMPORTING EXTERNAL JS SCRIPT-->
   <script src="Notes-CSS.js"></script>

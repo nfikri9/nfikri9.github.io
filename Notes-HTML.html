@@ -50,7 +50,7 @@
   <ul><li>Standard structure for <code>&lt;html&gt;</code> element
   <ul><li>The <code>&lt;html&gt;</code> tag is the container for all other HTML elements, except for the <code>&lt;!DOCTYPE&gt;</code> declaration</li>
   <li>The <code>&lt;html&gt;</code> tag consist of <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags</li>
-  </ul></li>
+  </ul></li> <br>
   <li>Best practice to include <code>lang</code> attribute
   <ul><li>Always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page</li>
   <li>This is meant to assist search engines and browsers</li>
@@ -87,7 +87,12 @@
   <ul><li>The <code>&lt;body&gt;</code> element is placed within the <code>&lt;html&gt;</code> tag and below <code>&lt;head&gt;</code> tag</li>
   <li>The <code>&lt;body&gt;</code> element consist of <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> and <code>&lt;footer&gt;</code></li>
   <li>There can only be one <code>&lt;body&gt;</code> element in an HTML document</li>
-  </ul></li> </ul></p> </div>
+  </ul></li> <br>
+  <li>Modifying CSS
+  <ul><li>Since <code>&lt;body&gt;</code> element has default CSS of <code>margin: 8px;</code> the page layout will have a small amount of empty spaces around it</li>
+  <li>Apply <code>margin: 0;</code> so that the page is fit to viewport</li>
+  </ul></li>
+  </ul></p> </div>
 
   <div id="Header-Tag" class="Box">
   <h3><code>&lt;header&gt; <em>My Contents</em> &lt;/header&gt;</code></h3>
@@ -149,7 +154,7 @@
   <ul><li>Collection of <code>&lt;a&gt;</code> tag
   <ul><li>The <code>&lt;nav&gt;</code> element is intended only for major blocks of navigation links</li>
   <li>However, not all links of a document should be inside a <code>&lt;nav&gt;</code> element</li>
-  </ul></li>
+  </ul></li> <br>
   <li>Great accessibility for disabled users
   <ul><li>Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content</li>
   </ul></li> </ul></p> </div>
@@ -203,7 +208,7 @@
   <ul><li>"Block container" element
   <ul><li>The <code>&lt;div&gt;</code> tag is mostly used for HTML elements to be styled with CSS</li>
   <li>It is also commonly used for HTML elements to be manipulated by JavaScript as well</li>
-  </ul></li>
+  </ul></li> <br>
   <li><code>class</code> and <code>id</code> attributes
   <ul><li>These attributes are commonly used for node pinpoints for CSS and JavaScript purposes</li>
   </ul></li> </ul></p> </div>
@@ -221,16 +226,30 @@
   <ul><li>"Inline container" element
   <ul><li>The <code>&lt;span&gt;</code> tag is commonly used for HTML elements to be styled with CSS</li>
   <li>It is also can be used for HTML elements to be manipulated by JavaScript as well</li>
-  </ul></li>
+  </ul></li> <br>
   <li><code>class</code> and <code>id</code> attributes
   <ul><li>These attributes are commonly used for node pinpoints for CSS and JavaScript purposes</li>
   </ul></li> </ul></p> </div>
-<!--
-  <code>&lt;hgroup&gt; <em>My Contents</em> &lt;/hgroup&gt;</code>
-  <code>&lt;picture&gt; <em>My Contents</em> &lt;/picture&gt;</code>
-  <code>&lt;search&gt; <em>My Contents</em> &lt;/search&gt;</code>
-  <code>&lt;svg&gt; <em>My Contents</em> &lt;/svg&gt;</code>
-  <code>&lt;template&gt; <em>My Contents</em> &lt;/template&gt;</code> -->
+
+  <!--  <div id="Header-Group-Tag" class="Box">
+  <h3><code>&lt;hgroup&gt; <em>My Contents</em> &lt;/hgroup&gt;</code></h3>
+  </div>
+
+  <div id="Picture-Tag" class="Box">
+  <h3><code>&lt;picture&gt; <em>My Contents</em> &lt;/picture&gt;</code></h3>
+  </div>
+
+  <div id="Search-Tag" class="Box">
+  <h3><code>&lt;search&gt; <em>My Contents</em> &lt;/search&gt;</code></h3>
+  </div>
+
+  <div id="SVG-Tag" class="Box">
+  <h3><code>&lt;svg&gt; <em>My Contents</em> &lt;/svg&gt;</code></h3>
+  </div>
+
+  <div id="Template-Tag" class="Box">
+  <h3><code>&lt;template&gt; <em>My Contents</em> &lt;/template&gt;</code></h3>
+  </div>  -->
   </section>
 
   <!----------------->
@@ -252,11 +271,11 @@
   <ul><li>Standard structure for <code>&lt;title&gt;</code> element
   <ul><li>The <code>&lt;title&gt;</code> element is placed within <code>&lt;head&gt;</code> tag</li>
   <li>There can only be one <code>&lt;title&gt;</code> element in an HTML document</li>
-  </ul></li>
+  </ul></li> <br>
   <li>Improve SEO with <code>&lt;title&gt;</code> element
   <ul><li>The contents of a page title is very important for search engine optimization (SEO)</li>
   <li>The page title is used by search engine algorithms to decide the order when listing pages in search results</li>
-  </ul></li>
+  </ul></li> <br>
   <li>Best practice to create good title
   <ul><li>Go for a longer, descriptive title (avoid one- or two-word titles)</li>
   <li>Search engines will display about 50-60 characters of the title, so try not to have titles longer than that</li>
@@ -273,11 +292,12 @@
   <li><code>rel="<em>myValue</em>"</code>
   <ul><li>Specifies the relationship between the current document and the linked document</li>
   <li><b>Related Value(s):</b>
-  <ul><li><code>alternate</code></li>
+  <ul><li><code>icon</code></li>
+  <li><code>stylesheet</code></li>
+  <!--  <li><code>alternate</code></li>
   <li><code>author</code></li>
   <li><code>dns-prefetch</code></li>
   <li><code>help</code></li>
-  <li><code>icon</code></li>
   <li><code>license</code></li>
   <li><code>next</code></li>
   <li><code>pingback</code></li>
@@ -286,9 +306,8 @@
   <li><code>preload</code></li>
   <li><code>prerender</code></li>
   <li><code>prev</code></li>
-  <li><code>search</code></li>
-  <li><code>stylesheet</code></li>
-  </ul></li> </ul></li>
+  <li><code>search</code></li>  -->
+  </ul></li> </ul></li> <br>
   <li><code>href="<em>myValue</em>"</code>
   <ul><li>Specifies the URL of the linked document</li>
   <li><b>Related Value(s):</b>
@@ -299,7 +318,7 @@
   <li><code><em>Relative URL</em></code>
   <ul><li>Points to a page within a web site</li>
   <li>Example, <code><em>href="example.html"</em></code></li>
-  </ul></li> </ul></li> </ul></li>
+  </ul></li> </ul></li> </ul></li> <br>
   <li><code>type="<em>myValue</em>"</code>
   <ul><li>Specifies the media type of the linked document</li>
   <li><b>Related Value(s):</b>
@@ -316,21 +335,35 @@
   <p><mark><b>INSIGHTS:</b></mark>
   <ul><li>Standard structure for <code>&lt;link&gt;</code> element
   <ul><li>The <code>&lt;link&gt;</code> element is placed within <code>&lt;head&gt;</code> tag</li>
-  </ul></li>
+  </ul></li> <br>
   <li>Exporting CSS file
   <ul><li>Linking HTML document to external source of CSS file</li>
   <li>Example, <code>&lt;link rel="stylesheet" href="<em>myValue</em>"&gt;</code></li>
-  </ul></li>
+  </ul></li> <br>
   <li>Creating favicon
   <ul><li>A favicon is a small image displayed next to the page title in the browser tab</li>
   <li>Example, <code>&lt;link rel="icon" type="image/x-icon" href="<em>myValue</em>"&gt;</code></li>
   </ul></li> </ul></p> </div>
-  <!--
-  <code>&lt;meta&gt;</code>
-  <code>&lt;base&gt;</code>
-  <code>&lt;style&gt; <em>My Contents</em> &lt;/style&gt;</code>
-  <code>&lt;script&gt; <em>My Contents</em> &lt;/script&gt;</code>
-  <code>&lt;noscript&gt; <em>My Contents</em> &lt;/noscript&gt;</code> -->
+
+  <!--  <div id="Meta-Tag" class="Box">
+  <h3><code>&lt;meta&gt;</code></h3>
+  </div>
+
+  <div id="Base-Tag" class="Box">
+  <h3><code>&lt;base&gt;</code></h3>
+  </div>
+
+  <div id="Style-Tag" class="Box">
+  <h3><code>&lt;style&gt; <em>My Contents</em> &lt;/style&gt;</code></h3>
+  </div>
+
+  <div id="Script-Tag" class="Box">
+  <h3><code>&lt;script&gt; <em>My Contents</em> &lt;/script&gt;</code></h3>
+  </div>
+
+  <div id="Noscript-Tag" class="Box">
+  <h3><code>&lt;noscript&gt; <em>My Contents</em> &lt;/noscript&gt;</code></h3>
+  </div>  -->
   </section>
 
   <!--------------------------------->
@@ -366,7 +399,7 @@
   <ul><li>The <code>&lt;h1&gt;</code> tag usage
   <ul><li>It is recommended to use only one <code>&lt;h1&gt;</code> tag per page</li>
   <li>This should represent the main heading/subject for the whole page</li>
-  </ul></li>
+  </ul></li> <br>
   <li>The flow of heading levels
   <ul><li>Do not skip heading levels, start with <code>&lt;h1&gt;</code>, then use <code>&lt;h2&gt;</code>, and so on</li>
   </ul></li> </ul></p> </div>
@@ -593,7 +626,7 @@
   <li><code><em>Relative URL</em></code>
   <ul><li>Points to a page within a web site</li>
   <li>Example, <code><em>cite="example.html"</em></code></li>
-  </ul></li> </ul></li> </ul></li>
+  </ul></li> </ul></li> </ul></li> <br>
   <li><code>datetime="<em>myValue</em>"</code>
   <ul><li>The <code>datetime</code> attribute specifies the date and time of when the text was inserted/changed</li>
   <li><b>Related Value(s):</b>
@@ -626,7 +659,7 @@
   <li><code><em>Relative URL</em></code>
   <ul><li>Points to a page within a web site</li>
   <li>Example, <code><em>cite="example.html"</em></code></li>
-  </ul></li> </ul></li> </ul></li>
+  </ul></li> </ul></li> </ul></li> <br>
   <li><code>datetime="<em>myValue</em>"</code>
   <ul><li>The <code>datetime</code> attribute specifies the date and time when the text was deleted</li>
   <li><b>Related Value(s):</b>
@@ -788,10 +821,14 @@
   <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
   </ul></p>
   <p><b>Default CSS Setting(s):</b> <br> <code><em>NONE</em></code> </p> </div>
-  <!--
-  <code>&lt;progress&gt; <em>My Text</em> &lt;/progress&gt;</code>
-  <code>&lt;meter&gt; <em>My Text</em> &lt;/meter&gt;</code>
-  -->
+
+  <!--  <div id="Progress-Tag" class="Box">
+  <h3><code>&lt;progress&gt; <em>My Text</em> &lt;/progress&gt;</code></h3>
+  </div>
+
+  <div id="Meter-Tag" class="Box">
+  <h3><code>&lt;meter&gt; <em>My Text</em> &lt;/meter&gt;</code></h3>
+  </div>  -->
   </section>
 
   <!-------------------------->
@@ -813,7 +850,7 @@
   <ul><li>To specify multiple classes, separate the class names with a space</li>
   <li>This allows developers to combine several CSS classes for one HTML element</li>
   <li>Example, <code>&lt;div class="<em>myClass1 myClass2 myClass3</em>"&gt;</code></li>
-  </ul></li>
+  </ul></li> <br>
   <li>Mostly used as node
   <ul><li>The <code>class</code> attribute is mostly used to point to a class in a style sheet</li>
   <li>It can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class</li>
@@ -840,7 +877,7 @@
   <p><mark><b>INSIGHTS:</b></mark>
   <ul><li>Unique Id
   <ul><li>The value must be unique within the HTML document, which only one specific id can exist in the document</li>
-  </ul></li>
+  </ul></li> <br>
   <li>Mostly used as node
   <ul><li>The <code>id</code> attribute is mostly used to point to a style in a style sheet</li>
   <li>It can also be used by a JavaScript (via the HTML DOM) to manipulate the element with the specific id</li>
@@ -866,7 +903,7 @@
   <ul><li>Syntax of writing multiple properties and values
   <ul><li>One or more CSS properties and values separated by semicolons</li>
   <li>Example, <code>&lt;div style="color:blue; text-align:center;"&gt;</code></li>
-  </ul></li>
+  </ul></li> <br>
   <li>Overrides any style set globally
   <ul><li>The <code>style</code> attribute will override any style set globally, like styles specified in the <code>&lt;style&gt;</code> tag or in an external style sheet</li>
   <li>The <code>style</code> attribute can be used on any HTML element</li>
@@ -881,19 +918,54 @@
   <ul><li><code><em>myTitle</em></code>
   <ul><li>A tooltip text for an element</li>
   </ul></li> </ul></p> </div>
-  <!--
-  <code>accesskey</code>
-  <code>contenteditable</code>
-  <code>data-*</code>
-  <code>draggable</code>
-  <code>enterkeyhint</code>
-  <code>hidden</code>
-  <code>inert</code>
-  <code>inputmode</code>
-  <code>popover</code>
-  <code>spellcheck</code>
-  <code>tabindex</code>
-  <code>translate</code> -->
+
+  <!--  <div id="Attribute-Accesskey" class="Box">
+  <h3><code>accesskey</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Contenteditable" class="Box">
+  <h3><code>contenteditable</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Data" class="Box">
+  <h3><code>data-*</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Draggable" class="Box">
+  <h3><code>draggable</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Enterkeyhint" class="Box">
+  <h3><code>enterkeyhint</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Hidden" class="Box">
+  <h3><code>hidden</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Inert" class="Box">
+  <h3><code>inert</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Inputmode" class="Box">
+  <h3><code>inputmode</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Popover" class="Box">
+  <h3><code>popover</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Spellcheck" class="Box">
+  <h3><code>spellcheck</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Tabindex" class="Box">
+  <h3><code>tabindex</code> Attribute</h3>
+  </div>
+
+  <div id="Attribute-Translate" class="Box">
+  <h3><code>translate</code> Attribute</h3>
+  </div>  -->
   </section>
 
 <!--
