@@ -15,6 +15,7 @@
 <body>
   <!--NAVIGATE BAR-->
   <nav class="My-Navigate-Bar">
+  <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
   <div>
     <a href="Notes-HTML.html">HTML</a>
     <a href="#">CSS</a>
@@ -30,10 +31,9 @@
   <!------------------->
   <section id="CSS-Selectors">
   <h1>CSS SELECTORS</h1>
-  <p>CSS selectors are used to select the HTML elements that need to be styled</p>
 
   <!-- SIMPLE SELECTORS -->
-  <div class="Box"><h3>SIMPLE SELECTORS</h3>
+  <div id="Simple-Selectors" class="Box"><h3>SIMPLE SELECTORS</h3>
 
   <!-- ELEMENT SELECTORS -->
   <ul><li>Element Selectors
@@ -42,14 +42,14 @@
   </ul></li> <br>
 
   <!-- ID SELECTORS -->
-  <li>Id Selectors
+  <li>Id Selectors (<code>#</code>)
   <ul><li>The id selector uses the <code>id</code> attribute of an HTML element to select a specific element</li>
   <li>The id of an element is unique within a page, so the id selector is used to select one unique element</li>
   <li><code><em>#Container { CSS Codes; } <br> #Button-Link { CSS Codes; } <br> #myId { CSS Codes; }</em></code></li>
   </ul></li> <br>
 
   <!-- CLASS SELECTORS -->
-  <li>Class Selectors
+  <li>Class Selectors (<code>.</code>)
   <ul><li>The class selectors select HTML elements with a specific <code>class</code> attribute</li>
   <li>Unlike id selectors, class selectors are used by multiple elements</li>
   <li>HTML elements can also refer to more than one class</li>
@@ -59,22 +59,179 @@
   </ul></li> <br>
 
   <!-- GROUP SELECTORS -->
-  <li>Group Selectors
+  <li>Group Selectors (<code>,</code>)
   <ul><li>The grouping selectors select all the HTML elements with the same style definitions</li>
   <li>To group selectors, separate each selector with a comma to minimize the code</li>
   <li><code>div, <em>#myId, .myClass { CSS Codes; }</em></code></li>
   </ul></li> <br>
 
   <!-- UNIVERSAL SELECTOR -->
-  <li>Universal Selector
+  <li>Universal Selector (<code>*</code>)
   <ul><li>The universal selector selects all HTML elements on the page</li>
   <li><code><em>* { CSS Codes; }</em></code></li>
   </ul></li> </ul></div>
-  <!--  <div class="Box"><h3>COMBINATOR SELECTORS</h3></div>
-  <div class="Box"><h3>PSEUDO-CLASS SELECTORS</h3></div>
-  <div class="Box"><h3>PSEUDO-ELEMENTS SELECTORS</h3></div>
-  <div class="Box"><h3>ATTRIBUTE SELECTORS</h3></div>  -->
-  </section>
+
+  <!-- COMBINATOR SELECTORS -->
+  <div id="Combinator-Selectors" class="Box">
+  <h3>COMBINATOR SELECTORS</h3>
+
+  <!-- DESCENDANT COMBINATOR -->
+  <ul><li>Descendant Combinator (<code><em>space</em></code>)
+  <ul><li>The descendant combinator matches all elements that are descendants of a specified element</li>
+  <li>As long as the matched elements are inside of a specified element, it is considered descendant combinator</li>
+  <li><code>div p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; inside &lt;div&gt; * /<br>
+      section div span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; inside &lt;div&gt;, &lt;div&gt; inside &lt;section&gt; */</code></li>
+  </ul></li> <br>
+
+  <!-- CHILD COMBINATOR -->
+  <li>Child Combinator (<code>></code>)
+  <ul><li>The child combinator selects all elements that are the children of a specified element</li>
+  <li>When there is another nested element of a specified element, that nested element is not considered child combinator, but it is descendant combinator</li>
+  <li><code>div > p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; child of &lt;div&gt; */ <br>
+      section > ul > li { <em>CSS Codes;</em> } /* Selects all &lt;li&gt; child of &lt;ul&gt;, &lt;ul&gt; child of &lt;section&gt; */</code></li>
+  </ul></li> <br>
+
+  <!-- NEXT SIBLING COMBINATOR -->
+  <li>Next Sibling Combinator (<code>+</code>)
+  <ul><li>The next sibling combinator is used to select an element that is directly after another specific element</li>
+  <li>Sibling elements must have the same parent element, and "adjacent" means "immediately following"</li>
+  <li>If there is another element in between them, it will not work</li>
+  <li><code>div + p { <em>CSS Codes;</em> } /* Select the first &lt;p&gt; right after &lt;div&gt; */ <br>
+      nav + div + a { <em>CSS Codes;</em> } /* Select the first &lt;a&gt; right after &lt;div&gt;, &lt;div&gt; is right after &lt;nav&gt; */</code></li>
+  </ul></li> <br>
+
+  <!-- SUBSEQUENT SIBLING COMBINATOR -->
+  <li>Subsequent-Sibling Combinator (<code>~</code>)
+  <ul><li>The subsequent-sibling combinator selects all elements that are next siblings of a specified element</li>
+  <li><code>div ~ p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; after &lt;div&gt; */ <br>
+      div ~ p ~ span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; after &lt;p&gt;, &lt;p&gt; after &lt;div&gt; */</code></li>
+  </ul></li> </ul></div>
+
+  <!-- ATTRIBUTE SELECTORS -->
+  <div id="Attribute-Selectors" class="Box">
+  <h3>ATTRIBUTE SELECTORS</h3>
+  <ul><li><code><em>Selector</em>[<em>Attribute</em>]</code>
+  <ul><li>The <code>[<em>Attribute</em>]</code> selector is used to select elements with a specified attribute</li>
+  <li><code>a[target] { <em>CSS Codes;</em> } /* Selects all &lt;a&gt; with a target attribute */</code></li>
+  </ul></li> <br>
+
+  <li><code><em>Selector</em>[<em>Attribute</em> = "<em>Value</em>"]</code>
+  <ul><li>The <code>[<em>Attribute</em> = "<em>Value</em>"]</code> selector is used to select elements with a specified attribute and value</li>
+  <li><code>a[target = "_blank"] { <em>CSS Codes;</em> } /* Select all &lt;a&gt; with a target="_blank" attribute */</code></li>
+  </ul></li> <br>
+
+  <li><code><em>Selector</em>[<em>Attribute</em> ~= "<em>Value</em>"]</code>
+  <ul><li>The <code>[<em>Attribute</em> ~= "<em>Value</em>"]</code> selector is used to select elements with the specified attribute</li>
+  <li>The value containing atleast a specified word</li>
+  <li>Example; <code>[class ~= "test"]</code> matches <code>[class = "test"], [class = "my test"], [class = "test semester"]</code></li>
+  <li>It does not work for <code>[class = "my-test"], [class = "test-sample"], [class = "tests"]</code></li>
+  </ul></li> <br>
+
+  <li><code><em>Selector</em>[<em>Attribute</em> |= "<em>Value</em>"]</code>
+  <ul><li>The selector is used to select elements with the specified attribute</li>
+  <li>The value can be exactly the specified word, or the specified word followed by a hyphen (-)</li>
+  <li>Example; <code>[class |= "test"]</code> matches <code>[class = "test"], [class = "test-sample"]</code></li>
+  <li>It does not work for <code>[class = "my test"], [class = "test semester"], [class = "my-test"], [class = "tests"]</code></li>
+  </ul></li> <br>
+
+  <li><code><em>Selector</em>[<em>Attribute</em> ^= <em>Value</em>]</code>
+  <ul><li>The selector is used to select elements with the specified attribute, which the value starts with the specified value</li>
+  <li>The value does not have to be a whole word</li>
+  <li>Example; <code>[class ^= "test"]</code> matches <code>[class = "test"], [class = "test semester"], [class = "test-sample"], [class = "tests"]</code></li>
+  <li>It does not work for <code>[class = "my test"], [class = "my-test"]</code></li>
+  </ul></li> <br>
+
+  <li><code><em>Selector</em>[<em>Attribute</em> $= <em>Value</em>]</code>
+  <ul><li>The <code>[<em>Attribute</em> $= "<em>Value</em>"]</code> selector is used to select elements whose attribute value ends with a specified value</li>
+  <li>The value does not have to be a whole word</li>
+  <li>Example; <code>[class $= "test"]</code> matches <code>[class = "test"], [class = "my-test"], [class = "mytest"]</code></li>
+  <li>It does not work for <code>[class = "test semester"], [class = "test-sample"], [class = "tests"]</code></li>
+  </ul></li> <br>
+
+  <li><code><em>Selector</em>[<em>Attribute</em> *= <em>Value</em>]</code>
+  <ul><li>The <code>[<em>Attribute</em> *= "<em>Value</em>"]</code> selector is used to select elements whose attribute value contains a specified value</li>
+  <li>Example; <code>[class *= "te"]</code> matches <code>[class = "test"], [class = "cute"]</code> </li>
+  </ul></li> </ul></div>
+
+  <!-- PSEUDO CLASS SELECTORS
+  <div id="Pseudo-Class-Selectors" class="Box">
+  <h3>PSEUDO-CLASS SELECTORS</h3>
+  <ul><li><code><em>Selector</em>:active</code></li>
+  <li><code><em>Selector</em>:any-link</code></li>
+  <li><code><em>Selector</em>:auto-fill</code></li>
+  <li><code><em>Selector</em>:checked</code></li>
+  <li><code><em>Selector</em>:default</code></li>
+  <li><code><em>Selector</em>:defined</code></li>
+  <li><code><em>Selector</em>:dir()</code></li>
+  <li><code><em>Selector</em>:disabled</code></li>
+  <li><code><em>Selector</em>:empty</code></li>
+  <li><code><em>Selector</em>:enabled</code></li>
+  <li><code><em>Selector</em>:first</code></li>
+  <li><code><em>Selector</em>:first-child</code></li>
+  <li><code><em>Selector</em>:first-of-type</code></li>
+  <li><code><em>Selector</em>:focus</code></li>
+  <li><code><em>Selector</em>:focus-visible</code></li>
+  <li><code><em>Selector</em>:focus-within</code></li>
+  <li><code><em>Selector</em>:fullscreen</code></li>
+  <li><code><em>Selector</em>:has()</code></li>
+  <li><code><em>Selector</em>:hover</code></li>
+  <li><code><em>Selector</em>:in-range</code></li>
+  <li><code><em>Selector</em>:indeterminate</code></li>
+  <li><code><em>Selector</em>:invalid</code></li>
+  <li><code><em>Selector</em>:is()</code></li>
+  <li><code><em>Selector</em>:lang()</code></li>
+  <li><code><em>Selector</em>:last-child</code></li>
+  <li><code><em>Selector</em>:last-of-type</code></li>
+  <li><code><em>Selector</em>:left</code></li>
+  <li><code><em>Selector</em>:link</code></li>
+  <li><code><em>Selector</em>:modal</code></li>
+  <li><code><em>Selector</em>:not()</code></li>
+  <li><code><em>Selector</em>:nth-child()</code></li>
+  <li><code><em>Selector</em>:nth-last-child()</code></li>
+  <li><code><em>Selector</em>:nth-last-of-type()</code></li>
+  <li><code><em>Selector</em>:nth-of-type()</code></li>
+  <li><code><em>Selector</em>:only-child</code></li>
+  <li><code><em>Selector</em>:only-of-type</code></li>
+  <li><code><em>Selector</em>:optional</code></li>
+  <li><code><em>Selector</em>:out-of-range</code></li>
+  <li><code><em>Selector</em>:placeholder-shown</code></li>
+  <li><code><em>Selector</em>:popover-open</code></li>
+  <li><code><em>Selector</em>:read-only</code></li>
+  <li><code><em>Selector</em>:read-write</code></li>
+  <li><code><em>Selector</em>:required</code></li>
+  <li><code><em>Selector</em>:right</code></li>
+  <li><code><em>Selector</em>:root</code></li>
+  <li><code><em>Selector</em>:scope</code></li>
+  <li><code><em>Selector</em>:state()</code></li>
+  <li><code><em>Selector</em>:target</code></li>
+  <li><code><em>Selector</em>:user-invalid</code></li>
+  <li><code><em>Selector</em>:user-valid</code></li>
+  <li><code><em>Selector</em>:valid</code></li>
+  <li><code><em>Selector</em>:visited</code></li>
+  <li><code><em>Selector</em>:where()</code></li>
+  </ul></div>  -->
+
+  <!-- PSEUDO ELEMENT SELECTORS 
+  <div id="Pseudo-Element-Selectors" class="Box">
+  <h3>PSEUDO-ELEMENTS SELECTORS</h3>
+  <ul><li><code><em>Selector</em>::after</code></li>
+  <li><code><em>Selector</em>::backdrop</code></li>
+  <li><code><em>Selector</em>::before</code></li>
+  <li><code><em>Selector</em>::file-selector-button</code></li>
+  <li><code><em>Selector</em>::first-letter</code></li>
+  <li><code><em>Selector</em>::first-line</code></li>
+  <li><code><em>Selector</em>::grammar-error</code></li>
+  <li><code><em>Selector</em>::highlight()</code></li>
+  <li><code><em>Selector</em>::marker</code></li>
+  <li><code><em>Selector</em>::placeholder</code></li>
+  <li><code><em>Selector</em>::selection</code></li>
+  <li><code><em>Selector</em>::spelling-error</code></li>
+  <li><code><em>Selector</em>::view-transition</code></li>
+  <li><code><em>Selector</em>::view-transition-group</code></li>
+  <li><code><em>Selector</em>::view-transition-image-pair</code></li>
+  <li><code><em>Selector</em>::view-transition-new</code></li>
+  <li><code><em>Selector</em>::view-transition-old</code></li>
+  </ul></div>  --> </section>
 
   <!------------------->
   <!-- CSS BOX MODEL -->
@@ -261,15 +418,98 @@
   <li>The required parameters for each properties are same as stated above</li>
   </ul></li> </ul></li> </ul></div>
 
+  <!-- BORDER RADIUS-->
+  <div id="Property-Border-Radius" class="Box">
+  <h3><code>border-radius: <em>myValues</em>;</code></h3>
+  <ul><li>The <code>border-radius</code> property defines the radius of the element's corners</li>
+  <li>There are some generic-side properties that can be written as its values
+  <ul><li>4 values = <code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code></li>
+  <li>3 values = <code>border-radius: border-top-left-radius border-<em>Diagonal-Right-Left</em>-radius border-bottom-right-radius;</code></li>
+  <li>2 values = <code>border-radius: border-<em>Diagonal-Left-Right</em>-radius border-<em>Diagonal-Right-Left</em>-radius;</code></li>
+  <li>1 value = <code>border-radius: border-<em>All</em>-radius;</code></li>
+  </ul></li> <br>
+
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> <ul><li>By default, there is no border radius specified</li></ul> </li>
+  </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark></li>
+  </ul></div>
+
+  <!-- OUTLINE -->
+  <div id="Property-Outline" class="Box">
+  <h3><code>outline: outline-width outline-style outline-color;</code></h3>
+
+  <!-- OUTLINE WIDTH -->
+  <ul><li><code>outline-width: <em>myValue</em>;</code>
+  <ul><li>The <code>outline-width</code> property specifies the width of an outline, drawn around elements, outside the borders</li> <br>
+  
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>medium</code> <ul><li>By default, the width of the outline is medium</li></ul> </li>
+  <!--  <li><code>thin</code> <ul><li>The width of the outline is thin</li></ul> </li>
+  <li><code>thick</code> <ul><li>The width of the outline is thick</li></ul> </li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- OUTLINE STYLE -->
+  <li><code>outline-style: <em>myValue</em>;</code>
+  <ul><li>The <code>outline-style</code> property specifies the style of an outline, drawn around elements, outside the borders</li> <br>
+  
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><code>none</code> <ul><li>By default, there is no specified outline</li></ul> </li>
+  <li><code>solid</code> <ul><li>Specifies a solid outline</li></ul> </li>
+  <!--  <li><code>auto</code> <ul><li>Specifies an auto outline</li></ul> </li>
+  <li><code>dashed</code> <ul><li>Specifies a dashed outline</li></ul> </li>
+  <li><code>dotted</code> <ul><li>Specifies a dotted outline</li></ul> </li>
+  <li><code>double</code> <ul><li>Specifies a double outline</li></ul> </li>
+  <li><code>groove</code> <ul><li>Specifies a 3D grooved outline, which the effect is depends on the outline-color value</li></ul> </li>
+  <li><code>hidden</code> <ul><li>Specifies a hidden outline</li></ul> </li>
+  <li><code>inset</code> <ul><li>Specifies a 3D inset outline, which the effect is depends on the outline-color value</li></ul> </li>
+  <li><code>outset</code> <ul><li>Specifies a 3D outset outline, which the effect is depends on the outline-color value</li></ul> </li>
+  <li><code>ridge</code> <ul><li>Specifies a 3D ridged outline, which the effect is depends on the outline-color value</li></ul> </li>  -->
+  </ul></li> </ul></li> <br>
+
+  <!-- OUTLINE COLOR -->
+  <li><code>outline-color: <em>myValue</em>;</code>
+  <ul><li>The <code>outline-color</code> property specifies the color of an outline, drawn around elements, outside the borders</li> <br>
+
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
+  <li><code>currentColor</code> <ul><li>By default, the outline color is based on the value of the <code>color</code> property of the element</li></ul> </li>
+  <!--  <li><code>transparent</code></li>  -->
+  </ul></li> </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark></li>
+  </ul></div>
+
+  <!-- OUTLINE OFFSET -->
+  <div id="Property-Outline-Offset" class="Box">
+  <h3><code>outline-offset: <em>myValue</em>;</code></h3>
+  <ul><li>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element</li> <br>
+  
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> <ul><li>By default, there is no specified outline offset</li></ul> </li>
+  </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark></li>
+  </ul></div>
+
   <!-- BOX SIZING -->
   <div id="Property-Box-Sizing" class="Box">
   <h3><code>box-sizing: <em>myValue</em>;</code></h3>
   <ul><li>The <code>box-sizing</code> property defines how the <code>width</code> and <code>height</code> of an element are calculated in box dimensions</li>
   <li>The <code>padding</code> and <code>border</code> also may be included</li> <br>
 
-  <li><b>Related Value(s):</b>
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code><mark>border-box</mark></code>
+  <li><code>border-box</code>
   <ul><li>By default, the <code>width</code> and <code>height</code> properties (and <code>min/max</code> properties) includes only the content</li>
   <li>The element remain the same because <code>padding</code> and <code>border</code> are not included</li>
   </ul></li> <br>
@@ -283,274 +523,191 @@
   <ul><li>Box Dimensions
   <ul><li><code><em>Height Dimension</em> = "border-top-width" + "padding-top" + height + "padding-bottom" + "border-bottom-width"</code></li>
   <li><code><em>Width Dimension</em> = "border-left-width" + "padding-left" + width + "padding-right" + "border-right-width"</code></li>
+  <li>The <code>outline</code> property does not affect box dimensions and may overlap other content</li>
   <li>The element often appears bigger than intended to be because the <code>border</code> and <code>padding</code> properties are added</li>
   <li>Best practice to include <code>box-sizing: border-box;</code> which padding and border both are included in the width and height</li>
   </ul></li> </ul></li> </ul></div>
+
+  <div id="Property-Box-SHadow" class="Box">
+  <h3><code>box-shadow: <em>H-Offset V-Offset Blur-Radius Spread-Radius Color</em> inset;</code></h3>
+  <ul><li>The <code>box-shadow</code> property specifies one or multiple shadows to an element</li> <br>
+
+  <li><code><em>H-Offset</em></code>
+  <ul><li>Required parameter which specifies the horizontal offset of the shadow</li>
+  <li>A positive value puts the shadow on the right side of the box</li>
+  <li>A negative value puts the shadow on the left side of the box</li> <br>
+
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>none</code> <ul><li>By default, there is no specified shadow</li></ul> </li>
+  </ul></li> </ul></li> <br>
+
+  <li><code><em>V-Offset</em></code>
+  <ul><li>Required parameter which specifies the vertical offset of the shadow</li>
+  <li>A positive value puts the shadow below the box</li>
+  <li>A negative value puts the shadow above the box</li> <br>
+
+  <li>Related Value(s)
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>none</code> <ul><li>By default, there is no specified shadow</li></ul> </li>
+  </ul></li> </ul></li> <br>
+
+  <li><code><em>Blur-Radius</em></code>
+  <ul><li>Optional parameter which specifies the blur radius of the shadow</li>
+  <li>The higher the number, the more blurred the shadow will be</li> <br>
+
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> <ul><li>By default, there is no specified blur radius</li></ul> </li>
+  </ul></li> </ul></li> <br>
+
+  <li><code><em>Spread-Radius</em></code>
+  <ul><li>Optional parameter which specifies the spread radius of the shadow</li>
+  <li>A positive value increases the size of the spread radius shadow</li>
+  <li>A negative value decreases the size of the spread radius shadow</li> <br>
+
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <li><code>0</code> <ul><li>By default, there is no specified spread radius</li></ul> </li>
+  </ul></li> </ul></li> <br>
+
+  <li><code><em>Color</em></code>
+  <ul><li>Optional parameter which specifies the color of the shadow</li> <br>
+
+  <li>Related Value(s):
+  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
+  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
+  <li><code>currentColor</code> <ul><li>By default, the shadow color is based on the value of the <code>color</code> property of the element</li></ul> </li>
+  <!--  <li><code>transparent</code></li>  -->
+  </ul></li> </ul></li> <br>
+
+  <li><code>inset</code>
+  <ul><li>Optional value which changes the shadow from an outer shadow to an inner shadow</li>
+  </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark></li>
+  </ul></div>
 
   <!-- ASPECT RATIO 
   <div id="Property-Aspect-Ratio" class="Box">
   <h3><code>aspect-ratio: <em>myValue</em>;</code></h3>
   </div>  -->
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-
-  
-  
-  
-
-
-
-
-
-  
-
-  
-  <div id="Element-Spacing" class="Box">
-  <h3>ELEMENT SPACING</h3>
-  <p><b>Related Properties</b>
-  <!-- BORDER RADIUS-->
-  <li><code>border-radius: <em>myValues</em>;</code>
-  <ul><li>The <code>border-radius</code> property defines the radius of the element's corners</li>
-  <li>There are other properties related to <code>border-radius</code> property that can be written as its values
-  <ul><li>4 values = <code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code></li>
-  <li>3 values = <code>border-radius: border-top-left-radius border-<em>Diagonal-Top-Bottom</em>-radius border-bottom-right-radius;</code></li>
-  <li>2 values = <code>border-radius: border-<em>Diagonal-Left-Right</em>-radius border-<em>Diagonal-Right-Left</em>-radius;</code></li>
-  <li>1 value = <code>border-radius: border-<em>All</em>-radius;</code></li>
-  </ul></li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> ( A <b>default value</b> where there is no border radius specified )</li>
-  </ul></li> </ul></li> </ul></p> </div>
-
-  <div id="Misc" class="Box">
-  <h3>MISC</h3>
-  <p><b>Related Properties</b>
-
-  <!-- OUTLINE -->
-  <ul><li><code>outline: outline-width outline-style outline-color;</code>
-
-  <!-- OUTLINE WIDTH -->
-  <ul><li><code>outline-width: <em>myValue</em>;</code>
-  <ul><li>The <code>outline-width</code> property specifies the width of an outline, drawn around elements, outside the borders</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>medium</code> ( A <b>default value</b> where the width of the outline is medium )</li>
-  <!--  <li><code>thin</code> ( The width of the outline is thin )</li>
-  <li><code>thick</code> ( The width of the outline is thick )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- OUTLINE STYLE -->
-  <li><code>outline-style: <em>myValue</em>;</code>
-  <ul><li>The <code>outline-style</code> property specifies the style of an outline, drawn around elements, outside the borders</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>none</code> ( A <b>default value</b> where there is no specified outline )</li>
-  <li><code>solid</code> ( Specifies a solid outline )</li>
-  <!--  <li><code>auto</code> ( Specifies an auto outline )</li>
-  <li><code>dashed</code> ( Specifies a dashed outline )</li>
-  <li><code>dotted</code> ( Specifies a dotted outline )</li>
-  <li><code>double</code> ( Specifies a double outline )</li>
-  <li><code>groove</code> ( Specifies a 3D grooved outline - the effect depends on the outline-color value )</li>
-  <li><code>hidden</code> ( Specifies a hidden outline )</li>
-  <li><code>inset</code> ( Specifies a 3D inset outline - the effect depends on the outline-color value )</li>
-  <li><code>outset</code> ( Specifies a 3D outset outline - the effect depends on the outline-color value )</li>
-  <li><code>ridge</code> ( Specifies a 3D ridged outline - the effect depends on the outline-color value )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- OUTLINE COLOR -->
-  <li><code>outline-color: <em>myValue</em>;</code>
-  <ul><li>The <code>outline-color</code> property specifies the color of an outline, drawn around elements, outside the borders</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <li><code>currentColor</code> ( A <b>default value</b> where the outline color is based on the value of the <code>color</code> property of the element )</li>
-  <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> </ul></li> <br>
-
-  <!-- OUTLINE OFFSET -->
-  <li><code>outline-offset: <em>myValue</em>;</code>
-  <ul><li>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> ( A <b>default value</b> where there is no specified outline offset )</li>
-  </ul></li> </ul></li> <br>
-  <li><code>box-shadow: <em>H-Offset V-Offset Blur-Radius Spread-Radius Color</em> inset;</code>
-  <ul><li>The <code>box-shadow</code> property specifies one or multiple shadows to an element</li>
-  <li><code><em>H-Offset</em></code>
-  <ul><li><b>Required</b> parameter which specifies the horizontal offset of the shadow</li>
-  <li>A positive value puts the shadow on the right side of the box</li>
-  <li>A negative value puts the shadow on the left side of the box</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>none</code> ( A <b>default value</b> where there is no shadow )</li>
-  </ul></li> </ul></li>
-  <li><code><em>V-Offset</em></code>
-  <ul><li><b>Required</b> parameter which specifies the vertical offset of the shadow</li>
-  <li>A positive value puts the shadow below the box</li>
-  <li>A negative value puts the shadow above the box</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>none</code> ( A <b>default value</b> where there is no shadow )</li>
-  </ul></li> </ul></li>
-  <li><code><em>Blur-Radius</em></code>
-  <ul><li><b>Optional</b> parameter which specifies the blur radius of the shadow</li>
-  <li>The higher the number, the more blurred the shadow will be</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> ( A <b>default value</b> where there is no blur radius specified )</li>
-  </ul></li> </ul></li>
-  <li><code><em>Spread-Radius</em></code>
-  <ul><li><b>Optional</b> parameter which specifies the spread radius of the shadow</li>
-  <li>A positive value increases the size of the spread radius shadow</li>
-  <li>A negative value decreases the size of the spread radius shadow</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> ( A <b>default value</b> where there is no spread radius specified )</li>
-  </ul></li> </ul></li>
-  <li><code><em>Color</em></code>
-  <ul><li><b>Optional</b> parameter which specifies the color of the shadow</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <li><code>currentColor</code> ( A <b>default value</b> where the shadow color is based on the value of the <code>color</code> property of the element )</li>
-  <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li>
-  <li><code>inset</code>
-  <ul><li><b>Optional</b> value which changes the shadow from an outer shadow to an inner shadow</li>
-  </ul></li> </ul></li> </ul></p> </div>
-
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Requires atleast one property related to box dimension
-  <ul><li>If the height of an element is specified but the width of the element is omitted, then the width is automatically set to its default value, and vice versa</li>
-  </ul></li>
-  <li>Actual dimensions
-  <li>Property like <code>outline</code> does not affect element's dimensions and may overlap other content</li>
-  </ul></li>
-  <li>Overflowed contents
-  <ul><li>If the content does not fit within the specified width, the contents will be displayed on the next line ( when the height property is specified ), 
-          or it will automatically change the height of the element ( when <code>height: auto;</code> )</li>
-  <li>If the content does not fit within the specified height, it will overflow</li>
-  <li>Use <code>overflow</code> property to manage the overflowed contents</li>
-  </ul></li>
-   </ul></p> </section>
+  </section>
 
   <!-------------------->
   <!-- CSS BOX LAYOUT -->
   <!-------------------->
   <section id="CSS-Box-Layout">
   <h1>CSS BOX LAYOUT</h1>
-  <div id="Element-Positioning" class="Box">
-  <h3>ELEMENT POSITIONING</h3>
-  <p><b>Related Properties:</b>
-  
+
   <!-- POSITION -->
-  <ul><li><code>position: <em>myValue</em>;</code>
-  <ul><li>The <code>position</code> property specifies the type of positioning method used for an element</li>
-  <li><b>Related Value(s)</b>:
+  <div id="Property-Position" class="Box">
+  <h3><code>position: <em>myValue</em>;</code></h3>
+  <ul><li>The <code>position</code> property specifies the type of positioning method used for an element</li> <br>
+  
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><code>static</code>
-  <ul><li>A <b>default value</b> which the element is always positioned according to the normal flow of the page</li>
+  <ul><li>By default, the element is always positioned according to the normal flow of the page</li>
   <li>The <code>inset</code> property does not affects the position of the element</li>
-  </ul></li>
+  </ul></li> <br>
+
   <li><code>relative</code>
   <ul><li>The element is positioned relative to its normal position</li>
   <li>Use the <code>inset</code> property to adjust the position of the element</li>
   <li>Other content will not be adjusted to fit into any gap left by the element</li>
-  </ul></li>
+  </ul></li> <br>
+
   <li><code>fixed</code>
   <ul><li>The element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled</li>
   <li>Use the <code>inset</code> property to adjust the position of the element</li>
   <li>A fixed element does not leave a gap in the page where it would normally have been located</li>
-  </ul></li>
+  </ul></li> <br>
+
   <li><code>absolute</code>
   <ul><li>The element is positioned relative to the nearest positioned ancestor</li>
   <li>Use the <code>inset</code> property to adjust the position of the element</li>
   <li>If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling</li>
   <li>Absolute positioned elements are removed from the normal flow, and can overlap elements</li>
-  </ul></li>
+  </ul></li> <br>
+
   <li><code>sticky</code>
   <ul><li>The element is positioned based on the user's scroll position</li>
   <li>Use the <code>inset</code> property to adjust the position of the element</li>
   <li>A sticky element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position</li>
   <li>It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place</li>
-  </ul></li> </ul></li> </ul></li> <br>
+  </ul></li> </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark></li>
+  </ul></div>
 
   <!-- INSET -->
-  <li><code>inset: <em>myValues</em>;</code>
+  <div id="Property-Inset">
+  <h3><code>inset: <em>myValues</em>;</code></h3>
   <ul><li>The <code>inset</code> property sets the distance between an element and the parent element</li>
-  <li>There are other properties related to <code>inset</code> property that can be written as its value
+  <li>There are some generic-side properties that can be written as its values
   <ul><li>4 values = <code>inset: top right bottom left;</code></li>
   <li>3 values = <code>inset: top <em>Horizontal</em> bottom;</code></li>
   <li>2 values = <code>inset: <em>Vertical</em> <em>Horizontal</em>;</code></li>
   <li>1 value = <code>inset: <em>All</em>;</code></li>
-  </ul></li>
-  <li><b>Related Value(s):</b>
+  </ul></li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code> ( A <b>default value</b>) which the element's default inset distance</li>
-  </ul></li> </ul></li> <br>
+  <li><code>auto</code> <ul><li>By default, the element is set to default inset distance</li></ul> </li>
+  </ul></li> <br>
+
+  <li><mark><b>INSIGHTS:</b></mark></li>
+  </ul></div>
 
   <!-- FLOAT -->
-  <li><code>float: <em>myValue</em>;</code>
-  <ul><li>The <code>float</code> property specifies whether an element should float to the left, right, or not at all</li>
-  <li><b>Related Value(s)</b>
+  <div id="Property-Float" class="Box">
+  <h3><code>float: <em>myValue</em>;</code></h3>
+  <ul><li>The <code>float</code> property specifies whether an element should float to the left, right, or not at all</li> <br>
+
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>none</code> ( A <b>default value</b> which the element does not float, will be displayed just where it occurs in the text )</li>
-  <li><code>left</code> ( The element floats to the left of its container )</li>
-  <li><code>right</code> ( The element floats to the right of its container )</li>
+  <li><code>none</code> <ul><li>By default, the element does not float, will be displayed just where it occurs in the text</li></ul> </li> <br>
+  <li><code>left</code> <ul><li>The element floats to the left of its container</li></ul> </li> <br>
+  <li><code>right</code> <ul><li>The element floats to the right of its container</li></ul> </li>
   <!--  <li><code>inline-start</code></li>
   <li><code>inline-end</code></li>  -->
-  </ul></li> </ul></li>
-  <!-- <li><code>clear: <em>myValue</em>;</code></li> -->
-  </ul></p> </div>
+  </ul></li> <br>
 
-  <div id="Element-Behaviour" class="Box">
-  <h3>ELEMENT BEHAVIOUR</h3>
-  <p><b>Related Property</b>
-  <ul><li><code>display: <em>myValue</em>;</code>
-  <ul><li>The <code>display</code> property specifies the display behavior (the type of rendering box) of an element</li>
-  <li><b>Related Value(s):</b>
+  <li><mark><b>INSIGHTS:</b></mark></li>
+  </ul></div>
+
+  <!-- CLEAR 
+  <div id="Property-Clear" class="Box">
+  <h3><code>clear: <em>myValue</em>;</code></h3>
+  </div>  -->
+
+  <!-- DISPLAY -->
+  <div id="Property-Display" class="Box">
+  <h3><code>display: <em>myValue</em>;</code></h3>
+  <ul><li>The <code>display</code> property specifies the display behavior (the type of rendering box) of an element</li> <br>
+  
+  <li>Related Value(s):
   <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
   <li><code>inline</code>
-  <ul><li>A <b>default value</b> which displays an element as an inline element</li>
+  <ul><li>By default, the element is displayed as an inline element</li>
   <li>Like <code>&lt;span&gt;</code> any <code>height</code> and <code>width</code> properties will have no effect</li>
-  </ul></li>
+  </ul></li> <br>
+
   <li><code>block</code>
   <ul><li>Displays an element as a block element</li>
   <li>Like <code>&lt;p&gt;</code> it starts on a new line, and takes up the whole width</li>
-  </ul></li>
-  <li><code>flex</code><ul><li>Displays an element as a block-level flex container</li></ul></li>
-  <li><code>grid</code><ul><li>Displays an element as a block-level grid container</li></ul></li>
-  <li><code>none</code><ul><li>The element is completely removed</li></ul></li>
-  <!--  
-  <li><code>contents</code><ul><li>Makes the container disappear, making the child elements children of the element the next level up in the DOM</li></ul></li>
+  </ul></li> <br>
+
+  <li><code>flex</code> <ul><li>Displays an element as a block-level flex container</li></ul> </li> <br>
+  <li><code>grid</code> <ul><li>Displays an element as a block-level grid container</li></ul> </li> <br>
+  <li><code>none</code> <ul><li>The element is completely removed</li></ul> </li>
+  <!--  <li><code>contents</code> <ul><li>Makes the container disappear, making the child elements children of the element the next level up in the DOM</li></ul> </li>
   <li><code>inline-block</code>
   <ul><li>Displays an element as an inline-level block container</li>
   <li>The element itself is formatted as an inline element, but the values for <code>height</code> and <code>width</code> properties can be applied</li>
@@ -576,28 +733,43 @@
   <li><code>ruby-base-container</code></li>
   <li><code>ruby-base</code></li>
   <li><code>ruby-text-container</code></li>
-  <li><code>ruby-text</code></li> -->
-  </ul></li> </ul></li> </ul></p> </div>
+  <li><code>ruby-text</code></li>  -->
+  </ul></li> <br>
 
-  <!--  <div id="Flex" class="Box">
-  <h3>FLEX LAYOUT</h3>
-  <p><b>Related Properties:</b>
-  <ul><li><code>flex: flex-grow flex-shrink flex-basis;</code></li>
-  <li><code>flex-flow: flex-direction flex-wrap;</code></li>
-  <li><code>order: <em>myValue;</em></code></li>
-  </ul></p> </div>
+  <li><mark><b>INSIGHTS:</b></mark></li>
+  </ul></div>
 
-  <div id="Grid" class="Box">
-  <h3>GRID LAYOUT</h3>
-  <p><b>Related Properties:</b>
-  <ul><li><code>grid: grid-template-rows grid-template-columns grid-template-areas grid-auto-rows grid-auto-columns grid-auto-flow; <br>
-                grid-template: grid-template-rows grid-template-columns grid-template-areas;</code></li>
-  <li><code>grid-area: grid-row-start grid-column-start grid-row-end grid-column-end; <br>
-            grid-column: grid-column-start grid-column-end;                           <br>
-            grid-row: grid-row-start grid-row-end;</code></li>
-  </ul></p> </div>
+  <!-- FLEX 
+  <div id="Property-flex" class="Box">
+  <h3><code>flex: flex-grow flex-shrink flex-basis;</code></h3>
+  </div>  -->
 
-  <div id="Inline" class="Box">
+  <!-- FLEX FLOW 
+  <div id="Property-Flex-Flow" class="Box">
+  <h3><code>flex-flow: flex-direction flex-wrap;</code></h3>
+  </div>  -->
+
+  <!-- ORDER 
+  <div id="Property-Order" class="Box">
+  <h3><code>order: <em>myValue;</em></code></h3>
+  </div>  -->
+
+  <!-- GRID 
+  <div id="Property-Grid" class="Box">
+  <h3><code>grid: grid-template-rows grid-template-columns grid-template-areas grid-auto-rows grid-auto-columns grid-auto-flow;</code></h3>
+  <ul><li><mark><b>INSIGHTS:</b></mark>
+  <ul><li><code>grid-template: grid-template-rows grid-template-columns grid-template-areas;</code></li>
+  </ul></li> </ul></div>  -->
+
+  <!-- GRID AREA 
+  <div id="Property-Grid-Area" class="Box">
+  <h3><code>grid-area: grid-row-start grid-column-start grid-row-end grid-column-end;</code></h3>
+  <ul><li><mark><b>INSIGHTS:</b></mark>
+  <ul><li><code>grid-row: grid-row-start grid-row-end;</code></li>
+  <li><code>grid-column: grid-column-start grid-column-end;</code></li>
+  </ul></li> </ul></div>  -->
+
+  <!--  <div id="Inline" class="Box">
   <h3>INLINE LAYOUT</h3>
   <p><b>Related Properties:</b>
   <ul><li><code>inline-size: <em>myValue</em>;</code></li>
@@ -634,7 +806,7 @@
   <li><code>border-end-start-radius: <em>myValue</em>;</code></li>
   <li><code>border-end-end-radius: <em>myValue</em>;</code></li>
   </ul></p> </div>
-
+  
   <div id="Table" class="Box">
   <h3>TABLE LAYOUT</h3>
   <p><b>Related Properties:</b>
@@ -644,7 +816,7 @@
   <li><code>empty-cells: <em>myValue</em>;</code></li>
   <li><code>table-layout: <em>myValue</em>;</code></li>
   </ul></p> </div>
-
+  
   <div id="List" class="Box">
   <h3>LIST LAYOUT</h3>
   <p><b>Related Properties:</b>
@@ -669,12 +841,63 @@
   <li><code>vertical-align: <em>myValue</em>;</code></li>
   <li><code>z-index: <em>myValue</em>;</code></li>
   </ul></p> </div>  -->
-
-  <!--  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>INSIGHTS FOR CSS BOX LAYOUT!!!</li>
-  </ul></p>  -->
   </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <p><mark><b>INSIGHTS:</b></mark>
+  <ul><li>Requires atleast one property related to box dimension
+  <ul><li>If the height of an element is specified but the width of the element is omitted, then the width is automatically set to its default value, and vice versa</li>
+  </ul></li>
+  <li>Actual dimensions
+  <li>Property like <code>outline</code> does not affect element's dimensions and may overlap other content</li>
+  </ul></li>
+  <li>Overflowed contents
+  <ul><li>If the content does not fit within the specified width, the contents will be displayed on the next line ( when the height property is specified ), 
+          or it will automatically change the height of the element ( when <code>height: auto;</code> )</li>
+  <li>If the content does not fit within the specified height, it will overflow</li>
+  <li>Use <code>overflow</code> property to manage the overflowed contents</li>
+  </ul></li>
+   </ul></p>
+
+  
+
+  
+
+  
+  
   <!-------------------------------->
   <!-- CSS ANIMATION & TRANSITION -->
   <!-------------------------------->
