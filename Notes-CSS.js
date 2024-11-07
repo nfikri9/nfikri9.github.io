@@ -1,128 +1,343 @@
-function myGlobal() {
-  const globalInput = {
-    myHeight: document.getElementById("Input-Height").value,
-    myWidth: document.getElementById("Input-Width").value,
-    myPadding: document.getElementById("Input-Padding").value,
-    myBorder: document.getElementById("Input-Border").value, 
-    myBorderRadius: document.getElementById("Input-Border-Radius").value,
-    myMargin: document.getElementById("Input-Margin").value,
-    myBoxShadow: document.getElementById("Input-Box-Shadow").value,
-    myOutline: document.getElementById("Input-Outline").value,
-    myOutlineOffset: document.getElementById("Input-Outline-Offset").value,
-    myPosition: document.getElementById("Input-Position").value,
-    myTop: document.getElementById("Input-Top").value,
-    myRight: document.getElementById("Input-Right").value,
-    myBottom: document.getElementById("Input-Bottom").value,
-    myLeft: document.getElementById("Input-Left").value,
-    myFont: document.getElementById("Input-Font").value,
-    myFontStyle: document.getElementById("Input-Font-Style").value,
-    myFontVariant: document.getElementById("Input-Font-Variant").value,
-    myFontWeight: document.getElementById("Input-Font-Weight").value,
-    myFontSize: document.getElementById("Input-Font-Size").value,
-    myLineHeight: document.getElementById("Input-Line-Height").value,
-    myFontFamily: document.getElementById("Input-Font-Family").value,
-    myFontKerning: document.getElementById("Input-Font-Kerning").value,
-    myTextAlign: document.getElementById("Input-Text-Align").value,
-    myTextAlignLast: document.getElementById("Input-Text-Align-Last").value,
-    myTextDecoration: document.getElementById("Input-Text-Decoration").value,
-    myTextDecorationLine: document.getElementById("Input-Text-Decoration-Line").value,
-    myTextDecorationColor: document.getElementById("Input-Text-Decoration-Color").value,
-    myTextDecorationStyle: document.getElementById("Input-Text-Decoration-Style").value,
-    myTextDecorationThickness: document.getElementById("Input-Text-Decoration-Thickness").value,
-    myTextEmphasis: document.getElementById("Input-Text-Emphasis").value,
-    myTextEmphasisStyle: document.getElementById("Input-Text-Emphasis-Style").value,
-    myTextEmphasisColor: document.getElementById("Input-Text-Emphasis-Color").value,
-    myTextEmphasisPosition: document.getElementById("Input-Text-Emphasis-Position").value,
-    myTextIndent: document.getElementById("Input-Text-Indent").value,
-    myTextJustify: document.getElementById("Input-Text-Justify").value,
-    myDisplay: document.getElementById("Input-Display").value,
-    myFlexGrow: document.getElementById("Input-Flex-Grow").value,
-    myFlexShrink: document.getElementById("Input-Flex-Shrink").value,
-    myFlexBasis: document.getElementById("Input-Flex-Basis").value,
-    myFlexDirection: document.getElementById("Input-Flex-Direction").value,
-    myFlexWrap: document.getElementById("Input-Flex-Wrap").value,
-    myGridTemplateRows: document.getElementById("Input-Grid-Template-Rows").value,
-    myGridTemplateColumns: document.getElementById("Input-Grid-Template-Columns").value,
-    myGridTemplateAreas: document.getElementById("Input-Grid-Template-Areas").value,
-    myGridAutoRows: document.getElementById("Input-Grid-Auto-Rows").value,
-    myGridAutoColumns: document.getElementById("Input-Grid-Auto-Columns").value,
-    myGridAutoFlow: document.getElementById("Input-Grid-Auto-Flow").value,
-    myGridRowStart: document.getElementById("Input-Grid-Row-Start").value,
-    myGridColumnStart: document.getElementById("Input-Grid-Column-Start").value,
-    myGridRowEnd: document.getElementById("Input-Grid-Row-End").value,
-    myGridColumnEnd: document.getElementById("Input-Grid-Column-End").value,
-    myJustifyContent: document.getElementById("Input-Justify-Content").value,
-    myJustifyItems: document.getElementById("Input-Justify-Items").value,
-    myAlignContent: document.getElementById("Input-Align-Content").value,
-    myAlignItems: document.getElementById("Input-Align-Items").value,
-    myAlignSelf: document.getElementById("Input-Align-Self").value
+///////////////////////
+// CSS GLOBAL VALUES //
+///////////////////////
+function CSSGlobalValues(){
+  const global = {
+    calculation: "<div><code>calc()</code></div>",
+    inherit: "<div><code>inherit</code></div>",
+    initial: "<div><code>initial</code></div>",
+    unset: "<div><code>unset</code></div>",
+    variable: "<div><code>var(<em>--Name, Value</em>)</code></div>"
   };
+  return global;
+}
+
+///////////////////////
+// CSS LENGTH VALUES //
+///////////////////////
+function CSSLengthValues(){
+  const length = {
+    absolute: "<div><code><em>Absolute Length Units</em></code></div>",
+    relative: "<div><code><em>Relative Length Units</em></code></div>"
+  };
+  return length;
+}
+
+//////////////////////
+// CSS COLOR VALUES //
+//////////////////////
+function CSSColorValues(){
+  /* REFERENCE = https://www.colorhexa.com/ */
+  const color = {
+    colorNames:
+      "<div><code>aqua | aquamarine | mediumaquamarine</code></div>" +
+      "<div><code>azure</code></div>" +
+      "<div><code>blue | lightblue | mediumblue | darkblue</code></div>" +
+      "<div><code>brown | rosybrown | saddlebrown | sandybrown</code></div>" +
+      "<div><code>coral | lightcoral</code></div>" +
+      "<div><code>cyan | lightcyan | darkcyan</code></div>" +
+      "<div><code>gainsboro</code></div>" +
+      "<div><code>gold | goldenrod | palegoldenrod | darkgoldenrod | lightgoldenrodyellow</code></div>" +
+      "<div><code>gray | lightgray | dimgray | darkgray</code></div>" +
+      "<div><code>green | palegreen | lightgreen | darkgreen</code></div>" +
+      "<div><code>grey | lightgrey | dimgrey | darkgrey</code></div>" +
+      "<div><code>honeydew</code></div>" +
+      "<div><code>khaki | darkkhaki</code></div>" +
+      "<div><code>lavender | lavenderblush</code></div>" +
+      "<div><code>lime | limegreen</code></div>" +
+      "<div><code>magenta | darkmagenta</code></div>" +
+      "<div><code>maroon</code></div>" +
+      "<div><code>navy</code></div>" +
+      "<div><code>olive | olivedrab | darkolivegreen</code></div>" +
+      "<div><code>oldlace</code></div>" +
+      "<div><code>orange | darkorange | orangered</code></div>" +
+      "<div><code>orchid | mediumorchid | darkorchid</code></div>" +
+      "<div><code>pink | lightpink | deeppink | hotpink</code></div>" +
+      "<div><code>purple | mediumpurple | rebeccapurple</code></div>" +
+      "<div><code>red | darkred | indianred</code></div>" +
+      "<div><code>salmon | lightsalmon | darksalmon</code></div>" +
+      "<div><code>seagreen | lightseagreen | mediumseagreen | darkseagreen</code></div>" +
+      "<div><code>skyblue | lightskyblue | deepskyblue</code></div>" +
+      "<div><code>slateblue | mediumslateblue | darkslateblue</code></div>" +
+      "<div><code>slategray | lightslategray | darkslategray</code></div>" +
+      "<div><code>slategrey | lightslategrey | darkslategrey</code></div>" +
+      "<div><code>springgreen | mediumspringgreen</code></div>" +
+      "<div><code>steelblue | lightsteelblue</code></div>" +
+      "<div><code>turquoise | paleturquoise | mediumturquoise | darkturquoise</code></div>" +
+      "<div><code>violet | darkviolet | palevioletred | mediumvioletred</code></div>" +
+      "<div><code>wheat</code></div>" +
+      "<div><code>white | antiquewhite | floralwhite | ghostwhite | navajowhite | whitesmoke</code></div>" +
+      "<div><code>yellow | lightyellow | yellowgreen</code></div>" +
+      "<div><code>aliceblue | cadetblue | cornflowerblue | dodgerblue | midnightblue | powderblue | royalblue</code></div>" +
+      "<div><code>forestgreen | lawngreen</code></div>" +
+      "<div><code>blueviolet | greenyellow</code></div>" +
+      "<div><code>beige | bisque | black | blanchedalmond | burlywood</code></div>" +
+      "<div><code>chartreuse | chocolate | cornsilk | crimson</code></div>" +
+      "<div><code>firebrick | fuchsia</code></div>" +
+      "<div><code>indigo | ivory</code></div>" +
+      "<div><code>lemonchiffon | linen</code></div>" +
+      "<div><code>mintcream | mistyrose | moccasin</code></div>" +
+      "<div><code>papayawhip | peachpuff | peru | plum</code></div>" +
+      "<div><code>seashell | sienna | silver | snow</code></div>" +
+      "<div><code>tan | teal | thistle | tomato</code></div>",
+
+    colorFunctions:
+      "<div><code>color()</code></div>" +
+      "<div><code>color-relative()</code></div>" +
+      "<div><code>color-mix()</code></div>" +
+      "<div><code>color-mix-hue()</code></div>" +
+      "<div><code>hsl()</code></div>" +
+      "<div><code>hsl-relative()</code></div>" +
+      "<div><code>hsla()</code></div>" +
+      "<div><code>hwb()</code></div>" +
+      "<div><code>hwb-relative()</code></div>" +
+      "<div><code>lab()</code></div>" +
+      "<div><code>lab-relative()</code></div>" +
+      "<div><code>lch()</code></div>" +
+      "<div><code>lch-relative()</code></div>" +
+      "<div><code>oklab()</code></div>" +
+      "<div><code>oklab-relative()</code></div>" +
+      "<div><code>oklch()</code></div>" +
+      "<div><code>oklch-relative()</code></div>" +
+      "<div><code>rgb()</code></div>" +
+      "<div><code>rgb-relative()</code></div>" +
+      "<div><code>rgba()</code></div>"
+  };
+  return color;
+}
+
+/////////////////////
+// HEIGHT PROPERTY //
+/////////////////////
+function PropertyHeight() {
+  let myHeight = document.getElementById("Input-Height").value;
+  document.getElementsByClassName("Box-Model")[0].style.height = myHeight;
+}
+
+// HEIGHT: CSS GLOBAL VALUES; //
+function HeightGlobalValues() {
+  let myVisibility = document.getElementById("Height-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Height-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// HEIGHT: CSS LENGTH VALUES; //
+function HeightLengthValues() {
+  let myVisibility = document.getElementById("Height-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Height-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// HEIGHT: AUTO; //
+function HeightAuto() {
+  let myVisibility = document.getElementById("Height-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Height-Auto").innerHTML =
+      "<div>[Default] The element will automatically adjust its height to allow its content to be displayed correctly</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// HEIGHT: MIN-CONTENT; //
+function HeightMinContent() {
+  let myVisibility = document.getElementById("Height-Min-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Height-Min-Content").innerHTML = "<div><code>min-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// HEIGHT: FIT-CONTENT; //
+function HeightFitContent() {
+  let myVisibility = document.getElementById("Height-Fit-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Height-Fit-Content").innerHTML = "<div><code>fit-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// HEIGHT: MAX-CONTENT; //
+function HeightMaxContent() {
+  let myVisibility = document.getElementById("Height-Max-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Height-Max-Content").innerHTML = "<div><code>max-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////////
+// MIN-HEIGHT PROPERTY //
+/////////////////////////
+function PropertyMinHeight() {
+  let myMinHeight = document.getElementById("Input-Min-Height").value;
+  document.getElementsByClassName("Box-Model")[0].style.minHeight = myMinHeight;
+}
+
+// MIN-HEIGHT: CSS GLOBAL VALUES; //
+function MinHeightGlobalValues() {
+  let myVisibility = document.getElementById("Min-Height-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Height-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-HEIGHT: CSS LENGTH VALUES; //
+function MinHeightLengthValues() {
+  let myVisibility = document.getElementById("Min-Height-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Height-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-HEIGHT: AUTO; //
+function MinHeightAuto() {
+  let myVisibility = document.getElementById("Min-Height-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Height-Auto").innerHTML =
+      "<div>The element will automatically adjust its height to allow its content to be displayed correctly</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-HEIGHT: MIN-CONTENT; //
+function MinHeightMinContent() {
+  let myVisibility = document.getElementById("Min-Height-Min-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Height-Min-Content").innerHTML = "<div><code>min-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-HEIGHT: FIT-CONTENT; //
+function MinHeightFitContent() {
+  let myVisibility = document.getElementById("Min-Height-Fit-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Height-Fit-Content").innerHTML = "<div><code>fit-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-HEIGHT: MAX-CONTENT; //
+function MinHeightMaxContent() {
+  let myVisibility = document.getElementById("Min-Height-Max-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Height-Max-Content").innerHTML = "<div><code>max-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////////
+// MAX-HEIGHT PROPERTY //
+/////////////////////////
+function PropertyMaxHeight() {
+  let myMaxHeight = document.getElementById("Input-Max-Height").value;
+  document.getElementsByClassName("Box-Model")[0].style.maxHeight = myMaxHeight;
+}
+
+// MAX-HEIGHT: CSS GLOBAL VALUES; //
+function MaxHeightGlobalValues() {
+  let myVisibility = document.getElementById("Max-Height-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Height-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-HEIGHT: CSS LENGTH VALUES; //
+function MaxHeightLengthValues() {
+  let myVisibility = document.getElementById("Max-Height-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Height-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-HEIGHT: NONE; //
+function MaxHeightNone() {
+  let myVisibility = document.getElementById("Max-Height-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Height-None").innerHTML =
+      "<div><code>none</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-HEIGHT: MIN-CONTENT; //
+function MaxHeightMinContent() {
+  let myVisibility = document.getElementById("Max-Height-Min-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Height-Min-Content").innerHTML = "<div><code>min-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-HEIGHT: FIT-CONTENT; //
+function MaxHeightFitContent() {
+  let myVisibility = document.getElementById("Max-Height-Fit-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Height-Fit-Content").innerHTML = "<div><code>fit-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-HEIGHT: MAX-CONTENT; //
+function MaxHeightMaxContent() {
+  let myVisibility = document.getElementById("Max-Height-Max-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Height-Max-Content").innerHTML = "<div><code>max-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/*
+function myGlobal() {
+  const globalInput = { myWidth: document.getElementById("Input-Width").value };
   return globalInput;
 }
-
-//////////////////////////////////
-// FONT/TEXT RELATED PROPERTIES //
-/////////////////////////////////
-function ClickHandlerFont(myInput) { document.getElementById("Output-Font").style.font = myGlobal(myInput).myFont; }
-function ClickHandlerFontStyle(myInput) { document.getElementById("Output-Font-Style").style.fontStyle = myGlobal(myInput).myFontStyle; }
-function ClickHandlerFontVariant(myInput) { document.getElementById("Output-Font-Variant").style.fontVariant = myGlobal(myInput).myFontVariant; }
-function ClickHandlerFontWeight(myInput) { document.getElementById("Output-Font-Weight").style.fontWeight = myGlobal(myInput).myFontWeight; }
-function ClickHandlerFontSize(myInput) { document.getElementById("Output-Font-Size").style.fontSize = myGlobal(myInput).myFontSize; }
-function ClickHandlerLineHeight(myInput) { document.getElementById("Output-Line-Height").style.lineHeight = myGlobal(myInput).myLineHeight; }
-function ClickHandlerFontFamily(myInput) { document.getElementById("Output-Font-Family").style.fontFamily = myGlobal(myInput).myFontFamily; }
-function ClickHandlerFontKerning(myInput) { document.getElementById("Output-Font-Kerning").style.fontKerning = myGlobal(myInput).myFontKerning; }
-function ClickHandlerTextAlign(myInput) { document.getElementById("Output-Text-Align").style.textAlign = myGlobal(myInput).myTextAlign; }
-function ClickHandlerTextAlignLast(myInput) { document.getElementById("Output-Text-Align-Last").style.textAlignLast = myGlobal(myInput).myTextAlignLast; }
-function ClickHandlerTextDecoration(myInput) { document.getElementById("Output-Text-Decoration").style.textDecoration = myGlobal(myInput).myTextDecoration; }
-function ClickHandlerTextDecorationLine(myInput) { document.getElementById("Output-Text-Decoration-Line").style.textDecorationLine = myGlobal(myInput).myTextDecorationLine; }
-function ClickHandlerTextDecorationColor(myInput) { document.getElementById("Output-Text-Decoration-Color").style.textDecorationColor = myGlobal(myInput).myTextDecorationColor; }
-function ClickHandlerTextDecorationStyle(myInput) { document.getElementById("Output-Text-Decoration-Style").style.textDecorationStyle = myGlobal(myInput).myTextDecorationStyle; }
-function ClickHandlerTextDecorationThickness(myInput) { document.getElementById("Output-Text-Decoration-Thickness").style.textDecorationThickness = myGlobal(myInput).myTextDecorationThickness; }
-function ClickHandlerTextEmphasis(myInput) { document.getElementById("Output-Text-Emphasis").style.textEmphasis = myGlobal(myInput).myTextEmphasis; }
-function ClickHandlerTextEmphasisStyle(myInput) { document.getElementById("Output-Text-Emphasis-Style").style.textEmphasisStyle = myGlobal(myInput).myTextEmphasisStyle; }
-function ClickHandlerTextEmphasisColor(myInput) { document.getElementById("Output-Text-Emphasis-Color").style.textEmphasisColor = myGlobal(myInput).myTextEmphasisColor; }
-function ClickHandlerTextEmphasisPosition(myInput) { document.getElementById("Output-Text-Emphasis-Position").style.textEmphasisPosition = myGlobal(myInput).myTextEmphasisPosition; }
-function ClickHandlerTextIndent(myInput) { document.getElementById("Output-Text-Indent").style.textIndent = myGlobal(myInput).myTextIndent; }
-function ClickHandlerTextJustify(myInput) { document.getElementById("Output-Text-Justify").style.textJustify = myGlobal(myInput).myTextJustify; }
-
-//////////////////////////////////
-// BOX MODEL RELATED PROPERTIES //
-//////////////////////////////////
-function ClickHandlerDisplay(myInput) { document.getElementsByClassName("Parent-Box")[0].style.display = myGlobal(myInput).myDisplay; }
-function ClickHandlerFlexGrow(myInput) { document.getElementsByClassName("Child-Box")[0].style.flexGrow = myGlobal(myInput).myFlexGrow; }
-function ClickHandlerFlexShrink(myInput) { document.getElementsByClassName("Child-Box")[0].style.flexShrink = myGlobal(myInput).myFlexShrink; }
-function ClickHandlerFlexBasis(myInput) { document.getElementsByClassName("Child-Box")[0].style.flexBasis = myGlobal(myInput).myFlexBasis; }
-function ClickHandlerFlexDirection(myInput) { document.getElementsByClassName("Parent-Box")[0].style.flexDirection = myGlobal(myInput).myFlexDirection; }
-function ClickHandlerFlexWrap(myInput) { document.getElementsByClassName("Parent-Box")[0].style.flexWrap = myGlobal(myInput).myFlexWrap; }
-function ClickHandlerGridTemplateRows(myInput) { document.getElementsByClassName("Parent-Box")[0].style.gridTemplateRows = myGlobal(myInput).myGridTemplateRows; }
-function ClickHandlerGridTemplateColumns(myInput) { document.getElementsByClassName("Parent-Box")[0].style.gridTemplateColumns = myGlobal(myInput).myGridTemplateColumns; }
-function ClickHandlerGridTemplateAreas(myInput) { document.getElementsByClassName("Parent-Box")[0].style.gridTemplateAreas = myGlobal(myInput).myGridTemplateAreas; }
-function ClickHandlerGridAutoRows(myInput) { document.getElementsByClassName("Parent-Box")[0].style.gridAutoRows = myGlobal(myInput).myGridAutoRows; }
-function ClickHandlerGridAutoColumns(myInput) { document.getElementsByClassName("Parent-Box")[0].style.gridAutoColumns = myGlobal(myInput).myGridAutoColumns; }
-function ClickHandlerGridAutoFlow(myInput) { document.getElementsByClassName("Parent-Box")[0].style.gridAutoFlow = myGlobal(myInput).myGridAutoFlow; }
-function ClickHandlerGridRowStart(myInput) { document.getElementsByClassName("Child-Box")[0].style.gridRowStart = myGlobal(myInput).myGridRowStart; }
-function ClickHandlerGridColumnStart(myInput) { document.getElementsByClassName("Child-Box")[0].style.gridColumnStart = myGlobal(myInput).myGridColumnStart; }
-function ClickHandlerGridRowEnd(myInput) { document.getElementsByClassName("Child-Box")[0].style.gridRowEnd = myGlobal(myInput).myGridRowEnd; }
-function ClickHandlerGridColumnEnd(myInput) { document.getElementsByClassName("Child-Box")[0].style.gridColumnEnd = myGlobal(myInput).myGridColumnEnd; }
-function ClickHandlerJustifyContent(myInput) { document.getElementsByClassName("Parent-Box")[0].style.justifyContent = myGlobal(myInput).myJustifyContent; }
-function ClickHandlerJustifyItems(myInput) { document.getElementsByClassName("Parent-Box")[0].style.justifyItems = myGlobal(myInput).myJustifyItems; }
-function ClickHandlerAlignContent(myInput) { document.getElementsByClassName("Parent-Box")[0].style.alignContent = myGlobal(myInput).myAlignContent; }
-function ClickHandlerAlignItems(myInput) { document.getElementsByClassName("Parent-Box")[0].style.alignItems = myGlobal(myInput).myAlignItems; }
-function ClickHandlerAlignSelf(myInput) { document.getElementsByClassName("Parent-Box")[0].style.alignSelf = myGlobal(myInput).myAlignSelf; }
-
-function myBoxModel(myInput) {
-  document.getElementById("Box-Model").style.height = myGlobal(myInput).myHeight;
-  document.getElementById("Box-Model").style.width = myGlobal(myInput).myWidth;
-  document.getElementById("Box-Model").style.padding = myGlobal(myInput).myPadding;
-  document.getElementById("Box-Model").style.border = myGlobal(myInput).myBorder;
-  document.getElementById("Box-Model").style.borderRadius = myGlobal(myInput).myBorderRadius;
-  document.getElementById("Box-Model").style.margin = myGlobal(myInput).myMargin;
-  document.getElementById("Box-Model").style.boxShadow = myGlobal(myInput).myBoxShadow;
-  document.getElementById("Box-Model").style.outline = myGlobal(myInput).myOutline;
-  document.getElementById("Box-Model").style.outlineOffset = myGlobal(myInput).myOutlineOffset;
-  document.getElementById("Box-Model").style.position = myGlobal(myInput).myPosition;
-  document.getElementById("Box-Model").style.top = myGlobal(myInput).myTop;
-  document.getElementById("Box-Model").style.right = myGlobal(myInput).myRight;
-  document.getElementById("Box-Model").style.bottom = myGlobal(myInput).myBottom;
-  document.getElementById("Box-Model").style.left = myGlobal(myInput).myLeft;
-}
+function ClickerHandlerWidth(myInput) { document.getElementById("Box-Model").style.width = myGlobal(myInput).myWidth; }
+*/

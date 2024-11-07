@@ -27,6 +27,61 @@
   </nav>
 
   <!------------------->
+  <!-- CSS BOX MODEL -->
+  <!------------------->
+  <section id="CSS-Box-Model">
+  <h1>CSS BOX MODEL</h1>
+  <div class="Box-Model">My Contents!</div>
+
+  <!-- HEIGHT -->
+  <div id="Property-Height" class="Box-Property">
+    <div>The <code>height</code> property sets the height of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Height" type="text" placeholder="Enter height value">
+      <button onclick="PropertyHeight()">MODIFY</button>
+      <div class="Value-Box" onclick="HeightGlobalValues()"> <code>height: <em>CSS Global Values</em>;</code> <div id="Height-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="HeightLengthValues()"> <code>height: <em>CSS Length Values</em>;</code> <div id="Height-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="HeightAuto()"> <code>height: auto;</code> <div id="Height-Auto"> </div> </div>
+      <div class="Value-Box" onclick="HeightMinContent()"> <code>height: min-content;</code> <div id="Height-Min-Content"></div> </div>
+      <div class="Value-Box" onclick="HeightFitContent()"> <code>height: fit-content;</code> <div id="Height-Fit-Content"></div> </div>
+      <div class="Value-Box" onclick="HeightMaxContent()"> <code>height: max-content;</code> <div id="Height-Max-Content"></div> </div>
+    </div>
+  </div>
+
+  <!-- MIN-HEIGHT -->
+  <div id="Property-Min-Height" class="Box-Property">
+    <div>The <code>min-height</code> property defines the minimum height of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Min-Height" type="text" placeholder="Enter min-height value">
+      <button onclick="PropertyMinHeight()">MODIFY</button>
+      <div class="Value-Box" onclick="MinHeightGlobalValues()"> <code>min-height: <em>CSS Global Values</em>;</code> <div id="Min-Height-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="MinHeightLengthValues()"> <code>min-height: <em>CSS Length Values</em>;</code> <div id="Min-Height-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="MinHeightAuto()"> <code>min-height: auto;</code> <div id="Min-Height-Auto"> </div> </div>
+      <div class="Value-Box" onclick="MinHeightMinContent()"> <code>min-height: min-content;</code> <div id="Min-Height-Min-Content"></div> </div>
+      <div class="Value-Box" onclick="MinHeightFitContent()"> <code>min-height: fit-content;</code> <div id="Min-Height-Fit-Content"></div> </div>
+      <div class="Value-Box" onclick="MinHeightMaxContent()"> <code>min-height: max-content;</code> <div id="Min-Height-Max-Content"></div> </div>
+    </div>
+  </div>
+
+  <!-- MAX-HEIGHT -->
+  <div id="Property-Max-Height" class="Box-Property">
+    <div>The <code>max-height</code> property defines the maximum height of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Max-Height" type="text" placeholder="Enter max-height value">
+      <button onclick="PropertyMaxHeight()">MODIFY</button>
+      <div class="Value-Box" onclick="MaxHeightGlobalValues()"> <code>max-height: <em>CSS Global Values</em>;</code> <div id="Max-Height-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="MaxHeightLengthValues()"> <code>max-height: <em>CSS Length Values</em>;</code> <div id="Max-Height-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="MaxHeightNone()"> <code>max-height: none;</code> <div id="Max-Height-None"> </div> </div>
+      <div class="Value-Box" onclick="MaxHeightMinContent()"> <code>max-height: min-content;</code> <div id="Max-Height-Min-Content"></div> </div>
+      <div class="Value-Box" onclick="MaxHeightFitContent()"> <code>max-height: fit-content;</code> <div id="Max-Height-Fit-Content"></div> </div>
+      <div class="Value-Box" onclick="MaxHeightMaxContent()"> <code>max-height: max-content;</code> <div id="Max-Height-Max-Content"></div> </div>
+    </div>
+  </div>
+  </section>
+
+  <script src="Notes-CSS.js"></script>
+
+  <!------------------->
   <!-- CSS SELECTORS -->
   <!------------------->
   <section id="CSS-Selectors">
@@ -233,20 +288,18 @@
   <li><code><em>Selector</em>::view-transition-old</code></li>
   </ul></div>  --> </section>
 
-  <!------------------->
-  <!-- CSS BOX MODEL -->
-  <!------------------->
-  <section id="CSS-Box-Model">
-  <h1>CSS BOX MODEL</h1>
+  
+  
+  
 
-  <!-- HEIGHT -->
+  
   <div id="Property-Height" class="Box">
   <h3><code>height: <em>myValue</em>;</code></h3>
   <ul><li>The <code>height</code> property sets the height of an element</li> <br>
 
   <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
+  <ul><li></li>
+  <li></li>
   <li><code>auto</code> <ul><li>By default, the element will automatically adjust its height to allow its content to be displayed correctly</li></ul> </li>
   <!--  <li><code>fit-content</code></li>
   <li><code>max-content</code></li>
@@ -596,7 +649,6 @@
   <div id="Property-Aspect-Ratio" class="Box">
   <h3><code>aspect-ratio: <em>myValue</em>;</code></h3>
   </div>  -->
-  </section>
 
   <!-------------------->
   <!-- CSS BOX LAYOUT -->
@@ -1836,91 +1888,6 @@
   <li><code>cqmin</code></li>
   <li><code>cqmax</code></li>
   </ul></p> </div> </section>
-
-  <!-------------------->
-  <!--CSS COLOR VALUES-->
-  <!-------------------->
-  <section id="CSS-Color-Values">
-  <h1>CSS COLOR VALUES</h1>
-  <div id="Color-Strings" class="Box">
-  <h3><code><em>Color Strings</em></code></h3>
-  <code>aqua | aquamarine | mediumaquamarine</code>                                       <br>
-  <code>azure</code>                                                                      <br>
-  <code>blue | lightblue | mediumblue | darkblue</code>                                   <br>
-  <code>brown | rosybrown | saddlebrown | sandybrown</code>                               <br>
-  <code>coral | lightcoral</code>                                                         <br>
-  <code>cyan | lightcyan | darkcyan</code>                                                <br>
-  <code>gainsboro</code>                                                                  <br>
-  <code>gold | goldenrod | palegoldenrod | darkgoldenrod | lightgoldenrodyellow </code>   <br>
-  <code>gray | lightgray | dimgray | darkgray</code>                                      <br>
-  <code>green | palegreen | lightgreen | darkgreen</code>                                 <br>
-  <code>grey | lightgrey | dimgrey | darkgrey</code>                                      <br>
-  <code>honeydew</code>                                                                   <br>
-  <code>khaki | darkkhaki</code>                                                          <br>
-  <code>lavender | lavenderblush</code>                                                   <br>
-  <code>lime | limegreen</code>                                                           <br>
-  <code>magenta | darkmagenta</code>                                                      <br>
-  <code>maroon</code>                                                                     <br>
-  <code>navy</code>                                                                       <br>
-  <code>olive | olivedrab | darkolivegreen</code>                                         <br>
-  <code>oldlace</code>                                                                    <br>
-  <code>orange | darkorange | orangered</code>                                            <br>
-  <code>orchid | mediumorchid | darkorchid</code>                                         <br>
-  <code>pink | lightpink | deeppink | hotpink</code>                                      <br>
-  <code>purple | mediumpurple | rebeccapurple</code>                                      <br>
-  <code>red | darkred | indianred</code>                                                  <br>
-  <code>salmon | lightsalmon | darksalmon</code>                                          <br>
-  <code>seagreen | lightseagreen | mediumseagreen | darkseagreen</code>                   <br>
-  <code>skyblue | lightskyblue | deepskyblue</code>                                       <br>
-  <code>slateblue | mediumslateblue | darkslateblue</code>                                <br>
-  <code>slategray | lightslategray | darkslategray</code>                                 <br>
-  <code>slategrey | lightslategrey | darkslategrey</code>                                 <br>
-  <code>springgreen | mediumspringgreen</code>                                            <br>
-  <code>steelblue | lightsteelblue</code>                                                 <br>
-  <code>turquoise | paleturquoise | mediumturquoise | darkturquoise</code>                <br>
-  <code>violet | darkviolet | palevioletred | mediumvioletred</code>                      <br>
-  <code>wheat</code>                                                                      <br>
-  <code>white | antiquewhite | floralwhite | ghostwhite | navajowhite | whitesmoke</code> <br>
-  <code>yellow | lightyellow | yellowgreen</code>                                         <br>
-  
-  <code>aliceblue | cadetblue | cornflowerblue | dodgerblue | midnightblue | powderblue | royalblue</code> <br>
-  <code>forestgreen | lawngreen</code>                                                                     <br>
-  <code>blueviolet | greenyellow</code>                                                                    <br>
-  <code>beige | bisque | black | blanchedalmond | burlywood</code> <br>
-  <code>chartreuse | chocolate | cornsilk | crimson</code>         <br>
-  <code>firebrick | fuchsia</code>                                 <br>
-  <code>indigo | ivory</code>                                      <br>
-  <code>lemonchiffon | linen</code>                                <br>
-  <code>mintcream | mistyrose | moccasin</code>                    <br>
-  <code>papayawhip | peachpuff | peru | plum</code>                <br>
-  <code>seashell | sienna | silver | snow</code>                   <br>
-  <code>tan | teal | thistle | tomato</code>                       <br>
-  </div>
-
-  <div id="Color-Functions" class="Box">
-  <h3><code><em>Color Functions</em></code></h3>
-  <ul><li><code>color()</code></li>
-  <li><code>color-relative()</code></li>
-  <li><code>color-mix()</code></li>
-  <li><code>color-mix-hue()</code></li>
-  <li><code>hsl()</code></li>
-  <li><code>hsl-relative()</code></li>
-  <li><code>hsla()</code></li>
-  <li><code>hwb()</code></li>
-  <li><code>hwb-relative()</code></li>
-  <li><code>lab()</code></li>
-  <li><code>lab-relative()</code></li>
-  <li><code>lch()</code></li>
-  <li><code>lch-relative()</code></li>
-  <li><code>oklab()</code></li>
-  <li><code>oklab-relative()</code></li>
-  <li><code>oklch()</code></li>
-  <li><code>oklch-relative()</code></li>
-  <li><code>rgb()</code></li>
-  <li><code>rgb-relative()</code></li>
-  <li><code>rgba()</code></li>
-  <!-- REFERENCE = https://www.colorhexa.com/  -->
-  </ul> </div> </section>
 
   <!--  @charset | @font-face | @import | @keyframes | @media | @property
 
