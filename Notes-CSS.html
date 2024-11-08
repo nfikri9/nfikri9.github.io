@@ -33,6 +33,51 @@
   <h1>CSS BOX MODEL</h1>
   <div class="Box-Model">My Contents!</div>
 
+  <!-- WIDTH -->
+  <div id="Property-Width" class="Box-Property">
+    <div>The <code>width</code> property sets the width of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Width" type="text" placeholder="Enter width value">
+      <button onclick="PropertyWidth()">MODIFY</button>
+      <div class="Value-Box" onclick="WidthGlobalValues()"> <code>width: <em>CSS Global Values</em>;</code> <div id="Width-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="WidthLengthValues()"> <code>width: <em>CSS Length Values</em>;</code> <div id="Width-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="WidthAuto()"> <code>width: auto;</code> <div id="Width-Auto"> </div> </div>
+      <div class="Value-Box" onclick="WidthMinContent()"> <code>width: min-content;</code> <div id="Width-Min-Content"></div> </div>
+      <div class="Value-Box" onclick="WidthFitContent()"> <code>width: fit-content;</code> <div id="Width-Fit-Content"></div> </div>
+      <div class="Value-Box" onclick="WidthMaxContent()"> <code>width: max-content;</code> <div id="Width-Max-Content"></div> </div>
+    </div>
+  </div>
+
+  <!-- MIN-WIDTH -->
+  <div id="Property-Min-Width" class="Box-Property">
+    <div>The <code>min-width</code> property defines the minimum width of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Min-Width" type="text" placeholder="Enter min-width value">
+      <button onclick="PropertyMinWidth()">MODIFY</button>
+      <div class="Value-Box" onclick="MinWidthGlobalValues()"> <code>min-width: <em>CSS Global Values</em>;</code> <div id="Min-Width-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="MinWidthLengthValues()"> <code>min-width: <em>CSS Length Values</em>;</code> <div id="Min-Width-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="MinWidthAuto()"> <code>min-width: auto;</code> <div id="Min-Width-Auto"> </div> </div>
+      <div class="Value-Box" onclick="MinWidthMinContent()"> <code>min-width: min-content;</code> <div id="Min-Width-Min-Content"></div> </div>
+      <div class="Value-Box" onclick="MinWidthFitContent()"> <code>min-width: fit-content;</code> <div id="Min-Width-Fit-Content"></div> </div>
+      <div class="Value-Box" onclick="MinWidthMaxContent()"> <code>min-width: max-content;</code> <div id="Min-Width-Max-Content"></div> </div>
+    </div>
+  </div>
+
+  <!-- MAX-WIDTH -->
+  <div id="Property-Max-Width" class="Box-Property">
+    <div>The <code>max-width</code> property defines the maximum width of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Max-Width" type="text" placeholder="Enter max-width value">
+      <button onclick="PropertyMaxWidth()">MODIFY</button>
+      <div class="Value-Box" onclick="MaxWidthGlobalValues()"> <code>max-width: <em>CSS Global Values</em>;</code> <div id="Max-Width-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="MaxWidthLengthValues()"> <code>max-width: <em>CSS Length Values</em>;</code> <div id="Max-Width-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="MaxWidthNone()"> <code>max-width: none;</code> <div id="Max-Width-None"> </div> </div>
+      <div class="Value-Box" onclick="MaxWidthMinContent()"> <code>max-width: min-content;</code> <div id="Max-Width-Min-Content"></div> </div>
+      <div class="Value-Box" onclick="MaxWidthFitContent()"> <code>max-width: fit-content;</code> <div id="Max-Width-Fit-Content"></div> </div>
+      <div class="Value-Box" onclick="MaxWidthMaxContent()"> <code>max-width: max-content;</code> <div id="Max-Width-Max-Content"></div> </div>
+    </div>
+  </div>
+
   <!-- HEIGHT -->
   <div id="Property-Height" class="Box-Property">
     <div>The <code>height</code> property sets the height of an element</div>
@@ -75,6 +120,47 @@
       <div class="Value-Box" onclick="MaxHeightMinContent()"> <code>max-height: min-content;</code> <div id="Max-Height-Min-Content"></div> </div>
       <div class="Value-Box" onclick="MaxHeightFitContent()"> <code>max-height: fit-content;</code> <div id="Max-Height-Fit-Content"></div> </div>
       <div class="Value-Box" onclick="MaxHeightMaxContent()"> <code>max-height: max-content;</code> <div id="Max-Height-Max-Content"></div> </div>
+    </div>
+  </div>
+
+  <!-- ASPECT RATIO
+  <div id="Property-Aspect-Ratio" class="Box-Property">
+    <div>The <code>aspect-ratio</code> property defines the ratio between width and height of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Aspect-Ratio" type="text" placeholder="Enter width/height value">
+      <button onclick="PropertyAspectRatio()">MODIFY</button>
+      <div class="Value-Box" onclick="AspectRatioGlobalValues()"> <code>aspect-ratio: <em>CSS Global Values</em>;</code> <div id="Aspect-Ratio-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="AspectRatioNumbers()"> <code>aspect-ratio: <em>Numbers</em>;</code> <div id="Aspect-Ratio-Numbers"></div> </div>
+      <div class="Value-Box" onclick="AspectRatioAuto()"> <code>aspect-ratio: auto;</code> <div id="Aspect-Ratio-Auto"> </div> </div>
+    </div>
+  </div>  -->
+
+  <!-- INSIGHTS BOX MODEL -->
+  <div class="Box-Insights" onclick="Insights()"><b>INSIGHTS</b>
+    <div class="Display-Insights">
+      <div><code>width</code> vs. <code>min-width</code> vs. <code>max-width</code>
+        <div><code>width</code> property overrides the original width of the element</div>
+        <div><code>min-width</code> overrides <code>width</code> when <code>min-width &gt; width</code></div>
+        <div><code>max-width</code> overrides <code>width</code> when <code>max-width &lt; width</code></div>
+        <div>Overall, <code>min-width</code> is the most top priority followed by <code>max-width, width</code> and the original width of the element</div>
+      </div>
+      <div class="Item-Insights"><code>height</code> vs. <code>min-height</code> vs. <code>max-height</code>
+        <div><code>height</code> property overrides the original height of the element</div>
+        <div><code>min-height</code> overrides <code>height</code> when <code>min-height &gt; height</code></div>
+        <div><code>max-height</code> overrides <code>height</code> when <code>max-height &lt; height</code></div>
+        <div>Overall, <code>min-height</code> is the most top priority followed by <code>max-height, height</code> and the original height of the element</div>
+      </div>
+      <div class="Item-Insights">Limited Size Box Dimensions
+        <div>The browser adjust the contents based on the width of the element first</div>
+        <div>If the content is larger than the width, it will always automatically change the height of the element (assuming <code>height: auto;</code>)</div>
+        <div>If not, the content is display on the next line within specified height</div>
+        <div>If the contents are not fit within the specified height, it will overflow</div>
+        <div>Use <code>overflow</code> property on the container to manage overflowed contents</div>
+      </div>
+      <div class="Item-Insights">Actual Size Box Dimensions
+        <div><code><em>Width Dimension</em> = "width"</code></div>
+        <div><code><em>Height Dimension</em> = "height"</code></div>
+      </div>
     </div>
   </div>
   </section>
@@ -287,56 +373,6 @@
   <li><code><em>Selector</em>::view-transition-new</code></li>
   <li><code><em>Selector</em>::view-transition-old</code></li>
   </ul></div>  --> </section>
-
-  
-  
-  
-
-  
-  <div id="Property-Height" class="Box">
-  <h3><code>height: <em>myValue</em>;</code></h3>
-  <ul><li>The <code>height</code> property sets the height of an element</li> <br>
-
-  <li>Related Value(s):
-  <ul><li></li>
-  <li></li>
-  <li><code>auto</code> <ul><li>By default, the element will automatically adjust its height to allow its content to be displayed correctly</li></ul> </li>
-  <!--  <li><code>fit-content</code></li>
-  <li><code>max-content</code></li>
-  <li><code>min-content</code></li> -->
-  </ul></li> <br>
-
-  <!--  <li><code>min-height: <em>myValue</em>;</code></li>
-  <li><code>max-height: <em>myValue</em>;</code></li>  -->
-
-  <li><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Valid values
-  <ul><li>Negative values are not allowed</li>
-  </ul></li> </ul></li> </ul></div>
-
-  <!-- WIDTH -->
-  <div id="Property-Width" class="Box">
-  <h3><code>width: <em>myValue</em>;</code></h3>
-  <ul><li>The <code>width</code> property sets the width of an element</li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code>
-  <ul><li>By default, the element will automatically adjust its width based on element's <code>display: <em>Default</em>;</code></li>
-  </ul></li>
-  <!--  <li><code>fit-content</code></li>
-  <li><code>min-content</code></li>
-  <li><code>max-content</code></li>  -->
-  </ul></li> <br>
-
-  <!--  <li><code>min-width: <em>myValue</em>;</code></li>
-  <li><code>max-width: <em>myValue</em>;</code></li>  -->
-
-  <li><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Valid values
-  <ul><li>Negative values are not allowed</li>
-  </ul></li> </ul></li> </ul></div>
 
   <!-- PADDING -->
   <div id="Property-Padding" class="Box">
@@ -644,11 +680,6 @@
 
   <li><mark><b>INSIGHTS:</b></mark></li>
   </ul></div>
-
-  <!-- ASPECT RATIO 
-  <div id="Property-Aspect-Ratio" class="Box">
-  <h3><code>aspect-ratio: <em>myValue</em>;</code></h3>
-  </div>  -->
 
   <!-------------------->
   <!-- CSS BOX LAYOUT -->
@@ -1832,62 +1863,6 @@
   <li>Instead of copy and paste the same colors over and over again, developer can place them in variables</li>
   </ul></li>
   </ul></p> </div></section>
-
-  <!--------------------->
-  <!--CSS LENGTH VALUES-->
-  <!--------------------->
-  <section id="CSS-Length-Values">
-  <h1>CSS LENGTH VALUES</h1>
-  <div id="Absolute-Length-Units" class="Box">
-  <h3><code><em>Abolute Length Units</em></code></h3>
-  <p>Abolute length units
-  <ul><li><code>px</code></li>
-  <li><code>cm</code></li>
-  <li><code>mm</code></li>
-  <li><code>Q</code></li>
-  <li><code>in</code></li>
-  <li><code>pc</code></li>
-  <li><code>pt</code></li>
-  </ul></p> </div>
-
-  <div id="Relative-Length-Units" class="Box">
-  <h3><code><em>Relative Length Units</em></code></h3>
-  <p>Relative length units based on font
-  <ul><li><code>cap</code></li>
-  <li><code>ch</code></li>
-  <li><code>em</code></li>
-  <li><code>ex</code></li>
-  <li><code>ic</code></li>
-  <li><code>lh</code></li>
-  </ul></p>
-  <p>Relative length units based on root element's font
-  <ul><li><code>rcap</code></li>
-  <li><code>rch</code></li>
-  <li><code>rem</code></li>
-  <li><code>rex</code></li>
-  <li><code>ric</code></li>
-  <li><code>rlh</code></li>
-  </ul></p>
-  <p>Relative length units based on viewport
-  <ul><li><code>sv</code></li>
-  <li><code>lv</code></li>
-  <li><code>dv</code></li>
-  <li><code><em>Default Viewport</em></code></li>
-  <li><code>vh</code></li>
-  <li><code>vw</code></li>
-  <li><code>vmin</code></li>
-  <li><code>vmax</code></li>
-  <li><code>vb</code></li>
-  <li><code>vi</code></li>
-  </ul></p>
-  <p>Container query length units
-  <ul><li><code>cqw</code></li>
-  <li><code>cqh</code></li>
-  <li><code>cqi</code></li>
-  <li><code>cqb</code></li>
-  <li><code>cqmin</code></li>
-  <li><code>cqmax</code></li>
-  </ul></p> </div> </section>
 
   <!--  @charset | @font-face | @import | @keyframes | @media | @property
 

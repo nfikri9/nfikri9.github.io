@@ -17,8 +17,57 @@ function CSSGlobalValues(){
 ///////////////////////
 function CSSLengthValues(){
   const length = {
-    absolute: "<div><code><em>Absolute Length Units</em></code></div>",
-    relative: "<div><code><em>Relative Length Units</em></code></div>"
+    absolute:
+      "<div id='Box-Absolute-Length-Units'><code><em>Absolute Length Units</em></code>" +
+      "<div>Aboslute length units are fixed which always be the same size, not relative to anything else</div>" +
+      "<div><code>px</code> &rarr; Pixel</div>" +
+      "<div><code>cm</code> &rarr; Centimeters <code>[1cm = 37.8px]</code></div>" +
+      "<div><code>mm</code> &rarr; Millimeters <code>[1mm = 3.78px]</code></div>" +
+      "<div><code>Q</code> &rarr; Quarter-millimeters <code>[1Q = 0.945px]</code></div>" +
+      "<div><code>in</code> &rarr; Inches <code>[1in = 96px]</code></div>" +
+      "<div><code>pc</code> &rarr; Picas <code>[1pc = 16px]</code></div>" +
+      "<div><code>pt</code> &rarr; Points <code>[1pt = (4/3)px]</code></div>" +
+      "</div>",
+
+    relative:
+      "<div><code><em>Relative Length Units</em></code>" +
+      "<div id='Box-Relative-Length-Units'>Relative length units based on font" +
+      "<div><code>cap</code></div>" +
+      "<div><code>ch</code></div>" +
+      "<div><code>em</code></div>" +
+      "<div><code>ex</code></div>" +
+      "<div><code>ic</code></div>" +
+      "<div><code>lh</code></div>" +
+      "</div>" +
+      "<div id='Box-Relative-Length-Units'>Relative length units based on root element's font" +
+      "<div><code>rcap</code></div>" +
+      "<div><code>rch</code></div>" +
+      "<div><code>rem</code></div>" +
+      "<div><code>rex</code></div>" +
+      "<div><code>ric</code></div>" +
+      "<div><code>rlh</code></div>" +
+      "</div>" +
+      "<div id='Box-Relative-Length-Units'>Relative length units based on viewport" +
+      "<div><code>sv</code></div>" +
+      "<div><code>lv</code></div>" +
+      "<div><code>dv</code></div>" +
+      "<div><code><em>Default Viewport</em></code></div>" +
+      "<div><code>vh</code></div>" +
+      "<div><code>vw</code></div>" +
+      "<div><code>vmin</code></div>" +
+      "<div><code>vmax</code></div>" +
+      "<div><code>vb</code></div>" +
+      "<div><code>vi</code></div>" +
+      "</div>" +
+      "<div id='Box-Relative-Length-Units'>Container query length units" +
+      "<div><code>cqw</code></div>" +
+      "<div><code>cqh</code></div>" +
+      "<div><code>cqi</code></div>" +
+      "<div><code>cqb</code></div>" +
+      "<div><code>cqmin</code></div>" +
+      "<div><code>cqmax</code></div>" +
+      "</div>" +
+      "</div>"
   };
   return length;
 }
@@ -104,6 +153,234 @@ function CSSColorValues(){
       "<div><code>rgba()</code></div>"
   };
   return color;
+}
+
+////////////////////
+// WIDTH PROPERTY //
+////////////////////
+function PropertyWidth() {
+  let myWidth = document.getElementById("Input-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.width = myWidth;
+}
+
+// WIDTH: CSS GLOBAL VALUES; //
+function WidthGlobalValues() {
+  let myVisibility = document.getElementById("Width-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Width-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// WIDTH: CSS LENGTH VALUES; //
+function WidthLengthValues() {
+  let myVisibility = document.getElementById("Width-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Width-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// WIDTH: AUTO; //
+function WidthAuto() {
+  let myVisibility = document.getElementById("Width-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Width-Auto").innerHTML =
+      "<div>[Default]</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// WIDTH: MIN-CONTENT; //
+function WidthMinContent() {
+  let myVisibility = document.getElementById("Width-Min-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Width-Min-Content").innerHTML = "<div><code>min-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// WIDTH: FIT-CONTENT; //
+function WidthFitContent() {
+  let myVisibility = document.getElementById("Width-Fit-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Width-Fit-Content").innerHTML = "<div><code>fit-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// WIDTH: MAX-CONTENT; //
+function WidthMaxContent() {
+  let myVisibility = document.getElementById("Width-Max-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Width-Max-Content").innerHTML = "<div><code>max-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////
+// MIN-WIDTH PROPERTY //
+////////////////////////
+function PropertyMinWidth() {
+  let myMinWidth = document.getElementById("Input-Min-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.minWidth = myMinWidth;
+}
+
+// MIN-WIDTH: CSS GLOBAL VALUES; //
+function MinWidthGlobalValues() {
+  let myVisibility = document.getElementById("Min-Width-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Width-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-WIDTH: CSS LENGTH VALUES; //
+function MinWidthLengthValues() {
+  let myVisibility = document.getElementById("Min-Width-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Width-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-WIDTH: AUTO; //
+function MinWidthAuto() {
+  let myVisibility = document.getElementById("Min-Width-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Width-Auto").innerHTML =
+      "<div><code>auto</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-WIDTH: MIN-CONTENT; //
+function MinWidthMinContent() {
+  let myVisibility = document.getElementById("Min-Width-Min-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Width-Min-Content").innerHTML = "<div><code>min-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-WIDTH: FIT-CONTENT; //
+function MinWidthFitContent() {
+  let myVisibility = document.getElementById("Min-Width-Fit-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Width-Fit-Content").innerHTML = "<div><code>fit-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MIN-WIDTH: MAX-CONTENT; //
+function MinWidthMaxContent() {
+  let myVisibility = document.getElementById("Min-Width-Max-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Min-Width-Max-Content").innerHTML = "<div><code>max-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////
+// MAX-WIDTH PROPERTY //
+////////////////////////
+function PropertyMaxWidth() {
+  let myMaxWidth = document.getElementById("Input-Max-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.maxWidth = myMaxWidth;
+}
+
+// MAX-WIDTH: CSS GLOBAL VALUES; //
+function MaxWidthGlobalValues() {
+  let myVisibility = document.getElementById("Max-Width-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Width-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-WIDTH: CSS LENGTH VALUES; //
+function MaxWidthLengthValues() {
+  let myVisibility = document.getElementById("Max-Width-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Width-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-WIDTH: NONE; //
+function MaxWidthNone() {
+  let myVisibility = document.getElementById("Max-Width-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Width-None").innerHTML =
+      "<div>[Default] There is no <code>max-width</code> specified</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-WIDTH: MIN-CONTENT; //
+function MaxWidthMinContent() {
+  let myVisibility = document.getElementById("Max-Width-Min-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Width-Min-Content").innerHTML = "<div><code>min-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-WIDTH: FIT-CONTENT; //
+function MaxWidthFitContent() {
+  let myVisibility = document.getElementById("Max-Width-Fit-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Width-Fit-Content").innerHTML = "<div><code>fit-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MAX-WIDTH: MAX-CONTENT; //
+function MaxWidthMaxContent() {
+  let myVisibility = document.getElementById("Max-Width-Max-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Max-Width-Max-Content").innerHTML = "<div><code>max-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
 }
 
 /////////////////////
@@ -296,7 +573,7 @@ function MaxHeightNone() {
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
     document.getElementById("Max-Height-None").innerHTML =
-      "<div><code>none</code></div>";
+      "<div>[Default] There is no <code>max-height</code> specified</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -330,6 +607,60 @@ function MaxHeightMaxContent() {
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
     document.getElementById("Max-Height-Max-Content").innerHTML = "<div><code>max-content</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////
+// ASPECT RATIO PROPERTY //
+///////////////////////////
+function PropertyAspectRatio() {
+  let myAspectRatio = document.getElementById("Input-Aspect-Ratio").value;
+  document.getElementsByClassName("Box-Model")[0].style.aspectRatio = myAspectRatio;
+}
+
+// ASPECT-RATIO: CSS GLOBAL VALUES; //
+function AspectRatioGlobalValues() {
+  let myVisibility = document.getElementById("Aspect-Ratio-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Aspect-Ratio-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ASPECT-RATIO: NUMBERS; //
+function AspectRatioNumbers() {
+  let myVisibility = document.getElementById("Aspect-Ratio-Numbers");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Aspect-Ratio-Numbers").innerHTML =
+      "<div>First parameter is required, which specifies the number for width in aspect ratio</div>" +
+      "<div>Second parameter is optional, which specifies the number for height in aspect ratio (the default number is 1)</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ASPECT-RATIO: AUTO; //
+function AspectRatioAuto() {
+  let myVisibility = document.getElementById("Aspect-Ratio-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Aspect-Ratio-Auto").innerHTML =
+      "<div><code>auto</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-MODEL INSIGHTS //
+function Insights() {
+  let myVisibility = document.getElementsByClassName("Display-Insights")[0];
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
   }
   else { myVisibility.style.display = "none"; }
 }
