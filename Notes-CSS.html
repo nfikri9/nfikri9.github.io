@@ -135,6 +135,181 @@
     </div>
   </div>  -->
 
+  <!-- PADDING -->
+  <div id="Property-Padding" class="Box-Property">
+    <div>The <code>padding</code> defines space around an element's content, inside of any defined border</div>
+    <div>There are some generic-side properties that can be written as its values
+      <div>4 values = <code>padding: padding-top padding-right padding-bottom padding-left;</code></div>
+      <div>3 values = <code>padding: padding-top padding-<em>Horizontal</em> padding-bottom;</code></div>
+      <div>2 values = <code>padding: padding-<em>Vertical</em> padding-<em>Horizontal</em>;</code></div>
+      <div>1 value = <code>padding: padding-<em>All</em>;</code></div>
+    </div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Padding" type="text" placeholder="Enter padding value">
+      <button onclick="PropertyPadding()">MODIFY</button>
+      <div class="Value-Box" onclick="PaddingGlobalValues()"> <code>padding: <em>CSS Global Values</em>;</code> <div id="Padding-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="PaddingLengthValues()"> <code>padding: <em>CSS Length Values</em>;</code> <div id="Padding-Length-Values"></div> </div>
+    </div>
+  </div>
+
+  <!-- MARGIN -->
+  <div id="Property-Margin" class="Box-Property">
+    <div>The <code>margin</code> property specifies space around elements, outside of any defined border</div>
+    <div>There are some generic-side properties that can be written as its values
+      <div>4 values = <code>margin: margin-top margin-right margin-bottom margin-left;</code></div>
+      <div>3 values = <code>margin: margin-top margin-<em>Horizontal</em> margin-bottom;</code></div>
+      <div>2 values = <code>margin: margin-<em>Vertical</em> margin-<em>Horizontal</em>;</code></div>
+      <div>1 value = <code>margin: margin-<em>All</em>;</code></div>
+    </div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Margin" type="text" placeholder="Enter margin value">
+      <button onclick="PropertyMargin()">MODIFY</button>
+      <div class="Value-Box" onclick="MarginGlobalValues()"> <code>margin: <em>CSS Global Values</em>;</code> <div id="Margin-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="MarginLengthValues()"> <code>margin: <em>CSS Length Values</em>;</code> <div id="Margin-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="MarginAuto()"> <code>margin: auto;</code> <div id="Margin-Auto"></div> </div>
+    </div>
+  </div>
+
+  <!-- BORDER WIDTH -->
+  <div id="Property-Border-Width" class="Box-Property">
+    <div>The <code>border-width</code> property specifies the width of an element's borders</div>
+    <div>There are some generic-side properties that can be written as its values
+      <div>4 values = <code>border-width: border-top-width border-right-width border-bottom-width border-left-width;</code></div>
+      <div>3 values = <code>border-width: border-top-width border-<em>Horizontal</em>-width border-bottom-width;</code></div>
+      <div>2 values = <code>border-width: border-<em>Vertical</em>-width border-<em>Horizontal</em>-width;</code></div>
+      <div>1 value = <code>border-width: border-<em>All</em>-width;</code></div>
+    </div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Border-Width" type="text" placeholder="Enter border-width value">
+      <button onclick="PropertyBorderWidth()">MODIFY</button>
+      <div class="Value-Box" onclick="BorderWidthGlobalValues()"> <code>border-width: <em>CSS Global Values</em>;</code> <div id="Border-Width-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="BorderWidthLengthValues()"> <code>border-width: <em>CSS Length Values</em>;</code> <div id="Border-Width-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="BorderWidthMedium()"> <code>border-width: medium;</code> <div id="Border-Width-Medium"></div> </div>
+      <div class="Value-Box" onclick="BorderWidthThin()"> <code>border-width: thin;</code> <div id="Border-Width-Thin"></div> </div>
+      <div class="Value-Box" onclick="BorderWidthThick()"> <code>border-width: thick;</code> <div id="Border-Width-Thick"></div> </div>
+    </div>
+  </div>
+
+  <!-- BORDER STYLE -->
+  <div id="Property-Border-Style" class="Box-Property">
+    <div>The <code>border-style</code> property specifies the style of an element's borders</div>
+    <div>There are some generic-side properties that can be written as its values
+      <div>4 values = <code>border-style: border-top-style border-right-style border-bottom-style border-left-style;</code></div>
+      <div>3 values = <code>border-style: border-top-style border-<em>Horizontal</em>-style border-bottom-style;</code></div>
+      <div>2 values = <code>border-style: border-<em>Vertical</em>-style border-<em>Horizontal</em>-style;</code></div>
+      <div>1 value = <code>border-style: border-<em>All</em>-style;</code></div>
+    </div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Border-Style" type="text" placeholder="Enter border-style value">
+      <button onclick="PropertyBorderStyle()">MODIFY</button>
+      <div class="Value-Box" onclick="BorderStyleGlobalValues()"> <code>border-style: <em>CSS Global Values</em>;</code> <div id="Border-Style-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleNone()"> <code>border-style: none;</code> <div id="Border-Style-None"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleSolid()"> <code>border-style: solid;</code> <div id="Border-Style-Solid"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleDashed()"> <code>border-style: dashed;</code> <div id="Border-Style-Dashed"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleDotted()"> <code>border-style: dotted;</code> <div id="Border-Style-Dotted"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleDouble()"> <code>border-style: double;</code> <div id="Border-Style-Double"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleHidden()"> <code>border-style: hidden;</code> <div id="Border-Style-Hidden"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleGroove()"> <code>border-style: groove;</code> <div id="Border-Style-Groove"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleInset()"> <code>border-style: inset;</code> <div id="Border-Style-Inset"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleOutset()"> <code>border-style: outset;</code> <div id="Border-Style-Outset"></div> </div>
+      <div class="Value-Box" onclick="BorderStyleRidge()"> <code>border-style: ridge;</code> <div id="Border-Style-Ridge"></div> </div>
+    </div>
+  </div>
+
+  <!-- BORDER COLOR -->
+  <div id="Property-Border-Color" class="Box-Property">
+    <div>The <code>border-color</code> property specifies the color of an element's borders</div>
+    <div>There are some generic-side properties that can be written as its values
+      <div>4 values = <code>border-color: border-top-color border-right-color border-bottom-color border-left-color;</code></div>
+      <div>3 values = <code>border-color: border-top-color border-<em>Horizontal</em>-color border-bottom-color;</code></div>
+      <div>2 values = <code>border-color: border-<em>Vertical</em>-color border-<em>Horizontal</em>-color;</code></div>
+      <div>1 value = <code>border-color: border-<em>All</em>-color;</code></div>
+    </div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Border-Color" type="text" placeholder="Enter border-color value">
+      <button onclick="PropertyBorderColor()">MODIFY</button>
+      <div class="Value-Box" onclick="BorderColorGlobalValues()"> <code>border-color: <em>CSS Global Values</em>;</code> <div id="Border-Color-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="BorderColorColorValues()"> <code>border-color: <em>CSS Color Values</em>;</code> <div id="Border-Color-Color-Values"></div> </div>
+      <div class="Value-Box" onclick="BorderColorCurrentColor()"> <code>border-color: currentColor;</code> <div id="Border-Color-Current-Color"></div> </div>
+      <div class="Value-Box" onclick="BorderColorTransparent()"> <code>border-color: transparent;</code> <div id="Border-Color-Transparent"></div> </div>
+    </div>
+  </div>
+
+  <!-- BORDER RADIUS -->
+  <div id="Property-Border-Radius" class="Box-Property">
+    <div>The <code>border-radius</code> property defines the radius of the element's corners</div>
+    <div>There are some generic-side properties that can be written as its values
+      <div>4 values = <code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code></div>
+      <div>3 values = <code>border-radius: border-top-left-radius border-<em>Diagonal-Right-Left</em>-radius border-bottom-right-radius;</code></div>
+      <div>2 values = <code>border-radius: border-<em>Diagonal-Left-Right</em>-radius border-<em>Diagonal-Right-Left</em>-radius;</code></div>
+      <div>1 value = <code>border-radius: border-<em>All</em>-radius;</code></div>
+    </div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Border-Radius" type="text" placeholder="Enter border-radius value">
+      <button onclick="PropertyBorderRadius()">MODIFY</button>
+      <div class="Value-Box" onclick="BorderRadiusGlobalValues()"> <code>border-radius: <em>CSS Global Values</em>;</code> <div id="Border-Radius-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="BorderRadiusLengthValues()"> <code>border-radius: <em>CSS Length Values</em>;</code> <div id="Border-Radius-Length-Values"></div> </div>
+    </div>
+  </div>
+
+  <!-- OUTLINE WIDTH -->
+  <div id="Property-Outline-Width" class="Box-Property">
+    <div>The <code>outline-width</code> property specifies the width of an outline, drawn around elements, outside the borders</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Outline-Width" type="text" placeholder="Enter outline-width value">
+      <button onclick="PropertyOutlineWidth()">MODIFY</button>
+      <div class="Value-Box" onclick="OutlineWidthGlobalValues()"> <code>outline-width: <em>CSS Global Values</em>;</code> <div id="Outline-Width-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="OutlineWidthLengthValues()"> <code>outline-width: <em>CSS Length Values</em>;</code> <div id="Outline-Width-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="OutlineWidthMedium()"> <code>outline-width: medium;</code> <div id="Outline-Width-Medium"></div> </div>
+      <div class="Value-Box" onclick="OutlineWidthThin()"> <code>outline-width: thin;</code> <div id="Outline-Width-Thin"></div> </div>
+      <div class="Value-Box" onclick="OutlineWidthThick()"> <code>outline-width: thick;</code> <div id="Outline-Width-Thick"></div> </div>
+    </div>
+  </div>
+
+  <!-- OUTLINE STYLE -->
+  <div id="Property-Outline-Style" class="Box-Property">
+    <div>The <code>outline-style</code> property specifies the style of an outline, drawn around elements, outside the borders</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Outline-Style" type="text" placeholder="Enter outline-style value">
+      <button onclick="PropertyOutlineStyle()">MODIFY</button>
+      <div class="Value-Box" onclick="OutlineStyleGlobalValues()"> <code>outline-style: <em>CSS Global Values</em>;</code> <div id="Outline-Style-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleNone()"> <code>outline-style: none;</code> <div id="Outline-Style-None"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleSolid()"> <code>outline-style: solid;</code> <div id="Outline-Style-Solid"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleDashed()"> <code>outline-style: dashed;</code> <div id="Outline-Style-Dashed"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleDotted()"> <code>outline-style: dotted;</code> <div id="Outline-Style-Dotted"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleDouble()"> <code>outline-style: double;</code> <div id="Outline-Style-Double"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleHidden()"> <code>outline-style: hidden;</code> <div id="Outline-Style-Hidden"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleGroove()"> <code>outline-style: groove;</code> <div id="Outline-Style-Groove"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleInset()"> <code>outline-style: inset;</code> <div id="Outline-Style-Inset"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleOutset()"> <code>outline-style: outset;</code> <div id="Outline-Style-Outset"></div> </div>
+      <div class="Value-Box" onclick="OutlineStyleRidge()"> <code>outline-style: ridge;</code> <div id="Outline-Style-Ridge"></div> </div>
+    </div>
+  </div>
+
+  <!-- OUTLINE COLOR -->
+  <div id="Property-Outline-Color" class="Box-Property">
+    <div>The <code>outline-color</code> property specifies the color of an outline, drawn around elements, outside the borders</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Outline-Color" type="text" placeholder="Enter outline-color value">
+      <button onclick="PropertyOutlineColor()">MODIFY</button>
+      <div class="Value-Box" onclick="OutlineColorGlobalValues()"> <code>outline-color: <em>CSS Global Values</em>;</code> <div id="Outline-Color-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="OutlineColorColorValues()"> <code>outline-color: <em>CSS Color Values</em>;</code> <div id="Outline-Color-Color-Values"></div> </div>
+      <div class="Value-Box" onclick="OutlineColorCurrentColor()"> <code>outline-color: currentColor;</code> <div id="Outline-Color-Current-Color"></div> </div>
+      <div class="Value-Box" onclick="OutlineColorTransparent()"> <code>outline-color: transparent;</code> <div id="Outline-Color-Transparent"></div> </div>
+    </div>
+  </div>
+
+  <!-- OUTLINE OFFSET -->
+  <div id="Property-Outline-Offset" class="Box-Property">
+    <div>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Outline-Offset" type="text" placeholder="Enter outline-offset value">
+      <button onclick="PropertyOutlineOffset()">MODIFY</button>
+      <div class="Value-Box" onclick="OutlineOffsetGlobalValues()"> <code>outline-offset: <em>CSS Global Values</em>;</code> <div id="Outline-Offset-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="OutlineOffsetLengthValues()"> <code>outline-offset: <em>CSS Length Values</em>;</code> <div id="Outline-Offset-Length-Values"></div> </div>
+    </div>
+  </div>
+
   <!-- INSIGHTS BOX MODEL -->
   <div class="Box-Insights" onclick="Insights()"><b>INSIGHTS</b>
     <div class="Display-Insights">
@@ -158,8 +333,35 @@
         <div>Use <code>overflow</code> property on the container to manage overflowed contents</div>
       </div>
       <div class="Item-Insights">Actual Size Box Dimensions
-        <div><code><em>Width Dimension</em> = "width"</code></div>
-        <div><code><em>Height Dimension</em> = "height"</code></div>
+        <div><code><em>Width Dimension</em> = "border-left-width" + "padding-left" + "width" + "padding-right" + "border-right-width"</code></div>
+        <div><code><em>Height Dimension</em> = "border-top-width" + "padding-top" + "height" + "padding-bottom" + "border-bottom-width"</code></div>
+        <div>The <code>outline</code> property does not affect the actual size box dimensions and may overlaps with other contents</div>
+      </div>
+      <div class="Item-Insights">Margin collapse
+        <div>The margin collapse happens due to <code>margin-top</code> and <code>margin-bottom</code> collapsed into a single margin
+             that is equal to the largest of those two margins
+        </div>
+        <div>The margin collapse only happens on vertical margin (top and bottom) but not on horizontal margin (left and right)</div>
+        <div>Example, if Element A has <code>margin-bottom: 20px;</code> and Element B has <code>margin-top: 30px;</code>
+             the vertical margin between Element A and Element B would be <code>30px</code>
+        </div>
+        <div>Instead of being <code>50px</code> ( <code>20px</code> from Element A's bottom margin + <code>30px</code> from Element B's top margin),
+             the actual vertical margin is <code>30px</code> due to margin collapse
+        </div>
+      </div>
+      <div class="Item-Insights"><code>border: border-width border-style border-color;</code>
+        <div>The <code>border-width</code> and <code>border-style</code> properties are required</div>
+        <div>The <code>border-color</code> is optional and when omitted, the border color applied will be the color of the text</div>
+        <div>The <code>border</code> property also can be written with side properties with their own shorthand property
+          <div><code>border-top: border-top-width border-top-style border-top-color;</code></div>
+          <div><code>border-right: border-right-width border-right-style border-right-color;</code></div>
+          <div><code>border-bottom: border-bottom-width border-bottom-style border-bottom-color;</code></div>
+          <div><code>border-left: border-left-width border-left-style border-left-color;</code></div>
+        </div>
+      </div>
+      <div class="Item-Insights"><code>outline: outline-width outline-style outline-color;</code>
+        <div>The <code>outline-width</code> and <code>outline-style</code> properties are required</div>
+        <div>The <code>outline-color</code> is optional and when omitted, the outline color applied will be the color of the text</div>
       </div>
     </div>
   </div>
@@ -373,222 +575,6 @@
   <li><code><em>Selector</em>::view-transition-new</code></li>
   <li><code><em>Selector</em>::view-transition-old</code></li>
   </ul></div>  --> </section>
-
-  <!-- PADDING -->
-  <div id="Property-Padding" class="Box">
-  <h3><code>padding: <em>myValues</em>;</code></h3>
-  <ul><li>The <code>padding</code> property specifies space around an element's content, inside of any defined <code>border</code></li>
-  <li>There are some generic-side properties that can be written as its values
-  <ul><li>4 values = <code>padding: padding-top padding-right padding-bottom padding-left;</code></li>
-  <li>3 values = <code>padding: padding-top padding-<em>Horizontal</em> padding-bottom;</code></li>
-  <li>2 values = <code>padding: padding-<em>Vertical</em> padding-<em>Horizontal</em>;</code></li>
-  <li>1 value = <code>padding: padding-<em>All</em>;</code></li>
-  </ul></li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> <ul><li>By default, there is no specified padding</li></ul> </li>
-  </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Valid values
-  <ul><li>Negative values are not allowed</li>
-  </ul></li> </ul></li> </ul></div>
-
-  <!-- MARGIN -->
-  <div id="Property-Margin" class="Box">
-  <h3><code>margin: <em>myValues</em>;</code></h3>
-  <ul><li>The <code>margin</code> property specifies space around elements, outside of any defined <code>border</code></li>
-  <li>There are some generic-side properties that can be written as its values
-  <ul><li>4 values = <code>margin: margin-top margin-right margin-bottom margin-left;</code></li>
-  <li>3 values = <code>margin: margin-top margin-<em>Horizontal</em> margin-bottom;</code></li>
-  <li>2 values = <code>margin: margin-<em>Vertical</em> margin-<em>Horizontal</em>;</code></li>
-  <li>1 value = <code>margin: margin-<em>All</em>;</code></li>
-  </ul></li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> <ul><li>By default, there is no specified margin</li></ul> </li>
-  <li><code>auto</code> <ul><li>Horizontally center the element within its container</li></ul> </li>
-  </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Valid values
-  <ul><li>Negative values are allowed</li>
-  </ul></li> <br>
-
-  <li>Margin collapse
-  <ul><li>The margin collapse happens due to <code>margin-top</code> and <code>margin-bottom</code> collapsed into a single margin
-          that is equal to the largest of those two margins</li>
-  <li>The margin collapse only happens on vertical margin (top and bottom)</li>
-  <li>This does not happen on horizontal margin (left and right)</li>
-  <li>Example, if Element A has <code>margin-bottom: 20px;</code> and Element B has <code>margin-top: 30px;</code> 
-      the vertical margin between Element A and Element B would be <code>30px</code></li>
-  <li>Instead of being <code>50px</code> ( <code>20px</code> from Element A's bottom margin + <code>30px</code> from Element B's top margin),
-      the actual vertical margin is <code>30px</code> due to margin collapse</li>
-  </ul></li> </ul></li> </ul></div>
-
-  <!-- BORDER -->
-  <div id="Property-Border" class="Box">
-  <h3><code>border: border-width border-style border-color;</code></h3>
-
-  <!-- BORDER WIDTH -->
-  <ul><li><code>border-width: <em>myValues</em>;</code>
-  <ul><li>The <code>border-width</code> property specifies the width of an element's borders</li>
-  <li>There are some generic-side properties that can be written as its values
-  <ul><li>4 values = <code>border-width: border-top-width border-right-width border-bottom-width border-left-width;</code></li>
-  <li>3 values = <code>border-width: border-top-width border-<em>Horizontal</em>-width border-bottom-width;</code></li>
-  <li>2 values = <code>border-width: border-<em>Vertical</em>-width border-<em>Horizontal</em>-width;</code></li>
-  <li>1 value = <code>border-width: border-<em>All</em>-width;</code></li>
-  </ul></li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>medium</code> <ul><li>By default, the width of the border is medium</li></ul> </li>
-  <!--  <li><code>thin</code> ( The width of the border is thin )</li>
-  <li><code>thick</code> ( The width of the border is thick )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- BORDER STYLE -->
-  <li><code>border-style: <em>myValues</em>;</code>
-  <ul><li>The <code>border-style</code> property specifies the style of an element's borders</li>
-  <li>There are some generic-side properties that can be written as its values
-  <ul><li>4 values = <code>border-style: border-top-style border-right-style border-bottom-style border-left-style;</code></li>
-  <li>3 values = <code>border-style: border-top-style border-<em>Horizontal</em>-style border-bottom-style;</code></li>
-  <li>2 values = <code>border-style: border-<em>Vertical</em>-style border-<em>Horizontal</em>-style;</code></li>
-  <li>1 value = <code>border-style: border-<em>All</em>-style;</code></li>
-  </ul></li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>none</code> <ul><li>By default, there is no specified border style</li></ul> </li>
-  <li><code>solid</code> <ul><li>The style of the border is solid</li></ul> </li>
-  <!--  <li><code>dashed</code> <ul><li>The style of the border is dashed</li></ul> </li>
-  <li><code>dotted</code> <ul><li>The style of the border is dotted</li></ul> </li>
-  <li><code>double</code> <ul><li>The style of the border is double</li></ul> </li>
-  <li><code>groove</code> <ul><li>The style of the border is 3D groove, which the effect is depends on the <code>border-color</code> value</li></ul> </li>
-  <li><code>hidden</code> <ul><li>The same as <code>none</code>, except in border conflict resolution for table elements</li></ul> </li>
-  <li><code>inset</code> <ul><li>The style of the border is 3D inset, which the effect is depends on the <code>border-color</code> value</li></ul> </li>
-  <li><code>outset</code> <ul><li>The style of the border is 3D outset, which the effect depends on the <code>border-color</code> value</li></ul> </li>
-  <li><code>ridge</code> <ul><li>The style of the border is 3D ridge, which the effect is depends on the <code>border-color</code> value</li></ul> </li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- BORDER COLOR -->
-  <li><code>border-color: <em>myValues</em>;</code>
-  <ul><li>The <code>border-color</code> property specifies the color of an element's borders</li>
-  <li>There are some generic-side properties that can be written as its values
-  <ul><li>4 values = <code>border-color: border-top-color border-right-color border-bottom-color border-left-color;</code></li>
-  <li>3 values = <code>border-color: border-top-color border-<em>Horizontal</em>-color border-bottom-color;</code></li>
-  <li>2 values = <code>border-color: border-<em>Vertical</em>-color border-<em>Horizontal</em>-color;</code></li>
-  <li>1 value = <code>border-color: border-<em>All</em>-color;</code></li>
-  </ul></li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <li><code>currentColor</code> <ul><li>By default, the border color is based on the value of the <code>color</code> property of the element</li></ul> </li>
-  <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Required parameters
-  <ul><li>The <code>border-width</code> and <code>border-style</code> properties are required</li>
-  <li>The <code>border-color</code> is optional and when omitted, the border color applied will be the color of the text</li>
-  </ul></li> <br>
-
-  <li>Similar related properties
-  <ul><li><code>border-top: border-top-width border-top-style border-top-color;</code></li>
-  <li><code>border-right: border-right-width border-right-style border-right-color;</code></li>
-  <li><code>border-bottom: border-bottom-width border-bottom-style border-bottom-color;</code></li>
-  <li><code>border-left: border-left-width border-left-style border-left-color;</code></li>
-  <li>The required parameters for each properties are same as stated above</li>
-  </ul></li> </ul></li> </ul></div>
-
-  <!-- BORDER RADIUS-->
-  <div id="Property-Border-Radius" class="Box">
-  <h3><code>border-radius: <em>myValues</em>;</code></h3>
-  <ul><li>The <code>border-radius</code> property defines the radius of the element's corners</li>
-  <li>There are some generic-side properties that can be written as its values
-  <ul><li>4 values = <code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code></li>
-  <li>3 values = <code>border-radius: border-top-left-radius border-<em>Diagonal-Right-Left</em>-radius border-bottom-right-radius;</code></li>
-  <li>2 values = <code>border-radius: border-<em>Diagonal-Left-Right</em>-radius border-<em>Diagonal-Right-Left</em>-radius;</code></li>
-  <li>1 value = <code>border-radius: border-<em>All</em>-radius;</code></li>
-  </ul></li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> <ul><li>By default, there is no border radius specified</li></ul> </li>
-  </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark></li>
-  </ul></div>
-
-  <!-- OUTLINE -->
-  <div id="Property-Outline" class="Box">
-  <h3><code>outline: outline-width outline-style outline-color;</code></h3>
-
-  <!-- OUTLINE WIDTH -->
-  <ul><li><code>outline-width: <em>myValue</em>;</code>
-  <ul><li>The <code>outline-width</code> property specifies the width of an outline, drawn around elements, outside the borders</li> <br>
-  
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>medium</code> <ul><li>By default, the width of the outline is medium</li></ul> </li>
-  <!--  <li><code>thin</code> <ul><li>The width of the outline is thin</li></ul> </li>
-  <li><code>thick</code> <ul><li>The width of the outline is thick</li></ul> </li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- OUTLINE STYLE -->
-  <li><code>outline-style: <em>myValue</em>;</code>
-  <ul><li>The <code>outline-style</code> property specifies the style of an outline, drawn around elements, outside the borders</li> <br>
-  
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>none</code> <ul><li>By default, there is no specified outline</li></ul> </li>
-  <li><code>solid</code> <ul><li>Specifies a solid outline</li></ul> </li>
-  <!--  <li><code>auto</code> <ul><li>Specifies an auto outline</li></ul> </li>
-  <li><code>dashed</code> <ul><li>Specifies a dashed outline</li></ul> </li>
-  <li><code>dotted</code> <ul><li>Specifies a dotted outline</li></ul> </li>
-  <li><code>double</code> <ul><li>Specifies a double outline</li></ul> </li>
-  <li><code>groove</code> <ul><li>Specifies a 3D grooved outline, which the effect is depends on the outline-color value</li></ul> </li>
-  <li><code>hidden</code> <ul><li>Specifies a hidden outline</li></ul> </li>
-  <li><code>inset</code> <ul><li>Specifies a 3D inset outline, which the effect is depends on the outline-color value</li></ul> </li>
-  <li><code>outset</code> <ul><li>Specifies a 3D outset outline, which the effect is depends on the outline-color value</li></ul> </li>
-  <li><code>ridge</code> <ul><li>Specifies a 3D ridged outline, which the effect is depends on the outline-color value</li></ul> </li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- OUTLINE COLOR -->
-  <li><code>outline-color: <em>myValue</em>;</code>
-  <ul><li>The <code>outline-color</code> property specifies the color of an outline, drawn around elements, outside the borders</li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <li><code>currentColor</code> <ul><li>By default, the outline color is based on the value of the <code>color</code> property of the element</li></ul> </li>
-  <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark></li>
-  </ul></div>
-
-  <!-- OUTLINE OFFSET -->
-  <div id="Property-Outline-Offset" class="Box">
-  <h3><code>outline-offset: <em>myValue</em>;</code></h3>
-  <ul><li>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element</li> <br>
-  
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> <ul><li>By default, there is no specified outline offset</li></ul> </li>
-  </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark></li>
-  </ul></div>
 
   <!-- BOX SIZING -->
   <div id="Property-Box-Sizing" class="Box">
@@ -960,61 +946,6 @@
   </ul></p> </div>  -->
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Requires atleast one property related to box dimension
-  <ul><li>If the height of an element is specified but the width of the element is omitted, then the width is automatically set to its default value, and vice versa</li>
-  </ul></li>
-  <li>Actual dimensions
-  <li>Property like <code>outline</code> does not affect element's dimensions and may overlap other content</li>
-  </ul></li>
-  <li>Overflowed contents
-  <ul><li>If the content does not fit within the specified width, the contents will be displayed on the next line ( when the height property is specified ), 
-          or it will automatically change the height of the element ( when <code>height: auto;</code> )</li>
-  <li>If the content does not fit within the specified height, it will overflow</li>
-  <li>Use <code>overflow</code> property to manage the overflowed contents</li>
-  </ul></li>
-   </ul></p>
-
-  
-
-  
-
-  
-  
   <!-------------------------------->
   <!-- CSS ANIMATION & TRANSITION -->
   <!-------------------------------->

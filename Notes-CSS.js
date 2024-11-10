@@ -612,7 +612,7 @@ function MaxHeightMaxContent() {
 }
 
 ///////////////////////////
-// ASPECT RATIO PROPERTY //
+// ASPECT-RATIO PROPERTY //
 ///////////////////////////
 function PropertyAspectRatio() {
   let myAspectRatio = document.getElementById("Input-Aspect-Ratio").value;
@@ -656,11 +656,673 @@ function AspectRatioAuto() {
   else { myVisibility.style.display = "none"; }
 }
 
+//////////////////////
+// PADDING PROPERTY //
+//////////////////////
+function PropertyPadding() {
+  let myPadding = document.getElementById("Input-Padding").value;
+  document.getElementsByClassName("Box-Model")[0].style.padding = myPadding;
+}
+
+// PADDING: CSS GLOBAL VALUES; //
+function PaddingGlobalValues() {
+  let myVisibility = document.getElementById("Padding-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Padding-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// PADDING: CSS LENGTH VALUES; //
+function PaddingLengthValues() {
+  let myVisibility = document.getElementById("Padding-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Padding-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////
+// MARGIN PROPERTY //
+/////////////////////
+function PropertyMargin() {
+  let myMargin = document.getElementById("Input-Margin").value;
+  document.getElementsByClassName("Box-Model")[0].style.margin = myMargin;
+}
+
+// MARGIN: CSS GLOBAL VALUES; //
+function MarginGlobalValues() {
+  let myVisibility = document.getElementById("Margin-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Margin-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MARGIN: CSS LENGTH VALUES; //
+function MarginLengthValues() {
+  let myVisibility = document.getElementById("Margin-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Margin-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// MARGIN: AUTO; //
+function MarginAuto() {
+  let myVisibility = document.getElementById("Margin-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Margin-Auto").innerHTML =
+      "<div>Horizontally center the element within its container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////
+// BORDER-WIDTH PROPERTY //
+///////////////////////////
+function PropertyBorderWidth() {
+  let myBorderWidth = document.getElementById("Input-Border-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.borderWidth = myBorderWidth;
+}
+
+// BORDER-WIDTH: CSS GLOBAL VALUES; //
+function BorderWidthGlobalValues() {
+  let myVisibility = document.getElementById("Border-Width-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Width-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-WIDTH: CSS LENGTH VALUES; //
+function BorderWidthLengthValues() {
+  let myVisibility = document.getElementById("Border-Width-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Width-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-WIDTH: MEDIUM; //
+function BorderWidthMedium() {
+  let myVisibility = document.getElementById("Border-Width-Medium");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Width-Medium").innerHTML =
+      "<div>[Default] The border width is medium</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-WIDTH: THIN; //
+function BorderWidthThin() {
+  let myVisibility = document.getElementById("Border-Width-Thin");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Width-Thin").innerHTML =
+      "<div>The border width is thin</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-WIDTH: THICK; //
+function BorderWidthThick() {
+  let myVisibility = document.getElementById("Border-Width-Thick");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Width-Thick").innerHTML =
+      "<div>The border width is thick</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // BOX-MODEL INSIGHTS //
 function Insights() {
   let myVisibility = document.getElementsByClassName("Display-Insights")[0];
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////
+// BORDER-STYLE PROPERTY //
+///////////////////////////
+function PropertyBorderStyle() {
+  let myBorderStyle = document.getElementById("Input-Border-Style").value;
+  document.getElementsByClassName("Box-Model")[0].style.borderStyle = myBorderStyle;
+}
+
+// BORDER-STYLE: CSS GLOBAL VALUES; //
+function BorderStyleGlobalValues() {
+  let myVisibility = document.getElementById("Border-Style-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: NONE; //
+function BorderStyleNone() {
+  let myVisibility = document.getElementById("Border-Style-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-None").innerHTML =
+      "<div>[Default] There is no specified border style</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: SOLID; //
+function BorderStyleSolid() {
+  let myVisibility = document.getElementById("Border-Style-Solid");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Solid").innerHTML =
+      "<div>The border style is solid</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: DASHED; //
+function BorderStyleDashed() {
+  let myVisibility = document.getElementById("Border-Style-Dashed");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Dashed").innerHTML =
+      "<div>The border style is dashed</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: DOTTED; //
+function BorderStyleDotted() {
+  let myVisibility = document.getElementById("Border-Style-Dotted");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Dotted").innerHTML =
+      "<div>The border style is dotted</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: DOUBLE; //
+function BorderStyleDouble() {
+  let myVisibility = document.getElementById("Border-Style-Double");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Double").innerHTML =
+      "<div>The border style is double</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: HIDDEN; //
+function BorderStyleHidden() {
+  let myVisibility = document.getElementById("Border-Style-Hidden");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Hidden").innerHTML =
+      "<div>The same as <code>none</code>, except in border conflict resolution for table elements</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: GROOVE; //
+function BorderStyleGroove() {
+  let myVisibility = document.getElementById("Border-Style-Groove");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Groove").innerHTML =
+      "<div>The style of the border is 3D groove, which the effect is depends on the <code>border-color</code> value</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: INSET; //
+function BorderStyleInset() {
+  let myVisibility = document.getElementById("Border-Style-Inset");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Inset").innerHTML =
+      "<div>The style of the border is 3D inset, which the effect is depends on the <code>border-color</code> value</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: OUTSET; //
+function BorderStyleOutset() {
+  let myVisibility = document.getElementById("Border-Style-Outset");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Outset").innerHTML =
+      "<div>The style of the border is 3D outset, which the effect depends on the <code>border-color</code> value</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-STYLE: RIDGE; //
+function BorderStyleRidge() {
+  let myVisibility = document.getElementById("Border-Style-Ridge");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Style-Ridge").innerHTML =
+      "<div>The style of the border is 3D ridge, which the effect is depends on the <code>border-color</code> value</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////
+// BORDER-COLOR PROPERTY //
+///////////////////////////
+function PropertyBorderColor() {
+  let myBorderColor = document.getElementById("Input-Border-Color").value;
+  document.getElementsByClassName("Box-Model")[0].style.borderColor = myBorderColor;
+}
+
+// BORDER-COLOR: CSS GLOBAL VALUES; //
+function BorderColorGlobalValues() {
+  let myVisibility = document.getElementById("Border-Color-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Color-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-COLOR: CSS COLOR VALUES; //
+function BorderColorColorValues() {
+  let myVisibility = document.getElementById("Border-Color-Color-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Color-Color-Values").innerHTML =
+      CSSColorValues().colorNames + CSSColorValues().colorFunctions;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-COLOR: CURRENTCOLOR; //
+function BorderColorCurrentColor() {
+  let myVisibility = document.getElementById("Border-Color-Current-Color");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Color-Current-Color").innerHTML =
+      "<div>[Default] The border color is based on the value of the <code>color</code> property of the element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-COLOR: TRANSPARENT; //
+function BorderColorTransparent() {
+  let myVisibility = document.getElementById("Border-Color-Transparent");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Color-Transparent").innerHTML =
+      "<div><code>transparent</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////////
+// BORDER-RADIUS PROPERTY //
+////////////////////////////
+function PropertyBorderRadius() {
+  let myBorderRadius = document.getElementById("Input-Border-Radius").value;
+  document.getElementsByClassName("Box-Model")[0].style.borderRadius = myBorderRadius;
+}
+
+// BORDER-RADIUS: CSS GLOBAL VALUES; //
+function BorderRadiusGlobalValues() {
+  let myVisibility = document.getElementById("Border-Radius-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Radius-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BORDER-RADIUS: CSS LENGTH VALUES; //
+function BorderRadiusLengthValues() {
+  let myVisibility = document.getElementById("Border-Radius-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Border-Radius-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////////
+// OUTLINE-WIDTH PROPERTY //
+////////////////////////////
+function PropertyOutlineWidth() {
+  let myOutlineWidth = document.getElementById("Input-Outline-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.outlineWidth = myOutlineWidth;
+}
+
+// OUTLINE-WIDTH: CSS GLOBAL VALUES; //
+function OutlineWidthGlobalValues() {
+  let myVisibility = document.getElementById("Outline-Width-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Width-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-WIDTH: CSS LENGTH VALUES; //
+function OutlineWidthLengthValues() {
+  let myVisibility = document.getElementById("Outline-Width-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Width-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-WIDTH: MEDIUM; //
+function OutlineWidthMedium() {
+  let myVisibility = document.getElementById("Outline-Width-Medium");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Width-Medium").innerHTML =
+      "<div>[Default] The outline width is medium</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-WIDTH: THIN; //
+function OutlineWidthThin() {
+  let myVisibility = document.getElementById("Outline-Width-Thin");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Width-Thin").innerHTML =
+      "<div>The outline width is thin</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-WIDTH: THICK; //
+function OutlineWidthThick() {
+  let myVisibility = document.getElementById("Outline-Width-Thick");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Width-Thick").innerHTML =
+      "<div>The outline width is thick</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////////
+// OUTLINE-STYLE PROPERTY //
+////////////////////////////
+function PropertyOutlineStyle() {
+  let myOutlineStyle = document.getElementById("Input-Outline-Style").value;
+  document.getElementsByClassName("Box-Model")[0].style.outlineStyle = myOutlineStyle;
+}
+
+// OUTLINE-STYLE: CSS GLOBAL VALUES; //
+function OutlineStyleGlobalValues() {
+  let myVisibility = document.getElementById("Outline-Style-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: NONE; //
+function OutlineStyleNone() {
+  let myVisibility = document.getElementById("Outline-Style-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-None").innerHTML =
+      "<div>[Default] There is no specified outline style</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: SOLID; //
+function OutlineStyleSolid() {
+  let myVisibility = document.getElementById("Outline-Style-Solid");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Solid").innerHTML =
+      "<div>The outline style is solid</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: DASHED; //
+function OutlineStyleDashed() {
+  let myVisibility = document.getElementById("Outline-Style-Dashed");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Dashed").innerHTML =
+      "<div>The outline style is dashed</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: DOTTED; //
+function OutlineStyleDotted() {
+  let myVisibility = document.getElementById("Outline-Style-Dotted");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Dotted").innerHTML =
+      "<div>The outline style is dotted</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: DOUBLE; //
+function OutlineStyleDouble() {
+  let myVisibility = document.getElementById("Outline-Style-Double");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Double").innerHTML =
+      "<div>The outline style is double</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: HIDDEN; //
+function OutlineStyleHidden() {
+  let myVisibility = document.getElementById("Outline-Style-Hidden");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Hidden").innerHTML =
+      "<div>The same as <code>none</code>, except in outline conflict resolution for table elements</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: GROOVE; //
+function OutlineStyleGroove() {
+  let myVisibility = document.getElementById("Outline-Style-Groove");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Groove").innerHTML =
+      "<div>The style of the outline is 3D groove, which the effect is depends on the <code>outline-color</code> value</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: INSET; //
+function OutlineStyleInset() {
+  let myVisibility = document.getElementById("Outline-Style-Inset");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Inset").innerHTML =
+      "<div>The style of the outline is 3D inset, which the effect is depends on the <code>outline-color</code> value</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: OUTSET; //
+function OutlineStyleOutset() {
+  let myVisibility = document.getElementById("Outline-Style-Outset");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Outset").innerHTML =
+      "<div>The style of the outline is 3D outset, which the effect depends on the <code>outline-color</code> value</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-STYLE: RIDGE; //
+function OutlineStyleRidge() {
+  let myVisibility = document.getElementById("Outline-Style-Ridge");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Style-Ridge").innerHTML =
+      "<div>The style of the outline is 3D ridge, which the effect is depends on the <code>outline-color</code> value</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////////
+// OUTLINE-COLOR PROPERTY //
+////////////////////////////
+function PropertyOutlineColor() {
+  let myOutlineColor = document.getElementById("Input-Outline-Color").value;
+  document.getElementsByClassName("Box-Model")[0].style.outlineColor = myOutlineColor;
+}
+
+// OUTLINE-COLOR: CSS GLOBAL VALUES; //
+function OutlineColorGlobalValues() {
+  let myVisibility = document.getElementById("Outline-Color-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Color-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-COLOR: CSS COLOR VALUES; //
+function OutlineColorColorValues() {
+  let myVisibility = document.getElementById("Outline-Color-Color-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Color-Color-Values").innerHTML =
+      CSSColorValues().colorNames + CSSColorValues().colorFunctions;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-COLOR: CURRENTCOLOR; //
+function OutlineColorCurrentColor() {
+  let myVisibility = document.getElementById("Outline-Color-Current-Color");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Color-Current-Color").innerHTML =
+      "<div>[Default] The outline color is based on the value of the <code>color</code> property of the element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-COLOR: TRANSPARENT; //
+function OutlineColorTransparent() {
+  let myVisibility = document.getElementById("Outline-Color-Transparent");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Color-Transparent").innerHTML =
+      "<div><code>transparent</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////////////
+// OUTLINE-OFFSET PROPERTY //
+/////////////////////////////
+function PropertyOutlineOffset() {
+  let myOutlineOffset = document.getElementById("Input-Outline-Offset").value;
+  document.getElementsByClassName("Box-Model")[0].style.outlineOffset = myOutlineOffset;
+}
+
+// OUTLINE-OFFSET: CSS GLOBAL VALUES; //
+function OutlineOffsetGlobalValues() {
+  let myVisibility = document.getElementById("Outline-Offset-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Offset-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTLINE-OFFSET: CSS LENGTH VALUES; //
+function OutlineOffsetLengthValues() {
+  let myVisibility = document.getElementById("Outline-Offset-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Outline-Offset-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
   }
   else { myVisibility.style.display = "none"; }
 }
