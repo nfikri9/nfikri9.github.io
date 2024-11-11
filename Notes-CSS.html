@@ -310,8 +310,61 @@
     </div>
   </div>
 
+  <!-- BOX SIZING -->
+  <div id="Property-Box-Sizing" class="Box-Property">
+    <div>The <code>box-sizing</code> property defines how the width and height of an element are calculated in box dimensions</div>
+    <div>The padding and border also may be included</div>
+    <div class="Related-Values" >Related Value(s)
+      <input id="Input-Box-Sizing" type="text" placeholder="Enter box-sizing value">
+      <button onclick="PropertyBoxSizing()">MODIFY</button>
+      <div class="Value-Box" onclick="BoxSizingGlobalValues()"> <code>box-sizing: <em>CSS Global Values</em>;</code> <div id="Box-Sizing-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="BoxSizingBorderBox()"> <code>box-sizing: border-box;</code> <div id="Box-Sizing-Border-Box"></div> </div>
+      <div class="Value-Box" onclick="BoxSizingContentBox()"> <code>box-sizing: content-box;</code> <div id="Box-Sizing-Content-Box"></div> </div>
+    </div>
+  </div>
+
+  <!-- BOX SHADOW -->
+  <div id="Property-Box-Shadow" class="Box-Property">
+    <div>The <code>box-shadow</code> property specifies one or multiple shadows to an element</div>
+    <div><code>box-shadow: <em>H-Offset V-Offset Blur-Radius Spread-Radius Color</em> inset;</code>
+      <div><code><em>H-Offset</em></code>
+        <div>Required parameter which specifies the horizontal offset of the shadow</div>
+        <div>A positive value puts the shadow on the right side of the box</div>
+        <div>A negative value puts the shadow on the left side of the box</div>
+      </div>
+      <div><code><em>V-Offset</em></code>
+        <div>Required parameter which specifies the vertical offset of the shadow</div>
+        <div>A positive value puts the shadow below the box</div>
+        <div>A negative value puts the shadow above the box</div>
+      </div>
+      <div><code><em>Blur-Radius</em></code>
+        <div>Optional parameter which specifies the blur radius of the shadow</div>
+        <div>The higher the number, the more blurred the shadow will be</div>
+      </div>
+      <div><code><em>Spread-Radius</em></code>
+        <div>Optional parameter which specifies the spread radius of the shadow</div>
+        <div>A positive value increases the size of the spread radius shadow</div>
+        <div>A negative value decreases the size of the spread radius shadow</div>
+      </div>
+      <div><code><em>Color</em></code>
+        <div>Optional parameter which specifies the color of the shadow</div>
+      </div>
+      <div><code>inset</code> <div>Optional value which changes the shadow from an outer shadow to an inner shadow</div> </div>
+    </div>
+    <div id="Related-Values" >Related Value(s)
+      <input id="Input-Box-Shadow" type="text" placeholder="Enter box-shadow value">
+      <button onclick="PropertyBoxShadow()">MODIFY</button>
+      <div class="Value-Box" onclick="BoxShadowGlobalValues()"> <code>box-shadow: <em>CSS Global Values</em>;</code> <div id="Box-Shadow-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="BoxShadowLengthValues()"> <code>box-shadow: <em>CSS Length Values</em>;</code> <div id="Box-Shadow-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="BoxShadowColorValues()"> <code>box-shadow: <em>CSS Color Values</em>;</code> <div id="Box-Shadow-Color-Values"></div> </div>
+      <div class="Value-Box" onclick="BoxShadowCurrentColor()"> <code>box-shadow: currentColor;</code> <div id="Box-Shadow-Current-Color"></div> </div>
+      <div class="Value-Box" onclick="BoxShadowTransparent()"> <code>box-shadow: transparent;</code> <div id="Box-Shadow-Transparent"></div> </div>
+      <div class="Value-Box" onclick="BoxShadowNone()"> <code>box-shadow: none;</code> <div id="Box-Shadow-None"></div> </div>
+    </div>
+  </div>
+
   <!-- INSIGHTS BOX MODEL -->
-  <div class="Box-Insights" onclick="Insights()"><b>INSIGHTS</b>
+  <div class="Box-Insights" onclick="InsightsBoxModel()"><b>INSIGHTS</b>
     <div class="Display-Insights">
       <div><code>width</code> vs. <code>min-width</code> vs. <code>max-width</code>
         <div><code>width</code> property overrides the original width of the element</div>
@@ -336,6 +389,7 @@
         <div><code><em>Width Dimension</em> = "border-left-width" + "padding-left" + "width" + "padding-right" + "border-right-width"</code></div>
         <div><code><em>Height Dimension</em> = "border-top-width" + "padding-top" + "height" + "padding-bottom" + "border-bottom-width"</code></div>
         <div>The <code>outline</code> property does not affect the actual size box dimensions and may overlaps with other contents</div>
+        <div>The <code>box-sizing: border-box;</code> property is the best practice to be used for box dimensions</div>
       </div>
       <div class="Item-Insights">Margin collapse
         <div>The margin collapse happens due to <code>margin-top</code> and <code>margin-bottom</code> collapsed into a single margin
@@ -362,6 +416,130 @@
       <div class="Item-Insights"><code>outline: outline-width outline-style outline-color;</code>
         <div>The <code>outline-width</code> and <code>outline-style</code> properties are required</div>
         <div>The <code>outline-color</code> is optional and when omitted, the outline color applied will be the color of the text</div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <!-------------------->
+  <!-- CSS BOX LAYOUT -->
+  <!-------------------->
+  <section id="CSS-Box-Layout">
+  <h1>CSS BOX LAYOUT</h1>
+  <div class="Box-Model">My Contents!</div>
+
+  <!-- POSITION -->
+  <div id="Property-Position" class="Box-Property">
+    <div>The <code>position</code> property specifies the type of positioning method used for an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Position" type="text" placeholder="Enter position value">
+      <button onclick="PropertyPosition()">MODIFY</button>
+      <div class="Value-Box" onclick="PositionGlobalValues()"> <code>position: <em>CSS Global Values</em>;</code> <div id="Position-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="PositionStatic()"> <code>position: static;</code> <div id="Position-Static"></div> </div>
+      <div class="Value-Box" onclick="PositionRelative()"> <code>position: relative;</code> <div id="Position-Relative"></div> </div>
+      <div class="Value-Box" onclick="PositionFixed()"> <code>position: fixed;</code> <div id="Position-Fixed"></div> </div>
+      <div class="Value-Box" onclick="PositionAbsolute()"> <code>position: absolute;</code> <div id="Position-Absolute"></div> </div>
+      <div class="Value-Box" onclick="PositionSticky()"> <code>position: sticky;</code> <div id="Position-Sticky"></div> </div>
+    </div>
+  </div>
+
+  <!-- INSET -->
+  <div id="Property-Inset" class="Box-Property">
+    <div>The <code>inset</code> property sets the distance between an element and the parent element</div>
+    <div>There are some generic-side properties that can be written as its values
+      <div>4 values = <code>inset: top right bottom left;</code></div>
+      <div>3 values = <code>inset: top <em>Horizontal</em> bottom;</code></div>
+      <div>2 values = <code>inset: <em>Vertical</em> <em>Horizontal</em>;</code></div>
+      <div>1 value = <code>inset: <em>All</em>;</code></div>
+    </div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Inset" type="text" placeholder="Enter inset value">
+      <button onclick="PropertyInset()">MODIFY</button>
+      <div class="Value-Box" onclick="InsetGlobalValues()"> <code>inset: <em>CSS Global Values</em>;</code> <div id="Inset-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="InsetLengthValues()"> <code>inset: <em>CSS Length Values</em>;</code> <div id="Inset-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="InsetAuto()"> <code>inset: auto;</code> <div id="Inset-Auto"></div> </div>
+    </div>
+  </div>
+
+  <!-- FLOAT -->
+  <div id="Property-Float" class="Box-Property">
+    <div>The <code>float</code> property specifies whether an element should float to the left, right, or not at all</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Float" type="text" placeholder="Enter float value">
+      <button onclick="PropertyFloat()">MODIFY</button>
+      <div class="Value-Box" onclick="FloatGlobalValues()"> <code>float: <em>CSS Global Values</em>;</code> <div id="Float-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="FloatNone()"> <code>float: none;</code> <div id="Float-None"></div> </div>
+      <div class="Value-Box" onclick="FloatLeft()"> <code>float: left;</code> <div id="Float-Left"></div> </div>
+      <div class="Value-Box" onclick="FloatRight()"> <code>float: right;</code> <div id="Float-Right"></div> </div>
+      <div class="Value-Box" onclick="FloatInlineStart()"> <code>float: inline-start;</code> <div id="Float-Inline-Start"></div> </div>
+      <div class="Value-Box" onclick="FloatInlineEnd()"> <code>float: inline-end;</code> <div id="Float-Inline-End"></div> </div>
+    </div>
+  </div>
+
+  <!-- CLEAR -->
+  <div id="Property-Clear" class="Box-Property">
+    <div>The <code>clear</code> property specifies what should happen with the element that is next to a floating element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Clear" type="text" placeholder="Enter clear value">
+      <button onclick="PropertyClear()">MODIFY</button>
+      <div class="Value-Box" onclick="ClearGlobalValues()"> <code>clear: <em>CSS Global Values</em>;</code> <div id="Clear-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="ClearNone()"> <code>clear: none;</code> <div id="Clear-None"></div> </div>
+      <div class="Value-Box" onclick="ClearLeft()"> <code>clear: left;</code> <div id="Clear-Left"></div> </div>
+      <div class="Value-Box" onclick="ClearRight()"> <code>clear: right;</code> <div id="Clear-Right"></div> </div>
+      <div class="Value-Box" onclick="ClearBoth()"> <code>clear: both;</code> <div id="Clear-Both"></div> </div>
+    </div>
+  </div>
+
+  <!-- DISPLAY -->
+  <div id="Property-Display" class="Box-Property">
+    <div>The <code>display</code> property specifies the display behavior (the type of rendering box) of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <div class="Value-Box" onclick="DisplayGlobalValues()"> <code>display: <em>CSS Global Values</em>;</code> <div id="Display-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="DisplayInline()"> <code>display: inline;</code> <div id="Display-Inline"></div> </div>
+      <div class="Value-Box" onclick="DisplayBlock()"> <code>display: block;</code> <div id="Display-Block"></div> </div>
+      <div class="Value-Box" onclick="DisplayFlex()"> <code>display: flex;</code> <div id="Display-Flex"></div> </div>
+      <div class="Value-Box" onclick="DisplayGrid()"> <code>display: grid;</code> <div id="Display-Grid"></div> </div>
+      <div class="Value-Box" onclick="DisplayNone()"> <code>display: none;</code> <div id="Display-None"></div> </div>
+      <div class="Value-Box" onclick="DisplayContents()"> <code>display: contents;</code> <div id="Display-Contents"></div> </div>
+      <div class="Value-Box" onclick="DisplayInlineBlock()"> <code>display: inline-block;</code> <div id="Display-Inline-Block"></div> </div>
+      <div class="Value-Box" onclick="DisplayInlineFlex()"> <code>display: inline-flex;</code> <div id="Display-Inline-Flex"></div> </div>
+      <div class="Value-Box" onclick="DisplayInlineGrid()"> <code>display: inline-grid;</code> <div id="Display-Inline-Grid"></div> </div>
+      <div class="Value-Box" onclick="DisplayInlineTable()"> <code>display: inline-table;</code> <div id="Display-Inline-Table"></div> </div>
+      <div class="Value-Box" onclick="DisplayListItem()"> <code>display: list-item;</code> <div id="Display-List-Item"></div> </div>
+      <div class="Value-Box" onclick="DisplayRunIn()"> <code>display: run-in;</code> <div id="Display-Run-In"></div> </div>
+      <div class="Value-Box" onclick="DisplayTable()"> <code>display: table;</code> <div id="Display-Table"></div> </div>
+      <div class="Value-Box" onclick="DisplayTableCaption()"> <code>display: table-caption;</code> <div id="Display-Table-Caption"></div> </div>
+      <div class="Value-Box" onclick="DisplayTableColumnGroup()"> <code>display: table-column-group;</code> <div id="Display-Table-Column-Group"></div> </div>
+      <div class="Value-Box" onclick="DisplayTableColumn()"> <code>display: table-column;</code> <div id="Display-Table-Column"></div> </div>
+      <div class="Value-Box" onclick="DisplayTableHeaderGroup()"> <code>display: table-header-group;</code> <div id="Display-Table-Header-Group"></div> </div>
+      <div class="Value-Box" onclick="DisplayTableRowGroup()"> <code>display: table-row-group;</code> <div id="Display-Table-Row-Group"></div> </div>
+      <div class="Value-Box" onclick="DisplayTableFooterGroup()"> <code>display: table-footer-group;</code> <div id="Display-Table-Footer-Group"></div> </div>
+      <div class="Value-Box" onclick="DisplayTableRow()"> <code>display: table-row;</code> <div id="Display-Table-Row"></div> </div>
+      <div class="Value-Box" onclick="DisplayTableCell()"> <code>display: table-cell;</code> <div id="Display-Table-Cell"></div> </div>
+      <div class="Value-Box" onclick="DisplayFlexbox()"> <code>display: flexbox;</code> <div id="Display-Flexbox"></div> </div>
+      <div class="Value-Box" onclick="DisplayInlineFlexbox()"> <code>display: inline-flexbox;</code> <div id="Display-Inline-Flexbox"></div> </div>
+      <div class="Value-Box" onclick="DisplayFlowRoot()"> <code>display: flow-root;</code> <div id="Display-Flow-Root"></div> </div>
+      <div class="Value-Box" onclick="DisplayRuby()"> <code>display: ruby;</code> <div id="Display-Ruby"></div> </div>
+      <div class="Value-Box" onclick="DisplayRubyBaseContainer()"> <code>display: ruby-base-container;</code> <div id="Display-Ruby-Base-Container"></div> </div>
+      <div class="Value-Box" onclick="DisplayRubyBase()"> <code>display: ruby-base;</code> <div id="Display-Ruby-Base"></div> </div>
+      <div class="Value-Box" onclick="DisplayRubyTextContainer()"> <code>display: ruby-text-container;</code> <div id="Display-Ruby-Text-Container"></div> </div>
+      <div class="Value-Box" onclick="DisplayRubyText()"> <code>display: ruby-text;</code> <div id="Display-Ruby-Text"></div> </div>
+    </div>
+  </div>
+
+  <button onclick="AddBoxModel()">ADD BOX</button>
+  <div id="Adding-Box-Model"></div>
+
+  <!-- INSIGHTS BOX LAYOUT -->
+  <div class="Box-Insights" onclick="InsightsBoxLayout()"><b>INSIGHTS</b>
+    <div class="Display-Insights">
+      <div class="Item-Insights">Pair property of <code>position</code> and <code>inset</code>
+        <div>It is best practice to use <code>position</code> and <code>inset</code> properties together</div>
+        <div>In horizontal distance, <code>left</code> property is more priority than <code>right</code> property</div>
+        <div>In vertical distance, <code>top</code> property is more priority than <code>bottom</code> property</div>
+      </div>
+      <div class="Item-Insights">Pair property of <code>float</code> and <code>clear</code>
+        <div>It is best practice to use <code>float</code> and <code>clear</code> properties together</div>
       </div>
     </div>
   </div>
@@ -576,238 +754,9 @@
   <li><code><em>Selector</em>::view-transition-old</code></li>
   </ul></div>  --> </section>
 
-  <!-- BOX SIZING -->
-  <div id="Property-Box-Sizing" class="Box">
-  <h3><code>box-sizing: <em>myValue</em>;</code></h3>
-  <ul><li>The <code>box-sizing</code> property defines how the <code>width</code> and <code>height</code> of an element are calculated in box dimensions</li>
-  <li>The <code>padding</code> and <code>border</code> also may be included</li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>border-box</code>
-  <ul><li>By default, the <code>width</code> and <code>height</code> properties (and <code>min/max</code> properties) includes only the content</li>
-  <li>The element remain the same because <code>padding</code> and <code>border</code> are not included</li>
-  </ul></li> <br>
-  
-  <li><code>content-box</code>
-  <ul><li>The <code>width</code> and <code>height</code> properties (and <code>min/max</code> properties) includes content, <code>padding</code> and <code>border</code></li>
-  <li>The element will appears bigger than intended to be</li>
-  </ul></li> </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Box Dimensions
-  <ul><li><code><em>Height Dimension</em> = "border-top-width" + "padding-top" + height + "padding-bottom" + "border-bottom-width"</code></li>
-  <li><code><em>Width Dimension</em> = "border-left-width" + "padding-left" + width + "padding-right" + "border-right-width"</code></li>
-  <li>The <code>outline</code> property does not affect box dimensions and may overlap other content</li>
-  <li>The element often appears bigger than intended to be because the <code>border</code> and <code>padding</code> properties are added</li>
-  <li>Best practice to include <code>box-sizing: border-box;</code> which padding and border both are included in the width and height</li>
-  </ul></li> </ul></li> </ul></div>
-
-  <div id="Property-Box-SHadow" class="Box">
-  <h3><code>box-shadow: <em>H-Offset V-Offset Blur-Radius Spread-Radius Color</em> inset;</code></h3>
-  <ul><li>The <code>box-shadow</code> property specifies one or multiple shadows to an element</li> <br>
-
-  <li><code><em>H-Offset</em></code>
-  <ul><li>Required parameter which specifies the horizontal offset of the shadow</li>
-  <li>A positive value puts the shadow on the right side of the box</li>
-  <li>A negative value puts the shadow on the left side of the box</li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>none</code> <ul><li>By default, there is no specified shadow</li></ul> </li>
-  </ul></li> </ul></li> <br>
-
-  <li><code><em>V-Offset</em></code>
-  <ul><li>Required parameter which specifies the vertical offset of the shadow</li>
-  <li>A positive value puts the shadow below the box</li>
-  <li>A negative value puts the shadow above the box</li> <br>
-
-  <li>Related Value(s)
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>none</code> <ul><li>By default, there is no specified shadow</li></ul> </li>
-  </ul></li> </ul></li> <br>
-
-  <li><code><em>Blur-Radius</em></code>
-  <ul><li>Optional parameter which specifies the blur radius of the shadow</li>
-  <li>The higher the number, the more blurred the shadow will be</li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> <ul><li>By default, there is no specified blur radius</li></ul> </li>
-  </ul></li> </ul></li> <br>
-
-  <li><code><em>Spread-Radius</em></code>
-  <ul><li>Optional parameter which specifies the spread radius of the shadow</li>
-  <li>A positive value increases the size of the spread radius shadow</li>
-  <li>A negative value decreases the size of the spread radius shadow</li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> <ul><li>By default, there is no specified spread radius</li></ul> </li>
-  </ul></li> </ul></li> <br>
-
-  <li><code><em>Color</em></code>
-  <ul><li>Optional parameter which specifies the color of the shadow</li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <li><code>currentColor</code> <ul><li>By default, the shadow color is based on the value of the <code>color</code> property of the element</li></ul> </li>
-  <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> <br>
-
-  <li><code>inset</code>
-  <ul><li>Optional value which changes the shadow from an outer shadow to an inner shadow</li>
-  </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark></li>
-  </ul></div>
-
   <!-------------------->
   <!-- CSS BOX LAYOUT -->
   <!-------------------->
-  <section id="CSS-Box-Layout">
-  <h1>CSS BOX LAYOUT</h1>
-
-  <!-- POSITION -->
-  <div id="Property-Position" class="Box">
-  <h3><code>position: <em>myValue</em>;</code></h3>
-  <ul><li>The <code>position</code> property specifies the type of positioning method used for an element</li> <br>
-  
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>static</code>
-  <ul><li>By default, the element is always positioned according to the normal flow of the page</li>
-  <li>The <code>inset</code> property does not affects the position of the element</li>
-  </ul></li> <br>
-
-  <li><code>relative</code>
-  <ul><li>The element is positioned relative to its normal position</li>
-  <li>Use the <code>inset</code> property to adjust the position of the element</li>
-  <li>Other content will not be adjusted to fit into any gap left by the element</li>
-  </ul></li> <br>
-
-  <li><code>fixed</code>
-  <ul><li>The element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled</li>
-  <li>Use the <code>inset</code> property to adjust the position of the element</li>
-  <li>A fixed element does not leave a gap in the page where it would normally have been located</li>
-  </ul></li> <br>
-
-  <li><code>absolute</code>
-  <ul><li>The element is positioned relative to the nearest positioned ancestor</li>
-  <li>Use the <code>inset</code> property to adjust the position of the element</li>
-  <li>If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling</li>
-  <li>Absolute positioned elements are removed from the normal flow, and can overlap elements</li>
-  </ul></li> <br>
-
-  <li><code>sticky</code>
-  <ul><li>The element is positioned based on the user's scroll position</li>
-  <li>Use the <code>inset</code> property to adjust the position of the element</li>
-  <li>A sticky element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position</li>
-  <li>It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place</li>
-  </ul></li> </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark></li>
-  </ul></div>
-
-  <!-- INSET -->
-  <div id="Property-Inset">
-  <h3><code>inset: <em>myValues</em>;</code></h3>
-  <ul><li>The <code>inset</code> property sets the distance between an element and the parent element</li>
-  <li>There are some generic-side properties that can be written as its values
-  <ul><li>4 values = <code>inset: top right bottom left;</code></li>
-  <li>3 values = <code>inset: top <em>Horizontal</em> bottom;</code></li>
-  <li>2 values = <code>inset: <em>Vertical</em> <em>Horizontal</em>;</code></li>
-  <li>1 value = <code>inset: <em>All</em>;</code></li>
-  </ul></li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code> <ul><li>By default, the element is set to default inset distance</li></ul> </li>
-  </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark></li>
-  </ul></div>
-
-  <!-- FLOAT -->
-  <div id="Property-Float" class="Box">
-  <h3><code>float: <em>myValue</em>;</code></h3>
-  <ul><li>The <code>float</code> property specifies whether an element should float to the left, right, or not at all</li> <br>
-
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>none</code> <ul><li>By default, the element does not float, will be displayed just where it occurs in the text</li></ul> </li> <br>
-  <li><code>left</code> <ul><li>The element floats to the left of its container</li></ul> </li> <br>
-  <li><code>right</code> <ul><li>The element floats to the right of its container</li></ul> </li>
-  <!--  <li><code>inline-start</code></li>
-  <li><code>inline-end</code></li>  -->
-  </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark></li>
-  </ul></div>
-
-  <!-- CLEAR 
-  <div id="Property-Clear" class="Box">
-  <h3><code>clear: <em>myValue</em>;</code></h3>
-  </div>  -->
-
-  <!-- DISPLAY -->
-  <div id="Property-Display" class="Box">
-  <h3><code>display: <em>myValue</em>;</code></h3>
-  <ul><li>The <code>display</code> property specifies the display behavior (the type of rendering box) of an element</li> <br>
-  
-  <li>Related Value(s):
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>inline</code>
-  <ul><li>By default, the element is displayed as an inline element</li>
-  <li>Like <code>&lt;span&gt;</code> any <code>height</code> and <code>width</code> properties will have no effect</li>
-  </ul></li> <br>
-
-  <li><code>block</code>
-  <ul><li>Displays an element as a block element</li>
-  <li>Like <code>&lt;p&gt;</code> it starts on a new line, and takes up the whole width</li>
-  </ul></li> <br>
-
-  <li><code>flex</code> <ul><li>Displays an element as a block-level flex container</li></ul> </li> <br>
-  <li><code>grid</code> <ul><li>Displays an element as a block-level grid container</li></ul> </li> <br>
-  <li><code>none</code> <ul><li>The element is completely removed</li></ul> </li>
-  <!--  <li><code>contents</code> <ul><li>Makes the container disappear, making the child elements children of the element the next level up in the DOM</li></ul> </li>
-  <li><code>inline-block</code>
-  <ul><li>Displays an element as an inline-level block container</li>
-  <li>The element itself is formatted as an inline element, but the values for <code>height</code> and <code>width</code> properties can be applied</li>
-  </ul></li>
-  <li><code>inline-flex</code><ul><li>Displays an element as an inline-level flex container</li></ul></li>
-  <li><code>inline-grid</code><ul><li>Displays an element as an inline-level grid container</li></ul></li>
-  <li><code>inline-table</code><ul><li>The element is displayed as an inline-level table</li></ul></li>
-  <li><code>list-item</code><ul><li>Let the element behave like a <code>&lt;li&gt;</code> element</li></ul></li>
-  <li><code>run-in</code><ul><li>Displays an element as either block or inline, depending on context</li></ul></li>
-  <li><code>table</code><ul><li>Let the element behave like a <code>&lt;table&gt;</code> element</li></ul></li>
-  <li><code>table-caption</code><ul><li>Let the element behave like a <code>&lt;caption&gt;</code> element</li></ul></li>
-  <li><code>table-column-group</code><ul><li>Let the element behave like a <code>&lt;colgroup&gt;</code> element</li></ul></li>
-  <li><code>table-column</code><ul><li>Let the element behave like a <code>&lt;col&gt;</code> element</li></ul></li>
-  <li><code>table-header-group</code><ul><li>Let the element behave like a <code>&lt;thead&gt;</code> element</li></ul></li>
-  <li><code>table-row-group</code><ul><li>Let the element behave like a <code>&lt;tbody&gt;</code> element</li></ul></li>
-  <li><code>table-footer-group</code><ul><li>Let the element behave like a <code>&lt;tfoot&gt;</code> element</li></ul></li>
-  <li><code>table-row</code><ul><li>Let the element behave like a <code>&lt;tr&gt;</code> element</li></ul></li>
-  <li><code>table-cell</code><ul><li>Let the element behave like a <code>&lt;td&gt;</code> element</li></ul></li>
-  <li><code>flexbox</code></li>
-  <li><code>inline-flexbox</code></li>
-  <li><code>flow-root</code></li>
-  <li><code>ruby</code></li>
-  <li><code>ruby-base-container</code></li>
-  <li><code>ruby-base</code></li>
-  <li><code>ruby-text-container</code></li>
-  <li><code>ruby-text</code></li>  -->
-  </ul></li> <br>
-
-  <li><mark><b>INSIGHTS:</b></mark></li>
-  </ul></div>
-
   <!-- FLEX -->
   <div id="Property-flex" class="Box">
   <h3><code>flex: flex-grow flex-shrink flex-basis;</code></h3>
@@ -944,7 +893,6 @@
   <li><code>vertical-align: <em>myValue</em>;</code></li>
   <li><code>z-index: <em>myValue</em>;</code></li>
   </ul></p> </div>  -->
-  </section>
 
   <!-------------------------------->
   <!-- CSS ANIMATION & TRANSITION -->

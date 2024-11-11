@@ -797,15 +797,6 @@ function BorderWidthThick() {
   else { myVisibility.style.display = "none"; }
 }
 
-// BOX-MODEL INSIGHTS //
-function Insights() {
-  let myVisibility = document.getElementsByClassName("Display-Insights")[0];
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 ///////////////////////////
 // BORDER-STYLE PROPERTY //
 ///////////////////////////
@@ -1327,10 +1318,806 @@ function OutlineOffsetLengthValues() {
   else { myVisibility.style.display = "none"; }
 }
 
-/*
-function myGlobal() {
-  const globalInput = { myWidth: document.getElementById("Input-Width").value };
-  return globalInput;
+/////////////////////////
+// BOX-SHADOW PROPERTY //
+/////////////////////////
+function PropertyBoxShadow() {
+  let myBoxShadow = document.getElementById("Input-Box-Shadow").value;
+  document.getElementsByClassName("Box-Model")[0].style.boxShadow = myBoxShadow;
 }
-function ClickerHandlerWidth(myInput) { document.getElementById("Box-Model").style.width = myGlobal(myInput).myWidth; }
-*/
+
+// BOX-SHADOW: CSS GLOBAL VALUES; //
+function BoxShadowGlobalValues() {
+  let myVisibility = document.getElementById("Box-Shadow-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Shadow-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-SHADOW: CSS LENGTH VALUES; //
+function BoxShadowLengthValues() {
+  let myVisibility = document.getElementById("Box-Shadow-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Shadow-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-SHADOW: CSS COLOR VALUES; //
+function BoxShadowColorValues() {
+  let myVisibility = document.getElementById("Box-Shadow-Color-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Shadow-Color-Values").innerHTML =
+      CSSColorValues().colorNames + CSSColorValues().colorFunctions;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-SHADOW: CURRENTCOLOR; //
+function BoxShadowCurrentColor() {
+  let myVisibility = document.getElementById("Box-Shadow-Current-Color");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Shadow-Current-Color").innerHTML =
+      "<div>[Default] The box shadow color is based on the value of the <code>color</code> property of the element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-SHADOW: TRANSPARENT; //
+function BoxShadowTransparent() {
+  let myVisibility = document.getElementById("Box-Shadow-Transparent");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Shadow-Transparent").innerHTML =
+      "<div><code>transparent</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-SHADOW: NONE; //
+function BoxShadowNone() {
+  let myVisibility = document.getElementById("Box-Shadow-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Shadow-None").innerHTML =
+      "<div>[Default] There is no specified box shadow</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////////
+// BOX-SIZING PROPERTY //
+/////////////////////////
+function PropertyBoxSizing() {
+  let myBoxSizing = document.getElementById("Input-Box-Sizing").value;
+  document.getElementsByClassName("Box-Model")[0].style.boxSizing = myBoxSizing;
+}
+
+// BOX-SIZING: CSS GLOBAL VALUES; //
+function BoxSizingGlobalValues() {
+  let myVisibility = document.getElementById("Box-Sizing-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Sizing-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-SIZING: BORDER-BOX; //
+function BoxSizingBorderBox() {
+  let myVisibility = document.getElementById("Box-Sizing-Border-Box");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Sizing-Border-Box").innerHTML =
+      "<div>[Default] The <code>width</code> and <code>height</code> properties (and <code>min/max</code> properties) includes only the content</div>" +
+      "<div>Since the element will remain the same, the content will appears smaller as the <code>padding</code> and <code>border</code> are added into the calculation</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-SIZING: CONTENT-BOX; //
+function BoxSizingContentBox() {
+  let myVisibility = document.getElementById("Box-Sizing-Content-Box");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Box-Sizing-Content-Box").innerHTML =
+      "<div>The <code>width</code> and <code>height</code> properties (and <code>min/max</code> properties) includes content, <code>padding</code> and <code>border</code></div>" +
+      "<div>The element will appears bigger than intended to be</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-MODEL INSIGHTS //
+function InsightsBoxModel() {
+  let myVisibility = document.getElementsByClassName("Display-Insights")[0];
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////
+// POSITION PROPERTY //
+///////////////////////
+function PropertyPosition() {
+  let myPosition = document.getElementById("Input-Position").value;
+  document.getElementsByClassName("Box-Model")[1].style.position = myPosition;
+}
+
+// POSITION: CSS GLOBAL VALUES; //
+function PositionGlobalValues() {
+  let myVisibility = document.getElementById("Position-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Position-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// POSITION: STATIC; //
+function PositionStatic() {
+  let myVisibility = document.getElementById("Position-Static");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Position-Static").innerHTML =
+      "<div>[Default] The element is always positioned according to the normal flow of the page</div>" +
+      "<div>The <code>inset</code> property does not affects the position of the element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// POSITION: RELATIVE; //
+function PositionRelative() {
+  let myVisibility = document.getElementById("Position-Relative");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Position-Relative").innerHTML =
+      "<div>The element is positioned relative to its normal position</div>" +
+      "<div>Use the <code>inset</code> property to adjust the position of the element</div>" +
+      "<div>Other content will not be adjusted to fit into any gap left by the element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// POSITION: FIXED; //
+function PositionFixed() {
+  let myVisibility = document.getElementById("Position-Fixed");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Position-Fixed").innerHTML =
+      "<div>The element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled</div>" +
+      "<div>Use the <code>inset</code> property to adjust the position of the element</div>" +
+      "<div>A fixed element does not leave a gap in the page where it would normally have been located</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// POSITION: ABSOLUTE; //
+function PositionAbsolute() {
+  let myVisibility = document.getElementById("Position-Absolute");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Position-Absolute").innerHTML =
+      "<div>The element is positioned relative to the nearest positioned ancestor</div>" +
+      "<div>Use the <code>inset</code> property to adjust the position of the element</div>" +
+      "<div>If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling</div>" +
+      "<div>Absolute positioned elements are removed from the normal flow, and can overlap elements</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// POSITION: STICKY; //
+function PositionSticky() {
+  let myVisibility = document.getElementById("Position-Sticky");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Position-Sticky").innerHTML =
+      "<div>The element is positioned based on the user's scroll position</div>" +
+      "<div>Use the <code>inset</code> property to adjust the position of the element</div>" +
+      "<div>A sticky element toggles between <code>relative</code> and <code>fixed</code>, depending on the scroll position</div>" +
+      "<div>It is positioned relative until a given offset position is met in the viewport - then it 'sticks' in place</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////
+// INSET PROPERTY //
+////////////////////
+function PropertyInset() {
+  let myInset = document.getElementById("Input-Inset").value;
+  document.getElementsByClassName("Box-Model")[1].style.inset = myInset;
+}
+
+// INSET: CSS GLOBAL VALUES; //
+function InsetGlobalValues() {
+  let myVisibility = document.getElementById("Inset-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Inset-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INSET: CSS LENGTH VALUES; //
+function InsetLengthValues() {
+  let myVisibility = document.getElementById("Inset-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Inset-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INSET: AUTO; //
+function InsetAuto() {
+  let myVisibility = document.getElementById("Inset-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Inset-Auto").innerHTML =
+      "<div>[Default] The element is set to default inset distance</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////
+// FLOAT PROPERTY //
+////////////////////
+function PropertyFloat() {
+  let myFloat = document.getElementById("Input-Float").value;
+  document.getElementsByClassName("Box-Model")[1].style.float = myFloat;
+}
+
+// FLOAT: CSS GLOBAL VALUES; //
+function FloatGlobalValues() {
+  let myVisibility = document.getElementById("Float-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Float-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLOAT: NONE; //
+function FloatNone() {
+  let myVisibility = document.getElementById("Float-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Float-None").innerHTML =
+      "<div>[Default] There is no specified float element, it just displayed where it occurs in the text</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLOAT: LEFT; //
+function FloatLeft() {
+  let myVisibility = document.getElementById("Float-Left");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Float-Left").innerHTML =
+      "<div>The element floats to the left of its container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLOAT: RIGHT; //
+function FloatRight() {
+  let myVisibility = document.getElementById("Float-Right");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Float-Right").innerHTML =
+      "<div>The element floats to the right of its container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLOAT: INLINE-START; //
+function FloatInlineStart() {
+  let myVisibility = document.getElementById("Float-Inline-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Float-Inline-Start").innerHTML =
+      "<div><code>inline-start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLOAT: INLINE-END; //
+function FloatInlineEnd() {
+  let myVisibility = document.getElementById("Float-Inline-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Float-Inline-End").innerHTML =
+      "<div><code>inline-end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////
+// CLEAR PROPERTY //
+////////////////////
+function PropertyClear() {
+  let myClear = document.getElementById("Input-Clear").value;
+  document.getElementById("Property-Position").style.clear = myClear;
+}
+
+// CLEAR: CSS GLOBAL VALUES; //
+function ClearGlobalValues() {
+  let myVisibility = document.getElementById("Clear-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Clear-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// CLEAR: NONE; //
+function ClearNone() {
+  let myVisibility = document.getElementById("Clear-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Clear-None").innerHTML =
+      "<div>[Default] There is no specified clear element, the element is not pushed below left or right floated elements</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// CLEAR: LEFT; //
+function ClearLeft() {
+  let myVisibility = document.getElementById("Clear-Left");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Clear-Left").innerHTML =
+      "<div>The element is pushed below left floated elements</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// CLEAR: RIGHT; //
+function ClearRight() {
+  let myVisibility = document.getElementById("Clear-Right");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Clear-Right").innerHTML =
+      "<div>The element is pushed below right floated elements</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// CLEAR: BOTH; //
+function ClearBoth() {
+  let myVisibility = document.getElementById("Clear-Both");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Clear-Both").innerHTML =
+      "<div>The element is pushed below both left and right floated elements</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+//////////////////////
+// DISPLAY PROPERTY //
+//////////////////////
+function PropertyDisplay() {
+  let myDisplay = document.getElementById("Input-Display").value;
+  document.getElementById("Property-Display").style.display = myDisplay;
+}
+
+// DISPLAY: CSS GLOBAL VALUES; //
+function DisplayGlobalValues() {
+  let myVisibility = document.getElementById("Display-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: INLINE; //
+function DisplayInline() {
+  let myVisibility = document.getElementById("Display-Inline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Inline").innerHTML =
+      "<div>[Default] The element is displayed as an inline element</div>" +
+      "<div>Like <code>&lt;span&gt;</code> any <code>height</code> and <code>width</code> properties will have no effect</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: BLOCK; //
+function DisplayBlock() {
+  let myVisibility = document.getElementById("Display-Block");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Block").innerHTML =
+      "<div>Displays an element as a block element</div>" +
+      "<div>Like <code>&lt;p&gt;</code> it starts on a new line, and takes up the whole width</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: FLEX; //
+function DisplayFlex() {
+  let myVisibility = document.getElementById("Display-Flex");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Flex").innerHTML =
+      "<div>Displays an element as a block-level flex container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: GRID; //
+function DisplayGrid() {
+  let myVisibility = document.getElementById("Display-Grid");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Grid").innerHTML =
+      "<div>Displays an element as a block-level grid container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: NONE; //
+function DisplayNone() {
+  let myVisibility = document.getElementById("Display-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-None").innerHTML =
+      "<div>The element is completely removed</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: CONTENTS; //
+function DisplayContents() {
+  let myVisibility = document.getElementById("Display-Contents");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Contents").innerHTML =
+      "<div>Makes the container disappear, making the child elements children of the element the next level up in the DOM</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: INLINE BLOCK; //
+function DisplayInlineBlock() {
+  let myVisibility = document.getElementById("Display-Inline-Block");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Inline-Block").innerHTML =
+      "<div>Displays an element as an inline-level block container</div>" +
+      "<div>The element itself is formatted as an inline element, but the values for <code>height</code> and <code>width</code> properties can be applied</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: INLINE FLEX; //
+function DisplayInlineFlex() {
+  let myVisibility = document.getElementById("Display-Inline-Flex");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Inline-Flex").innerHTML =
+      "<div>Displays an element as an inline-level flex container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: INLINE GRID; //
+function DisplayInlineGrid() {
+  let myVisibility = document.getElementById("Display-Inline-Grid");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Inline-Grid").innerHTML =
+      "<div>Displays an element as an inline-level grid container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: INLINE TABLE; //
+function DisplayInlineTable() {
+  let myVisibility = document.getElementById("Display-Inline-Table");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Inline-Table").innerHTML =
+      "<div>The element is displayed as an inline-level table</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: LIST ITEM; //
+function DisplayListItem() {
+  let myVisibility = document.getElementById("Display-List-Item");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-List-Item").innerHTML =
+      "<div>Let the element behave like a <code>&lt;li&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: RUN IN; //
+function DisplayRunIn() {
+  let myVisibility = document.getElementById("Display-Run-In");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Run-In").innerHTML =
+      "<div>Displays an element as either block or inline, depending on context</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE; //
+function DisplayTable() {
+  let myVisibility = document.getElementById("Display-Table");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table").innerHTML =
+      "<div>Let the element behave like a <code>&lt;table&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE CAPTION; //
+function DisplayTableCaption() {
+  let myVisibility = document.getElementById("Display-Table-Caption");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table-Caption").innerHTML =
+      "<div>Let the element behave like a <code>&lt;caption&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE COLUMN GROUP; //
+function DisplayTableColumnGroup() {
+  let myVisibility = document.getElementById("Display-Table-Column-Group");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table-Column-Group").innerHTML =
+      "<div>Let the element behave like a <code>&lt;colgroup&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE COLUMN; //
+function DisplayTableColumn() {
+  let myVisibility = document.getElementById("Display-Table-Column");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table-Column").innerHTML =
+      "<div>Let the element behave like a <code>&lt;col&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE HEADER GROUP; //
+function DisplayTableHeaderGroup() {
+  let myVisibility = document.getElementById("Display-Table-Header-Group");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table-Header-Group").innerHTML =
+      "<div>Let the element behave like a <code>&lt;thead&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE ROW GROUP; //
+function DisplayTableRowGroup() {
+  let myVisibility = document.getElementById("Display-Table-Row-Group");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table-Row-Group").innerHTML =
+      "<div>Let the element behave like a <code>&lt;tbody&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE FOOTER GROUP; //
+function DisplayTableFooterGroup() {
+  let myVisibility = document.getElementById("Display-Table-Footer-Group");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table-Footer-Group").innerHTML =
+      "<div>Let the element behave like a <code>&lt;tfoot&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE ROW; //
+function DisplayTableRow() {
+  let myVisibility = document.getElementById("Display-Table-Row");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table-Row").innerHTML =
+      "<div>Let the element behave like a <code>&lt;tr&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: TABLE CELL; //
+function DisplayTableCell() {
+  let myVisibility = document.getElementById("Display-Table-Cell");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Table-Cell").innerHTML =
+      "<div>Let the element behave like a <code>&lt;td&gt;</code> element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: FLEXBOX; //
+function DisplayFlexbox() {
+  let myVisibility = document.getElementById("Display-Flexbox");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Flexbox").innerHTML =
+      "<div><code>flexbox</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: INLINE FLEXBOX; //
+function DisplayInlineFlexbox() {
+  let myVisibility = document.getElementById("Display-Inline-Flexbox");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Inline-Flexbox").innerHTML =
+      "<div><code>inline-flexbox</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: FLOW ROOT; //
+function DisplayFlowRoot() {
+  let myVisibility = document.getElementById("Display-Flow-Root");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Flow-Root").innerHTML =
+      "<div><code>flow-root</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: RUBY; //
+function DisplayRuby() {
+  let myVisibility = document.getElementById("Display-Ruby");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Ruby").innerHTML =
+      "<div><code>ruby</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: RUBY BASE CONTAINER; //
+function DisplayRubyBaseContainer() {
+  let myVisibility = document.getElementById("Display-Ruby-Base-Container");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Ruby-Base-Container").innerHTML =
+      "<div><code>ruby-base-container</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: RUBY BASE; //
+function DisplayRubyBase() {
+  let myVisibility = document.getElementById("Display-Ruby-Base");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Ruby-Base").innerHTML =
+      "<div><code>ruby-base</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: RUBY TEXT CONTAINER; //
+function DisplayRubyTextContainer() {
+  let myVisibility = document.getElementById("Display-Ruby-Text-Container");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Ruby-Text-Container").innerHTML =
+      "<div><code>ruby-text-container</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DISPLAY: RUBY TEXT; //
+function DisplayRubyText() {
+  let myVisibility = document.getElementById("Display-Ruby-Text");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Display-Ruby-Text").innerHTML =
+      "<div><code>ruby-text</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BOX-LAYOUT INSIGHTS //
+function InsightsBoxLayout() {
+  let myVisibility = document.getElementsByClassName("Display-Insights")[1];
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AddBoxModel() {
+  const myNewBox = document.createElement("div");
+  myNewBox.className = "Added-Box-Model";
+  const textnode = document.createTextNode("My Contents!");
+  myNewBox.appendChild(textnode);
+  document.getElementById("Adding-Box-Model").appendChild(myNewBox);
+}

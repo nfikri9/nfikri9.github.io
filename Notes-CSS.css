@@ -37,13 +37,21 @@ a:hover { color: blue; }
 #CSS-Box-Model {
   max-width: 720px;
   padding: 10px;
-  margin: 0 auto;
+  margin: 20px auto;
+  border: 1px solid black;
+}
+
+#CSS-Box-Layout {
+  max-width: 720px;
+  padding: 10px;
+  margin: 20px auto;
   border: 1px solid black;
 }
 
 .Box-Model {
   width: 100px;
   height: 100px;
+  padding: 38px 0px 0px 6px;
   margin: 10px auto;
   border: 1px solid black;
   position: sticky;
@@ -65,3 +73,9 @@ a:hover { color: blue; }
 /* INSIGHTS */
 .Display-Insights { display: none; }
 .Item-Insights { margin: 10px 0; }
+
+.Added-Box-Model {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
