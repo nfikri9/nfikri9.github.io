@@ -1739,7 +1739,7 @@ function ClearBoth() {
 //////////////////////
 function PropertyDisplay() {
   let myDisplay = document.getElementById("Input-Display").value;
-  document.getElementById("Property-Display").style.display = myDisplay;
+  document.getElementById("Adding-Box-Model").style.display = myDisplay;
 }
 
 // DISPLAY: CSS GLOBAL VALUES; //
@@ -1828,7 +1828,7 @@ function DisplayContents() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: INLINE BLOCK; //
+// DISPLAY: INLINE-BLOCK; //
 function DisplayInlineBlock() {
   let myVisibility = document.getElementById("Display-Inline-Block");
   myVisibility.style.margin = "10px 0";
@@ -1841,7 +1841,7 @@ function DisplayInlineBlock() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: INLINE FLEX; //
+// DISPLAY: INLINE-FLEX; //
 function DisplayInlineFlex() {
   let myVisibility = document.getElementById("Display-Inline-Flex");
   myVisibility.style.margin = "10px 0";
@@ -1853,7 +1853,7 @@ function DisplayInlineFlex() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: INLINE GRID; //
+// DISPLAY: INLINE-GRID; //
 function DisplayInlineGrid() {
   let myVisibility = document.getElementById("Display-Inline-Grid");
   myVisibility.style.margin = "10px 0";
@@ -1865,7 +1865,7 @@ function DisplayInlineGrid() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: INLINE TABLE; //
+// DISPLAY: INLINE-TABLE; //
 function DisplayInlineTable() {
   let myVisibility = document.getElementById("Display-Inline-Table");
   myVisibility.style.margin = "10px 0";
@@ -1877,7 +1877,7 @@ function DisplayInlineTable() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: LIST ITEM; //
+// DISPLAY: LIST-ITEM; //
 function DisplayListItem() {
   let myVisibility = document.getElementById("Display-List-Item");
   myVisibility.style.margin = "10px 0";
@@ -1889,7 +1889,7 @@ function DisplayListItem() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: RUN IN; //
+// DISPLAY: RUN-IN; //
 function DisplayRunIn() {
   let myVisibility = document.getElementById("Display-Run-In");
   myVisibility.style.margin = "10px 0";
@@ -1913,7 +1913,7 @@ function DisplayTable() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: TABLE CAPTION; //
+// DISPLAY: TABLE-CAPTION; //
 function DisplayTableCaption() {
   let myVisibility = document.getElementById("Display-Table-Caption");
   myVisibility.style.margin = "10px 0";
@@ -1925,7 +1925,7 @@ function DisplayTableCaption() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: TABLE COLUMN GROUP; //
+// DISPLAY: TABLE-COLUMN-GROUP; //
 function DisplayTableColumnGroup() {
   let myVisibility = document.getElementById("Display-Table-Column-Group");
   myVisibility.style.margin = "10px 0";
@@ -1937,7 +1937,7 @@ function DisplayTableColumnGroup() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: TABLE COLUMN; //
+// DISPLAY: TABLE-COLUMN; //
 function DisplayTableColumn() {
   let myVisibility = document.getElementById("Display-Table-Column");
   myVisibility.style.margin = "10px 0";
@@ -1949,7 +1949,7 @@ function DisplayTableColumn() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: TABLE HEADER GROUP; //
+// DISPLAY: TABLE-HEADER-GROUP; //
 function DisplayTableHeaderGroup() {
   let myVisibility = document.getElementById("Display-Table-Header-Group");
   myVisibility.style.margin = "10px 0";
@@ -1961,7 +1961,7 @@ function DisplayTableHeaderGroup() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: TABLE ROW GROUP; //
+// DISPLAY: TABLE-ROW-GROUP; //
 function DisplayTableRowGroup() {
   let myVisibility = document.getElementById("Display-Table-Row-Group");
   myVisibility.style.margin = "10px 0";
@@ -1973,7 +1973,7 @@ function DisplayTableRowGroup() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: TABLE FOOTER GROUP; //
+// DISPLAY: TABLE-FOOTER-GROUP; //
 function DisplayTableFooterGroup() {
   let myVisibility = document.getElementById("Display-Table-Footer-Group");
   myVisibility.style.margin = "10px 0";
@@ -1985,7 +1985,7 @@ function DisplayTableFooterGroup() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: TABLE ROW; //
+// DISPLAY: TABLE-ROW; //
 function DisplayTableRow() {
   let myVisibility = document.getElementById("Display-Table-Row");
   myVisibility.style.margin = "10px 0";
@@ -1997,7 +1997,7 @@ function DisplayTableRow() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: TABLE CELL; //
+// DISPLAY: TABLE-CELL; //
 function DisplayTableCell() {
   let myVisibility = document.getElementById("Display-Table-Cell");
   myVisibility.style.margin = "10px 0";
@@ -2021,7 +2021,7 @@ function DisplayFlexbox() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: INLINE FLEXBOX; //
+// DISPLAY: INLINE-FLEXBOX; //
 function DisplayInlineFlexbox() {
   let myVisibility = document.getElementById("Display-Inline-Flexbox");
   myVisibility.style.margin = "10px 0";
@@ -2033,7 +2033,7 @@ function DisplayInlineFlexbox() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: FLOW ROOT; //
+// DISPLAY: FLOW-ROOT; //
 function DisplayFlowRoot() {
   let myVisibility = document.getElementById("Display-Flow-Root");
   myVisibility.style.margin = "10px 0";
@@ -2057,7 +2057,7 @@ function DisplayRuby() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: RUBY BASE CONTAINER; //
+// DISPLAY: RUBY-BASE-CONTAINER; //
 function DisplayRubyBaseContainer() {
   let myVisibility = document.getElementById("Display-Ruby-Base-Container");
   myVisibility.style.margin = "10px 0";
@@ -2069,7 +2069,7 @@ function DisplayRubyBaseContainer() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: RUBY BASE; //
+// DISPLAY: RUBY-BASE; //
 function DisplayRubyBase() {
   let myVisibility = document.getElementById("Display-Ruby-Base");
   myVisibility.style.margin = "10px 0";
@@ -2081,7 +2081,7 @@ function DisplayRubyBase() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: RUBY TEXT CONTAINER; //
+// DISPLAY: RUBY-TEXT-CONTAINER; //
 function DisplayRubyTextContainer() {
   let myVisibility = document.getElementById("Display-Ruby-Text-Container");
   myVisibility.style.margin = "10px 0";
@@ -2093,7 +2093,7 @@ function DisplayRubyTextContainer() {
   else { myVisibility.style.display = "none"; }
 }
 
-// DISPLAY: RUBY TEXT; //
+// DISPLAY: RUBY-TEXT; //
 function DisplayRubyText() {
   let myVisibility = document.getElementById("Display-Ruby-Text");
   myVisibility.style.margin = "10px 0";
@@ -2101,6 +2101,703 @@ function DisplayRubyText() {
     myVisibility.style.display = "block";
     document.getElementById("Display-Ruby-Text").innerHTML =
       "<div><code>ruby-text</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////////////
+// FLEX-DIRECTION PROPERTY //
+/////////////////////////////
+function PropertyFlexDirection() {
+  let myFlexDirection = document.getElementById("Input-Flex-Direction").value;
+  document.getElementById("Adding-Box-Model").style.flexDirection = myFlexDirection;
+}
+
+// FLEX-DIRECTION: CSS GLOBAL VALUES; //
+function FlexDirectionGlobalValues() {
+  let myVisibility = document.getElementById("Flex-Direction-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Direction-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-DIRECTION: ROW; //
+function FlexDirectionRow() {
+  let myVisibility = document.getElementById("Flex-Direction-Row");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Direction-Row").innerHTML =
+      "<div>[Default]  The flexible items are displayed horizontally, as a row</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-DIRECTION: ROW-REVERSE; //
+function FlexDirectionRowReverse() {
+  let myVisibility = document.getElementById("Flex-Direction-Row-Reverse");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Direction-Row-Reverse").innerHTML =
+      "<div>The flexible items are displayed horizontally, as a row in reverse order</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-DIRECTION: COLUMN; //
+function FlexDirectionColumn() {
+  let myVisibility = document.getElementById("Flex-Direction-Column");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Direction-Column").innerHTML =
+      "<div>The flexible items are displayed vertically, as a column</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-DIRECTION: COLUMN-REVERSE; //
+function FlexDirectionColumnReverse() {
+  let myVisibility = document.getElementById("Flex-Direction-Column-Reverse");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Direction-Column-Reverse").innerHTML =
+      "<div>The flexible items are displayed vertically, as a column in reverse order</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////
+// FLEX-WRAP PROPERTY //
+////////////////////////
+function PropertyFlexWrap() {
+  let myFlexWrap = document.getElementById("Input-Flex-Wrap").value;
+  document.getElementById("Adding-Box-Model").style.flexWrap = myFlexWrap;
+}
+
+// FLEX-WRAP: CSS GLOBAL VALUES; //
+function FlexWrapGlobalValues() {
+  let myVisibility = document.getElementById("Flex-Wrap-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Wrap-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-WRAP: NOWRAP; //
+function FlexWrapNoWrap() {
+  let myVisibility = document.getElementById("Flex-Wrap-No-Wrap");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Wrap-No-Wrap").innerHTML =
+      "<div>[Default] Specifies that the flexible items will not wrap</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-WRAP: WRAP; //
+function FlexWrapWrap() {
+  let myVisibility = document.getElementById("Flex-Wrap-Wrap");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Wrap-Wrap").innerHTML =
+      "<div>Specifies that the flexible items will wrap if necessary</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-WRAP: WRAP-REVERSE; //
+function FlexWrapWrapReverse() {
+  let myVisibility = document.getElementById("Flex-Wrap-Wrap-Reverse");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Wrap-Wrap-Reverse").innerHTML =
+      "<div>Specifies that the flexible items will wrap, if necessary, in reverse order</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////
+// FLEX-GROW PROPERTY //
+////////////////////////
+function PropertyFlexGrow() {
+  let myFlexGrow = document.getElementById("Input-Flex-Grow").value;
+  document.getElementsByClassName("Added-Box-Model")[0].style.flexGrow = myFlexGrow;
+}
+
+// FLEX-GROW: CSS GLOBAL VALUES; //
+function FlexGrowGlobalValues() {
+  let myVisibility = document.getElementById("Flex-Grow-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Grow-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-GROW: NUMBERS; //
+function FlexGrowNumbers() {
+  let myVisibility = document.getElementById("Flex-Grow-Numbers");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Grow-Numbers").innerHTML =
+      "<div>A number specifying how much the item will grow relative to the rest of the flexible items</div>" +
+      "<div><code>0</code> is the default value where the item growth relative to the rest of the flexible items remain unchanged</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+//////////////////////////
+// FLEX-SHRINK PROPERTY //
+//////////////////////////
+function PropertyFlexShrink() {
+  let myFlexShrink = document.getElementById("Input-Flex-Shrink").value;
+  document.getElementsByClassName("Added-Box-Model")[0].style.flexShrink = myFlexShrink;
+}
+
+// FLEX-SHRINK: CSS GLOBAL VALUES; //
+function FlexShrinkGlobalValues() {
+  let myVisibility = document.getElementById("Flex-Shrink-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Shrink-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-SHRINK: NUMBERS; //
+function FlexShrinkNumbers() {
+  let myVisibility = document.getElementById("Flex-Shrink-Numbers");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Shrink-Numbers").innerHTML =
+      "<div>A number specifying how much the item will shrink relative to the rest of the flexible items</div>" +
+      "<div><code>1</code> is the default value where the item is shrinking relative to the rest of the flexible items</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+//////////////////////////
+// FLEX-BASIS PROPERTY //
+//////////////////////////
+function PropertyFlexBasis() {
+  let myFlexBasis = document.getElementById("Input-Flex-Basis").value;
+  document.getElementsByClassName("Added-Box-Model")[0].style.flexBasis = myFlexBasis;
+}
+
+// FLEX-BASIS: CSS GLOBAL VALUES; //
+function FlexBasisGlobalValues() {
+  let myVisibility = document.getElementById("Flex-Basis-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Basis-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-BASIS: CSS LENGTH VALUES; //
+function FlexBasisLengthValues() {
+  let myVisibility = document.getElementById("Flex-Basis-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Basis-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FLEX-BASIS: AUTO; //
+function FlexBasisAuto() {
+  let myVisibility = document.getElementById("Flex-Basis-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Flex-Basis-Auto").innerHTML =
+    "<div>[Default] The length is equal to the length of the flexible item</div>" +
+    "<div>If the item has no length specified, the length will be according to its content</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////
+// ORDER PROPERTY //
+////////////////////
+function PropertyOrder() {
+  let myOrder = document.getElementById("Input-Order").value;
+  document.getElementsByClassName("Added-Box-Model")[0].style.order = myOrder;
+}
+
+// ORDER: CSS GLOBAL VALUES; //
+function OrderGlobalValues() {
+  let myVisibility = document.getElementById("Order-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Order-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ORDER: NUMBERS; //
+function OrderNumbers() {
+  let myVisibility = document.getElementById("Order-Numbers");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Order-Numbers").innerHTML =
+      "<div>Specifies the order for the flexible item</div>" +
+      "<div><code>0</code> is the default value where order of the item is remain unchanged</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////////////////
+// GRID-TEMPLATE-ROWS PROPERTY //
+/////////////////////////////////
+function PropertyGridTemplateRows() {
+  let myGridTemplateRows = document.getElementById("Input-Grid-Template-Rows").value;
+  document.getElementById("Adding-Box-Model").style.gridTemplateRows = myGridTemplateRows;
+}
+
+// GRID-TEMPLATE-ROWS: CSS GLOBAL VALUES; //
+function GridTemplateRowsGlobalValues() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: CSS LENGTH VALUES; //
+function GridTemplateRowsLengthValues() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: NONE; //
+function GridTemplateRowsNone() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-None").innerHTML =
+      "<div>[Default] No size is set, rows are created if needed</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: AUTO; //
+function GridTemplateRowsAuto() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Auto").innerHTML =
+      "<div>The size of the rows is determined by the size of the container, and on the size of the content of the items in the row</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: MIN-CONTENT; //
+function GridTemplateRowsMinContent() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Min-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Min-Content").innerHTML =
+      "<div>Sets the size of each row to depend on the smallest item in the row</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: FIT-CONTENT; //
+function GridTemplateRowsFitContent() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Fit-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Fit-Content").innerHTML =
+      "<div>Sets the size of the rows in length or %, and works like the row will use the available space, but it will never expand the max-content size</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: MAX-CONTENT; //
+function GridTemplateRowsMaxContent() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Max-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Max-Content").innerHTML =
+      "<div>Sets the size of each row to depend on the largest item in the row</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: MINMAX(); //
+function GridTemplateRowsMinmax() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Minmax");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Minmax").innerHTML =
+      "<div>Defines a size-range greater than or equal to min and less than or equal to max</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: REPEAT(); //
+function GridTemplateRowsRepeat() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Repeat");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Repeat").innerHTML =
+      "<div>Represents a repeated fragment of the track list</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-ROWS: SUBGRID; //
+function GridTemplateRowsSubgrid() {
+  let myVisibility = document.getElementById("Grid-Template-Rows-Subgrid");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Rows-Subgrid").innerHTML =
+      "<div>Indicates that the grid will adopt the spanned portion of its parent grid in that axis</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////////////////
+// GRID-TEMPLATE-COLUMNS PROPERTY //
+////////////////////////////////////
+function PropertyGridTemplateColumns() {
+  let myGridTemplateColumns = document.getElementById("Input-Grid-Template-Columns").value;
+  document.getElementById("Adding-Box-Model").style.gridTemplateColumns = myGridTemplateColumns;
+}
+
+// GRID-TEMPLATE-COLUMNS: CSS GLOBAL VALUES; //
+function GridTemplateColumnsGlobalValues() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: CSS LENGTH VALUES; //
+function GridTemplateColumnsLengthValues() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: NONE; //
+function GridTemplateColumnsNone() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-None");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-None").innerHTML =
+      "<div>[Default] No size is set, columns are created if needed</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: AUTO; //
+function GridTemplateColumnsAuto() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Auto").innerHTML =
+      "<div>The size of the columns is determined by the size of the container and on the size of the content of the items in the column</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: MIN-CONTENT; //
+function GridTemplateColumnsMinContent() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Min-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Min-Content").innerHTML =
+      "<div>Sets the size of each column to depend on the smallest item in the column</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: FIT-CONTENT; //
+function GridTemplateColumnsFitContent() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Fit-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Fit-Content").innerHTML =
+      "<div>Sets the size of the columns in length or %, and works like the column will use the available space, but it will never expand the max-content size</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: MAX-CONTENT; //
+function GridTemplateColumnsMaxContent() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Max-Content");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Max-Content").innerHTML =
+      "<div>Sets the size of each column to depend on the largest item in the column</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: MINMAX(); //
+function GridTemplateColumnsMinmax() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Minmax");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Minmax").innerHTML =
+      "<div>Defines a size-range greater than or equal to min and less than or equal to max</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: REPEAT(); //
+function GridTemplateColumnsRepeat() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Repeat");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Repeat").innerHTML =
+      "<div>Represents a repeated fragment of the track list</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-TEMPLATE-COLUMNS: SUBGRID; //
+function GridTemplateColumnsSubgrid() {
+  let myVisibility = document.getElementById("Grid-Template-Columns-Subgrid");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Template-Columns-Subgrid").innerHTML =
+      "<div>Indicates that the grid will adopt the spanned portion of its parent grid in that axis</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////////////
+// GRID-ROW-START PROPERTY //
+/////////////////////////////
+function PropertyGridRowStart() {
+  let myGridRowStart = document.getElementById("Input-Grid-Row-Start").value;
+  document.getElementsByClassName("Added-Box-Model")[0].style.gridRowStart = myGridRowStart;
+}
+
+// GRID-ROW-START: CSS GLOBAL VALUES; //
+function GridRowStartGlobalValues() {
+  let myVisibility = document.getElementById("Grid-Row-Start-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Row-Start-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-ROW-START: AUTO; //
+function GridRowStartAuto() {
+  let myVisibility = document.getElementById("Grid-Row-Start-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Row-Start-Auto").innerHTML =
+      "<div>[Default] The item will be placed by following the flow</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-ROW-START: SPAN; //
+function GridRowStartSpan() {
+  let myVisibility = document.getElementById("Grid-Row-Start-Span");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Row-Start-Span").innerHTML =
+      "<div>Specifies the number of rows the item will span</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////////////
+// GRID-COLUMN-START PROPERTY //
+////////////////////////////////
+function PropertyGridColumnStart() {
+  let myGridColumnStart = document.getElementById("Input-Grid-Column-Start").value;
+  document.getElementsByClassName("Added-Box-Model")[0].style.gridColumnStart = myGridColumnStart;
+}
+
+// GRID-COLUMN-START: CSS GLOBAL VALUES; //
+function GridColumnStartGlobalValues() {
+  let myVisibility = document.getElementById("Grid-Column-Start-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Column-Start-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-COLUMN-START: AUTO; //
+function GridColumnStartAuto() {
+  let myVisibility = document.getElementById("Grid-Column-Start-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Column-Start-Auto").innerHTML =
+      "<div>[Default] The item will be placed by following the flow</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-COLUMN-START: SPAN; //
+function GridColumnStartSpan() {
+  let myVisibility = document.getElementById("Grid-Column-Start-Span");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Column-Start-Span").innerHTML =
+      "<div>Specifies the number of columns the item will span</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////
+// GRID-ROW-END PROPERTY //
+///////////////////////////
+function PropertyGridRowEnd() {
+  let myGridRowEnd = document.getElementById("Input-Grid-Row-End").value;
+  document.getElementsByClassName("Added-Box-Model")[0].style.gridRowEnd = myGridRowEnd;
+}
+
+// GRID-ROW-END: CSS GLOBAL VALUES; //
+function GridRowEndGlobalValues() {
+  let myVisibility = document.getElementById("Grid-Row-End-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Row-End-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-ROW-END: AUTO; //
+function GridRowEndAuto() {
+  let myVisibility = document.getElementById("Grid-Row-End-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Row-End-Auto").innerHTML =
+      "<div>[Default] The item will be placed by following the flow</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-ROW-END: SPAN; //
+function GridRowEndSpan() {
+  let myVisibility = document.getElementById("Grid-Row-End-Span");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Row-End-Span").innerHTML =
+      "<div>Specifies the number of rows the item will span</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+//////////////////////////////
+// GRID-COLUMN-END PROPERTY //
+//////////////////////////////
+function PropertyGridColumnEnd() {
+  let myGridColumnEnd = document.getElementById("Input-Grid-Column-End").value;
+  document.getElementsByClassName("Added-Box-Model")[0].style.gridColumnEnd = myGridColumnEnd;
+}
+
+// GRID-COLUMN-END: CSS GLOBAL VALUES; //
+function GridColumnEndGlobalValues() {
+  let myVisibility = document.getElementById("Grid-Column-End-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Column-End-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-COLUMN-END: AUTO; //
+function GridColumnEndAuto() {
+  let myVisibility = document.getElementById("Grid-Column-End-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Column-End-Auto").innerHTML =
+      "<div>[Default] The item will be placed by following the flow</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GRID-COLUMN-END: SPAN; //
+function GridColumnEndSpan() {
+  let myVisibility = document.getElementById("Grid-Column-End-Span");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Grid-Column-End-Span").innerHTML =
+      "<div>Specifies the number of columns the item will span</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
