@@ -3,11 +3,37 @@
 ///////////////////////
 function CSSGlobalValues(){
   const global = {
-    calculation: "<div><code>calc()</code></div>",
-    inherit: "<div><code>inherit</code></div>",
-    initial: "<div><code>initial</code></div>",
-    unset: "<div><code>unset</code></div>",
-    variable: "<div><code>var(<em>--Name, Value</em>)</code></div>"
+    calculation:
+      "<div id='Box-Calculation'><code>calc()</code>" +
+      "<div></div>" +
+      "</div>",
+
+    inherit:
+      "<div id='Box-Inherit'><code>inherit</code>" +
+      "<div>The <code>inherit</code> keyword specifies that a property should inherit its value from its parent element</div>" +
+      "</div>",
+
+    initial:
+      "<div id='Box-Initial'><code>initial</code>" +
+      "<div>The <code>initial</code> keyword is used to set a CSS property to its default value</div>" +
+      "</div>",
+
+    unset:
+      "<div id='Box-Unset'><code>unset</code>" +
+      "<div>The <code>unset</code> keyword resets a property to its inherited value if the property naturally inherits from its parent, and to its initial value if not</div>" +
+      "<div><code><em>myProperty</em>: inherit;</code> = The property behaves like the <code>inherit</code> keyword</div>" +
+      "<div><code><em>myProperty: Non-Inherited Value</em>;</code> = The property behaves like the <code>initial</code> keyword</div>" +
+      "</div>",
+
+    variable:
+      "<div id='Box-Variable'><code>var(<em>--Name, Value</em>)</code>" +
+      "<div><code><em>Name</em></code> = <b>Required</b> parameter, specifies the variable name, must begin with two dashes (--), it is case sensitive</div>" +
+      "<div><code><em>Value</em></code> = <b>Optional</b> parameter, specifies the fallback value, it is used if the variable is not found</div>" +
+      "<div>Global Variable = <code>:root { --<em>myVariable: myValue</em>; } div { <em>myProperty</em>: var(--<em>myVariable</em>); }</code></div>" +
+      "<div>Local Variable = <code>div { --<em>myVariable: myValue</em>; <em>myProperty</em>: var(--<em>myVariable</em>); }</code></div>" +
+      "<div>Best practice to use CSS variables when it comes to the colors of the design</div>" +
+      "<div>Local variables overrides global variables when there is same variable declared inside selector</div>" +
+      "</div>"
   };
   return global;
 }
@@ -2798,6 +2824,1292 @@ function GridColumnEndSpan() {
     myVisibility.style.display = "block";
     document.getElementById("Grid-Column-End-Span").innerHTML =
       "<div>Specifies the number of columns the item will span</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////////
+// ALIGN-CONTENT PROPERTY //
+////////////////////////////
+function PropertyAlignContent() {
+  let myAlignContent = document.getElementById("Input-Align-Content").value;
+  document.getElementById("Adding-Box-Model").style.alignContent = myAlignContent;
+}
+
+// ALIGN-CONTENT: CSS GLOBAL VALUES; //
+function AlignContentGlobalValues() {
+  let myVisibility = document.getElementById("Align-Content-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: STRETCH; //
+function AlignContentStretch() {
+  let myVisibility = document.getElementById("Align-Content-Stretch");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Stretch").innerHTML =
+      "<div>[Default] Lines stretch to take up the remaining space</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: FLEX-START; //
+function AlignContentFlexStart() {
+  let myVisibility = document.getElementById("Align-Content-Flex-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Flex-Start").innerHTML =
+      "<div>Lines are packed toward the start of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: FLEX-END; //
+function AlignContentFlexEnd() {
+  let myVisibility = document.getElementById("Align-Content-Flex-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Flex-End").innerHTML =
+      "<div>Lines are packed toward the end of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: START; //
+function AlignContentStart() {
+  let myVisibility = document.getElementById("Align-Content-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Start").innerHTML =
+      "<div>Lines are packed toward the start of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: END; //
+function AlignContentEnd() {
+  let myVisibility = document.getElementById("Align-Content-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-End").innerHTML =
+      "<div>Lines are packed toward the end of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: LEFT; //
+function AlignContentLeft() {
+  let myVisibility = document.getElementById("Align-Content-Left");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Left").innerHTML =
+      "<div>Lines are packed toward the left of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: RIGHT; //
+function AlignContentRight() {
+  let myVisibility = document.getElementById("Align-Content-Right");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Right").innerHTML =
+      "<div>Lines are packed toward the right of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: CENTER; //
+function AlignContentCenter() {
+  let myVisibility = document.getElementById("Align-Content-Center");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Center").innerHTML =
+      "<div>Lines are packed toward the center of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: NORMAL; //
+function AlignContentNormal() {
+  let myVisibility = document.getElementById("Align-Content-Normal");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Normal").innerHTML =
+      "<div><code>normal</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: SAFE; //
+function AlignContentSafe() {
+  let myVisibility = document.getElementById("Align-Content-Safe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Safe").innerHTML =
+      "<div><code>safe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: UNSAFE; //
+function AlignContentUnsafe() {
+  let myVisibility = document.getElementById("Align-Content-Unsafe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Unsafe").innerHTML =
+      "<div><code>unsafe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: BASELINE; //
+function AlignContentBaseline() {
+  let myVisibility = document.getElementById("Align-Content-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Baseline").innerHTML =
+      "<div>Lines are positioned at the baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: FIRST-BASELINE; //
+function AlignContentFirstBaseline() {
+  let myVisibility = document.getElementById("Align-Content-First-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-First-Baseline").innerHTML =
+      "<div>Lines are positioned at the first baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: LAST-BASELINE; //
+function AlignContentLastBaseline() {
+  let myVisibility = document.getElementById("Align-Content-Last-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Last-Baseline").innerHTML =
+      "<div>Lines are positioned at the last baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: SPACE-AROUND; //
+function AlignContentSpaceAround() {
+  let myVisibility = document.getElementById("Align-Content-Space-Around");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Space-Around").innerHTML =
+      "<div>Lines are evenly distributed in the container, with half-size spaces on either end</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: SPACE-BETWEEN; //
+function AlignContentSpaceBetween() {
+  let myVisibility = document.getElementById("Align-Content-Space-Between");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Space-Between").innerHTML =
+      "<div>Lines are evenly distributed in the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-CONTENT: SPACE-EVENLY; //
+function AlignContentSpaceEvenly() {
+  let myVisibility = document.getElementById("Align-Content-Space-Evenly");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Content-Space-Evenly").innerHTML =
+      "<div>Lines are evenly distributed in the container, with equal space around them</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+//////////////////////////////
+// JUSTIFY-CONTENT PROPERTY //
+//////////////////////////////
+function PropertyJustifyContent() {
+  let myJustifyContent = document.getElementById("Input-Justify-Content").value;
+  document.getElementById("Adding-Box-Model").style.justifyContent = myJustifyContent;
+}
+
+// JUSTIFY-CONTENT: CSS GLOBAL VALUES; //
+function JustifyContentGlobalValues() {
+  let myVisibility = document.getElementById("Justify-Content-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: FLEX-START; //
+function JustifyContentFlexStart() {
+  let myVisibility = document.getElementById("Justify-Content-Flex-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Flex-Start").innerHTML =
+      "<div>[Default] Items are positioned at the beginning of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: FLEX-END; //
+function JustifyContentFlexEnd() {
+  let myVisibility = document.getElementById("Justify-Content-Flex-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Flex-End").innerHTML =
+      "<div>Items are positioned at the end of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: START; //
+function JustifyContentStart() {
+  let myVisibility = document.getElementById("Justify-Content-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Start").innerHTML =
+      "<div>Items are positioned at the start inside the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: END; //
+function JustifyContentEnd() {
+  let myVisibility = document.getElementById("Justify-Content-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-End").innerHTML =
+      "<div>Items are positioned at the end inside the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: LEFT; //
+function JustifyContentLeft() {
+  let myVisibility = document.getElementById("Justify-Content-Left");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Left").innerHTML =
+      "<div>Items are positioned at the left inside the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: RIGHT; //
+function JustifyContentRight() {
+  let myVisibility = document.getElementById("Justify-Content-Right");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Right").innerHTML =
+      "<div>Items are positioned at the right inside the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: CENTER; //
+function JustifyContentCenter() {
+  let myVisibility = document.getElementById("Justify-Content-Center");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Center").innerHTML =
+      "<div>Items are positioned in the center of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: STRETCH; //
+function JustifyContentStretch() {
+  let myVisibility = document.getElementById("Justify-Content-Stretch");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Stretch").innerHTML =
+      "<div><code>stretch</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: SAFE; //
+function JustifyContentSafe() {
+  let myVisibility = document.getElementById("Justify-Content-Safe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Safe").innerHTML =
+      "<div><code>safe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: UNSAFE; //
+function JustifyContentUnsafe() {
+  let myVisibility = document.getElementById("Justify-Content-Unsafe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Unsafe").innerHTML =
+      "<div><code>unsafe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: BASELINE; //
+function JustifyContentBaseline() {
+  let myVisibility = document.getElementById("Justify-Content-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Baseline").innerHTML =
+      "<div>Items are positioned at the baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: FIRST-BASELINE; //
+function JustifyContentFirstBaseline() {
+  let myVisibility = document.getElementById("Justify-Content-First-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-First-Baseline").innerHTML =
+      "<div>Items are positioned at the first baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: LAST-BASELINE; //
+function JustifyContentLastBaseline() {
+  let myVisibility = document.getElementById("Justify-Content-Last-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Last-Baseline").innerHTML =
+      "<div>Items are positioned at the last baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: SPACE-AROUND; //
+function JustifyContentSpaceAround() {
+  let myVisibility = document.getElementById("Justify-Content-Space-Around");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Space-Around").innerHTML =
+      "<div>Items will have space before, between, and after them</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: SPACE-BETWEEN; //
+function JustifyContentSpaceBetween() {
+  let myVisibility = document.getElementById("Justify-Content-Space-Between");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Space-Between").innerHTML =
+      "<div>Items will have space between them</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-CONTENT: SPACE-EVENLY; //
+function JustifyContentSpaceEvenly() {
+  let myVisibility = document.getElementById("Justify-Content-Space-Evenly");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Content-Space-Evenly").innerHTML =
+      "<div>Items will have equal space around them</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+//////////////////////////
+// ALIGN-ITEMS PROPERTY //
+//////////////////////////
+function PropertyAlignItems() {
+  let myAlignItems = document.getElementById("Input-Align-Items").value;
+  document.getElementById("Adding-Box-Model").style.alignItems = myAlignItems;
+}
+
+// ALIGN-ITEMS: CSS GLOBAL VALUES; //
+function AlignItemsGlobalValues() {
+  let myVisibility = document.getElementById("Align-Items-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: NORMAL; //
+function AlignItemsNormal() {
+  let myVisibility = document.getElementById("Align-Items-Normal");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Normal").innerHTML =
+      "<div>[Default] Behaves like 'stretch' for flexbox and grid items, or 'start' for grid items with a defined block size</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: FLEX-START; //
+function AlignItemsFlexStart() {
+  let myVisibility = document.getElementById("Align-Items-Flex-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Flex-Start").innerHTML =
+      "<div>Items are positioned at the beginning of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: FLEX-END; //
+function AlignItemsFlexEnd() {
+  let myVisibility = document.getElementById("Align-Items-Flex-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Flex-End").innerHTML =
+      "<div>Items are positioned at the end of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: SELF-START; //
+function AlignItemsSelfStart() {
+  let myVisibility = document.getElementById("Align-Items-Self-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Self-Start").innerHTML =
+      "<div><code>self-start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: SELF-END; //
+function AlignItemsSelfEnd() {
+  let myVisibility = document.getElementById("Align-Items-Self-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Self-End").innerHTML =
+      "<div><code>self-end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: START; //
+function AlignItemsStart() {
+  let myVisibility = document.getElementById("Align-Items-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Start").innerHTML =
+      "<div>Items are positioned at the beginning of their individual grid cells, in the block direction</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: END; //
+function AlignItemsEnd() {
+  let myVisibility = document.getElementById("Align-Items-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-End").innerHTML =
+      "<div>Items are positioned at the end of the their individual grid cells, in the block direction</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: CENTER; //
+function AlignItemsCenter() {
+  let myVisibility = document.getElementById("Align-Items-Center");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Center").innerHTML =
+      "<div>Items are positioned at the center of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: STRETCH; //
+function AlignItemsStretch() {
+  let myVisibility = document.getElementById("Align-Items-Stretch");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Stretch").innerHTML =
+      "<div>Items are stretched to fit the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: SAFE; //
+function AlignItemsSafe() {
+  let myVisibility = document.getElementById("Align-Items-Safe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Safe").innerHTML =
+      "<div><code>safe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: UNSAFE; //
+function AlignItemsUnsafe() {
+  let myVisibility = document.getElementById("Align-Items-Unsafe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Unsafe").innerHTML =
+      "<div><code>unsafe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: BASELINE; //
+function AlignItemsBaseline() {
+  let myVisibility = document.getElementById("Align-Items-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Baseline").innerHTML =
+      "<div>Items are positioned at the baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: FIRST-BASELINE; //
+function AlignItemsFirstBaseline() {
+  let myVisibility = document.getElementById("Align-Items-First-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-First-Baseline").innerHTML =
+      "<div>Items are positioned at the first baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-ITEMS: LAST-BASELINE; //
+function AlignItemsLastBaseline() {
+  let myVisibility = document.getElementById("Align-Items-Last-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Items-Last-Baseline").innerHTML =
+      "<div>Items are positioned at the last baseline of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////////////
+// JUSTIFY-ITEMS PROPERTY //
+////////////////////////////
+function PropertyJustifyItems() {
+  let myJustifyItems = document.getElementById("Input-Justify-Items").value;
+  document.getElementById("Adding-Box-Model").style.justifyItems = myJustifyItems;
+}
+
+// JUSTIFY-ITEMS: CSS GLOBAL VALUES; //
+function JustifyItemsGlobalValues() {
+  let myVisibility = document.getElementById("Justify-Items-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: LEGACY; //
+function JustifyItemsLegacy() {
+  let myVisibility = document.getElementById("Justify-Items-Legacy");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Legacy").innerHTML =
+      "<div>[Default] Grid items with justify-self value 'auto' only inherits grid container justify-items property value if it starts with 'legacy'</div>" +
+      "<div>It exists to implement the legacy alignment behavior of HTML's 〈center〉 element and align attribute</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: FLEX-START; //
+function JustifyItemsFlexStart() {
+  let myVisibility = document.getElementById("Justify-Items-Flex-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Flex-Start").innerHTML =
+      "<div><code>flex-start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: FLEX-END; //
+function JustifyItemsFlexEnd() {
+  let myVisibility = document.getElementById("Justify-Items-Flex-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Flex-End").innerHTML =
+      "<div><code>flex-end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: SELF-START; //
+function JustifyItemsSelfStart() {
+  let myVisibility = document.getElementById("Justify-Items-Self-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Self-Start").innerHTML =
+      "<div><code>self-start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: SELF-END; //
+function JustifyItemsSelfEnd() {
+  let myVisibility = document.getElementById("Justify-Items-Self-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Self-End").innerHTML =
+      "<div><code>self-end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: START; //
+function JustifyItemsStart() {
+  let myVisibility = document.getElementById("Justify-Items-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Start").innerHTML =
+      "<div>Align items at the start in the inline direction</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: END; //
+function JustifyItemsEnd() {
+  let myVisibility = document.getElementById("Justify-Items-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-End").innerHTML =
+      "<div>Align items at the end in the inline direction</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: LEFT; //
+function JustifyItemsLeft() {
+  let myVisibility = document.getElementById("Justify-Items-Left");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Left").innerHTML =
+      "<div>Align items to the left</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: RIGHT; //
+function JustifyItemsRight() {
+  let myVisibility = document.getElementById("Justify-Items-Right");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Right").innerHTML =
+      "<div>Align items to the right</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: CENTER; //
+function JustifyItemsCenter() {
+  let myVisibility = document.getElementById("Justify-Items-Center");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Center").innerHTML =
+      "<div>Align items to the center</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: STRETCH; //
+function JustifyItemsStretch() {
+  let myVisibility = document.getElementById("Justify-Items-Stretch");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Stretch").innerHTML =
+      "<div>Stretches to fill the grid cell if inline-size (width) is not set</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: AUTO; //
+function JustifyItemsAuto() {
+  let myVisibility = document.getElementById("Justify-Items-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Auto").innerHTML =
+      "<div><code>auto</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: NORMAL; //
+function JustifyItemsNormal() {
+  let myVisibility = document.getElementById("Justify-Items-Normal");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Normal").innerHTML =
+      "<div>Dependant on layout context, but similar to 'stretch' for grid layout</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: SAFE; //
+function JustifyItemsSafe() {
+  let myVisibility = document.getElementById("Justify-Items-Safe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Safe").innerHTML =
+      "<div><code>safe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: UNSAFE; //
+function JustifyItemsUnsafe() {
+  let myVisibility = document.getElementById("Justify-Items-Unsafe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Unsafe").innerHTML =
+      "<div><code>unsafe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: BASELINE; //
+function JustifyItemsBaseline() {
+  let myVisibility = document.getElementById("Justify-Items-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Baseline").innerHTML =
+      "<div><code>baseline</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: FIRST-BASELINE; //
+function JustifyItemsFirstBaseline() {
+  let myVisibility = document.getElementById("Justify-Items-First-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-First-Baseline").innerHTML =
+      "<div><code>first-baseline</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-ITEMS: LAST-BASELINE; //
+function JustifyItemsLastBaseline() {
+  let myVisibility = document.getElementById("Justify-Items-Last-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Items-Last-Baseline").innerHTML =
+      "<div><code>last-baseline</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+/////////////////////////
+// ALIGN-SELF PROPERTY //
+/////////////////////////
+function PropertyAlignSelf() {
+  let myAlignSelf = document.getElementById("Input-Align-Self").value;
+  document.getElementById("Adding-Box-Model").style.alignSelf = myAlignSelf;
+}
+
+// ALIGN-SELF: CSS GLOBAL VALUES; //
+function AlignSelfGlobalValues() {
+  let myVisibility = document.getElementById("Align-Self-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: AUTO; //
+function AlignSelfAuto() {
+  let myVisibility = document.getElementById("Align-Self-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Auto").innerHTML =
+      "<div>[Default] The element inherits its parent container's align-items property, or 'stretch' if it has no parent container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: NORMAL; //
+function AlignSelfNormal() {
+  let myVisibility = document.getElementById("Align-Self-Normal");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Normal").innerHTML =
+      "<div><code>normal</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: FLEX-START; //
+function AlignSelfFlexStart() {
+  let myVisibility = document.getElementById("Align-Self-Flex-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Flex-Start").innerHTML =
+      "<div><code>flex-start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: FLEX-END; //
+function AlignSelfFlexEnd() {
+  let myVisibility = document.getElementById("Align-Self-Flex-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Flex-End").innerHTML =
+      "<div><code>flex-end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: SELF-START; //
+function AlignSelfSelfStart() {
+  let myVisibility = document.getElementById("Align-Self-Self-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Self-Start").innerHTML =
+      "<div><code>self-start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: SELF-END; //
+function AlignSelfSelfEnd() {
+  let myVisibility = document.getElementById("Align-Self-Self-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Self-End").innerHTML =
+      "<div><code>self-end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: START; //
+function AlignSelfStart() {
+  let myVisibility = document.getElementById("Align-Self-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Start").innerHTML =
+      "<div><code>start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: END; //
+function AlignSelfEnd() {
+  let myVisibility = document.getElementById("Align-Self-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-End").innerHTML =
+      "<div><code>end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: CENTER; //
+function AlignSelfCenter() {
+  let myVisibility = document.getElementById("Align-Self-Center");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Center").innerHTML =
+      "<div>The element is positioned at the center of the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: STRETCH; //
+function AlignSelfStretch() {
+  let myVisibility = document.getElementById("Align-Self-Stretch");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Stretch").innerHTML =
+      "<div>The element is positioned to fit the container</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: SAFE; //
+function AlignSelfSafe() {
+  let myVisibility = document.getElementById("Align-Self-Safe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Safe").innerHTML =
+      "<div><code>safe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: UNSAFE; //
+function AlignSelfUnsafe() {
+  let myVisibility = document.getElementById("Align-Self-Unsafe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Unsafe").innerHTML =
+      "<div><code>unsafe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: BASELINE; //
+function AlignSelfBaseline() {
+  let myVisibility = document.getElementById("Align-Self-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Baseline").innerHTML =
+      "<div><code>baseline</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: FIRST-BASELINE; //
+function AlignSelfFirstBaseline() {
+  let myVisibility = document.getElementById("Align-Self-First-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-First-Baseline").innerHTML =
+      "<div><code>first-baseline</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ALIGN-SELF: LAST-BASELINE; //
+function AlignSelfLastBaseline() {
+  let myVisibility = document.getElementById("Align-Self-Last-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Align-Self-Last-Baseline").innerHTML =
+      "<div><code>last-baseline</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////
+// JUSTIFY-SELF PROPERTY //
+///////////////////////////
+function PropertyJustifySelf() {
+  let myJustifySelf = document.getElementById("Input-Justify-Self").value;
+  document.getElementById("Adding-Box-Model").style.justifySelf = myJustifySelf;
+}
+
+// JUSTIFY-SELF: CSS GLOBAL VALUES; //
+function JustifySelfGlobalValues() {
+  let myVisibility = document.getElementById("Justify-Self-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: AUTO; //
+function JustifySelfAuto() {
+  let myVisibility = document.getElementById("Justify-Self-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Auto").innerHTML =
+      "<div>[Default] Grid container justify-self property value is inherited</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: NORMAL; //
+function JustifySelfNormal() {
+  let myVisibility = document.getElementById("Justify-Self-Normal");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Normal").innerHTML =
+      "<div>Dependant on layout context, but similar to 'stretch' for grid layout for grid items when size is not set</div>" +
+      "<div>If size is set, the property value behaves lik 'start'</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: FLEX-START; //
+function JustifySelfFlexStart() {
+  let myVisibility = document.getElementById("Justify-Self-Flex-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Flex-Start").innerHTML =
+      "<div><code>flex-start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: FLEX-END; //
+function JustifySelfFlexEnd() {
+  let myVisibility = document.getElementById("Justify-Self-Flex-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Flex-End").innerHTML =
+      "<div><code>flex-end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: SELF-START; //
+function JustifySelfSelfStart() {
+  let myVisibility = document.getElementById("Justify-Self-Self-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Self-Start").innerHTML =
+      "<div><code>self-start</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: SELF-END; //
+function JustifySelfSelfEnd() {
+  let myVisibility = document.getElementById("Justify-Self-Self-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Self-End").innerHTML =
+      "<div><code>self-end</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: START; //
+function JustifySelfStart() {
+  let myVisibility = document.getElementById("Justify-Self-Start");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Start").innerHTML =
+      "<div>Align items at the start in the inline direction</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: END; //
+function JustifySelfEnd() {
+  let myVisibility = document.getElementById("Justify-Self-End");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-End").innerHTML =
+      "<div>Align items at the end in the inline direction</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: LEFT; //
+function JustifySelfLeft() {
+  let myVisibility = document.getElementById("Justify-Self-Left");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Left").innerHTML =
+      "<div><code>left</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: RIGHT; //
+function JustifySelfRight() {
+  let myVisibility = document.getElementById("Justify-Self-Right");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Right").innerHTML =
+      "<div><code>right</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: CENTER; //
+function JustifySelfCenter() {
+  let myVisibility = document.getElementById("Justify-Self-Center");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Center").innerHTML =
+      "<div>Align items to the center</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: STRETCH; //
+function JustifySelfStretch() {
+  let myVisibility = document.getElementById("Justify-Self-Stretch");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Stretch").innerHTML =
+      "<div>Stretches to fill the grid cell if inline-size (width) is not set</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: SAFE; //
+function JustifySelfSafe() {
+  let myVisibility = document.getElementById("Justify-Self-Safe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Safe").innerHTML =
+      "<div><code>safe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: UNSAFE; //
+function JustifySelfUnsafe() {
+  let myVisibility = document.getElementById("Justify-Self-Unsafe");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Unsafe").innerHTML =
+      "<div><code>unsafe</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: BASELINE; //
+function JustifySelfBaseline() {
+  let myVisibility = document.getElementById("Justify-Self-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Baseline").innerHTML =
+      "<div><code>baseline</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: FIRST-BASELINE; //
+function JustifySelfFirstBaseline() {
+  let myVisibility = document.getElementById("Justify-Self-First-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-First-Baseline").innerHTML =
+      "<div><code>first-baseline</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// JUSTIFY-SELF: LAST-BASELINE; //
+function JustifySelfLastBaseline() {
+  let myVisibility = document.getElementById("Justify-Self-Last-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Justify-Self-Last-Baseline").innerHTML =
+      "<div><code>last-baseline</code></div>";
   }
   else { myVisibility.style.display = "none"; }
 }

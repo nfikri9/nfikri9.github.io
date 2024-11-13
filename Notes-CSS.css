@@ -67,6 +67,11 @@ a:hover { color: blue; }
 
 /* RELATED VALUES */
 .Value-Box:hover { color: red; }
+#Box-Calculation { margin: 10px 0; }
+#Box-Initial { margin: 10px 0; }
+#Box-Inherit { margin: 10px 0; }
+#Box-Unset { margin: 10px 0; }
+#Box-Variable { margin: 10px 0; }
 #Box-Absolute-Length-Units { margin: 10px 0; }
 #Box-Relative-Length-Units { margin: 10px 0; }
 

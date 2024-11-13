@@ -687,6 +687,163 @@
     </div>
   </div>
 
+  <!-- ALIGN-CONTENT -->
+  <div id="Property-Align-Content" class="Box-Property">
+    <div>The <code>align-content</code> property applied on container which specifies how "item lines" are distributed along the cross axis in a container</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Align-Content" type="text" placeholder="Enter align-content value">
+      <button onclick="PropertyAlignContent()">MODIFY</button>
+      <div class="Value-Box" onclick="AlignContentGlobalValues()"> <code>align-content: <em>CSS Global Values</em>;</code> <div id="Align-Content-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="AlignContentStretch()"> <code>align-content: stretch;</code> <div id="Align-Content-Stretch"></div> </div>
+      <div class="Value-Box" onclick="AlignContentFlexStart()"> <code>align-content: flex-start;</code> <div id="Align-Content-Flex-Start"></div> </div>
+      <div class="Value-Box" onclick="AlignContentFlexEnd()"> <code>align-content: flex-end;</code> <div id="Align-Content-Flex-End"></div> </div>
+      <div class="Value-Box" onclick="AlignContentStart()"> <code>align-content: start;</code> <div id="Align-Content-Start"></div> </div>
+      <div class="Value-Box" onclick="AlignContentEnd()"> <code>align-content: end;</code> <div id="Align-Content-End"></div> </div>
+      <div class="Value-Box" onclick="AlignContentLeft()"> <code>align-content: left;</code> <div id="Align-Content-Left"></div> </div>
+      <div class="Value-Box" onclick="AlignContentRight()"> <code>align-content: right;</code> <div id="Align-Content-Right"></div> </div>
+      <div class="Value-Box" onclick="AlignContentCenter()"> <code>align-content: center;</code> <div id="Align-Content-Center"></div> </div>
+      <div class="Value-Box" onclick="AlignContentNormal()"> <code>align-content: normal;</code> <div id="Align-Content-Normal"></div> </div>
+      <div class="Value-Box" onclick="AlignContentSafe()"> <code>align-content: safe;</code> <div id="Align-Content-Safe"></div> </div>
+      <div class="Value-Box" onclick="AlignContentUnsafe()"> <code>align-content: unsafe;</code> <div id="Align-Content-Unsafe"></div> </div>
+      <div class="Value-Box" onclick="AlignContentBaseline()"> <code>align-content: baseline;</code> <div id="Align-Content-Baseline"></div> </div>
+      <div class="Value-Box" onclick="AlignContentFirstBaseline()"> <code>align-content: first-baseline;</code> <div id="Align-Content-First-Baseline"></div> </div>
+      <div class="Value-Box" onclick="AlignContentLastBaseline()"> <code>align-content: last-baseline;</code> <div id="Align-Content-Last-Baseline"></div> </div>
+      <div class="Value-Box" onclick="AlignContentSpaceAround()"> <code>align-content: space-around;</code> <div id="Align-Content-Space-Around"></div> </div>
+      <div class="Value-Box" onclick="AlignContentSpaceBetween()"> <code>align-content: space-between;</code> <div id="Align-Content-Space-Between"></div> </div>
+      <div class="Value-Box" onclick="AlignContentSpaceEvenly()"> <code>align-content: space-evenly;</code> <div id="Align-Content-Space-Evenly"></div> </div>
+    </div>
+  </div>
+
+  <!-- JUSTIFY-CONTENT -->
+  <div id="Property-Justify-Content" class="Box-Property">
+    <div>The <code>justify-content</code> property applied on container which aligns the items when they do not use all available space on the main-axis (horizontally)</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Justify-Content" type="text" placeholder="Enter justify-content value">
+      <button onclick="PropertyJustifyContent()">MODIFY</button>
+      <div class="Value-Box" onclick="JustifyContentGlobalValues()"> <code>justify-content: <em>CSS Global Values</em>;</code> <div id="Justify-Content-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentFlexStart()"> <code>justify-content: flex-start;</code> <div id="Justify-Content-Flex-Start"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentFlexEnd()"> <code>justify-content: flex-end;</code> <div id="Justify-Content-Flex-End"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentStart()"> <code>justify-content: start;</code> <div id="Justify-Content-Start"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentEnd()"> <code>justify-content: end;</code> <div id="Justify-Content-End"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentLeft()"> <code>justify-content: left;</code> <div id="Justify-Content-Left"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentRight()"> <code>justify-content: right;</code> <div id="Justify-Content-Right"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentCenter()"> <code>justify-content: center;</code> <div id="Justify-Content-Center"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentStretch()"> <code>justify-content: stretch;</code> <div id="Justify-Content-Stretch"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentSafe()"> <code>justify-content: safe;</code> <div id="Justify-Content-Safe"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentUnsafe()"> <code>justify-content: unsafe;</code> <div id="Justify-Content-Unsafe"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentBaseline()"> <code>justify-content: baseline;</code> <div id="Justify-Content-Baseline"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentFirstBaseline()"> <code>justify-content: first-baseline;</code> <div id="Justify-Content-First-Baseline"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentLastBaseline()"> <code>justify-content: last-baseline;</code> <div id="Justify-Content-Last-Baseline"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentSpaceAround()"> <code>justify-content: space-around;</code> <div id="Justify-Content-Space-Around"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentSpaceBetween()"> <code>justify-content: space-between;</code> <div id="Justify-Content-Space-Between"></div> </div>
+      <div class="Value-Box" onclick="JustifyContentSpaceEvenly()"> <code>justify-content: space-evenly;</code> <div id="Justify-Content-Space-Evenly"></div> </div>
+    </div>
+  </div>
+
+  <!-- ALIGN-ITEMS -->
+  <div id="Property-Align-Items" class="Box-Property">
+    <div>The <code>align-items</code> property applied on container which specifies the default alignment for items inside a container</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Align-Items" type="text" placeholder="Enter align-items value">
+      <button onclick="PropertyAlignItems()">MODIFY</button>
+      <div class="Value-Box" onclick="AlignItemsGlobalValues()"> <code>align-items: <em>CSS Global Values</em>;</code> <div id="Align-Items-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsNormal()"> <code>align-items: normal;</code> <div id="Align-Items-Normal"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsFlexStart()"> <code>align-items: flex-start;</code> <div id="Align-Items-Flex-Start"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsFlexEnd()"> <code>align-items: flex-end;</code> <div id="Align-Items-Flex-End"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsSelfStart()"> <code>align-items: self-start;</code> <div id="Align-Items-Self-Start"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsSelfEnd()"> <code>align-items: self-end;</code> <div id="Align-Items-Self-End"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsStart()"> <code>align-items: start;</code> <div id="Align-Items-Start"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsEnd()"> <code>align-items: end;</code> <div id="Align-Items-End"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsCenter()"> <code>align-items: center;</code> <div id="Align-Items-Center"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsStretch()"> <code>align-items: stretch;</code> <div id="Align-Items-Stretch"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsSafe()"> <code>align-items: safe;</code> <div id="Align-Items-Safe"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsUnsafe()"> <code>align-items: unsafe;</code> <div id="Align-Items-Unsafe"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsBaseline()"> <code>align-items: baseline;</code> <div id="Align-Items-Baseline"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsFirstBaseline()"> <code>align-items: first-baseline;</code> <div id="Align-Items-First-Baseline"></div> </div>
+      <div class="Value-Box" onclick="AlignItemsLastBaseline()"> <code>align-items: last-baseline;</code> <div id="Align-Items-Last-Baseline"></div> </div>
+    </div>
+  </div>
+
+  <!-- JUSTIFY-ITEMS -->
+  <div id="Property-Justify-Items" class="Box-Property">
+    <div>The <code>justify-items</code> property is set on the grid container to give child elements (grid items) alignment in the inline direction</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Justify-Items" type="text" placeholder="Enter justify-items value">
+      <button onclick="PropertyJustifyItems()">MODIFY</button>
+      <div class="Value-Box" onclick="JustifyItemsGlobalValues()"> <code>justify-items: <em>CSS Global Values</em>;</code> <div id="Justify-Items-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsLegacy()"> <code>justify-items: legacy;</code> <div id="Justify-Items-Legacy"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsFlexStart()"> <code>justify-items: flex-start;</code> <div id="Justify-Items-Flex-Start"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsFlexEnd()"> <code>justify-items: flex-end;</code> <div id="Justify-Items-Flex-End"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsSelfStart()"> <code>justify-items: self-start;</code> <div id="Justify-Items-Self-Start"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsSelfEnd()"> <code>justify-items: self-end;</code> <div id="Justify-Items-Self-End"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsStart()"> <code>justify-items: start;</code> <div id="Justify-Items-Start"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsEnd()"> <code>justify-items: end;</code> <div id="Justify-Items-End"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsLeft()"> <code>justify-items: left;</code> <div id="Justify-Items-Left"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsRight()"> <code>justify-items: right;</code> <div id="Justify-Items-Right"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsCenter()"> <code>justify-items: center;</code> <div id="Justify-Items-Center"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsStretch()"> <code>justify-items: stretch;</code> <div id="Justify-Items-Stretch"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsAuto()"> <code>justify-items: auto;</code> <div id="Justify-Items-Auto"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsNormal()"> <code>justify-items: normal;</code> <div id="Justify-Items-Normal"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsSafe()"> <code>justify-items: safe;</code> <div id="Justify-Items-Safe"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsUnsafe()"> <code>justify-items: unsafe;</code> <div id="Justify-Items-Unsafe"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsBaseline()"> <code>justify-items: baseline;</code> <div id="Justify-Items-Baseline"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsFirstBaseline()"> <code>justify-items: first-baseline;</code> <div id="Justify-Items-First-Baseline"></div> </div>
+      <div class="Value-Box" onclick="JustifyItemsLastBaseline()"> <code>justify-items: last-baseline;</code> <div id="Justify-Items-Last-Baseline"></div> </div>
+    </div>     
+  </div>
+
+  <!-- ALIGN-SELF -->
+  <div id="Property-Align-Self" class="Box-Property">
+    <div>The <code>align-self</code> property specifies the alignment in the block direction for the selected item inside a container</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Align-Self" type="text" placeholder="Enter align-self value">
+      <button onclick="PropertyAlignSelf()">MODIFY</button>
+      <div class="Value-Box" onclick="AlignSelfGlobalValues()"> <code>align-self: <em>CSS Global Values</em>;</code> <div id="Align-Self-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfAuto()"> <code>align-self: auto;</code> <div id="Align-Self-Auto"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfNormal()"> <code>align-self: normal;</code> <div id="Align-Self-Normal"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfFlexStart()"> <code>align-self: flex-start;</code> <div id="Align-Self-Flex-Start"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfFlexEnd()"> <code>align-self: flex-end;</code> <div id="Align-Self-Flex-End"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfSelfStart()"> <code>align-self: self-start;</code> <div id="Align-Self-Self-Start"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfSelfEnd()"> <code>align-self: self-end;</code> <div id="Align-Self-Self-End"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfStart()"> <code>align-self: start;</code> <div id="Align-Self-Start"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfEnd()"> <code>align-self: end;</code> <div id="Align-Self-End"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfCenter()"> <code>align-self: center;</code> <div id="Align-Self-Center"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfStretch()"> <code>align-self: stretch;</code> <div id="Align-Self-Stretch"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfSafe()"> <code>align-self: safe;</code> <div id="Align-Self-Safe"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfUnsafe()"> <code>align-self: unsafe;</code> <div id="Align-Self-Unsafe"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfBaseline()"> <code>align-self: baseline;</code> <div id="Align-Self-Baseline"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfFirstBaseline()"> <code>align-self: first-baseline;</code> <div id="Align-Self-First-Baseline"></div> </div>
+      <div class="Value-Box" onclick="AlignSelfLastBaseline()"> <code>align-self: last-baseline;</code> <div id="Align-Self-Last-Baseline"></div> </div>
+    </div>
+  </div>
+
+  <!-- JUSTIFY-SELF -->
+  <div id="Property-Justify-Self" class="Box-Property">
+    <div>The <code>justify-self</code> property applied on items which aligns a grid item within its grid cell in the inline direction</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Justify-Self" type="text" placeholder="Enter justify-self value">
+      <button onclick="PropertyJustifySelf()">MODIFY</button>
+      <div class="Value-Box" onclick="JustifySelfGlobalValues()"> <code>justify-self: <em>CSS Global Values</em>;</code> <div id="Justify-Self-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfAuto()"> <code>justify-self: auto;</code> <div id="Justify-Self-Auto"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfNormal()"> <code>justify-self: normal;</code> <div id="Justify-Self-Normal"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfFlexStart()"> <code>justify-self: flex-start;</code> <div id="Justify-Self-Flex-Start"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfFlexEnd()"> <code>justify-self: flex-end;</code> <div id="Justify-Self-Flex-End"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfSelfStart()"> <code>justify-self: self-start;</code> <div id="Justify-Self-Self-Start"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfSelfEnd()"> <code>justify-self: self-end;</code> <div id="Justify-Self-Self-End"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfStart()"> <code>justify-self: start;</code> <div id="Justify-Self-Start"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfEnd()"> <code>justify-self: end;</code> <div id="Justify-Self-End"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfLeft()"> <code>justify-self: left;</code> <div id="Justify-Self-Left"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfRight()"> <code>justify-self: right;</code> <div id="Justify-Self-Right"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfCenter()"> <code>justify-self: center;</code> <div id="Justify-Self-Center"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfStretch()"> <code>justify-self: stretch;</code> <div id="Justify-Self-Stretch"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfSafe()"> <code>justify-self: safe;</code> <div id="Justify-Self-Safe"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfUnsafe()"> <code>justify-self: unsafe;</code> <div id="Justify-Self-Unsafe"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfBaseline()"> <code>justify-self: baseline;</code> <div id="Justify-Self-Baseline"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfFirstBaseline()"> <code>justify-self: first-baseline;</code> <div id="Justify-Self-First-Baseline"></div> </div>
+      <div class="Value-Box" onclick="JustifySelfLastBaseline()"> <code>justify-self: last-baseline;</code> <div id="Justify-Self-Last-Baseline"></div> </div>
+    </div>
+  </div>
+
   <!-- INLINE & BLOCK
   <code>inline-size: <em>myValue</em>;</code>
   <code>min-inline-size: <em>myValue</em>;</code>
@@ -730,10 +887,6 @@
   <code>list-style: list-style-type list-style-position list-style-image;</code>  -->
 
   <!-- CONTENTS
-  <code>place-content: align-content justify-content;</code>
-  <code>place-items: align-items justify-items;</code>
-  <code>place-self: align-self justify-self;</code>
-
   <code>gap: row-gap column-gap;</code>
   <code>columns: column-width column-count;</code>
   <code>column-rule: column-rule-width column-rule-style column-rule-color;</code>
@@ -774,6 +927,11 @@
         <div>Grid Items = <code>grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end;</code></div>
         <div><code>grid-row: grid-row-start / grid-row-end;</code></div>
         <div><code>grid-column: grid-column-start / grid-column-end;</code></div>
+      </div>
+      <div>Shorthand properties for content's related properties
+        <div><code>place-content: align-content justify-content;</code></div>
+        <div><code>place-items: align-items justify-items;</code></div>
+        <div><code>place-self: align-self justify-self;</code></div>
       </div>
     </div>
   </div>
@@ -1779,64 +1937,6 @@
   <li>List all breakpoints in increasing order</li>
   </ul></li> </ul></p> </div></section>
 
-  <!--------------------->
-  <!--CSS GLOBAL VALUES-->
-  <!--------------------->
-  <section id="CSS-Global-Values">
-  <h1>CSS GLOBAL VALUES</h1>
-  <div id="Calc" class="Box">
-  <h3><code>calc()</code></h3>
-  </div>
-
-  <div id="Inherit" class="Box">
-  <h3><code>inherit</code></h3>
-  </div>
-
-  <div id="Initial" class="Box">
-  <h3><code>initial</code></h3>
-  </div>
-
-  <div id="Unset" class="Box">
-  <h3><code>unset</code></h3>
-  </div>
-
-  <div id="Var" class="Box">
-  <h3><code>var(--<em>Name, Value</em>)</code></h3>
-  <p>The <code>var()</code> function is used to insert the value of a CSS variable <br>
-     CSS variables have access to the DOM, which means that developer can create variables with local or global scope,
-     change the variables with JavaScript, and change the variables based on media queries</p>
-  <p><b>Related Parameter(s)</b>
-  <ul><li><code><em>Name</em></code>
-  <ul><li><b>Required</b> parameter which specifies the variable name</li>
-  <li>The variable name must begin with two dashes (--) and it is case sensitive</li>
-  </ul></li>
-  <li><code><em>Value</em></code>
-  <ul><li><b>Optional</b> parameter which specifies the fallback value</li>
-  <li>The parameter is used if the variable is not found</li>
-  </ul></li> </ul></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Syntax for writing <code>var()</code> function
-  <ul><li>Global Variables
-  <ul><li>Global variables can be accessed/used through the entire document</li>
-  <li>To create a variable with global scope, declare it inside the <code>:root</code> selector</li>
-  <li>The <code>:root</code> selector matches the document's root element</li>
-  <li><code>:root { --<em>myVariable</em>: aqua; } <br> div { color: var(--<em>myVariable</em>); }</code></li>
-  </ul></li> <br>
-  <li>Local Variables
-  <ul><li>Local variables can be used only inside the selector where it is declared</li>
-  <li>To create a variable with local scope, declare it inside the selector that is going to use it</li>
-  <li><code>div { <br> --<em>myVariable</em>: beige; <br> color: var(--<em>myVariable</em>) <br> }</code></li>
-  </ul></li> <br>
-  <li>Local variables overrides global variables
-  <ul><li>Local variables overrides global variables when there is same variable declared inside selector</li>
-  </ul></li> </ul></li> <br>
-  <li>Advantages of <code>var()</code> function
-  <ul><li>Makes the code easier to read and more understandable</li>
-  <li>A good way to use CSS variables is when it comes to the colors of the design</li>
-  <li>Instead of copy and paste the same colors over and over again, developer can place them in variables</li>
-  </ul></li>
-  </ul></p> </div></section>
-
   <!--  @charset | @font-face | @import | @keyframes | @media | @property
 
   <div id="Box-Shape" class="Box">
@@ -1890,29 +1990,6 @@
   <li><code>scroll-snap-stop: <em>myValue</em>;</code></li>
   <li><code>scroll-margin: scroll-margin-top scroll-margin-right scroll-margin-bottom scroll-margin-left;</code></li>
   <li><code>scroll-padding: scroll-padding-top scroll-padding-right scroll-padding-bottom scroll-padding-left;</code></li>  -->
-
-  <!-- TRY & ERROR -->
-  <h3>[KIV] Knowledge discovery from doing personal project [KIV]</h3>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li><b>Navigate Bar</b></li>
-  <ul><li><code><em>Navigate-Bar</em></code>
-  <ul><li><code>width: 100%; /* The width is fully fit related to its parent */</code></li>
-  <li><code>position: fixed; top: 0; /* Always displayed at 0 position from top of the viewport */</code></li>
-  </ul></li> <br>
-  <li><code>img</code>
-  <ul><li><code>height: 50px; width: 50px; /* Squared-size image */</code></li>
-  <li><code>border-radius: 50%; /* Rounded-shape image */</code></li>
-  <li><code>float: left; /* Displayed on the left side within <em>Navigate-Bar</em> */</code></li>
-  </ul></li> <br>
-  <li><code><em>Menu-Dropdown</em></code>
-  <ul><li><code>float: right; /* Displayed on the right side within <em>Navigate-Bar</em> */</code></li>
-  </ul></li> <br>
-  <li><code>a</code></li>
-  </ul>
-  </ul></p>
-
-  <!--IMPORTING EXTERNAL JS SCRIPT-->
-  <script src="Notes-CSS.js"></script>
 
 </body>
 </html>
