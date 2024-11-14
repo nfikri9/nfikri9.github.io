@@ -1,11 +1,242 @@
+// ELEMENT SELECTORS //
+function ElementSelectors() {
+    let myVisibility = document.getElementById("Element-Selectors");
+    myVisibility.style.margin = "10px 0";
+    if (myVisibility.style.display === "none") {
+      myVisibility.style.display = "block";
+      document.getElementById("Element-Selectors").innerHTML =
+        "<div>The element selector selects HTML elements based on the element name</div>" +
+        "<div><code>body { <em>CSS Codes</em>; } <br> div { <em>CSS Codes</em>; } <br> p { <em>CSS Codes</em>; }</code></div>";
+    }
+    else { myVisibility.style.display = "none"; }
+}
+
+// ID SELECTORS //
+function IdSelectors() {
+  let myVisibility = document.getElementById("Id-Selectors");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Id-Selectors").innerHTML =
+      "<div>The id selector uses the <code>id</code> attribute of an HTML element to select a specific element</div>" +
+      "<div>The id of an element is unique within a page, so the id selector is used to select one unique element</div>" +
+      "<div><code><em>#Container { CSS Codes; } <br> #Button-Link { CSS Codes; } <br> #myId { CSS Codes; }</em></code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// CLASS SELECTORS //
+function ClassSelectors() {
+  let myVisibility = document.getElementById("Class-Selectors");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Class-Selectors").innerHTML =
+      "<div>The class selectors select HTML elements with a specific <code>class</code> attribute</div>" +
+      "<div>Unlike id selectors, class selectors are used by multiple elements</div>" +
+      "<div>HTML elements can also refer to more than one class</div>" +
+      "<div><code><em>.image { CSS Codes; } <br> .Header-Top { CSS Codes; } <br> .myClass { CSS Codes; }</em></code></div>" +
+      "<div>The class selectors also can select only one type of elements with multiple specific class</div>" +
+      "<div><code><em>div.box { CSS Codes; } <br> span.myClass.StepA { CSS Codes; }</em></code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// GROUP SELECTORS //
+function GroupSelectors() {
+  let myVisibility = document.getElementById("Group-Selectors");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Group-Selectors").innerHTML =
+      "<div>The grouping selectors select all the HTML elements with the same style definitions</div>" +
+      "<div>To group selectors, separate each selector with a comma to minimize the code</div>" +
+      "<div><code>div, <em>#myId, .myClass { CSS Codes; }</em></code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// UNIVERSAL SELECTOR //
+function UniversalSelector() {
+  let myVisibility = document.getElementById("Universal-Selector");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Universal-Selector").innerHTML =
+      "<div>The universal selector selects all HTML elements on the page</div>" +
+      "<div><code><em>* { CSS Codes; }</em></code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DESCENDANT COMBINATOR //
+function DescendantCombinator() {
+  let myVisibility = document.getElementById("Descendant-Combinator");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Descendant-Combinator").innerHTML =
+      "<div>The descendant combinator matches all elements that are descendants of a specified element</div>" +
+      "<div>As long as the matched elements are inside of a specified element, it is considered descendant combinator</div>" +
+      "<div><code>div p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; inside &lt;div&gt; * /<br></div>" +
+      "<div>section div span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; inside &lt;div&gt;, &lt;div&gt; inside &lt;section&gt; */</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// CHILD COMBINATOR //
+function ChildCombinator() {
+  let myVisibility = document.getElementById("Child-Combinator");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Child-Combinator").innerHTML =
+      "<div>The child combinator selects all elements that are the children of a specified element</div>" +
+      "<div>When there is another nested element of a specified element, that nested element is not considered child combinator, but it is descendant combinator</div>" +
+      "<div><code>div > p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; child of &lt;div&gt; */ <br></div>" +
+      "<div>section > ul > li { <em>CSS Codes;</em> } /* Selects all &lt;li&gt; child of &lt;ul&gt;, &lt;ul&gt; child of &lt;section&gt; */</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// NEXT SIBLING COMBINATOR //
+function NextSiblingCombinator() {
+  let myVisibility = document.getElementById("Next-Sibling-Combinator");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Next-Sibling-Combinator").innerHTML =
+      "<div>The next sibling combinator is used to select an element that is directly after another specific element</div>" +
+      "<div>Sibling elements must have the same parent element, and 'adjacent' means 'immediately following'</div>" +
+      "<div>If there is another element in between them, it will not work</div>" +
+      "<div><code>div + p { <em>CSS Codes;</em> } /* Select the first &lt;p&gt; right after &lt;div&gt; */ <br></div>" +
+      "<div>nav + div + a { <em>CSS Codes;</em> } /* Select the first &lt;a&gt; right after &lt;div&gt;, &lt;div&gt; is right after &lt;nav&gt; */</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// SUBSEQUENT-SIBLING COMBINATOR //
+function SubsequentSiblingCombinator() {
+  let myVisibility = document.getElementById("Subsequent-Sibling-Combinator");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Subsequent-Sibling-Combinator").innerHTML =
+      "<div>The subsequent-sibling combinator selects all elements that are next siblings of a specified element</div>" +
+      "<div><code>div ~ p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; after &lt;div&gt; */ <br></div>" +
+      "<div>div ~ p ~ span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; after &lt;p&gt;, &lt;p&gt; after &lt;div&gt; */</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ATTRIBUTE SELECTOR 1 //
+function AttributeSelector1() {
+  let myVisibility = document.getElementById("Attribute-Selector1");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Attribute-Selector1").innerHTML =
+      "<div>The selector is used to select elements with a specified attribute</div>" +
+      "<div><code>a[target] { <em>CSS Codes;</em> } /* Selects all &lt;a&gt; with a target attribute */</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ATTRIBUTE SELECTOR 2 //
+function AttributeSelector2() {
+  let myVisibility = document.getElementById("Attribute-Selector2");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Attribute-Selector2").innerHTML =
+      "<div>The selector is used to select elements with a specified attribute and value</div>" +
+      "<div><code>a[target = '_blank'] { <em>CSS Codes;</em> } /* Select all &lt;a&gt; with a target='_blank' attribute */</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ATTRIBUTE SELECTOR 3 //
+function AttributeSelector3() {
+  let myVisibility = document.getElementById("Attribute-Selector3");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Attribute-Selector3").innerHTML =
+      "<div>The selector is used to select elements with the specified attribute</div>" +
+      "<div>The value containing atleast a specified word</div>" +
+      "<div>Example; <code>[class ~= 'test']</code> matches <code>[class = 'test'], [class = 'my test'], [class = 'test semester']</code></div>" +
+      "<div>It does not work for <code>[class = 'my-test'], [class = 'test-sample'], [class = 'tests']</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ATTRIBUTE SELECTOR 4 //
+function AttributeSelector4() {
+  let myVisibility = document.getElementById("Attribute-Selector4");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Attribute-Selector4").innerHTML =
+      "<div>The selector is used to select elements with the specified attribute</div>" +
+      "<div>The value can be exactly the specified word, or the specified word followed by a hyphen (-)</div>" +
+      "<div>Example; <code>[class |= 'test']</code> matches <code>[class = 'test'], [class = 'test-sample']</code></div>" +
+      "<div>It does not work for <code>[class = 'my test'], [class = 'test semester'], [class = 'my-test'], [class = 'tests']</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ATTRIBUTE SELECTOR 5 //
+function AttributeSelector5() {
+  let myVisibility = document.getElementById("Attribute-Selector5");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Attribute-Selector5").innerHTML =
+      "<div>The selector is used to select elements with the specified attribute, which the value starts with the specified value</div>" +
+      "<div>The value does not have to be a whole word</div>" +
+      "<div>Example; <code>[class ^= 'test']</code> matches <code>[class = 'test'], [class = 'test semester'], [class = 'test-sample'], [class = 'tests']</code></div>" +
+      "<div>It does not work for <code>[class = 'my test'], [class = 'my-test']</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ATTRIBUTE SELECTOR 6 //
+function AttributeSelector6() {
+  let myVisibility = document.getElementById("Attribute-Selector6");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Attribute-Selector6").innerHTML =
+      "<div>The selector is used to select elements whose attribute value ends with a specified value</div>" +
+      "<div>The value does not have to be a whole word</div>" +
+      "<div>Example; <code>[class $= 'test']</code> matches <code>[class = 'test'], [class = 'my-test'], [class = 'mytest']</code></div>" +
+      "<div>It does not work for <code>[class = 'test semester'], [class = 'test-sample'], [class = 'tests']</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// ATTRIBUTE SELECTOR 7 //
+function AttributeSelector7() {
+  let myVisibility = document.getElementById("Attribute-Selector7");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Attribute-Selector7").innerHTML =
+      "<div>The selector is used to select elements whose attribute value contains a specified value</div>" +
+      "<div>Example; <code>[class *= 'te']</code> matches <code>[class = 'test'], [class = 'cute']</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 ///////////////////////
 // CSS GLOBAL VALUES //
 ///////////////////////
 function CSSGlobalValues(){
   const global = {
     calculation:
-      "<div id='Box-Calculation'><code>calc()</code>" +
-      "<div></div>" +
+      "<div id='Box-Calculation'><code>calc(<em>myComputation</em>)</code>" +
+      "<div><code>calc()</code> = Performs a calculation to be used as the property value</div>" +
+      "<div><code><em>myComputation</em></code> = Specifies a mathematical expression which the result of  will be used as the value</div>" +
       "</div>",
 
     inherit:
@@ -4114,6 +4345,189 @@ function JustifySelfLastBaseline() {
   else { myVisibility.style.display = "none"; }
 }
 
+/////////////////////////////
+// VERTICAL-ALIGN PROPERTY //
+/////////////////////////////
+function PropertyVerticalAlign() {
+  let myVerticalAlign = document.getElementById("Input-Vertical-Align").value;
+  document.getElementById("Adding-Box-Model").style.verticalAlign = myVerticalAlign;
+}
+
+// VERTICAL-ALIGN: CSS GLOBAL VALUES; //
+function VerticalAlignGlobalValues() {
+  let myVisibility = document.getElementById("Vertical-Align-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: CSS LENGTH VALUES; //
+function VerticalAlignLengthValues() {
+  let myVisibility = document.getElementById("Vertical-Align-Length-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Length-Values").innerHTML = CSSLengthValues().absolute + CSSLengthValues().relative;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: BASELINE; //
+function VerticalAlignBaseline() {
+  let myVisibility = document.getElementById("Vertical-Align-Baseline");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Baseline").innerHTML =
+      "<div>[Default] The element is aligned with the baseline of the parent</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: AUTO; //
+function VerticalAlignAuto() {
+  let myVisibility = document.getElementById("Vertical-Align-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Auto").innerHTML =
+      "<div><code>auto</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: TOP; //
+function VerticalAlignTop() {
+  let myVisibility = document.getElementById("Vertical-Align-Top");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Top").innerHTML =
+      "<div>The element is aligned with the top of the tallest element on the line</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: MIDDLE; //
+function VerticalAlignMiddle() {
+  let myVisibility = document.getElementById("Vertical-Align-Middle");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Middle").innerHTML =
+      "<div>The element is placed in the middle of the parent element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: BOTTOM; //
+function VerticalAlignBottom() {
+  let myVisibility = document.getElementById("Vertical-Align-Bottom");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Bottom").innerHTML =
+      "<div>The element is aligned with the lowest element on the line</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: SUB; //
+function VerticalAlignSub() {
+  let myVisibility = document.getElementById("Vertical-Align-Sub");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Sub").innerHTML =
+      "<div>The element is aligned with the subscript baseline of the parent</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: SUPER; //
+function VerticalAlignSuper() {
+  let myVisibility = document.getElementById("Vertical-Align-Super");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Super").innerHTML =
+      "<div>The element is aligned with the superscript baseline of the parent</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: TEXT-TOP; //
+function VerticalAlignTextTop() {
+  let myVisibility = document.getElementById("Vertical-Align-Text-Top");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Text-Top").innerHTML =
+      "<div>The element is aligned with the top of the parent element's font</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// VERTICAL-ALIGN: TEXT-BOTTOM; //
+function VerticalAlignTextBottom() {
+  let myVisibility = document.getElementById("Vertical-Align-Text-Bottom");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Vertical-Align-Text-Bottom").innerHTML =
+      "<div>The element is aligned with the bottom of the parent element's font</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+//////////////////////
+// Z-INDEX PROPERTY //
+//////////////////////
+function PropertyZIndex() {
+  let myZIndex = document.getElementById("Input-Z-Index").value;
+  document.getElementById("Adding-Box-Model").style.zIndex = myZIndex;
+}
+
+// Z-INDEX: CSS GLOBAL VALUES; //
+function ZIndexGlobalValues() {
+  let myVisibility = document.getElementById("Z-Index-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Z-Index-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// Z-INDEX: NUMBERS; //
+function ZIndexNumbers() {
+  let myVisibility = document.getElementById("Z-Index-Numbers");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Z-Index-Numbers").innerHTML =
+      "<div>Sets the stack order of the element, negative numbers are allowed</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// Z-INDEX: AUTO; //
+function ZIndexAuto() {
+  let myVisibility = document.getElementById("Z-Index-Auto");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Z-Index-Auto").innerHTML =
+      "<div>[Default] Sets the stack order equal to its parents</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // BOX-LAYOUT INSIGHTS //
 function InsightsBoxLayout() {
   let myVisibility = document.getElementsByClassName("Display-Insights")[1];
@@ -4129,4 +4543,125 @@ function AddBoxModel() {
   const textnode = document.createTextNode("My Contents!");
   myNewBox.appendChild(textnode);
   document.getElementById("Adding-Box-Model").appendChild(myNewBox);
+}
+
+////////////////////
+// COLOR PROPERTY //
+////////////////////
+function PropertyColor() {
+  let myColor = document.getElementById("Input-Color").value;
+  document.getElementsByClassName("Box-Model")[2].style.color = myColor;
+}
+
+// COLOR: CSS GLOBAL VALUES; //
+function ColorGlobalValues() {
+  let myVisibility = document.getElementById("Color-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Color-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// COLOR: CSS COLOR VALUES; //
+function ColorColorValues() {
+  let myVisibility = document.getElementById("Color-Color-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Color-Color-Values").innerHTML =
+      CSSColorValues().colorNames + CSSColorValues().colorFunctions;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// COLOR: CURRENTCOLOR; //
+function ColorCurrentColor() {
+  let myVisibility = document.getElementById("Color-Current-Color");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Color-Current-Color").innerHTML =
+      "<div>[Default] The text color is based on the value of the <code>color</code> property of the element</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// COLOR: TRANSPARENT; //
+function ColorTransparent() {
+  let myVisibility = document.getElementById("Color-Transparent");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Color-Transparent").innerHTML =
+      "<div><code>transparent</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+//////////////////////////
+// FONT-STYLE PROPERTY //
+/////////////////////////
+function PropertyFontStyle() {
+  let myFontStyle = document.getElementById("Input-Font-Style").value;
+  document.getElementsByClassName("Box-Model")[2].style.fontStyle = myFontStyle;
+}
+
+// FONT-STYLE: CSS GLOBAL VALUES; //
+function FontStyleGlobalValues() {
+  let myVisibility = document.getElementById("Font-Style-Global-Values");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Font-Style-Global-Values").innerHTML =
+      CSSGlobalValues().calculation + CSSGlobalValues().inherit + CSSGlobalValues().initial + CSSGlobalValues().unset + CSSGlobalValues().variable;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FONT-STYLE: NORMAL; //
+function FontStyleNormal() {
+  let myVisibility = document.getElementById("Font-Style-Normal");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Font-Style-Normal").innerHTML =
+      "<div>[Default] The browser displays a normal font style</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FONT-STYLE: ITALIC; //
+function FontStyleItalic() {
+  let myVisibility = document.getElementById("Font-Style-Italic");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Font-Style-Italic").innerHTML =
+      "<div>The browser displays an italic font style</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FONT-STYLE: OBLIQUE; //
+function FontStyleOblique() {
+  let myVisibility = document.getElementById("Font-Style-Oblique");
+  myVisibility.style.margin = "10px 0";
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Font-Style-Oblique").innerHTML =
+      "<div>The browser displays an oblique font style</div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// TYPOGRAPHY INSIGHTS //
+function InsightsTypography() {
+  let myVisibility = document.getElementsByClassName("Display-Insights")[2];
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
 }

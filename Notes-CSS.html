@@ -27,6 +27,124 @@
   </nav>
 
   <!------------------->
+  <!-- CSS SELECTORS -->
+  <!------------------->
+  <section id="CSS-Selectors">
+  <h1>CSS SELECTORS</h1>
+  
+  <!-- SIMPLE SELECTORS -->
+  <div id="Simple-Selectors">
+    <h3>SIMPLE SELECTORS</h3>
+    <div onclick="ElementSelectors()">Element Selectors <div id="Element-Selectors"></div> </div>
+    <div onclick="IdSelectors()">Id Selectors (<code>#</code>) <div id="Id-Selectors"></div> </div>
+    <div onclick="ClassSelectors()">Class Selectors (<code>.</code>) <div id="Class-Selectors"></div> </div>
+    <div onclick="GroupSelectors()">Group Selectors (<code>,</code>) <div id="Group-Selectors"></div> </div>
+    <div onclick="UniversalSelector()">Universal Selector (<code>*</code>) <div id="Universal-Selector"></div> </div>
+  </div>
+
+  <!-- COMBINATOR SELECTORS -->
+  <div id="Combinator-Selectors">
+    <h3>COMBINATOR SELECTORS</h3>
+    <div onclick="DescendantCombinator()">Descendant Combinator (<code><em>space</em></code>) <div id="Descendant-Combinator"></div> </div>
+    <div onclick="ChildCombinator()">Child Combinator (<code>></code>) <div id="Child-Combinator"></div> </div>
+    <div onclick="NextSiblingCombinator()">Next Sibling Combinator (<code>+</code>) <div id="Next-Sibling-Combinator"></div> </div>
+    <div onclick="SubsequentSiblingCombinator()">Subsequent-Sibling Combinator (<code>~</code>) <div id="Subsequent-Sibling-Combinator"></div> </div>
+  </div>
+
+  <!-- ATTRIBUTE SELECTORS -->
+  <div id="Attribute-Selectors">
+    <h3>ATTRIBUTE SELECTORS</h3>
+    <div onclick="AttributeSelector1()"><code><em>Selector</em>[<em>Attribute</em>]</code> <div id="Attribute-Selector1"></div> </div>
+    <div onclick="AttributeSelector2()"><code><em>Selector</em>[<em>Attribute</em> = "<em>Value</em>"]</code> <div id="Attribute-Selector2"></div> </div>
+    <div onclick="AttributeSelector3()"><code><em>Selector</em>[<em>Attribute</em> ~= "<em>Value</em>"]</code> <div id="Attribute-Selector3"></div> </div>
+    <div onclick="AttributeSelector4()"><code><em>Selector</em>[<em>Attribute</em> |= "<em>Value</em>"]</code> <div id="Attribute-Selector4"></div> </div>
+    <div onclick="AttributeSelector5()"><code><em>Selector</em>[<em>Attribute</em> ^= "<em>Value</em>"]</code> <div id="Attribute-Selector5"></div> </div>
+    <div onclick="AttributeSelector6()"><code><em>Selector</em>[<em>Attribute</em> $= "<em>Value</em>"]</code> <div id="Attribute-Selector6"></div> </div>
+    <div onclick="AttributeSelector7()"><code><em>Selector</em>[<em>Attribute</em> *= "<em>Value</em>"]</code> <div id="Attribute-Selector7"></div> </div>
+  </div>
+
+  <!-- PSEUDO-CLASS SELECTORS
+  <div id="Pseudo-Class-Selectors">
+    <h3>PSEUDO-CLASS SELECTORS</h3>
+    <div onclick=""><code><em>Selector</em>:active</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:any-link</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:auto-fill</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:checked</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:default</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:defined</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:dir()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:disabled</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:empty</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:enabled</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:first</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:first-child</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:first-of-type</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:focus</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:focus-visible</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:focus-within</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:fullscreen</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:has()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:hover</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:in-range</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:indeterminate</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:invalid</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:is()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:lang()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:last-child</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:last-of-type</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:left</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:link</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:modal</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:not()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:nth-child()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:nth-last-child()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:nth-last-of-type()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:nth-of-type()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:only-child</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:only-of-type</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:optional</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:out-of-range</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:placeholder-shown</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:popover-open</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:read-only</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:read-write</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:required</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:right</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:root</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:scope</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:state()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:target</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:user-invalid</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:user-valid</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:valid</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:visited</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>:where()</code> <div id=""></div> </div>
+  </div>  -->
+
+  <!-- PSEUDO-ELEMENT SELECTORS
+  <div id="Pseudo-Element-Selectors">
+    <h3>PSEUDO-ELEMENT SELECTORS</h3>
+    <div onclick=""><code><em>Selector</em>::after</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::backdrop</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::before</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::file-selector-button</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::first-letter</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::first-line</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::grammar-error</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::highlight()</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::marker</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::placeholder</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::selection</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::spelling-error</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::view-transition</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::view-transition-group</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::view-transition-image-pair</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::view-transition-new</code> <div id=""></div> </div>
+    <div onclick=""><code><em>Selector</em>::view-transition-old</code> <div id=""></div> </div>
+  </div>  -->
+  </section>
+
+  <!------------------->
   <!-- CSS BOX MODEL -->
   <!------------------->
   <section id="CSS-Box-Model">
@@ -844,6 +962,39 @@
     </div>
   </div>
 
+  <!-- VERTICAL-ALIGN -->
+  <div id="Property-Vertical-Align" class="Box-Property">
+    <div>The <code>vertical-align</code> property sets the vertical alignment of an element</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Vertical-Align" type="text" placeholder="Enter vertical-align value">
+      <button onclick="PropertyVerticalAlign()">MODIFY</button>
+      <div class="Value-Box" onclick="VerticalAlignGlobalValues()"> <code>vertical-align: <em>CSS Global Values</em>;</code> <div id="Vertical-Align-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignLengthValues()"> <code>vertical-align: <em>CSS Length Values</em>;</code> <div id="Vertical-Align-Length-Values"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignBaseline()"> <code>vertical-align: baseline;</code> <div id="Vertical-Align-Baseline"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignAuto()"> <code>vertical-align: auto;</code> <div id="Vertical-Align-Auto"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignTop()"> <code>vertical-align: top;</code> <div id="Vertical-Align-Top"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignMiddle()"> <code>vertical-align: middle;</code> <div id="Vertical-Align-Middle"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignBottom()"> <code>vertical-align: bottom;</code> <div id="Vertical-Align-Bottom"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignSub()"> <code>vertical-align: sub;</code> <div id="Vertical-Align-Sub"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignSuper()"> <code>vertical-align: super;</code> <div id="Vertical-Align-Super"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignTextTop()"> <code>vertical-align: text-top;</code> <div id="Vertical-Align-Text-Top"></div> </div>
+      <div class="Value-Box" onclick="VerticalAlignTextBottom()"> <code>vertical-align: text-bottom;</code> <div id="Vertical-Align-Text-Bottom"></div> </div>
+    </div>
+  </div>
+
+  <!-- Z-INDEX -->
+  <div id="Property-Z-Index" class="Box-Property">
+    <div>The <code>z-index</code> property specifies the stack order of an element</div>
+    <div>An element with greater stack order is always in front of an element with a lower stack order</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Z-Index" type="text" placeholder="Enter z-index value">
+      <button onclick="PropertyZIndex()">MODIFY</button>
+      <div class="Value-Box" onclick="ZIndexGlobalValues()"> <code>z-index: <em>CSS Global Values</em>;</code> <div id="Z-Index-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="ZIndexNumbers()"> <code>z-index: <em>Numbers</em>;</code> <div id="Z-Index-Numbers"></div> </div>
+      <div class="Value-Box" onclick="ZIndexAuto()"> <code>z-index: auto;</code> <div id="Z-Index-Auto"></div> </div>
+    </div>
+  </div>
+
   <!-- INLINE & BLOCK
   <code>inline-size: <em>myValue</em>;</code>
   <code>min-inline-size: <em>myValue</em>;</code>
@@ -896,10 +1047,7 @@
   <code>content: <em>myValue</em>;</code>
   <code>counter-set: <em>myValue</em>;</code>
   <code>counter-increment: <em>myValue</em>;</code>
-  <code>counter-reset: <em>myValue</em>;</code>
-
-  <code>vertical-align: <em>myValue</em>;</code>
-  <code>z-index: <em>myValue</em>;</code>  -->
+  <code>counter-reset: <em>myValue</em>;</code>  -->
 
   <input id="Input-Display" type="text" placeholder="Enter display value">
   <button onclick="PropertyDisplay()">MODIFY</button>
@@ -937,214 +1085,51 @@
   </div>
   </section>
 
+  <!-------------------->
+  <!-- CSS TYPOGRAPHY -->
+  <!-------------------->
+  <section id="CSS-Typography">
+  <h1>CSS TYPOGRAPHY</h1>
+  <div class="Box-Model">My Contents!</div>
+
+  <!-- COLOR -->
+  <div id="Property-Color" class="Box-Property">
+    <div>The <code>color</code> property specifies the color of text</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Color" type="text" placeholder="Enter color value">
+      <button onclick="PropertyColor()">MODIFY</button>
+      <div class="Value-Box" onclick="ColorGlobalValues()"> <code>color: <em>CSS Global Values</em>;</code> <div id="Color-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="ColorColorValues()"> <code>color: <em>CSS Color Values</em>;</code> <div id="Color-Color-Values"></div> </div>
+      <div class="Value-Box" onclick="ColorCurrentColor()"> <code>color: currentColor;</code> <div id="Color-Current-Color"></div> </div>
+      <div class="Value-Box" onclick="ColorTransparent()"> <code>color: transparent;</code> <div id="Color-Transparent"></div> </div>
+    </div>
+  </div>
+
+  <!-- FONT-STYLE -->
+  <div id="Property-Font-Style" class="Box-Property">
+    <div>The <code>font-style</code> property specifies the font style for a text</div>
+    <div class="Related-Values">Related Value(s)
+      <input id="Input-Font-Style" type="text" placeholder="Enter font-style value">
+      <button onclick="PropertyFontStyle()">MODIFY</button>
+      <div class="Value-Box" onclick="FontStyleGlobalValues()"> <code>font-style: <em>CSS Global Values</em>;</code> <div id="Font-Style-Global-Values"></div> </div>
+      <div class="Value-Box" onclick="FontStyleNormal()"> <code>font-style: normal;</code> <div id="Font-Style-Normal"></div> </div>
+      <div class="Value-Box" onclick="FontStyleItalic()"> <code>font-style: italic;</code> <div id="Font-Style-Italic"></div> </div>
+      <div class="Value-Box" onclick="FontStyleOblique()"> <code>font-style: oblique;</code> <div id="Font-Style-Oblique"></div> </div>
+    </div>
+  </div>
+
+  <!-- INSIGHTS TYPOGRAPHY -->
+  <div class="Box-Insights" onclick="InsightsTypography()"><b>INSIGHTS</b>
+    <div class="Display-Insights">
+      <div class="Item-Insights">INSIGHTS TYPOGRAPHY</div>
+    </div>
+  </div>
+  </section>
+
   <script src="Notes-CSS.js"></script>
 
-  <!------------------->
-  <!-- CSS SELECTORS -->
-  <!------------------->
-  <section id="CSS-Selectors">
-  <h1>CSS SELECTORS</h1>
 
-  <!-- SIMPLE SELECTORS -->
-  <div id="Simple-Selectors" class="Box"><h3>SIMPLE SELECTORS</h3>
 
-  <!-- ELEMENT SELECTORS -->
-  <ul><li>Element Selectors
-  <ul><li>The element selector selects HTML elements based on the element name</li>
-  <li><code>body { <em>CSS Codes</em>; } <br> div { <em>CSS Codes</em>; } <br> p { <em>CSS Codes</em>; }</code></li>
-  </ul></li> <br>
-
-  <!-- ID SELECTORS -->
-  <li>Id Selectors (<code>#</code>)
-  <ul><li>The id selector uses the <code>id</code> attribute of an HTML element to select a specific element</li>
-  <li>The id of an element is unique within a page, so the id selector is used to select one unique element</li>
-  <li><code><em>#Container { CSS Codes; } <br> #Button-Link { CSS Codes; } <br> #myId { CSS Codes; }</em></code></li>
-  </ul></li> <br>
-
-  <!-- CLASS SELECTORS -->
-  <li>Class Selectors (<code>.</code>)
-  <ul><li>The class selectors select HTML elements with a specific <code>class</code> attribute</li>
-  <li>Unlike id selectors, class selectors are used by multiple elements</li>
-  <li>HTML elements can also refer to more than one class</li>
-  <li><code><em>.image { CSS Codes; } <br> .Header-Top { CSS Codes; } <br> .myClass { CSS Codes; }</em></code></li>
-  <li>The class selectors also can select only one type of elements with multiple specific class</li>
-  <li><code><em>div.box { CSS Codes; } <br> span.myClass.StepA { CSS Codes; }</em></code></li>
-  </ul></li> <br>
-
-  <!-- GROUP SELECTORS -->
-  <li>Group Selectors (<code>,</code>)
-  <ul><li>The grouping selectors select all the HTML elements with the same style definitions</li>
-  <li>To group selectors, separate each selector with a comma to minimize the code</li>
-  <li><code>div, <em>#myId, .myClass { CSS Codes; }</em></code></li>
-  </ul></li> <br>
-
-  <!-- UNIVERSAL SELECTOR -->
-  <li>Universal Selector (<code>*</code>)
-  <ul><li>The universal selector selects all HTML elements on the page</li>
-  <li><code><em>* { CSS Codes; }</em></code></li>
-  </ul></li> </ul></div>
-
-  <!-- COMBINATOR SELECTORS -->
-  <div id="Combinator-Selectors" class="Box">
-  <h3>COMBINATOR SELECTORS</h3>
-
-  <!-- DESCENDANT COMBINATOR -->
-  <ul><li>Descendant Combinator (<code><em>space</em></code>)
-  <ul><li>The descendant combinator matches all elements that are descendants of a specified element</li>
-  <li>As long as the matched elements are inside of a specified element, it is considered descendant combinator</li>
-  <li><code>div p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; inside &lt;div&gt; * /<br>
-      section div span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; inside &lt;div&gt;, &lt;div&gt; inside &lt;section&gt; */</code></li>
-  </ul></li> <br>
-
-  <!-- CHILD COMBINATOR -->
-  <li>Child Combinator (<code>></code>)
-  <ul><li>The child combinator selects all elements that are the children of a specified element</li>
-  <li>When there is another nested element of a specified element, that nested element is not considered child combinator, but it is descendant combinator</li>
-  <li><code>div > p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; child of &lt;div&gt; */ <br>
-      section > ul > li { <em>CSS Codes;</em> } /* Selects all &lt;li&gt; child of &lt;ul&gt;, &lt;ul&gt; child of &lt;section&gt; */</code></li>
-  </ul></li> <br>
-
-  <!-- NEXT SIBLING COMBINATOR -->
-  <li>Next Sibling Combinator (<code>+</code>)
-  <ul><li>The next sibling combinator is used to select an element that is directly after another specific element</li>
-  <li>Sibling elements must have the same parent element, and "adjacent" means "immediately following"</li>
-  <li>If there is another element in between them, it will not work</li>
-  <li><code>div + p { <em>CSS Codes;</em> } /* Select the first &lt;p&gt; right after &lt;div&gt; */ <br>
-      nav + div + a { <em>CSS Codes;</em> } /* Select the first &lt;a&gt; right after &lt;div&gt;, &lt;div&gt; is right after &lt;nav&gt; */</code></li>
-  </ul></li> <br>
-
-  <!-- SUBSEQUENT SIBLING COMBINATOR -->
-  <li>Subsequent-Sibling Combinator (<code>~</code>)
-  <ul><li>The subsequent-sibling combinator selects all elements that are next siblings of a specified element</li>
-  <li><code>div ~ p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; after &lt;div&gt; */ <br>
-      div ~ p ~ span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; after &lt;p&gt;, &lt;p&gt; after &lt;div&gt; */</code></li>
-  </ul></li> </ul></div>
-
-  <!-- ATTRIBUTE SELECTORS -->
-  <div id="Attribute-Selectors" class="Box">
-  <h3>ATTRIBUTE SELECTORS</h3>
-  <ul><li><code><em>Selector</em>[<em>Attribute</em>]</code>
-  <ul><li>The <code>[<em>Attribute</em>]</code> selector is used to select elements with a specified attribute</li>
-  <li><code>a[target] { <em>CSS Codes;</em> } /* Selects all &lt;a&gt; with a target attribute */</code></li>
-  </ul></li> <br>
-
-  <li><code><em>Selector</em>[<em>Attribute</em> = "<em>Value</em>"]</code>
-  <ul><li>The <code>[<em>Attribute</em> = "<em>Value</em>"]</code> selector is used to select elements with a specified attribute and value</li>
-  <li><code>a[target = "_blank"] { <em>CSS Codes;</em> } /* Select all &lt;a&gt; with a target="_blank" attribute */</code></li>
-  </ul></li> <br>
-
-  <li><code><em>Selector</em>[<em>Attribute</em> ~= "<em>Value</em>"]</code>
-  <ul><li>The <code>[<em>Attribute</em> ~= "<em>Value</em>"]</code> selector is used to select elements with the specified attribute</li>
-  <li>The value containing atleast a specified word</li>
-  <li>Example; <code>[class ~= "test"]</code> matches <code>[class = "test"], [class = "my test"], [class = "test semester"]</code></li>
-  <li>It does not work for <code>[class = "my-test"], [class = "test-sample"], [class = "tests"]</code></li>
-  </ul></li> <br>
-
-  <li><code><em>Selector</em>[<em>Attribute</em> |= "<em>Value</em>"]</code>
-  <ul><li>The selector is used to select elements with the specified attribute</li>
-  <li>The value can be exactly the specified word, or the specified word followed by a hyphen (-)</li>
-  <li>Example; <code>[class |= "test"]</code> matches <code>[class = "test"], [class = "test-sample"]</code></li>
-  <li>It does not work for <code>[class = "my test"], [class = "test semester"], [class = "my-test"], [class = "tests"]</code></li>
-  </ul></li> <br>
-
-  <li><code><em>Selector</em>[<em>Attribute</em> ^= <em>Value</em>]</code>
-  <ul><li>The selector is used to select elements with the specified attribute, which the value starts with the specified value</li>
-  <li>The value does not have to be a whole word</li>
-  <li>Example; <code>[class ^= "test"]</code> matches <code>[class = "test"], [class = "test semester"], [class = "test-sample"], [class = "tests"]</code></li>
-  <li>It does not work for <code>[class = "my test"], [class = "my-test"]</code></li>
-  </ul></li> <br>
-
-  <li><code><em>Selector</em>[<em>Attribute</em> $= <em>Value</em>]</code>
-  <ul><li>The <code>[<em>Attribute</em> $= "<em>Value</em>"]</code> selector is used to select elements whose attribute value ends with a specified value</li>
-  <li>The value does not have to be a whole word</li>
-  <li>Example; <code>[class $= "test"]</code> matches <code>[class = "test"], [class = "my-test"], [class = "mytest"]</code></li>
-  <li>It does not work for <code>[class = "test semester"], [class = "test-sample"], [class = "tests"]</code></li>
-  </ul></li> <br>
-
-  <li><code><em>Selector</em>[<em>Attribute</em> *= <em>Value</em>]</code>
-  <ul><li>The <code>[<em>Attribute</em> *= "<em>Value</em>"]</code> selector is used to select elements whose attribute value contains a specified value</li>
-  <li>Example; <code>[class *= "te"]</code> matches <code>[class = "test"], [class = "cute"]</code> </li>
-  </ul></li> </ul></div>
-
-  <!-- PSEUDO CLASS SELECTORS
-  <div id="Pseudo-Class-Selectors" class="Box">
-  <h3>PSEUDO-CLASS SELECTORS</h3>
-  <ul><li><code><em>Selector</em>:active</code></li>
-  <li><code><em>Selector</em>:any-link</code></li>
-  <li><code><em>Selector</em>:auto-fill</code></li>
-  <li><code><em>Selector</em>:checked</code></li>
-  <li><code><em>Selector</em>:default</code></li>
-  <li><code><em>Selector</em>:defined</code></li>
-  <li><code><em>Selector</em>:dir()</code></li>
-  <li><code><em>Selector</em>:disabled</code></li>
-  <li><code><em>Selector</em>:empty</code></li>
-  <li><code><em>Selector</em>:enabled</code></li>
-  <li><code><em>Selector</em>:first</code></li>
-  <li><code><em>Selector</em>:first-child</code></li>
-  <li><code><em>Selector</em>:first-of-type</code></li>
-  <li><code><em>Selector</em>:focus</code></li>
-  <li><code><em>Selector</em>:focus-visible</code></li>
-  <li><code><em>Selector</em>:focus-within</code></li>
-  <li><code><em>Selector</em>:fullscreen</code></li>
-  <li><code><em>Selector</em>:has()</code></li>
-  <li><code><em>Selector</em>:hover</code></li>
-  <li><code><em>Selector</em>:in-range</code></li>
-  <li><code><em>Selector</em>:indeterminate</code></li>
-  <li><code><em>Selector</em>:invalid</code></li>
-  <li><code><em>Selector</em>:is()</code></li>
-  <li><code><em>Selector</em>:lang()</code></li>
-  <li><code><em>Selector</em>:last-child</code></li>
-  <li><code><em>Selector</em>:last-of-type</code></li>
-  <li><code><em>Selector</em>:left</code></li>
-  <li><code><em>Selector</em>:link</code></li>
-  <li><code><em>Selector</em>:modal</code></li>
-  <li><code><em>Selector</em>:not()</code></li>
-  <li><code><em>Selector</em>:nth-child()</code></li>
-  <li><code><em>Selector</em>:nth-last-child()</code></li>
-  <li><code><em>Selector</em>:nth-last-of-type()</code></li>
-  <li><code><em>Selector</em>:nth-of-type()</code></li>
-  <li><code><em>Selector</em>:only-child</code></li>
-  <li><code><em>Selector</em>:only-of-type</code></li>
-  <li><code><em>Selector</em>:optional</code></li>
-  <li><code><em>Selector</em>:out-of-range</code></li>
-  <li><code><em>Selector</em>:placeholder-shown</code></li>
-  <li><code><em>Selector</em>:popover-open</code></li>
-  <li><code><em>Selector</em>:read-only</code></li>
-  <li><code><em>Selector</em>:read-write</code></li>
-  <li><code><em>Selector</em>:required</code></li>
-  <li><code><em>Selector</em>:right</code></li>
-  <li><code><em>Selector</em>:root</code></li>
-  <li><code><em>Selector</em>:scope</code></li>
-  <li><code><em>Selector</em>:state()</code></li>
-  <li><code><em>Selector</em>:target</code></li>
-  <li><code><em>Selector</em>:user-invalid</code></li>
-  <li><code><em>Selector</em>:user-valid</code></li>
-  <li><code><em>Selector</em>:valid</code></li>
-  <li><code><em>Selector</em>:visited</code></li>
-  <li><code><em>Selector</em>:where()</code></li>
-  </ul></div>  -->
-
-  <!-- PSEUDO ELEMENT SELECTORS 
-  <div id="Pseudo-Element-Selectors" class="Box">
-  <h3>PSEUDO-ELEMENTS SELECTORS</h3>
-  <ul><li><code><em>Selector</em>::after</code></li>
-  <li><code><em>Selector</em>::backdrop</code></li>
-  <li><code><em>Selector</em>::before</code></li>
-  <li><code><em>Selector</em>::file-selector-button</code></li>
-  <li><code><em>Selector</em>::first-letter</code></li>
-  <li><code><em>Selector</em>::first-line</code></li>
-  <li><code><em>Selector</em>::grammar-error</code></li>
-  <li><code><em>Selector</em>::highlight()</code></li>
-  <li><code><em>Selector</em>::marker</code></li>
-  <li><code><em>Selector</em>::placeholder</code></li>
-  <li><code><em>Selector</em>::selection</code></li>
-  <li><code><em>Selector</em>::spelling-error</code></li>
-  <li><code><em>Selector</em>::view-transition</code></li>
-  <li><code><em>Selector</em>::view-transition-group</code></li>
-  <li><code><em>Selector</em>::view-transition-image-pair</code></li>
-  <li><code><em>Selector</em>::view-transition-new</code></li>
-  <li><code><em>Selector</em>::view-transition-old</code></li>
-  </ul></div>  --> </section>
 
   <!-------------------------------->
   <!-- CSS ANIMATION & TRANSITION -->
@@ -1330,37 +1315,10 @@
   </ul></li> </ul></li>
   </ul></li> </ul></p> </div></section>
 
-  <!-------------------->
-  <!-- CSS TYPOGRAPHY -->
-  <!-------------------->
-  <section id="Typography">
-  <h1>CSS TYPOGRAPHY</h1>
-  <div id="Text-Font" class="Box">
-  <h3>TEXT & FONT</h3>
-  <p><b>Related Properties</b>
 
-  <!-- COLOR -->
-  <ul><li><code>color: <em>myValue</em>;</code>
-  <ul><li>The <code>color</code> property specifies the color of text</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <!--  <li><code>currentColor</code></li>
-  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> <br>
 
   <!-- FONT -->
   <li><code>font: font-style font-variant font-weight font-size/line-height font-family;</code>
-
-  <!-- FONT STYLE -->
-  <ul><li><code>font-style: <em>myValue</em>;</code>
-  <ul><li>The <code>font-style</code> property specifies the font style for a text</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>default value</b> which the browser displays a normal font style )</li>
-  <li><code>italic</code> ( The browser displays an italic font style )</li>
-  <!--  <li><code>oblique</code> ( The browser displays an oblique font style )</li>  -->
-  </ul></li> </ul></li> <br>
 
   <!-- FONT VARIANT -->
   <li><code>font-variant: <em>myValue</em>;</code>
@@ -1868,7 +1826,6 @@
   </ul></li>
   <li>Other properties that are required to ensure the <code>text-overflow</code> is working
   <ul><li>Other properties required are <code>white-space: nowrap;</code> and <code>overflow: hidden;</code></li>
-  </ul></li> </ul></p> </section>
 
   <!---------------------------->
   <!-- BACKGROUND, IMAGE, SVG -->
