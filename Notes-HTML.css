@@ -33,16 +33,43 @@ a:hover { color: blue; }
   border-radius: 50%;
 }
 
-/* MAIN BOX CONTENTS */
-#HTML-Fundamental-Structures {
-  max-width: 720px;
+/* MAIN CONTENTS BOX */
+#HTML-Form-Structures {
+  max-width: 1150px;
   padding: 10px;
   margin: 80px auto 20px;
   border: 1px solid black;
 }
-#HTML-Metadata, #HTML-Semantic-Elements-Text, #HTML-Utilities, #HTML-Global-Attributes {
+#HTML-Fundamental-Structures, #HTML-Metadata, #HTML-Semantic-Elements-Text, #HTML-Utilities, #HTML-Global-Attributes {
   max-width: 720px;
   padding: 10px;
   margin: 20px auto;
   border: 1px solid black;
 }
+.Sample-Structures {
+  max-width: 600px;
+  margin: 10px auto;
+  border: 1px solid black;
+}
+
+/* SUB CONTENTS BOX */
+#Box-Elements {
+  margin: 20px 0;
+  display: none;
+}
+
+.Box-Attributes { margin: 20px 0; }
+
+
+
+.Indent2 { text-indent: 10px; }
+.Indent3 { text-indent: 20px; }
+
+
+#Form-Tag, #Fieldset-Tag, #Legend-Tag {
+  margin: 20px 0;
+  display: none;
+}
+
+/* INSIGHTS BOX */
+.Box-Insights { margin: 20px 0; }
