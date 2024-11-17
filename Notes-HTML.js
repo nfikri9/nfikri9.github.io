@@ -222,6 +222,32 @@ function BooleanAttributes() {
       "<div>A disabled element is unusable and un-clickable</div>" +
       "<div>The <code>disabled</code> attribute can be set to keep a user from using the elements until some other condition has been met (like selecting a checkbox, etc.)</div>" +
       "<div>Then, a JavaScript could remove the disabled value, and make the element usable again</div>" +
+      "</div>",
+
+    myMultiple:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>multiple</code> attribute specifies that the user is allowed to enter more than one value in the specified element" +
+      "<div>The <code>multiple</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div>The <code>multiple</code> attribute works with the following input types: email, and file</div>" +
+      "<div>For <code>&lt;input type='file'&gt;</code> to select multiple files, hold down the <kbd>CTRL</kbd> or <kbd>SHIFT</kbd> key while selecting</div>" +
+      "<div>For <code>&lt;input type='email'&gt;</code> separate each email with a comma; <code>mail@example.com, mail2@example.com, mail3@example.com</code> in the email field</div>" +
+      "</div>",
+
+    myReadonly:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>readonly</code> attribute specifies that the specified element is read-only" +
+      "<div>The <code>readonly</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div>A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it)</div>" +
+      "<div>The <code>readonly</code> attribute can be set to keep a user from changing the value until some other conditions have been met (like selecting a checkbox, etc.)</div>" +
+      "<div>Then, a JavaScript can remove the readonly value, and make the input field editable</div>" +
+      "<div>A form will still submit an input field that is readonly, but will not submit an input field that is disabled</div>" +
+      "</div>",
+
+    myRequired:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>required</code> attribute specifies that the element must be filled out before submitting the form" +
+      "<div>The <code>required</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div>The <code>required</code> attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file</div>" +
       "</div>"
   };
   return myBoolean;
@@ -234,13 +260,89 @@ function DimensionAttributes(){
   const myDimensions = {
     myHeight:
       "<div class='Box-Attributes'>" +
-      "<div><code>height</code></div>" +
       "<div>The <code>height</code> attribute specifies the height of the specified element</div>" +
       "<div>The <code>height</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
-      "<div>The height attribute is used only with <code>&lt;input type='image'&gt;</div>" +
+      "<div>The height attribute is used only with <code>&lt;input type='image'&gt;</code></div>" +
+      "<div>Always specify both the <code>height</code> and <code>width</code> attributes for images</div>" +
+      "<div>If height and width are set, the space required for the image is reserved when the page is loaded</div>" +
+      "<div>However, without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it</div>" +
+      "<div>The effect will be that the page layout will change during loading (while the images load)</div>" +
+      "</div>",
+
+    mySize:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>size</code> attribute specifies the visible width, in characters, of the specified element</div>" +
+      "<div>The <code>size</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div>The <code>size</code> attribute works with the following input types: text, search, tel, url, email, and password</div>" +
+      "</div>",
+
+    myWidth:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>width</code> attribute specifies the width of the specified element</div>" +
+      "<div>The <code>width</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div>The <code>width</code> attribute is used only with <code>&lt;input type='image'&gt;</code></div>" +
+      "<div>Always specify both the <code>height</code> and <code>width</code> attributes for images</div>" +
+      "<div>If height and width are set, the space required for the image is reserved when the page is loaded</div>" +
+      "<div>However, without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it</div>" +
+      "<div>The effect will be that the page layout will change during loading (while the images load)</div>" +
       "</div>"
   };
   return myDimensions;
+}
+
+//////////////////////
+// VALUE ATTRIBUTES //
+//////////////////////
+function ValueAttributes(){
+  const myVal = {
+    myMax:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>max</code> attribute specifies the maximum value for a specified element</div>" +
+      "<div>The <code>max</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div>Use the <code>max</code> attribute together with the <code>min</code> attribute to create a range of legal values</div>" +
+      "<div>The <code>max</code> and <code>min</code> attributes works with the following input types: number, range, date, datetime-local, month, time and week</div>" +
+      "</div>",
+
+    myMaxlength:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>maxlength</code> attribute specifies the maximum number of characters allowed in the specified element</div>" +
+      "<div>The <code>maxlength</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "</div>",
+
+    myMin:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>min</code> attribute specifies the minimum value for a specified element</div>" +
+      "<div>The <code>min</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div>Use the <code>min</code> attribute together with the <code>max</code> attribute to create a range of legal values</div>" +
+      "<div>The <code>max</code> and <code>min</code> attributes works with the following input types: number, range, date, datetime-local, month, time and week</div>" +
+      "</div>",
+
+    myMinlength:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>minlength</code> attribute specifies the minimum number of characters required in the specified element</div>" +
+      "<div>The <code>minlength</code> attribute can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div>The <code>minlength</code> attribute can be used with the following input type: text, search, url, tel, email, and password</div>" +
+      "</div>",
+
+    myPattern:
+      "<div class='Box-Attributes'>" +
+      "<div><code>pattern</code</div>" +
+      "<div>Applies to <code>&lt;input&gt;</code></div>" +
+      "</div>",
+
+    myStep:
+      "<div class='Box-Attributes'>" +
+      "<div><code>step</code</div>" +
+      "<div>Applies to <code>&lt;input&gt;</code></div>" +
+      "</div>",
+
+    myValue:
+      "<div class='Box-Attributes'>" +
+      "<div><code>value</code</div>" +
+      "<div>Applies to <code>&lt;input&gt;</code></div>" +
+      "</div>"
+  };
+  return myVal;
 }
 
 //////////////////////////////
@@ -342,6 +444,12 @@ function kiv() {
       "<div>Applies to <code>&lt;input&gt;</code></div>" +
       "</div>",
 
+    myList:
+      "<div class='Box-Attributes'>" +
+      "<div><code>list</code></div>" +
+      "<div>Applies to <code>&lt;input&gt;</code></div>" +
+      "</div>",
+
     myMethod:
       "<div class='Box-Attributes'>" +
       "<div><code>method</code></div>" +
@@ -351,7 +459,7 @@ function kiv() {
     myName:
       "<div class='Box-Attributes'>" +
       "<div>The <code>name</code> attribute specifies a name for a specified element</div>" +
-      "<div>The <code>name</code> attribute can be aplied to <code>&lt;form&gt;, &lt;fieldset&gt;</code></div>" +
+      "<div>The <code>name</code> attribute can be aplied to <code>&lt;form&gt;, &lt;fieldset&gt;, &lt;input&gt;</code></div>" +
       "<div>The <code>name</code> attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted</div>" +
       "</div>",
 
@@ -359,6 +467,24 @@ function kiv() {
       "<div class='Box-Attributes'>" +
       "<div><code>novalidate</code></div>" +
       "<div>Applies to <code>&lt;form&gt;</code></div>" +
+      "</div>",
+
+    myPlaceholder:
+      "<div class='Box-Attributes'>" +
+      "<div><code>placeholder</code></div>" +
+      "<div>Applies to <code>&lt;input&gt;</code></div>" +
+      "</div>",
+
+    myPopovertarget:
+      "<div class='Box-Attributes'>" +
+      "<div><code>popovertarget</code></div>" +
+      "<div>Applies to <code>&lt;input&gt;</code></div>" +
+      "</div>",
+
+    myPopovertargetaction:
+      "<div class='Box-Attributes'>" +
+      "<div><code>popovertargetaction</code></div>" +
+      "<div>Applies to <code>&lt;input&gt;</code></div>" +
       "</div>",
 
     myRel:
@@ -371,7 +497,43 @@ function kiv() {
       "<div class='Box-Attributes'>" +
       "<div><code>target</code></div>" +
       "<div>Applies to <code>&lt;form&gt;</code></div>" +
-      "</div>"
+      "</div>",
+
+    mySource:
+      "<div class='Box-Attributes'>" +
+      "<div><code>src</code></div>" +
+      "<div>Applies to <code>&lt;input&gt;</code></div>" +
+      "</div>",
+
+    myType:
+      "<div class='Box-Attributes'>" +
+      "<div>The <code>type</code> attribute specifies the type of the specified element to display</div>" +
+      "<div>The <code>type</code> attribute  can be applied to <code>&lt;input&gt;</code></div>" +
+      "<div> Related <code><em>MyValue</em></code>" +
+      "<div><code>button</code>         = Defines a clickable button (mostly used with a JavaScript to activate a script)</div>" +
+      "<div><code>checkbox</code>       = Defines a checkbox</div>" +
+      "<div><code>color</code>          = Defines a color picker</div>" +
+      "<div><code>date</code>           = Defines a date control (year, month, day (no time))</div>" +
+      "<div><code>datetime-local</code> = Defines a date and time control (year, month, day, time (no timezone)</div>" +
+      "<div><code>email</code>          = Defines a field for an e-mail address</div>" +
+      "<div><code>file</code>           = Defines a file-select field and a 'Browse' button (for file uploads)</div>" +
+      "<div><code>hidden</code>         = Defines a hidden input field</div>" +
+      "<div><code>image</code>          = Defines an image as the submit button</div>" +
+      "<div><code>month</code>          = Defines a month and year control (no timezone)</div>" +
+      "<div><code>number</code>         = Defines a field for entering a number</div>" +
+      "<div><code>password</code>       = Defines a password field</div>" +
+      "<div><code>radio</code>          = Defines a radio button</div>" +
+      "<div><code>range</code>          = Defines a range control (like a slider control)</div>" +
+      "<div><code>reset</code>          = Defines a reset button</div>" +
+      "<div><code>search</code>         = Defines a text field for entering a search string</div>" +
+      "<div><code>submit</code>         = Defines a submit button</div>" +
+      "<div><code>tel</code>            = Defines a field for entering a telephone number</div>" +
+      "<div><code>text</code>           = [Default] Defines a single-line text field</div>" +
+      "<div><code>time</code>           = Defines a control for entering a time (no timezone)</div>" +
+      "<div><code>url</code>            = Defines a field for entering a URL</div>" +
+      "<div><code>week</code>           = Defines a week and year control (no timezone)</div>" +
+      "<div>If the <code>type</code> attribute is not specified, the default type is 'text'</div>" +
+      "</div> </div>"
   };
   return kiv;
 }
@@ -974,6 +1136,196 @@ function InputHeightAttributes() {
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
     document.getElementById("Input-Height-Attributes").innerHTML = DimensionAttributes().myHeight;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT LIST ATTRIBUTES //
+function InputListAttributes() {
+  let myVisibility = document.getElementById("Input-List-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-List-Attributes").innerHTML = kiv().myList;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT MAX ATTRIBUTES //
+function InputMaxAttributes() {
+  let myVisibility = document.getElementById("Input-Max-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Max-Attributes").innerHTML = ValueAttributes().myMax;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT MAXLENGTH ATTRIBUTES //
+function InputMaxlengthAttributes() {
+  let myVisibility = document.getElementById("Input-Maxlength-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Maxlength-Attributes").innerHTML = ValueAttributes().myMaxlength;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT MIN ATTRIBUTES //
+function InputMinAttributes() {
+  let myVisibility = document.getElementById("Input-Min-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Min-Attributes").innerHTML = ValueAttributes().myMin;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT MINLENGTH ATTRIBUTES //
+function InputMinlengthAttributes() {
+  let myVisibility = document.getElementById("Input-Minlength-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Minlength-Attributes").innerHTML = ValueAttributes().myMinlength;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT MULTIPLE ATTRIBUTES //
+function InputMultipleAttributes() {
+  let myVisibility = document.getElementById("Input-Multiple-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Multiple-Attributes").innerHTML = BooleanAttributes().myMultiple;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT NAME ATTRIBUTES //
+function InputNameAttributes() {
+  let myVisibility = document.getElementById("Input-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Name-Attributes").innerHTML = kiv().myName;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT PATTERN ATTRIBUTES //
+function InputPatternAttributes() {
+  let myVisibility = document.getElementById("Input-Pattern-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Pattern-Attributes").innerHTML = ValueAttributes().myPattern;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT PLACEHOLDER ATTRIBUTES //
+function InputPlaceholderAttributes() {
+  let myVisibility = document.getElementById("Input-Placeholder-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Placeholder-Attributes").innerHTML = kiv().myPlaceholder;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT POPOVERTARGET ATTRIBUTES //
+function InputPopovertargetAttributes() {
+  let myVisibility = document.getElementById("Input-Popovertarget-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Popovertarget-Attributes").innerHTML = kiv().myPopovertarget;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT POPOVERTARGETACTION ATTRIBUTES //
+function InputPopovertargetactionAttributes() {
+  let myVisibility = document.getElementById("Input-Popovertargetaction-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Popovertargetaction-Attributes").innerHTML = kiv().myPopovertargetaction;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT READONLY ATTRIBUTES //
+function InputReadonlyAttributes() {
+  let myVisibility = document.getElementById("Input-Readonly-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Readonly-Attributes").innerHTML = BooleanAttributes().myReadonly;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT REQUIRED ATTRIBUTES //
+function InputRequiredAttributes() {
+  let myVisibility = document.getElementById("Input-Required-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Required-Attributes").innerHTML = BooleanAttributes().myRequired;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT SIZE ATTRIBUTES //
+function InputSizeAttributes() {
+  let myVisibility = document.getElementById("Input-Size-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Size-Attributes").innerHTML = DimensionAttributes().mySize;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT SOURCE ATTRIBUTES //
+function InputSourceAttributes() {
+  let myVisibility = document.getElementById("Input-Source-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Source-Attributes").innerHTML = kiv().mySource;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT STEP ATTRIBUTES //
+function InputStepAttributes() {
+  let myVisibility = document.getElementById("Input-Step-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Step-Attributes").innerHTML = ValueAttributes().myStep;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT TYPE ATTRIBUTES //
+function InputTypeAttributes() {
+  let myVisibility = document.getElementById("Input-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Type-Attributes").innerHTML = kiv().myType;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT VALUE ATTRIBUTES //
+function InputValueAttributes() {
+  let myVisibility = document.getElementById("Input-Value-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Value-Attributes").innerHTML = ValueAttributes().myValue;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT WIDTH ATTRIBUTES //
+function InputWidthAttributes() {
+  let myVisibility = document.getElementById("Input-Width-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Width-Attributes").innerHTML = DimensionAttributes().myWidth;
   }
   else { myVisibility.style.display = "none"; }
 }
