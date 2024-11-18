@@ -2,109 +2,309 @@
 <html lang="en">
 
 <head>
-<!--Browser Tab-->
+<!-- BROWSER TAB -->
 <title>HYPERTEXT MARKUP LANGUAGE</title>
 <link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
 
-<!--Others-->
+<!-- OTHERS -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="Notes-HTML.css">
 </head>
 
 <body>
-  <!--NAVIGATE BAR-->
-  <nav class="My-Navigate-Bar">
+<!------------------>
+<!-- NAVIGATE BAR -->
+<!------------------>
+<nav class="My-Navigate-Bar">
   <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
   <div>
-    <a href="#">HTML</a>
-    <a href="Notes-CSS.html">CSS</a>
-    <a href="Notes-JS.html">JAVASCRIPT</a>
-    <a href="Notes-Gif">GIT</a>
-    <a href="Notes-BS">BOOTSTRAP</a>
-    <a href="Notes-React.html">REACT</a>
+   <a href="Notes-HTML.html">HTML</a>
+   <a href="Notes-CSS.html">CSS</a>
+   <a href="Notes-JavaScript.html">JAVASCRIPT</a>
+   <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
+   <a href="Notes-JQuery.html">JQUERY</a>
+   <a href="Notes-SASS.html">SASS</a>
+   <a href="Notes-React.html">REACT</a>
+   <a href="Notes-Redux.html">REDUX</a>
+   <a href="Notes-Git.html">GIT</a>
   </div>
-  </nav>
+</nav>
 
-  <!--------------------->
-  <!-- FORM STRUCTURES -->
-  <!--------------------->
-  <section id="HTML-Form-Structures">
-  <h1>HTML FORM STRUCTURES</h1>
-  <div class="Sample-Structures"><code>
-    <div class="Indent1" onclick="FormTag()">&lt;form&gt;</div>
-    <div class="Indent2" onclick="FieldsetTag()">&lt;fieldset&gt;</div>
-    <div class="Indent3" onclick="LegendTag()">&lt;legend&gt; <em>My Text</em> &lt;/legend&gt;</div>
-    <div class="Indent3">
-      <span onclick="LabelTag()">&lt;label for="<em>MyInput1</em>"&gt; <em>My Text</em> &lt;/label&gt;</span>
-      <span onclick="InputTag()">&lt;input id="<em>MyInput1</em>" type="text"&gt;</span>
+<!---------------------->
+<!-- TOPIC SELECTIONS -->
+<!---------------------->
+<div id="Box-Topic-Selections">
+  <button onclick="HTMLIntroduction()">HTML INTRODUCTION</button>
+  <button onclick="HTMLPageStructure()">HTML PAGE</button>
+  <button onclick="HTMLFormStructure()">HTML FORM</button>
+  <button onclick="HTMLTableStructure()">HTML TABLE</button>
+  <button onclick="HTMLListStructure()">HTML LIST</button>
+  <button onclick="HTMLMediaStructure()">HTML MEDIA</button>
+  <button onclick="RubyAnnotationStructure()">RUBY ANNOTATION</button>
+  <button onclick="HTMLSemanticText()">HTML SEMANTIC TEXT</button>
+  <button onclick="HTMLUtility()">HTML UTILITY</button>
+</div>
+
+<!----------------------->
+<!-- HTML INTRODUCTION -->
+<!----------------------->
+<section id="HTML-Introduction">
+<h1>HTML INTRODUCTION</h1>
+
+<div class="Sub-Topics"> <h3>What is HTML?</h3>
+  <div>HTML (Hypertext Markup Language) is the standard markup language for creating Web pages</div>
+  <div>HTML describes the structure of a Web page</div>
+  <div>HTML consists of a series of elements</div>
+  <div>HTML elements tell the browser how to display the content</div>
+</div>
+
+<div class="Sub-Topics"> <h3>HTML Syntax</h3>
+  <div>An HTML element is defined by an open-tag (<code>&lt;&gt;</code>), some contents, and a closed-tag (<code>&lt;/&gt;</code>)</div>
+  <div>Example &rarr; <code><em>&lt;TagName&gt; MyContents &lt;/TagName&gt;</em></code></div>
+  <div>Some HTML elements have no content (like the <code>&lt;br&gt;</code> element)</div>
+  <div>These elements are called empty elements which do not have a closed-tag</div>
+</div>
+</section>
+
+<!--------------->
+<!-- HTML PAGE -->
+<!--------------->
+<section id="HTML-Page">
+<h1>HTML PAGE STRUCTURE</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code onclick="HTMLDeclaration()">&lt;!DOCTYPE html&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="HTMLTag()">&lt;html&gt;</code></div>
+  <br>
+  <div class="Indent-Level2"><code>&lt;head&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;base&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;link&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;meta&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;noscript&gt; <em>MyContents</em> &lt;/noscript&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;/head&gt;</code></div>
+  <br>
+  <div class="Indent-Level2"><code>&lt;body&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;header&gt; <em>MyContents</em> &lt;/header&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;main&gt; <em>MyContents</em> &lt;/main&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;footer&gt; <em>MyContents</em> &lt;/footer&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;/body&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="HTMLTag()">&lt;/html&gt;</code></div>
+</div>
+
+<!-- HTML DECLARATION -->
+<div id="HTML-Declaration" class="Sub-Topics">
+  <h3><code>&lt;!DOCTYPE&gt;</code></h3>
+  <div>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration</div>
+  <div>The declaration is not an HTML tag, but it is an "information" to the browser about what document type to expect</div>
+  <div>Therefore, this <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this is an HTML 5 document (latest version of HTML)</div>
+
+  <div class="Box-Insights">
+    <h3>INSIGHTS</h3>
+    <span class="Highlight-Insights">No case sensitivity</span>
+    <div>The <code>&lt;!DOCTYPE&gt;</code> declaration is NOT case sensitive</div>
+  </div>
+</div>
+
+<!-- HTML TAG -->
+<div id="HTML-Tag" class="Sub-Topics">
+  <h3><code>&lt;html&gt; <em>MyContents</em> &lt;/html&gt;</code></h3>
+  <div>The <code>&lt;html&gt;</code> tag represents the root of an HTML document</div>
+  <div>The <code>&lt;html&gt;</code> tag is the container for all other HTML elements except for the <code>&lt;!DOCTYPE&gt;</code> declaration</div>
+
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="test()"><em>HTML Global Attributes</em></code> <div id="HTML-Global-Attributes"></div> </div>
+    <div><code>&lt;html <b>xmlns</b>="<em>MyValue</em>"&gt;</code></div>
+  </div>
+
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>html { display: block; }</code></div>
+    <div><code>html:focus { outline: none; }</code></div>
+  </div>
+
+  <div class="Box-Insights">
+    <h3>INSIGHTS</h3>
+    <div class="Item-Insights">
+      <span class="Highlight-Insights">Best practice to include <code>lang</code> attribute</span>
+      <div>Always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page</div>
+      <div>This is meant to assist search engines and browsers</div>
     </div>
-    <div class="Indent2" onclick="FieldsetTag()">&lt;/fieldset&gt;</div>
-    <div class="Indent1" onclick="FormTag()">&lt;/form&gt;</div>
-  </code></div>
-  <div id="Box-Elements"></div>
-
-  <!--
-  <code>&lt;textarea&gt; <em>My Input</em> &lt;/textarea&gt;</code>
-  <code>&lt;select&gt; <em>My Contents</em> &lt;/select&gt;</code>
-  <code>&lt;optgroup&gt; <em>My Contents</em> &lt;/optgroup&gt;</code>
-  <code>&lt;option&gt; <em>My Text</em> &lt;/option&gt;</code>
-  <code>&lt;datalist&gt; <em>My Contents</em> &lt;/datalist&gt;</code>
-  <code>&lt;output&gt; <em>My Contents</em> &lt;/output&gt;</code>
-  <code>&lt;button&gt; <em>My Text</em> &lt;/button&gt;</code>
-  -->
-  </section>
-  
-  <!------------------------------->
-  <!--HTML FUNDAMENTAL STRUCTURES-->
-  <!------------------------------->
-  <section id="HTML-Fundamental-Structures">
-  <h1>HTML FUNDAMENTAL STRUCTURES</h1>
-
-  <h3 onclick="HTMLDeclaration()"><code>&lt;!DOCTYPE&gt;</code></h3>
-  <div id="HTML-Declaration" class="Box-Elements">
-    <div>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration</div>
-    <div>The declaration is not an HTML tag, but it is an "information" to the browser about what document type to expect</div>
-    <div>Therefore, this <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this is an HTML 5 document</div>
-    <div class="Box-Insights"><mark><b>INSIGHTS</b></mark>
-      <div>The <code>&lt;!DOCTYPE&gt;</code> declaration is NOT case sensitive</div>
-    </div>
   </div>
+</div>
+</section>
 
-  <h3 onclick="HTMLTag()"><code>&lt;html&gt; <em>My Contents</em> &lt;/html&gt;</code></h3>
-  <div id="HTML-Tag" class="Box-Element">
-    <div>The <code>&lt;html&gt;</code> tag represents the root of an HTML document</div>
-    <div class="Box-Insights"><mark><b>INSIGHTS</b></mark>
-      <div>Standard structure for <code>&lt;html&gt;</code> element
-        <div>The <code>&lt;html&gt;</code> tag is the container for all other HTML elements, except for the <code>&lt;!DOCTYPE&gt;</code> declaration</div>
-        <div>The <code>&lt;html&gt;</code> tag consist of <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code> tags</div>
-      </div>
-      <div>Best practice to include <code>lang</code> attribute
-        <div>Always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page</div>
-        <div>This is meant to assist search engines and browsers</div>
-      </div>
-    </div>
-  </div>
+<!--------------->
+<!-- HTML FORM -->
+<!--------------->
+<section id="HTML-Form">
+<h1>HTML FORM STRUCTURE</h1>
 
-  <script src="Notes-HTML.js"></script>
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>&lt;form&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;fieldset&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;legend&gt; <em>MyText</em> &lt;/legend&gt;</code></div>
+  <br>
+  <div class="Indent-Level3"><code>&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;input&gt;</code></div>
+  <br>
+  <div class="Indent-Level3"><code>&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;textarea&gt; <em>MyText</em> &lt;/textarea&gt;</code></div>
+  <br>
+  <div class="Indent-Level3"><code>&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;select&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;optgroup&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;option&gt; <em>MyText</em> &lt;/option&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;/optgroup&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;/select&gt;</code></div>
+  <br>
+  <div class="Indent-Level3"><code>&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;datalist&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;option&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;/datalist&gt;</code></div>
+  <br>
+  <div class="Indent-Level3"><code>&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;progress&gt; <em>MyText</em> &lt;/progress&gt;</code></div>
+  <br>
+  <div class="Indent-Level3"><code>&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;meter&gt; <em>MyText</em> &lt;/meter&gt;</code></div>
+  <br>
+  <div class="Indent-Level3"><code>&lt;output&gt;&lt;/output&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;button&gt; <em>MyText</em> &lt;/button&gt;</code></div>
+  <br>
+  <div class="Indent-Level2"><code>&lt;/fieldset&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;/form&gt;</code></div>
+</div>
+</section>
 
-  <div id="HTML-HTML-Tag" class="Box">
-  
-  <p></p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  <li><code>xmlns="<em>myValue</em>"</code>
-  <ul><li>The <code>xmlns</code> attribute specifies the XML namespace for a document</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code>http://www.w3.org/1999/xhtml</code></li>
-  </ul></li> </ul></li> </ul></p>
-  <p><b>Default CSS Setting(s)</b> <br>
-  <code>html { display: block; } <br>
-        html:focus { outline: none; }</code> </p>
-  </div>
+<!---------------->
+<!-- HTML TABLE -->
+<!---------------->
+<section id="HTML-Table">
+<h1>HTML TABLE STRUCTURE</h1>
 
-  <div id="Head-Tag" class="Box">
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>&lt;table&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;caption&gt; <em>MyText</em> &lt;/caption&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;colgroup&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;col&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;/colgroup&gt;</code></div>
+  <br>
+  <div class="Indent-Level2"><code>&lt;thead&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;tr&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;th&gt; <em>MyTableHeader</em> &lt;/th&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;/tr&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;/thead&gt;</code></div>
+  <br>
+  <div class="Indent-Level2"><code>&lt;tbody&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;tr&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;/tr&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;/tbody&gt;</code></div>
+  <br>
+  <div class="Indent-Level2"><code>&lt;tfoot&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;tr&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;/tr&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;/tfoot&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;/table&gt;</code></div>
+</div>
+</section>
+
+<!--------------->
+<!-- HTML LIST -->
+<!--------------->
+<section id="HTML-List">
+<h1>HTML LIST STRUCTURE</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>&lt;ol&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;/ol&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>&lt;ul&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;/ul&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>&lt;menu&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;/menu&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>&lt;dl&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;dt&gt; <em>MyText</em> &lt;/dt&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;dd&gt; <em>MyText</em> &lt;/dd&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;/dl&gt;</code></div>
+</div>
+</section>
+
+<!---------------->
+<!-- HTML MEDIA -->
+<!---------------->
+<section id="HTML-Media">
+<h1>HTML MEDIA STRUCTURE</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>&lt;figure&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;img&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;map&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;area&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;/map&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;/figure&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>&lt;audio&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;source&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;track&gt;</code></div>
+  <div class="Indent-Level2"><code><em>MyText</em></code></div>
+  <div class="Indent-Level1"><code>&lt;/audio&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>&lt;video&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;source&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;track&gt;</code></div>
+  <div class="Indent-Level2"><code><em>MyText</em></code></div>
+  <div class="Indent-Level1"><code>&lt;/video&gt;</code></div>
+</div>
+</section>
+
+<!--------------------->
+<!-- RUBY ANNOTATION -->
+<!--------------------->
+<section id="Ruby-Annotation">
+<h1>RUBY ANNOTATION STRUCTURE</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>&lt;ruby&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;rp&gt; ( &lt;/rp&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;rt&gt; <em>MyText</em> &lt;/rt&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;rp&gt; ) &lt;/rp&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;/ruby&gt;</code></div>
+</div>
+</section>
+
+<!------------------------>
+<!-- HTML SEMANTIC TEXT -->
+<!------------------------>
+<section id="HTML-Semantic-Text">
+<h1>HTML SEMANTIC TEXT</h1>
+</section>
+
+<!------------------>
+<!-- HTML UTILITY -->
+<!------------------>
+<section id="HTML-Utility">
+<h1>HTML UTILITY</h1>
+</section>
+
+
+
+
+
+<!-- <div id="Head-Tag" class="Box">
   <h3><code>&lt;head&gt; <em>My Contents</em> &lt;/head&gt;</code></h3>
   <p>The <code>&lt;head&gt;</code> element is a container for metadata</p>
   <p><b>Related Attribute(s):</b>
@@ -277,7 +477,7 @@
   </ul></li> <br>
   <li><code>class</code> and <code>id</code> attributes
   <ul><li>These attributes are commonly used for node pinpoints for CSS and JavaScript purposes</li>
-  </ul></li> </ul></p> </div>
+  </ul></li> </ul></p> </div> -->
 
   <!--  <div id="Header-Group-Tag" class="Box">
   <h3><code>&lt;hgroup&gt; <em>My Contents</em> &lt;/hgroup&gt;</code></h3>
@@ -298,7 +498,6 @@
   <div id="Template-Tag" class="Box">
   <h3><code>&lt;template&gt; <em>My Contents</em> &lt;/template&gt;</code></h3>
   </div>  -->
-  </section>
 
   <!----------------->
   <!--HTML METADATA-->
@@ -869,66 +1068,9 @@
   <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
   </ul></p>
   <p><b>Default CSS Setting(s):</b> <br> <code><em>NONE</em></code> </p> </div>
-
-  <!--  <div id="Progress-Tag" class="Box">
-  <h3><code>&lt;progress&gt; <em>My Text</em> &lt;/progress&gt;</code></h3>
-  </div>
-
-  <div id="Meter-Tag" class="Box">
-  <h3><code>&lt;meter&gt; <em>My Text</em> &lt;/meter&gt;</code></h3>
-  </div>  -->
   </section>
 
 <!--
-  <section id="Table-Structures">
-  <h1>TABLE STRUCTURES</h1>
-  <code>&lt;table&gt; <em>My Contents</em> &lt;/table&gt;</code>
-  <code>&lt;caption&gt; <em>My Text</em> &lt;/caption&gt;</code>
-  <code>&lt;colgroup&gt; <em>My Contents</em> &lt;/colgroup&gt;</code>
-  <code>&lt;col&gt;</code>
-  <code>&lt;thead&gt; <em>My Contents</em> &lt;/thead&gt;</code>
-  <code>&lt;tbody&gt; <em>My Contents</em> &lt;/tbody&gt;</code>
-  <code>&lt;tfoot&gt; <em>My Contents</em> &lt;/tfoot&gt;</code>
-  <code>&lt;tr&gt; <em>My Contents</em> &lt;/tr&gt;</code>
-  <code>&lt;th&gt; <em>My Text</em> &lt;/th&gt;</code>
-  <code>&lt;td&gt; <em>My Contents</em> &lt;/td&gt;</code>
-  </section>
-
-  <section id="List-Structures">
-  <h1>LIST STRUCTURES</h1>
-  <code>&lt;ol&gt; <em>My Contents</em> &lt;/ol&gt;</code>
-  <code>&lt;ul&gt; <em>My Contents</em> &lt;/ul&gt;</code>
-  <code>&lt;menu&gt; <em>My Contents</em> &lt;/menu&gt;</code>
-  <code>&lt;li&gt; <em>My Contents</em> &lt;/li&gt;</code>
-  <code>&lt;dl&gt; <em>My Contents</em> &lt;/dl&gt;</code>
-  <code>&lt;dt&gt; <em>My Contents</em> &lt;/dt&gt;</code>
-  <code>&lt;dd&gt; <em>My Contents</em> &lt;/dd&gt;</code>
-  </section>
-
-  <section id="Image-Structures">
-  <h1>IMAGE STRUCTURES</h1>
-  <code>&lt;figure&gt; <em>My Contents</em> &lt;/figure&gt;</code>
-  <code>&lt;img&gt;</code>
-  <code>&lt;figcaption&gt; <em>My Contents</em> &lt;/figcaption&gt;</code>
-  <code>&lt;map&gt; <em>My Contents</em> &lt;/map&gt;</code>
-  <code>&lt;area&gt; <em>My Contents</em> &lt;/area&gt;</code>
-  </section>
-
-  <section id="Audio-Video-Structures">
-  <h1>AUDIO/VIDEO STRUCTURES</h1>
-  <code>&lt;audio&gt; <em>My Contents</em> &lt;/audio&gt;</code>
-  <code>&lt;video&gt; <em>My Contents</em> &lt;/video&gt;</code>
-  <code>&lt;source&gt; <em>My Contents</em> &lt;/source&gt;</code>
-  <code>&lt;track&gt; <em>My Contents</em> &lt;/track&gt;</code>
-  </section>
-
-  <section id="Ruby-Annotation-Structures">
-  <h1>RUBY ANNOTATION STRUCTURES</h1>
-  <code>&lt;ruby&gt; <em>My Contents</em> &lt;/ruby&gt;</code>
-  <code>&lt;rt&gt; <em>My Contents</em> &lt;/rt&gt;</code>
-  <code>&lt;rp&gt; <em>My Contents</em> &lt;/rp&gt;</code>
-  </section>
-
   <code>&lt;details&gt; <em>My Contents</em> &lt;/details&gt;</code>
   <code>&lt;summary&gt; <em>My Text</em> &lt;/summary&gt;</code>
   <code>&lt;embed&gt; <em>My Contents</em> &lt;/embed&gt;</code>
@@ -940,5 +1082,8 @@
   <code>&lt;data&gt; <em>My Contents</em> &lt;/data&gt;</code>
   <code>&lt;dialog&gt; <em>My Contents</em> &lt;/dialog&gt;</code>
 -->
+
+<!-- IMPORTING JS FILE -->
+<script src="Notes-HTML.js"></script>
 </body>
 </html>

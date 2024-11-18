@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- BROWSER TAB -->
+<title>REACT</title>
+<link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
+
+<!-- OTHERS -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Notes-React.css">
+
+<!-- REACT USES -->
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+<!------------------>
+<!-- NAVIGATE BAR -->
+<!------------------>
+<nav class="My-Navigate-Bar">
+  <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
+  <div>
+    <a href="Notes-HTML.html">HTML</a>
+    <a href="Notes-CSS.html">CSS</a>
+    <a href="Notes-JavaScript.html">JAVASCRIPT</a>
+    <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
+    <a href="Notes-JQuery.html">JQUERY</a>
+    <a href="Notes-SASS.html">SASS</a>
+    <a href="Notes-React.html">REACT</a>
+    <a href="Notes-Redux.html">REDUX</a>
+    <a href="Notes-Git.html">GIT</a>
+  </div>
+</nav>
+
+<!---------------------->
+<!-- TOPIC SELECTIONS -->
+<!---------------------->
+<div id="Box-Topic-Selections">
+  <button onclick="ReactIntroduction()">REACT INTRODUCTION</button>
+</div>
+
+<!----------------------->
+<!-- REACT NODE TARGET -->
+<!----------------------->
+<section id="React-Introduction"></section>
+
+<!-------------------->
+<!-- REACT CONTENTS -->
+<!-------------------->
+<script type="text/babel">
+class DisplayReactIntroduction extends React.Component {
+  constructor(props) { super(props); }
+  render() { return(
+    <div>
+      <h1>REACT INTRODUCTION</h1>
+      <DisplayReactSubTopic1 />
+      <DisplayReactSubTopic2 />
+    </div>
+  ); }
+}
+
+class DisplayReactSubTopic1 extends React.Component {
+  constructor(props) { super(props); }
+  render() { return(
+    <div class="Sub-Topics">
+      <h3>What is React?</h3>
+      <div>React is a JavaScript library and a tool for building UI components</div>
+      <div>React is also referred as a frontend JavaScript framework</div>
+      <div>React is created by Facebook</div>
+    </div>
+  ); }
+}
+
+class DisplayReactSubTopic2 extends React.Component {
+  constructor(props) { super(props); }
+  render() { return(
+    <div class="Sub-Topics">
+      <h3>How does React work?</h3>
+      <div>Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory</div>
+      <div>The virtual DOM does all the necessary manipulating, before making the changes in the browser DOM</div>
+      <div>React finds out what changes have been made, and changes only what needs to be changed</div>
+    </div>
+  ); }
+}
+
+ReactDOM.render(<DisplayReactIntroduction />, document.getElementById("React-Introduction"));
+</script>
+
+<!-- IMPORTING JS FILE -->
+<script src="Notes-React.js"></script>
+</body>
+</html>
