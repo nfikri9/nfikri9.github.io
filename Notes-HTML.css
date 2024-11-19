@@ -58,7 +58,7 @@ a:hover { color: darksalmon; }
   border: 1px solid black;
 }
 
-#HTML-Introduction, #HTML-Page, #HTML-Form, #HTML-Table, #HTML-List, #HTML-Media, #Ruby-Annotation, #HTML-Semantic-Text, #HTML-Utility {
+.Box-Contents {
   max-width: 1150px;
   padding: 10px;
   margin: 20px auto;
@@ -74,11 +74,14 @@ a:hover { color: darksalmon; }
 
 .Sub-Topics { margin: 20px 0; }
 
-/* HTML ELEMENTS */
-#HTML-Declaration, #HTML-Tag { display: none; }
+/* ELEMENTS */
+.Box-Elements { display: none; }
 
 /* ATTRIBUTES */
 .Box-Attributes { margin: 20px 0; }
+
+/* VALUES */
+.Box-Values { margin: 20px 0; }
 
 /* DEFAULT CSS */
 .Box-CSS { margin: 20px 0; }

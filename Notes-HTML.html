@@ -35,21 +35,22 @@
 <!-- TOPIC SELECTIONS -->
 <!---------------------->
 <div id="Box-Topic-Selections">
-  <button onclick="HTMLIntroduction()">HTML INTRODUCTION</button>
-  <button onclick="HTMLPageStructure()">HTML PAGE</button>
-  <button onclick="HTMLFormStructure()">HTML FORM</button>
-  <button onclick="HTMLTableStructure()">HTML TABLE</button>
-  <button onclick="HTMLListStructure()">HTML LIST</button>
-  <button onclick="HTMLMediaStructure()">HTML MEDIA</button>
+  <button onclick="HTMLIntroduction()">INTRODUCTION</button>
+  <button onclick="HTMLPageStructure()">PAGE STRUCTURE</button>
+  <button onclick="HTMLSemanticContainer()">SEMANTIC CONTAINER</button>
+  <button onclick="HTMLSemanticText()">SEMANTIC TEXT</button>
+  <button onclick="HTMLFormStructure()">FORM</button>
+  <button onclick="HTMLTableStructure()">TABLE</button>
+  <button onclick="HTMLListStructure()">LIST</button>
+  <button onclick="HTMLMediaStructure()">MEDIA</button>
   <button onclick="RubyAnnotationStructure()">RUBY ANNOTATION</button>
-  <button onclick="HTMLSemanticText()">HTML SEMANTIC TEXT</button>
-  <button onclick="HTMLUtility()">HTML UTILITY</button>
+  <button onclick="HTMLMisc()">MISC</button>
 </div>
 
 <!----------------------->
 <!-- HTML INTRODUCTION -->
 <!----------------------->
-<section id="HTML-Introduction">
+<section id="HTML-Introduction" class="Box-Contents">
 <h1>HTML INTRODUCTION</h1>
 
 <div class="Sub-Topics"> <h3>What is HTML?</h3>
@@ -70,7 +71,7 @@
 <!--------------->
 <!-- HTML PAGE -->
 <!--------------->
-<section id="HTML-Page">
+<section id="HTML-Page" class="Box-Contents">
 <h1>HTML PAGE STRUCTURE</h1>
 
 <div class="Box-Structures">
@@ -97,7 +98,7 @@
 </div>
 
 <!-- HTML DECLARATION -->
-<div id="HTML-Declaration" class="Sub-Topics">
+<div id="HTML-Declaration" class="Sub-Topics Box-Elements">
   <h3><code>&lt;!DOCTYPE&gt;</code></h3>
   <div>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration</div>
   <div>The declaration is not an HTML tag, but it is an "information" to the browser about what document type to expect</div>
@@ -111,14 +112,14 @@
 </div>
 
 <!-- HTML TAG -->
-<div id="HTML-Tag" class="Sub-Topics">
+<div id="HTML-Tag" class="Sub-Topics Box-Elements">
   <h3><code>&lt;html&gt; <em>MyContents</em> &lt;/html&gt;</code></h3>
   <div>The <code>&lt;html&gt;</code> tag represents the root of an HTML document</div>
   <div>The <code>&lt;html&gt;</code> tag is the container for all other HTML elements except for the <code>&lt;!DOCTYPE&gt;</code> declaration</div>
 
   <div class="Box-Attributes">
     <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code onclick="test()"><em>HTML Global Attributes</em></code> <div id="HTML-Global-Attributes"></div> </div>
+    <div><code onclick="HTMLGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="HTML-Global-Attributes"></div> </div>
     <div><code>&lt;html <b>xmlns</b>="<em>MyValue</em>"&gt;</code></div>
   </div>
 
@@ -139,10 +140,558 @@
 </div>
 </section>
 
+<!----------------------------->
+<!-- HTML SEMANTIC CONTAINER -->
+<!----------------------------->
+<section id="HTML-Semantic-Container" class="Box-Contents">
+<h1>HTML SEMANTIC CONTAINER</h1>
+  
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>&lt;nav&gt; <em>MyContents</em> &lt;/nav&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;aside&gt; <em>MyContents</em> &lt;/aside&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;article&gt; <em>MyContents</em> &lt;/article&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;section&gt; <em>MyContents</em> &lt;/section&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;div&gt; <em>MyContents</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;span&gt; <em>MyContents</em> &lt;/span&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;hgroup&gt; <em>MyContents</em> &lt;/hgroup&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;picture&gt; <em>MyContents</em> &lt;/picture&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;search&gt; <em>MyContents</em> &lt;/search&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;svg&gt; <em>MyContents</em> &lt;/svg&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;template&gt; <em>MyContents</em> &lt;/template&gt;</code></div>
+</div>
+</section>
+
+<!------------------------>
+<!-- HTML SEMANTIC TEXT -->
+<!------------------------>
+<section id="HTML-Semantic-Text" class="Box-Contents">
+<h1>HTML SEMANTIC TEXT</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code onclick="CommentTag()">&lt;!-- <em>MyText</em> --&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="HeadingTag()">&lt;h1&gt; <em>MyText</em> &lt;/h1&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="ParagraphTag()">&lt;p&gt; <em>MyText</em> &lt;/p&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="AnchorTag()">&lt;a&gt; <em>MyText</em> &lt;/a&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="AddressTag()">&lt;address&gt; <em>MyText</em> &lt;/address&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="AbbreviationTag()">&lt;abbr&gt; <em>MyText</em> &lt;/abbr&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="DefinitionTag()">&lt;dfn&gt; <em>MyText</em> &lt;/dfn&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="CiteTag()">&lt;cite&gt; <em>MyText</em> &lt;/cite&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="QuoteTag()">&lt;q&gt; <em>MyText</em> &lt;/q&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="BlockquoteTag()">&lt;blockq&gt; <em>MyText</em> &lt;/blockq&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="StrongTag()">&lt;strong&gt; <em>MyText</em> &lt;/strong&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="EmphasizeTag()">&lt;em&gt; <em>MyText</em> &lt;/em&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="InsertTag()">&lt;ins&gt; <em>MyText</em> &lt;/ins&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="DeleteTag()">&lt;del&gt; <em>MyText</em> &lt;/del&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="BoldTag()">&lt;b&gt; <em>MyText</em> &lt;/b&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="ItalicTag()">&lt;i&gt; <em>MyText</em> &lt;/i&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="UnarticulateTag()">&lt;u&gt; <em>MyText</em> &lt;/u&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="StrikeTag()">&lt;s&gt; <em>MyText</em> &lt;/s&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="MarkTag()">&lt;mark&gt; <em>MyText</em> &lt;/mark&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="SmallTag()">&lt;small&gt; <em>MyText</em> &lt;/small&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="SuperscriptTag()">&lt;sup&gt; <em>MyText</em> &lt;/sup&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="SubscriptTag()">&lt;sub&gt; <em>MyText</em> &lt;/sub&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="CodeTag()">&lt;code&gt; <em>MyText</em> &lt;/code&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="KeyboardTag()">&lt;kbd&gt; <em>MyText</em> &lt;/kbd&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="PreformatTag()">&lt;pre&gt; <em>MyText</em> &lt;/pre&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="SampleTag()">&lt;samp&gt; <em>MyText</em> &lt;/samp&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="VariableTag()">&lt;var&gt; <em>MyText</em> &lt;/var&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="BiDirectionalIsolationTag()">&lt;bdi&gt; <em>MyText</em> &lt;/bdi&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="BiDirectionalOverrideTag()">&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="TimeTag()">&lt;time&gt; <em>MyText</em> &lt;/time&gt;</code></div>
+</div>
+  
+<!-- COMMENT TAG -->
+<div id="Comment-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;!-- <em>MyText</em> --&gt;</code></h3>
+  <div>The comment tag is used to insert comments in the source code</div>
+  <div>Comments are not displayed in the browsers</div>
+  <div>User can use comments to explain the code, which can help them when they edit the source code at a later date</div>
+  <div>This is especially useful if user have a lot of code</div>
+</div>
+
+<!-- HEADING TAG -->
+<div id="Heading-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;h1&gt; <em>MyText</em> &lt;/h1&gt;</code></h3>
+  <div>The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags are used to define HTML headings</div>
+  <div><code>&lt;h1&gt;</code> defines the most important heading while <code>&lt;h6&gt;</code> defines the least important heading</div>
+
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="HeadingGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Heading-Global-Attributes"></div> </div>
+    <div><code onclick="HeadingEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Heading-Event-Attributes"></div> </div>
+  </div>
+
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>h1 { display: block; font-weight: bold; font-size: 2em; margin: 0.67em 0; }</code></div>
+    <div><code>h2 { display: block; font-weight: bold; font-size: 1.5em; margin: 0.83em 0; }</code></div>
+    <div><code>h3 { display: block; font-weight: bold; font-size: 1.17em; margin: 1em 0; }</code></div>
+    <div><code>h4 { display: block; font-weight: bold; font-size: 1em; margin: 1.33em 0; }</code></div>
+    <div><code>h5 { display: block; font-weight: bold; font-size: 0.83em; margin: 1.67em 0; }</code></div>
+    <div><code>h6 { display: block; font-weight: bold; font-size: 0.67em; margin: 2.33em 0; }</code></div>
+  </div>
+
+  <div class="Box-Insights">
+    <h3>INSIGHTS</h3>
+    <div class="Item-Insights">
+      <span class="Highlight-Insights">Heading flow level</span>
+      <div>Do not skip heading levels, start with <code>&lt;h1&gt;</code>, then use <code>&lt;h2&gt;</code>, and so on until <code>&lt;h6&gt;</code></div>
+    </div>
+  </div>
+</div>
+
+<!-- PARAGRAPH TAG -->
+<div id="Paragraph-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;p&gt; <em>MyText</em> &lt;/p&gt;</code></h3>
+  <div>The <code>&lt;p&gt;</code> tag defines a paragraph</div>
+  <div>Browsers automatically add a single blank line before and after each <code>&lt;p&gt;</code> element</div>
+
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="ParagraphGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Paragraph-Global-Attributes"></div> </div>
+    <div><code onclick="ParagraphEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Paragraph-Event-Attributes"></div> </div>
+  </div>
+
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>p {</code></div>
+    <div><code>display: block;</code></div>
+    <div><code>margin: 1em 0;</code></div>
+    <div><code>}</code></div>
+  </div>
+</div>
+
+<!-- ANCHOR TAG -->
+<div id="Anchor-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;a&gt; <em>MyText</em> &lt;/a&gt;</code></h3>
+  <div>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another</div>
+
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="AnchorGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Anchor-Global-Attributes"></div> </div>
+    <div><code onclick="AnchorEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Anchor-Event-Attributes"></div> </div>
+    <div><code onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Download-Attributes"></div> </div>
+    <div><code onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Href-Attributes"></div> </div>
+    <div><code onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Hreflang-Attributes"></div> </div>
+    <div><code onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Media-Attributes"></div> </div>
+    <div><code onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Ping-Attributes"></div> </div>
+    <div><code onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Referrerpolicy-Attributes"></div> </div>
+    <div><code onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Rel-Attributes"></div> </div>
+    <div><code onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Target-Attributes"></div> </div>
+    <div><code onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Type-Attributes"></div> </div>
+  </div>
+
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>a:link, a:visited { color: (internal value); text-decoration: underline; cursor: auto; }</code></div>
+    <div><code>a:link:active, a:visited:active { color: (internal value); }</code></div>
+  </div>
+</div>
+
+<!-- ADDRESS TAG -->
+<div id="Address-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;address&gt; <em>MyText</em> &lt;/address&gt;</code></h3>
+</div>
+
+<!-- ABBREVIATION TAG -->
+<div id="Abbreviation-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;abbr&gt; <em>MyText</em> &lt;/abbr&gt;</code></h3>
+</div>
+
+<!-- DEFINITION TAG -->
+<div id="Definition-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;dfn&gt; <em>MyText</em> &lt;/dfn&gt;</code></h3>
+</div>
+
+<!-- CITE TAG -->
+<div id="Cite-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;cite&gt; <em>MyText</em> &lt;/cite&gt;</code></h3>
+</div>
+  
+<!-- QUOTE TAG -->
+<div id="Quote-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;q&gt; <em>MyText</em> &lt;/q&gt;</code></h3>
+  <div>The <code>&lt;q&gt;</code> tag defines a short quotation</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="QuoteGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Quote-Global-Attributes"></div> </div>
+    <div><code onclick="QuoteEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Quote-Event-Attributes"></div> </div>
+    <div><code onclick="QuoteCiteAttributes()">&lt;q <b>cite</b>="<em>MyValue</em>"&gt;</code> <div id="Quote-Cite-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>q { display: inline; }</code></div>
+    <div><code>q:before { content: open-quote; }</code></div>
+    <div><code>q:after { content: close-quote; }</code></div>
+  </div>
+</div>
+  
+<!-- BLOCKQUOTE TAG -->
+<div id="Blockquote-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;blockq&gt; <em>MyText</em> &lt;/blockq&gt;</code></h3>
+  <div>The <code>&lt;blockq&gt;</code> tag specifies a section that is quoted from another source</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="BlockquoteGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Blockquote-Global-Attributes"></div> </div>
+    <div><code onclick="BlockquoteEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Blockquote-Event-Attributes"></div> </div>
+    <div><code onclick="BlockquoteCiteAttributes()">&lt;blockq <b>cite</b>="<em>MyValue</em>"&gt;</code> <div id="Blockquote-Cite-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>blockq {</code></div>
+    <div><code>display: block;</code></div>
+    <div><code>margin: 1em 40px;</code></div>
+    <div><code>}</code></div>
+  </div>
+</div>
+  
+<!-- STRONG TAG -->
+<div id="Strong-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;strong&gt; <em>MyText</em> &lt;/strong&gt;</code></h3>
+  <div>The <code>&lt;strong&gt;</code> tag is used to define text with strong importance</div>
+  <div>Use the <code>&lt;b&gt;</code> tag to specify bold text without any extra importance</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="StrongGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Strong-Global-Attributes"></div> </div>
+    <div><code onclick="StrongEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Strong-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>strong  { font-weight: bold; }</code></div>
+  </div>
+</div>
+  
+<!-- EMPHASIZE TAG -->
+<div id="Emphasize-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;em&gt; <em>MyText</em> &lt;/em&gt;</code></h3>
+  <div>The <code>&lt;em&gt;</code> tag is used to define emphasized text</div>
+  <div>A screen reader will pronounce the words in <code>&lt;em&gt;</code> with an emphasis, using verbal stress</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="EmphasizeGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Emphasize-Global-Attributes"></div> </div>
+    <div><code onclick="EmphasizeEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Emphasize-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>em  { font-style: italic; }</code></div>
+  </div>
+</div>
+  
+<!-- INSERT TAG -->
+<div id="Insert-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;ins&gt; <em>MyText</em> &lt;/ins&gt;</code></h3>
+  <div>The <code>&lt;ins&gt;</code> tag defines a text that has been inserted into a document</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="InsertGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Insert-Global-Attributes"></div> </div>
+    <div><code onclick="InsertEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Insert-Event-Attributes"></div> </div>
+    <div><code onclick="InsertCiteAttributes()">&lt;ins <b>cite</b>="<em>MyValue</em>"&gt;</code> <div id="Insert-Cite-Attributes"></div> </div>
+    <div><code onclick="InsertDatetimeAttributes()">&lt;ins <b>datetime</b>="<em>MyValue</em>"&gt;</code> <div id="Insert-Datetime-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>ins { text-decoration: underline; }</code></div>
+  </div>
+</div>
+  
+<!-- DELETE TAG -->
+<div id="Delete-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;del&gt; <em>MyText</em> &lt;/del&gt;</code></h3>
+  <div>The <code>&lt;del&gt;</code> tag defines text that has been deleted from a document</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="DeleteGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Delete-Global-Attributes"></div> </div>
+    <div><code onclick="DeleteEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Delete-Event-Attributes"></div> </div>
+    <div><code onclick="DeleteCiteAttributes()">&lt;del <b>cite</b>="<em>MyValue</em>"&gt;</code> <div id="Delete-Cite-Attributes"></div> </div>
+    <div><code onclick="DeleteDatetimeAttributes()">&lt;del <b>datetime</b>="<em>MyValue</em>"&gt;</code> <div id="Delete-Datetime-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>del { text-decoration: line-through; }</code></div>
+  </div>
+</div>
+  
+<!-- BOLD TAG -->
+<div id="Bold-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;b&gt; <em>MyText</em> &lt;/b&gt;</code></h3>
+  <div>The <code>&lt;b&gt;</code> tag specifies bold text without any extra importance</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="BoldGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Bold-Global-Attributes"></div> </div>
+    <div><code onclick="BoldEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Bold-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>b { font-weight: bold; }</code></div>
+  </div>
+</div>
+  
+<!-- ITALIC TAG -->
+<div id="Italic-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;i&gt; <em>MyText</em> &lt;/i&gt;</code></h3>
+  <div>The <code>&lt;i&gt;</code> tag defines a part of text in an alternate voice or mood</div>
+  <div>The <code>&lt;i&gt;</code> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="ItalicGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Italic-Global-Attributes"></div> </div>
+    <div><code onclick="ItalicEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Italic-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>i { font-style: italic; }</code></div>
+  </div>
+</div>
+  
+<!-- UNARTICULATE TAG -->
+<div id="Unarticulate-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;u&gt; <em>MyText</em> &lt;/u&gt;</code></h3>
+  <div>The <code>&lt;u&gt;</code> tag represents some text that is unarticulated and styled differently from normal text</div>
+  <div>The text can be like misspelled words or proper names in Chinese text</div>
+  <div>Avoid using the <code>&lt;u&gt;</code> element where it could be confused for a hyperlink</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="UnarticulateGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Unarticulate-Global-Attributes"></div> </div>
+    <div><code onclick="UnarticulateEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Unarticulate-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>u { text-decoration: underline; }</code></div>
+  </div>
+</div>
+  
+<!-- STRIKE TAG -->
+<div id="Strike-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;s&gt; <em>MyText</em> &lt;/s&gt;</code></h3>
+  <div>The <code>&lt;s&gt;</code> tag specifies text that is no longer correct, accurate or relevant</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="StrikeGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Strike-Global-Attributes"></div> </div>
+    <div><code onclick="StrikeEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Strike-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>s { text-decoration: line-through; }</code></div>
+  </div>
+</div>
+  
+<!-- MARK TAG -->
+<div id="Mark-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;mark&gt; <em>MyText</em> &lt;/mark&gt;</code></h3>
+  <div>The <code>&lt;mark&gt;</code> tag defines text that should be marked or highlighted</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="MarkGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Mark-Global-Attributes"></div> </div>
+    <div><code onclick="MarkEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Mark-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>mark {</code></div>
+    <div><code>background-color: yellow;</code></div>
+    <div><code>color: black;</code></div>
+    <div><code>}</code></div>
+  </div>
+</div>
+  
+<!-- SMALL TAG -->
+<div id="Small-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;small&gt; <em>MyText</em> &lt;/small&gt;</code></h3>
+  <div>The <code>&lt;small&gt;</code> tag defines smaller text (like copyright and other side-comments)</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="SmallGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Small-Global-Attributes"></div> </div>
+    <div><code onclick="SmallEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Small-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>small { font-size: smaller; }</code></div>
+  </div>
+</div>
+  
+<!-- SUPERSCRIPT TAG -->
+<div id="Superscript-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;sup&gt; <em>MyText</em> &lt;/sup&gt;</code></h3>
+  <div>The <code>&lt;sup&gt;</code> tag defines superscript text</div>
+  <div>Superscript text can be used for footnotes, like <code>WWW<sup>[1]</sup></code></div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="SuperscriptGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Superscript-Global-Attributes"></div> </div>
+    <div><code onclick="SuperscriptEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Superscript-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>sup {</code></div>
+    <div><code>vertical-align: super;</code></div>
+    <div><code>font-size: smaller;</code></div>
+    <div><code>}</code></div>
+  </div>
+</div>
+  
+<!-- SUBSCRIPT TAG -->
+<div id="Subscript-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;sub&gt; <em>MyText</em> &lt;/sub&gt;</code></h3>
+  <div>The <code>&lt;sub&gt;</code> tag defines subscript text</div>
+  <div>Subscript text can be used for chemical formulas, like <code>H<sub>2</sub>O</code></div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="SubscriptGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Subscript-Global-Attributes"></div> </div>
+    <div><code onclick="SubscriptEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Subscript-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>sub {</code></div>
+    <div><code>vertical-align: sub;</code></div>
+    <div><code>font-size: smaller;</code></div>
+    <div><code>}</code></div>
+  </div>
+</div>
+  
+<!-- CODE TAG -->
+<div id="Code-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;code&gt; <em>MyText</em> &lt;/code&gt;</code></h3>
+  <div>The <code>&lt;code&gt;</code> tag is used to define a piece of computer code</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="CodeGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Code-Global-Attributes"></div> </div>
+    <div><code onclick="CodeEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Code-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>code { font-family: monospace; }</code></div>
+  </div>
+</div>
+  
+<!-- KEYBOARD TAG -->
+<div id="Keyboard-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;kbd&gt; <em>MyText</em> &lt;/kbd&gt;</code></h3>
+  <div>The <code>&lt;kbd&gt;</code> tag is used to define keyboard input</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="KeyboardGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Keyboard-Global-Attributes"></div> </div>
+    <div><code onclick="KeyboardEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Keyboard-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>kbd { font-family: monospace; }</code></div>
+  </div>
+</div>
+  
+<!-- PREFORMAT TAG -->
+<div id="Preformat-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;pre&gt; <em>MyText</em> &lt;/pre&gt;</code></h3>
+  <div>The <code>&lt;pre&gt;</code> tag defines preformatted text</div>
+  <div>Text in a <code>&lt;pre&gt;</code> element is displayed in a fixed-width font, and the text preserves both spaces and line breaks</div>
+  <div>The text will be displayed exactly as written in the HTML source code</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="PreformatGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Preformat-Global-Attributes"></div> </div>
+    <div><code onclick="PreformatEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Preformat-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>pre {</code></div>
+    <div><code>display: block;</code></div>
+    <div><code>font-family: monospace;</code></div>
+    <div><code>white-space: pre;</code></div>
+    <div><code>margin: 1em 0;</code></div>
+    <div><code>}</code></div>
+  </div>
+</div>
+  
+<!-- SAMPLE TAG -->
+<div id="Sample-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;samp&gt; <em>MyText</em> &lt;/samp&gt;</code></h3>
+  <div>The <code>&lt;samp&gt;</code> tag is used to define sample output from a computer program</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="SampleGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Sample-Global-Attributes"></div> </div>
+    <div><code onclick="SampleEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Sample-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>samp { font-family: monospace; }</code></div>
+  </div>
+</div>
+  
+<!-- VARIABLE TAG -->
+<div id="Variable-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;var&gt; <em>MyText</em> &lt;/var&gt;</code></h3>
+  <div>The <code>&lt;var&gt;</code> tag is used to defines a variable in programming or in a mathematical expression</div>
+  
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="VariableGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Variable-Global-Attributes"></div> </div>
+    <div><code onclick="VariableEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Variable-Event-Attributes"></div> </div>
+  </div>
+  
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>var { font-style: italic; }</code></div>
+  </div>
+</div>
+  
+<!-- BIDIRECTIONAL ISOLATION TAG -->
+<div id="Bi-Directional-Isolation-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;bdi&gt; <em>MyText</em> &lt;/bdi&gt;</code></h3>
+</div>
+  
+<!-- BIDIRECTIONAL OVERRIDE TAG -->
+<div id="Bi-Directional-Override-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></h3>
+</div>
+
+<!-- TIME TAG -->
+<div id="Time-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;time&gt; <em>MyText</em> &lt;/time&gt;</code></h3>
+</div>
+</section>
+
 <!--------------->
 <!-- HTML FORM -->
 <!--------------->
-<section id="HTML-Form">
+<section id="HTML-Form" class="Box-Contents">
 <h1>HTML FORM STRUCTURE</h1>
 
 <div class="Box-Structures">
@@ -185,7 +734,7 @@
 <!---------------->
 <!-- HTML TABLE -->
 <!---------------->
-<section id="HTML-Table">
+<section id="HTML-Table" class="Box-Contents">
 <h1>HTML TABLE STRUCTURE</h1>
 
 <div class="Box-Structures">
@@ -219,7 +768,7 @@
 <!--------------->
 <!-- HTML LIST -->
 <!--------------->
-<section id="HTML-List">
+<section id="HTML-List" class="Box-Contents">
 <h1>HTML LIST STRUCTURE</h1>
 
 <div class="Box-Structures">
@@ -245,7 +794,7 @@
 <!---------------->
 <!-- HTML MEDIA -->
 <!---------------->
-<section id="HTML-Media">
+<section id="HTML-Media" class="Box-Contents">
 <h1>HTML MEDIA STRUCTURE</h1>
 
 <div class="Box-Structures">
@@ -274,7 +823,7 @@
 <!--------------------->
 <!-- RUBY ANNOTATION -->
 <!--------------------->
-<section id="Ruby-Annotation">
+<section id="Ruby-Annotation" class="Box-Contents">
 <h1>RUBY ANNOTATION STRUCTURE</h1>
 
 <div class="Box-Structures">
@@ -286,802 +835,140 @@
 </div>
 </section>
 
-<!------------------------>
-<!-- HTML SEMANTIC TEXT -->
-<!------------------------>
-<section id="HTML-Semantic-Text">
-<h1>HTML SEMANTIC TEXT</h1>
-</section>
+<!--------------->
+<!-- HTML MISC -->
+<!--------------->
+<section id="HTML-Misc" class="Box-Contents">
+<h1>MISC</h1>
 
-<!------------------>
-<!-- HTML UTILITY -->
-<!------------------>
-<section id="HTML-Utility">
-<h1>HTML UTILITY</h1>
-</section>
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code onclick="DetailsTag()">&lt;details&gt;</code></div>
+  <div class="Indent-Level2"><code onclick="SummaryTag()">&lt;summary&gt; <em>MyText</em> &lt;/summary&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="DetailsTag()">&lt;/details&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="ObjectTag()">&lt;object&gt;</code></div>
+  <div class="Indent-Level2"><code onclick="ParameterTag()">&lt;param&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="ObjectTag()">&lt;/object&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="CanvasTag()">&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></div>
+  <div class="Indent-Level1"><code>&lt;script&gt;&lt;/script&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="HorizontalRuleTag()">&lt;hr&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="BreakTag()">&lt;br&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="WordBreakTag()">&lt;wbr&gt;</code></div>
+  <br>
+  <div class="Indent-Level1"><code onclick="DataTag()">&lt;data&gt; <em>MyText</em> &lt;/data&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="DialogTag()">&lt;dialog&gt; <em>MyText</em> &lt;/dialog&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="EmbedTag()">&lt;embed&gt;</code></div>
+  <div class="Indent-Level1"><code onclick="IframeTag()">&lt;iframe&gt;&lt;/iframe&gt;</code></div>
+</div>
 
+<!-- DETAILS TAG -->
+<div id="Details-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;details&gt; <em>MyContents</em> &lt;/details&gt;</code></h3>
+</div>
 
+<!-- SUMMARY TAG -->
+<div id="Summary-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;summary&gt; <em>MyText</em> &lt;/summary&gt;</code></h3>
+</div>
 
+<!-- OBJECT TAG -->
+<div id="Object-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;object&gt; <em>MyContents</em> &lt;/object&gt;</code></h3>
+</div>
 
+<!-- PARAMETER TAG -->
+<div id="Parameter-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;param&gt;</code></h3>
+</div>
 
-<!-- <div id="Head-Tag" class="Box">
-  <h3><code>&lt;head&gt; <em>My Contents</em> &lt;/head&gt;</code></h3>
-  <p>The <code>&lt;head&gt;</code> element is a container for metadata</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>head { display: none; }</code></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Standard structure for <code>&lt;head&gt;</code> element
-  <ul><li>The <code>&lt;head&gt;</code> element is placed within the <code>&lt;html&gt;</code> tag and above the <code>&lt;body&gt;</code> tag</li>
-  <li>The <code>&lt;head&gt;</code> element is consist of <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;meta&gt;</code>,
-      <code>&lt;base&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;script&gt;</code> and <code>&lt;noscript&gt;</code> 
-  </li> </ul></li> </ul></p> </div>
+<!-- CANVAS TAG -->
+<div id="Canvas-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></h3>
+</div>
 
-  <div id="Body-Tag" class="Box">
-  <h3><code>&lt;body&gt; <em>My Contents</em> &lt;/body&gt;</code></h3>
-  <p>The <code>&lt;body&gt;</code> tag defines the document's body</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br>
-  <code>body { display: block; margin: 8px; } <br>
-        body:focus { outline: none; }</code></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Standard structure for <code>&lt;body&gt;</code> element
-  <ul><li>The <code>&lt;body&gt;</code> element is placed within the <code>&lt;html&gt;</code> tag and below <code>&lt;head&gt;</code> tag</li>
-  <li>The <code>&lt;body&gt;</code> element consist of <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> and <code>&lt;footer&gt;</code></li>
-  <li>There can only be one <code>&lt;body&gt;</code> element in an HTML document</li>
-  </ul></li> <br>
-  <li>Modifying CSS
-  <ul><li>Since <code>&lt;body&gt;</code> element has default CSS of <code>margin: 8px;</code> the page layout will have a small amount of empty spaces around it</li>
-  <li>Apply <code>margin: 0;</code> so that the page is fit to viewport</li>
-  </ul></li>
-  </ul></p> </div>
-
-  <div id="Header-Tag" class="Box">
-  <h3><code>&lt;header&gt; <em>My Contents</em> &lt;/header&gt;</code></h3>
-  <p>The <code>&lt;header&gt;</code> element represents a container for introductory content or a set of navigational links</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>header { display: block; }</code></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Standard structure for <code>&lt;header&gt;</code> element
-  <ul><li>The <code>&lt;header&gt;</code> element is placed within <code>&lt;body&gt;</code> and above <code>&lt;main&gt;</code> tag</li>
-  <li>There can be multiple <code>&lt;header&gt;</code> elements, but cannot be placed within another <code>&lt;header&gt;</code> element</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Main-Tag" class="Box">
-  <h3><code>&lt;main&gt; <em>My Contents</em> &lt;/main&gt;</code></h3>
-  <p>The <code>&lt;main&gt;</code> tag specifies the main content of a document</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>main { display: block; }</code></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Standard structure for <code>&lt;main&gt;</code> element
-  <ul><li>The <code>&lt;main&gt;</code> element is placed within <code>&lt;body&gt;</code>, below <code>&lt;header&gt;</code> and above <code>&lt;footer&gt;</code> tags</li>
-  <li>The <code>&lt;main&gt;</code> element must not be a descendant of <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;aside&gt;</code>,
-      <code>&lt;nav&gt;</code> or <code>&lt;article&gt;</code> element</li>
-  <li>There must not be more than one <code>&lt;main&gt;</code> element in a document</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Footer-Tag" class="Box">
-  <h3><code>&lt;footer&gt; <em>My Contents</em> &lt;/footer&gt;</code></h3>
-  <p>The <code>&lt;footer&gt;</code> tag defines a footer for a document or section</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>footer { display: block; }</code></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Standard structure for <code>&lt;footer&gt;</code> element
-  <ul><li>The <code>&lt;footer&gt;</code> element is placed within <code>&lt;body&gt;</code> and below <code>&lt;main&gt;</code> tags</li>
-  <li>There can be multiple <code>&lt;footer&gt;</code> elements in one document</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Navigate-Tag" class="Box">
-  <h3><code>&lt;nav&gt; <em>My Contents</em> &lt;/nav&gt;</code></h3>
-  <p>The <code>&lt;nav&gt;</code> tag defines a set of navigation links</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>nav { display: block; }</code> </p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Collection of <code>&lt;a&gt;</code> tag
-  <ul><li>The <code>&lt;nav&gt;</code> element is intended only for major blocks of navigation links</li>
-  <li>However, not all links of a document should be inside a <code>&lt;nav&gt;</code> element</li>
-  </ul></li> <br>
-  <li>Great accessibility for disabled users
-  <ul><li>Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Aside-Tag" class="Box">
-  <h3><code>&lt;aside&gt; <em>My Contents</em> &lt;/aside&gt;</code></h3>
-  <p>The <code>&lt;aside&gt;</code> tag defines some content aside from the content it is placed in</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>aside { display: block; }</code> </p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Standard structure for <code>&lt;aside&gt;</code> tag
-  <ul><li>The <code>&lt;aside&gt;</code> content is often placed as a sidebar in a document</li>
-  <li>The aside content should be indirectly related to the surrounding content</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Article-Tag" class="Box">
-  <h3><code>&lt;article&gt; <em>My Contents</em> &lt;/article&gt;</code></h3>
-  <p>The <code>&lt;article&gt;</code> tag specifies independent, self-contained content <br>
-     An article commonly used for the following contents: forum posts, blog posts, news, and more </p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>article { display: block; }</code> </p> </div>
-
-  <div id="Section-Tag" class="Box">
-  <h3><code>&lt;section&gt; <em>My Contents</em> &lt;/section&gt;</code></h3>
-  <p>The <code>&lt;section&gt;</code> tag defines a section in a document</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>section { display: block; }</code> </p> </div>
-
-  <div id="Division-Tag" class="Box">
-  <h3><code>&lt;div&gt; <em>My Contents</em> &lt;/div&gt;</code></h3>
-  <p>The <code>&lt;div&gt;</code> tag defines a division in an HTML document</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>div { display: block; }</code> </p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>"Block container" element
-  <ul><li>The <code>&lt;div&gt;</code> tag is mostly used for HTML elements to be styled with CSS</li>
-  <li>It is also commonly used for HTML elements to be manipulated by JavaScript as well</li>
-  </ul></li> <br>
-  <li><code>class</code> and <code>id</code> attributes
-  <ul><li>These attributes are commonly used for node pinpoints for CSS and JavaScript purposes</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Span-Tag" class="Box">
-  <h3><code>&lt;span&gt; <em>My Contents</em> &lt;/span&gt;</code></h3>
-  <p>The <code>&lt;span&gt;</code> tag defines a span that used to mark up a part of a text, or a part of a document</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code><em>NONE</em></code> </p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>"Inline container" element
-  <ul><li>The <code>&lt;span&gt;</code> tag is commonly used for HTML elements to be styled with CSS</li>
-  <li>It is also can be used for HTML elements to be manipulated by JavaScript as well</li>
-  </ul></li> <br>
-  <li><code>class</code> and <code>id</code> attributes
-  <ul><li>These attributes are commonly used for node pinpoints for CSS and JavaScript purposes</li>
-  </ul></li> </ul></p> </div> -->
-
-  <!--  <div id="Header-Group-Tag" class="Box">
-  <h3><code>&lt;hgroup&gt; <em>My Contents</em> &lt;/hgroup&gt;</code></h3>
-  </div>
-
-  <div id="Picture-Tag" class="Box">
-  <h3><code>&lt;picture&gt; <em>My Contents</em> &lt;/picture&gt;</code></h3>
-  </div>
-
-  <div id="Search-Tag" class="Box">
-  <h3><code>&lt;search&gt; <em>My Contents</em> &lt;/search&gt;</code></h3>
-  </div>
-
-  <div id="SVG-Tag" class="Box">
-  <h3><code>&lt;svg&gt; <em>My Contents</em> &lt;/svg&gt;</code></h3>
-  </div>
-
-  <div id="Template-Tag" class="Box">
-  <h3><code>&lt;template&gt; <em>My Contents</em> &lt;/template&gt;</code></h3>
-  </div>  -->
-
-  <!----------------->
-  <!--HTML METADATA-->
-  <!----------------->
-  <section id="HTML-Metadata">
-  <h1>HTML METADATA</h1>
-  <div id="Title-Tag" class="Box">
-  <h3><code>&lt;title&gt; <em>My Text</em> &lt;/title&gt;</code></h3>
-  <p>The <code>&lt;title&gt;</code> tag defines the title of the document <br>
-     The title must be text-only, and it is shown in the browser's title bar or in the page's tab </p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>title { display: none; }</code></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Standard structure for <code>&lt;title&gt;</code> element
-  <ul><li>The <code>&lt;title&gt;</code> element is placed within <code>&lt;head&gt;</code> tag</li>
-  <li>There can only be one <code>&lt;title&gt;</code> element in an HTML document</li>
-  </ul></li> <br>
-  <li>Improve SEO with <code>&lt;title&gt;</code> element
-  <ul><li>The contents of a page title is very important for search engine optimization (SEO)</li>
-  <li>The page title is used by search engine algorithms to decide the order when listing pages in search results</li>
-  </ul></li> <br>
-  <li>Best practice to create good title
-  <ul><li>Go for a longer, descriptive title (avoid one- or two-word titles)</li>
-  <li>Search engines will display about 50-60 characters of the title, so try not to have titles longer than that</li>
-  <li>Do not use just a list of words as the title (this may reduce the page's position in search results)</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Link-Tag" class="Box">
-  <h3><code>&lt;link&gt;</code></h3>
-  <p>The <code>&lt;link&gt;</code> tag defines the relationship between the current document and an external resource</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  <li><code>rel="<em>myValue</em>"</code>
-  <ul><li>Specifies the relationship between the current document and the linked document</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code>icon</code></li>
-  <li><code>stylesheet</code></li>
-  <!--  <li><code>alternate</code></li>
-  <li><code>author</code></li>
-  <li><code>dns-prefetch</code></li>
-  <li><code>help</code></li>
-  <li><code>license</code></li>
-  <li><code>next</code></li>
-  <li><code>pingback</code></li>
-  <li><code>preconnect</code></li>
-  <li><code>prefetch</code></li>
-  <li><code>preload</code></li>
-  <li><code>prerender</code></li>
-  <li><code>prev</code></li>
-  <li><code>search</code></li>  -->
-  </ul></li> </ul></li> <br>
-  <li><code>href="<em>myValue</em>"</code>
-  <ul><li>Specifies the URL of the linked document</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>Absolute URL</em></code>
-  <ul><li>Points to another web site</li>
-  <li>Example, <code><em>href="http://www.example.com"</em></code></li>
-  </ul></li>
-  <li><code><em>Relative URL</em></code>
-  <ul><li>Points to a page within a web site</li>
-  <li>Example, <code><em>href="example.html"</em></code></li>
-  </ul></li> </ul></li> </ul></li> <br>
-  <li><code>type="<em>myValue</em>"</code>
-  <ul><li>Specifies the media type of the linked document</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>image/x-icon</em></code></li>
-  </ul></li> </ul></li>
-  <!-- <li><code>crossorigin</code></li>
-  <li><code>hreflang</code></li>
-  <li><code>origin</code></li>
-  <li><code>referrerpolicy</code></li>
-  <li><code>sizes</code></li>
-  <li><code>title</code></li> -->
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>link { display: none; }</code> </p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Standard structure for <code>&lt;link&gt;</code> element
-  <ul><li>The <code>&lt;link&gt;</code> element is placed within <code>&lt;head&gt;</code> tag</li>
-  </ul></li> <br>
-  <li>Exporting CSS file
-  <ul><li>Linking HTML document to external source of CSS file</li>
-  <li>Example, <code>&lt;link rel="stylesheet" href="<em>myValue</em>"&gt;</code></li>
-  </ul></li> <br>
-  <li>Creating favicon
-  <ul><li>A favicon is a small image displayed next to the page title in the browser tab</li>
-  <li>Example, <code>&lt;link rel="icon" type="image/x-icon" href="<em>myValue</em>"&gt;</code></li>
-  </ul></li> </ul></p> </div>
-
-  <!--  <div id="Meta-Tag" class="Box">
-  <h3><code>&lt;meta&gt;</code></h3>
-  </div>
-
-  <div id="Base-Tag" class="Box">
-  <h3><code>&lt;base&gt;</code></h3>
-  </div>
-
-  <div id="Style-Tag" class="Box">
-  <h3><code>&lt;style&gt; <em>My Contents</em> &lt;/style&gt;</code></h3>
-  </div>
-
-  <div id="Script-Tag" class="Box">
-  <h3><code>&lt;script&gt; <em>My Contents</em> &lt;/script&gt;</code></h3>
-  </div>
-
-  <div id="Noscript-Tag" class="Box">
-  <h3><code>&lt;noscript&gt; <em>My Contents</em> &lt;/noscript&gt;</code></h3>
-  </div>  -->
-  </section>
-
-  <!--------------------------------->
-  <!--HTML SEMANTIC ELEMENTS (TEXT)-->
-  <!--------------------------------->
-  <section id="HTML-Semantic-Elements-Text">
-  <h1>HTML SEMANTIC ELEMENTS (TEXT)</h1>
-  <div id="Comment-Tag" class="Box">
-  <h3><code>&lt;!-- <em>My Text</em> --&gt;</code></h3>
-  <p>The comment tag is used to insert comments in the source code<br>
-     Comments are not displayed in the browsers<br>
-     Developers can use comments to explain their code, which can help them when they edit the source code at a later date<br>
-     This is especially useful if they have a lot of code</p> </div>
-  
-  <div id="Heading-Tag" class="Box">
-  <h3><code>&lt;h1&gt; <em>My Text</em> &lt;/h1&gt;</code></h3>
-  <p>The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags are used to define HTML headings<br>
-     The <code>&lt;h1&gt;</code> tag defines the most important heading while the <code>&lt;h6&gt;</code> tag defines the least important heading</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br>
-  <code>h1 { display: block; margin: 0.67em 0; font-size: 2em; font-weight: bold; }  <br>
-        h2 { display: block; margin: 0.83em 0; font-size: 1.5em; font-weight: bold; }<br>
-        h3 { display: block; margin: 1em 0; font-size: 1.17em; font-weight: bold; }  <br>
-        h4 { display: block; margin: 1.33em 0; font-size: 1em; font-weight: bold; }  <br>
-        h5 { display: block; margin: 1.67em 0; font-size: .83em; font-weight: bold; }<br>
-        h6 { display: block; margin: 2.33em 0; font-size: .67em; font-weight: bold; }
-  </code></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>The <code>&lt;h1&gt;</code> tag usage
-  <ul><li>It is recommended to use only one <code>&lt;h1&gt;</code> tag per page</li>
-  <li>This should represent the main heading/subject for the whole page</li>
-  </ul></li> <br>
-  <li>The flow of heading levels
-  <ul><li>Do not skip heading levels, start with <code>&lt;h1&gt;</code>, then use <code>&lt;h2&gt;</code>, and so on</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Paragraph-Tag" class="Box">
-  <h3><code>&lt;p&gt; <em>My Text</em> &lt;/p&gt;</code></h3>
-  <p>The <code>&lt;p&gt;</code> tag defines a paragraph</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>p { display: block; margin: 1em 0; } </code></p> </div>
-
-  <div id="Quote-Tag" class="Box">
-  <h3><code>&lt;q&gt; <em>My Text</em> &lt;/q&gt;</code></h3>
-  <p>The <code>&lt;q&gt;</code> tag defines a short quotation</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  <li><code>cite="<em>myValue</em>"</code>
-  <ul><li>The <code>cite</code> attribute specifies the source URL of a quote</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>Absolute URL</em></code>
-  <ul><li>Points to another web site</li>
-  <li>Example, <code><em>cite="http://www.example.com"</em></code></li>
-  </ul></li>
-  <li><code><em>Relative URL</em></code>
-  <ul><li>Points to a page within a web site</li>
-  <li>Example, <code><em>cite="example.html"</em></code></li>
-  </ul></li> </ul></li> </ul></li> </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br>
-  <code>q { display: inline; } <br>
-        q:before { content: open-quote; } <br>
-        q:after { content: close-quote; } </code>
-  </p> </div>
-
-  <div id="Blockquote-Tag" class="Box">
-  <h3><code>&lt;blockquote&gt; <em>My Text</em> &lt;/blockquote&gt;</code></h3>
-  <p>The <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another source</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  <li><code>cite="<em>myValue</em>"</code>
-  <ul><li>The <code>cite</code> attribute specifies the source of a quotation</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>Absolute URL</em></code>
-  <ul><li>Points to another web site</li>
-  <li>Example, <code><em>cite="http://www.example.com"</em></code></li>
-  </ul></li>
-  <li><code><em>Relative URL</em></code>
-  <ul><li>Points to a page within a web site</li>
-  <li>Example, <code><em>cite="example.html"</em></code></li>
-  </ul></li> </ul></li> </ul></li> </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>blockquote { display: block; margin: 1em 40px; }</code> </p> </div>
-
-  <div id="Address-Tag" class="Box">
-  <h3><code>&lt;address&gt; <em>My Text</em> &lt;/address&gt;</code></h3>
-  <p>The <code>&lt;address&gt;</code> tag defines the contact information for the author/owner of a document or an article <br>
-     The contact information can be an email address, URL, physical address, phone number, social media handle, and more </p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>address { display: block; font-style: italic; }</code> </p> </div>
-
-  <div id="Abbreviation-Tag" class="Box">
-  <h3><code>&lt;abbr&gt; <em>My Text</em> &lt;/abbr&gt;</code></h3>
-  <p>The <code>&lt;abbr&gt;</code> tag defines an abbreviation or an acronym</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>abbr { display: inline; }</code></p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Improves accessibility with <code>title</code> attribute
-  <ul><li>Use <code>title</code> attribute to show the description for the abbreviation/acronym when the element is mouse overed</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Define-Tag" class="Box">
-  <h3><code>&lt;dfn&gt; <em>My Text</em> &lt;/dfn&gt;</code></h3>
-  <p>The <code>&lt;dfn&gt;</code> tag specifies a term that is going to be defined within the content</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>dfn { font-style: italic; }</code> </p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Structure of <code>&lt;dfn&gt;</code> tag
-  <ul><li>The nearest parent of the <code>&lt;dfn&gt;</code> tag must also contain the definition/explanation for the term</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Cite-Tag" class="Box">
-  <h3><code>&lt;cite&gt; <em>My Text</em> &lt;/cite&gt;</code></h3>
-  <p>The <code>&lt;cite&gt;</code> tag defines the title of a creative work <br>
-     The creative work can in be a book, a poem, a song, a movie, a painting, a sculpture, and more</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>cite { font-style: italic; }</code> </p> </div>
-
-  <div id="Datetime-Tag" class="Box">
-  <h3><code>&lt;time&gt; <em>My Text</em> &lt;/time&gt;</code></h3>
-  <p>The <code>&lt;time&gt;</code> tag defines a specific time (or datetime)</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  <li><code>datetime="<em>myValue</em>"</code>
-  <ul><li>The <code>datetime</code> attribute represent a machine-readable format of a <code>&lt;time&gt;</code> element</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>YYYY-MM-DDThh:mm:ssTZD</em></code>
-  <ul><li><code><em>YYYY</em></code> stands for year ( Example, 2009 )</li>
-  <li><code><em>MM</em></code> stands for month ( Example, 01 for January )</li>
-  <li><code><em>DD</em></code> stands for day of the month ( Example, 08 )</li>
-  <li><code><em>T</em></code> or a "space" stands for a separator, ( Required if time is also specified )</li>
-  <li><code><em>hh</em></code> stands for hour ( Example, 22 for 10.00pm )</li>
-  <li><code><em>mm</em></code> stands for minutes ( Example, 55 )</li>
-  <li><code><em>ss</em></code> stands for seconds ( Example, 03)</li>
-  <li><code><em>TZD</em></code> stands for Time Zone Designator ( Z denotes Zulu, also known as Greenwich Mean Time )</li>
-  </ul></li>
-  <li><code><em>PTDHMS</em></code>
-  <ul><li><code><em>P</em></code> is a prefix for "Period"</li>
-  <li><code><em>T</em></code> stands for a separator ( Like "space" )</li>
-  <li><code><em>D</em></code> is a prefix for "Days"</li>
-  <li><code><em>H</em></code> is a prefix for "Hours"</li>
-  <li><code><em>M</em></code> is a prefix for "Minutes"</li>
-  <li><code><em>S</em></code> is a prefix for "Seconds"</li>
-  </ul></li> </ul></li> </ul></li> </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code><em>NONE</em></code></p> </div>
-  
-  <div id="Code-Tag" class="Box">
-  <h3><code>&lt;code&gt; <em>My Text</em> &lt;/code&gt;</code></h3>
-  <p>The <code>&lt;code&gt;</code> tag is used to define a piece of computer code</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>code { font-family: monospace; }</code> </p> </div>
-
-  <div id="Variable-Tag" class="Box">
-  <h3><code>&lt;var&gt; <em>My Text</em> &lt;/var&gt;</code></h3>
-  <p>The <code>&lt;var&gt;</code> tag is used to defines a variable in programming or in a mathematical expression</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>var { font-style: italic; }</code> </p> </div>
-
-  <div id="Sample-Tag" class="Box">
-  <h3><code>&lt;samp&gt; <em>My Text</em> &lt;/samp&gt;</code></h3>
-  <p>The <code>&lt;samp&gt;</code> tag is used to define sample output from a computer program</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>samp { font-family: monospace; }</code> </p> </div>
-
-  <div id="Keyboard-Tag" class="Box">
-  <h3><code>&lt;kbd&gt; <em>My Text</em> &lt;/kbd&gt;</code></h3>
-  <p>The <code>&lt;kbd&gt;</code> tag is used to define keyboard input</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>kbd { font-family: monospace; }</code> </p> </div>
-
-  <div id="Preformat-Tag" class="Box">
-  <h3><code>&lt;pre&gt; <em>My Text</em> &lt;/pre&gt;</code></h3>
-  <p>The <code>&lt;pre&gt;</code> tag defines preformatted text<br>
-     The text will be displayed exactly as written in the HTML source code</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>pre { display: block; font-family: monospace; white-space: pre; margin: 1em 0; }</code> </p> </div>
-
-  <div id="Strong-Tag" class="Box">
-  <h3><code>&lt;strong&gt; <em>My Text</em> &lt;/strong&gt;</code></h3>
-  <p>The <code>&lt;strong&gt;</code> tag is used to define text with strong importance</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>strong { font-weight: bold; }</code> </p> </div>
-
-  <div id="Emphasize-Tag" class="Box">
-  <h3><code>&lt;em&gt; <em>My Text</em> &lt;/em&gt;</code></h3>
-  <p>The <code>&lt;em&gt;</code> tag is used to define emphasized text</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>em { font-style: italic; }</code> </p> </div>
-
-  <div id="Insert-Tag" class="Box">
-  <h3><code>&lt;ins&gt; <em>My Text</em> &lt;/ins&gt;</code></h3>
-  <p>The <code>&lt;ins&gt;</code> tag defines a text that has been inserted into a document</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  <li><code>cite="<em>myValue</em>"</code>
-  <ul><li>The <code>cite</code> attribute specifies a URL to a document that explains the reason why the text was inserted/changed</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>Absolute URL</em></code>
-  <ul><li>Points to another web site</li>
-  <li>Example, <code><em>cite="http://www.example.com"</em></code></li>
-  </ul></li>
-  <li><code><em>Relative URL</em></code>
-  <ul><li>Points to a page within a web site</li>
-  <li>Example, <code><em>cite="example.html"</em></code></li>
-  </ul></li> </ul></li> </ul></li> <br>
-  <li><code>datetime="<em>myValue</em>"</code>
-  <ul><li>The <code>datetime</code> attribute specifies the date and time of when the text was inserted/changed</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>YYYY-MM-DDThh:mm:ssTZD</em></code>
-  <ul><li><code><em>YYYY</em></code> stands for year ( Example, 2009 )</li>
-  <li><code><em>MM</em></code> stands for month ( Example, 01 for January )</li>
-  <li><code><em>DD</em></code> stands for day of the month ( Example, 08 )</li>
-  <li><code><em>T</em></code> or a "space" stands for a separator, ( Required if time is also specified )</li>
-  <li><code><em>hh</em></code> stands for hour ( Example, 22 for 10.00pm )</li>
-  <li><code><em>mm</em></code> stands for minutes ( Example, 55 )</li>
-  <li><code><em>ss</em></code> stands for seconds ( Example, 03)</li>
-  <li><code><em>TZD</em></code> stands for Time Zone Designator ( Z denotes Zulu, also known as Greenwich Mean Time )</li>
-  </ul></li> </ul></li> </ul></li> </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>ins { text-decoration: underline; }</code> </p> </div>
-
-  <div id="Delete-Tag" class="Box">
-  <h3><code>&lt;del&gt; <em>My Text</em> &lt;/del&gt;</code></h3>
-  <p>The <code>&lt;del&gt;</code> tag defines text that has been deleted from a document</p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  <li><code>cite="<em>myValue</em>"</code>
-  <ul><li>The <code>cite</code> attribute specifies a URL to a document that explains the reason why the text was deleted</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>Absolute URL</em></code>
-  <ul><li>Points to another web site</li>
-  <li>Example, <code><em>cite="http://www.example.com"</em></code></li>
-  </ul></li>
-  <li><code><em>Relative URL</em></code>
-  <ul><li>Points to a page within a web site</li>
-  <li>Example, <code><em>cite="example.html"</em></code></li>
-  </ul></li> </ul></li> </ul></li> <br>
-  <li><code>datetime="<em>myValue</em>"</code>
-  <ul><li>The <code>datetime</code> attribute specifies the date and time when the text was deleted</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><code><em>YYYY-MM-DDThh:mm:ssTZD</em></code>
-  <ul><li><code><em>YYYY</em></code> stands for year ( Example, 2009 )</li>
-  <li><code><em>MM</em></code> stands for month ( Example, 01 for January )</li>
-  <li><code><em>DD</em></code> stands for day of the month ( Example, 08 )</li>
-  <li><code><em>T</em></code> or a "space" stands for a separator, ( Required if time is also specified )</li>
-  <li><code><em>hh</em></code> stands for hour ( Example, 22 for 10.00pm )</li>
-  <li><code><em>mm</em></code> stands for minutes ( Example, 55 )</li>
-  <li><code><em>ss</em></code> stands for seconds ( Example, 03)</li>
-  <li><code><em>TZD</em></code> stands for Time Zone Designator ( Z denotes Zulu, also known as Greenwich Mean Time )</li>
-  </ul></li> </ul></li> </ul></li> </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>del { text-decoration: line-through; }</code> </p> </div>
-
-  <div id="Superscript-Tag" class="Box">
-  <h3><code>&lt;sup&gt; <em>My Text</em> &lt;/sup&gt;</code></h3>
-  <p>The <code>&lt;sup&gt;</code> tag defines superscript text <br>
-     Superscript text can be used for footnotes, like WHO<sup>[1]</sup> </p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>sup { vertical-align: super; font-size: smaller; }</code> </p> </div>
-
-  <div id="Subscript-Tag" class="Box">
-  <h3><code>&lt;sub&gt; <em>My Text</em> &lt;/sub&gt;</code></h3>
-  <p>The <code>&lt;sub&gt;</code> tag defines subscript text <br>
-     Subscript text can be used for chemical formulas, like H<sub>2</sub>O </p>
-  <p><b>Related Attribute(s):</b>
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>sub { vertical-align: sub; font-size: smaller; }</code> </p> </div>
-  </section>
-
-  <!------------------>
-  <!--HTML UTILITIES-->
-  <!------------------>
-  <section id="HTML-Utilities">
-  <h1>HTML UTILITIES</h1>
-  <div id="Small-Tag" class="Box">
-  <h3><code>&lt;small&gt; <em>My Text</em> &lt;/small&gt;</code></h3>
-  <p>The <code>&lt;small&gt;</code> tag defines smaller text, like copyright and other side-comments</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>small { font-size: smaller; }</code> </p> </div>
-
-  <div id="Mark-Tag" class="Box">
-  <h3><code>&lt;mark&gt; <em>My Text</em> &lt;/mark&gt;</code></h3>
-  <p>The <code>&lt;mark&gt;</code> tag defines text that should be marked or highlighted</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>mark { background-color: yellow; color: black; }</code> </p> </div>
-
-  <div id="Bi-Directional-Isolation-Tag" class="Box">
-  <h3><code>&lt;bdi&gt; <em>My Text</em> &lt;/bdi&gt;</code></h3>
-  <p>The <code>&lt;bdi&gt;</code> tag isolates a part of text that might be formatted in a different direction from other text outside it <br>
-     This Bi-Directional Isolation tag is useful when embedding user-generated content with an unknown text direction</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code><em>NONE</em></code> </p> </div>
-
-  <div id="Bi-Directional-Override-Tag" class="Box">
-  <h3><code>&lt;bdo&gt; <em>My Text</em> &lt;/bdo&gt;</code></h3>
-  <p>The <code>&lt;bdo&gt;</code> tag is used to override the current text direction</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>bdo { unicode-bidi: bidi-override; }</code> </p>
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Requires <code>dir</code> attribute
-  <ul><li>Use <code>dir</code> attribute to specify the text direction of the text inside a <code>&lt;bdo&gt;</code> element</li>
-  </ul></li> </ul></p> </div>
-
-  <div id="Bold-Tag" class="Box">
-  <h3><code>&lt;b&gt; <em>My Text</em> &lt;/b&gt;</code></h3>
-  <p>The <code>&lt;b&gt;</code> tag specifies bold text without any extra importance</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s)</b><br> <code>b { font-weight: bold; }</code> </p> </div>
-
-  <div id="Italic-Tag" class="Box">
-  <h3><code>&lt;i&gt; <em>My Text</em> &lt;/i&gt;</code></h3>
-  <p>The <code>&lt;i&gt;</code> tag defines a part of text in an alternate voice or mood<br>
-     The <code>&lt;i&gt;</code> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b><br> <code>i { font-style: italic; }</code> </p> </div>
-
-  <div id="Unarticulate-Tag" class="Box">
-  <h3><code>&lt;u&gt; <em>My Text</em> &lt;/u&gt;</code></h3>
-  <p>The <code>&lt;u&gt;</code> tag represents some text that is unarticulated and styled differently from normal text, such as misspelled words or proper names in Chinese text</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>u { text-decoration: underline; }</code> </p> </div>
-
-  <div id="Strike-Tag" class="Box">
-  <h3><code>&lt;s&gt; <em>My Text</em> &lt;/s&gt;</code></h3>
-  <p>The <code>&lt;s&gt;</code> tag specifies text that is no longer correct, accurate or relevant</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>s { text-decoration: line-through; } </code> </p> </div>
-
-  <div id="Horizontal-Rule-Tag" class="Box">
+<!-- HORIZONTAL RULE TAG -->
+<div id="Horizontal-Rule-Tag" class="Sub-Topics Box-Elements">
   <h3><code>&lt;hr&gt;</code></h3>
-  <p>The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page <br>
-     The <code>&lt;hr&gt;</code> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page </p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code>hr { display: block; margin: 0.5em auto; border: 1px inset; }</code> </p> </div>
+  <div>The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page (eg. a shift of topic)</div>
+  <div>The <code>&lt;hr&gt;</code> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page</div>
 
-  <div id="Break-Tag" class="Box">
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="HorizontalRuleGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Horizontal-Rule-Global-Attributes"></div> </div>
+    <div><code onclick="HorizontalRuleEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Horizontal-Rule-Event-Attributes"></div> </div>
+  </div>
+
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>hr {</code></div>
+    <div><code>display: block;</code></div>
+    <div><code>margin: 0.5em auto;</code></div>
+    <div><code>border-style: inset;</code></div>
+    <div><code>border-width: 1px;</code></div>
+    <div><code>}</code></div>
+  </div>
+</div>
+
+<!-- BREAK TAG -->
+<div id="Break-Tag" class="Sub-Topics Box-Elements">
   <h3><code>&lt;br&gt;</code></h3>
-  <p>The <code>&lt;br&gt;</code> tag inserts a single line break</p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code><em>NONE</em></code> </p> </div>
+  <div>The <code>&lt;br&gt;</code> tag inserts a single line break</div>
+  <div>The <code>&lt;br&gt;</code> tag is useful for writing addresses or poems</div>
+  <div>Use the <code>&lt;br&gt;</code> tag to enter line breaks, not to add space between paragraphs</div>
 
-  <div id="Word-Break-Tag" class="Box">
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="BreakGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Break-Global-Attributes"></div> </div>
+    <div><code onclick="BreakEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Break-Event-Attributes"></div> </div>
+  </div>
+
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>NONE</code></div>
+  </div>
+</div>
+
+<!-- WORD BREAK TAG -->
+<div id="Word-Break-Tag" class="Sub-Topics Box-Elements">
   <h3><code>&lt;wbr&gt;</code></h3>
-  <p>The <code>&lt;wbr&gt;</code> tag specifies where in a text it would be ok to add a line-break <br>
-     When a word is too long, the browser might break it at the wrong place <br>
-     This <code>&lt;wbr&gt;</code> tag can be used to add word break opportunities </p>
-  <p><b>Related Attribute(s)</b>:
-  <ul><li><a href="#HTML-Global-Attributes"><code><em>HTML Global Attributes</em></code></a></li>
-  <li><a href="#HTML-Event-Attributes"><code><em>HTML Event Attributes</em></code></a></li>
-  <li><a href="#HTML-DOM"><code><em>HTML DOM</em></code></a></li>
-  </ul></p>
-  <p><b>Default CSS Setting(s):</b> <br> <code><em>NONE</em></code> </p> </div>
-  </section>
+  <div>The <code>&lt;wbr&gt;</code> tag specifies "Word Break Opportunity" where in a text it would be ok to add a line-break</div>
+  <div>When a word is too long, the browser might break it at the wrong place</div>
+  <div>User can use the <code>&lt;wbr&gt;</code> element to add word break opportunities</div>
 
-<!--
-  <code>&lt;details&gt; <em>My Contents</em> &lt;/details&gt;</code>
-  <code>&lt;summary&gt; <em>My Text</em> &lt;/summary&gt;</code>
-  <code>&lt;embed&gt; <em>My Contents</em> &lt;/embed&gt;</code>
-  <code>&lt;object&gt; <em>My Contents</em> &lt;/object&gt;</code>
-  <code>&lt;param&gt; <em>My Contents</em> &lt;/param&gt;</code>
-  <code>&lt;a&gt; <em>My Contents</em> &lt;/a&gt;</code>
-  <code>&lt;iframe&gt; <em>My Contents</em> &lt;/iframe&gt;</code>
-  <code>&lt;canvas&gt; <em>My Contents</em> &lt;/canvas&gt;</code>
-  <code>&lt;data&gt; <em>My Contents</em> &lt;/data&gt;</code>
-  <code>&lt;dialog&gt; <em>My Contents</em> &lt;/dialog&gt;</code>
--->
+  <div class="Box-Attributes">
+    <h3>RELATED ATTRIBUTE(S)</h3>
+    <div><code onclick="WordBreakGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Word-Break-Global-Attributes"></div> </div>
+    <div><code onclick="WordBreakEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Word-Break-Event-Attributes"></div> </div>
+  </div>
+
+  <div class="Box-CSS">
+    <h3>DEFAULT CSS SETTING(S)</h3>
+    <div><code>NONE</code></div>
+  </div>
+</div>
+
+<!-- DATA TAG -->
+<div id="Data-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;data&gt; <em>MyText</em> &lt;/data&gt;</code></h3>
+</div>
+
+<!-- DIALOG TAG -->
+<div id="Dialog-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;dialog&gt; <em>MyText</em> &lt;/dialog&gt;</code></h3>
+</div>
+
+<!-- EMBED TAG -->
+<div id="Embed-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;embed&gt;</code></h3>
+</div>
+
+<!-- IFRAME TAG -->
+<div id="Iframe-Tag" class="Sub-Topics Box-Elements">
+  <h3><code>&lt;iframe&gt;&lt;/iframe&gt;</code></h3>
+</div>
+</section>
 
 <!-- IMPORTING JS FILE -->
 <script src="Notes-HTML.js"></script>
