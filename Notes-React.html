@@ -10,11 +10,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="Notes-React.css">
-
-<!-- REACT USES -->
-<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -40,55 +35,249 @@
 <!-- TOPIC SELECTIONS -->
 <!---------------------->
 <div id="Box-Topic-Selections">
-  <button onclick="ReactIntroduction()">REACT INTRODUCTION</button>
+  <button onclick="ReactIntroduction()">INTRODUCTION</button>
+  <button onclick="ReactJSXElement()">JSX ELEMENT</button>
+  <button onclick="ReactStatelessFunctionalComponent()">STATELESS FUNCTIONAL COMPONENT</button>
+  <button onclick="ReactStatelessComponent()">STATELESS COMPONENT</button>
 </div>
 
-<!----------------------->
-<!-- REACT NODE TARGET -->
-<!----------------------->
-<section id="React-Introduction"></section>
+<!------------------------>
+<!-- REACT INTRODUCTION -->
+<!------------------------>
+<section id="React-Introduction" class="Box-Contents">
+<h1>REACT INTRODUCTION</h1>
 
-<!-------------------->
-<!-- REACT CONTENTS -->
-<!-------------------->
-<script type="text/babel">
-class DisplayReactIntroduction extends React.Component {
-  constructor(props) { super(props); }
-  render() { return(
-    <div>
-      <h1>REACT INTRODUCTION</h1>
-      <DisplayReactSubTopic1 />
-      <DisplayReactSubTopic2 />
-    </div>
-  ); }
-}
+<div class="Sub-Topics"> <h3>What is React?</h3>
+  <div>React is a JavaScript library and a tool for building UI components</div>
+  <div>React is also referred as a frontend JavaScript framework</div>
+  <div>React is created and maintained by Facebook</div>
+</div>
 
-class DisplayReactSubTopic1 extends React.Component {
-  constructor(props) { super(props); }
-  render() { return(
-    <div class="Sub-Topics">
-      <h3>What is React?</h3>
-      <div>React is a JavaScript library and a tool for building UI components</div>
-      <div>React is also referred as a frontend JavaScript framework</div>
-      <div>React is created by Facebook</div>
-    </div>
-  ); }
-}
+<div class="Sub-Topics"> <h3>How does React work?</h3>
+  <div>React uses a syntax extension of JavaScript called JSX (JavaScript XML) that allows user to write HTML directly within JavaScript</div>
+  <div>It lets user use the full programmatic power of JavaScript within HTML, and helps to keep the code readable</div>
+  <div>Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory</div>
+  <div>The virtual DOM does all the necessary manipulating, before making the changes in the browser DOM</div>
+  <div>The rendering API then places the JSX into React's own lightweight representation of the DOM</div>
+  <div>React then uses snapshots of its own DOM to optimize updating only specific parts of the actual DOM</div>
+  <div>For instance, because JSX is a syntactic extension of JavaScript, user can actually write JavaScript directly within JSX</div>
+  <div>To do this, simply include the code that want to be treated as JavaScript within curly braces "{}"</div>
+</div>
 
-class DisplayReactSubTopic2 extends React.Component {
-  constructor(props) { super(props); }
-  render() { return(
-    <div class="Sub-Topics">
-      <h3>How does React work?</h3>
-      <div>Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory</div>
-      <div>The virtual DOM does all the necessary manipulating, before making the changes in the browser DOM</div>
-      <div>React finds out what changes have been made, and changes only what needs to be changed</div>
-    </div>
-  ); }
-}
+<div class="Sub-Topics"> <h3>React component architecture</h3>
+  <div>Components are the core of React</div>
+  <div>Since a JSX component represents HTML, user could put several components together to create a more complex HTML page</div>
+  <div>It allows user to compose the UI from many separate, isolated components</div>
+  <div>To compose multiple components together, user creates a parent component which renders each of other components as children</div>
+  <div>To render a component as a child in a React component, user include the component name written as a custom HTML tag in the JSX</div>
+  <div>When React encounters a custom HTML tag that references another component, it renders the markup for that component in the location of the tag</div>
+  <div>This makes it easier to build and maintain complex user interfaces</div>
+</div>
 
-ReactDOM.render(<DisplayReactIntroduction />, document.getElementById("React-Introduction"));
-</script>
+<div class="Sub-Topics"> <h3>React rendering API</h3>
+  <div>JSX is a convenient tool to write readable HTML within JavaScript</div>
+  <div>ReactDOM provides a simple method to render React elements to the DOM &rarr; <code>ReactDOM.render(componentToRender, targetNode);</code></div>
+  <div>The first argument is the React element or component that user want to render</div>
+  <div>The second argument is the DOM node that user want to render the component to</div>
+  <div><code>ReactDOM.render()</code> must be called after the JSX element declarations</div>
+</div>
+
+<div class="Sub-Topics"> <h3>JSX Comment</h3>
+  <div>Like most programming languages, JSX has its own way to add comments to the code for readability</div>
+  <div>JSX Comment Syntax &rarr; <code>&#123;/* <em>MyComments</em> */&#125;</code></div>
+</div>
+
+<div class="Sub-Topics"> <h3>JSX Class</h3>
+  <div>One key difference in JSX is the usage of <code>class</code> attribute which defines HTML classes</div>
+  <div>Since user can writing JavaScript code within JSX, the keyword <code>class</code> is invalid</div>
+  <div>This is because <code>class</code> is a reserved word in JavaScript, instead JSX uses <code>className</code></div>
+  <div>In fact, the naming convention for all HTML attributes and event references in JSX become camelCase</div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">HTML &rarr; JSX</span>
+    <div><code>class &rarr; className</code></div>
+    <div><code>onclick &rarr; onClick, onchange &rarr; onChange</code>, etc.</div>
+  </div>
+</div>
+
+<div class="Sub-Topics"> <h3>Self-Closing JSX Tag</h3>
+  <div>In JSX, any JSX element can be written with a self-closing tag, and every element must be closed</div>
+  <div>For example, the <code>&lt;br&gt;</code> tag must always be written as <code>&lt;br /&gt;</code> in order to be valid JSX that can be transpiled</div>
+  <div>A <code>&lt;div&gt;</code>, on the other hand, can be written as <code>&lt;div /&gt;</code> or <code>&lt;div&gt;&lt;/div&gt;</code></div>
+  <div>The difference is that in the first syntax version there is no way to include anything in the <code>&lt;div /&gt;</code></div>
+</div>
+</section>
+
+<!----------------->
+<!-- JSX ELEMENT -->
+<!----------------->
+<section id="React-JSX-Element" class="Box-Contents">
+<h1>JSX ELEMENT</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>const <em>MyJSXElement</em> =</code></div>
+  <div class="Indent-Level2"><code>&lt;div&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level2"><code>&lt;/div&gt;;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>ReactDOM.render(<em>MyJSXElement</em>, document.getElementById("<em>myID</em>"));</code></div>
+</div>
+
+<div class="Sub-Topics"> <h3>Simple JSX</h3>
+  <div>The naming convention for a JSX element must applies PascalCase</div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Example</span>
+    <div class="Indent-Level1"><code>const <em>MyJSXElement</em> = &lt;p&gt; Hello World! &lt;/p&gt;;</code></div>
+  </div>
+</div>
+
+<div class="Sub-Topics"> <h3>Complex JSX</h3>
+  <div>One important thing to know about nested JSX is that it must return a single element</div>
+  <div>This one parent element would wrap all of the other levels of nested elements</div>
+  <div>If several JSX elements are written as siblings with no parent wrapper element, they will not be transpiled</div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Valid JSX</span>
+    <div class="Indent-Level1"><code>const <em>MyJSXElement</em> = (</code></div>
+    <div class="Indent-Level2"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level3"><code>&lt;p&gt; <em>Paragraph 1</em> &lt;/p&gt;</code></div>
+    <div class="Indent-Level3"><code>&lt;p&gt; <em>Paragraph 2</em> &lt;/p&gt;</code></div>
+    <div class="Indent-Level3"><code>&lt;p&gt; <em>Paragraph 3</em> &lt;/p&gt;</code></div>
+    <div class="Indent-Level2"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level1"><code>);</code></div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Invalid JSX</span>
+    <div class="Indent-Level1"><code>const <em>MyJSXElement</em> =</code></div>
+    <div class="Indent-Level2"><code>&lt;p&gt; <em>Paragraph 1</em> &lt;/p&gt;</code></div>
+    <div class="Indent-Level2"><code>&lt;p&gt; <em>Paragraph 2</em> &lt;/p&gt;</code></div>
+    <div class="Indent-Level2"><code>&lt;p&gt; <em>Paragraph 3</em> &lt;/p&gt;</code></div>
+  </div>
+
+  <div>When rendering multiple elements, user can wrap them all in parentheses, but it's not strictly required</div>
+</div>
+</section>
+
+<!------------------------------------>
+<!-- STATELESS FUNCTIONAL COMPONENT -->
+<!------------------------------------>
+<section id="React-Stateless-Functional-Component" class="Box-Contents">
+<h1>STATELESS FUNCTIONAL COMPONENT</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>const <em>MyComponent1</em> = () =&gt; &#123;</code></div>
+  <div class="Indent-Level2"><code>return(</code></div>
+  <div class="Indent-Level3"><code>&lt;div&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;<em>MyComponent2</em> /&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;/div&gt;</code></div>
+  <div class="Indent-Level2"><code>);</code></div>
+  <div class="Indent-Level1"><code>&#125;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>const <em>MyComponent2</em> = () =&gt; &#123;</code></div>
+  <div class="Indent-Level2"><code>return(</code></div>
+  <div class="Indent-Level3"><code>&lt;div&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level3"><code>&lt;/div&gt;</code></div>
+  <div class="Indent-Level2"><code>);</code></div>
+  <div class="Indent-Level1"><code>&#125;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>ReactDOM.render(&lt;<em>MyComponent1</em> /&gt;, document.getElementById("<em>myID</em>"));</code></div>
+</div>
+
+<div class="Sub-Topics"> <h3>What is Stateless Functional Component?</h3>
+  <div>Stateless Functional Component is a component that defined with a JavaScript function</div>
+  <div>Stateless Functional Component can receive data and render it, but does not manage or track changes to that data</div>
+  <div>Stateless Functional Component can be written with a JavaScript function that returns either JSX or <code>null</code></div>
+  <div>The naming convention for a function must applies PascalCase</div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">JavaScript Function</span>
+    <div class="Indent-Level1"><code>const <em>MyComponent</em> = function() &#123;</code></div>
+    <div class="Indent-Level2"><code>return(</code></div>
+    <div class="Indent-Level3"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
+    <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+    <div class="Indent-Level3"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level2"><code>);</code></div>
+    <div class="Indent-Level1"><code>&#125;</code></div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">ES6 Arrow Function</span>
+    <div class="Indent-Level1"><code>const <em>MyComponent</em> = () =&gt; &#123;</code></div>
+    <div class="Indent-Level2"><code>return(</code></div>
+    <div class="Indent-Level3"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
+    <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+    <div class="Indent-Level3"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level2"><code>);</code></div>
+    <div class="Indent-Level1"><code>&#125;</code></div>
+  </div>
+
+  <div>It is best practice to define stateless functional component with ES6 arrow function</div>
+</div>
+</section>
+
+<!------------------------->
+<!-- STATELESS COMPONENT -->
+<!------------------------->
+<section id="React-Stateless-Component" class="Box-Contents">
+<h1>STATELESS COMPONENT</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>class <em>MyComponent1</em> extends React.Component &#123;</code></div>
+  <div class="Indent-Level2"><code>constructor(props) &#123;</code></div>
+  <div class="Indent-Level3"><code>super(props);</code></div>
+  <div class="Indent-Level2"><code>&#125;</code></div>
+  <div class="Indent-Level2"><code>render() &#123;</code></div>
+  <div class="Indent-Level3"><code>return(</code></div>
+  <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;<em>MyComponent2</em> /&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
+  <div class="Indent-Level3"><code>);</code></div>
+  <div class="Indent-Level2"><code>&#125;</code></div>
+  <div class="Indent-Level1"><code>&#125;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>class <em>MyComponent2</em> extends React.Component &#123;</code></div>
+  <div class="Indent-Level2"><code>constructor(props) &#123;</code></div>
+  <div class="Indent-Level3"><code>super(props);</code></div>
+  <div class="Indent-Level2"><code>&#125;</code></div>
+  <div class="Indent-Level2"><code>render() &#123;</code></div>
+  <div class="Indent-Level3"><code>return(</code></div>
+  <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
+  <div class="Indent-Level3"><code>);</code></div>
+  <div class="Indent-Level2"><code>&#125;</code></div>
+  <div class="Indent-Level1"><code>&#125;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>ReactDOM.render(&lt;<em>MyComponent1</em> /&gt;, document.getElementById("<em>myID</em>"));</code></div>
+</div>
+
+<div class="Sub-Topics"> <h3>What is Stateless Component?</h3>
+  <div>Stateless Component is a component that defined with an ES6 <code>class</code> JavaScript</div>
+  <div>Stateless Component has access to many useful React features, such as local state and lifecycle hooks</div>
+  <div>Stateless Component must returns either JSX or <code>null</code></div>
+  <div>The naming convention for an ES6 <code>class</code> must applies PascalCase</div>
+</div>
+
+<div class="Sub-Topics"> <h3><code>constructor()</code> Method</h3>
+  <div>The <code>constructor()</code> is a special method used during the initialization of objects that are created with the <code>class</code> keyword</div>
+  <div>Every stateless component has a <code>constructor()</code> defined within it that calls <code>super()</code></div>
+  <div>The <code>constructor()</code> uses <code>super()</code> to call the constructor of the parent class, which is <code>React.Component</code></div>
+  <div>It is best practice to call a component's <code>constructor()</code> with <code>super()</code>, and pass <code>props</code> to both</div>
+  <div>This makes sure the component is initialized properly</div>
+</div>
+</section>
 
 <!-- IMPORTING JS FILE -->
 <script src="Notes-React.js"></script>
