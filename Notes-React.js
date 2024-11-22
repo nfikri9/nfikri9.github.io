@@ -41,3 +41,14 @@ function ReactStatelessComponent() {
   }
   else { myVisibility.style.display = "none"; }
 }
+
+//////////////////////////////
+// REACT STATEFUL COMPONENT //
+//////////////////////////////
+function ReactStatefulComponent() {
+  let myVisibility = document.getElementById("React-Stateful-Component");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}

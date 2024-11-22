@@ -39,6 +39,7 @@
   <button onclick="ReactJSXElement()">JSX ELEMENT</button>
   <button onclick="ReactStatelessFunctionalComponent()">STATELESS FUNCTIONAL COMPONENT</button>
   <button onclick="ReactStatelessComponent()">STATELESS COMPONENT</button>
+  <button onclick="ReactStatefulComponent()">STATEFUL COMPONENT</button>
 </div>
 
 <!------------------------>
@@ -70,6 +71,7 @@
   <div>It allows user to compose the UI from many separate, isolated components</div>
   <div>To compose multiple components together, user creates a parent component which renders each of other components as children</div>
   <div>To render a component as a child in a React component, user include the component name written as a custom HTML tag in the JSX</div>
+  <dv>User can render JSX elements, stateless functional components, and ES6 class components within other components</dv>
   <div>When React encounters a custom HTML tag that references another component, it renders the markup for that component in the location of the tag</div>
   <div>This makes it easier to build and maintain complex user interfaces</div>
 </div>
@@ -168,32 +170,34 @@
 <h1>STATELESS FUNCTIONAL COMPONENT</h1>
 
 <div class="Box-Structures">
-  <div class="Indent-Level1"><code>const <em>MyComponent1</em> = () =&gt; &#123;</code></div>
+  <div class="Indent-Level1"><code>const <em>MyComponent1</em> = (props) =&gt; &#123;</code></div>
   <div class="Indent-Level2"><code>return(</code></div>
   <div class="Indent-Level3"><code>&lt;div&gt;</code></div>
   <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
   <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
-  <div class="Indent-Level4"><code>&lt;<em>MyComponent2</em> /&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;<em>MyComponent2 myProperty=myValue</em> /&gt;</code></div>
   <div class="Indent-Level3"><code>&lt;/div&gt;</code></div>
   <div class="Indent-Level2"><code>);</code></div>
   <div class="Indent-Level1"><code>&#125;</code></div>
   <br>
-  <div class="Indent-Level1"><code>const <em>MyComponent2</em> = () =&gt; &#123;</code></div>
+  <div class="Indent-Level1"><code>const <em>MyComponent2</em> = (props) =&gt; &#123;</code></div>
   <div class="Indent-Level2"><code>return(</code></div>
   <div class="Indent-Level3"><code>&lt;div&gt;</code></div>
   <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
   <div class="Indent-Level4"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;div&gt; {props.<em>myProperty</em>} &lt;/div&gt;</code></div>
   <div class="Indent-Level3"><code>&lt;/div&gt;</code></div>
   <div class="Indent-Level2"><code>);</code></div>
   <div class="Indent-Level1"><code>&#125;</code></div>
+  <br>
+  <div class="Indent-Level1"><code><em>MyComponent2</em>.defaultProps = { <em>myProperty: myDefault</em> }</code></div>
   <br>
   <div class="Indent-Level1"><code>ReactDOM.render(&lt;<em>MyComponent1</em> /&gt;, document.getElementById("<em>myID</em>"));</code></div>
 </div>
 
 <div class="Sub-Topics"> <h3>What is Stateless Functional Component?</h3>
-  <div>Stateless Functional Component is a component that defined with a JavaScript function</div>
+  <div>Stateless Functional Component is a component that defined with a JavaScript function which accepts <code>props</code> and returns either JSX or <code>null</code></div>
   <div>Stateless Functional Component can receive data and render it, but does not manage or track changes to that data</div>
-  <div>Stateless Functional Component can be written with a JavaScript function that returns either JSX or <code>null</code></div>
   <div>The naming convention for a function must applies PascalCase</div>
 
   <div class="Box-Points">
@@ -222,6 +226,43 @@
 
   <div>It is best practice to define stateless functional component with ES6 arrow function</div>
 </div>
+
+<div class="Sub-Topics"> <h3><code>props</code></h3>
+  <div><code><em>myProperty=myValue</em> &rarr; {props.<em>myProperty</em>}</code></div>
+  <div>The <code>props</code> stands for "properties"</div>
+  <div>User can use custom HTML attributes created by the user and supported by React to be passed to the component</div>
+  <div>It is standard to call this value <code>props</code> and when dealing with stateless functional components</div>
+  <div>Basically consider it as an argument to a function which returns JSX</div>
+  <div>User can access the value of the argument in the function body</div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Parent component passing <code>props</code> to child component</span>
+    <div>Number &rarr; <code>&lt;<em>MyChildComponent myProperty</em>={<em>myNumber</em>} /&gt;</code></div>
+    <div>String &rarr; <code>&lt;<em>MyChildComponent myProperty</em>={"<em>myString</em>"} /&gt;</code></div>
+    <div>Array &rarr; <code>&lt;<em>MyChildComponent myProperty</em>={[<em>myData1, myData2</em>]} /&gt;</code></div>
+    <div>Object &rarr; <code>&lt;<em>MyChildComponent myProperty</em>={<em>myObject</em>()} /&gt;</code></div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Child component access the <code>props</code></span>
+    <div>Number, String, Object &rarr; <code>&lt;div&gt; {prop.<em>myProperty</em>} &lt;/div&gt;</code></div>
+    <div>Array &rarr; <code>&lt;div&gt; {prop.<em>myProperty</em>.join(', ')} &lt;/div&gt;</code></div>
+  </div>
+</div>
+
+<div class="Sub-Topics"> <h3><code>defaultProps</code></h3>
+  <div><code><em>MyComponent</em>.defaultProps = { <em>myProperty: myDefault</em> }</code></div>
+  <div>The <code>defaultProps</code> specifies what a prop value should be if no value is explicitly provided</div>
+  <div>The <code>defaultProps</code> can be assigned to a component as a property on the component itself and React assigns the default prop if necessary</div>
+  <div>React assigns default props if props are undefined, but if the component passed <code>null</code> as the value for a prop, it will remain <code>null</code></div>
+  <div>The way to override the default props is to explicitly set the prop values for a component</div>
+</div>
+
+<div class="Sub-Topics"> <h3><code>PropTypes</code></h3>
+  <div><code>import PropTypes from 'prop-types';</code></div>
+  <div>As of React v15.5.0, <code>PropTypes</code> is imported independently from React</div>
+  <div><a href="https://legacy.reactjs.org/docs/typechecking-with-proptypes.html#proptypes" target="_blank">Archive Documentations</a></div>
+</div>
 </section>
 
 <!------------------------->
@@ -240,7 +281,7 @@
   <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
   <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
   <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
-  <div class="Indent-Level5"><code>&lt;<em>MyComponent2</em> /&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;<em>MyComponent2 myProperty=myValue</em> /&gt;</code></div>
   <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
   <div class="Indent-Level3"><code>);</code></div>
   <div class="Indent-Level2"><code>&#125;</code></div>
@@ -255,6 +296,7 @@
   <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
   <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
   <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;div&gt; {this.props.<em>myProperty</em>} &lt;/div&gt;</code></div>
   <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
   <div class="Indent-Level3"><code>);</code></div>
   <div class="Indent-Level2"><code>&#125;</code></div>
@@ -264,7 +306,7 @@
 </div>
 
 <div class="Sub-Topics"> <h3>What is Stateless Component?</h3>
-  <div>Stateless Component is a component that defined with an ES6 <code>class</code> JavaScript</div>
+  <div>Stateless Component is an ES6 <code>class</code> component that extends <code>React.Component</code> but does not use internal state</div>
   <div>Stateless Component has access to many useful React features, such as local state and lifecycle hooks</div>
   <div>Stateless Component must returns either JSX or <code>null</code></div>
   <div>The naming convention for an ES6 <code>class</code> must applies PascalCase</div>
@@ -276,6 +318,253 @@
   <div>The <code>constructor()</code> uses <code>super()</code> to call the constructor of the parent class, which is <code>React.Component</code></div>
   <div>It is best practice to call a component's <code>constructor()</code> with <code>super()</code>, and pass <code>props</code> to both</div>
   <div>This makes sure the component is initialized properly</div>
+</div>
+
+<div class="Sub-Topics"> <h3><code>this.props</code></h3>
+  <div><code><em>myProperty=myValue</em> &rarr; {this.props.<em>myProperty</em>}</code></div>
+</div>
+</section>
+
+<!------------------------>
+<!-- STATEFUL COMPONENT -->
+<!------------------------>
+<section id="React-Stateful-Component" class="Box-Contents">
+<h1>STATEFUL COMPONENT</h1>
+
+<div class="Box-Structures">
+  <div class="Indent-Level1"><code>class <em>MyComponent</em> extends React.Component &#123;</code></div>
+  <div class="Indent-Level2"><code>constructor(props) &#123;</code></div>
+  <div class="Indent-Level3"><code>super(props);</code></div>
+  <div class="Indent-Level3"><code>this.state = { <em>myProperty: myValue</em> };</code></div>
+  <div class="Indent-Level2"><code>&#125;</code></div>
+  <div class="Indent-Level2"><code>render() &#123;</code></div>
+  <div class="Indent-Level3"><code>return(</code></div>
+  <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 1</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;div&gt; <em>My JSX Content 2</em> &lt;/div&gt;</code></div>
+  <div class="Indent-Level5"><code>&lt;div&gt; {this.state.<em>myProperty</em>} &lt;/div&gt;</code></div>
+  <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
+  <div class="Indent-Level3"><code>);</code></div>
+  <div class="Indent-Level2"><code>&#125;</code></div>
+  <div class="Indent-Level1"><code>&#125;</code></div>
+  <br>
+  <div class="Indent-Level1"><code>ReactDOM.render(&lt;<em>MyComponent</em> /&gt;, document.getElementById("<em>myID</em>"));</code></div>
+</div>
+
+<div class="Sub-Topics"> <h3>What is Stateful Component?</h3>
+  <div>Statelful Component is an ES6 <code>class</code> component that does maintain its own internal state</div>
+  <div>Statelful Component must returns either JSX or <code>null</code></div>
+  <div>The naming convention for an ES6 <code>class</code> must applies PascalCase</div>
+</div>
+
+<div class="Sub-Topics"> <h3><code>state</code></h3>
+  <div><code>this.state = {<em>myProperty: myValue</em>}; &rarr; {this.state.<em>myProperty</em>}</code></div>
+  <div>Declaring a <code>state</code> property on the component class in its constructor will create a state in a React component</div>
+  <div>This initializes the component with <code>state</code>> when it is created and must be set to a JavaScript object</div>
+  <div>The advantage of using <code>state</code> is state consists of any data the application needs to know about, that can change over time</div>
+  <div>User have access to the state object throughout the life of the component</div>
+  <div>User can update it, render it in the UI, and pass it as props to child components</div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Advantages</span>
+    <div><code>state</code> is one of the most powerful features of components in React</div>
+    <div>Once user define a component's initial state, user can display any part of it in the UI that is rendered</div>
+    <div>If a component is stateful, it will always have access to the data in <code>state</code> in its <code>render()</code> method</div>
+    <div>When a component stateful is created, no other components are aware of its <code>state</code></div>
+    <div>Its <code>state</code> is completely encapsulated, or local to that component, unless user pass state data to a child component as <code>props</code></div>
+  </div>
+</div>
+
+<div class="Sub-Topics"> <h3>Passing <code>state</code> as <code>props</code></h3>
+  <div><code><em>myProperty</em>={this.state.<em>myProperty</em>} → {this.props.<em>myProperty</em>}</code></div>
+</div>
+
+<div class="Sub-Topics"> <h3><code>this</code></h3>
+  <div><code>this</code> keyword is used by class method so it can access properties on the class (like <code>state</code> and <code>props</code>) inside the scope of the method</div>
+  <div>One common way is to explicitly bind <code>this</code> in the constructor so <code>this</code> becomes bound to the class methods when the component is initialized</div>
+  <div>Then, when user call a function like <code>this.setState()</code> within the class method, <code>this</code> refers to the class and will not be <code>undefined</code></div>
+</div>
+
+<div class="Sub-Topics"> <h3><code>render()</code></h3>
+  <div><code>render() { <em>My JS Codes...</em>; return( <em>My JSX Contents ...</em> ); }</code></div>
+  <div>There is another way to access <code>state</code> in a component</div>
+  <div>In the <code>render()</code> method, before the <code>return()</code> statement, user can write JavaScript directly</div>
+  <div>Example, user could declare functions, access data from <code>state</code> or <code>props</code>, perform computations on this data, etc.</div>
+  <div>Then, user can assign any data to variables, which user have access to in the <code>return()</code> statement</div>
+</div>
+
+<div class="Sub-Topics"> <h3><code>setState()</code></h3>
+  <div><code></code></div>
+  <div>The <code>setState()</code> method allows user to update the component's <code>state</code></div>
+  <div>React may batch multiple state updates in order to improve performance</div>
+  <div>In other words, the <code>state</code> updates through the <code>setState()</code> method can be asynchronous</div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Update <code>state</code></span> 
+    <div class="Indent-Level1"><code>class <em>MyComponent</em> extends React.Component &#123;</code></div>
+    <div class="Indent-Level2"><code>constructor(props) &#123;</code></div>
+    <div class="Indent-Level3"><code>super(props);</code></div>
+    <div class="Indent-Level3"><code>this.state = { <em>myProperty: myInitialValue</em> };</code></div>
+    <div class="Indent-Level3"><code>this.<em>myEventHandler</em> = this.<em>myEventHandler</em>.bind(this);</code></div>
+    <div class="Indent-Level2"><code>&#125;</code></div>
+    <br>
+    <div class="Indent-Level2"><code><em>myEventHandler</em>() {</code></div>
+    <div class="Indent-Level3"><code>this.setState( { <em>myProperty: myUpdatedValue</em> } );</code></div>
+    <div class="Indent-Level2">}</div>
+    <br>
+    <div class="Indent-Level2"><code>render() &#123;</code></div>
+    <div class="Indent-Level3"><code>return(</code></div>
+    <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;button onClick={this.<em>myEventHandler</em>}&gt; <em>myButton</em> &lt;/button&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;div&gt; {this.state.<em>myProperty</em>} &lt;/div&gt;</code></div>
+    <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level3"><code>);</code></div>
+    <div class="Indent-Level2"><code>&#125;</code></div>
+    <div class="Indent-Level1"><code>&#125;</code></div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Toggle <code>state</code></span>
+    <div class="Indent-Level1"><code>class <em>MyComponent</em> extends React.Component {</code></div>
+    <div class="Indent-Level2"><code>constructor(props) {</code></div>
+    <div class="Indent-Level3"><code>super(props);</code></div>
+    <div class="Indent-Level3"><code>this.state = { <em>myVisibility</em>: false };</code></div>
+    <div class="Indent-Level3"><code>this.<em>myToggleHandler</em> = this.<em>myToggleHandler</em>.bind(this);</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code><em>myToggleHandler</em>() {</code></div>
+    <div class="Indent-Level3"><code>this.setState(</code></div>
+    <div class="Indent-Level4"><code>state => {</code></div>
+    <div class="Indent-Level5"><code>if (state.<em>myVisibility</em> === true) {</code></div>
+    <div class="Indent-Level6"><code>return( { <em>myVisibility</em>: false } );</code></div>
+    <div class="Indent-Level5"><code>}</code></div>
+    <div class="Indent-Level5"><code>else {</code></div>
+    <div class="Indent-Level6"><code>return( { <em>myVisibility</em>: true } );</code></div>
+    <div class="Indent-Level5"><code>}</code></div>
+    <div class="Indent-Level4"><code>}</code></div>
+    <div class="Indent-Level3"><code>);</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code>render() {</code></div>
+    <div class="Indent-Level3"><code>if (this.state.<em>myVisibility</em>) {</code></div>
+    <div class="Indent-Level4"><code>return(</code></div>
+    <div class="Indent-Level5"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level6"><code>&lt;button onClick={this.<em>myToggleHandler</em>}&gt; <em>myButton</em> &lt;/button&gt;</code></div>
+    <div class="Indent-Level6"><code>&lt;div&gt; <em>MyToggledText</em> &lt;/div&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level4"><code>);</code></div>
+    <div class="Indent-Level3"><code>}</code></div>
+    <div class="Indent-Level3"><code>else {</code></div>
+    <div class="Indent-Level4"><code>return(</code></div>
+    <div class="Indent-Level5"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level6"><code>&lt;button onClick={this.<em>myToggleHandler</em>}&gt; <em>myButton</em> &lt;/button&gt;</code></div>
+    <div class="Indent-Level6"><code>&lt;div&gt; <em>MyInitialText</em> &lt;/div&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level4"><code>);</code></div>
+    <div class="Indent-Level3"><code>}</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <div class="Indent-Level1"><code>}</code></div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Counter <code>state</code></span>
+    <div class="Indent-Level1"><code>class <em>MyComponent</em> extends React.Component {</code></div>
+    <div class="Indent-Level2"><code>constructor(props) {</code></div>
+    <div class="Indent-Level3"><code>super(props);</code></div>
+    <div class="Indent-Level3"><code>this.state = { <em>myCounter</em>: 0 };</code></div>
+    <div class="Indent-Level3"><code>this.<em>myIncrementHandler</em> = this.<em>myIncrementHandler</em>.bind(this);</code></div>
+    <div class="Indent-Level3"><code>this.<em>myDecrementHandler</em> = this.<em>myDecrementHandler</em>.bind(this);</code></div>
+    <div class="Indent-Level3"><code>this.<em>myResetHandler</em> = this.<em>myResetHandler</em>.bind(this);</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code><em>myIncrementHandler</em>() {</code></div>
+    <div class="Indent-Level3"><code>this.setState(</code></div>
+    <div class="Indent-Level4"><code>state => ( { <em>myCounter</em>: state.<em>myCounter</em> + 1 } )</code></div>
+    <div class="Indent-Level3"><code>);</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code><em>myDecrementHandler</em>() {</code></div>
+    <div class="Indent-Level3"><code>this.setState(</code></div>
+    <div class="Indent-Level4"><code>state => ( { <em>myCounter</em>: state.<em>myCounter</em> - 1 } )</code></div>
+    <div class="Indent-Level3"><code>);</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code><em>myResetHandler</em>() {</code></div>
+    <div class="Indent-Level3"><code>this.setState( { <em>myCounter</em>: 0 } );</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code>render() &#123;</code></div>
+    <div class="Indent-Level3"><code>return(</code></div>
+    <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;button onClick={this.<em>myIncrementHandler</em>}&gt; <em>myIncrementText</em> &lt;/button&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;button onClick={this.<em>myDecrementHandler</em>}&gt; <em>myDecrementText</em> &lt;/button&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;button onClick={this.<em>myResetHandler</em>}&gt; <em>myResetText</em> &lt;/button&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;div&gt; {this.state.<em>myCounter</em>} &lt;/div&gt;</code></div>
+    <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level3"><code>);</code></div>
+    <div class="Indent-Level2"><code>&#125;</code></div>
+    <div class="Indent-Level1"><code>}</code></div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Controlled input</span>
+    <div class="Indent-Level1"><code>class <em>MyComponent</em> extends React.Component {</code></div>
+    <div class="Indent-Level2"><code>constructor(props) {</code></div>
+    <div class="Indent-Level3"><code>super(props);</code></div>
+    <div class="Indent-Level3"><code>this.state = { <em>myInput</em>: "" };</code></div>
+    <div class="Indent-Level3"><code>this.<em>myInputHandler</em> = this.<em>myInputHandler</em>.bind(this);</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code><em>myInputHandler</em>(event) {</code></div>
+    <div class="Indent-Level3"><code>this.setState( { <em>myInput</em>: event.target.value } );</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code>render() &#123;</code></div>
+    <div class="Indent-Level3"><code>return(</code></div>
+    <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;input onChange={this.<em>myInputHandler</em>} value={this.state.<em>myInput</em>} /&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;div&gt; {this.state.<em>myInput</em>} &lt;/div&gt;</code></div>
+    <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level3"><code>);</code></div>
+    <div class="Indent-Level2"><code>&#125;</code></div>
+    <div class="Indent-Level1"><code>}</code></div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points">Controlled form</span>
+    <div class="Indent-Level1"><code>class <em>MyComponent</em> extends React.Component {</code></div>
+    <div class="Indent-Level2"><code>constructor(props) {</code></div>
+    <div class="Indent-Level3"><code>super(props);</code></div>
+    <div class="Indent-Level3"><code>this.state = {</code></div>
+    <div class="Indent-Level4"><code><em>myInput</em>: "",</code></div>
+    <div class="Indent-Level4"><code><em>mySubmit</em>: ""</code></div>
+    <div class="Indent-Level3"><code>};</code></div>
+    <div class="Indent-Level3"><code>this.<em>myInputHandler</em> = this.<em>myInputHandler</em>.bind(this);</code></div>
+    <div class="Indent-Level3"><code>this.<em>mySubmitHandler</em> = this.<em>mySubmitHandler</em>.bind(this);</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code><em>myInputHandler</em>(event) {</code></div>
+    <div class="Indent-Level3"><code>this.setState( { <em>myInput</em>: event.target.value } );</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code><em>mySubmitHandler</em>(event) {</code></div>
+    <div class="Indent-Level3"><code>event.preventDefault();</code></div>
+    <div class="Indent-Level3"><code>this.setState( { <em>mySubmit</em>: this.state.<em>myInput</em> } );</code></div>
+    <div class="Indent-Level2"><code>}</code></div>
+    <br>
+    <div class="Indent-Level2"><code>render() &#123;</code></div>
+    <div class="Indent-Level3"><code>return(</code></div>
+    <div class="Indent-Level4"><code>&lt;div&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;form onSubmit={this.<em>mySubmitHandler</em>}&gt;</code></div>
+    <div class="Indent-Level6"><code>&lt;input onChange={this.<em>myInputHandler</em>} value={this.state.<em>myInput</em>} /&gt;</code></div>
+    <div class="Indent-Level6"><code>&lt;button type="submit"&gt; <em>myButton</em> &lt;/button&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;/form&gt;</code></div>
+    <div class="Indent-Level5"><code>&lt;div&gt; {this.state.<em>mySubmit</em>} &lt;/div&gt;</code></div>
+    <div class="Indent-Level4"><code>&lt;/div&gt;</code></div>
+    <div class="Indent-Level3"><code>);</code></div>
+    <div class="Indent-Level2"><code>&#125;</code></div>
+    <div class="Indent-Level1"><code>}</code></div>
+  </div>
 </div>
 </section>
 
