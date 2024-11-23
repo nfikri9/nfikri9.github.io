@@ -53,7 +53,7 @@ a:hover { color: darksalmon; }
   border: 1px solid black;
 }
 
-#JavaScript-Introduction {
+.Box-Contents {
   max-width: 1150px;
   padding: 10px;
   margin: 20px auto;
@@ -62,3 +62,4 @@ a:hover { color: darksalmon; }
 }
 
 .Sub-Topics { margin: 20px 0; }
+.Sub-Contents { display: none; }

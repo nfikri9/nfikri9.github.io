@@ -40,6 +40,7 @@
   <button onclick="ReactStatelessFunctionalComponent()">STATELESS FUNCTIONAL COMPONENT</button>
   <button onclick="ReactStatelessComponent()">STATELESS COMPONENT</button>
   <button onclick="ReactStatefulComponent()">STATEFUL COMPONENT</button>
+  <button onclick="ReactLifeCycleMethod()">LIFECYCLE METHOD</button>
 </div>
 
 <!------------------------>
@@ -89,6 +90,13 @@
   <div>JSX Comment Syntax &rarr; <code>&#123;/* <em>MyComments</em> */&#125;</code></div>
 </div>
 
+<div class="Sub-Topics"> <h3>Self-Closing JSX Tag</h3>
+  <div>In JSX, any JSX element can be written with a self-closing tag, and every element must be closed</div>
+  <div>For example, the <code>&lt;br&gt;</code> tag must always be written as <code>&lt;br /&gt;</code> in order to be valid JSX that can be transpiled</div>
+  <div>A <code>&lt;div&gt;</code>, on the other hand, can be written as <code>&lt;div /&gt;</code> or <code>&lt;div&gt;&lt;/div&gt;</code></div>
+  <div>The difference is that in the first syntax version there is no way to include anything in the <code>&lt;div /&gt;</code></div>
+</div>
+
 <div class="Sub-Topics"> <h3>JSX Class</h3>
   <div>One key difference in JSX is the usage of <code>class</code> attribute which defines HTML classes</div>
   <div>Since user can writing JavaScript code within JSX, the keyword <code>class</code> is invalid</div>
@@ -102,11 +110,27 @@
   </div>
 </div>
 
-<div class="Sub-Topics"> <h3>Self-Closing JSX Tag</h3>
-  <div>In JSX, any JSX element can be written with a self-closing tag, and every element must be closed</div>
-  <div>For example, the <code>&lt;br&gt;</code> tag must always be written as <code>&lt;br /&gt;</code> in order to be valid JSX that can be transpiled</div>
-  <div>A <code>&lt;div&gt;</code>, on the other hand, can be written as <code>&lt;div /&gt;</code> or <code>&lt;div&gt;&lt;/div&gt;</code></div>
-  <div>The difference is that in the first syntax version there is no way to include anything in the <code>&lt;div /&gt;</code></div>
+<div class="Sub-Topics"> <h3>JSX Style</h3>
+  <div>User can import styles from a stylesheet</div>
+  <div>Then, user can apply a class to the JSX element using the <code>className</code> attribute, and apply styles to the class in the stylesheet</div>
+  <div>Another option is to apply inline styles, which are very common in ReactJS development</div>
+  
+    <div class="Box-Points">
+      <span class="Highlight-Points">Invalid JSX</span>
+      <div>JSX elements use the <code>style</code> attribute, but since the way JSX is transpiled, it cannot set equal to JavaScript <code>string</code></div>
+      <div><code>&lt;div style="<em>myProperty1: myValue1; myProperty2: myValue2;"&gt; My JSX Contents</em> &lt;/div&gt;</code></div>
+    </div>
+
+    <div class="Box-Points">
+      <span class="Highlight-Points">Valid JSX</span>
+      <div>Instead, set it equal to JavaScript <code>object</code></div>
+      <div><code>&lt;div style={{<em>myProperty1: myValue1, myProperty2: myValue2}}&gt; My JSX Contents</em> &lt;/div&gt;</code></div>
+    </div>
+
+  <div>Hyphenated words like <code>font-size</code> are invalid syntax for JavaScript object properties, so React uses camelCase</div>
+  <div>As a rule, any hyphenated style properties are written using camel case in JSX</div>
+  <div>All property value length units (like <code>height, width, fontSize</code>) are assumed to be in <code>px</code> unless otherwise specified</div>
+  <div><code>&lt;div style={{height: 20}}&gt; <em>myText</em> &lt;/div&gt;</code> is the same as <code>&lt;div style={{height: "20px"}}&gt; <em>myText</em> &lt;/div&gt;</code></div>
 </div>
 </section>
 
@@ -375,10 +399,6 @@
   </div>
 </div>
 
-<div class="Sub-Topics"> <h3>Passing <code>state</code> as <code>props</code></h3>
-  <div><code><em>myProperty</em>={this.state.<em>myProperty</em>} → {this.props.<em>myProperty</em>}</code></div>
-</div>
-
 <div class="Sub-Topics"> <h3><code>this</code></h3>
   <div><code>this</code> keyword is used by class method so it can access properties on the class (like <code>state</code> and <code>props</code>) inside the scope of the method</div>
   <div>One common way is to explicitly bind <code>this</code> in the constructor so <code>this</code> becomes bound to the class methods when the component is initialized</div>
@@ -386,9 +406,13 @@
 </div>
 
 <div class="Sub-Topics"> <h3><code>render()</code></h3>
-  <div><code>render() { <em>My JS Codes...</em>; return( <em>My JSX Contents ...</em> ); }</code></div>
+  <div><code>render() {</code></div>
+  <div class="Indent-Level2"><code><em>My JS Codes</em>;</code></div>
+  <div class="Indent-Level2"><code>return( <em>My JSX Contents</em> );</code></div>
+  <div class="Indent-Level1"><code>}</code></div>
   <div>There is another way to access <code>state</code> in a component</div>
-  <div>In the <code>render()</code> method, before the <code>return()</code> statement, user can write JavaScript directly</div>
+  <div>In the <code>render()</code> method, before the <code>return()</code> statement, user can write JavaScript directly without inserting it inside of curly braces</div>
+  <div>This is because it is not yet within the JSX code</div>
   <div>Example, user could declare functions, access data from <code>state</code> or <code>props</code>, perform computations on this data, etc.</div>
   <div>Then, user can assign any data to variables, which user have access to in the <code>return()</code> statement</div>
 </div>
@@ -564,6 +588,73 @@
     <div class="Indent-Level3"><code>);</code></div>
     <div class="Indent-Level2"><code>&#125;</code></div>
     <div class="Indent-Level1"><code>}</code></div>
+  </div>
+</div>
+
+<div class="Sub-Topics"> <h3>Passing <code>state</code> as <code>props</code></h3>
+  <div><code><em>myProperty</em>={this.state.<em>myProperty</em>} → {this.props.<em>myProperty</em>}</code></div>
+</div>
+
+<div class="Sub-Topics"> <h3>Passing callback as <code>props</code></h3>
+  <div>User can also pass handler functions or any method that's defined on a React component to a child component</div>
+  <div>Simply pass methods to a child just like a regular prop</div>
+  <div>It's assigned a name and user have access to that method name under <code>this.props</code> in the child component</div>
+</div>
+</section>
+
+<!---------------------------->
+<!-- REACT LIFECYCLE METHOD -->
+<!---------------------------->
+<section id="React-Lifecycle-Method" class="Box-Contents">
+<h1>LIFECYCLE METHOD</h1>
+
+<div class="Sub-Topics"> <h3>What is Lifecycle Methods?</h3>
+  <div>Lifecycle Methods (also known as Lifecycle Hooks) provide opportunities to perform actions at specific points in the lifecycle of a component</div>
+  <div>These methods allow user to catch components at certain points in time</div>
+  <div>This can be before they are rendered, before they update, before they receive props, before they unmount, and so on</div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points"><code>componentWillMount()</code></span>
+    <div>The <code>componentWillMount()</code> method is called before the <code>render()</code> method when a component is being mounted to the DOM</div>
+    <div>The <code>componentWillMount()</code> method will be deprecated in a future version of 16.X and removed in version 17</div>
+    <div>Visit this <a href="https://www.freecodecamp.org/news/how-to-safely-use-reacts-life-cycles-with-fiber-s-async-rendering-fd4469ebbd8f/" target="_blank">source</a> to learn more</div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points"><code>componentDidMount()</code></span>
+    <div class="Indent-Level1"><code>componentDidMount() {</code></div>
+    <div class="Indent-Level2"><code>setTimeout(</code></div>
+    <div class="Indent-Level3"><code>() => { this.setState( { <em>myProperty: myValue</em> } ); },</code></div>
+    <div class="Indent-Level3"><code>2500</code></div>
+    <div class="Indent-Level2"><code>);</code></div>
+    <div class="Indent-Level1"><code>}</code></div>
+    <div>The <code>componentDidMount()</code> method specifies an API endpoint to place API calls or any calls to the server (to retrieve data)</div>
+    <div>This method is called after a component is mounted to the DOM</div>
+    <div>Any calls to <code>setState()</code> here will trigger a re-rendering of the component</div>
+    <div>When user call an API in this method, and set the state with the data that the API returns, it will automatically trigger an update once user receive the data</div>
+    <div>[NOTE] The <code>2500</code> stands for 2.5 seconds</div>
+    <br>
+    <div>[1] <code>componentDidMount()</code> method with Event Listener</div>
+    <div>The <code>componentDidMount()</code> method is also the best place to attach any event listeners user need to add for specific functionality</div>
+    <div></div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points"><code>shouldComponentUpdate()</code></span>
+    <div>So far, if any component receives new <code>state</code> or new <code>props</code>, it re-renders itself and all its children</div>
+    <div>The <code>shouldComponentUpdate()</code> method specifies whether the components should update or not when receiving new <code>state</code> or <code>props</code></div>
+    <div>This method is a useful way to optimize performance</div>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points"><code>componentDidUpdate()</code></span>
+  </div>
+
+  <div class="Box-Points">
+    <span class="Highlight-Points"><code>componentWillUnmount()</code></span>
+    <div>[Follow up notes (1) from <code>componentDidMount()</code> method]</div>
+    <div>It's good practice to use <code>componentWillUnmount()</code> method to do any clean up on React components before they are unmounted and destroyed</div>
+    <div>Removing event listeners is an example of one such clean up action</div>
   </div>
 </div>
 </section>
