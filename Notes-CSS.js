@@ -1,3 +1,14 @@
+///////////////////
+// CSS SELECTORS //
+///////////////////
+function CSSSelectors() {
+  let myVisibility = document.getElementById("CSS-Selectors");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // ELEMENT SELECTORS //
 function ElementSelectors() {
     let myVisibility = document.getElementById("Element-Selectors");
@@ -224,6 +235,50 @@ function AttributeSelector7() {
     document.getElementById("Attribute-Selector7").innerHTML =
       "<div>The selector is used to select elements whose attribute value contains a specified value</div>" +
       "<div>Example; <code>[class *= 'te']</code> matches <code>[class = 'test'], [class = 'cute']</code></div>";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////
+// CSS BOX MODEL //
+///////////////////
+function CSSBoxModel() {
+  let myVisibility = document.getElementById("CSS-Box-Model");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////
+// CSS BOX LAYOUT //
+////////////////////
+function CSSBoxLayout() {
+  let myVisibility = document.getElementById("CSS-Box-Layout");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////////
+// CSS ANIMATION & TANSITION //
+///////////////////////////////
+function CSSAnimationTransition() {
+  let myVisibility = document.getElementById("CSS-Animation-Transition");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+////////////////////
+// CSS TYPOGRAPHY //
+////////////////////
+function CSSTypography() {
+  let myVisibility = document.getElementById("CSS-Typography");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
   }
   else { myVisibility.style.display = "none"; }
 }
