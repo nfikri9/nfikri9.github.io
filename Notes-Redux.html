@@ -35,19 +35,115 @@
 <!-- TOPIC SELECTIONS -->
 <!---------------------->
 <div id="Box-Topic-Selections">
-  <button onclick="ReduxIntroduction()">REDUX INTRODUCTION</button>
+  <button onclick="ReduxIntroduction()">INTRODUCTION</button>
 </div>
 
 <!------------------------>
 <!-- REDUX INTRODUCTION -->
 <!------------------------>
 <section id="Redux-Introduction">
-<h1>REDUX INTRODUCTION</h1>
+<h1>INTRODUCTION</h1>
 
 <div class="Sub-Topics"> <h3>What is Redux?</h3>
   <div>Redux is a state management framework that can be used with a number of different web technologies, including React</div>
   <div>In Redux, there is a single state object that's responsible for the entire state of user's application</div>
 </div>
+
+<!-- RAW NOTES -->
+<hr>
+<div> <h3>Redux Store</h3>
+  <div>The Redux store is a single state object that's responsible for the entire state of the application</div>
+  <div>Whenever any piece of the app wants to update <code>state</code>, it must do so through the Redux store</div>
+  <div>The unidirectional data flow makes it easier to track state management in the app</div>
+</div>
+<hr>
+<div> <h3><code>createStore()</code> Method</h3>
+  <div><code>const <em>myRedux</em> = Redux.createStore( (state=<em>myDefault</em>) => return state );</code></div>
+  <div>The <code>myRedux</code> is an object which holds and manages application <code>state</code></div>
+  <div>The <code>createStore()</code> method is used to create the Redux store</div>
+  <div>The default value is needed for <code>state</code></div>
+</div>
+<br>
+<div> <h3><code>getState()</code> Method</h3>
+  <code><em>myRedux</em>.getState()</code>
+  <div>The <code>getState()</code> method can retrieve the current <code>state</code> held in the Redux store object</div>
+</div>
+<hr>
+<div> <h3>Redux actions</h3>
+  <div><code>const <em>myAction</em> = { type: <em>myValue</em> };</code></div>
+  <div><code>function <em>myActionCreator</em>() { return action; }</code></div>
+  <div>In Redux, all <code>state</code> updates are triggered by dispatching actions</div>
+  <div>An action is simply a JavaScript object that contains information about an action event that has occurred</div>
+  <div>The Redux store receives these action objects, then updates its state accordingly</div>
+  <div>Sometimes a Redux action also carries some data</div>
+  <div>For example, the action carries a username after a user logs in</div>
+  <div>While the data is optional, actions must carry a <code>type</code> property that specifies the 'type' of action that occurred</div>
+  <br>
+  <div>The <code>myActionCreator</code> function specifies the type of action that has occurred</div>
+  <div>The <code>myActionCreator</code> function is also simply a JavaScript function that returns an action</div>
+  <div>Basically, it create objects that represent action events to send the action to the Redux store so it can update its state</div>
+</div>
+<hr>
+<div> <h3><code>dispatch()</code> Method</h3>
+  <div>The <code>dispatch()</code> method is used to dispatch actions to the Redux store</div>
+  <div>Calling <code><em>myRedux</em>.dispatch()</code> and passing the value returned from an action creator sends an action back to the store</div>
+</div>
+
+<br><hr>
+<h3>Redux General Structure</h3>
+<div><code>const <em>myDefaultState</em> = { <em>myProperty: myValue</em> };</code></div>
+<div><code>const <em>myReducer</em> = (state = <em>myDefaultState</em>, action) => { return state };</code></div>
+<div><code>const <em>myReduxStore</em> = Redux.createStore(<em>myReducer</em>);</code></div>
+<div><code>const <em>myActionCreator</em> = () => { return {type: <em>myValue</em>} };</code></div>
+<br>
+<div><code><em>myReduxStore</em>.dispatch(<em>myActionCreator()</em>);</code></div> <div>OR</div>
+<div><code><em>myReduxStore</em>.dispatch({type: <em>myValue</em>});</code></div>
+<br><hr>
+<h3>Handle an Action in the Store</h3>
+<div>After an action is created and dispatched, the Redux store needs to know how to respond to that action</div>
+<div>This is the job for <code><em>myReducer</em></code> function</div>
+<div>Reducers in Redux are responsible for the state modifications that take place in response to actions</div>
+<div>A <code><em>myReducer</em></code> takes <code>state</code> and <code>action</code> as arguments, and it always returns a new <code>state</code></div>
+<div>It is important to see that this is the only role of the reducer</div>
+<div>It has no side effects, it never calls an API endpoint and it never has any hidden surprises</div>
+<div>The reducer is simply a pure function that takes state and action, then returns new state</div>
+<br>
+<div>Another key principle in Redux is that <code>state</code> is read-only</div>
+<div>In other words, the <code>myReducer</code> function must always return a new copy of <code>state</code> and never modify state directly</div>
+<div>Redux does not enforce state immutability, however user are responsible for enforcing it in the code of the <em>myReducer</em> functions</div>
+
+<h1>~RAW NOTES~</h1>
+<br> <hr> <h3>01. Create a Redux Store</h3>
+<br> <hr> <h3>02. Get State from the Redux Store</h3>
+<br> <hr> <h3>03. Define a Redux Action</h3>
+<br> <hr> <h3>04. Define an Action Creator</h3>
+<br> <hr> <h3>05. Dispatch an Action Event</h3>
+<br> <hr> <h3>06. Handle an Action in the Store</h3>
+<br> <hr> <h3>07. Use a Switch Statement to Handle Multiple Actions</h3>
+<br> <hr> <h3>08.</h3>
+<br> <hr> <h3>09.</h3>
+<br> <hr> <h3>10.</h3>
+<br> <hr> <h3>11.</h3>
+<br> <hr> <h3>12.</h3>
+<br> <hr> <h3>13.</h3>
+<br> <hr> <h3>14.</h3>
+<br> <hr> <h3>15.</h3>
+<br> <hr> <h3>16.</h3>
+<br> <hr> <h3>17.</h3>
+<!--
+const myDefaultState = { login: false };
+
+const myReducer = (state=myDefaultState, action) => {
+  if (action.type === "LOGIN") { return {login: true}; }
+  else { return state; }
+};
+
+const myReduxStore = Redux.createStore(myReducer);
+
+const MyActionCreator = () => { return {type: "LOGIN"} };
+
+myReduxStore.dispatch(myActionCreator());
+-->
 </section>
 
 <!-- IMPORTING JS FILE -->

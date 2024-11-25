@@ -16,6 +16,7 @@ body { background-color: var(--Main-Theme); }
 h1 { text-align: center; }
 a { color: inherit; text-decoration: none; }
 a:hover { color: darksalmon; }
+.Highlighted:hover { border: 1px solid black; }
 
 /**********/
 /* HEADER */
@@ -61,11 +62,7 @@ a:hover { color: darksalmon; }
 }
 
 /* SUB BOX CONTENTS */
-#Simple-Selectors { margin: 20px 0; }
-#Combinator-Selectors { margin: 20px 0; }
-#Attribute-Selectors { margin: 20px 0; }
-#Pseudo-Class-Selectors { margin: 20px 0; }
-#PSeudo-Element-Selectors { margin: 20px 0; }
+.Sub-Topics { margin: 20px 0; }
 .Box-Property {
   width: auto;
   height: auto;
@@ -92,7 +89,8 @@ a:hover { color: darksalmon; }
 }
 
 /* RELATED VALUES */
-.Value-Box:hover { color: red; }
+.Value-Box:hover { border: 1px solid black; }
+.Box-Value { margin: 10px 0; }
 #Box-Calculation { margin: 10px 0; }
 #Box-Initial { margin: 10px 0; }
 #Box-Inherit { margin: 10px 0; }
