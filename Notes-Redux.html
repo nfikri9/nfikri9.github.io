@@ -113,17 +113,73 @@
 <div>Redux does not enforce state immutability, however user are responsible for enforcing it in the code of the <em>myReducer</em> functions</div>
 
 <h1>~RAW NOTES~</h1>
+<br> <hr> <h3>General Structure of Redux</h3>
+<div><code>const <em>myDefaultState</em> = {<em>myProperty: myValue</em>};</code></div>
+<div><code>const <em>myReducer</em> = (state=<em>myDefaultState</em>, action) => {return state};</code></div>
+<div><code>const <em>myReduxStore</em> = Redux.createStore(<em>myReducer</em>);</code></div>
+<div><code>const <em>myActionCreator</em> = () => { return {type: <em>myValue</em>}};</code></div>
+<div><code><em>myReduxStore</em>.dispatch(<em>myActionCreator</em>());</code></div>
+
 <br> <hr> <h3>01. Create a Redux Store</h3>
 <br> <hr> <h3>02. Get State from the Redux Store</h3>
 <br> <hr> <h3>03. Define a Redux Action</h3>
 <br> <hr> <h3>04. Define an Action Creator</h3>
 <br> <hr> <h3>05. Dispatch an Action Event</h3>
 <br> <hr> <h3>06. Handle an Action in the Store</h3>
+
 <br> <hr> <h3>07. Use a Switch Statement to Handle Multiple Actions</h3>
-<br> <hr> <h3>08.</h3>
-<br> <hr> <h3>09.</h3>
-<br> <hr> <h3>10.</h3>
-<br> <hr> <h3>11.</h3>
+<div>You can tell the Redux store how to handle multiple action types</div>
+<div>Say you are managing user authentication in your Redux store</div>
+<div>You want to have a state representation for when users are logged in and when they are logged out</div>
+<div>You represent this with a single state object with the property authenticated</div>
+<div>You also need action creators that create actions corresponding to user login and user logout, along with the action objects themselves</div>
+<div>Use a JavaScript switch statement in the reducer to respond to different action events</div>
+<div>This is a standard pattern in writing Redux reducers</div>
+<div>The switch statement should switch over action.type and return the appropriate authentication state</div>
+<br>
+<div><code>const defaultState = {authenticated: false};</code></div>
+<div><code>const authReducer = (state=defaultState, action) => {</code></div>
+<div><code>switch (action.type) {</code></div>
+<div><code>case "LOGIN": return {authenticated: true};</code></div>
+<div><code>case "LOGOUT": return {authenticated: false};</code></div>
+<div><code>default: return defaultState;</code></div>
+<div><code>}</code></div>
+<div><code>};</code></div>
+<div><code>const store = Redux.createStore(authReducer);</code></div>
+<div><code>const loginUser = () => { return {type: "LOGIN"} };</code></div>
+<div><code>const logoutUser = () => { return {type: "LOGOUT"} };</code></div>
+
+<br> <hr> <h3>08. Use const for Action Types</h3>
+<div>A common practice when working with Redux is to assign action types as read-only constants, then reference these constants wherever they are used</div>
+<div>You can refactor the code you're working with to write the action types as const declarations</div>
+<div>It's generally a convention to write constants in all uppercase, and this is standard practice in Redux as well</div>
+
+<br> <hr> <h3>09. Register a Store Listener</h3>
+<div><code><em>myReduxStore</em>.subscribe(<em>myValue</em>);</code></div>
+<div>Another method you have access to on the Redux store object is store.subscribe()</div>
+<div>This allows you to subscribe listener functions to the store, which are called whenever an action is dispatched against the store</div>
+<div>One simple use for this method is to subscribe a function to your store that simply logs a message every time an action is received and the store is updated</div>
+
+<br> <hr> <h3>10. Combine Multiple Reducers</h3>
+<div>Redux.combineReducers()</div>
+
+<br> <hr> <h3>11. Send Action Data to the Store</h3>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
 <br> <hr> <h3>12.</h3>
 <br> <hr> <h3>13.</h3>
 <br> <hr> <h3>14.</h3>
