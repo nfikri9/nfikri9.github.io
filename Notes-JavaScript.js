@@ -82,3 +82,14 @@ function DataTypeObject() {
   }
   else { myVisibility.style.display = "none"; }
 }
+
+//////////////////////////
+// JAVASCRIPT OPERATORS //
+//////////////////////////
+function JavaScriptOperators() {
+  let myVisibility = document.getElementById("JavaScript-Operators");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
