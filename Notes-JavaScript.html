@@ -145,7 +145,7 @@
 <div class="Sub-Topics">
   <h3 onclick="DataTypeNull()"> <span class="Highlighted">Null</span> </h3>
   <div id="Data-Type-Null" class="Sub-Contents">
-    <div>JavaScript Null</div>
+    <div>JavaScript Null (Datatype for <code>null</code> is object)</div>
   </div>
 </div>
 
@@ -180,65 +180,15 @@
 <div class="Sub-Topics">
   <h3>Arithmetic Operators</h3>
   <div>Arithmetic operators perform arithmetic on numbers with either literals or identifiers</div>
-  <table>
-    <tr>
-      <th>OPERATORS
-        <select>
-          <option>Addition (+)</option>
-          <option>Subtraction (-)</option>
-          <option>Multiplication (*)</option>
-          <option>Exponentiation (**)</option>
-          <option>Division (/)</option>
-          <option>Modulus (%)</option>
-        </select>
-      </th>
-      <th><input type="number" placeholder="no1" size="10"></th>
-      <th><input type="text" placeholder="str1" size="10"></th>
-      <th><input type="text" placeholder="bool1" size="10"></th>
-      <th><code>null</code></th>
-      <th><code>undefined</code></th>
-    </tr>
-    <tr>
-      <th><input type="number" placeholder="no2" size="10"></th>
-      <td><code>no1 + no2 <button>=</button> <em>answer</em></code></td>
-      <td><code>str1 + no2 <button>=</button> <em>answer</em></code></td>
-      <td><code>bool1 + no2 <button>=</button> <em>answer</em></code></td>
-      <td><code>null + no2 <button>=</button> <em>answer</em></code></td>
-      <td><code>undefined + no2 <button>=</button> <em>answer</em></code></td>
-    </tr>
-    <tr>
-      <th><input type="text" placeholder="str2" size="10"></th>
-      <td><code>no1 + str2 <button>=</button> <em>answer</em></code></td>
-      <td><code>str1 + str2 <button>=</button> <em>answer</em></code></td>
-      <td><code>bool1 + str2 <button>=</button> <em>answer</em></code></td>
-      <td><code>null + str2 <button>=</button> <em>answer</em></code></td>
-      <td><code>undefined + str2 <button>=</button> <em>answer</em></code></td>
-    </tr>
-    <tr>
-      <th><input type="text" placeholder="bool2" size="10"></th>
-      <td><code>no1 + bool2 <button>=</button> <em>answer</em></code></td>
-      <td><code>str1 + bool2 <button>=</button> <em>answer</em></code></td>
-      <td><code>bool1 + bool2 <button>=</button> <em>answer</em></code></td>
-      <td><code>null + bool2 <button>=</button> <em>answer</em></code></td>
-      <td><code>undefined + bool2 <button>=</button> <em>answer</em></code></td>
-    </tr>
-    <tr>
-      <th><code>null</code></th>
-      <td><code>no1 + null <button>=</button> <em>answer</em></code></td>
-      <td><code>str1 + null <button>=</button> <em>answer</em></code></td>
-      <td><code>bool1 + null <button>=</button> <em>answer</em></code></td>
-      <td><code>null + null <button>=</button> <em>answer</em></code></td>
-      <td><code>undefined + null <button>=</button> <em>answer</em></code></td>
-    </tr>
-    <tr>
-      <th><code>undefined</code></th>
-      <td><code>no1 + undefined <button>=</button> <em>answer</em></code></td>
-      <td><code>str1 + undefined <button>=</button> <em>answer</em></code></td>
-      <td><code>bool1 + undefined <button>=</button> <em>answer</em></code></td>
-      <td><code>null + undefined <button>=</button> <em>answer</em></code></td>
-      <td><code>undefined + undefined <button>=</button> <em>answer</em></code></td>
-    </tr>
-  </table>
+  <div><span class="Highlighted" onclick="Addition()">Addition (<code>+</code>)</span></div>
+  <div><span class="Highlighted" onclick="Subtraction()">Subtraction (<code>-</code>)</span></div>
+  <div><span class="Highlighted" onclick="Multiplication()">Multiplication (<code>*</code>)</span></div>
+  <div><span class="Highlighted" onclick="Exponentiation()">Exponentiation (<code>**</code>)</span></div>
+  <div><span class="Highlighted" onclick="Division()">Division (<code>/</code>)</span></div>
+  <div><span class="Highlighted" onclick="Modulus()">Modulus (<code>%</code>)</span></div>
+  <div><span class="Highlighted" onclick="Increment()">Increment (<code>++</code>)</span></div>
+  <div><span class="Highlighted" onclick="Decrement()">Decrement (<code>--</code>)</span></div>
+  <div id="Arithmetic-Operations"></div> <div id="test"></div>
 </div>
 </section>
 
