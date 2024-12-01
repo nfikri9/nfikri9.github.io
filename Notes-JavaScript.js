@@ -96,20 +96,13 @@ function JavaScriptOperators() {
 
 // ARITHMETIC OPERATIONS //
 function Addition() {
-  let x = 4; let y=undefined; let z = x+y; document.getElementById("test").innerText = typeof z;
-  let myVisibility = document.getElementById("Arithmetic-Operations");
+  let myVisibility = document.getElementById("Arithmetic-Addition");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Arithmetic-Operations").innerHTML =
+    document.getElementById("Arithmetic-Addition").innerHTML =
       "<div class=\"Sub-Topics\">" +
       "<div>Addition is an arithmetic operation where 2 or more operands are added</div>" +
-      "<div>Concatenation involves addition with string and resulting the value is in string datatype</div>" +
-      "<div><code>let number1 = 4;         // The datatype is number</code></code>" +
-      "<div><code>let number2 = 10;        // The datatype is number</code></code>" +
-      "<div><code>let string1 = \"Hello\"; // The datatype is string</code></code>" +
-      "<div><code>let string2 = \"World\"; // The datatype is string</code></code>" +
-      "<div><code>let boolean1 = true;     // The datatype is boolean</code></code>" +
-      "<div><code>let boolean2 = false;    // The datatype is boolean</code></code>" +
+      "<div>Concatenation involves addition with string, which resulting the total value is in string datatype</div>" +
 
       "<div class=\"Sub-Topics\">" +
       "<div><code>number1 + number2;   // 14     (The datatype is number)</code></div>" +
@@ -117,134 +110,211 @@ function Addition() {
       "<div><code>number1 + boolean1;  // 5      (The datatype is number)</code></div>" +
       "<div><code>number1 + null;      // 4      (The datatype is number)</code></div>" +
       "<div><code>number1 + undefined; // NaN    (The datatype is number)</code></div>" +
-      "</div> </div>";
+      "</div>" +
+      "</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
 
 function Subtraction() {
-  let myVisibility = document.getElementById("Arithmetic-Operations");
+  let myVisibility = document.getElementById("Arithmetic-Subtraction");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Arithmetic-Operations").innerHTML =
+    document.getElementById("Arithmetic-Subtraction").innerHTML =
       "<div class=\"Sub-Topics\">" +
-      "<div><code>number1 - number2  = <span>answer</span></code></div>" +
-      "<div><code>number - string    = <span>answer</span></code></div>" +
-      "<div><code>number - boolean   = <span>answer</span></code></div>" +
-      "<div><code>number - null      = <span>answer</span></code></div>" +
-      "<div><code>number - undefined = <span>answer</span></code></div>" +
+      "<div>Subtraction is an arithmetic operation where 2 or more operands are subtracted</div>" +
+
+      "<div class=\"Sub-Topics\">" +
+      "<div><code>number1 - number2;   // -6     (The datatype is number)</code></div>" +
+      "<div><code>number1 - string1;   // NaN    (The datatype is number)</code></div>" +
+      "<div><code>number1 - boolean1;  // 3      (The datatype is number)</code></div>" +
+      "<div><code>number1 - null;      // 4      (The datatype is number)</code></div>" +
+      "<div><code>number1 - undefined; // NaN    (The datatype is number)</code></div>" +
+      "</div>" +
       "</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
 
 function Multiplication() {
-  let myVisibility = document.getElementById("Arithmetic-Operations");
+  let myVisibility = document.getElementById("Arithmetic-Multiplication");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Arithmetic-Operations").innerHTML =
+    document.getElementById("Arithmetic-Multiplication").innerHTML =
       "<div class=\"Sub-Topics\">" +
-      "<div><code>number1 * number2  = <span>answer</span></code></div>" +
-      "<div><code>number * string    = <span>answer</span></code></div>" +
-      "<div><code>number * boolean   = <span>answer</span></code></div>" +
-      "<div><code>number * null      = <span>answer</span></code></div>" +
-      "<div><code>number * undefined = <span>answer</span></code></div>" +
+      "<div>Multiplication is an arithmetic operation where 2 or more operands are multiplied</div>" +
+
+      "<div class=\"Sub-Topics\">" +
+      "<div><code>number1 * number2;   // 40     (The datatype is number)</code></div>" +
+      "<div><code>number1 * string1;   // NaN    (The datatype is number)</code></div>" +
+      "<div><code>number1 * boolean1;  // 4      (The datatype is number)</code></div>" +
+      "<div><code>number1 * null;      // 0      (The datatype is number)</code></div>" +
+      "<div><code>number1 * undefined; // NaN    (The datatype is number)</code></div>" +
+      "</div>" +
       "</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
 
 function Exponentiation() {
-  let myVisibility = document.getElementById("Arithmetic-Operations");
+  let myVisibility = document.getElementById("Arithmetic-Exponentiation");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Arithmetic-Operations").innerHTML =
+    document.getElementById("Arithmetic-Exponentiation").innerHTML =
       "<div class=\"Sub-Topics\">" +
-      "<div><code>number1 ** number2  = <span>answer</span></code></div>" +
-      "<div><code>number ** string    = <span>answer</span></code></div>" +
-      "<div><code>number ** boolean   = <span>answer</span></code></div>" +
-      "<div><code>number ** null      = <span>answer</span></code></div>" +
-      "<div><code>number ** undefined = <span>answer</span></code></div>" +
+      "<div>Exponentiation is an arithmetic operation where an operand (base) is raised the quantity to the power of another operand (exponent)</div>" +
+
+      "<div class=\"Sub-Topics\">" +
+      "<div><code>number1 ** number2;   // 1048576 (The datatype is number)</code></div>" +
+      "<div><code>number1 ** string1;   // NaN     (The datatype is number)</code></div>" +
+      "<div><code>number1 ** boolean1;  // 4       (The datatype is number)</code></div>" +
+      "<div><code>number1 ** null;      // 1       (The datatype is number)</code></div>" +
+      "<div><code>number1 ** undefined; // NaN     (The datatype is number)</code></div>" +
+      "</div>" +
       "</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
 
 function Division() {
-  let myVisibility = document.getElementById("Arithmetic-Operations");
+  let myVisibility = document.getElementById("Arithmetic-Division");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Arithmetic-Operations").innerHTML =
+    document.getElementById("Arithmetic-Division").innerHTML =
       "<div class=\"Sub-Topics\">" +
-      "<div><code>number1 / number2  = <span>answer</span></code></div>" +
-      "<div><code>number / string    = <span>answer</span></code></div>" +
-      "<div><code>number / boolean   = <span>answer</span></code></div>" +
-      "<div><code>number / null      = <span>answer</span></code></div>" +
-      "<div><code>number / undefined = <span>answer</span></code></div>" +
+      "<div>Division is an arithmetic operation where 2 or more operands are divided</div>" +
+
+      "<div class=\"Sub-Topics\">" +
+      "<div><code>number1 / number2;   // 0.4      (The datatype is number)</code></div>" +
+      "<div><code>number1 / string1;   // NaN      (The datatype is number)</code></div>" +
+      "<div><code>number1 / boolean1;  // 4        (The datatype is number)</code></div>" +
+      "<div><code>number1 / null;      // Infinity (The datatype is number)</code></div>" +
+      "<div><code>number1 / undefined; // NaN      (The datatype is number)</code></div>" +
+      "</div>" +
       "</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
 
 function Modulus() {
-  let myVisibility = document.getElementById("Arithmetic-Operations");
+  let myVisibility = document.getElementById("Arithmetic-Modulus");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Arithmetic-Operations").innerHTML =
+    document.getElementById("Arithmetic-Modulus").innerHTML =
       "<div class=\"Sub-Topics\">" +
-      "<div><code>number1 % number2  = <span>answer</span></code></div>" +
-      "<div><code>number % string    = <span>answer</span></code></div>" +
-      "<div><code>number % boolean   = <span>answer</span></code></div>" +
-      "<div><code>number % null      = <span>answer</span></code></div>" +
-      "<div><code>number % undefined = <span>answer</span></code></div>" +
+      "<div>Modulus is an arithmetic operation where 2 or more operands are divided</div>" +
+      "<div>However, the result will return remainder only</div>" +
+
+      "<div class=\"Sub-Topics\">" +
+      "<div><code>number1 % number2;   // 4   (The datatype is number)</code></div>" +
+      "<div><code>number1 % string1;   // NaN (The datatype is number)</code></div>" +
+      "<div><code>number1 % boolean1;  // 0   (The datatype is number)</code></div>" +
+      "<div><code>number1 % null;      // NaN (The datatype is number)</code></div>" +
+      "<div><code>number1 % undefined; // NaN (The datatype is number)</code></div>" +
+      "</div>" +
       "</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
 
 function Increment() {
-  let myVisibility = document.getElementById("Arithmetic-Operations");
+  let myVisibility = document.getElementById("Arithmetic-Increment");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Arithmetic-Operations").innerHTML =
+    document.getElementById("Arithmetic-Increment").innerHTML =
       "<div class=\"Sub-Topics\">" +
-      "<div><code>number1++   = <span>answer</span></code></div>" +
-      "<div><code>string++    = <span>answer</span></code></div>" +
-      "<div><code>boolean++   = <span>answer</span></code></div>" +
-      "<div><code>null++      = <span>answer</span></code></div>" +
-      "<div><code>undefined++ = <span>answer</span></code></div>" +
+      "<div>Post-increment is used to increment the value of an identifier after executing the expression in which the operator is used</div>" +
+      "<div><code>number1++;   // 4   (The datatype is number)</code></div>" +
+      "<div><code>string++;    // NaN (The datatype is number)</code></div>" +
+      "<div><code>boolean++;   // 1   (The datatype is number)</code></div>" +
+      "<div><code>null++;      // 0   (The datatype is number)</code></div>" +
+      "<div><code>undefined++; // NaN (The datatype is number)</code></div>" +
+      "</div>" +
 
-      "<div><code>++number1   = <span>answer</span></code></div>" +
-      "<div><code>++string    = <span>answer</span></code></div>" +
-      "<div><code>++boolean   = <span>answer</span></code></div>" +
-      "<div><code>++null      = <span>answer</span></code></div>" +
-      "<div><code>++undefined = <span>answer</span></code></div>" +
+      "<div class=\"Sub-Topics\">" +
+      "<div>Pre-increment is used to increment the value of an identifier before using it in a expression</div>" +
+      "<div><code>++number1;   // 5   (The datatype is number)</code></div>" +
+      "<div><code>++string;    // NaN (The datatype is number)</code></div>" +
+      "<div><code>++boolean;   // 2   (The datatype is number)</code></div>" +
+      "<div><code>++null;      // 1   (The datatype is number)</code></div>" +
+      "<div><code>++undefined; // NaN (The datatype is number)</code></div>" +
       "</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
 
 function Decrement() {
-  let myVisibility = document.getElementById("Arithmetic-Operations");
+  let myVisibility = document.getElementById("Arithmetic-Decrement");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Arithmetic-Operations").innerHTML =
+    document.getElementById("Arithmetic-Decrement").innerHTML =
       "<div class=\"Sub-Topics\">" +
-      "<div><code>number1--   = <span>answer</span></code></div>" +
-      "<div><code>string--    = <span>answer</span></code></div>" +
-      "<div><code>boolean--   = <span>answer</span></code></div>" +
-      "<div><code>null--      = <span>answer</span></code></div>" +
-      "<div><code>undefined-- = <span>answer</span></code></div>" +
+      "<div>Post-decrement is used to decrement the value of an identifier after executing the expression in which the operator is used</div>" +
+      "<div><code>number1--;   // 4   (The datatype is number)</code></div>" +
+      "<div><code>string--;    // NaN (The datatype is number)</code></div>" +
+      "<div><code>boolean--;   // 1   (The datatype is number)</code></div>" +
+      "<div><code>null--;      // 0   (The datatype is number)</code></div>" +
+      "<div><code>undefined--; // NaN (The datatype is number)</code></div>" +
+      "</div>" +
       
-      "<div><code>--number1   = <span>answer</span></code></div>" +
-      "<div><code>--string    = <span>answer</span></code></div>" +
-      "<div><code>--boolean   = <span>answer</span></code></div>" +
-      "<div><code>--null      = <span>answer</span></code></div>" +
-      "<div><code>--undefined = <span>answer</span></code></div>" +
+      "<div class=\"Sub-Topics\">" +
+      "<div>Pre-decrement is used to decrement the value of an identifier before using it in a expression</div>" +
+      "<div><code>--number1;   // 3   (The datatype is number)</code></div>" +
+      "<div><code>--string;    // NaN (The datatype is number)</code></div>" +
+      "<div><code>--boolean;   // 0   (The datatype is number)</code></div>" +
+      "<div><code>--null;      // -1  (The datatype is number)</code></div>" +
+      "<div><code>--undefined; // NaN (The datatype is number)</code></div>" +
       "</div>";
   }
   else { myVisibility.style.display = "none"; }
 }
+
+////////////////////////
+// JAVASCRIPT METHODS //
+////////////////////////
+const JSMethods = {
+  // String Methods
+  At:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>at(<em>i</em>)</code> method returns an indexed character from a string</div>" +
+    "<div>If the index is greater than the string's length, returns <code>undefined</code></div>" +
+    "<div>Negative index will start from the last character and goes backward</div>" +
+    "<div><code>let <em>myString</em> = 'Hello World'; </code></div>" +
+    "<div><code><em>myString</em>.at(0);  // Return H (H is on index 0)</code></div>" +
+    "<div><code><em>myString</em>.at(10); // Return d (d is on index 10)</code></div>" +
+    "<div><code><em>myString</em>.at(11); // Return undefined (Index 11 is out of the string's length)</code></div>" +
+    "<div><code><em>myString</em>.at(-1); // Return d (d is on index -1)</code></div>" +
+    "<div><code><em>myString</em>.at(-5); // Return W (W is on index -5)</code></div>" +
+    "</div>"
+};
+
+function AtMethod() {
+  let myVisibility = document.getElementById("At-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    let mystring = "Hello World";
+    document.getElementById("At-Method").innerHTML = JSMethods.At;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////
+// JAVASCRIPT PROPERTIES //
+///////////////////////////
+const JSProperties = {
+  // String Properties
+  myProperty: "test"
+};
+
+
+
+
+
+
+
+
+
+
 
 /////////////////////////////////////
 // JAVASCRIPT METHODS & PROPERTIES //

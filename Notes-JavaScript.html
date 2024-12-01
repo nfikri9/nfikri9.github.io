@@ -66,7 +66,7 @@
 <div class="Sub-Topics">
   <h3 onclick="DataTypeNumber()"> <span class="Highlighted">Number</span> </h3>
   <div id="Data-Type-Number" class="Sub-Contents">
-    <div>JavaScript Numbers are primitive values that can be written with or without decimals</div>
+    <div>JavaScript Numbers are primitive values for storing number that can be written with or without decimals</div>
     <div>JavaScript Numbers can also be written with scientific notation (exponent) for large/extra small numbers</div>
     <div>Certain calculation will produce keywords like <code>NaN</code> (Not A Number), <code>Infinity</code> (positive infinity), <code>-Infinity</code> (negative infinity)</div>
 
@@ -79,8 +79,8 @@
     <div class="Sub-Topics"> <span class="Topics">Integer Precision</span>
       <div>Integers (numbers without a period or exponent notation) are accurate up to 15 digits</div>
       <div>If the number exceed more than 20 digits, the numbers will be displayed as exponent </div>
-      <div><code>let myNumber1 = 999999999999999;  // myNumber1 = 999999999999999 (accurate up to 15 digits) </code></div>
-      <div><code>let myNumber2 = 9999999999999999; // myNumber2 = 1000000000000000 (rounded up when exceed more than 15 digits)</code></div>
+      <div><code>let myNumber1 = 999999999999999;       // myNumber1 = 999999999999999 (accurate up to 15 digits) </code></div>
+      <div><code>let myNumber2 = 9999999999999999;      // myNumber2 = 1000000000000000 (rounded up when exceed more than 15 digits)</code></div>
       <div><code>let myNumber3 = 999999999999999999999; // myNumber3 = 1e+21 (rounded up when exceed more than 20 digits)</code></div>
     </div>
 
@@ -88,7 +88,7 @@
       <div>The maximum number of decimals are accurate up to 16 decimal points</div>
       <div>The decimal will be rounded up when the last digit is <code>&ge;7</code></div>
       <div>The decimal will be rounded down when the last digit is <code>&le;6</code></div>
-      <div><code>let myNumber1 = 0.9999999999999991; // myNumber1 = 0.9999999999999991 (accurate up to 16 decimal points)</code></div>
+      <div><code>let myNumber1 = 0.9999999999999991;  // myNumber1 = 0.9999999999999991 (accurate up to 16 decimal points)</code></div>
       <div><code>let myNumber2 = 0.99999999999999916; // myNumber2 = 0.9999999999999991 (rounded down when exceed more than 16)</code></div>
       <div><code>let myNumber3 = 0.99999999999999917; // myNumber3 = 0.9999999999999992 (rounded up when exceed more than 16)</code></div>
     </div>
@@ -131,7 +131,76 @@
 <div class="Sub-Topics">
   <h3 onclick="DataTypeString()"> <span class="Highlighted">String</span> </h3>
   <div id="Data-Type-String" class="Sub-Contents">
-    <div>JavaScript String</div>
+    <div>JavaScript Strings are primitive values for storing text that can be written with either single quote or double quotes in single-line string</div>
+    <div><code>let myString1 = 'Hello World!';   // The string is written in single quote</code></div>
+    <div><code>let myString2 = "Hello World!";   // The string is written in double quotes</code></div>
+    <div><code>let myString3 = "";               // Empty string</code></div>
+
+    <div class="Sub-Topics"> <span class="Topics">Quotes inside string</span>
+      <div>Quotes can be used inside a string, as long as they don't match the quotes surrounding the string</div>
+      <div><code>let myString1 = "You're welcome"; // Valid string (The usage of single quote does not affect the structure of string)</code></div>
+      <div><code>let myString2 = "You"re welcome"; // Invalid string (The usage of double quotes does affect the structure of string)</code></div>
+    </div>
+
+    <div class="Sub-Topics"> <span class="Topics">Escape Characters</span>
+      <div>The backslash escape character (\) turns special characters into string characters</div>
+      <div>The characters like <code>\b, \f , \n, \r, \t, \v</code> were originally designed to control typewriters, teletypes, and fax machines (They do not make any sense in HTML)</div>
+      <div><code>let myString1 = "You\'re welcome"; // myString1 = You're welcome (display single quote)</code></div>
+      <div><code>let myString2 = "You\"re welcome"; // myString2 = You"re welcome (display double quotes)</code></div>
+      <div><code>let myString3 = "Format directory is C:\\documents\\CatPhoto.jpg"; // myString3 = C:\documents\CatPhoto.jpg (display backslash)</code></div>
+      <div><code>let myString4 = "Example1 \b Example2"; // The (\b) characters represent backspace</code></div>
+      <div><code>let myString5 = "Example1 \f Example2"; // The (\f) characters represent form feed</code></div>
+      <div><code>let myString6 = "Example1 \n Example2"; // The (\n) characters represent new line</code></div>
+      <div><code>let myString7 = "Example1 \r Example2"; // The (\r) characters represent carriage return</code></div>
+      <div><code>let myString8 = "Example1 \t Example2"; // The (\t) characters represent horizontal tabulator</code></div>
+      <div><code>let myString9 = "Example1 \v Example2"; // The (\v) characters represent vertical tabulator</code></div>
+    </div>
+
+    <div class="Sub-Topics"> <span class="Topics">Template String</span>
+      <div>Templates are strings enclosed in backticks</div>
+      <div>Templates allow single and double quotes inside a string</div>
+      <div>Templates allow multiline strings</div>
+      <div><code>let myString1 = `Arthur's great sword is called "Excalibur"`; // The string is written in backticks</code></div>
+    </div>
+
+    <div class="Sub-Topics"> <span class="Topics">JavaScript String Methods & Properties</span>
+      <div><span><code onclick="AtMethod()">at(<em>i</em>)</code></span> <div id="At-Method"></div> </div>
+      <div id="test"></div> <script>let x = "Hello World"; document.getElementById("test").innerText = x.at(-12);</script>
+      <div><span><code>charAt()</code></span></div>
+      <div><span><code>charCodeAt()</code></span></div>
+      <div><span><code>codePointAt()</code></span></div>
+      <div><span><code>concat()</code></span></div>
+      <div><span><code>constructor</code></span></div>
+      <div><span><code>endsWith()</code></span></div>
+      <div><span><code>fromCharCode()</code></span></div>
+      <div><span><code>includes()</code></span></div>
+      <div><span><code>indexOf()</code></span></div>
+      <div><span><code>lastIndexOf()</code></span></div>
+      <div><span><code>length</code></span></div>
+      <div><span><code>localeCompare()</code></span></div>
+      <div><span><code>match()</code></span></div>
+      <div><span><code>padEnd()</code></span></div>
+      <div><span><code>padStart()</code></span></div>
+      <div><span><code>prototype</code></span></div>
+      <div><span><code>repeat()</code></span></div>
+      <div><span><code>replace()</code></span></div>
+      <div><span><code>replaceAll()</code></span></div>
+      <div><span><code>search()</code></span></div>
+      <div><span><code>slice()</code></span></div>
+      <div><span><code>split()</code></span></div>
+      <div><span><code>startsWith()</code></span></div>
+      <div><span><code>substr()</code></span></div>
+      <div><span><code>substring()</code></span></div>
+      <div><span><code>toLocaleLowerCase()</code></span></div>
+      <div><span><code>toLocaleUpperCase()</code></span></div>
+      <div><span><code>toLowerCase()</code></span></div>
+      <div><span><code>toString()</code></span></div>
+      <div><span><code>toUpperCase()</code></span></div>
+      <div><span><code>trim()</code></span></div>
+      <div><span><code>trimEnd()</code></span></div>
+      <div><span><code>trimStart()</code></span></div>
+      <div><span><code>valueOf()</code></span></div>
+    </div>
   </div>
 </div>
 
@@ -180,15 +249,25 @@
 <div class="Sub-Topics">
   <h3>Arithmetic Operators</h3>
   <div>Arithmetic operators perform arithmetic on numbers with either literals or identifiers</div>
-  <div><span class="Highlighted" onclick="Addition()">Addition (<code>+</code>)</span></div>
-  <div><span class="Highlighted" onclick="Subtraction()">Subtraction (<code>-</code>)</span></div>
-  <div><span class="Highlighted" onclick="Multiplication()">Multiplication (<code>*</code>)</span></div>
-  <div><span class="Highlighted" onclick="Exponentiation()">Exponentiation (<code>**</code>)</span></div>
-  <div><span class="Highlighted" onclick="Division()">Division (<code>/</code>)</span></div>
-  <div><span class="Highlighted" onclick="Modulus()">Modulus (<code>%</code>)</span></div>
-  <div><span class="Highlighted" onclick="Increment()">Increment (<code>++</code>)</span></div>
-  <div><span class="Highlighted" onclick="Decrement()">Decrement (<code>--</code>)</span></div>
-  <div id="Arithmetic-Operations"></div> <div id="test"></div>
+  <div>There are some cases where data types other than number can performs this operation as well</div>
+
+  <div class="Sub-Topics">
+    <div><code>let number1  = 4;       // The datatype is number</code></div>
+    <div><code>let number2  = 10;      // The datatype is number</code></div>
+    <div><code>let string1  = "Hello"; // The datatype is string</code></div>
+    <div><code>let string2  = "World"; // The datatype is string</code></div>
+    <div><code>let boolean1 = true;    // The datatype is boolean</code></div>
+    <div><code>let boolean2 = false;   // The datatype is boolean</code></div>
+  </div>
+  
+  <div><span class="Highlighted" onclick="Addition()">Addition (<code>+</code>)</span> <div id="Arithmetic-Addition"></div> </div>
+  <div><span class="Highlighted" onclick="Subtraction()">Subtraction (<code>-</code>)</span> <div id="Arithmetic-Subtraction"></div></div>
+  <div><span class="Highlighted" onclick="Multiplication()">Multiplication (<code>*</code>)</span> <div id="Arithmetic-Multiplication"></div></div>
+  <div><span class="Highlighted" onclick="Exponentiation()">Exponentiation (<code>**</code>)</span> <div id="Arithmetic-Exponentiation"></div></div>
+  <div><span class="Highlighted" onclick="Division()">Division (<code>/</code>)</span> <div id="Arithmetic-Division"></div></div>
+  <div><span class="Highlighted" onclick="Modulus()">Modulus (<code>%</code>)</span> <div id="Arithmetic-Modulus"></div></div>
+  <div><span class="Highlighted" onclick="Increment()">Increment (<code>++</code>)</span> <div id="Arithmetic-Increment"></div></div>
+  <div><span class="Highlighted" onclick="Decrement()">Decrement (<code>--</code>)</span> <div id="Arithmetic-Decrement"></div></div>
 </div>
 </section>
 
