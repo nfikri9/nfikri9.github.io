@@ -277,14 +277,115 @@ const JSMethods = {
   At:
     "<div class=\"Sub-Topics\">" +
     "<div>The <code>at(<em>i</em>)</code> method returns an indexed character from a string</div>" +
-    "<div>If the index is greater than the string's length, returns <code>undefined</code></div>" +
+    "<div>If the index is not within the string's length, returns <code>undefined</code> since there is no character at all</div>" +
     "<div>Negative index will start from the last character and goes backward</div>" +
-    "<div><code>let <em>myString</em> = 'Hello World'; </code></div>" +
+    "<div><code>let <em>myString</em> = \"Hello World\";</code></div>" +
     "<div><code><em>myString</em>.at(0);  // Return H (H is on index 0)</code></div>" +
     "<div><code><em>myString</em>.at(10); // Return d (d is on index 10)</code></div>" +
-    "<div><code><em>myString</em>.at(11); // Return undefined (Index 11 is out of the string's length)</code></div>" +
+    "<div><code><em>myString</em>.at(11); // Return undefined (Index 11 is not within the string's length)</code></div>" +
     "<div><code><em>myString</em>.at(-1); // Return d (d is on index -1)</code></div>" +
     "<div><code><em>myString</em>.at(-5); // Return W (W is on index -5)</code></div>" +
+    "</div>",
+
+  CharAt:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>charAt(<em>i</em>)</code> method returns the character at a specified index (position) in a string</div>" +
+    "<div>If the index is not within the string's length (including negative index), returns empty string</div>" +
+    "<div><code>let <em>myString</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString</em>.charAt(0);  // Return H (H is on index 0)</code></div>" +
+    "<div><code><em>myString</em>.charAt(10); // Return d (d is on index 10)</code></div>" +
+    "<div><code><em>myString</em>.charAt(11); // Return empty string (Index 11 is not within the string's length)</code></div>" +
+    "<div><code><em>myString</em>.charAt(-1); // Return empty string (Index -1 is not within the string's length)</code></div>" +
+    "</div>",
+
+  CharCodeAt:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>charCodeAt(<em>i</em>)</code> method returns the UTF-16 code of the character at a specified index (position) in a string</div>" +
+    "<div>If the index is not within the string's length (including negative index), returns <code>NaN</code> since there is empty string</div>" +
+    "<div><code>let <em>myString</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString</em>.charCodeAt(0);  // Return 72 (UTF-16 code for H is 72, which located on index 0)</code></div>" +
+    "<div><code><em>myString</em>.charCodeAt(10); // Return 100 (UTF-16 code for d is 100, which located on index 10)</code></div>" +
+    "<div><code><em>myString</em>.charCodeAt(11); // Return NaN (empty string, since index 11 is not within the string's length)</code></div>" +
+    "<div><code><em>myString</em>.charCodeAt(-1); // Return NaN (empty string, since index -1 is not within the string's length)</code></div>" +
+    "</div>",
+
+  CodePointAt:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>codePointAt(<em>i</em>)</code> method returns the Unicode value at an index (position) in a string</div>" +
+    "<div>If the index is not within the string's length (including negative index), returns <code>undefined</code> since there is no character at all</div>" +
+    "<div><code>let <em>myString</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString</em>.codePointAt(0); // Return 72 (Unicode for H is 72, which located on index 0)</code></div>" +
+    "<div><code><em>myString</em>.codePointAt(10); // Return 100 (Unicode for d is 100, which located on index 10)</code></div>" +
+    "<div><code><em>myString</em>.codePointAt(11); // Return undefined (undefined, since index 11 is not within the string's length)</code></div>" +
+    "<div><code><em>myString</em>.codePointAt(-1); // Return undefined (undefined, since index -1 is not within the string's length)</code></div>" +
+    "</div>",
+
+  Concat:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>concat(<em>string<sub>n</sub></em>)</code> method joins two or more strings</div>" +
+    "<div>The <code>concat(<em>string<sub>n</sub></em>)</code> method does not change the existing strings</div>" +
+    "<div>The <code>concat(<em>string<sub>n</sub></em>)</code> method returns a new string</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello\";</code></div>" +
+    "<div><code>let <em>myString2</em> = \"World\";</code></div>" +
+    "<div><code><em>myString1</em>.concat(<em>myString2</em>);        // Return HelloWorld</code></div>" +
+    "<div><code><em>myString1</em>.concat(\" \", <em>myString2</em>); // Return Hello World</code></div>" +
+    "</div>",
+
+  EndsWith:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>endsWith(\"<em>string</em>\", <em>position</em>)</code> method returns <code>true</code> if a string ends with a specified string</div>" +
+    "<div>Otherwise it returns <code>false</code></div>" +
+    "<div>The <code>endsWith(\"<em>string</em>\", <em>position</em>)</code> method is case sensitive</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.endsWith(\"World\");     // Return true</code></div>" +
+    "<div><code><em>myString1</em>.endsWith(\"world\");     // Return false</code></div>" +
+    "<div><code><em>myString1</em>.endsWith(\"World\", 11); // Return true (The string \"World\" is end at 11 based on normal count)</code></div>" +
+    "<div><code><em>myString1</em>.endsWith(\"World\", 10); // Return false (The position of character is based on normal count, not index)</code></div>" +
+    "</div>",
+
+  FromCharCode:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>fromCharCode(<em>code<sub>n</sub></em>)</code> method converts 1 or more Unicode values to characters</div>" +
+    "<div><code>String.fromCharCode(65); // Return A</code></div>" +
+    "<div><code>String.fromCharCode(72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100); // Return Hello World (Every code represents their own character respectively)</code></div>" +
+    "</div>",
+
+  Includes:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>includes(\"<em>string</em>\")</code> method returns <code>true</code> if a string contains a specified string</div>" +
+    "<div>Otherwise it returns <code>false</code></div>" +
+    "<div>The <code>includes(\"<em>string</em>\")</code> method is case sensitive</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.includes(\"World\"); // Return true</code></div>" +
+    "<div><code><em>myString1</em>.includes(\"world\"); // Return false</code></div>" +
+    "</div>",
+
+  IndexOf:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>indexOf(\"<em>string</em>\")</code> method returns the position of the first occurrence of the specified value in a string</div>" +
+    "<div>The <code>indexOf(\"<em>string</em>\")</code> method returns <code>-1</code> if the value is not found</div>" +
+    "<div>The <code>indexOf(\"<em>string</em>\")</code> method is case sensitive</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.indexOf(\"H\");     // Return 0 (Index 0 is the first occurence for H)</code></div>" +
+    "<div><code><em>myString1</em>.indexOf(\"l\");     // Return 2 (Index 2 is the first occurence for l)</code></div>" +
+    "<div><code><em>myString1</em>.indexOf(\"z\");     // Return -1 (The string z is not found in the string)</code></div>" +
+    "<div><code><em>myString1</em>.indexOf(\"World\"); // Return 6 (Index 6 is the first occurence for World)</code></div>" +
+    "<div><code><em>myString1</em>.indexOf(\"world\"); // Return -1 (The string world is not found in the string)</code></div>" +
+    "</div>",
+
+  LastIndexOf:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>lastIndexOf(\"<em>string</em>\")</code> method returns the index of the last occurrence of a specified value in a string</div>" +
+    "<div>The <code>lastIndexOf(\"<em>string</em>\")</code> method searches the string from the end to the beginning</div>" +
+    "<div>The <code>lastIndexOf(\"<em>string</em>\")</code> method returns the index from the beginning, index 0 and so on</div>" +
+    "<div>The <code>lastIndexOf(\"<em>string</em>\")</code> method returns <code>-1</code> if the value is not found</div>" +
+    "<div>The <code>lastIndexOf(\"<em>string</em>\")</code> method is case sensitive</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.lastIndexOf(\"H\"); // Return 0 (Index 0 is the last occurence for H)</code></div>" +
+    "<div><code><em>myString1</em>.lastIndexOf(\"l\"); // Return 9 (Index 9 is the last occurence for l)</code></div>" +
+    "<div><code><em>myString1</em>.lastIndexOf(\"z\"); // Return -1 (The string z is not found in the string)</code></div>" +
+    "<div><code><em>myString1</em>.lastIndexOf(\"World\"); // Return 6 (Index 6 is the last occurence for World)</code></div>" +
+    "<div><code><em>myString1</em>.lastIndexOf(\"world\"); // Return -1 (The string world is not found in the string)</code></div>" +
     "</div>"
 };
 
@@ -292,8 +393,88 @@ function AtMethod() {
   let myVisibility = document.getElementById("At-Method");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    let mystring = "Hello World";
     document.getElementById("At-Method").innerHTML = JSMethods.At;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function CharAtMethod() {
+  let myVisibility = document.getElementById("CharAt-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("CharAt-Method").innerHTML = JSMethods.CharAt;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function CharCodeAtMethod() {
+  let myVisibility = document.getElementById("CharCodeAt-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("CharCodeAt-Method").innerHTML = JSMethods.CharCodeAt;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function CodePointAtMethod() {
+  let myVisibility = document.getElementById("CodePointAt-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("CodePointAt-Method").innerHTML = JSMethods.CodePointAt;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ConcatMethod() {
+  let myVisibility = document.getElementById("Concat-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Concat-Method").innerHTML = JSMethods.Concat;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function EndsWithMethod() {
+  let myVisibility = document.getElementById("EndsWith-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("EndsWith-Method").innerHTML = JSMethods.EndsWith;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FromCharCodeMethod() {
+  let myVisibility = document.getElementById("FromCharCode-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("FromCharCode-Method").innerHTML = JSMethods.FromCharCode;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function IncludesMethod() {
+  let myVisibility = document.getElementById("Includes-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Includes-Method").innerHTML = JSMethods.Includes;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function IndexOfMethod() {
+  let myVisibility = document.getElementById("IndexOf-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("IndexOf-Method").innerHTML = JSMethods.IndexOf;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LastIndexOfMethod() {
+  let myVisibility = document.getElementById("LastIndexOf-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("LastIndexOf-Method").innerHTML = JSMethods.LastIndexOf;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -302,10 +483,52 @@ function AtMethod() {
 // JAVASCRIPT PROPERTIES //
 ///////////////////////////
 const JSProperties = {
+  // General Properties
+  Constructor:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>constructor</code> property returns the function that created the specified JavaScript data type prototype</div>" +
+    "<div>The <code>constructor</code> property can be applied to all JavaScript data types (number, string, boolean, array, object)</div>" +
+    "<div><code>let <em>myNumber1</em>  = 100;</code></div>" +
+    "<div><code>let <em>myString1</em>  = \"Hello World\";</code></div>" +
+    "<div><code>let <em>myBoolean1</em> = true;</code></div>" +
+    "<div><code>let <em>myArray1</em>   = [34, \"Hello\", false];</code></div>" +
+    "<div><code>let <em>myObject1</em>  = {<em>myProperty1</em>: 56, <em>myProperty2</em>: \"World\", <em>myProperty3</em>: true};</code></div>" +
+    "<div><code><em>myNumber1</em>.constructor;  // Return function Number() { [native code] }</code></div>" +
+    "<div><code><em>myString1</em>.constructor;  // Return function String() { [native code] }</code></div>" +
+    "<div><code><em>myBoolean1</em>.constructor; // Return function Boolean() { [native code] }</code></div>" +
+    "<div><code><em>myArray1</em>.constructor;   // Return function Array() { [native code] }</code></div>" +
+    "<div><code><em>myObject1</em>.constructor;  // Return function Object() { [native code] }</code></div>" +
+    "</div>",
+
   // String Properties
-  myProperty: "test"
+  Length:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>length</code> property returns the length of a string</div>" +
+    "<div>The <code>length</code> property of an empty string is 0</div>" +
+    "<div><code>let <em>myString1</em>  = \"Hello World\";</code></div>" +
+    "<div><code>let <em>myString2</em>  = \"\";</code></div>" +
+    "<div><code><em>myString1</em>.length; // Return 11 (There are 11 characters in the string)</code></div>" +
+    "<div><code><em>myString2</em>.length; // Return 0 (There is no character in empty string)</code></div>" +
+    "</div>"
 };
 
+function ConstructorProperty() {
+  let myVisibility = document.getElementById("Constructor-Property");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Constructor-Property").innerHTML = JSProperties.Constructor;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LengthProperty() {
+  let myVisibility = document.getElementById("Length-Property");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Length-Property").innerHTML = JSProperties.Length;
+  }
+  else { myVisibility.style.display = "none"; }
+}
 
 
 
