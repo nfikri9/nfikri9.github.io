@@ -333,9 +333,9 @@ const JSMethods = {
 
   EndsWith:
     "<div class=\"Sub-Topics\">" +
-    "<div>The <code>endsWith(\"<em>string</em>\", <em>position</em>)</code> method returns <code>true</code> if a string ends with a specified string</div>" +
+    "<div>The <code>endsWith(\"<em>string</em>\", <em>n</em>)</code> method returns <code>true</code> if a string ends with a specified string</div>" +
     "<div>Otherwise it returns <code>false</code></div>" +
-    "<div>The <code>endsWith(\"<em>string</em>\", <em>position</em>)</code> method is case sensitive</div>" +
+    "<div>The <code>endsWith(\"<em>string</em>\", <em>n</em>)</code> method is case sensitive</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
     "<div><code><em>myString1</em>.endsWith(\"World\");     // Return true</code></div>" +
     "<div><code><em>myString1</em>.endsWith(\"world\");     // Return false</code></div>" +
@@ -386,6 +386,180 @@ const JSMethods = {
     "<div><code><em>myString1</em>.lastIndexOf(\"z\"); // Return -1 (The string z is not found in the string)</code></div>" +
     "<div><code><em>myString1</em>.lastIndexOf(\"World\"); // Return 6 (Index 6 is the last occurence for World)</code></div>" +
     "<div><code><em>myString1</em>.lastIndexOf(\"world\"); // Return -1 (The string world is not found in the string)</code></div>" +
+    "</div>",
+
+  LocaleCompare:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>localeCompare(\"<em>string</em>\")</code> method compares two strings in the current locale</div>" +
+    "<div>The <code>localeCompare(\"<em>string</em>\")</code> method returns sort order <code>-1, 1, 0</code> (before, after, equal)</div>" +
+    "<div>The current locale is based on the language settings of the browser</div>" +
+    "<div><code>let <em>myString1</em> = \"A\";</code></div>" +
+    "<div><code>let <em>myString2</em> = \"B\";</code></div>" +
+    "<div><code>let <em>myString3</em> = \"A\";</code></div>" +
+    "<div><code><em>myString1</em>.localeCompare(<em>myString2</em>); // Return -1 (The string A comes before string B)</code></div>" +
+    "<div><code><em>myString2</em>.localeCompare(<em>myString1</em>); // Return 1 (The string B comes after string A)</code></div>" +
+    "<div><code><em>myString1</em>.localeCompare(<em>myString3</em>); // Return 0 (Both of string has same string A)</code></div>" +
+    "</div>",
+
+  Match:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>match(<em>regex</em>)</code> method matches a string against a regular expression</div>" +
+    "<div>The <code>match(<em>regex</em>)</code> method returns an array with the matches</div>" +
+    "<div>The <code>match(<em>regex</em>)</code> method returns <code>null</code> if no match is found</div>" +
+    "<div>The <code>match(<em>regex</em>)</code> method can also be tested with string as well, <code>match(\"<em>string</em>\")</code></div>" +
+    "<div><code>let <em>myString1</em> = \"The rain in SPAIN stays mainly in the plain\";</code></div>" +
+    "<div><code><em>myString1</em>.match(\"SPAIN\"); // Return SPAIN (tested with string SPAIN)</code></div>" +
+    "<div><code><em>myString1</em>.match(\"Spain\"); // Return null (No match found for string Spain)</code></div>" +
+    "<div><code><em>myString1</em>.match(/SPAIN/);   // Return SPAIN (tested with regular expression /SPAIN/)</code></div>" +
+    "<div><code><em>myString1</em>.match(/Spain/);   // Return null (tested with regular expression /Spain/)</code></div>" +
+    "<div><code><em>myString1</em>.match(/ain/g);    // Return ain, ain, ain (tested with regular expression /ain/ with global flag)</code></div>" +
+    "<div><code><em>myString1</em>.match(/ain/gi);   // Return ain, AIN, ain, ain (tested with regular expression /ain/ with global and case-insensitive flag)</code></div>" +
+    "</div>",
+
+  PadEnd:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>padEnd(<em>n, \"string\"</em>)</code> method pads a string at the end</div>" +
+    "<div>The <code>padEnd(<em>n, \"string\"</em>)</code> method pads a string with another string (multiple times) until it reaches a given length</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.padEnd(13, \"A\");   // Return Hello WorldAA (A is padded at the end of the string until reach the new allocated string's length)</code></div>" +
+    "<div><code><em>myString1</em>.padEnd(13, \"ABC\"); // Return Hello WorldAB (Onlyt AB is padded at the end of the string due to its new allocated string's length)</code></div>" +
+    "<div><code><em>myString1</em>.padEnd(11, \"A\");   // Return Hello World (A is not padded at the end since the allocated number is same as string's length)</code></div>" +
+    "</div>",
+
+  PadStart:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>padStart(<em>n, \"string\"</em>)</code> method pads a string from the start</div>" +
+    "<div>The <code>padStart(<em>n, \"string\"</em>)</code> method pads a string with another string (multiple times) until it reaches a given length</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.padStart(13, \"A\");   // Return AAHello World (A is padded at the start of the string until reach the new allocated string's length)</code></div>" +
+    "<div><code><em>myString1</em>.padStart(13, \"ABC\"); // Return ABHello World (Only AB is padded at the start of the string due to its new allocated string's length)</code></div>" +
+    "<div><code><em>myString1</em>.padStart(11, \"A\");   // Return Hello World (A is not padded at the start since the allocated number is same as string's length)</code></div>" +
+    "</div>",
+
+  Repeat:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>repeat(<em>n</em>)</code> method returns a string with a number of copies of a string</div>" +
+    "<div>The <code>repeat(<em>n</em>)</code> method returns a new string</div>" +
+    "<div>The <code>repeat(<em>n</em>)</code> method does not change the original string</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.repeat(2); // Return Hello WorldHello World (2 times of the string)</code></div>" +
+    "<div><code><em>myString1</em>.repeat(3); // Return Hello WorldHello WorldHello World (3 times of the string)</code></div>" +
+    "</div>",
+
+  Replace:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>replace(<em>regex</em>)</code> method searches a string for a value or a regular expression</div>" +
+    "<div>The <code>replace(<em>regex</em>)</code> method returns a new string with the value(s) replaced</div>" +
+    "<div>The <code>replace(<em>regex</em>)</code> method does not change the original string</div>" +
+    "<div>The <code>replace(<em>regex</em>)</code> method can also be tested with string as well, <code>replace(\"<em>string</em>\", \"<em>string<sub>new</sub></em>\")</code></div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.replace(\"World\", \"John\"); // Return Hello John (tested with string World replaced by string John)</code></div>" +
+    "<div><code><em>myString1</em>.replace(/World/, \"John\"); // Return Hello John (tested with regular expression World replaced by string John)</code></div>" +
+    "</div>",
+
+  ReplaceAll:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>replaceAll(\"<em>string</em>\", \"<em>string<sub>new</sub></em>\")</code> method searches a string for a value or a regular expression</div>" +
+    "<div>The <code>replaceAll(\"<em>string</em>\", \"<em>string<sub>new</sub></em>\")</code> method returns a new string with all values replaced</div>" +
+    "<div>The <code>replaceAll(\"<em>string</em>\", \"<em>string<sub>new</sub></em>\")</code> method does not change the original string</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World Morning World\";</code></div>" +
+    "<div><code><em>myString1</em>.replaceAll(\"World\", \"John\"); // Return Hello John Morning John (tested with all string World replaced by string John)</code></div>" +
+    "</div>",
+
+  Search:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>search()</code> method matches a string against a regular expression</div>" +
+    "<div>The <code>search()</code> method returns the index of the first match</div>" +
+    "<div>The <code>search()</code> method returns -1 if no match is found</div>" +
+    "<div>The <code>search()</code> method is case sensitive</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.search(/l/); // Return 2 (The first occurence of string l is at index 2)</code></div>" +
+    "<div><code><em>myString1</em>.search(\"World\"); // Return 6 (The first occurence of string World is at index 6)</code></div>" +
+    "<div><code><em>myString1</em>.search(\"world\"); // Return -1 (There is no string world is found)</code></div>" +
+    "</div>",
+
+  Slice:
+    "<div class=\"Sub-Topics\">" +
+    "<div>slice()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  Split:
+    "<div class=\"Sub-Topics\">" +
+    "<div>split()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  StartsWith:
+    "<div class=\"Sub-Topics\">" +
+    "<div>startsWith()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  Substr:
+    "<div class=\"Sub-Topics\">" +
+    "<div>substr()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  Substring:
+    "<div class=\"Sub-Topics\">" +
+    "<div>substring()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+    ToLocaleLowerCase:
+    "<div class=\"Sub-Topics\">" +
+    "<div>toLocaleLowerCase()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  ToLocaleUpperCase:
+    "<div class=\"Sub-Topics\">" +
+    "<div>toLocaleUpperCase()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  ToLowerCase:
+    "<div class=\"Sub-Topics\">" +
+    "<div>toLowerCase()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  ToString:
+    "<div class=\"Sub-Topics\">" +
+    "<div>toString()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  ToUpperCase:
+    "<div class=\"Sub-Topics\">" +
+    "<div>toUpperCase()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  Trim:
+    "<div class=\"Sub-Topics\">" +
+    "<div>trim()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  TrimEnd:
+    "<div class=\"Sub-Topics\">" +
+    "<div>trimEnd()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>",
+
+  TrimStart:
+    "<div class=\"Sub-Topics\">" +
+    "<div>trimStart()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "</div>", 
+
+  ValueOf:
+    "<div class=\"Sub-Topics\">" +
+    "<div>valueOf()</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
     "</div>"
 };
 
@@ -479,6 +653,204 @@ function LastIndexOfMethod() {
   else { myVisibility.style.display = "none"; }
 }
 
+function LocaleCompareMethod() {
+  let myVisibility = document.getElementById("LocaleCompare-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("LocaleCompare-Method").innerHTML = JSMethods.LocaleCompare;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MatchMethod() {
+  let myVisibility = document.getElementById("Match-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Match-Method").innerHTML = JSMethods.Match;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function PadEndMethod() {
+  let myVisibility = document.getElementById("PadEnd-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("PadEnd-Method").innerHTML = JSMethods.PadEnd;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function PadStartMethod() {
+  let myVisibility = document.getElementById("PadStart-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("PadStart-Method").innerHTML = JSMethods.PadStart;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function RepeatMethod() {
+  let myVisibility = document.getElementById("Repeat-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Repeat-Method").innerHTML = JSMethods.Repeat;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ReplaceMethod() {
+  let myVisibility = document.getElementById("Replace-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Replace-Method").innerHTML = JSMethods.Replace;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ReplaceAllMethod() {
+  let myVisibility = document.getElementById("ReplaceAll-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("ReplaceAll-Method").innerHTML = JSMethods.ReplaceAll;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SearchMethod() {
+  let myVisibility = document.getElementById("Search-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Search-Method").innerHTML = JSMethods.Search;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SliceMethod() {
+  let myVisibility = document.getElementById("Slice-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Slice-Method").innerHTML = JSMethods.Slice;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SplitMethod() {
+  let myVisibility = document.getElementById("Split-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Split-Method").innerHTML = JSMethods.Split;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function StartsWithMethod() {
+  let myVisibility = document.getElementById("StartsWith-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("StartsWith-Method").innerHTML = JSMethods.StartsWith;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SubstrMethod() {
+  let myVisibility = document.getElementById("Substr-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Substr-Method").innerHTML = JSMethods.Substr;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SubstringMethod() {
+  let myVisibility = document.getElementById("Substring-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Substring-Method").innerHTML = JSMethods.Substring;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ToLocaleLowerCaseMethod() {
+  let myVisibility = document.getElementById("ToLocaleLowercase-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("ToLocaleLowercase-Method").innerHTML = JSMethods.ToLocaleLowerCase;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ToLocaleUpperCaseMethod() {
+  let myVisibility = document.getElementById("ToLocaleUpperCase-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("ToLocaleUpperCase-Method").innerHTML = JSMethods.ToLocaleUpperCase;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ToLowerCaseMethod() {
+  let myVisibility = document.getElementById("ToLowerCase-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("ToLowerCase-Method").innerHTML = JSMethods.ToLowerCase;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ToStringMethod() {
+  let myVisibility = document.getElementById("ToString-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("ToString-Method").innerHTML = JSMethods.ToString;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ToUpperCaseMethod() {
+  let myVisibility = document.getElementById("ToUpperCase-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("ToUpperCase-Method").innerHTML = JSMethods.ToUpperCase;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrimMethod() {
+  let myVisibility = document.getElementById("Trim-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Trim-Method").innerHTML = JSMethods.Trim;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrimEndMethod() {
+  let myVisibility = document.getElementById("TrimEnd-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("TrimEnd-Method").innerHTML = JSMethods.TrimEnd;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrimStartMethod() {
+  let myVisibility = document.getElementById("TrimStart-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("TrimStart-Method").innerHTML = JSMethods.TrimStart;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ValueOfMethod() {
+  let myVisibility = document.getElementById("ValueOf-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("ValueOf-Method").innerHTML = JSMethods.ValueOf;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 ///////////////////////////
 // JAVASCRIPT PROPERTIES //
 ///////////////////////////
@@ -498,6 +870,20 @@ const JSProperties = {
     "<div><code><em>myBoolean1</em>.constructor; // Return function Boolean() { [native code] }</code></div>" +
     "<div><code><em>myArray1</em>.constructor;   // Return function Array() { [native code] }</code></div>" +
     "<div><code><em>myObject1</em>.constructor;  // Return function Object() { [native code] }</code></div>" +
+    "</div>",
+
+  Prototype:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>prototype</code> is a property available with all JavaScript objects</div>" +
+    "<div>The <code>prototype</code> property allows user to add new properties and methods to strings</div>" +
+    "<div class=\"Indent-Level1\"><code>const <em>myFunction1</em> = (<em>myArgument1, myArgument2, myArgument3,</em>) => {</code></div>" +
+    "<div class=\"Indent-Level2\"><code>this.<em>myProperty1</em> = <em>myArgument1</em>;</code></div>" +
+    "<div class=\"Indent-Level2\"><code>this.<em>myProperty2</em> = <em>myArgument2</em>;</code></div>" +
+    "<div class=\"Indent-Level2\"><code>this.<em>myProperty3</em> = <em>myArgument3</em>;</code></div>" +
+    "<div class=\"Indent-Level1\"><code>}</code></div>" +
+    "<br>" +
+    "<div class=\"Indent-Level1\"><code>const <em>myString1</em> = new <em>myFunction1</em>(\"String1\", \"String2\", \"String3\");</code></div>" +
+    "<div class=\"Indent-Level1\"><code><em>myFunction1</em>.prototype.<em>myProperty4</em> = \"String4\"; </code></div>" +
     "</div>",
 
   // String Properties
@@ -526,6 +912,15 @@ function LengthProperty() {
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
     document.getElementById("Length-Property").innerHTML = JSProperties.Length;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function PrototypeProperty() {
+  let myVisibility = document.getElementById("Prototype-Property");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Prototype-Property").innerHTML = JSProperties.Prototype;
   }
   else { myVisibility.style.display = "none"; }
 }
