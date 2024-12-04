@@ -184,15 +184,12 @@
       <div><span><code onclick="RepeatMethod()">repeat(<em>n</em>)</code></span> <div id="Repeat-Method"></div> </div>
       <div><span><code onclick="ReplaceMethod()">replace(<em>regex</em>)</code></span> <div id="Replace-Method"></div> </div>
       <div><span><code onclick="ReplaceAllMethod()">replaceAll("<em>string</em>", "<em>string<sub>new</sub></em>")</code></span> <div id="ReplaceAll-Method"></div> </div>
-      <div><span><code onclick="SearchMethod()">search()</code></span> <div id="Search-Method"></div> </div>
-
-      <div id="test"></div> <script> let x = "Hello World"; document.getElementById("test").innerText = x.search(/l/);</script>
-      
-      <div><span><code onclick="SliceMethod()">slice()</code></span> <div id="Slice-Method"></div> </div>
-      <div><span><code onclick="SplitMethod()">split()</code></span> <div id="Split-Method"></div> </div>
-      <div><span><code onclick="StartsWithMethod()">startsWith()</code></span> <div id="StartsWith-Method"></div> </div>
-      <div><span><code onclick="SubstrMethod()">substr()</code></span> <div id="Substr-Method"></div> </div>
-      <div><span><code onclick="SubstringMethod()">substring()</code></span> <div id="Substring-Method"></div> </div>
+      <div><span><code onclick="SearchMethod()">search(<em>regex</em>)</code></span> <div id="Search-Method"></div> </div>
+      <div><span><code onclick="SliceMethod()">slice(<em>i, n</em>)</code></span> <div id="Slice-Method"></div> </div>
+      <div><span><code onclick="SplitMethod()">split(<em>"string", n</em>)</code></span> <div id="Split-Method"></div> </div>
+      <div><span><code onclick="StartsWithMethod()">startsWith("<em>string</em>")</code></span> <div id="StartsWith-Method"></div> </div>
+      <div><span><code onclick="SubstrMethod()">substr(<em>i, n</em>)</code></span> <div id="Substr-Method"></div> </div>
+      <div><span><code onclick="SubstringMethod()">substring(<em>i, n</em>)</code></span> <div id="Substring-Method"></div> </div>
       <div><span><code onclick="ToLocaleLowerCaseMethod()">toLocaleLowerCase()</code></span> <div id="ToLocaleLowercase-Method"></div> </div>
       <div><span><code onclick="ToLocaleUpperCaseMethod()">toLocaleUpperCase()</code></span> <div id="ToLocaleUpperCase-Method"></div> </div>
       <div><span><code onclick="ToLowerCaseMethod()">toLowerCase()</code></span> <div id="ToLowerCase-Method"></div> </div>
@@ -202,6 +199,7 @@
       <div><span><code onclick="TrimEndMethod()">trimEnd()</code></span> <div id="TrimEnd-Method"></div> </div>
       <div><span><code onclick="TrimStartMethod()">trimStart()</code></span> <div id="TrimStart-Method"></div> </div>
       <div><span><code onclick="ValueOfMethod()">valueOf()</code></span> <div id="ValueOf-Method"></div> </div>
+      <div id="test"></div> <script> let x = true; document.getElementById("test").innerText = x.valueOf();</script>
     </div>
   </div>
 </div>

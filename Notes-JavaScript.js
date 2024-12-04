@@ -273,6 +273,32 @@ function Decrement() {
 // JAVASCRIPT METHODS //
 ////////////////////////
 const JSMethods = {
+  // General Methods
+  ToString:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>toString()</code> method returns any JavaScript data types as a string</div>" +
+    "<div>The <code>toString()</code> method does not change the original data type</div>" +
+    "<div>The <code>toString()</code> method can be used to convert any Javascript object into a string</div>" +
+    "<div><code>let <em>myNumber1</em>  = 100;</code></div>" +
+    "<div><code>let <em>myString1</em>  = \"Hello World\";</code></div>" +
+    "<div><code>let <em>myBoolean1</em> = true;</code></div>" +
+    "<div><code><em>myNumber1</em>.toString();  // Return 100 (The datatype is no longer number, but now is string)</code></div>" +
+    "<div><code><em>myString1</em>.toString();  // Return Hello World (The datatype is already string)</code></div>" +
+    "<div><code><em>myBoolean1</em>.toString(); // Return true (The datatype is no longer boolean, but now is string)</code></div>" +
+    "</div>",
+
+  ValueOf:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>valueOf()</code> method returns the primitive value of a specified data type</div>" +
+    "<div>The <code>valueOf()</code> method does not change the original value</div>" +
+    "<div><code>let <em>myNumber1</em>  = 100;</code></div>" +
+    "<div><code>let <em>myString1</em>  = \"Hello World\";</code></div>" +
+    "<div><code>let <em>myBoolean1</em> = true;</code></div>" +
+    "<div><code><em>myNumber1</em>.valueOf();  // Return 100</code></div>" +
+    "<div><code><em>myString1</em>.valueOf();  // Return Hello World</code></div>" +
+    "<div><code><em>myBoolean1</em>.valueOf(); // Return true</code></div>" +
+    "</div>",
+  
   // String Methods
   At:
     "<div class=\"Sub-Topics\">" +
@@ -468,10 +494,10 @@ const JSMethods = {
 
   Search:
     "<div class=\"Sub-Topics\">" +
-    "<div>The <code>search()</code> method matches a string against a regular expression</div>" +
-    "<div>The <code>search()</code> method returns the index of the first match</div>" +
-    "<div>The <code>search()</code> method returns -1 if no match is found</div>" +
-    "<div>The <code>search()</code> method is case sensitive</div>" +
+    "<div>The <code>search(<em>regex</em>)</code> method matches a string against a regular expression</div>" +
+    "<div>The <code>search(<em>regex</em>)</code> method returns the index of the first match</div>" +
+    "<div>The <code>search(<em>regex</em>)</code> method returns -1 if no match is found</div>" +
+    "<div>The <code>search(<em>regex</em>)</code> method is case sensitive</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
     "<div><code><em>myString1</em>.search(/l/); // Return 2 (The first occurence of string l is at index 2)</code></div>" +
     "<div><code><em>myString1</em>.search(\"World\"); // Return 6 (The first occurence of string World is at index 6)</code></div>" +
@@ -480,86 +506,140 @@ const JSMethods = {
 
   Slice:
     "<div class=\"Sub-Topics\">" +
-    "<div>slice()</div>" +
+    "<div>The <code>slice(<em>i, n</em>)</code> method extracts a part of a string</div>" +
+    "<div>The <code>slice(<em>i, n</em>)</code> method returns the extracted part in a new string</div>" +
+    "<div>The <code>slice(<em>i, n</em>)</code> method does not change the original string</div>" +
+    "<div>A negative number selects from the end of the string</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.slice(0);    // Extract Hello World (Extracts the whole string)</code></div>" +
+    "<div><code><em>myString1</em>.slice(6);    // Extract World (Extraction start from index 6, W until the end of string)</code></div>" +
+    "<div><code><em>myString1</em>.slice(-1);   // Extract d (Extracts the last character)</code></div>" +
+    "<div><code><em>myString1</em>.slice(0, 5); // Extract Hello (Extraction start from index 0, H until the first 5th character, o)</code></div>" +
     "</div>",
 
   Split:
     "<div class=\"Sub-Topics\">" +
-    "<div>split()</div>" +
+    "<div>The <code>split(<em>\"string\", n</em>)</code> method splits a string into an array of substrings</div>" +
+    "<div>The <code>split(<em>\"string\", n</em>)</code> method returns the new array</div>" +
+    "<div>The <code>split(<em>\"string\", n</em>)</code> method does not change the original string</div>" +
+    "<div>If (\" \") is used as separator, the string is split between words</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code>const <em>myArray1</em> = <em>myString1</em>.split(\"\");    // myArray1 = [\"H\",\"e\",\"l\",\"l\",\"o\",\" \",\"W\",\"o\",\"r\",\"l\",\"d\"]</code></div>" +
+    "<div><code>const <em>myArray2</em> = <em>myString1</em>.split(\"\", 5); // myArray2 = [\"H\",\"e\",\"l\",\"l\",\"o\"]</code></div>" +
+    "<div><code>const <em>myArray3</em> = <em>myString1</em>.split(\" \");   // myArray3 = [\"Hello\",\"World\"]</code></div>" +
     "</div>",
 
   StartsWith:
     "<div class=\"Sub-Topics\">" +
-    "<div>startsWith()</div>" +
+    "<div>The <code>startsWith(\"<em>string</em>\")</code> method returns <code>true</code> if a string starts with a specified string</div>" +
+    "<div>Otherwise it returns <code>false</code></div>" +
+    "<div>The <code>startsWith(\"<em>string</em>\")</code> method is case sensitive</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.startsWith(\"Hello\"); // Return true</code></div>" +
+    "<div><code><em>myString1</em>.startsWith(\"hello\"); // Return false</code></div>" +
     "</div>",
 
   Substr:
     "<div class=\"Sub-Topics\">" +
-    "<div>substr()</div>" +
+    "<div>The <code>substr(<em>i, n</em>)</code> method extracts a part of a string</div>" +
+    "<div>The <code>substr(<em>i, n</em>)</code> method begins at a specified position, and returns a specified number of characters</div>" +
+    "<div>The <code>substr(<em>i, n</em>)</code> method does not change the original string</div>" +
+    "<div>To extract characters from the end of the string, use a negative start position</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.substr(0);    // Extract Hello World (Extracts the whole string)</code></div>" +
+    "<div><code><em>myString1</em>.substr(6);    // Extract World (Extraction start from index 6, W until the end of string)</code></div>" +
+    "<div><code><em>myString1</em>.substr(-1);   // Extract d (Extracts the last character)</code></div>" +
+    "<div><code><em>myString1</em>.substr(0, 5); // Extract Hello (Extraction start from index 0, H until the first 5th character, o)</code></div>" +
     "</div>",
 
   Substring:
     "<div class=\"Sub-Topics\">" +
-    "<div>substring()</div>" +
+    "<div>The <code>substring(<em>i, n</em>)</code> method extracts characters, between two indices (positions) from a string, and returns the substring</div>" +
+    "<div>The <code>substring(<em>i, n</em>)</code> method extracts characters from start to end (specified counter)</div>" +
+    "<div>The <code>substring(<em>i, n</em>)</code> method does not change the original string</div>" +
+    "<div>If start is greater than end, arguments are swapped: (4, 1) = (1, 4)</div>" +
+    "<div>Start or end values less than 0, are treated as 0</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.substring(1, 5); // Return ello (Extractions starts from index 1, e until the first 5th character, o)</code></div>" +
     "</div>",
 
-    ToLocaleLowerCase:
+  ToLocaleLowerCase:
     "<div class=\"Sub-Topics\">" +
-    "<div>toLocaleLowerCase()</div>" +
+    "<div>The <code>toLocaleLowerCase()</code> method converts a string to lowercase letters, using current locale</div>" +
+    "<div>The locale is based on the language settings of the browser</div>" +
+    "<div>The <code>toLocaleLowerCase()</code> method does not change the original string</div>" +
+    "<div>The <code>toLocaleLowerCase()</code> method does not change the original string</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.toLocaleLowerCase(); // Return hello world</code></div>" +
     "</div>",
 
   ToLocaleUpperCase:
     "<div class=\"Sub-Topics\">" +
-    "<div>toLocaleUpperCase()</div>" +
+    "<div>The <code>toLocaleUpperCase()</code> method converts a string to uppercase letters, using current locale</div>" +
+    "<div>The locale is based on the language settings of the browser</div>" +
+    "<div>The <code>toLocaleUpperCase()</code> method does not change the original string</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.toLocaleUpperCase(); // Return HELLO WORLD</code></div>" +
     "</div>",
 
   ToLowerCase:
     "<div class=\"Sub-Topics\">" +
-    "<div>toLowerCase()</div>" +
+    "<div>The <code>toLowerCase()</code> method converts a string to lowercase letters</div>" +
+    "<div>The <code>toLowerCase()</code> method does not change the original string</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
-    "</div>",
-
-  ToString:
-    "<div class=\"Sub-Topics\">" +
-    "<div>toString()</div>" +
-    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.toLowerCase(); // Return hello world</code></div>" +
     "</div>",
 
   ToUpperCase:
     "<div class=\"Sub-Topics\">" +
-    "<div>toUpperCase()</div>" +
+    "<div>The <code>toUpperCase()</code> method converts a string to uppercase letters</div>" +
+    "<div>The <code>toUpperCase()</code> method does not change the original string</div>" +
     "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div><code><em>myString1</em>.toUpperCase(); // Return HELLO WORLD</code></div>" +
     "</div>",
 
   Trim:
     "<div class=\"Sub-Topics\">" +
-    "<div>trim()</div>" +
-    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div>The <code>trim()</code> method removes whitespace from both sides of a string</div>" +
+    "<div>The whitespace in between strings are not affected, only at the start and at the end of the string</div>" +
+    "<div>The <code>trim()</code> method does not change the original string</div>" +
+    "<div>The <code>replace(/^\s+|\s+$/gm, \"\")</code> method is same as the <code>trim()</code> method</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World1\";</code></div>" +
+    "<div><code>let <em>myString2</em> = \"     Hello World2\";</code></div>" +
+    "<div><code>let <em>myString3</em> = \"Hello World3     \";</code></div>" +
+    "<div><code>let <em>myString4</em> = \"   Hello World4  \";</code></div>" +
+    "<div><code><em>myString1</em>.trim(); // Return Hello World1 (There is no whitespace to remove from both sides)</code></div>" +
+    "<div><code><em>myString2</em>.trim(); // Return Hello World2 (The whitespace from the beginning of the string is removed)</code></div>" +
+    "<div><code><em>myString3</em>.trim(); // Return Hello World3 (The whitespace from the end of the string is removed)</code></div>" +
+    "<div><code><em>myString4</em>.trim(); // Return Hello World4 (The whitespace from both sides are removed)</code></div>" +
     "</div>",
 
   TrimEnd:
     "<div class=\"Sub-Topics\">" +
-    "<div>trimEnd()</div>" +
-    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div>The <code>trimEnd()</code> method removes whitespace from the end of a string</div>" +
+    "<div>The <code>trimEnd()</code> method does not change the original string</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World1\";</code></div>" +
+    "<div><code>let <em>myString2</em> = \"     Hello World2\";</code></div>" +
+    "<div><code>let <em>myString3</em> = \"Hello World3     \";</code></div>" +
+    "<div><code>let <em>myString4</em> = \"   Hello World4  \";</code></div>" +
+    "<div><code><em>myString1</em>.trimEnd(); // Return Hello World1 (There is no whitespace to remove from the end of the string)</code></div>" +
+    "<div><code><em>myString2</em>.trimEnd(); // Return \" Hello World2\" (There is no whitespace to remove from the end of the string)</code></div>" +
+    "<div><code><em>myString3</em>.trimEnd(); // Return \"Hello World3\" (The whitespace from the end of the string is removed)</code></div>" +
+    "<div><code><em>myString4</em>.trimEnd(); // Return \" Hello World4\" (Only the whitespace from the end of the string is removed)</code></div>" +
     "</div>",
 
   TrimStart:
     "<div class=\"Sub-Topics\">" +
-    "<div>trimStart()</div>" +
-    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
-    "</div>", 
-
-  ValueOf:
-    "<div class=\"Sub-Topics\">" +
-    "<div>valueOf()</div>" +
-    "<div><code>let <em>myString1</em> = \"Hello World\";</code></div>" +
+    "<div>The <code>trimStart()</code> method removes whitespace from the beginning of a string</div>" +
+    "<div>The <code>trimStart()</code> method does not change the original string</div>" +
+    "<div><code>let <em>myString1</em> = \"Hello World1\";</code></div>" +
+    "<div><code>let <em>myString2</em> = \"     Hello World2\";</code></div>" +
+    "<div><code>let <em>myString3</em> = \"Hello World3     \";</code></div>" +
+    "<div><code>let <em>myString4</em> = \"   Hello World4  \";</code></div>" +
+    "<div><code><em>myString1</em>.trimStart(); // Return Hello World1 (There is no whitespace to remove from the beginning of the string)</code></div>" +
+    "<div><code><em>myString2</em>.trimStart(); // Return \"Hello World2\" (The whitespace from the beginning of the string is removed)</code></div>" +
+    "<div><code><em>myString3</em>.trimStart(); // Return \"Hello World3 \" (There is no whitespace to remove from the beginning of the string)</code></div>" +
+    "<div><code><em>myString4</em>.trimStart(); // Return \"Hello World4 \" (Only the whitespace from the beginning of the string is removed)</code></div>" +
     "</div>"
 };
 
