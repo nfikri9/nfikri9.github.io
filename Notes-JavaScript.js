@@ -10,6 +10,17 @@ function JavaScriptIntroduction() {
 }
 
 ///////////////////////////
+// JAVASCRIPT STATEMENTS //
+///////////////////////////
+function JavaScriptStatements() {
+  let myVisibility = document.getElementById("JavaScript-Statements");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+///////////////////////////
 // JAVASCRIPT DATA TYPES //
 ///////////////////////////
 function JavaScriptDataTypes() {
@@ -297,6 +308,14 @@ const JSMethods = {
     "<div><code><em>myNumber1</em>.valueOf();  // Return 100</code></div>" +
     "<div><code><em>myString1</em>.valueOf();  // Return Hello World</code></div>" +
     "<div><code><em>myBoolean1</em>.valueOf(); // Return true</code></div>" +
+    "</div>",
+
+  // Number Methods
+  IsFinite:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>isFinite(<em>value</em>)</code> method converts the value to a number, then returns <code>true</code> if the value is a finite number</div>" +
+    "<div>The <code>Number.isFinite()</code> method returns <code>true</code> if a number is a finite number (without changing its data type)</div>" +
+    "<div>Infinite numbers like <code>Infinity, -Infinity, NaN</code> will return <code>false</code></div>" +
     "</div>",
   
   // String Methods
@@ -724,6 +743,15 @@ function IndexOfMethod() {
   else { myVisibility.style.display = "none"; }
 }
 
+function IsFiniteMethod() {
+  let myVisibility = document.getElementById("IsFinite-Method");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("IsFinite-Method").innerHTML = JSMethods.IsFinite;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 function LastIndexOfMethod() {
   let myVisibility = document.getElementById("LastIndexOf-Method");
   if (myVisibility.style.display === "none") {
@@ -966,6 +994,16 @@ const JSProperties = {
     "<div class=\"Indent-Level1\"><code><em>myFunction1</em>.prototype.<em>myProperty4</em> = \"String4\"; </code></div>" +
     "</div>",
 
+  // Number Properties
+  Epsilon:
+    "<div class=\"Sub-Topics\">" +
+    "<div>The <code>EPSILON</code> property returns the difference between the smallest floating point number greater than 1 and 1</div>" +
+    "<div><code>Number.EPSILON</code> has the value of <code>2.220446049250313e-16</code></div>" +
+    "<div><code>let <em>myNumber1</em> = 100;            // myNumber1 = 100</code></div>" +
+    "<div><code>let <em>myNumber2</em> = Number.EPSILON; // myNumber2 = 2.220446049250313e-16</code></div>" +
+    "<div><code><em>myNumber1</em>.EPSILON;              // myNumber1 = undefined (unable to replace the existing value of 100)</code></div>" +
+    "</div>",
+
   // String Properties
   Length:
     "<div class=\"Sub-Topics\">" +
@@ -978,11 +1016,29 @@ const JSProperties = {
     "</div>"
 };
 
-function ConstructorProperty() {
-  let myVisibility = document.getElementById("Constructor-Property");
+function ConstructorNumber() {
+  let myVisibility = document.getElementById("Constructor-Number");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Constructor-Property").innerHTML = JSProperties.Constructor;
+    document.getElementById("Constructor-Number").innerHTML = JSProperties.Constructor;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ConstructorString() {
+  let myVisibility = document.getElementById("Constructor-String");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Constructor-String").innerHTML = JSProperties.Constructor;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function EpsilonProperty() {
+  let myVisibility = document.getElementById("Epsilon-Property");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Epsilon-Property").innerHTML = JSProperties.Epsilon;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -1018,19 +1074,6 @@ function PrototypeProperty() {
 // JAVASCRIPT METHODS & PROPERTIES //
 /////////////////////////////////////
 const JSMethodsProperties = {
-  propertyConstructor:
-    "<div class=\"Sub-Topics\">" +
-    "<div>The <code>constructor</code> property returns the function that created the Number prototype</div>" +
-    "<div>The JavaScript data types that can use <code>constructor</code> property are number</div>" +
-    "<div><code>function Number() { <em>Codes</em> }</code></div>" +
-    "</div>",
-
-  propertyEpsilon:
-    "<div class=\"Sub-Topics\">" +
-    "<div><code>Number.EPSILON</code> returns the difference between the smallest floating point number greater than 1 and 1</div>" +
-    "<div><code>Number.EPSILON</code> has the value of 2.220446049250313e-16</div>" +
-    "</div>",
-
   propertyMaxsafeinteger:
     "<div class=\"Sub-Topics\">" +
     "<div><code>Number.MAX_SAFE_INTEGER</code> represents the maximum safe integer in JavaScript</div>" +
@@ -1081,13 +1124,6 @@ const JSMethodsProperties = {
     "<div>It is not recommended to change the prototype of an object that user do not control</div>" +
     "<div>User should not change the prototype of built in JavaScript datatypes like Numbers, Strings, Arrays, Dates, Booleans, Function, Objects</div>" +
     "<div>Only change the prototype of user's own objects</div>" +
-    "</div>",
-
-  methodIsfinite:
-    "<div class=\"Sub-Topics\">" +
-    "<div>The <code>isFinite()</code> method converts the value to a number, then returns <code>true</code> if the value is a finite number</div>" +
-    "<div>The <code>Number.isFinite()</code> method returns <code>true</code> if a number is a finite number (without changing its data type)</div>" +
-    "<div>Infinite numbers like <code>Infinity, -Infinity, NaN</code> will return <code>false</code></div>" +
     "</div>",
 
   methodIsinteger:
@@ -1167,33 +1203,6 @@ const JSMethodsProperties = {
     "<div>The <code>valueOf()</code> method returns the primitive value of a number</div>" +
     "</div>"
 };
-
-function ConstructorNumber() {
-  let myVisibility = document.getElementById("Constructor-Number");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-    document.getElementById("Constructor-Number").innerHTML = JSMethodsProperties.propertyConstructor;
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
-function EpsilonNumber() {
-  let myVisibility = document.getElementById("Epsilon-Number");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-    document.getElementById("Epsilon-Number").innerHTML = JSMethodsProperties.propertyEpsilon;
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
-function IsfiniteNumber() {
-  let myVisibility = document.getElementById("Isfinite-Number");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-    document.getElementById("Isfinite-Number").innerHTML = JSMethodsProperties.methodIsfinite;
-  }
-  else { myVisibility.style.display = "none"; }
-}
 
 function IsintegerNumber() {
   let myVisibility = document.getElementById("Isinteger-Number");

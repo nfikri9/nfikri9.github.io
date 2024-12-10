@@ -36,6 +36,7 @@
 <!---------------------->
 <div id="Box-Topic-Selections">
   <button onclick="JavaScriptIntroduction()">INTRODUCTION</button>
+  <button onclick="JavaScriptStatements()">STATEMENTS</button>
   <button onclick="JavaScriptDataTypes()">DATA TYPES</button>
   <button onclick="JavaScriptOperators()">OPERATORS</button>
 </div>
@@ -48,6 +49,28 @@
 
 <div class="Sub-Topics"> <h3>What is JavaScript?</h3>
   <div>JavaScript is the programming language of the Web</div>
+</div>
+</section>
+
+<!--------------------------->
+<!-- JAVASCRIPT STATEMENTS -->
+<!--------------------------->
+<section id="JavaScript-Statements" class="Box-Contents">
+<h1>STATEMENTS</h1>
+
+<div class="Sub-Topics">
+  <h3><code>var <em>myIdentifier</em></code></h3>
+  <div><code>var x = 1;     // Identifier x is initialized with value of 1</code></div>
+  <div><code>var x = 2;     // Identifier x is re-initialized with new value of 2 (replacing the old value, 1)</code></div>
+  <div><code>{ var x = 2; } // Identifier x is initialized within new block scope  new value of 2 (replacing the old value, 1)</code></div>
+</div>
+
+<div class="Sub-Topics">
+  <h3><code>let <em>myIdentifier</em></code></h3>
+</div>
+
+<div class="Sub-Topics">
+  <h3><code>const <em>myIdentifier</em></code></h3>
 </div>
 </section>
 
@@ -103,8 +126,11 @@
 
     <div class="Sub-Topics"> <span class="Topics">JavaScript Number Methods & Properties</span>
       <div><code onclick="ConstructorNumber()">constructor</code> <div id="Constructor-Number"></div> </div>
-      <div><code onclick="EpsilonNumber()">EPSILON</code> <div id="Epsilon-Number"></div> </div>
-      <div><code onclick="IsfiniteNumber()">isFinite()</code> <div id="Isfinite-Number"></div> </div>
+      <div><code onclick="EpsilonProperty()">EPSILON</code> <div id="Epsilon-Property"></div> </div>
+      <div><code onclick="IsFiniteMethod()">isFinite()</code> <div id="IsFinite-Method"></div> </div>
+
+      <div id="test"></div> <script> let x = Number.EPSILON; document.getElementById("test").innerText = x;</script>
+      
       <div><code onclick="IsintegerNumber()">isInteger()</code> <div id="Isinteger-Number"></div> </div>
       <div><code onclick="IsnanNumber()">isNaN()</code> <div id="Isnan-Number"></div> </div>
       <div><code onclick="IssafeintegerNumber()">isSafeInteger()</code> <div id="Issafeinteger-Number"></div> </div>
@@ -169,7 +195,7 @@
       <div><span><code onclick="CharCodeAtMethod()">charCodeAt(<em>i</em>)</code></span> <div id="CharCodeAt-Method"></div> </div>
       <div><span><code onclick="CodePointAtMethod()">codePointAt(<em>i</em>)</code></span> <div id="CodePointAt-Method"></div> </div>
       <div><span><code onclick="ConcatMethod()">concat(<em>string<sub>n</sub></em>)</code></span> <div id="Concat-Method"></div> </div>
-      <div><span><code onclick="ConstructorProperty()">constructor</code></span> <div id="Constructor-Property"></div> </div>
+      <div><span><code onclick="ConstructorString()">constructor</code></span> <div id="Constructor-String"></div> </div>
       <div><span><code onclick="EndsWithMethod()">endsWith("<em>string</em>", <em>n</em>)</code></span> <div id="EndsWith-Method"></div> </div>
       <div><span><code onclick="FromCharCodeMethod()">fromCharCode(<em>code<sub>n</sub></em>)</code></span> <div id="FromCharCode-Method"></div> </div>
       <div><span><code onclick="IncludesMethod()">includes("<em>string</em>")</code></span> <div id="Includes-Method"></div> </div>
@@ -199,7 +225,6 @@
       <div><span><code onclick="TrimEndMethod()">trimEnd()</code></span> <div id="TrimEnd-Method"></div> </div>
       <div><span><code onclick="TrimStartMethod()">trimStart()</code></span> <div id="TrimStart-Method"></div> </div>
       <div><span><code onclick="ValueOfMethod()">valueOf()</code></span> <div id="ValueOf-Method"></div> </div>
-      <div id="test"></div> <script> let x = true; document.getElementById("test").innerText = x.valueOf();</script>
     </div>
   </div>
 </div>
