@@ -59,18 +59,85 @@
 <h1>STATEMENTS</h1>
 
 <div class="Sub-Topics">
+  <div>All JavaScript variables must be identified with unique names</div>
+  <div>These unique names are called identifiers</div>
+  <div>Identifiers can be short names (<code>x, y, z</code>) or more descriptive names (<code>age, sum, totalVolume</code>)</div>
+  <div>
+    <div>Names can contain letters, digits, underscores, and dollar signs (<code>$my_Identifier1</code>)</div>
+    <div>Names must begin with a letter, begin with numbers are invalid (<code>myIdentifier1</code>)</div>
+    <div>Names can also begin with $ and _ (<code>$myIdentifier, _myIdentifier</code>)</div>
+    <div>Names are case sensitive (<code>myIdentifier &ne; myidentifier</code>)</div>
+    <div>Reserved words cannot be used as names (<code>var, let, const, new</code> are invalid identifiers)</div>
+  </div>
+</div>
+
+<div class="Sub-Topics">
+  <h3>Automatically</h3>
+  <div>Any undeclared identifiers, they are automatically declared when first used</div>
+  <div><code><em>x</em> = 5;                       // <em>x</em> stores value 5</code></div>
+  <div><code><em>y</em> = 10;                      // <em>y</em> stores value 10</code></div>
+  <div><code><em>z</em> = <em>x</em> + <em>y</em>; // <em>z</em> performs addition of 5 and 10, stores value 15</code></div>
+  <div>Best practice to always declare identifiers before use</div>
+</div>
+
+<div class="Sub-Topics">
   <h3><code>var <em>myIdentifier</em></code></h3>
-  <div><code>var x = 1;     // Identifier x is initialized with value of 1</code></div>
-  <div><code>var x = 2;     // Identifier x is re-initialized with new value of 2 (replacing the old value, 1)</code></div>
-  <div><code>{ var x = 2; } // Identifier x is initialized within new block scope  new value of 2 (replacing the old value, 1)</code></div>
+  <div><code>// Hoisted Identifiers</code></div>
+  <div><code><em>x</em> = 1;     // Identifier <em>x</em> stores value 1</code></div>
+  <div><code>var <em>x</em> = 2; // Identifier <em>x</em> is initialized with var keyword, stores new value 2</code></div>
+  <br>
+  <div><code>// Re-initialized Identifiers</code></div>
+  <div><code>var <em>x</em> = 1; // Identifier <em>x</em> is initialized with var keyword, stores value 1</code></div>
+  <div><code>var <em>x</em> = 2; // Identifier <em>x</em> is re-initialized with var keyword, stores new value 2</code></div>
+  <br>
+  <div><code>// Arithmetic Operations</code></div>
+  <div><code>var <em>x</em> = 1; // Identifier <em>x</em> is initialized with var keyword, stores value 1</code></div>
+  <div><code><em>x</em> += 2;    // Identifier <em>x</em> performs addition of 1 and 2, stores new value 3</code></div>
+  <br>
+  <div><code>// Global Scope</code></div>
+  <div><code>var <em>x</em> = 1;      // Identifier <em>x</em> is initialized with var keyword outside the block scope, stores value 1</code></div>
+  <div><code>{ var <em>x</em> = 2; }  // Identifier <em>x</em> is initialized with var keyword within the block scope, stores value 2</code></div>
+  <div><code>console.log(<em>x</em>); // Identifier <em>x</em> is 2, since the var keyword is a global scope</code></div>
 </div>
 
 <div class="Sub-Topics">
   <h3><code>let <em>myIdentifier</em></code></h3>
+  <div><code>// Hoisted Identifiers</code></div>
+  <div><code><em>x</em> = 1;     // Identifier <em>x</em> stores value 1</code></div>
+  <div><code>let <em>x</em> = 2; // ReferenceError: Cannot access '<em>x</em>' before initialization</code></div>
+  <br>
+  <div><code>// Re-initialized Identifiers</code></div>
+  <div><code>let <em>x</em> = 1; // Identifier <em>x</em> is initialized with let keyword, stores value 1</code></div>
+  <div><code>let <em>x</em> = 2; // SyntaxError: Identifier '<em>x</em>' has already been declared</code></div>
+  <br>
+  <div><code>// Arithmetic Operations</code></div>
+  <div><code>let <em>x</em> = 1; // Identifier <em>x</em> is initialized with let keyword, stores value 1</code></div>
+  <div><code><em>x</em> += 2;    // Identifier <em>x</em> performs addition of 1 and 2, stores new value 3</code></div>
+  <br>
+  <div><code>// Block Scope</code></div>
+  <div><code>let <em>x</em> = 1;      // Identifier <em>x</em> is initialized with let keyword outside the block scope, stores value 1</code></div>
+  <div><code>{ let <em>x</em> = 2; }  // Identifier <em>x</em> is initialized with let keyword within the block scope, stores value 2</code></div>
+  <div><code>console.log(<em>x</em>); // Identifier <em>x</em> is 1, since the let keyword is a block scope</code></div>
 </div>
 
 <div class="Sub-Topics">
   <h3><code>const <em>myIdentifier</em></code></h3>
+  <div><code>// Hoisted Identifiers</code></div>
+  <div><code><em>x</em> = 1;       // Identifier <em>x</em> stores value 1</code></div>
+  <div><code>const <em>x</em> = 2; // ReferenceError: Cannot access '<em>x</em>' before initialization</code></div>
+  <br>
+  <div><code>// Re-initialized Identifiers</code></div>
+  <div><code>const <em>x</em> = 1; // Identifier <em>x</em> is initialized with const keyword, stores value 1</code></div>
+  <div><code>const <em>x</em> = 2; // SyntaxError: Identifier '<em>x</em>' has already been declared</code></div>
+  <br>
+  <div><code>// Arithmetic Operations</code></div>
+  <div><code>const <em>x</em> = 1; // Identifier <em>x</em> is initialized with const keyword, stores value 1</code></div>
+  <div><code><em>x</em> += 2;      // TypeError: Assignment to constant variable</code></div>
+  <br>
+  <div><code>// Block Scope</code></div>
+  <div><code>const <em>x</em> = 1;     // Identifier <em>x</em> is initialized with const keyword outside the block scope, stores value 1</code></div>
+  <div><code>{ const <em>x</em> = 2; } // Identifier <em>x</em> is initialized with const keyword within the block scope, stores value 2</code></div>
+  <div><code>console.log(<em>x</em>);  // Identifier <em>x</em> is 1, since the const keyword is a block scope</code></div>
 </div>
 </section>
 
