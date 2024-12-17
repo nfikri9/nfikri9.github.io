@@ -1,16 +1,21 @@
-// -------------------- CHALLENGE 1 --------------------
-function challenge1(){
+/////////////////
+// CHALLENGE 1 //
+/////////////////
+function Challenge1(){
   let myChallenge1 = document.getElementById("displayChallenge");
   if (myChallenge1.style.display == "none") { myChallenge1.style.display = "block"; }
   else { myChallenge1.style.display = "none"; }
-  const content = { header: "<h3>Challenge 1 (Multiples of 3 or 5)</h3>",
-                    information1: "<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. ",
-                    information2: "The sum of these multiples is 23. <br> Find the sum of all the multiples of 3 or 5 below the input number.</p>",
-                    input: "<div><label for='Input-1'>Input</label> <input id='Input-1' type='number' placeholder='Enter your input'> ",
-                    button: "<button id='Button1' onclick='calculation1()'>ENTER</button> <br>",
-                    info: "<span id='displayInfo'></span> <br>",
-                    answer: "<span id='Answer-1'></span></div>"
+
+  const content = {
+    header: "<h3>Challenge 1 (Multiples of 3 or 5)</h3>",
+    information1: "<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. ",
+    information2: "The sum of these multiples is 23. <br> Find the sum of all the multiples of 3 or 5 below the input number.</p>",
+    input: "<div><label for='Input-1'>Input</label> <input id='Input-1' type='number' placeholder='Enter your input'> ",
+    button: "<button id='Button1' onclick='calculation1()'>ENTER</button> <br>",
+    info: "<span id='displayInfo'></span> <br>",
+    answer: "<span id='Answer-1'></span></div>"
   };
+
   myChallenge1.innerHTML = content.header + content.information1 + content.information2 + content.input + content.button + content.info + content.answer;
 }
 
@@ -42,7 +47,9 @@ function multiplesOf3Or5(input) {
   return sum;
 };
 
-// -------------------- CHALLENGE 2 --------------------
+/////////////////
+// CHALLENGE 2 //
+/////////////////
 function challenge2(){
   let myChallenge2 = document.getElementById("displayChallenge");
   if (myChallenge2.style.display == "none") { myChallenge2.style.display = "block"; }
@@ -85,7 +92,9 @@ function fiboEvenSum(input) {
   return sumOfEven;
 };
 
-// -------------------- CHALLENGE 3 --------------------
+/////////////////
+// CHALLENGE 3 //
+/////////////////
 function challenge3(){
   let myChallenge3 = document.getElementById("displayChallenge");
   if (myChallenge3.style.display == "none") { myChallenge3.style.display = "block"; }
