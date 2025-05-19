@@ -1,144 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+  <!-- BROWSER TAB -->
+  <title>HYPERTEXT MARKUP LANGUAGE</title>
+  <link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
 
-<head>
-<!-- BROWSER TAB -->
-<title>HYPERTEXT MARKUP LANGUAGE</title>
-<link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
+  <!-- OTHERS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Notes-HTML.css">
+  </head>
 
-<!-- OTHERS -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Notes-HTML.css">
-</head>
-
-<body>
-<!------------------>
-<!-- NAVIGATE BAR -->
-<!------------------>
-<nav class="My-Navigate-Bar">
-  <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
-  <div>
-   <a href="Notes-HTML.html">HTML</a>
-   <a href="Notes-CSS.html">CSS</a>
-   <a href="Notes-JavaScript.html">JAVASCRIPT</a>
-   <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
-   <a href="Notes-JQuery.html">JQUERY</a>
-   <a href="Notes-SASS.html">SASS</a>
-   <a href="Notes-React.html">REACT</a>
-   <a href="Notes-Redux.html">REDUX</a>
-   <a href="Notes-Git.html">GIT</a>
-  </div>
-</nav>
-
-<!---------------------->
-<!-- TOPIC SELECTIONS -->
-<!---------------------->
-<div id="Box-Topic-Selections">
-  <button onclick="HTMLIntroduction()">INTRODUCTION</button>
-  <button onclick="HTMLPageStructure()">PAGE STRUCTURE</button>
-  <button onclick="HTMLSemanticContainer()">SEMANTIC CONTAINER</button>
-  <button onclick="HTMLSemanticText()">SEMANTIC TEXT</button>
-  <button onclick="HTMLFormStructure()">FORM</button>
-  <button onclick="HTMLTableStructure()">TABLE</button>
-  <button onclick="HTMLListStructure()">LIST</button>
-  <button onclick="HTMLMediaStructure()">MEDIA</button>
-  <button onclick="RubyAnnotationStructure()">RUBY ANNOTATION</button>
-  <button onclick="HTMLMisc()">MISC</button>
-</div>
-
-<!----------------------->
-<!-- HTML INTRODUCTION -->
-<!----------------------->
-<section id="HTML-Introduction" class="Box-Contents">
-<h1>HTML INTRODUCTION</h1>
-
-<div class="Sub-Topics"> <h3>What is HTML?</h3>
-  <div>HTML (Hypertext Markup Language) is the standard markup language for creating Web pages</div>
-  <div>HTML describes the structure of a Web page</div>
-  <div>HTML consists of a series of elements</div>
-  <div>HTML elements tell the browser how to display the content</div>
-</div>
-
-<div class="Sub-Topics"> <h3>HTML Syntax</h3>
-  <div>An HTML element is defined by an open-tag (<code>&lt;&gt;</code>), some contents, and a closed-tag (<code>&lt;/&gt;</code>)</div>
-  <div>Example &rarr; <code><em>&lt;TagName&gt; MyContents &lt;/TagName&gt;</em></code></div>
-  <div>Some HTML elements have no content (like the <code>&lt;br&gt;</code> element)</div>
-  <div>These elements are called empty elements which do not have a closed-tag</div>
-</div>
-</section>
-
-<!--------------->
-<!-- HTML PAGE -->
-<!--------------->
-<section id="HTML-Page" class="Box-Contents">
-<h1>HTML PAGE STRUCTURE</h1>
-
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLDeclaration()">&lt;!DOCTYPE html&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLTag()">&lt;html&gt;</code></div>
-  <br>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;head&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;base&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;link&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;meta&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;noscript&gt; <em>MyContents</em> &lt;/noscript&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;/head&gt;</code></div>
-  <br>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;body&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;header&gt; <em>MyContents</em> &lt;/header&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;main&gt; <em>MyContents</em> &lt;/main&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;footer&gt; <em>MyContents</em> &lt;/footer&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;/body&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLTag()">&lt;/html&gt;</code></div>
-</div>
-
-<!-- HTML DECLARATION -->
-<div id="HTML-Declaration" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;!DOCTYPE&gt;</code></h3>
-  <div>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration</div>
-  <div>The declaration is not an HTML tag, but it is an "information" to the browser about what document type to expect</div>
-  <div>Therefore, this <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this is an HTML 5 document (latest version of HTML)</div>
-
-  <div class="Box-Insights">
-    <h3>INSIGHTS</h3>
-    <span class="Highlight-Insights">No case sensitivity</span>
-    <div>The <code>&lt;!DOCTYPE&gt;</code> declaration is NOT case sensitive</div>
-  </div>
-</div>
-
-<!-- HTML TAG -->
-<div id="HTML-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;html&gt; <em>MyContents</em> &lt;/html&gt;</code></h3>
-  <div>The <code>&lt;html&gt;</code> tag represents the root of an HTML document</div>
-  <div>The <code>&lt;html&gt;</code> tag is the container for all other HTML elements except for the <code>&lt;!DOCTYPE&gt;</code> declaration</div>
-
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="HTMLGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="HTML-Global-Attributes"></div> </div>
-    <div><code class="Highlighted">&lt;html <b>xmlns</b>="<em>MyValue</em>"&gt;</code></div>
-  </div>
-
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>html { display: block; }</code></div>
-    <div><code>html:focus { outline: none; }</code></div>
-  </div>
-
-  <div class="Box-Insights">
-    <h3>INSIGHTS</h3>
-    <div class="Item-Insights">
-      <span class="Highlight-Insights">Best practice to include <code>lang</code> attribute</span>
-      <div>Always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page</div>
-      <div>This is meant to assist search engines and browsers</div>
+  <body>
+  <!------------------>
+  <!-- NAVIGATE BAR -->
+  <!------------------>
+  <nav class="My-Navigate-Bar">
+    <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
+    <div>
+      <a href="Notes-HTML.html">HTML</a>
+      <a href="Notes-CSS.html">CSS</a>
+      <a href="Notes-JavaScript.html">JAVASCRIPT</a>
+      <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
+      <a href="Notes-JQuery.html">JQUERY</a>
+      <a href="Notes-SASS.html">SASS</a>
+      <a href="Notes-React.html">REACT</a>
+      <a href="Notes-Redux.html">REDUX</a>
+      <a href="Notes-Git.html">GIT</a>
     </div>
-  </div>
-</div>
-</section>
+  </nav>
+
+  <!---------------------->
+  <!-- TOPIC SELECTIONS -->
+  <!---------------------->
+  <section id="Box-Topic-Selections">
+    <button onclick="HTMLIntroduction()">INTRODUCTION</button>
+    <button onclick="HTMLPageStructure()">PAGE STRUCTURE</button>
+    <button onclick="HTMLSemanticContainer()">SEMANTIC CONTAINER</button>
+    <button onclick="HTMLSemanticText()">SEMANTIC TEXT</button>
+    <button onclick="HTMLFormStructure()">FORM</button>
+    <button onclick="HTMLTableStructure()">TABLE</button>
+    <button onclick="HTMLListStructure()">LIST</button>
+    <button onclick="HTMLMediaStructure()">MEDIA</button>
+    <button onclick="RubyAnnotationStructure()">RUBY ANNOTATION</button>
+    <button onclick="HTMLMisc()">MISC</button>
+  </section>
+
+  <!----------------------->
+  <!-- HTML INTRODUCTION -->
+  <!----------------------->
+  <section id="HTML-Introduction" class="Box-Contents">
+  <h1>HTML INTRODUCTION</h1>
+    <div class="Sub-Topics"> <h3>What is HTML?</h3>
+      <div>HTML (Hypertext Markup Language) is the standard markup language for creating webpages</div>
+      <div>HTML describes the structure of a webpage</div>
+      <div>HTML consists of a series of elements</div>
+      <div>HTML elements tell the browser how to display the content</div>
+    </div>
+
+    <div class="Sub-Topics"> <h3>HTML Syntax</h3>
+      <div>An HTML element is defined by an open-tag (<code>&lt;&gt;</code>), some contents, and a closed-tag (<code>&lt;/&gt;</code>)</div>
+      <div>Example &rarr; <code><em>&lt;TagName&gt; MyContents &lt;/TagName&gt;</em></code></div>
+      <div>Some HTML elements have no content (like the <code>&lt;br&gt;</code> element)</div>
+      <div>These elements are called empty elements which do not have a closed-tag</div>
+    </div>
+  </section>
+
+  <!------------------------->
+  <!-- HTML PAGE STRUCTURE -->
+  <!------------------------->
+  <section id="HTML-Page" class="Box-Contents">
+  <h1>HTML PAGE STRUCTURE</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLDeclaration()">&lt;!DOCTYPE html&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLTag()">&lt;html&gt;</code></div>
+      <br>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="HeadTag()">&lt;head&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;base&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;link&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;meta&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;noscript&gt; <em>MyContents</em> &lt;/noscript&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="HeadTag()">&lt;/head&gt;</code></div>
+      <br>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="BodyTag()">&lt;body&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;header&gt; <em>MyContents</em> &lt;/header&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;main&gt; <em>MyContents</em> &lt;/main&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;footer&gt; <em>MyContents</em> &lt;/footer&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="BodyTag()">&lt;/body&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLTag()">&lt;/html&gt;</code></div>
+    </div>
+
+    <!-- HTML DECLARATION -->
+    <div id="HTML-Declaration" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;!DOCTYPE&gt;</code></h3>
+      <div>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration</div>
+      <div>The declaration is not an HTML tag, but it is an "information" to the browser about what document type to expect</div>
+      <div>Therefore, this <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this is an HTML 5 document (latest version of HTML)</div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">No case sensitivity</span>
+          <div>The <code>&lt;!DOCTYPE&gt;</code> declaration can be written either in uppercase, lowercase or mixed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTML TAG -->
+    <div id="HTML-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;html&gt; <em>MyContents</em> &lt;/html&gt;</code></h3>
+      <div>The <code>&lt;html&gt;</code> tag represents the root of an HTML document</div>
+      <div>The <code>&lt;html&gt;</code> tag is the container for all other HTML elements except for the <code>&lt;!DOCTYPE&gt;</code> declaration</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="HTMLGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="HTML-Global-Attributes"></div></div>
+        <div><code class="Highlighted">&lt;html <b>xmlns</b>="<em>MyValue</em>"&gt;</code></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>html { display: block; }</code></div>
+        <div><code>html:focus { outline: none; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practice to include <code>lang</code> attribute</span>
+          <div>Always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the webpage</div>
+          <div>This is meant to assist search engines and browsers</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEAD TAG -->
+    <div id="Head-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;head&gt; <em>MyContents</em> &lt;/head&gt;</code></h3>
+      <div>The <code>&lt;head&gt;</code> tag is a container for metadata, placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> tag</div>
+      <div>Metadata typically define the document title, character set, styles, scripts, and other meta information, which they are not displayed in webpage</div>
+      <div>Hence, tags like <code>&lt;title&gt;, &lt;style&gt;, &lt;base&gt;, &lt;link&gt;, &lt;meta&gt;, &lt;script&gt;, &lt;noscript&gt;</code> are commonly placed here</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="HeadGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Head-Global-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>head { display: none; }</code></div>
+      </div>
+    </div>
+
+    <!-- BODY TAG -->
+    <div id="Body-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;body&gt; <em>MyContents</em> &lt;/body&gt;</code></h3>
+      <div>The <code>&lt;body&gt;</code> tag defines the document's body</div>
+      <div>The <code>&lt;body&gt;</code> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</div>
+      <div>There can only be one <code>&lt;body&gt;</code> element in an HTML document</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="BodyGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Body-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BodyEventAttributes()"><em>HTML Event Attributes</em></code><div id="Body-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>body { display: block; margin: 8px; }</code></div>
+        <div><code>body:focus { outline: none; }</code></div>
+      </div>
+    </div>
+  </section>
 
 <!----------------------------->
 <!-- HTML SEMANTIC CONTAINER -->

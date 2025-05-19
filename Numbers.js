@@ -50,7 +50,7 @@ function multiplesOf3Or5(input) {
 /////////////////
 // CHALLENGE 2 //
 /////////////////
-function challenge2(){
+function Challenge2(){
   let myChallenge2 = document.getElementById("displayChallenge");
   if (myChallenge2.style.display == "none") { myChallenge2.style.display = "block"; }
   else { myChallenge2.style.display = "none"; }
@@ -95,7 +95,7 @@ function fiboEvenSum(input) {
 /////////////////
 // CHALLENGE 3 //
 /////////////////
-function challenge3(){
+function Challenge3(){
   let myChallenge3 = document.getElementById("displayChallenge");
   if (myChallenge3.style.display == "none") { myChallenge3.style.display = "block"; }
   else { myChallenge3.style.display = "none"; }
@@ -128,4 +128,66 @@ function largestPrimeFactor(number) {
     }
   }
   return max;
+}
+
+/////////////////
+// CHALLENGE 4 //
+/////////////////
+function Challenge4(){
+  let myChallenge4 = document.getElementById("displayChallenge");
+  if (myChallenge4.style.display == "none") { myChallenge4.style.display = "block"; }
+  else { myChallenge4.style.display = "none"; }
+
+  const content = {
+    header: "<h3>Challenge 4 (Largest palindrome product)</h3>",
+    informations:
+      "<p>The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. <br>" +
+      "Find the largest palindromic number made from the product of two <em>n</em>-digit numbers.</p>",
+    input: "<div><label for='Input-4'>Input</label> <input id='Input-4' type='number' placeholder='Enter your input'> ",
+    button: "<button id='Button4' onclick='Calculation4()'>ENTER</button> <br>",
+    info: "<span id='displayInfo'></span> <br>",
+    answer: "<span id='Answer-4'></span></div>",
+    insights:
+      "<div><b>INSIGHTS</b>" +
+      "<div><u>Palindromic Number</u> is a number that reads the same forward and backward </div>" +
+      "<div>Example: 0, 1, 2, 3, ..., 9, 11, 22, 33, ..., 99, 101, 111, 121, 131, ..., 999, 1001, 1111, 1221, 1331, ...</div>" + 
+      "<pre><div class=\"Indent-Level1\">let <em>myInput</em> = 1023; // User enter any number </div>" +
+      "<div class=\"Indent-Level1\">let <em>myInputString</em> = String(<em>myInput</em>); // \"1023\" (Change the input's data type from number to string) </div>" +
+      "<div class=\"Indent-Level1\">let <em>myInputSplit</em> = <em>myInputString</em>.split(\"\"); // [\"1\", \"0\", \"2\", \"3\"] (Split each character into array) </div>" +
+      "<div class=\"Indent-Level1\">let <em>myInputReversed</em> = <em>myInputSplit</em>.reverse(); // [\"3\", \"2\", \"0\", \"1\"] (Reverse all data backwards) </div>" +
+      "<div class=\"Indent-Level1\">let <em>myInputJoined</em> = <em>myInputReversed</em>.join(\"\"); // \"3201\" (Join all data into a string) </div>" +
+      "<div class=\"Indent-Level1\">if (<em>myInputString</em> == <em>myInputJoined</em>) // The statement is comparing both data </div>" +
+      "<div class=\"Indent-Level2\">console.log(\"Palindrome\"); // Return \"Palindrome\" if the statement is true </div>" +
+      "<div class=\"Indent-Level1\">else </div>" +
+      "<div class=\"Indent-Level2\">console.log(\"Not palindrome\"); // Return \"Not palindrome\" if the statement is false</div>" +
+      "</pre>" +
+      "</div>"
+  };
+
+  myChallenge4.innerHTML = content.header + content.informations + content.input + content.button + content.info + content.answer + content.insights;
+}
+
+function Calculation4(){
+  let myInput = document.getElementById("Input-4").value;
+  document.getElementById("Answer-4").innerHTML = "The largest palindrome product from 2 " + myInput + "-digits number is " + largestPalindromeProduct(myInput);
+
+  function largestPalindromeProduct(digit) {
+    let maxDigit = 10**digit;
+    let product = 1;
+    let numberInString = "";
+    let reversedString = "";
+    let listOfPalindrome = [];
+
+    for (let multiplicand1=maxDigit/10; multiplicand1<maxDigit; multiplicand1++) {
+      for(let multiplicand2=maxDigit/10; multiplicand2<maxDigit; multiplicand2++) {
+        product = multiplicand1*multiplicand2;
+        numberInString = product.toString();
+        reversedString = numberInString.split("").reverse().join("");
+
+        if (numberInString == reversedString)
+          listOfPalindrome.push(numberInString);
+      }
+    }
+    return Math.max(...listOfPalindrome);
+  }
 }

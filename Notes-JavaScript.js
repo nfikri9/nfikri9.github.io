@@ -1374,3 +1374,14 @@ function ValueofNumber() {
   }
   else { myVisibility.style.display = "none"; }
 }
+
+/////////////////////////////
+/////////////////////////////
+// RAW NOTES //
+function rawnotes() {
+  let myVisibility = document.getElementById("rawnotes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
