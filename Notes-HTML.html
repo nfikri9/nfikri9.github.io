@@ -86,9 +86,9 @@
       <div class="Indent-Level2"><code class="Highlighted" onclick="HeadTag()">&lt;/head&gt;</code></div>
       <br>
       <div class="Indent-Level2"><code class="Highlighted" onclick="BodyTag()">&lt;body&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;header&gt; <em>MyContents</em> &lt;/header&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;main&gt; <em>MyContents</em> &lt;/main&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;footer&gt; <em>MyContents</em> &lt;/footer&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="HeaderTag()">&lt;header&gt; <em>MyContents</em> &lt;/header&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="MainTag()">&lt;main&gt; <em>MyContents</em> &lt;/main&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="FooterTag()">&lt;footer&gt; <em>MyContents</em> &lt;/footer&gt;</code></div>
       <div class="Indent-Level2"><code class="Highlighted" onclick="BodyTag()">&lt;/body&gt;</code></div>
       <br>
       <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLTag()">&lt;/html&gt;</code></div>
@@ -173,6 +173,83 @@
       <h3>DEFAULT CSS SETTING(S)</h3>
         <div><code>body { display: block; margin: 8px; }</code></div>
         <div><code>body:focus { outline: none; }</code></div>
+      </div>
+    </div>
+
+    <!-- HEADER TAG -->
+    <div id="Header-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;header&gt; <em>MyContents</em> &lt;/header&gt;</code></h3>
+      <div>The <code>&lt;header&gt;</code> element represents a container for various purposes, depending on user's needed</div>
+      <div>Mostly, it is represents introductory content, including heading elements (<code>&lt;h1&gt; - &lt;h6&gt;</code>) and some authorship informations</div>
+      <div>Other than that, the element also provide a space for a set of navigational links, logo or icons</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="HeaderGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Header-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="HeaderEventAttributes()"><em>HTML Event Attributes</em></code><div id="Header-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>header { display: block; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Usage of the <code>header</code> tag</span>
+          <div>User can have several <code>&lt;header&gt;</code> elements in one HTML document</div>
+          <div>However, the element cannot be placed within a <code>&lt;footer&gt;</code>, <code>&lt;address&gt;</code> or another <code>&lt;header&gt;</code> element</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN TAG -->
+    <div id="Main-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;main&gt; <em>MyContents</em> &lt;/main&gt;</code></h3>
+      <div>The <code>&lt;main&gt;</code> tag specifies the main content of a document</div>
+      <div>The content inside the <code>&lt;main&gt;</code> element should be unique to the document</div>
+      <div>It should not contain any content that is repeated across documents, like sidebars, navigation links, copyright information, site logos, and search forms</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="MainGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Main-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MainEventAttributes()"><em>HTML Event Attributes</em></code><div id="Main-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Usage of the <code>main</code> tag</span>
+          <div>There must not be more than one <code>&lt;main&gt;</code> element in a document</div>
+          <div>The element must <b>NOT</b> be a descendant of an <code>&lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;header&gt;, &lt;nav&gt;</code> element</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER TAG -->
+    <div id="Footer-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;footer&gt; <em>MyContents</em> &lt;/footer&gt;</code></h3>
+      <div>The <code>&lt;footer&gt;</code> tag defines a footer for a document or section</div>
+      <div>A <code>&lt;footer&gt;</code> element typically contains authorship, copyright, contact, sitemap, and back-to-top links</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="FooterGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Footer-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FooterEventAttributes()"><em>HTML Event Attributes</em></code><div id="Footer-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>footer { display: block; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Usage of the <code>footer</code> tag</span>
+          <div>User can have several <code>&lt;footer&gt;</code> elements in one document</div>
+        </div>
       </div>
     </div>
   </section>
