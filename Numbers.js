@@ -209,8 +209,8 @@ function Challenge5() {
                   "What is the smallest positive number that is evenly divisible by all of the numbers from 1 to <em>n</em>?</p>",
     input       : "<div> <label for='Input-5'>Input</label> <input id='Input-5' type='number' placeholder='Enter your input'>",
     button      : "<button id='Button5' onclick='Calculation5()'>ENTER</button><br>",
-    info        : "<span id='displayInfo'></span><br>",
-    answer      : "<span id='Answer-5'></span></div>",
+    info        : "<span id='displayInfo'><br></span>",
+    answer      : "<span id='Answer-5'></span></div><br>",
     insights    :
       "<div><b>INSIGHTS</b>" +
       "<div><u>Lowest Common Multiple</u>, denoted with lcm(a, b) is the smallest positive integer that is divisible by both a and b</div>" +
@@ -263,6 +263,11 @@ function Calculation5(){
   document.getElementById("Answer-5").innerHTML = smallestMult(1, myInput);
 
   function smallestMult(divisor1, divisor2) {
+    for (let i=divisor1; divisor1<=divisor2; divisor1++){
+      
+    }
+    document.getElementById("displayInfo").innerHTML = 
+    "<div>The divisors are ranged from 1 to " + divisor2 + "</div>";
     return divisor2;
   }
 }

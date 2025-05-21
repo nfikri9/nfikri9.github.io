@@ -313,6 +313,94 @@ function HeadGlobalAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+// TITLE TAG //
+function TitleTag() {
+  let myVisibility = document.getElementById("Title-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TitleGlobalAttributes() {
+  let myVisibility = document.getElementById("Title-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Title-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// STYLE TAG //
+function StyleTag() {
+  let myVisibility = document.getElementById("Style-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function StyleGlobalAttributes() {
+  let myVisibility = document.getElementById("Style-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Style-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function StyleEventAttributes() {
+  let myVisibility = document.getElementById("Style-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Style-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BASE TAG //
+function BaseTag() {
+  let myVisibility = document.getElementById("Base-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function BaseGlobalAttributes() {
+  let myVisibility = document.getElementById("Base-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Base-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function BaseEventAttributes() {
+  let myVisibility = document.getElementById("Base-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Base-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // BODY TAG //
 function BodyTag() {
   let myVisibility = document.getElementById("Body-Tag");

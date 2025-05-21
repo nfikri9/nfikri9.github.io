@@ -76,9 +76,9 @@
       <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLTag()">&lt;html&gt;</code></div>
       <br>
       <div class="Indent-Level2"><code class="Highlighted" onclick="HeadTag()">&lt;head&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;base&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="TitleTag()">&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="StyleTag()">&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="BaseTag()">&lt;base&gt;</code></div>
       <div class="Indent-Level3"><code class="Highlighted">&lt;link&gt;</code></div>
       <div class="Indent-Level3"><code class="Highlighted">&lt;meta&gt;</code></div>
       <div class="Indent-Level3"><code class="Highlighted">&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></div>
@@ -153,6 +153,86 @@
       <div class="Box-CSS">
       <h3>DEFAULT CSS SETTING(S)</h3>
         <div><code>head { display: none; }</code></div>
+      </div>
+    </div>
+
+    <!-- TITLE TAG -->
+    <div id="Title-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></h3>
+      <div>The <code>&lt;title&gt;</code> tag defines the title of the document</div>
+      <div>The title must be text-only, and it is shown in the browser's title bar or in the page's tab</div>
+      <div>The <code>&lt;title&gt;</code> tag is <b>required</b> in HTML documents</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TitleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Title-Global-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>title { display: none; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">The essential of the <code>&lt;title&gt;</code> element</span>
+          <div>The contents of a page title is very important for search engine optimization (SEO)</div>
+          <div>The page title is used by search engine algorithms to decide the order when listing pages in search results</div>
+        </div>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practice in creating title</span>
+          <div>Go for a longer, descriptive title (avoid one- or two-word titles)</div>
+          <div>Search engines will display about 50-60 characters of the title, so try not to have titles longer than that</div>
+          <div>Do not use just a list of words as the title (this may reduce the page's position in search results)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STYLE TAG -->
+    <div id="Style-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></h3>
+      <div>The <code>&lt;style&gt;</code> tag is used to define style information (CSS) for a document</div>
+      <div>Inside the <code>&lt;style&gt;</code> element user can specify how HTML elements should render in a browser</div>
+      <div>The <code>&lt;style&gt;</code> element must be included inside the <code>&lt;head&gt;</code> of the document</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="StyleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Style-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="StyleEventAttributes()"><em>HTML Event Attributes</em></code><div id="Style-Event-Attributes"></div></div>
+        <div><code class="Highlighted">&lt;html <b>media</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;html <b>type</b>="<em>MyValue</em>"&gt;</code></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>style { display: none; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">CSS Specificity</span>
+          <div>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet</div>
+          <div>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used</div>
+          <div>There are more info regarding to CSS specificity in CSS section</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BASE TAG -->
+    <div id="Base-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;base&gt;</code></h3>
+      <div>The <code>&lt;base&gt;</code> tag specifies the base URL and/or target for all relative URLs in a document</div>
+      <div>Hence, the <code>&lt;base&gt;</code> tag must have either <code>href</code> or <code>target</code> attribute present, or both</div>
+      <div>There can only be one single <code>&lt;base&gt;</code> element in a document, and it must be inside the <code>&lt;head&gt;</code> element</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="BaseGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Base-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BaseEventAttributes()"><em>HTML Event Attributes</em></code><div id="Base-Event-Attributes"></div></div>
+        <div><code class="Highlighted">&lt;base <b>href</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;base <b>target</b>="<em>MyValue</em>"&gt;</code></div>
       </div>
     </div>
 
