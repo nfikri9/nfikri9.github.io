@@ -263,9 +263,19 @@ function Calculation5(){
   document.getElementById("Answer-5").innerHTML = smallestMult(1, myInput);
 
   function smallestMult(divisor1, divisor2) {
+
+    // Looping the tested number from 1 to n
     for (let i=divisor1; divisor1<=divisor2; divisor1++){
-      
+
+      if (i != 1) {
+        // Run this block when current tested number is not 1
+      }
+
+      else {
+        // Run this block when current tested number is 1
+      }
     }
+    
     document.getElementById("displayInfo").innerHTML = 
     "<div>The divisors are ranged from 1 to " + divisor2 + "</div>";
     return divisor2;

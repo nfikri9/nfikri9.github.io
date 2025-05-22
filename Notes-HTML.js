@@ -401,6 +401,105 @@ function BaseEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+// LINK TAG //
+function LinkTag() {
+  let myVisibility = document.getElementById("Link-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkGlobalAttributes() {
+  let myVisibility = document.getElementById("Link-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkEventAttributes() {
+  let myVisibility = document.getElementById("Link-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// META TAG //
+function MetaTag() {
+  let myVisibility = document.getElementById("Meta-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MetaGlobalAttributes() {
+  let myVisibility = document.getElementById("Meta-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meta-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// SCRIPT TAG //
+function ScriptTag() {
+  let myVisibility = document.getElementById("Script-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptGlobalAttributes() {
+  let myVisibility = document.getElementById("Script-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// NOSCRIPT TAG //
+function NoscriptTag() {
+  let myVisibility = document.getElementById("Noscript-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function NoscriptGlobalAttributes() {
+  let myVisibility = document.getElementById("Noscript-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Noscript-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // BODY TAG //
 function BodyTag() {
   let myVisibility = document.getElementById("Body-Tag");

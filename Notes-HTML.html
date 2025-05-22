@@ -79,10 +79,10 @@
       <div class="Indent-Level3"><code class="Highlighted" onclick="TitleTag()">&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></div>
       <div class="Indent-Level3"><code class="Highlighted" onclick="StyleTag()">&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></div>
       <div class="Indent-Level3"><code class="Highlighted" onclick="BaseTag()">&lt;base&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;link&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;meta&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;noscript&gt; <em>MyContents</em> &lt;/noscript&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="LinkTag()">&lt;link&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="MetaTag()">&lt;meta&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="ScriptTag()">&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="NoscriptTag()">&lt;noscript&gt; <em>MyText</em> &lt;/noscript&gt;</code></div>
       <div class="Indent-Level2"><code class="Highlighted" onclick="HeadTag()">&lt;/head&gt;</code></div>
       <br>
       <div class="Indent-Level2"><code class="Highlighted" onclick="BodyTag()">&lt;body&gt;</code></div>
@@ -233,6 +233,108 @@
         <div><code class="Highlighted" onclick="BaseEventAttributes()"><em>HTML Event Attributes</em></code><div id="Base-Event-Attributes"></div></div>
         <div><code class="Highlighted">&lt;base <b>href</b>="<em>MyValue</em>"&gt;</code></div>
         <div><code class="Highlighted">&lt;base <b>target</b>="<em>MyValue</em>"&gt;</code></div>
+      </div>
+    </div>
+
+    <!-- LINK TAG -->
+    <div id="Link-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;link&gt;</code></h3>
+      <div>The <code>&lt;link&gt;</code> tag defines the relationship between the current document and an external resource</div>
+      <div>The <code>&lt;link&gt;</code> tag is most often used to link to external style sheets or to add a favicon to the website</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="LinkGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Link-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LinkEventAttributes()"><em>HTML Event Attributes</em></code><div id="Link-Event-Attributes"></div></div>
+        <div><code class="Highlighted">&lt;link <b>crossorigin</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;link <b>href</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;link <b>hreflang</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;link <b>media</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;link <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;link <b>rel</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;link <b>sizes</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;link <b>type</b>="<em>MyValue</em>"&gt;</code></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>link { display: none; }</code></div>
+      </div>
+    </div>
+
+    <!-- META TAG -->
+    <div id="Meta-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;meta&gt;</code></h3>
+      <div>The <code>&lt;meta&gt;</code> tag defines metadata (informations) about an HTML document</div>
+      <div>The tag is typically used to specify character set, page description, keywords, author of the document, and viewport settings</div>
+      <div>Metadata will not be displayed on the page, but is machine parsable</div>
+      <div>Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="MetaGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Meta-Global-Attributes"></div></div>
+        <div><code class="Highlighted">&lt;meta <b>charset</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;meta <b>content</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;meta <b>http-equiv</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;meta <b>name</b>="<em>MyValue</em>"&gt;</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Custom setting on viewport</span>
+          <div><code>&lt;<b>meta</b> name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></div>
+          <div>This gives the browser instructions on how to control the page's dimensions and scaling</div>
+          <div>The <code>width=device-width</code> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device)</div>
+          <div>The <code>initial-scale=1.0</code> part sets the initial zoom level when the page is first loaded by the browser</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT TAG -->
+    <div id="Script-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></h3>
+      <div>The <code>&lt;script&gt;</code> tag is used to embed a client-side script, usually JavaScript</div>
+      <div>The <code>&lt;script&gt;</code> element either contains scripting statements, or it points to an external script file through the <code>src</code> attribute</div>
+      <div>Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ScriptGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Script-Global-Attributes"></div></div>
+        <div><code class="Highlighted">&lt;script <b>async</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;script <b>crossorigin</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;script <b>defer</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;script <b>integrity</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;script <b>nomodule</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;script <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;script <b>src</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted">&lt;script <b>type</b>="<em>MyValue</em>"&gt;</code></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>script { display: none; }</code></div>
+      </div>
+    </div>
+
+    <!-- NOSCRIPT TAG -->
+    <div id="Noscript-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;noscript&gt; <em>MyText</em> &lt;/noscript&gt;</code></h3>
+      <div>The <code>&lt;noscript&gt;</code> tag defines an alternate content to be displayed that have disabled scripts in the browser</div>
+      <div>It can also be used to display some text when a browser doesn't support script</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="NoscriptGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Noscript-Global-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">The usage of <code>&lt;noscript&gt;</code></span>
+          <div>The <code>&lt;noscript&gt;</code> element can be used in both <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code></div>
+          <div>When used inside <code>&lt;head&gt;</code>, the element could only contain <code>&lt;link&gt;, &lt;style&gt;, &lt;meta&gt;</code> elements</div>
+        </div>
       </div>
     </div>
 
