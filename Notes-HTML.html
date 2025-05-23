@@ -436,26 +436,129 @@
     </div>
   </section>
 
-<!----------------------------->
-<!-- HTML SEMANTIC CONTAINER -->
-<!----------------------------->
-<section id="HTML-Semantic-Container" class="Box-Contents">
-<h1>HTML SEMANTIC CONTAINER</h1>
-  
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted">&lt;nav&gt; <em>MyContents</em> &lt;/nav&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;aside&gt; <em>MyContents</em> &lt;/aside&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;article&gt; <em>MyContents</em> &lt;/article&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;section&gt; <em>MyContents</em> &lt;/section&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;div&gt; <em>MyContents</em> &lt;/div&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;span&gt; <em>MyContents</em> &lt;/span&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;hgroup&gt; <em>MyContents</em> &lt;/hgroup&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;picture&gt; <em>MyContents</em> &lt;/picture&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;search&gt; <em>MyContents</em> &lt;/search&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;svg&gt; <em>MyContents</em> &lt;/svg&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;template&gt; <em>MyContents</em> &lt;/template&gt;</code></div>
-</div>
-</section>
+  <!----------------------------->
+  <!-- HTML SEMANTIC CONTAINER -->
+  <!----------------------------->
+  <section id="HTML-Semantic-Container" class="Box-Contents">
+  <h1>HTML SEMANTIC CONTAINER</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted" onclick="NavTag()">&lt;nav&gt; <em>MyContents</em> &lt;/nav&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="AsideTag()">&lt;aside&gt; <em>MyContents</em> &lt;/aside&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="ArticleTag()">&lt;article&gt; <em>MyContents</em> &lt;/article&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="SectionTag()">&lt;section&gt; <em>MyContents</em> &lt;/section&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DivisionTag()">&lt;div&gt; <em>MyContents</em> &lt;/div&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="SpanTag()">&lt;span&gt; <em>MyContents</em> &lt;/span&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;hgroup&gt; <em>MyContents</em> &lt;/hgroup&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;picture&gt; <em>MyContents</em> &lt;/picture&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;search&gt; <em>MyContents</em> &lt;/search&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;svg&gt; <em>MyContents</em> &lt;/svg&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;template&gt; <em>MyContents</em> &lt;/template&gt;</code></div>
+    </div>
+
+    <!-- NAVIGATE TAG -->
+    <div id="Nav-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;nav&gt; <em>MyContents</em> &lt;/nav&gt;</code></h3>
+      <div>The <code>&lt;nav&gt;</code> tag defines a set of navigation links</div>
+      <div>The <code>&lt;nav&gt;</code> element is intended only for major blocks of navigation links</div>
+      <div>However, <b>not</b> all links of a document should be inside a <code>&lt;nav&gt;</code> element</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="NavGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Nav-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="NavEventAttributes()"><em>HTML Event Attributes</em></code><div id="Nav-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>nav { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- ASIDE TAG -->
+    <div id="Aside-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;aside&gt; <em>MyContents</em> &lt;/aside&gt;</code></h3>
+      <div>The <code>&lt;aside&gt;</code> tag defines some content aside from the content it is placed in</div>
+      <div>The aside content should be indirectly related to the surrounding content</div>
+      <div>The <code>&lt;aside&gt;</code> content is often placed as a sidebar in a document</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="AsideGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Aside-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AsideEventAttributes()"><em>HTML Event Attributes</em></code><div id="Aside-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>aside { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- ARTICLE TAG -->
+    <div id="Article-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;article&gt; <em>MyContents</em> &lt;/article&gt;</code></h3>
+      <div>The <code>&lt;article&gt;</code> tag specifies independent, self-contained content</div>
+      <div>Potential sources for the <code>&lt;article&gt;</code> element are like forum post, blog post, news story</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ArticleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Article-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ArticleEventAttributes()"><em>HTML Event Attributes</em></code><div id="Article-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>article { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- SECTION TAG -->
+    <div id="Section-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;section&gt; <em>MyContents</em> &lt;/section&gt;</code></h3>
+      <div>The <code>&lt;section&gt;</code> tag defines a section in a document</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SectionGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Section-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SectionEventAttributes()"><em>HTML Event Attributes</em></code><div id="Section-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>section { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- DIVISION TAG -->
+    <div id="Division-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;div&gt; <em>MyContents</em> &lt;/div&gt;</code></h3>
+      <div>The <code>&lt;div&gt;</code> tag defines a division in an HTML document</div>
+      <div>The <code>&lt;div&gt;</code> tag is widely used as a container for HTML elements, which is then styled with CSS or manipulated with JavaScript</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DivisionGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Division-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DivisionEventAttributes()"><em>HTML Event Attributes</em></code><div id="Division-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>div { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- SPAN TAG -->
+    <div id="Span-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;span&gt; <em>MyContents</em> &lt;/span&gt;</code></h3>
+      <div>The <code>&lt;span&gt;</code> tag is an inline container used to mark up a part of a text, or a part of a document</div>
+      <div>The <code>&lt;span&gt;</code> tag is easily styled by CSS or manipulated with JavaScript</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SpanGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Span-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SpanEventAttributes()"><em>HTML Event Attributes</em></code><div id="Span-Event-Attributes"></div></div>
+      </div>
+    </div>
+  </section>
 
 <!------------------------>
 <!-- HTML SEMANTIC TEXT -->

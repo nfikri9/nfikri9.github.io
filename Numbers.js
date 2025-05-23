@@ -258,24 +258,100 @@ function Challenge5() {
   myChallenge5.innerHTML = content.header + content.informations + content.input + content.button + content.info + content.answer + content.insights;
 }
 
-function Calculation5(){
+function Calculation5() {
   let myInput = document.getElementById("Input-5").value;
   document.getElementById("Answer-5").innerHTML = smallestMult(1, myInput);
 
   function smallestMult(divisor1, divisor2) {
-
-    // Looping the tested number from 1 to n
-    for (let i=divisor1; divisor1<=divisor2; divisor1++){
-
-      if (i != 1) {
-        // Run this block when current tested number is not 1
+    // START LINE CODE TESTING
+    let quotient, remainder;
+    
+    for (let i=divisor1; i<=divisor2; i++) { // Looping the divisor from 1 to n
+      if (i!=1) {
+        console.log("Current divisor is " + i + " (i is not 1)");
+        quotient = i/2;
+        remainder = i%2;
+        console.log("Current divisor/current prime, " + i + "/" + 2 + "=" + quotient);
+        console.log("Current divisor%current prime, " + i + "%" + 2 + "=" + remainder + "\n");
       }
-
       else {
-        // Run this block when current tested number is 1
+        console.log("Current divisor is " + i + " (i is exactly 1)" + "\n");
       }
     }
+
+    /*
+    Current divisor: 1
+      (d2=0 -> break)
     
+    Current divisor: 2
+      Current Prime: 2
+        2/2 -> r=0, q=1, d2=1 (since r==0 && q==1 -> d2=1 -> break)
+
+    Current divisor: 3
+      Current Prime: 2
+        3/2 -> r=1, q=1, d2=0 (since r!=0 && q!=0 -> d2=0 -> proceed next prime)
+      Current Prime: 3
+        3/3 -> r=0, q=1, d3=1 (since r==0 && q==1 -> d3=1 -> break)
+
+    Current divisor: 4
+      Current Prime: 2
+        4/2 -> r=0, q=2, d2=1 (since r==0 && q!=0 -> d2=1 -> repeat dgn nilai latest q)
+        2/2 -> r=0, q=1, d2=2 (since r==0 && q==1 -> d2=2 -> break)
+
+    Current divisor: 5
+      Current Prime: 2
+        5/2 -> r=3, q=1, d2=0 (since r!=0 && q!=0 -> d2=0 -> proceed next prime)
+      Current Prime: 3
+        5/3 -> r=2, q=1, d3=0 (since r!=0 && q!=0 -> d3=0 -> proceed next prime)
+      Current Prime: 5
+        5/5 -> r=0, q=1, d5=1 (since r==0 && q==1 -> d5=1 -> break)
+
+    Current divisor: 6
+      Current Prime: 2
+        6/2 -> r=0, q=3, d2=1 (since r==0 && q!=0 -> d2=1 -> repeat dgn nilai latest q)
+        3/2 -> r=1, q=1, d2=1 (since r!=0 && q!=0 -> d2=1 -> proceed next prime)
+      Current Prime: 3
+        3/3 -> r=0, q=1, d3=1 (since r==0 && q==1 -> d3=1 -> break)
+
+    Current divisor: 7
+      Current Prime: 2
+        7/2 -> r=1, q=3, d2=0 (since r!=0 && q!=0 -> d2=0 -> proceed next prime)
+      Current Prime: 3
+        7/3 -> r=1, q=2, d3=0 (since r!=0 && q!=0 -> d3=0 -> proceed next prime)
+      Current Prime: 5
+        7/5 -> r=2, q=1, d5=0 (since r!=0 && q!=0 -> d5=0 -> proceed next prime)
+      Current Prime: 7
+        7/7 -> r=0, q=1, d7=0 (since r==0 && q==1 -> d7=1 -> break)
+
+    Current divisor: 8
+      Current Prime: 2
+        8/2 -> r=0, q=4, d2=1 (since r==0 && q!=0 -> d2=1 -> repeat dgn nilai latest q)
+        4/2 -> r=0, q=2, d2=2 (since r==0 && q!=0 -> d2=2 -> repeat dgn nilai latest q)
+        2/2 -> r=0, q=1, d2=3 (since r==0 && q==1 -> d2=3 -> break)
+
+    Current divisor: 9
+      Current Prime: 2
+        9/2 -> r=1, q=4, d2=0 (since r!=0 && q!=0 -> d2=0 -> proceed next prime)
+      Current Prime: 3
+        9/3 -> r=0, q=3, d3=1 (since r==0 && q!=0 -> d3=1 -> repeat dgn nilai latest q)
+        3/3 -> r=0, q=1, d3=2 (since r==0 && q==1 -> d3=2 -> break)
+
+    Current divisor: 10
+      Current Prime: 2
+        10/2 -> r=0, q=5, d2=1 (since r==0 && q!=0 -> d2=1 -> repeat dgn nilai latest q)
+        5/2  -> r=1, q=2, d2=1 (since r!=0 && q!=0 -> d2=1 -> proceed next prime)
+      Current Prime: 3
+        5/3  -> r=2, q=1, d3=0 (since r!=0 && q!=0 -> d3=0 -> proceed next prime)
+      Current Prime: 5
+        5/5  -> r=0, q=1, d5=0 (since r==0 && q==1 -> d5=1 -> break)
+    
+    FINDINGS:
+      - (r==0 && q!=0) -> keep perform current divisor / current prime -> current degree++
+      - (r!=0 && q!=0) -> highest degree xusik -> proceed next prime
+      - (r==0 && q==1) -> current degree++ -> break
+    */
+    // END LINE CODE TESTING
+
     document.getElementById("displayInfo").innerHTML = 
     "<div>The divisors are ranged from 1 to " + divisor2 + "</div>";
     return divisor2;
