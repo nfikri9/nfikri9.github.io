@@ -349,6 +349,24 @@ function Calculation5() {
       - (r==0 && q!=0) -> keep perform current divisor / current prime -> current degree++
       - (r!=0 && q!=0) -> highest degree xusik -> proceed next prime
       - (r==0 && q==1) -> current degree++ -> break
+
+      let n, p, q, r, t;
+      n=5;
+      p=5;
+      q=n/p;
+      r=n%p;
+      console.log("r=" + r);
+      console.log("q=" + q);
+
+      if (r==0 && q==1) {
+        console.log("dn++ -> break");
+      }
+      else if (r!=0 && q!=0) {
+        console.log("proceed next prime");
+      }
+      else if (r==0 && q!=0) {
+        console.log("repeat with latest q");
+      }
     */
     // END LINE CODE TESTING
 

@@ -448,11 +448,11 @@
       <div class="Indent-Level1"><code class="Highlighted" onclick="SectionTag()">&lt;section&gt; <em>MyContents</em> &lt;/section&gt;</code></div>
       <div class="Indent-Level1"><code class="Highlighted" onclick="DivisionTag()">&lt;div&gt; <em>MyContents</em> &lt;/div&gt;</code></div>
       <div class="Indent-Level1"><code class="Highlighted" onclick="SpanTag()">&lt;span&gt; <em>MyContents</em> &lt;/span&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;hgroup&gt; <em>MyContents</em> &lt;/hgroup&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;picture&gt; <em>MyContents</em> &lt;/picture&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;search&gt; <em>MyContents</em> &lt;/search&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;svg&gt; <em>MyContents</em> &lt;/svg&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;template&gt; <em>MyContents</em> &lt;/template&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="HgroupTag()">&lt;hgroup&gt; <em>MyContents</em> &lt;/hgroup&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="PictureTag()">&lt;picture&gt; <em>MyContents</em> &lt;/picture&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="SearchTag()">&lt;search&gt; <em>MyContents</em> &lt;/search&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="SvgTag()">&lt;svg&gt; <em>MyContents</em> &lt;/svg&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="TemplateTag()">&lt;template&gt; <em>MyContents</em> &lt;/template&gt;</code></div>
     </div>
 
     <!-- NAVIGATE TAG -->
@@ -558,611 +558,1219 @@
         <div><code class="Highlighted" onclick="SpanEventAttributes()"><em>HTML Event Attributes</em></code><div id="Span-Event-Attributes"></div></div>
       </div>
     </div>
+
+    <!-- HEADING GROUP TAG -->
+    <div id="Hgroup-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;hgroup&gt; <em>MyContents</em> &lt;/hgroup&gt;</code></h3>
+      <div>The <code>&lt;hgroup&gt;</code> tag is used to surround a heading and one or more &lt;p&gt; elements</div>
+      <div>The heading inside the <code>&lt;hgroup&gt;</code> element can be any of the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> headings</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="HgroupGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Hgroup-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="HgroupEventAttributes()"><em>HTML Event Attributes</em></code><div id="Hgroup-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>hgroup { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- PICTURE TAG -->
+    <div id="Picture-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;picture&gt; <em>MyContents</em> &lt;/picture&gt;</code></h3>
+      <div>The <code>&lt;picture&gt;</code> tag gives users more flexibility in specifying image resources</div>
+      <div>The most common use of the <code>&lt;picture&gt;</code> element will be for art direction in responsive designs</div>
+      <div>Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport</div>
+      <div>The <code>&lt;picture&gt;</code> element contains two tags: one or more <code>&lt;source&gt;</code> tags and one <code>&lt;img&gt;</code> tag</div>
+      <div>The browser will look for the first <code>&lt;source&gt;</code> element where the media query matches the current viewport width</div>
+      <div>Then it will display the proper image (specified in the <code>srcset</code> attribute)</div>
+      <div>The <code>&lt;img&gt;</code> element is required as the last child of the <code>&lt;picture&gt;</code> element, as a fallback option if none of the source tags matches</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="PictureGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Picture-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="PictureEventAttributes()"><em>HTML Event Attributes</em></code><div id="Picture-Event-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- SEARCH TAG -->
+    <div id="Search-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;search&gt; <em>MyContents</em> &lt;/search&gt;</code></h3>
+      <div>The <code>&lt;search&gt;</code> tag is used to specify that here comes a set of elements that is related to search</div>
+      <div>Elements inside a <code>&lt;search&gt;</code> elements can typically be form elements used to perform a search</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SearchGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Search-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SearchEventAttributes()"><em>HTML Event Attributes</em></code><div id="Search-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>search { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- SVG TAG -->
+    <div id="Svg-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;svg&gt; <em>MyContents</em> &lt;/svg&gt;</code></h3>
+      <div>The <code>&lt;svg&gt;</code> tag defines a container for SVG graphics</div>
+      <div>SVG has several methods for drawing paths, boxes, circles, text, and graphic images</div>
+    </div>
+
+    <!-- TEMPLATE TAG -->
+    <div id="Template-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;template&gt; <em>MyContents</em> &lt;/template&gt;</code></h3>
+      <div>The <code>&lt;template&gt;</code> tag is used as a container to hold some HTML content hidden from the user when the page loads</div>
+      <div>The content inside <code>&lt;template&gt;</code> can be rendered later with a JavaScript</div>
+      <div>User can use the <code>&lt;template&gt;</code> tag if they have some HTML codes to use over and over again, but not until they ask for it</div>
+      <div>To do this without the <code>&lt;template&gt;</code> tag, user have to create the HTML code with JavaScript to prevent the browser from rendering the code</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TemplateGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Template-Global-Attributes"></div></div>
+      </div>
+    </div>
   </section>
 
-<!------------------------>
-<!-- HTML SEMANTIC TEXT -->
-<!------------------------>
-<section id="HTML-Semantic-Text" class="Box-Contents">
-<h1>HTML SEMANTIC TEXT</h1>
-
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted" onclick="CommentTag()">&lt;!-- <em>MyText</em> --&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="HeadingTag()">&lt;h1&gt; <em>MyText</em> &lt;/h1&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="ParagraphTag()">&lt;p&gt; <em>MyText</em> &lt;/p&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="AnchorTag()">&lt;a&gt; <em>MyText</em> &lt;/a&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="AddressTag()">&lt;address&gt; <em>MyText</em> &lt;/address&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="AbbreviationTag()">&lt;abbr&gt; <em>MyText</em> &lt;/abbr&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="DefinitionTag()">&lt;dfn&gt; <em>MyText</em> &lt;/dfn&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="CiteTag()">&lt;cite&gt; <em>MyText</em> &lt;/cite&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="QuoteTag()">&lt;q&gt; <em>MyText</em> &lt;/q&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="BlockquoteTag()">&lt;blockq&gt; <em>MyText</em> &lt;/blockq&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="StrongTag()">&lt;strong&gt; <em>MyText</em> &lt;/strong&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="EmphasizeTag()">&lt;em&gt; <em>MyText</em> &lt;/em&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="InsertTag()">&lt;ins&gt; <em>MyText</em> &lt;/ins&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="DeleteTag()">&lt;del&gt; <em>MyText</em> &lt;/del&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="BoldTag()">&lt;b&gt; <em>MyText</em> &lt;/b&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="ItalicTag()">&lt;i&gt; <em>MyText</em> &lt;/i&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="UnarticulateTag()">&lt;u&gt; <em>MyText</em> &lt;/u&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="StrikeTag()">&lt;s&gt; <em>MyText</em> &lt;/s&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="MarkTag()">&lt;mark&gt; <em>MyText</em> &lt;/mark&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="SmallTag()">&lt;small&gt; <em>MyText</em> &lt;/small&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="SuperscriptTag()">&lt;sup&gt; <em>MyText</em> &lt;/sup&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="SubscriptTag()">&lt;sub&gt; <em>MyText</em> &lt;/sub&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="CodeTag()">&lt;code&gt; <em>MyText</em> &lt;/code&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="KeyboardTag()">&lt;kbd&gt; <em>MyText</em> &lt;/kbd&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="PreformatTag()">&lt;pre&gt; <em>MyText</em> &lt;/pre&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="SampleTag()">&lt;samp&gt; <em>MyText</em> &lt;/samp&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="VariableTag()">&lt;var&gt; <em>MyText</em> &lt;/var&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="BiDirectionalIsolationTag()">&lt;bdi&gt; <em>MyText</em> &lt;/bdi&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="BiDirectionalOverrideTag()">&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="TimeTag()">&lt;time&gt; <em>MyText</em> &lt;/time&gt;</code></div>
-</div>
-  
-<!-- COMMENT TAG -->
-<div id="Comment-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;!-- <em>MyText</em> --&gt;</code></h3>
-  <div>The comment tag is used to insert comments in the source code</div>
-  <div>Comments are not displayed in the browsers</div>
-  <div>User can use comments to explain the code, which can help them when they edit the source code at a later date</div>
-  <div>This is especially useful if user have a lot of code</div>
-</div>
-
-<!-- HEADING TAG -->
-<div id="Heading-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;h1&gt; <em>MyText</em> &lt;/h1&gt;</code></h3>
-  <div>The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags are used to define HTML headings</div>
-  <div><code>&lt;h1&gt;</code> defines the most important heading while <code>&lt;h6&gt;</code> defines the least important heading</div>
-
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="HeadingGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Heading-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="HeadingEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Heading-Event-Attributes"></div> </div>
-  </div>
-
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>h1 { display: block; font-weight: bold; font-size: 2em; margin: 0.67em 0; }</code></div>
-    <div><code>h2 { display: block; font-weight: bold; font-size: 1.5em; margin: 0.83em 0; }</code></div>
-    <div><code>h3 { display: block; font-weight: bold; font-size: 1.17em; margin: 1em 0; }</code></div>
-    <div><code>h4 { display: block; font-weight: bold; font-size: 1em; margin: 1.33em 0; }</code></div>
-    <div><code>h5 { display: block; font-weight: bold; font-size: 0.83em; margin: 1.67em 0; }</code></div>
-    <div><code>h6 { display: block; font-weight: bold; font-size: 0.67em; margin: 2.33em 0; }</code></div>
-  </div>
-
-  <div class="Box-Insights">
-    <h3>INSIGHTS</h3>
-    <div class="Item-Insights">
-      <span class="Highlight-Insights">Heading flow level</span>
-      <div>Do not skip heading levels, start with <code>&lt;h1&gt;</code>, then use <code>&lt;h2&gt;</code>, and so on until <code>&lt;h6&gt;</code></div>
+  <!------------------------>
+  <!-- HTML SEMANTIC TEXT -->
+  <!------------------------>
+  <section id="HTML-Semantic-Text" class="Box-Contents">
+  <h1>HTML SEMANTIC TEXT</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted" onclick="CommentTag()">&lt;!-- <em>MyText</em> --&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="HeadingTag()">&lt;h1&gt; <em>MyText</em> &lt;/h1&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="ParagraphTag()">&lt;p&gt; <em>MyText</em> &lt;/p&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="AnchorTag()">&lt;a&gt; <em>MyText</em> &lt;/a&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="AddressTag()">&lt;address&gt; <em>MyText</em> &lt;/address&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="AbbreviationTag()">&lt;abbr&gt; <em>MyText</em> &lt;/abbr&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DefinitionTag()">&lt;dfn&gt; <em>MyText</em> &lt;/dfn&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="CiteTag()">&lt;cite&gt; <em>MyText</em> &lt;/cite&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="QuoteTag()">&lt;q&gt; <em>MyText</em> &lt;/q&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="BlockquoteTag()">&lt;blockquote&gt; <em>MyText</em> &lt;/blockquote&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="StrongTag()">&lt;strong&gt; <em>MyText</em> &lt;/strong&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="EmphasizeTag()">&lt;em&gt; <em>MyText</em> &lt;/em&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="InsertTag()">&lt;ins&gt; <em>MyText</em> &lt;/ins&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DeleteTag()">&lt;del&gt; <em>MyText</em> &lt;/del&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="BoldTag()">&lt;b&gt; <em>MyText</em> &lt;/b&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="ItalicTag()">&lt;i&gt; <em>MyText</em> &lt;/i&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="UnarticulateTag()">&lt;u&gt; <em>MyText</em> &lt;/u&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="StrikeTag()">&lt;s&gt; <em>MyText</em> &lt;/s&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="MarkTag()">&lt;mark&gt; <em>MyText</em> &lt;/mark&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="SmallTag()">&lt;small&gt; <em>MyText</em> &lt;/small&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="SuperscriptTag()">&lt;sup&gt; <em>MyText</em> &lt;/sup&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="SubscriptTag()">&lt;sub&gt; <em>MyText</em> &lt;/sub&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="CodeTag()">&lt;code&gt; <em>MyText</em> &lt;/code&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="KeyboardTag()">&lt;kbd&gt; <em>MyText</em> &lt;/kbd&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="PreformatTag()">&lt;pre&gt; <em>MyText</em> &lt;/pre&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="SampleTag()">&lt;samp&gt; <em>MyText</em> &lt;/samp&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="VariableTag()">&lt;var&gt; <em>MyText</em> &lt;/var&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="BiDirectionalIsolationTag()">&lt;bdi&gt; <em>MyText</em> &lt;/bdi&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="BiDirectionalOverrideTag()">&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="TimeTag()">&lt;time&gt; <em>MyText</em> &lt;/time&gt;</code></div>
     </div>
-  </div>
-</div>
 
-<!-- PARAGRAPH TAG -->
-<div id="Paragraph-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;p&gt; <em>MyText</em> &lt;/p&gt;</code></h3>
-  <div>The <code>&lt;p&gt;</code> tag defines a paragraph</div>
-  <div>Browsers automatically add a single blank line before and after each <code>&lt;p&gt;</code> element</div>
+    <!-- COMMENT TAG -->
+    <div id="Comment-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;!-- <em>MyText</em> --&gt;</code></h3>
+      <div>The comment tag is used to insert comments in the source code</div>
+      <div>Comments are not displayed in the browsers</div>
+      <div>User can use comments to explain the code, which can help them when they edit the source code at a later date</div>
+      <div>This is especially useful if user have a lot of code</div>
+    </div>
 
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="ParagraphGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Paragraph-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="ParagraphEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Paragraph-Event-Attributes"></div> </div>
-  </div>
+    <!-- HEADING TAG -->
+    <div id="Heading-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;h1&gt; <em>MyText</em> &lt;/h1&gt;</code></h3>
+      <div>The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags are used to define HTML headings</div>
+      <div><code>&lt;h1&gt;</code> defines the most important heading while <code>&lt;h6&gt;</code> defines the least important heading</div>
 
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>p {</code></div>
-    <div><code>display: block;</code></div>
-    <div><code>margin: 1em 0;</code></div>
-    <div><code>}</code></div>
-  </div>
-</div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="HeadingGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Heading-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="HeadingEventAttributes()"><em>HTML Event Attributes</em></code><div id="Heading-Event-Attributes"></div></div>
+      </div>
 
-<!-- ANCHOR TAG -->
-<div id="Anchor-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;a&gt; <em>MyText</em> &lt;/a&gt;</code></h3>
-  <div>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another</div>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>h1 { display: block; font-weight: bold; font-size: 2em; margin: 0.67em 0; }</code></div>
+        <div><code>h2 { display: block; font-weight: bold; font-size: 1.5em; margin: 0.83em 0; }</code></div>
+        <div><code>h3 { display: block; font-weight: bold; font-size: 1.17em; margin: 1em 0; }</code></div>
+        <div><code>h4 { display: block; font-weight: bold; font-size: 1em; margin: 1.33em 0; }</code></div>
+        <div><code>h5 { display: block; font-weight: bold; font-size: 0.83em; margin: 1.67em 0; }</code></div>
+        <div><code>h6 { display: block; font-weight: bold; font-size: 0.67em; margin: 2.33em 0; }</code></div>
+      </div>
 
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="AnchorGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Anchor-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Anchor-Event-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Download-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Href-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Hreflang-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Media-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Ping-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Referrerpolicy-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Rel-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Target-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>MyValue</em>"&gt;</code> <div id="Anchor-Type-Attributes"></div> </div>
-  </div>
+      <div class="Box-Insights">
+      <h3>INSIGHTS</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Heading flow level</span>
+          <div>Do not skip heading levels, start with <code>&lt;h1&gt;</code>, then use <code>&lt;h2&gt;</code>, and so on until <code>&lt;h6&gt;</code></div>
+        </div>
+      </div>
+    </div>
 
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>a:link, a:visited { color: (internal value); text-decoration: underline; cursor: auto; }</code></div>
-    <div><code>a:link:active, a:visited:active { color: (internal value); }</code></div>
-  </div>
-</div>
+    <!-- PARAGRAPH TAG -->
+    <div id="Paragraph-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;p&gt; <em>MyText</em> &lt;/p&gt;</code></h3>
+      <div>The <code>&lt;p&gt;</code> tag defines a paragraph</div>
+      <div>Browsers automatically add a single blank line before and after each <code>&lt;p&gt;</code> element</div>
 
-<!-- ADDRESS TAG -->
-<div id="Address-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;address&gt; <em>MyText</em> &lt;/address&gt;</code></h3>
-</div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ParagraphGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Paragraph-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ParagraphEventAttributes()"><em>HTML Event Attributes</em></code><div id="Paragraph-Event-Attributes"></div></div>
+      </div>
 
-<!-- ABBREVIATION TAG -->
-<div id="Abbreviation-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;abbr&gt; <em>MyText</em> &lt;/abbr&gt;</code></h3>
-</div>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>p { display: block; margin: 1em 0; }</code></div>
+      </div>
+    </div>
 
-<!-- DEFINITION TAG -->
-<div id="Definition-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;dfn&gt; <em>MyText</em> &lt;/dfn&gt;</code></h3>
-</div>
+    <!-- ANCHOR TAG -->
+    <div id="Anchor-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;a&gt; <em>MyText</em> &lt;/a&gt;</code></h3>
+      <div>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another</div>
 
-<!-- CITE TAG -->
-<div id="Cite-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;cite&gt; <em>MyText</em> &lt;/cite&gt;</code></h3>
-</div>
-  
-<!-- QUOTE TAG -->
-<div id="Quote-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;q&gt; <em>MyText</em> &lt;/q&gt;</code></h3>
-  <div>The <code>&lt;q&gt;</code> tag defines a short quotation</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="QuoteGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Quote-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="QuoteEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Quote-Event-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="QuoteCiteAttributes()">&lt;q <b>cite</b>="<em>MyValue</em>"&gt;</code> <div id="Quote-Cite-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>q { display: inline; }</code></div>
-    <div><code>q:before { content: open-quote; }</code></div>
-    <div><code>q:after { content: close-quote; }</code></div>
-  </div>
-</div>
-  
-<!-- BLOCKQUOTE TAG -->
-<div id="Blockquote-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;blockq&gt; <em>MyText</em> &lt;/blockq&gt;</code></h3>
-  <div>The <code>&lt;blockq&gt;</code> tag specifies a section that is quoted from another source</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="BlockquoteGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Blockquote-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="BlockquoteEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Blockquote-Event-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="BlockquoteCiteAttributes()">&lt;blockq <b>cite</b>="<em>MyValue</em>"&gt;</code> <div id="Blockquote-Cite-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>blockq {</code></div>
-    <div><code>display: block;</code></div>
-    <div><code>margin: 1em 40px;</code></div>
-    <div><code>}</code></div>
-  </div>
-</div>
-  
-<!-- STRONG TAG -->
-<div id="Strong-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;strong&gt; <em>MyText</em> &lt;/strong&gt;</code></h3>
-  <div>The <code>&lt;strong&gt;</code> tag is used to define text with strong importance</div>
-  <div>Use the <code>&lt;b&gt;</code> tag to specify bold text without any extra importance</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="StrongGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Strong-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="StrongEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Strong-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>strong  { font-weight: bold; }</code></div>
-  </div>
-</div>
-  
-<!-- EMPHASIZE TAG -->
-<div id="Emphasize-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;em&gt; <em>MyText</em> &lt;/em&gt;</code></h3>
-  <div>The <code>&lt;em&gt;</code> tag is used to define emphasized text</div>
-  <div>A screen reader will pronounce the words in <code>&lt;em&gt;</code> with an emphasis, using verbal stress</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="EmphasizeGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Emphasize-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="EmphasizeEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Emphasize-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>em  { font-style: italic; }</code></div>
-  </div>
-</div>
-  
-<!-- INSERT TAG -->
-<div id="Insert-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;ins&gt; <em>MyText</em> &lt;/ins&gt;</code></h3>
-  <div>The <code>&lt;ins&gt;</code> tag defines a text that has been inserted into a document</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="InsertGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Insert-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="InsertEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Insert-Event-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="InsertCiteAttributes()">&lt;ins <b>cite</b>="<em>MyValue</em>"&gt;</code> <div id="Insert-Cite-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="InsertDatetimeAttributes()">&lt;ins <b>datetime</b>="<em>MyValue</em>"&gt;</code> <div id="Insert-Datetime-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>ins { text-decoration: underline; }</code></div>
-  </div>
-</div>
-  
-<!-- DELETE TAG -->
-<div id="Delete-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;del&gt; <em>MyText</em> &lt;/del&gt;</code></h3>
-  <div>The <code>&lt;del&gt;</code> tag defines text that has been deleted from a document</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="DeleteGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Delete-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="DeleteEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Delete-Event-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="DeleteCiteAttributes()">&lt;del <b>cite</b>="<em>MyValue</em>"&gt;</code> <div id="Delete-Cite-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="DeleteDatetimeAttributes()">&lt;del <b>datetime</b>="<em>MyValue</em>"&gt;</code> <div id="Delete-Datetime-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>del { text-decoration: line-through; }</code></div>
-  </div>
-</div>
-  
-<!-- BOLD TAG -->
-<div id="Bold-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;b&gt; <em>MyText</em> &lt;/b&gt;</code></h3>
-  <div>The <code>&lt;b&gt;</code> tag specifies bold text without any extra importance</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="BoldGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Bold-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="BoldEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Bold-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>b { font-weight: bold; }</code></div>
-  </div>
-</div>
-  
-<!-- ITALIC TAG -->
-<div id="Italic-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;i&gt; <em>MyText</em> &lt;/i&gt;</code></h3>
-  <div>The <code>&lt;i&gt;</code> tag defines a part of text in an alternate voice or mood</div>
-  <div>The <code>&lt;i&gt;</code> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="ItalicGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Italic-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="ItalicEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Italic-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>i { font-style: italic; }</code></div>
-  </div>
-</div>
-  
-<!-- UNARTICULATE TAG -->
-<div id="Unarticulate-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;u&gt; <em>MyText</em> &lt;/u&gt;</code></h3>
-  <div>The <code>&lt;u&gt;</code> tag represents some text that is unarticulated and styled differently from normal text</div>
-  <div>The text can be like misspelled words or proper names in Chinese text</div>
-  <div>Avoid using the <code>&lt;u&gt;</code> element where it could be confused for a hyperlink</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="UnarticulateGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Unarticulate-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="UnarticulateEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Unarticulate-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>u { text-decoration: underline; }</code></div>
-  </div>
-</div>
-  
-<!-- STRIKE TAG -->
-<div id="Strike-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;s&gt; <em>MyText</em> &lt;/s&gt;</code></h3>
-  <div>The <code>&lt;s&gt;</code> tag specifies text that is no longer correct, accurate or relevant</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="StrikeGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Strike-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="StrikeEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Strike-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>s { text-decoration: line-through; }</code></div>
-  </div>
-</div>
-  
-<!-- MARK TAG -->
-<div id="Mark-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;mark&gt; <em>MyText</em> &lt;/mark&gt;</code></h3>
-  <div>The <code>&lt;mark&gt;</code> tag defines text that should be marked or highlighted</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="MarkGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Mark-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="MarkEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Mark-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>mark {</code></div>
-    <div><code>background-color: yellow;</code></div>
-    <div><code>color: black;</code></div>
-    <div><code>}</code></div>
-  </div>
-</div>
-  
-<!-- SMALL TAG -->
-<div id="Small-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;small&gt; <em>MyText</em> &lt;/small&gt;</code></h3>
-  <div>The <code>&lt;small&gt;</code> tag defines smaller text (like copyright and other side-comments)</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="SmallGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Small-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="SmallEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Small-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>small { font-size: smaller; }</code></div>
-  </div>
-</div>
-  
-<!-- SUPERSCRIPT TAG -->
-<div id="Superscript-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;sup&gt; <em>MyText</em> &lt;/sup&gt;</code></h3>
-  <div>The <code>&lt;sup&gt;</code> tag defines superscript text</div>
-  <div>Superscript text can be used for footnotes, like <code>WWW<sup>[1]</sup></code></div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="SuperscriptGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Superscript-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="SuperscriptEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Superscript-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>sup {</code></div>
-    <div><code>vertical-align: super;</code></div>
-    <div><code>font-size: smaller;</code></div>
-    <div><code>}</code></div>
-  </div>
-</div>
-  
-<!-- SUBSCRIPT TAG -->
-<div id="Subscript-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;sub&gt; <em>MyText</em> &lt;/sub&gt;</code></h3>
-  <div>The <code>&lt;sub&gt;</code> tag defines subscript text</div>
-  <div>Subscript text can be used for chemical formulas, like <code>H<sub>2</sub>O</code></div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="SubscriptGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Subscript-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="SubscriptEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Subscript-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>sub {</code></div>
-    <div><code>vertical-align: sub;</code></div>
-    <div><code>font-size: smaller;</code></div>
-    <div><code>}</code></div>
-  </div>
-</div>
-  
-<!-- CODE TAG -->
-<div id="Code-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;code&gt; <em>MyText</em> &lt;/code&gt;</code></h3>
-  <div>The <code>&lt;code&gt;</code> tag is used to define a piece of computer code</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="CodeGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Code-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="CodeEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Code-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>code { font-family: monospace; }</code></div>
-  </div>
-</div>
-  
-<!-- KEYBOARD TAG -->
-<div id="Keyboard-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;kbd&gt; <em>MyText</em> &lt;/kbd&gt;</code></h3>
-  <div>The <code>&lt;kbd&gt;</code> tag is used to define keyboard input</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="KeyboardGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Keyboard-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="KeyboardEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Keyboard-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>kbd { font-family: monospace; }</code></div>
-  </div>
-</div>
-  
-<!-- PREFORMAT TAG -->
-<div id="Preformat-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;pre&gt; <em>MyText</em> &lt;/pre&gt;</code></h3>
-  <div>The <code>&lt;pre&gt;</code> tag defines preformatted text</div>
-  <div>Text in a <code>&lt;pre&gt;</code> element is displayed in a fixed-width font, and the text preserves both spaces and line breaks</div>
-  <div>The text will be displayed exactly as written in the HTML source code</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="PreformatGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Preformat-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="PreformatEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Preformat-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>pre {</code></div>
-    <div><code>display: block;</code></div>
-    <div><code>font-family: monospace;</code></div>
-    <div><code>white-space: pre;</code></div>
-    <div><code>margin: 1em 0;</code></div>
-    <div><code>}</code></div>
-  </div>
-</div>
-  
-<!-- SAMPLE TAG -->
-<div id="Sample-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;samp&gt; <em>MyText</em> &lt;/samp&gt;</code></h3>
-  <div>The <code>&lt;samp&gt;</code> tag is used to define sample output from a computer program</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="SampleGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Sample-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="SampleEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Sample-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>samp { font-family: monospace; }</code></div>
-  </div>
-</div>
-  
-<!-- VARIABLE TAG -->
-<div id="Variable-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;var&gt; <em>MyText</em> &lt;/var&gt;</code></h3>
-  <div>The <code>&lt;var&gt;</code> tag is used to defines a variable in programming or in a mathematical expression</div>
-  
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="VariableGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Variable-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="VariableEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Variable-Event-Attributes"></div> </div>
-  </div>
-  
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>var { font-style: italic; }</code></div>
-  </div>
-</div>
-  
-<!-- BIDIRECTIONAL ISOLATION TAG -->
-<div id="Bi-Directional-Isolation-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;bdi&gt; <em>MyText</em> &lt;/bdi&gt;</code></h3>
-</div>
-  
-<!-- BIDIRECTIONAL OVERRIDE TAG -->
-<div id="Bi-Directional-Override-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></h3>
-</div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="AnchorGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Anchor-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorEventAttributes()"><em>HTML Event Attributes</em></code><div id="Anchor-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Download-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Href-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Hreflang-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Media-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Ping-Attributes"></div> </div>
+        <div><code class="Highlighted" onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Referrerpolicy-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Rel-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Target-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Type-Attributes"></div></div>
+      </div>
 
-<!-- TIME TAG -->
-<div id="Time-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;time&gt; <em>MyText</em> &lt;/time&gt;</code></h3>
-</div>
-</section>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>a:link, a:visited { color: (<em>internal value</em>); text-decoration: underline; cursor: auto; }</code></div>
+        <div><code>a:link:active, a:visited:active { color: (<em>internal value</em>); }</code></div>
+      </div>
+    </div>
 
-<!--------------->
-<!-- HTML FORM -->
-<!--------------->
-<section id="HTML-Form" class="Box-Contents">
-<h1>HTML FORM STRUCTURE</h1>
+    <!-- ADDRESS TAG -->
+    <div id="Address-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;address&gt; <em>MyText</em> &lt;/address&gt;</code></h3>
+      <div>The <code>&lt;address&gt;</code> tag defines the contact information for the author/owner of a document or an article</div>
+      <div>The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</div>
 
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted">&lt;form&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;fieldset&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;legend&gt; <em>MyText</em> &lt;/legend&gt;</code></div>
-  <br>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;input&gt;</code></div>
-  <br>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;textarea&gt; <em>MyText</em> &lt;/textarea&gt;</code></div>
-  <br>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;select&gt;</code></div>
-  <div class="Indent-Level4"><code class="Highlighted">&lt;optgroup&gt;</code></div>
-  <div class="Indent-Level5"><code class="Highlighted">&lt;option&gt; <em>MyText</em> &lt;/option&gt;</code></div>
-  <div class="Indent-Level4"><code class="Highlighted">&lt;/optgroup&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;/select&gt;</code></div>
-  <br>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;datalist&gt;</code></div>
-  <div class="Indent-Level4"><code class="Highlighted">&lt;option&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;/datalist&gt;</code></div>
-  <br>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;progress&gt; <em>MyText</em> &lt;/progress&gt;</code></div>
-  <br>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;meter&gt; <em>MyText</em> &lt;/meter&gt;</code></div>
-  <br>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;output&gt;&lt;/output&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;button&gt; <em>MyText</em> &lt;/button&gt;</code></div>
-  <br>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;/fieldset&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/form&gt;</code></div>
-</div>
-</section>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="AddressGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Address-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AddressEventAttributes()"><em>HTML Event Attributes</em></code><div id="Address-Event-Attributes"></div></div>
+      </div>
 
-<!---------------->
-<!-- HTML TABLE -->
-<!---------------->
-<section id="HTML-Table" class="Box-Contents">
-<h1>HTML TABLE STRUCTURE</h1>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>address { display: block; font-style: italic; }</code></div>
+      </div>
+    </div>
 
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted">&lt;table&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;caption&gt; <em>MyText</em> &lt;/caption&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;colgroup&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;col&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;/colgroup&gt;</code></div>
-  <br>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;thead&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
-  <div class="Indent-Level4"><code class="Highlighted">&lt;th&gt; <em>MyTableHeader</em> &lt;/th&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;/thead&gt;</code></div>
-  <br>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;tbody&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
-  <div class="Indent-Level4"><code class="Highlighted">&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;/tbody&gt;</code></div>
-  <br>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;tfoot&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
-  <div class="Indent-Level4"><code class="Highlighted">&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;/tfoot&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/table&gt;</code></div>
-</div>
-</section>
+    <!-- ABBREVIATION TAG -->
+    <div id="Abbreviation-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;abbr&gt; <em>MyText</em> &lt;/abbr&gt;</code></h3>
+      <div>The <code>&lt;abbr&gt;</code> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP"</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="AbbreviationGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Abbreviation-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AbbreviationEventAttributes()"><em>HTML Event Attributes</em></code><div id="Abbreviation-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>abbr { display: inline; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practice to include <code>title</code> attribute</span>
+          <div>This is the best way to show the description for the abbreviation/acronym</div>
+          <div>User just simply mouse over the element and the desription will be displayed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEFINITION TAG -->
+    <div id="Definition-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;dfn&gt; <em>MyText</em> &lt;/dfn&gt;</code></h3>
+      <div>The <code>&lt;dfn&gt;</code> tag specifies a term that is going to be defined within the content</div>
+      <div>The nearest parent of the <code>&lt;dfn&gt;</code> tag must also contain the definition/explanation for the term</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DefinitionGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Definition-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DefinitionEventAttributes()"><em>HTML Event Attributes</em></code><div id="Definition-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>dfn { font-style: italic; }</code></div>
+      </div>
+    </div>
+
+    <!-- CITE TAG -->
+    <div id="Cite-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;cite&gt; <em>MyText</em> &lt;/cite&gt;</code></h3>
+      <div>The <code>&lt;cite&gt;</code> tag defines the title of a creative work</div>
+      <div>Example of creative works include books, poems, songs, movies, paintings, sculptures, etc.</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="CiteGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Cite-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="CiteEventAttributes()"><em>HTML Event Attributes</em></code><div id="Cite-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>cite { font-style: italic; }</code></div>
+      </div>
+    </div>
+
+    <!-- QUOTE TAG -->
+    <div id="Quote-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;q&gt; <em>MyText</em> &lt;/q&gt;</code></h3>
+      <div>The <code>&lt;q&gt;</code> tag defines a short quotation</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="QuoteGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Quote-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="QuoteEventAttributes()"><em>HTML Event Attributes</em></code><div id="Quote-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="QuoteCiteAttributes()">&lt;q <b>cite</b>="<em>MyValue</em>"&gt;</code><div id="Quote-Cite-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>q { display: inline; }</code></div>
+        <div><code>q:before { content: open-quote; }</code></div>
+        <div><code>q:after { content: close-quote; }</code></div>
+      </div>
+    </div>
+
+    <!-- BLOCKQUOTE TAG -->
+    <div id="Blockquote-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;blockquote&gt; <em>MyText</em> &lt;/blockquote&gt;</code></h3>
+      <div>The <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another source</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="BlockquoteGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Blockquote-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BlockquoteEventAttributes()"><em>HTML Event Attributes</em></code><div id="Blockquote-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BlockquoteCiteAttributes()">&lt;blockquote <b>cite</b>="<em>MyValue</em>"&gt;</code><div id="Blockquote-Cite-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>blockquote { display: block; margin: 1em 40px; }</code></div>
+      </div>
+    </div>
+
+    <!-- STRONG TAG -->
+    <div id="Strong-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;strong&gt; <em>MyText</em> &lt;/strong&gt;</code></h3>
+      <div>The <code>&lt;strong&gt;</code> tag is used to define text with strong importance</div>
+      <div>Use the <code>&lt;b&gt;</code> tag to specify bold text without any extra importance</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="StrongGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Strong-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="StrongEventAttributes()"><em>HTML Event Attributes</em></code><div id="Strong-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>strong  { font-weight: bold; }</code></div>
+      </div>
+    </div>
+
+    <!-- EMPHASIZE TAG -->
+    <div id="Emphasize-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;em&gt; <em>MyText</em> &lt;/em&gt;</code></h3>
+      <div>The <code>&lt;em&gt;</code> tag is used to define emphasized text</div>
+      <div>A screen reader will pronounce the words in <code>&lt;em&gt;</code> with an emphasis, using verbal stress</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="EmphasizeGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Emphasize-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="EmphasizeEventAttributes()"><em>HTML Event Attributes</em></code><div id="Emphasize-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>em  { font-style: italic; }</code></div>
+      </div>
+    </div>
+
+    <!-- INSERT TAG -->
+    <div id="Insert-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;ins&gt; <em>MyText</em> &lt;/ins&gt;</code></h3>
+      <div>The <code>&lt;ins&gt;</code> tag defines a text that has been inserted into a document</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="InsertGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Insert-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InsertEventAttributes()"><em>HTML Event Attributes</em></code><div id="Insert-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InsertCiteAttributes()">&lt;ins <b>cite</b>="<em>MyValue</em>"&gt;</code><div id="Insert-Cite-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InsertDatetimeAttributes()">&lt;ins <b>datetime</b>="<em>MyValue</em>"&gt;</code><div id="Insert-Datetime-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>ins { text-decoration: underline; }</code></div>
+      </div>
+    </div>
+
+    <!-- DELETE TAG -->
+    <div id="Delete-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;del&gt; <em>MyText</em> &lt;/del&gt;</code></h3>
+      <div>The <code>&lt;del&gt;</code> tag defines text that has been deleted from a document</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DeleteGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Delete-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DeleteEventAttributes()"><em>HTML Event Attributes</em></code><div id="Delete-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DeleteCiteAttributes()">&lt;del <b>cite</b>="<em>MyValue</em>"&gt;</code><div id="Delete-Cite-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DeleteDatetimeAttributes()">&lt;del <b>datetime</b>="<em>MyValue</em>"&gt;</code><div id="Delete-Datetime-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>del { text-decoration: line-through; }</code></div>
+      </div>
+    </div>
+
+    <!-- BOLD TAG -->
+    <div id="Bold-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;b&gt; <em>MyText</em> &lt;/b&gt;</code></h3>
+      <div>The <code>&lt;b&gt;</code> tag specifies bold text without any extra importance</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="BoldGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bold-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BoldEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bold-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>b { font-weight: bold; }</code></div>
+      </div>
+    </div>
+
+    <!-- ITALIC TAG -->
+    <div id="Italic-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;i&gt; <em>MyText</em> &lt;/i&gt;</code></h3>
+      <div>The <code>&lt;i&gt;</code> tag defines a part of text in an alternate voice or mood</div>
+      <div>The <code>&lt;i&gt;</code> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ItalicGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Italic-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ItalicEventAttributes()"><em>HTML Event Attributes</em></code><div id="Italic-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>i { font-style: italic; }</code></div>
+      </div>
+    </div>
+
+    <!-- UNARTICULATE TAG -->
+    <div id="Unarticulate-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;u&gt; <em>MyText</em> &lt;/u&gt;</code></h3>
+      <div>The <code>&lt;u&gt;</code> tag represents some text that is unarticulated and styled differently from normal text</div>
+      <div>The text can be like misspelled words or proper names in Chinese text</div>
+      <div>Avoid using the <code>&lt;u&gt;</code> element where it could be confused for a hyperlink</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="UnarticulateGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Unarticulate-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="UnarticulateEventAttributes()"><em>HTML Event Attributes</em></code><div id="Unarticulate-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>u { text-decoration: underline; }</code></div>
+      </div>
+    </div>
+
+    <!-- STRIKE TAG -->
+    <div id="Strike-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;s&gt; <em>MyText</em> &lt;/s&gt;</code></h3>
+      <div>The <code>&lt;s&gt;</code> tag specifies text that is no longer correct, accurate or relevant</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="StrikeGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Strike-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="StrikeEventAttributes()"><em>HTML Event Attributes</em></code><div id="Strike-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>s { text-decoration: line-through; }</code></div>
+      </div>
+    </div>
+
+    <!-- MARK TAG -->
+    <div id="Mark-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;mark&gt; <em>MyText</em> &lt;/mark&gt;</code></h3>
+      <div>The <code>&lt;mark&gt;</code> tag defines text that should be marked or highlighted</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="MarkGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Mark-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MarkEventAttributes()"><em>HTML Event Attributes</em></code><div id="Mark-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>mark { background-color: yellow; color: black; }</code></div>
+      </div>
+    </div>
+
+    <!-- SMALL TAG -->
+    <div id="Small-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;small&gt; <em>MyText</em> &lt;/small&gt;</code></h3>
+      <div>The <code>&lt;small&gt;</code> tag defines smaller text (like copyright and other side-comments)</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SmallGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Small-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SmallEventAttributes()"><em>HTML Event Attributes</em></code><div id="Small-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>small { font-size: smaller; }</code></div>
+      </div>
+    </div>
+
+    <!-- SUPERSCRIPT TAG -->
+    <div id="Superscript-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;sup&gt; <em>MyText</em> &lt;/sup&gt;</code></h3>
+      <div>The <code>&lt;sup&gt;</code> tag defines superscript text</div>
+      <div>Superscript text can be used for footnotes, like <code>WWW<sup>[1]</sup></code></div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SuperscriptGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Superscript-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SuperscriptEventAttributes()"><em>HTML Event Attributes</em></code><div id="Superscript-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>sup { vertical-align: super; font-size: smaller; }</code></div>
+      </div>
+    </div>
+
+    <!-- SUBSCRIPT TAG -->
+    <div id="Subscript-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;sub&gt; <em>MyText</em> &lt;/sub&gt;</code></h3>
+      <div>The <code>&lt;sub&gt;</code> tag defines subscript text</div>
+      <div>Subscript text can be used for chemical formulas, like <code>H<sub>2</sub>O</code></div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SubscriptGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Subscript-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SubscriptEventAttributes()"><em>HTML Event Attributes</em></code><div id="Subscript-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>sub { vertical-align: sub; font-size: smaller; }</code></div>
+      </div>
+    </div>
+
+    <!-- CODE TAG -->
+    <div id="Code-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;code&gt; <em>MyText</em> &lt;/code&gt;</code></h3>
+      <div>The <code>&lt;code&gt;</code> tag is used to define a piece of computer code</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="CodeGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Code-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="CodeEventAttributes()"><em>HTML Event Attributes</em></code><div id="Code-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>code { font-family: monospace; }</code></div>
+      </div>
+    </div>
+
+    <!-- KEYBOARD TAG -->
+    <div id="Keyboard-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;kbd&gt; <em>MyText</em> &lt;/kbd&gt;</code></h3>
+      <div>The <code>&lt;kbd&gt;</code> tag is used to define keyboard input</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="KeyboardGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Keyboard-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="KeyboardEventAttributes()"><em>HTML Event Attributes</em></code><div id="Keyboard-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>kbd { font-family: monospace; }</code></div>
+      </div>
+    </div>
+
+    <!-- PREFORMAT TAG -->
+    <div id="Preformat-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;pre&gt; <em>MyText</em> &lt;/pre&gt;</code></h3>
+      <div>The <code>&lt;pre&gt;</code> tag defines preformatted text</div>
+      <div>Text in a <code>&lt;pre&gt;</code> element is displayed in a fixed-width font, and the text preserves both spaces and line breaks</div>
+      <div>The text will be displayed exactly as written in the HTML source code</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="PreformatGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Preformat-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="PreformatEventAttributes()"><em>HTML Event Attributes</em></code><div id="Preformat-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>pre { display: block; font-family: monospace; white-space: pre; margin: 1em 0; }</code></div>
+      </div>
+    </div>
+
+    <!-- SAMPLE TAG -->
+    <div id="Sample-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;samp&gt; <em>MyText</em> &lt;/samp&gt;</code></h3>
+      <div>The <code>&lt;samp&gt;</code> tag is used to define sample output from a computer program</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SampleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Sample-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SampleEventAttributes()"><em>HTML Event Attributes</em></code><div id="Sample-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>samp { font-family: monospace; }</code></div>
+      </div>
+    </div>
+
+    <!-- VARIABLE TAG -->
+    <div id="Variable-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;var&gt; <em>MyText</em> &lt;/var&gt;</code></h3>
+      <div>The <code>&lt;var&gt;</code> tag is used to defines a variable in programming or in a mathematical expression</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="VariableGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Variable-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VariableEventAttributes()"><em>HTML Event Attributes</em></code><div id="Variable-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>var { font-style: italic; }</code></div>
+      </div>
+    </div>
+
+    <!-- BIDIRECTIONAL ISOLATION TAG -->
+    <div id="Bi-Directional-Isolation-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;bdi&gt; <em>MyText</em> &lt;/bdi&gt;</code></h3>
+      <div>The <code>&lt;bdi&gt;</code> tag isolates a part of text that might be formatted in a different direction from other text outside it</div>
+      <div>This element is useful when embedding user-generated content with an unknown text direction</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="BdiGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bdi-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BdiEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bdi-Event-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- BIDIRECTIONAL OVERRIDE TAG -->
+    <div id="Bi-Directional-Override-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></h3>
+      <div>The <code>&lt;bdo&gt;</code> tag is used to override the current text direction</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="BdoGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bdo-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BdoEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bdo-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practice to include <code>dir</code> attribute</span>
+          <div>The attribute is obviously required that specifies the text direction of the text inside the <code>&lt;bdo&gt;</code> element</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIME TAG -->
+    <div id="Time-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;time&gt; <em>MyText</em> &lt;/time&gt;</code></h3>
+      <div>The <code>&lt;time&gt;</code> tag defines a specific time (or datetime)</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TimeGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Time-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TimeEventAttributes()"><em>HTML Event Attributes</em></code><div id="Time-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TimeDatetimeAttributes()">&lt;time <b>datetime</b>="<em>MyValue</em>"&gt;</code><div id="Time-Datetime-Attributes"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!--------------->
+  <!-- HTML FORM -->
+  <!--------------->
+  <section id="HTML-Form" class="Box-Contents">
+  <h1>HTML FORM STRUCTURE</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted" onclick="FormTag()">&lt;form&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="FieldsetTag()">&lt;fieldset&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="LegendTag()">&lt;legend&gt; <em>MyText</em> &lt;/legend&gt;</code></div>
+      <br>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="LabelTag()">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="InputTag()">&lt;input&gt;</code></div>
+      <br>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="LabelTag()">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="TextareaTag()">&lt;textarea&gt; <em>MyText</em> &lt;/textarea&gt;</code></div>
+      <br>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="LabelTag()">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="SelectTag()">&lt;select&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted" onclick="OptgroupTag()">&lt;optgroup&gt;</code></div>
+      <div class="Indent-Level5"><code class="Highlighted" onclick="OptionTag()">&lt;option&gt; <em>MyText</em> &lt;/option&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted" onclick="OptgroupTag()">&lt;/optgroup&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="SelectTag()">&lt;/select&gt;</code></div>
+      <br>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="LabelTag()">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="DatalistTag()">&lt;datalist&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted" onclick="OptionTag()">&lt;option&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="DatalistTag()">&lt;/datalist&gt;</code></div>
+      <br>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="LabelTag()">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="ProgressTag()">&lt;progress&gt; <em>MyText</em> &lt;/progress&gt;</code></div>
+      <br>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="LabelTag()">&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="MeterTag()">&lt;meter&gt; <em>MyText</em> &lt;/meter&gt;</code></div>
+      <br>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="OutputTag()">&lt;output&gt;&lt;/output&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="ButtonTag()">&lt;button&gt; <em>MyText</em> &lt;/button&gt;</code></div>
+      <br>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="FieldsetTag()">&lt;/fieldset&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="FormTag()">&lt;/form&gt;</code></div>
+    </div>
+
+    <!-- FORM TAG -->
+    <div id="Form-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;form&gt; <em>MyContents</em> &lt;/form&gt;</code></h3>
+      <div>The <code>&lt;form&gt;</code> tag is used to create an HTML form for user input</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="FormGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Form-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormEventAttributes()"><em>HTML Event Attributes</em></code><div id="Form-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormAcceptCharsetAttributes()">&lt;form <b>accept-charset</b>="<em>MyValue</em>"&gt;</code><div id="Form-Accept-Charset-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormActionCharsetAttributes()">&lt;form <b>action</b>="<em>MyValue</em>"&gt;</code><div id="Form-Action-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormAutocompleteAttributes()">&lt;form <b>autocomplete</b>="<em>MyValue</em>"&gt;</code><div id="Form-Autocomplete-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormEnctypeAttributes()">&lt;form <b>enctype</b>="<em>MyValue</em>"&gt;</code><div id="Form-Enctype-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormMethodAttributes()">&lt;form <b>method</b>="<em>MyValue</em>"&gt;</code><div id="Form-Method-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormNameAttributes()">&lt;form <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Form-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormNovalidateAttributes()">&lt;form <b>novalidate</b>="<em>MyValue</em>"&gt;</code><div id="Form-Novalidate-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormRelAttributes()">&lt;form <b>rel</b>="<em>MyValue</em>"&gt;</code><div id="Form-Rel-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FormTargetAttributes()">&lt;form <b>target</b>="<em>MyValue</em>"&gt;</code><div id="Form-Target-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>form { display: block; margin-top: 0em; }</code></div>
+      </div>
+    </div>
+
+    <!-- FIELDSET TAG -->
+    <div id="Fieldset-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;fieldset&gt; <em>MyContents</em> &lt;/fieldset&gt;</code></h3>
+      <div>The <code>&lt;fieldset&gt;</code> tag is used to group related elements in a form</div>
+      <div>The <code>&lt;fieldset&gt;</code> tag draws a box around the related elements</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="FieldsetGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Fieldset-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FieldsetEventAttributes()"><em>HTML Event Attributes</em></code><div id="Fieldset-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FieldsetDisabledAttributes()">&lt;fieldset <b>disabled</b>="<em>MyValue</em>"&gt;</code><div id="Fieldset-Disabled-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FieldsetFormAttributes()">&lt;fieldset <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Fieldset-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FieldsetNameAttributes()">&lt;fieldset <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Fieldset-Name-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>fieldset { display: block; margin: 0 2px; padding: 0.35em 0.75em 0.625em; border: 2px groove (<em>internal value</em>); }</code></div>
+      </div>
+    </div>
+
+    <!-- LEGEND TAG -->
+    <div id="Legend-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;legend&gt; <em>MyText</em> &lt;/legend&gt;</code></h3>
+      <div>The <code>&lt;legend&gt;</code> tag defines a caption for the <code>&lt;fieldset&gt;</code> element</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="LegendGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Legend-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LegendEventAttributes()"><em>HTML Event Attributes</em></code><div id="Legend-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>legend { display: block; padding: 0 2px; border: none; }</code></div>
+      </div>
+    </div>
+
+    <!-- LABEL TAG -->
+    <div id="Label-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;label&gt; <em>MyText</em> &lt;/label&gt;</code></h3>
+      <div>The <code>&lt;label&gt;</code> tag defines a label for several elements</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="LabelGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Label-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LabelEventAttributes()"><em>HTML Event Attributes</em></code><div id="Label-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LabelForAttributes()">&lt;label <b>for</b>="<em>MyValue</em>"&gt;</code><div id="Label-For-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LabelFormAttributes()">&lt;label <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Label-Form-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>label { cursor: default; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Better accessibility</code></span>
+          <div>Without <code>&lt;label&gt;</code>, some users will have difficulty clicking on very small regions</div>
+          <div>With <code>&lt;label&gt;</code>, this increases the hit area and they can clicks the text within the label element</div>
+          <div>Other than that, it can serve as screen reader users (will read out loud the label, when the user is focused on the element)</div>
+        </div>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practices to bound related element to <code>&lt;label&gt;</code></span>
+          <div><code>&lt;label for="<em>MyValue</em>"&gt;&lt;/label&gt; &lt;<em>MyElement</em> id="<em>MyValue</em>"&gt;&lt;/<em>MyElement</em>&gt;</code></div>
+          <div>The <code>for</code> attribute of <code>&lt;label&gt;</code> must be equal to the <code>id</code> attribute of the related element to bind them together</div>
+          <div><code>&lt;label&gt; &lt;<em>MyElement</em>&gt;&lt;/<em>MyElement</em>&gt; &lt;/label&gt;</code></div>
+          <div>A label can also be bound to an element by placing the element inside the <code>&lt;label&gt;</code> element</div>
+          <div>Only selective elements of the following can be bounded with label element</div>
+          <div><code>&lt;input type="checkbox"&gt;, &lt;input type="color"&gt;, &lt;input type="date"&gt;, &lt;input type="datetime-local"&gt;, &lt;input type="email"&gt;,
+               &lt;input type="file"&gt;, &lt;input type="month"&gt;, &lt;input type="number"&gt;, &lt;input type="password"&gt;, &lt;input type="radio"&gt;,
+               &lt;input type="range"&gt;, &lt;input type="search"&gt;, &lt;input type="tel"&gt;, &lt;input type="text"&gt;, &lt;input type="time"&gt;, &lt;input type="url"&gt;,
+               &lt;input type="week"&gt;, &lt;meter&gt;, &lt;progress&gt;, &lt;select&gt;, &lt;textarea&gt;</code>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INPUT TAG -->
+    <div id="Input-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;input&gt;</code></h3>
+      <div>The <code>&lt;input&gt;</code> tag specifies an input field where the user can enter data</div>
+      <div>The <code>&lt;input&gt;</code> element is the most important form element</div>
+      <div>The <code>&lt;input&gt;</code> element can be displayed in several ways, depending on the <code>type</code> attribute</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="InputGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Input-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputEventAttributes()"><em>HTML Event Attributes</em></code><div id="Input-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputAcceptAttributes()">&lt;input <b>accept</b>="<em>MyValue</em>"&gt;</code><div id="Input-Accept-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputAltAttributes()">&lt;input <b>alt</b>="<em>MyValue</em>"&gt;</code><div id="Input-Alt-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputAutocompleteAttributes()">&lt;input <b>autocomplete</b>="<em>MyValue</em>"&gt;</code><div id="Input-Autocomplete-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputAutofocusAttributes()">&lt;input <b>autofocus</b>="<em>MyValue</em>"&gt;</code><div id="Input-Autofocus-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputCheckedAttributes()">&lt;input <b>checked</b>="<em>MyValue</em>"&gt;</code><div id="Input-Checked-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputDirnameAttributes()">&lt;input <b>dirname</b>="<em>MyValue</em>"&gt;</code><div id="Input-Dirname-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputDisabledAttributes()">&lt;input <b>disabled</b>="<em>MyValue</em>"&gt;</code><div id="Input-Disabled-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormAttributes()">&lt;input <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Input-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormactionAttributes()">&lt;input <b>formaction</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formaction-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormenctypeAttributes()">&lt;input <b>formenctype</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formenctype-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormmethodAttributes()">&lt;input <b>formmethod</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formmethod-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormnovalidateAttributes()">&lt;input <b>formnovalidate</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formnovalidate-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormtargetAttributes()">&lt;input <b>formtarget</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formtarget-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputHeightAttributes()">&lt;input <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Input-Height-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputListAttributes()">&lt;input <b>list</b>="<em>MyValue</em>"&gt;</code><div id="Input-List-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMaxAttributes()">&lt;input <b>max</b>="<em>MyValue</em>"&gt;</code><div id="Input-Max-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMaxlengthAttributes()">&lt;input <b>maxlength</b>="<em>MyValue</em>"&gt;</code><div id="Input-Maxlength-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMinAttributes()">&lt;input <b>min</b>="<em>MyValue</em>"&gt;</code><div id="Input-Min-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMinlengthAttributes()">&lt;input <b>minlength</b>="<em>MyValue</em>"&gt;</code><div id="Input-Minlength-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMultipleAttributes()">&lt;input <b>multiple</b>="<em>MyValue</em>"&gt;</code><div id="Input-Multiple-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputNameAttributes()">&lt;input <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Input-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputPatternAttributes()">&lt;input <b>pattern</b>="<em>MyValue</em>"&gt;</code><div id="Input-Pattern-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputPlaceholderAttributes()">&lt;input <b>placeholder</b>="<em>MyValue</em>"&gt;</code><div id="Input-Placeholder-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputPopovertargetAttributes()">&lt;input <b>popovertarget</b>="<em>MyValue</em>"&gt;</code><div id="Input-Popovertarget-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputPopovertargetactionAttributes()">&lt;input <b>popovertargetaction</b>="<em>MyValue</em>"&gt;</code><div id="Input-Popovertargetaction-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputReadonlyAttributes()">&lt;input <b>readonly</b>="<em>MyValue</em>"&gt;</code><div id="Input-Readonly-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputRequiredAttributes()">&lt;input <b>required</b>="<em>MyValue</em>"&gt;</code><div id="Input-Required-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputSizeAttributes()">&lt;input <b>size</b>="<em>MyValue</em>"&gt;</code><div id="Input-Size-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputSrcAttributes()">&lt;input <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Input-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputStepAttributes()">&lt;input <b>step</b>="<em>MyValue</em>"&gt;</code><div id="Input-Step-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputTypeAttributes()">&lt;input <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Input-Type-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputValueAttributes()">&lt;input <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Input-Value-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputWidthAttributes()">&lt;input <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Input-Width-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practice to pair <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> together</span>
+          <div>It serves greater accessibility for the following <code>&lt;input&gt;</code> elements</div>
+          <div><code>&lt;input type="text"&gt;, &lt;input type="checkbox"&gt;, &lt;input type="radio"&gt;, &lt;input type="file"&gt;, &lt;input type="password"&gt;</code></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEXTAREA TAG -->
+    <div id="Textarea-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;textarea&gt; <em>MyText</em> &lt;/textarea&gt;</code></h3>
+      <div>The <code>&lt;textarea&gt;</code> tag defines a multi-line text input control</div>
+      <div>The <code>&lt;textarea&gt;</code> element is often used in a form, to collect user inputs like comments or reviews</div>
+      <div>A text area can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier)</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TextareaGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Textarea-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaEventAttributes()"><em>HTML Event Attributes</em></code><div id="Textarea-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaAutofocusAttributes()">&lt;textarea <b>autofocus</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Autofocus-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaColsAttributes()">&lt;textarea <b>cols</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Cols-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaDirnameAttributes()">&lt;textarea <b>dirname</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Dirname-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaDisabledAttributes()">&lt;textarea <b>disabled</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Disabled-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaFormAttributes()">&lt;textarea <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaMaxlengthAttributes()">&lt;textarea <b>maxlength</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Maxlength-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaNameAttributes()">&lt;textarea <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaPlaceholderAttributes()">&lt;textarea <b>placeholder</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Placeholder-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaReadonlyAttributes()">&lt;textarea <b>readonly</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Readonly-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaRequiredAttributes()">&lt;textarea <b>required</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Required-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaRowsAttributes()">&lt;textarea <b>rows</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Rows-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TextareaWrapAttributes()">&lt;textarea <b>wrap</b>="<em>MyValue</em>"&gt;</code><div id="Textarea-Wrap-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Some essential attributes & elements to be included</span>
+          <div>The size of a text area is specified by the <code>cols</code> and <code>rows</code> attributes</div>
+          <div>The <code>name</code> attribute is needed to reference the form data after the form is submitted</div>
+          <div>Always add the <code>&lt;label&gt;</code> tag for best accessibility practices</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SELECT TAG -->
+    <div id="Select-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;select&gt; <em>MyContents</em> &lt;/select&gt;</code></h3>
+      <div>The <code>&lt;select&gt;</code> element is used to create a drop-down list</div>
+      <div>The <code>&lt;select&gt;</code> element is most often used in a form, to collect user input</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SelectGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Select-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SelectEventAttributes()"><em>HTML Event Attributes</em></code><div id="Select-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SelectAutofocusAttributes()">&lt;select <b>autofocus</b>="<em>MyValue</em>"&gt;</code><div id="Select-Autofocus-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SelectDisabledAttributes()">&lt;select <b>disabled</b>="<em>MyValue</em>"&gt;</code><div id="Select-Disabled-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SelectFormAttributes()">&lt;select <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Select-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SelectMultipleAttributes()">&lt;select <b>multiple</b>="<em>MyValue</em>"&gt;</code><div id="Select-Multiple-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SelectNameAttributes()">&lt;select <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Select-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SelectRequiredAttributes()">&lt;select <b>required</b>="<em>MyValue</em>"&gt;</code><div id="Select-Required-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SelectSizeAttributes()">&lt;select <b>size</b>="<em>MyValue</em>"&gt;</code><div id="Select-Size-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Some essential attributes & elements to be included</span>
+          <div>The <code>name</code> attribute is needed to reference the form data after the form is submitted</div>
+          <div>If the <code>name</code> attribute is omitted, no data from the drop-down list will be submitted</div>
+          <div>The <code>id</code> attribute is needed to associate the drop-down list with a label</div>
+          <div>The <code>&lt;option&gt;</code> tags inside the <code>&lt;select&gt;</code> element define the available options in the drop-down lis</div>
+          <div>Always add the <code>&lt;label&gt;</code> tag for best accessibility practices</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPTION GROUP TAG -->
+    <div id="Optgroup-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;optgroup&gt; <em>MyContents</em> &lt;/optgroup&gt;</code></h3>
+      <div>The <code>&lt;optgroup&gt;</code> tag is used to group related options in a <code>&lt;select&gt;</code> element (drop-down list)</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="OptgroupGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Optgroup-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OptgroupEventAttributes()"><em>HTML Event Attributes</em></code><div id="Optgroup-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OptgroupDisabledAttributes()">&lt;optgroup <b>disabled</b>="<em>MyValue</em>"&gt;</code><div id="Optgroup-Disabled-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OptgroupLabelAttributes()">&lt;optgroup <b>label</b>="<em>MyValue</em>"&gt;</code><div id="Optgroup-Label-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- OPTION TAG -->
+    <div id="Option-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;option&gt; <em>MyText</em> &lt;/option&gt;</code></h3>
+      <div>The <code>&lt;option&gt;</code> tag defines an option in a select list</div>
+      <div>The <code>&lt;option&gt;</code> elements go inside a <code>&lt;select&gt;</code>, <code>&lt;optgroup&gt;</code>, or <code>&lt;datalist&gt;</code> element</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="OptionGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Option-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OptionEventAttributes()"><em>HTML Event Attributes</em></code><div id="Option-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OptionDisabledAttributes()">&lt;option <b>disabled</b>="<em>MyValue</em>"&gt;</code><div id="Option-Disabled-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OptionLabelAttributes()">&lt;option <b>label</b>="<em>MyValue</em>"&gt;</code><div id="Option-Label-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OptionSelectedAttributes()">&lt;option <b>selected</b>="<em>MyValue</em>"&gt;</code><div id="Option-Selected-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OptionValueAttributes()">&lt;option <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Option-Value-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- DATALIST TAG -->
+    <div id="Datalist-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;datalist&gt; <em>MyContents</em> &lt;/datalist&gt;</code></h3>
+      <div>The <code>&lt;datalist&gt;</code> tag specifies a list of pre-defined options for an <code>&lt;input&gt;</code> element</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DatalistGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Datalist-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DatalistEventAttributes()"><em>HTML Event Attributes</em></code><div id="Datalist-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Some essential attributes & elements to be included</span>
+          <div>The <code>&lt;datalist&gt;</code> tag is used to provide an "autocomplete" feature for <code>&lt;input&gt;</code> elements</div>
+          <div>Users will see a drop-down list of pre-defined options as they input data</div>
+          <div>The <code>&lt;datalist&gt;</code> element's <code>id</code> attribute must be equal to the <code>&lt;input&gt;</code> element's <code>list</code> attribute</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESS TAG -->
+    <div id="Progress-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;progress&gt; <em>MyText</em> &lt;/progress&gt;</code></h3>
+      <div>The <code>&lt;progress&gt;</code> tag represents the completion progress of a task</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ProgressGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Progress-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ProgressEventAttributes()"><em>HTML Event Attributes</em></code><div id="Progress-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ProgressMaxAttributes()">&lt;progress <b>max</b>="<em>MyValue</em>"&gt;</code><div id="Progress-Max-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ProgressValueAttributes()">&lt;progress <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Progress-Value-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Some essential attributes & elements to be included</span>
+          <div>Always add the <code>&lt;label&gt;</code> tag for best accessibility practices</div>
+          <div>Use the <code>&lt;progress&gt;</code> tag in conjunction with JavaScript to display the progress of a task</div>
+          <div>The <code>&lt;progress&gt;</code> tag is not suitable for representing a gauge, use the <code>&lt;meter&gt;</code> tag instead</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- METER TAG -->
+    <div id="Meter-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;meter&gt; <em>MyText</em> &lt;/meter&gt;</code></h3>
+      <div>The <code>&lt;meter&gt;</code> tag defines a scalar measurement within a known range, or a fractional value</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="MeterGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Meter-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MeterEventAttributes()"><em>HTML Event Attributes</em></code><div id="Meter-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MeterFormAttributes()">&lt;meter <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Meter-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MeterHighAttributes()">&lt;meter <b>high</b>="<em>MyValue</em>"&gt;</code><div id="Meter-High-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MeterLowAttributes()">&lt;meter <b>low</b>="<em>MyValue</em>"&gt;</code><div id="Meter-Low-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MeterMaxAttributes()">&lt;meter <b>max</b>="<em>MyValue</em>"&gt;</code><div id="Meter-Max-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MeterMinAttributes()">&lt;meter <b>min</b>="<em>MyValue</em>"&gt;</code><div id="Meter-Min-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MeterOptimumAttributes()">&lt;meter <b>optimum</b>="<em>MyValue</em>"&gt;</code><div id="Meter-Optimum-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MeterValueAttributes()">&lt;meter <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Meter-Value-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Some essential attributes & elements to be included</span>
+          <div>Always add the <code>&lt;label&gt;</code> tag for best accessibility practices</div>
+          <div>The <code>&lt;meter&gt;</code> tag is not suitable for representing a progress, use the <code>&lt;progress&gt;</code> tag instead</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OUTPUT TAG -->
+    <div id="Output-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;output&gt;&lt;/output&gt;</code></h3>
+      <div>The <code>&lt;output&gt;</code> tag is used to represent the result of a calculation, like one performed by a script</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="OutputGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Output-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OutputEventAttributes()"><em>HTML Event Attributes</em></code><div id="Output-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OutputForAttributes()">&lt;output <b>for</b>="<em>MyValue</em>"&gt;</code><div id="Output-For-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OutputFormAttributes()">&lt;output <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Output-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OutputNameAttributes()">&lt;output <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Output-Name-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>output { display: inline; }</code></div>
+      </div>
+    </div>
+
+    <!-- BUTTON TAG -->
+    <div id="Button-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;button&gt; <em>MyText</em> &lt;/button&gt;</code></h3>
+      <div>The <code>&lt;button&gt;</code> tag defines a clickable button</div>
+      <div>Inside a <code>&lt;button&gt;</code> element user can put text, or tags <code>&lt;i&gt;, &lt;b&gt;, &lt;strong&gt;, &lt;br&gt;, &lt;img&gt;</code>, etc.</div>
+      <div>That is not possible with a button created with the <code>&lt;input&gt;</code> element</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ButtonGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Button-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonEventAttributes()"><em>HTML Event Attributes</em></code><div id="Button-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonAutofocusAttributes()">&lt;button <b>autofocus</b>="<em>MyValue</em>"&gt;</code><div id="Button-Autofocus-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonmDisabledAttributes()">&lt;button <b>disabled</b>="<em>MyValue</em>"&gt;</code><div id="Button-Disabled-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonFormAttributes()">&lt;button <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Button-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonFormactionAttributes()">&lt;button <b>formaction</b>="<em>MyValue</em>"&gt;</code><div id="Button-Formaction-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonFormenctypeAttributes()">&lt;button <b>formenctype</b>="<em>MyValue</em>"&gt;</code><div id="Button-Formenctype-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonFormmethodAttributes()">&lt;button <b>formmethod</b>="<em>MyValue</em>"&gt;</code><div id="Button-Formmethod-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonFormnovalidateAttributes()">&lt;button <b>formnovalidate</b>="<em>MyValue</em>"&gt;</code><div id="Button-Formnovalidate-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonFormtargetAttributes()">&lt;button <b>formtarget</b>="<em>MyValue</em>"&gt;</code><div id="Button-Formtarget-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonPopovertargetAttributes()">&lt;button <b>popovertarget</b>="<em>MyValue</em>"&gt;</code><div id="Button-Popovertarget-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonPopovertargetactionAttributes()">&lt;button <b>popovertargetaction</b>="<em>MyValue</em>"&gt;</code><div id="Button-Popovertargetaction-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonNameAttributes()">&lt;button <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Button-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonTypeAttributes()">&lt;button <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Button-Type-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ButtonValueAttributes()">&lt;button <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Button-Value-Attributes"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------->
+  <!-- HTML TABLE -->
+  <!---------------->
+  <section id="HTML-Table" class="Box-Contents">
+  <h1>HTML TABLE STRUCTURE</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted" onclick="TableTag()">&lt;table&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="CaptionTag()">&lt;caption&gt; <em>MyText</em> &lt;/caption&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="ColgroupTag()">&lt;colgroup&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="ColTag()">&lt;col&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="ColgroupTag()">&lt;/colgroup&gt;</code></div>
+      <br>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;thead&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted">&lt;th&gt; <em>MyTableHeader</em> &lt;/th&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;/thead&gt;</code></div>
+      <br>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;tbody&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted">&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;/tbody&gt;</code></div>
+      <br>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;tfoot&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted">&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;/tfoot&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="TableTag()">&lt;/table&gt;</code></div>
+    </div>
+
+    <!-- TABLE TAG -->
+    <div id="Table-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;table&gt; <em>MyContents</em> &lt;/table&gt;</code></h3>
+      <div>The <code>&lt;table&gt;</code> tag defines an HTML table</div>
+      <div>An HTML table consists of one <code>&lt;table&gt;</code> element,  one or more <code>&lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</code> elements</div>
+      <div>An HTML table may also include <code>&lt;caption&gt;, &lt;colgroup&gt;, &lt;col&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;</code> elements</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TableGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Table-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TableEventAttributes()"><em>HTML Event Attributes</em></code><div id="Table-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>table { display: table; border-collapse: separate; border-spacing: 2px; border-color: gray; }</code></div>
+      </div>
+    </div>
+
+    <!-- CAPTION TAG -->
+    <div id="Caption-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;caption&gt; <em>MyText</em> &lt;/caption&gt;</code></h3>
+      <div>The <code>&lt;caption&gt;</code> tag defines a table caption</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="CaptionGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Caption-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="CaptionEventAttributes()"><em>HTML Event Attributes</em></code><div id="Caption-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>caption { display: table-caption; text-align: center; }</code></div>
+      </div>
+    </div>
+
+    <!-- COLUMN GROUP TAG -->
+    <div id="Colgroup-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;colgroup&gt; <em>MyContents</em> &lt;/colgroup&gt;</code></h3>
+      <div>The <code>&lt;colgroup&gt;</code> tag specifies a group of one or more columns in a table for formatting</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ColgroupGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Colgroup-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ColgroupEventAttributes()"><em>HTML Event Attributes</em></code><div id="Colgroup-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ColgroupSpanAttributes()">&lt;colgroup <b>span</b>="<em>MyValue</em>"&gt;</code><div id="Colgroup-Span-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>colgroup { display: table-column-group; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">The placement of the <code>&lt;colgroup&gt;</code> element</span>
+          <div>The <code>&lt;colgroup&gt;</code> tag must be a child of a <code>&lt;table&gt;</code> element, and after any <code>&lt;caption&gt;</code> elements</div>
+          <div>The <code>&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, &lt;tr&gt;</code> elements should be placed after <code>&lt;colgroup&gt;</code></div>
+          <div>To define different properties to a column within a <code>&lt;colgroup&gt;</code>, use the <code>&lt;col&gt;</code> tag within it</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUMN TAG -->
+    <div id="Col-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;col&gt;</code></h3>
+      <div>The <code>&lt;col&gt;</code> tag specifies column properties for each column within a <code>&lt;colgroup&gt;</code> element</div>
+      <div>The <code>&lt;col&gt;</code> tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ColGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Col-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ColEventAttributes()"><em>HTML Event Attributes</em></code><div id="Col-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ColSpanAttributes()">&lt;col <b>span</b>="<em>MyValue</em>"&gt;</code><div id="Col-Span-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>col { display: table-column; }</code></div>
+      </div>
+    </div>
+  </section>
 
 <!--------------->
 <!-- HTML LIST -->

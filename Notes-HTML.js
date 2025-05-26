@@ -841,6 +841,136 @@ function SpanEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+// HEADING GROUP TAG //
+function HgroupTag() {
+  let myVisibility = document.getElementById("Hgroup-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function HgroupGlobalAttributes() {
+  let myVisibility = document.getElementById("Hgroup-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Hgroup-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function HgroupEventAttributes() {
+  let myVisibility = document.getElementById("Hgroup-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Hgroup-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// PICTURE TAG //
+function PictureTag() {
+  let myVisibility = document.getElementById("Picture-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function PictureGlobalAttributes() {
+  let myVisibility = document.getElementById("Picture-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Picture-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function PictureEventAttributes() {
+  let myVisibility = document.getElementById("Picture-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Picture-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// SEARCH TAG //
+function SearchTag() {
+  let myVisibility = document.getElementById("Search-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SearchGlobalAttributes() {
+  let myVisibility = document.getElementById("Search-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Search-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SearchEventAttributes() {
+  let myVisibility = document.getElementById("Search-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Search-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// SVG TAG //
+function SvgTag() {
+  let myVisibility = document.getElementById("Svg-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// TEMPLATE TAG //
+function TemplateTag() {
+  let myVisibility = document.getElementById("Template-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TemplateGlobalAttributes() {
+  let myVisibility = document.getElementById("Template-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Template-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 ////////////////////////
 // HTML SEMANTIC TEXT //
 ////////////////////////
@@ -969,11 +1099,59 @@ function AddressTag() {
   else { myVisibility.style.display = "none"; }
 }
 
+function AddressGlobalAttributes() {
+  let myVisibility = document.getElementById("Address-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Address-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AddressEventAttributes() {
+  let myVisibility = document.getElementById("Address-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Address-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // ABBREVIATION TAG //
 function AbbreviationTag() {
   let myVisibility = document.getElementById("Abbreviation-Tag");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AbbreviationGlobalAttributes() {
+  let myVisibility = document.getElementById("Abbreviation-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Abbreviation-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AbbreviationEventAttributes() {
+  let myVisibility = document.getElementById("Abbreviation-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Abbreviation-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -987,11 +1165,59 @@ function DefinitionTag() {
   else { myVisibility.style.display = "none"; }
 }
 
+function DefinitionGlobalAttributes() {
+  let myVisibility = document.getElementById("Definition-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Definition-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function DefinitionEventAttributes() {
+  let myVisibility = document.getElementById("Definition-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Definition-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // CITE TAG //
 function CiteTag() {
   let myVisibility = document.getElementById("Cite-Tag");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function CiteGlobalAttributes() {
+  let myVisibility = document.getElementById("Cite-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Cite-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function CiteEventAttributes() {
+  let myVisibility = document.getElementById("Cite-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Cite-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -1686,6 +1912,30 @@ function BiDirectionalIsolationTag() {
   else { myVisibility.style.display = "none"; }
 }
 
+function BdiGlobalAttributes() {
+  let myVisibility = document.getElementById("Bdi-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Bdi-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function BdiEventAttributes() {
+  let myVisibility = document.getElementById("Bdi-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Bdi-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // BIDIRECTIONAL OVERRIDE TAG //
 function BiDirectionalOverrideTag() {
   let myVisibility = document.getElementById("Bi-Directional-Override-Tag");
@@ -1695,11 +1945,68 @@ function BiDirectionalOverrideTag() {
   else { myVisibility.style.display = "none"; }
 }
 
+function BdoGlobalAttributes() {
+  let myVisibility = document.getElementById("Bdo-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Bdo-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function BdoEventAttributes() {
+  let myVisibility = document.getElementById("Bdo-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Bdo-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // TIME TAG //
 function TimeTag() {
   let myVisibility = document.getElementById("Time-Tag");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TimeGlobalAttributes() {
+  let myVisibility = document.getElementById("Time-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Time-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TimeEventAttributes() {
+  let myVisibility = document.getElementById("Time-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Time-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TimeDatetimeAttributes() {
+  let myVisibility = document.getElementById("Time-Datetime-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Time-Datetime-Attributes").innerHTML = TimeAttributes().datetime;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -1715,6 +2022,468 @@ function HTMLFormStructure() {
   else { myVisibility.style.display = "none"; }
 }
 
+// FORM TAG //
+function FormTag() {
+  let myVisibility = document.getElementById("Form-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormGlobalAttributes() {
+  let myVisibility = document.getElementById("Form-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormEventAttributes() {
+  let myVisibility = document.getElementById("Form-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// FIELDSET TAG //
+function FieldsetTag() {
+  let myVisibility = document.getElementById("Fieldset-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FieldsetGlobalAttributes() {
+  let myVisibility = document.getElementById("Fieldset-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Fieldset-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FieldsetEventAttributes() {
+  let myVisibility = document.getElementById("Fieldset-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Fieldset-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// LEGEND TAG //
+function LegendTag() {
+  let myVisibility = document.getElementById("Legend-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LegendGlobalAttributes() {
+  let myVisibility = document.getElementById("Legend-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Legend-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LegendEventAttributes() {
+  let myVisibility = document.getElementById("Legend-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Legend-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// LABEL TAG //
+function LabelTag() {
+  let myVisibility = document.getElementById("Label-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LabelGlobalAttributes() {
+  let myVisibility = document.getElementById("Label-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Label-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LabelEventAttributes() {
+  let myVisibility = document.getElementById("Label-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Label-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// INPUT TAG //
+function InputTag() {
+  let myVisibility = document.getElementById("Input-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputGlobalAttributes() {
+  let myVisibility = document.getElementById("Input-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputEventAttributes() {
+  let myVisibility = document.getElementById("Input-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// TEXTAREA TAG //
+function TextareaTag() {
+  let myVisibility = document.getElementById("Textarea-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaGlobalAttributes() {
+  let myVisibility = document.getElementById("Textarea-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaEventAttributes() {
+  let myVisibility = document.getElementById("Textarea-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// SELECT TAG //
+function SelectTag() {
+  let myVisibility = document.getElementById("Select-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SelectGlobalAttributes() {
+  let myVisibility = document.getElementById("Select-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SelectEventAttributes() {
+  let myVisibility = document.getElementById("Select-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OPTION GROUP TAG //
+function OptgroupTag() {
+  let myVisibility = document.getElementById("Optgroup-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptgroupGlobalAttributes() {
+  let myVisibility = document.getElementById("Optgroup-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Optgroup-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptgroupEventAttributes() {
+  let myVisibility = document.getElementById("Optgroup-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Optgroup-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OPTION TAG //
+function OptionTag() {
+  let myVisibility = document.getElementById("Option-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptionGlobalAttributes() {
+  let myVisibility = document.getElementById("Option-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Option-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptionEventAttributes() {
+  let myVisibility = document.getElementById("Option-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Option-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DATALIST TAG //
+function DatalistTag() {
+  let myVisibility = document.getElementById("Datalist-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function DatalistGlobalAttributes() {
+  let myVisibility = document.getElementById("Datalist-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Datalist-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function DatalistEventAttributes() {
+  let myVisibility = document.getElementById("Datalist-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Datalist-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// PROGRESS TAG //
+function ProgressTag() {
+  let myVisibility = document.getElementById("Progress-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ProgressGlobalAttributes() {
+  let myVisibility = document.getElementById("Progress-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Progress-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ProgressEventAttributes() {
+  let myVisibility = document.getElementById("Progress-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Progress-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// METER TAG //
+function MeterTag() {
+  let myVisibility = document.getElementById("Meter-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterGlobalAttributes() {
+  let myVisibility = document.getElementById("Meter-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterEventAttributes() {
+  let myVisibility = document.getElementById("Meter-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// OUTPUT TAG //
+function OutputTag() {
+  let myVisibility = document.getElementById("Output-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OutputGlobalAttributes() {
+  let myVisibility = document.getElementById("Output-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Output-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OutputEventAttributes() {
+  let myVisibility = document.getElementById("Output-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Output-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// BUTTON TAG //
+function ButtonTag() {
+  let myVisibility = document.getElementById("Button-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonGlobalAttributes() {
+  let myVisibility = document.getElementById("Button-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonEventAttributes() {
+  let myVisibility = document.getElementById("Button-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 ////////////////
 // HTML TABLE //
 ////////////////
@@ -1722,6 +2491,138 @@ function HTMLTableStructure() {
   let myVisibility = document.getElementById("HTML-Table");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// TABLE TAG //
+function TableTag() {
+  let myVisibility = document.getElementById("Table-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TableGlobalAttributes() {
+  let myVisibility = document.getElementById("Table-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Table-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TableEventAttributes() {
+  let myVisibility = document.getElementById("Table-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Table-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// CAPTION TAG //
+function CaptionTag() {
+  let myVisibility = document.getElementById("Caption-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function CaptionGlobalAttributes() {
+  let myVisibility = document.getElementById("Caption-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Caption-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function CaptionEventAttributes() {
+  let myVisibility = document.getElementById("Caption-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Caption-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// COLUMN GROUP TAG //
+function ColgroupTag() {
+  let myVisibility = document.getElementById("Colgroup-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ColgroupGlobalAttributes() {
+  let myVisibility = document.getElementById("Colgroup-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Colgroup-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ColgroupEventAttributes() {
+  let myVisibility = document.getElementById("Colgroup-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Colgroup-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// COLUMN TAG //
+function ColTag() {
+  let myVisibility = document.getElementById("Col-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ColGlobalAttributes() {
+  let myVisibility = document.getElementById("Col-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Col-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ColEventAttributes() {
+  let myVisibility = document.getElementById("Col-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Col-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
   }
   else { myVisibility.style.display = "none"; }
 }
