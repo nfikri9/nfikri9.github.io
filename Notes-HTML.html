@@ -1668,23 +1668,23 @@
       <div class="Indent-Level3"><code class="Highlighted" onclick="ColTag()">&lt;col&gt;</code></div>
       <div class="Indent-Level2"><code class="Highlighted" onclick="ColgroupTag()">&lt;/colgroup&gt;</code></div>
       <br>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;thead&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
-      <div class="Indent-Level4"><code class="Highlighted">&lt;th&gt; <em>MyTableHeader</em> &lt;/th&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;/thead&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="TheadTag()">&lt;thead&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="TrTag()">&lt;tr&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted" onclick="ThTag()">&lt;th&gt; <em>MyTableHeader</em> &lt;/th&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="TrTag()">&lt;/tr&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="TheadTag()">&lt;/thead&gt;</code></div>
       <br>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;tbody&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
-      <div class="Indent-Level4"><code class="Highlighted">&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;/tbody&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="TbodyTag()">&lt;tbody&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="TrTag()">&lt;tr&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted" onclick="TdTag()">&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="TrTag()">&lt;/tr&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="TbodyTag()">&lt;/tbody&gt;</code></div>
       <br>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;tfoot&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;tr&gt;</code></div>
-      <div class="Indent-Level4"><code class="Highlighted">&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;/tr&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;/tfoot&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="TfootTag()">&lt;tfoot&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="TrTag()">&lt;tr&gt;</code></div>
+      <div class="Indent-Level4"><code class="Highlighted" onclick="TdTag()">&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="TrTag()">&lt;/tr&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="TfootTag()">&lt;/tfoot&gt;</code></div>
       <div class="Indent-Level1"><code class="Highlighted" onclick="TableTag()">&lt;/table&gt;</code></div>
     </div>
 
@@ -1770,33 +1770,178 @@
         <div><code>col { display: table-column; }</code></div>
       </div>
     </div>
+
+    <!-- TABLE HEAD TAG -->
+    <div id="Thead-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;thead&gt; <em>MyContents</em> &lt;/thead&gt;</code></h3>
+      <div>The <code>&lt;thead&gt;</code> tag is used to group header content in an HTML table</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TheadGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Thead-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TheadEventAttributes()"><em>HTML Event Attributes</em></code><div id="Thead-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>thead { display: table-header-group; vertical-align: middle; border-color: inherit; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">The usage of <code>&lt;thead&gt;</code> element</span>
+          <div>The <code>&lt;thead&gt;</code> element is used in conjunction with the <code>&lt;tbody&gt;, &lt;tfoot&gt;</code> elements to specify each part of a table</div>
+          <div>Browsers can use these elements to enable scrolling of the table body independently of the header and footer</div>
+          <div>When printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page</div>
+          <div>The <code>&lt;thead&gt;</code> element must have one or more <code>&lt;tr&gt;</code> tags inside</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABLE ROW TAG -->
+    <div id="Tr-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;tr&gt; <em>MyContents</em> &lt;/tr&gt;</code></h3>
+      <div>The <code>&lt;tr&gt;</code> tag defines a row in an HTML table</div>
+      <div>A <code>&lt;tr&gt;</code> element contains one or more <code>&lt;th&gt;</code> or <code>&lt;td&gt;</code> elements</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TrGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Tr-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TrEventAttributes()"><em>HTML Event Attributes</em></code><div id="Tr-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>tr { display: table-row; vertical-align: inherit; border-color: inherit; }</code></div>
+      </div>
+    </div>
+
+    <!-- HEADER CELL TAG -->
+    <div id="Th-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;th&gt; <em>MyTableHeader</em> &lt;/th&gt;</code></h3>
+      <div>The <code>&lt;th&gt;</code> tag defines a header cell in an HTML table</div>
+      <div>The text in <code>&lt;th&gt;</code> elements are bold and centered by default</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ThGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Th-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ThEventAttributes()"><em>HTML Event Attributes</em></code><div id="Th-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ThAbbrAttributes()">&lt;th <b>abbr</b>="<em>MyValue</em>"&gt;</code><div id="Th-Abbr-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ThColspanAttributes()">&lt;th <b>colspan</b>="<em>MyValue</em>"&gt;</code><div id="Th-Colspan-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ThHeadersAttributes()">&lt;th <b>headers</b>="<em>MyValue</em>"&gt;</code><div id="Th-Headers-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ThRowspanAttributes()">&lt;th <b>rowspan</b>="<em>MyValue</em>"&gt;</code><div id="Th-Rowspan-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ThScopeAttributes()">&lt;th <b>scope</b>="<em>MyValue</em>"&gt;</code><div id="Th-Scope-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>th { display: table-cell; vertical-align: inherit; font-weight: bold; text-align: center; }</code></div>
+      </div>
+    </div>
+
+    <!-- TABLE BODY TAG -->
+    <div id="Tbody-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;tbody&gt; <em>MyContents</em> &lt;/tbody&gt;</code></h3>
+      <div>The <code>&lt;tbody&gt;</code> tag is used to group the body content in an HTML table</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TbodyGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Tbody-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TbodyEventAttributes()"><em>HTML Event Attributes</em></code><div id="Tbody-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>tbody { display: table-row-group; vertical-align: middle; border-color: inherit; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">The usage of <code>&lt;tbody&gt;</code> element</span>
+          <div>The <code>&lt;tbody&gt;</code> element is used in conjunction with the <code>&lt;thead&gt;, &lt;tfoot&gt;</code> elements to specify each part of a table</div>
+          <div>Browsers can use these elements to enable scrolling of the table body independently of the header and footer</div>
+          <div>When printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page</div>
+          <div>The <code>&lt;tbody&gt;</code> element must have one or more <code>&lt;tr&gt;</code> tags inside</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATA CELL TAG -->
+    <div id="Td-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;td&gt; <em>MyTableData</em> &lt;/td&gt;</code></h3>
+      <div>The <code>&lt;td&gt;</code> tag defines a standard data cell in an HTML table</div>
+      <div>The text in <code>&lt;td&gt;</code> elements are regular and left-aligned by default</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TdGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Td-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TdEventAttributes()"><em>HTML Event Attributes</em></code><div id="Td-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TdColspanAttributes()">&lt;td <b>colspan</b>="<em>MyValue</em>"&gt;</code><div id="Td-Colspan-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TdHeadersAttributes()">&lt;td <b>headers</b>="<em>MyValue</em>"&gt;</code><div id="Td-Headers-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TdRowspanAttributes()">&lt;td <b>rowspan</b>="<em>MyValue</em>"&gt;</code><div id="Td-Rowspan-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>td { display: table-cell; vertical-align: inherit; }</code></div>
+      </div>
+    </div>
+
+    <!-- TABLE FOOTER TAG -->
+    <div id="Tfoot-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;tfoot&gt; <em>MyContents</em> &lt;/tfoot&gt;</code></h3>
+      <div>The <code>&lt;tfoot&gt;</code> tag is used to group footer content in an HTML table</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TfootGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Tfoot-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TfootEventAttributes()"><em>HTML Event Attributes</em></code><div id="Tfoot-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>tfoot { display: table-footer-group; vertical-align: middle; border-color: inherit; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">The usage of <code>&lt;tfoot&gt;</code> element</span>
+          <div>The <code>&lt;tfoot&gt;</code> element is used in conjunction with the <code>&lt;thead&gt;, &lt;tbody&gt;</code> elements to specify each part of a table</div>
+          <div>Browsers can use these elements to enable scrolling of the table body independently of the header and footer</div>
+          <div>When printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page</div>
+          <div>The <code>&lt;tfoot&gt;</code> element must have one or more <code>&lt;tr&gt;</code> tags inside</div>
+        </div>
+      </div>
+    </div>
   </section>
 
-<!--------------->
-<!-- HTML LIST -->
-<!--------------->
-<section id="HTML-List" class="Box-Contents">
-<h1>HTML LIST STRUCTURE</h1>
-
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted">&lt;ol&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/ol&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;ul&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/ul&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;menu&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/menu&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;dl&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;dt&gt; <em>MyText</em> &lt;/dt&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;dd&gt; <em>MyText</em> &lt;/dd&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/dl&gt;</code></div>
-</div>
-</section>
+  <!--------------->
+  <!-- HTML LIST -->
+  <!--------------->
+  <section id="HTML-List" class="Box-Contents">
+  <h1>HTML LIST STRUCTURE</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted">&lt;ol&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;/ol&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;ul&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;/ul&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;menu&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;/menu&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;dl&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;dt&gt; <em>MyText</em> &lt;/dt&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;dd&gt; <em>MyText</em> &lt;/dd&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;/dl&gt;</code></div>
+    </div>
+  </section>
 
 <!---------------->
 <!-- HTML MEDIA -->

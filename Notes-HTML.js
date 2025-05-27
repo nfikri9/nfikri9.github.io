@@ -2627,6 +2627,204 @@ function ColEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+// TABLE HEAD TAG //
+function TheadTag() {
+  let myVisibility = document.getElementById("Thead-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TheadGlobalAttributes() {
+  let myVisibility = document.getElementById("Thead-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Thead-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TheadEventAttributes() {
+  let myVisibility = document.getElementById("Thead-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Thead-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// TABLE ROW TAG //
+function TrTag() {
+  let myVisibility = document.getElementById("Tr-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrGlobalAttributes() {
+  let myVisibility = document.getElementById("Tr-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Tr-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrEventAttributes() {
+  let myVisibility = document.getElementById("Tr-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Tr-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// HEADER CELL TAG //
+function ThTag() {
+  let myVisibility = document.getElementById("Th-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ThGlobalAttributes() {
+  let myVisibility = document.getElementById("Th-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Th-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ThEventAttributes() {
+  let myVisibility = document.getElementById("Th-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Th-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// TABLE BODY TAG //
+function TbodyTag() {
+  let myVisibility = document.getElementById("Tbody-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TbodyGlobalAttributes() {
+  let myVisibility = document.getElementById("Tbody-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Tbody-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TbodyEventAttributes() {
+  let myVisibility = document.getElementById("Tbody-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Tbody-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// DATA CELL TAG //
+function TdTag() {
+  let myVisibility = document.getElementById("Td-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TdGlobalAttributes() {
+  let myVisibility = document.getElementById("Td-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Td-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TdEventAttributes() {
+  let myVisibility = document.getElementById("Td-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Td-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+// TABLE FOOTER TAG //
+function TfootTag() {
+  let myVisibility = document.getElementById("Tfoot-Tag");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TfootGlobalAttributes() {
+  let myVisibility = document.getElementById("Tfoot-Global-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Tfoot-Global-Attributes").innerHTML =
+      GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
+      GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
+      GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
+      GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TfootEventAttributes() {
+  let myVisibility = document.getElementById("Tfoot-Event-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Tfoot-Event-Attributes").innerHTML =
+      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
+      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 ///////////////
 // HTML LIST //
 ///////////////
