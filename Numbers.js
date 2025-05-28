@@ -264,20 +264,46 @@ function Calculation5() {
 
   function smallestMult(divisor1, divisor2) {
     // START LINE CODE TESTING
+    let prime = [];
     let quotient, remainder;
-    
+    let checkingPrime = (a, b) => {
+      let isPrime = true;
+      for (let i=2; i<=a/2; i++) {
+        if ( a % i == 0 ) {
+          isPrime = false;
+          break;
+        }
+      }
+      if (isPrime) {
+        b.push(a);
+        return b;
+      }
+    }
     for (let i=divisor1; i<=divisor2; i++) { // Looping the divisor from 1 to n
       if (i!=1) {
         console.log("Current divisor is " + i + " (i is not 1)");
-        quotient = i/2;
-        remainder = i%2;
-        console.log("Current divisor/current prime, " + i + "/" + 2 + "=" + quotient);
-        console.log("Current divisor%current prime, " + i + "%" + 2 + "=" + remainder + "\n");
+        checkingPrime(i, prime);
+        for (let j=0; j<=prime.length-1; j++) {
+          quotient = i/prime[j];
+          remainder = i%prime[j];
+          console.log("Current divisor/current prime, " + i + "/" + prime[j] + "=" + quotient);
+          console.log("Current divisor%current prime, " + i + "%" + prime[j] + "=" + remainder);
+          if (remainder==0 && quotient==1) {
+            console.log("dn++ -> break \n");
+          }
+          else if (remainder!=0 && quotient!=0) {
+            console.log("proceed next prime \n");
+          }
+          else if (remainder==0 && quotient!=0) {
+            console.log("repeat with latest q \n");
+          }
+        }
       }
       else {
         console.log("Current divisor is " + i + " (i is exactly 1)" + "\n");
       }
     }
+    // END LINE CODE TESTING
 
     /*
     Current divisor: 1
@@ -368,7 +394,6 @@ function Calculation5() {
         console.log("repeat with latest q");
       }
     */
-    // END LINE CODE TESTING
 
     document.getElementById("displayInfo").innerHTML = 
     "<div>The divisors are ranged from 1 to " + divisor2 + "</div>";

@@ -1924,53 +1924,185 @@
   <section id="HTML-List" class="Box-Contents">
   <h1>HTML LIST STRUCTURE</h1>
     <div class="Box-Structures">
-      <div class="Indent-Level1"><code class="Highlighted">&lt;ol&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;/ol&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="OlTag()">&lt;ol&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="LiTag()">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="OlTag()">&lt;/ol&gt;</code></div>
       <br>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;ul&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;/ul&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="UlTag()">&lt;ul&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="LiTag()">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="UlTag()">&lt;/ul&gt;</code></div>
       <br>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;menu&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;/menu&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="MenuTag()">&lt;menu&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="LiTag()">&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="MenuTag()">&lt;/menu&gt;</code></div>
       <br>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;dl&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;dt&gt; <em>MyText</em> &lt;/dt&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;dd&gt; <em>MyText</em> &lt;/dd&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;/dl&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DlTag()">&lt;dl&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="DtTag()">&lt;dt&gt; <em>MyText</em> &lt;/dt&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="DdTag()">&lt;dd&gt; <em>MyText</em> &lt;/dd&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DlTag()">&lt;/dl&gt;</code></div>
+    </div>
+
+    <!-- ORDERED LIST TAG -->
+    <div id="Ol-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;ol&gt; <em>MyContents</em> &lt;/ol&gt;</code></h3>
+      <div>The <code>&lt;ol&gt;</code> tag defines an ordered list</div>
+      <div>An ordered list can be numerical or alphabetical</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="OlGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Ol-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OlEventAttributes()"><em>HTML Event Attributes</em></code><div id="Ol-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OlReversedAttributes()">&lt;ol <b>reversed</b>="<em>MyValue</em>"&gt;</code><div id="Ol-Reversed-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OlStartAttributes()">&lt;ol <b>start</b>="<em>MyValue</em>"&gt;</code><div id="Ol-Start-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="OlTypeAttributes()">&lt;ol <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Ol-Type-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>ol { display: block; list-style-type: decimal; margin: 1em 0; padding-left: 40px; }</code></div>
+      </div>
+    </div>
+
+    <!-- LIST ITEM TAG -->
+    <div id="Li-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;li&gt; <em>MyText</em> &lt;/li&gt;</code></h3>
+      <div>The <code>&lt;li&gt;</code> tag defines a list item</div>
+      <div>The <code>&lt;li&gt;</code> tag is used inside <code>&lt;ol&gt;, &lt;ul&gt;, &lt;menu&gt;</code></div>
+      <div>In <code>&lt;ul&gt;</code> and <code>&lt;menu&gt;</code>, the list items will usually be displayed with bullet points</div>
+      <div>In <code>&lt;ol&gt;</code>, the list items will usually be displayed with numbers or letters</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="LiGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Li-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LiEventAttributes()"><em>HTML Event Attributes</em></code><div id="Li-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LiValueAttributes()">&lt;li <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Li-Value-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>li { display: list-item; }</code></div>
+      </div>
+    </div>
+
+    <!-- UNORDERED LIST TAG -->
+    <div id="Ul-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;ul&gt; <em>MyContents</em> &lt;/ul&gt;</code></h3>
+      <div>The <code>&lt;ul&gt;</code> tag defines an unordered list</div>
+      <div>Use the <code>&lt;ul&gt;</code> tag together with the <code>&lt;li&gt;</code> tag to create unordered lists</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="UlGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Ul-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="UlEventAttributes()"><em>HTML Event Attributes</em></code><div id="Ul-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>ul { display: block; list-style-type: disc; margin: 1em 0; padding-left: 40px; }</code></div>
+      </div>
+    </div>
+
+    <!-- MENU TAG -->
+    <div id="Menu-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;menu&gt; <em>MyContents</em> &lt;/menu&gt;</code></h3>
+      <div>The <code>&lt;menu&gt;</code> tag defines an unordered list of content</div>
+      <div>The <code>&lt;menu&gt;</code> tag is an alternative to the <code>&lt;ul&gt;</code> tag and browsers will treat these two lists equally</div>
+      <div>Use the <code>&lt;menu&gt;</code> tag together with the <code>&lt;li&gt;</code> tag to create menu items</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="MenuGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Menu-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MenuEventAttributes()"><em>HTML Event Attributes</em></code><div id="Menu-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>menu { display: block; list-style-type: disc; margin-block: 1em; margin-inline: 0; padding-inline-start: 40px; }</code></div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION LIST TAG -->
+    <div id="Dl-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;dl&gt; <em>MyContents</em> &lt;/dl&gt;</code></h3>
+      <div>The <code>&lt;dl&gt;</code> tag defines a description list</div>
+      <div>The <code>&lt;dl&gt;</code> tag is used in conjunction with <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code></div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DlGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Dl-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DlEventAttributes()"><em>HTML Event Attributes</em></code><div id="Dl-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>dl { display: block; margin: 1em 0; }</code></div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION TERM TAG -->
+    <div id="Dt-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;dt&gt; <em>MyText</em> &lt;/dt&gt;</code></h3>
+      <div>The <code>&lt;dt&gt;</code> tag defines a term/name in a description list</div>
+      <div>The <code>&lt;dt&gt;</code> tag is used in conjunction with <code>&lt;dl&gt;</code> and <code>&lt;dd&gt;</code></div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DtGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Dt-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DtEventAttributes()"><em>HTML Event Attributes</em></code><div id="Dt-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>dt { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION DATA TAG -->
+    <div id="Dd-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;dd&gt; <em>MyText</em> &lt;/dd&gt;</code></h3>
+      <div>The <code>&lt;dd&gt;</code> tag is used to describe a data in a description list</div>
+      <div>The <code>&lt;dd&gt;</code> tag is used in conjunction with <code>&lt;dl&gt;</code> and <code>&lt;dt&gt;</code></div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DdGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Dd-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DdEventAttributes()"><em>HTML Event Attributes</em></code><div id="Dd-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>dd { display: block; margin-left: 40px; }</code></div>
+      </div>
     </div>
   </section>
 
-<!---------------->
-<!-- HTML MEDIA -->
-<!---------------->
-<section id="HTML-Media" class="Box-Contents">
-<h1>HTML MEDIA STRUCTURE</h1>
-
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted">&lt;figure&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;img&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;map&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;area&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;/map&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/figure&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;audio&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;source&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;track&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted"><em>MyText</em></code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/audio&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;video&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;source&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;track&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted"><em>MyText</em></code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/video&gt;</code></div>
-</div>
-</section>
+  <!---------------->
+  <!-- HTML MEDIA -->
+  <!---------------->
+  <section id="HTML-Media" class="Box-Contents">
+  <h1>HTML MEDIA STRUCTURE</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted">&lt;figure&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;img&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;map&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;area&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;/map&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;/figure&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;audio&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;source&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;track&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted"><em>MyText</em></code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;/audio&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;video&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;source&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;track&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted"><em>MyText</em></code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;/video&gt;</code></div>
+    </div>
+  </section>
 
 <!--------------------->
 <!-- RUBY ANNOTATION -->
