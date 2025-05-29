@@ -2082,42 +2082,279 @@
   <section id="HTML-Media" class="Box-Contents">
   <h1>HTML MEDIA STRUCTURE</h1>
     <div class="Box-Structures">
-      <div class="Indent-Level1"><code class="Highlighted">&lt;figure&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;img&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;map&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;area&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;/map&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;/figure&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="FigureTag()">&lt;figure&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="ImageTag()">&lt;img&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="MapTag()">&lt;map&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="AreaTag()">&lt;area&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="MapTag()">&lt;/map&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="FigcaptionTag()">&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="FigureTag()">&lt;/figure&gt;</code></div>
       <br>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;audio&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;source&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;track&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted"><em>MyText</em></code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;/audio&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="AudioTag()">&lt;audio&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="SourceTag()">&lt;source&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="TrackTag()">&lt;track&gt;</code></div>
+      <div class="Indent-Level2"><code><em>MyText</em></code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="AudioTag()">&lt;/audio&gt;</code></div>
       <br>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;video&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;source&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;track&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted"><em>MyText</em></code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;/video&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="VideoTag()">&lt;video&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="SourceTag()">&lt;source&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="TrackTag()">&lt;track&gt;</code></div>
+      <div class="Indent-Level2"><code><em>MyText</em></code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="VideoTag()">&lt;/video&gt;</code></div>
+    </div>
+
+    <!-- FIGURE TAG -->
+    <div id="Figure-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;figure&gt; <em>MyContents</em> &lt;/figure&gt;</code></h3>
+      <div>The <code>&lt;figure&gt;</code> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</div>
+      <div>While the content of the <code>&lt;figure&gt;</code> element is related to the main flow, its position is independent of the main flow</div>
+      <div>It should not affect the flow of the document if removed</div>
+      <div>The <code>&lt;figcaption&gt;</code> element is used to add a caption for the <code>&lt;figure&gt;</code> element</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="FigureGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Figure-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FigureEventAttributes()"><em>HTML Event Attributes</em></code><div id="Figure-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>figure { display: block; margin: 1em 40px; }</code></div>
+      </div>
+    </div>
+
+    <!-- IMAGE TAG -->
+    <div id="Image-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;img&gt;</code></h3>
+      <div>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page</div>
+      <div>Images are not technically inserted into a web page, images are linked to web pages</div>
+      <div>The <code>&lt;img&gt;</code> tag creates a holding space for the referenced image</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ImageGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Image-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageEventAttributes()"><em>HTML Event Attributes</em></code><div id="Image-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageAltAttributes()">&lt;img <b>alt</b>="<em>MyValue</em>"&gt;</code><div id="Image-Alt-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageCrossoriginAttributes()">&lt;img <b>crossorigin</b>="<em>MyValue</em>"&gt;</code><div id="Image-Crossorigin-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageHeightAttributes()">&lt;img <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Image-Height-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageIsmapAttributes()">&lt;img <b>ismap</b>="<em>MyValue</em>"&gt;</code><div id="Image-Ismap-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageLoadingAttributes()">&lt;img <b>loading</b>="<em>MyValue</em>"&gt;</code><div id="Image-Loading-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageLongdescAttributes()">&lt;img <b>longdesc</b>="<em>MyValue</em>"&gt;</code><div id="Image-Longdesc-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageReferrerpolicyAttributes()">&lt;img <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code><div id="Image-Referrerpolicy-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageSizesAttributes()">&lt;img <b>sizes</b>="<em>MyValue</em>"&gt;</code><div id="Image-Sizes-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageSrcAttributes()">&lt;img <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Image-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageSrcsetAttributes()">&lt;img <b>srcset</b>="<em>MyValue</em>"&gt;</code><div id="Image-Srcset-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageUsemapAttributes()">&lt;img <b>usemap</b>="<em>MyValue</em>"&gt;</code><div id="Image-Usemap-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ImageWidthAttributes()">&lt;img <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Image-Width-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>img { display: inline-block; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practice to include <code>src, alt, width, height</code> attributes</span>
+          <div>The <code>src</code> attribute specifies the path to the image</div>
+          <div>The <code>alt</code> attribute specifies an alternate text for the image, if the image for some reason cannot be displayed</div>
+          <div>Always specify the width and height of an image because if they are omitted, the page might flicker while the image loads</div>
+        </div>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Establish image as a clickable link</span>
+          <div>To link an image to another document, simply nest the <code>&lt;img&gt;</code> tag inside an <code>&lt;a&gt;</code> tag</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAP TAG -->
+    <div id="Map-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;map&gt; <em>MyContents</em> &lt;/map&gt;</code></h3>
+      <div>The <code>&lt;map&gt;</code> tag is used to define an image map, where it is an image map with clickable areas</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="MapGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Map-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MapEventAttributes()"><em>HTML Event Attributes</em></code><div id="Map-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="MapNameAttributes()">&lt;map <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Map-Name-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>map { display: inline; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practice to include <code>name</code> attribute</span>
+          <div>The <code>name</code> attribute will be associated with the <code>&lt;img&gt;</code>'s usemap attribute and creates a relationship between the image and the map</div>
+          <div>The <code>&lt;map&gt;</code> element contains a number of <code>&lt;area&gt;</code> elements, that defines the clickable areas in the image map</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AREA TAG -->
+    <div id="Area-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;area&gt;</code></h3>
+      <div>The <code>&lt;area&gt;</code> tag defines an area inside an image map (an image map is an image with clickable areas)</div>
+      <div><code>&lt;area&gt;</code> elements are always nested inside a <code>&lt;map&gt;</code> tag</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="AreaGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Area-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaEventAttributes()"><em>HTML Event Attributes</em></code><div id="Area-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaAltAttributes()">&lt;area <b>alt</b>="<em>MyValue</em>"&gt;</code><div id="Area-Alt-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaCoordsAttributes()">&lt;area <b>coords</b>="<em>MyValue</em>"&gt;</code><div id="Area-Coord-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaDownloadAttributes()">&lt;area <b>download</b>="<em>MyValue</em>"&gt;</code><div id="Area-Download-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaHrefAttributes()">&lt;area <b>href</b>="<em>MyValue</em>"&gt;</code><div id="Area-Href-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaHreflangAttributes()">&lt;area <b>hreflang</b>="<em>MyValue</em>"&gt;</code><div id="Area-Hreflang-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaMediaAttributes()">&lt;area <b>media</b>="<em>MyValue</em>"&gt;</code><div id="Area-Media-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaReferrerpolicyAttributes()">&lt;area <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code><div id="Area-Referrerpolicy-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaRelAttributes()">&lt;area <b>rel</b>="<em>MyValue</em>"&gt;</code><div id="Area-Rel-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaShapeAttributes()">&lt;area <b>shape</b>="<em>MyValue</em>"&gt;</code><div id="Area-Shape-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaTargetAttributes()">&lt;area <b>target</b>="<em>MyValue</em>"&gt;</code><div id="Area-Target-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AreaTypeAttributes()">&lt;area <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Area-Type-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>area { display: none; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Best practice to include <code>name</code> attribute</span>
+          <div>Since <code>&lt;area&gt;</code> elements nested within <code>&lt;map&gt;</code>, the elements also needed <code>&lt;img&gt;</code> too</div>
+          <div>The <code>name</code> attribute will be associated with the <code>&lt;img&gt;</code>'s usemap attribute and creates a relationship between the image and the map</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIGURE CAPTION TAG -->
+    <div id="Figcaption-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></h3>
+      <div>The <code>&lt;figcaption&gt;</code> tag defines a caption for a <code>&lt;figure&gt;</code> element</div>
+      <div>The <code>&lt;figcaption&gt;</code> element can be placed as the first or last child of the <code>&lt;figure&gt;</code> element</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="FigcaptionGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Figcaption-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="FigcaptionEventAttributes()"><em>HTML Event Attributes</em></code><div id="Figcaption-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>figcaption { display: block; }</code></div>
+      </div>
+    </div>
+
+    <!-- AUDIO TAG -->
+    <div id="Audio-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;audio&gt; <em>MyContents</em> &lt;/audio&gt;</code></h3>
+      <div>The <code>&lt;audio&gt;</code> tag is used to embed sound content in a document, such as music or other audio streams</div>
+      <div>The <code>MyText</code> between the <code>&lt;audio&gt;</code> tags will only be displayed in browsers that do not support the audio element</div>
+      <div>There are three supported audio formats in HTML: MP3, WAV, and OGG</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="AudioGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Audio-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AudioEventAttributes()"><em>HTML Event Attributes</em></code><div id="Audio-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AudioAutoplayAttributes()">&lt;audio <b>autoplay</b>="<em>MyValue</em>"&gt;</code><div id="Audio-Autoplay-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AudioControlsAttributes()">&lt;audio <b>controls</b>="<em>MyValue</em>"&gt;</code><div id="Audio-Controls-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AudioLoopAttributes()">&lt;audio <b>loop</b>="<em>MyValue</em>"&gt;</code><div id="Audio-Loop-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AudioMutedAttributes()">&lt;audio <b>muted</b>="<em>MyValue</em>"&gt;</code><div id="Audio-Muted-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AudioPreloadAttributes()">&lt;audio <b>preload</b>="<em>MyValue</em>"&gt;</code><div id="Audio-Preload-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AudioSrcAttributes()">&lt;audio <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Audio-Src-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Multiple <code>&lt;source&gt;</code> tags within <code>&lt;audio&gt;</code></span>
+          <div>The <code>&lt;audio&gt;</code> tag can contains one or more <code>&lt;source&gt;</code> tags with different audio sources</div>
+          <div>The browser will choose the first source it supports</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOURCE TAG -->
+    <div id="Source-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;source&gt;</code></h3>
+      <div>The <code>&lt;source&gt;</code> tag is used to specify multiple media resources for media elements, such as audio, video and picture</div>
+      <div>The <code>&lt;source&gt;</code> tag allows user to specify alternative files which the browser may choose from, based on browser support or viewport width</div>
+      <div>The browser will choose the first <code>&lt;source&gt;</code> it supports</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SourceGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Source-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SourceEventAttributes()"><em>HTML Event Attributes</em></code><div id="Source-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SourceMediaAttributes()">&lt;source <b>media</b>="<em>MyValue</em>"&gt;</code><div id="Source-Media-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SourceSizesAttributes()">&lt;source <b>sizes</b>="<em>MyValue</em>"&gt;</code><div id="Source-Sizes-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SourceSrcAttributes()">&lt;source <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Source-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SourceSrcsetAttributes()">&lt;source <b>srcset</b>="<em>MyValue</em>"&gt;</code><div id="Source-Srcset-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SourceTypeAttributes()">&lt;source <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Source-Type-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- TRACK TAG -->
+    <div id="Track-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;track&gt;</code></h3>
+      <div>The <code>&lt;track&gt;</code> tag specifies text tracks for <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> elements</div>
+      <div>This element is used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing</div>
+      <div>Tracks are formatted in WebVTT format (.vtt files)</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="TrackGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Track-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TrackEventAttributes()"><em>HTML Event Attributes</em></code><div id="Track-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TrackDefaultAttributes()">&lt;track <b>default</b>="<em>MyValue</em>"&gt;</code><div id="Track-Default-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TrackKindAttributes()">&lt;track <b>kind</b>="<em>MyValue</em>"&gt;</code><div id="Track-Kind-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TrackLabelAttributes()">&lt;track <b>label</b>="<em>MyValue</em>"&gt;</code><div id="Track-Label-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TrackSrcAttributes()">&lt;track <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Track-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TrackSrclangAttributes()">&lt;track <b>srclang</b>="<em>MyValue</em>"&gt;</code><div id="Track-Srclang-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- VIDEO TAG -->
+    <div id="Video-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;video&gt; <em>MyContents</em> &lt;/video&gt;</code></h3>
+      <div>The <code>&lt;video&gt;</code> tag is used to embed video content in a document, such as a movie clip or other video streams</div>
+      <div>The <code>MyText</code> between the <code>&lt;video&gt;</code> tags will only be displayed in browsers that do not support the video element</div>
+      <div>There are three supported video formats in HTML: MP4, WebM, and OGG</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="VideoGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Video-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoEventAttributes()"><em>HTML Event Attributes</em></code><div id="Video-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoAutoplayAttributes()">&lt;video <b>autoplay</b>="<em>MyValue</em>"&gt;</code><div id="Video-Autoplay-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoControlsAttributes()">&lt;video <b>controls</b>="<em>MyValue</em>"&gt;</code><div id="Video-Controls-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoHeightAttributes()">&lt;video <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Video-Height-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoLoopAttributes()">&lt;video <b>loop</b>="<em>MyValue</em>"&gt;</code><div id="Video-Loop-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoMutedAttributes()">&lt;video <b>muted</b>="<em>MyValue</em>"&gt;</code><div id="Video-Muted-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoPosterAttributes()">&lt;video <b>poster</b>="<em>MyValue</em>"&gt;</code><div id="Video-Poster-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoPreloadAttributes()">&lt;video <b>preload</b>="<em>MyValue</em>"&gt;</code><div id="Video-Preload-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoSrcAttributes()">&lt;video <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Video-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="VideoWidthAttributes()">&lt;video <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Video-Width-Attributes"></div></div>
+      </div>
     </div>
   </section>
 
-<!--------------------->
-<!-- RUBY ANNOTATION -->
-<!--------------------->
-<section id="Ruby-Annotation" class="Box-Contents">
-<h1>RUBY ANNOTATION STRUCTURE</h1>
-
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted">&lt;ruby&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;rp&gt; ( &lt;/rp&gt;</code></div>
-  <div class="Indent-Level3"><code class="Highlighted">&lt;rt&gt; <em>MyText</em> &lt;/rt&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted">&lt;rp&gt; ) &lt;/rp&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;/ruby&gt;</code></div>
-</div>
-</section>
+  <!--------------------->
+  <!-- RUBY ANNOTATION -->
+  <!--------------------->
+  <section id="Ruby-Annotation" class="Box-Contents">
+  <h1>RUBY ANNOTATION STRUCTURE</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted">&lt;ruby&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;rp&gt; ( &lt;/rp&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted">&lt;rt&gt; <em>MyText</em> &lt;/rt&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted">&lt;rp&gt; ) &lt;/rp&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;/ruby&gt;</code></div>
+    </div>
+  </section>
 
 <!--------------->
 <!-- HTML MISC -->
