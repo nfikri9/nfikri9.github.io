@@ -2348,150 +2348,362 @@
   <section id="Ruby-Annotation" class="Box-Contents">
   <h1>RUBY ANNOTATION STRUCTURE</h1>
     <div class="Box-Structures">
-      <div class="Indent-Level1"><code class="Highlighted">&lt;ruby&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;rp&gt; ( &lt;/rp&gt;</code></div>
-      <div class="Indent-Level3"><code class="Highlighted">&lt;rt&gt; <em>MyText</em> &lt;/rt&gt;</code></div>
-      <div class="Indent-Level2"><code class="Highlighted">&lt;rp&gt; ) &lt;/rp&gt;</code></div>
-      <div class="Indent-Level1"><code class="Highlighted">&lt;/ruby&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="RubyTag()">&lt;ruby&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="RpTag()">&lt;rp&gt; ( &lt;/rp&gt;</code></div>
+      <div class="Indent-Level3"><code class="Highlighted" onclick="RtTag()">&lt;rt&gt; <em>MyText</em> &lt;/rt&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="RpTag()">&lt;rp&gt; ) &lt;/rp&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="RubyTag()">&lt;/ruby&gt;</code></div>
+    </div>
+
+    <!-- RUBY TAG -->
+    <div id="Ruby-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;ruby&gt; <em>MyContents</em> &lt;/ruby&gt;</code></h3>
+      <div>The <code>&lt;ruby&gt;</code> tag specifies a ruby annotation</div>
+      <div>A ruby annotation is a small extra text, attached to the main text to indicate the pronunciation or meaning of the corresponding characters</div>
+      <div>This kind of annotation is often used in Japanese publications</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="RubyGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Ruby-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="RubyEventAttributes()"><em>HTML Event Attributes</em></code><div id="Ruby-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Use <code>&lt;ruby&gt;</code> together with <code>&lt;rt&gt;</code> and <code>&lt;rp&gt;</code></span>
+          <div>The <code>&lt;ruby&gt;</code> element consists of one or more characters that needs an explanation/pronunciation</div>
+          <div>An <code>&lt;rt&gt;</code> element gives that information</div>
+          <div>An optional <code>&lt;rp&gt;</code> element that defines what to show for browsers that do not support ruby annotations</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUBY PARENTHESES TAG -->
+    <div id="Rp-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;rp&gt;(&lt;/rp&gt; <em>MyContents</em> &lt;rp&gt;)&lt;/rp&gt;</code></h3>
+      <div>The <code>&lt;rp&gt;</code> tag can be used to provide parentheses around a ruby text, to be shown by browsers that do not support ruby annotations</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="RpGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Rp-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="RpEventAttributes()"><em>HTML Event Attributes</em></code><div id="Rp-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Use <code>&lt;rp&gt;</code> together with <code>&lt;ruby&gt;</code> and <code>&lt;rt&gt;</code></span>
+          <div>The <code>&lt;ruby&gt;</code> element consists of one or more characters that needs an explanation/pronunciation</div>
+          <div>An <code>&lt;rt&gt;</code> element gives that information</div>
+          <div>An optional <code>&lt;rp&gt;</code> element that defines what to show for browsers that do not support ruby annotations</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUBY TEXT TAG -->
+    <div id="Rt-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;rt&gt; <em>MyText</em> &lt;/rt&gt;</code></h3>
+      <div>The <code>&lt;rt&gt;</code> tag defines an explanation or pronunciation of characters (for East Asian typography) in a ruby annotation</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="RtGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Rt-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="RtEventAttributes()"><em>HTML Event Attributes</em></code><div id="Rt-Event-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>rt { line-height: normal; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Use <code>&lt;rt&gt;</code> together with <code>&lt;ruby&gt;</code> and <code>&lt;rp&gt;</code></span>
+          <div>The <code>&lt;ruby&gt;</code> element consists of one or more characters that needs an explanation/pronunciation</div>
+          <div>An <code>&lt;rt&gt;</code> element gives that information</div>
+          <div>An optional <code>&lt;rp&gt;</code> element that defines what to show for browsers that do not support ruby annotations</div>
+        </div>
+      </div>
     </div>
   </section>
 
-<!--------------->
-<!-- HTML MISC -->
-<!--------------->
-<section id="HTML-Misc" class="Box-Contents">
-<h1>MISC</h1>
+  <!--------------->
+  <!-- HTML MISC -->
+  <!--------------->
+  <section id="HTML-Misc" class="Box-Contents">
+  <h1>MISC</h1>
+    <div class="Box-Structures">
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DetailsTag()">&lt;details&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="SummaryTag()">&lt;summary&gt; <em>MyText</em> &lt;/summary&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DetailsTag()">&lt;/details&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="ObjectTag()">&lt;object&gt;</code></div>
+      <div class="Indent-Level2"><code class="Highlighted" onclick="ParameterTag()">&lt;param&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="ObjectTag()">&lt;/object&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="CanvasTag()">&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted">&lt;script&gt;&lt;/script&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="HorizontalRuleTag()">&lt;hr&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="BreakTag()">&lt;br&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="WordBreakTag()">&lt;wbr&gt;</code></div>
+      <br>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DataTag()">&lt;data&gt; <em>MyText</em> &lt;/data&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="DialogTag()">&lt;dialog&gt; <em>MyText</em> &lt;/dialog&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="EmbedTag()">&lt;embed&gt;</code></div>
+      <div class="Indent-Level1"><code class="Highlighted" onclick="IframeTag()">&lt;iframe&gt;&lt;/iframe&gt;</code></div>
+    </div>
 
-<div class="Box-Structures">
-  <div class="Indent-Level1"><code class="Highlighted" onclick="DetailsTag()">&lt;details&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted" onclick="SummaryTag()">&lt;summary&gt; <em>MyText</em> &lt;/summary&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="DetailsTag()">&lt;/details&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="ObjectTag()">&lt;object&gt;</code></div>
-  <div class="Indent-Level2"><code class="Highlighted" onclick="ParameterTag()">&lt;param&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="ObjectTag()">&lt;/object&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="CanvasTag()">&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted">&lt;script&gt;&lt;/script&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="HorizontalRuleTag()">&lt;hr&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="BreakTag()">&lt;br&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="WordBreakTag()">&lt;wbr&gt;</code></div>
-  <br>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="DataTag()">&lt;data&gt; <em>MyText</em> &lt;/data&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="DialogTag()">&lt;dialog&gt; <em>MyText</em> &lt;/dialog&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="EmbedTag()">&lt;embed&gt;</code></div>
-  <div class="Indent-Level1"><code class="Highlighted" onclick="IframeTag()">&lt;iframe&gt;&lt;/iframe&gt;</code></div>
-</div>
+    <!-- DETAILS TAG -->
+    <div id="Details-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;details&gt; <em>MyContents</em> &lt;/details&gt;</code></h3>
+      <div>The <code>&lt;details&gt;</code> tag specifies additional details that the user can open and close on demand</div>
+      <div>The <code>&lt;details&gt;</code> tag is often used to create an interactive widget that the user can open and close</div>
+      <div>By default, the widget is closed and when open, it expands, and displays the content within</div>
+      <div>The <code>&lt;summary&gt;</code> tag is used in conjunction with <code>&lt;details&gt;</code> to specify a visible heading for the details</div>
 
-<!-- DETAILS TAG -->
-<div id="Details-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;details&gt; <em>MyContents</em> &lt;/details&gt;</code></h3>
-</div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DetailsGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Details-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DetailsEventAttributes()"><em>HTML Event Attributes</em></code><div id="Details-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DetailsOpenAttributes()">&lt;details <b>open</b>="<em>MyValue</em>"&gt;</code><div id="Details-Open-Attributes"></div></div>
+      </div>
 
-<!-- SUMMARY TAG -->
-<div id="Summary-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;summary&gt; <em>MyText</em> &lt;/summary&gt;</code></h3>
-</div>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>details { display: block; }</code></div>
+      </div>
+    </div>
 
-<!-- OBJECT TAG -->
-<div id="Object-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;object&gt; <em>MyContents</em> &lt;/object&gt;</code></h3>
-</div>
+    <!-- SUMMARY TAG -->
+    <div id="Summary-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;summary&gt; <em>MyText</em> &lt;/summary&gt;</code></h3>
+      <div>The <code>&lt;summary&gt;</code> tag defines a visible heading for the <code>&lt;details&gt;</code> element</div>
+      <div>The heading can be clicked to view/hide the details</div>
+      <div>The <code>&lt;summary&gt;</code> element should be the first child element of the <code>&lt;details&gt;</code> element</div>
 
-<!-- PARAMETER TAG -->
-<div id="Parameter-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;param&gt;</code></h3>
-</div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="SummaryGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Summary-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="SummaryEventAttributes()"><em>HTML Event Attributes</em></code><div id="Summary-Event-Attributes"></div></div>
+      </div>
 
-<!-- CANVAS TAG -->
-<div id="Canvas-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></h3>
-</div>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>summary { display: block; }</code></div>
+      </div>
+    </div>
 
-<!-- HORIZONTAL RULE TAG -->
-<div id="Horizontal-Rule-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;hr&gt;</code></h3>
-  <div>The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page (eg. a shift of topic)</div>
-  <div>The <code>&lt;hr&gt;</code> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page</div>
+    <!-- OBJECT TAG -->
+    <div id="Object-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;object&gt; <em>MyContents</em> &lt;/object&gt;</code></h3>
+      <div>The <code>&lt;object&gt;</code> tag defines a container for an external resource</div>
+      <div>The external resource can be a web page, a picture, a media player, or a plug-in application</div>
 
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="HorizontalRuleGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Horizontal-Rule-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="HorizontalRuleEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Horizontal-Rule-Event-Attributes"></div> </div>
-  </div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ObjectGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Object-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectEventAttributes()"><em>HTML Event Attributes</em></code><div id="Object-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectDataAttributes()">&lt;object <b>data</b>="<em>MyValue</em>"&gt;</code><div id="Object-Data-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectFormAttributes()">&lt;object <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Object-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectHeightAttributes()">&lt;object <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Object-Height-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectNameAttributes()">&lt;object <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Object-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectTypeAttributes()">&lt;object <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Object-Type-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectTypemustmatchAttributes()">&lt;object <b>typemustmatch</b>="<em>MyValue</em>"&gt;</code><div id="Object-Typemustmatch-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectUsemapAttributes()">&lt;object <b>usemap</b>="<em>MyValue</em>"&gt;</code><div id="Object-Usemap-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ObjectWidthAttributes()">&lt;object <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Object-Width-Attributes"></div></div>
+      </div>
 
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>hr {</code></div>
-    <div><code>display: block;</code></div>
-    <div><code>margin: 0.5em auto;</code></div>
-    <div><code>border-style: inset;</code></div>
-    <div><code>border-width: 1px;</code></div>
-    <div><code>}</code></div>
-  </div>
-</div>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>object:focus { outline: none; }</code></div>
+      </div>
 
-<!-- BREAK TAG -->
-<div id="Break-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;br&gt;</code></h3>
-  <div>The <code>&lt;br&gt;</code> tag inserts a single line break</div>
-  <div>The <code>&lt;br&gt;</code> tag is useful for writing addresses or poems</div>
-  <div>Use the <code>&lt;br&gt;</code> tag to enter line breaks, not to add space between paragraphs</div>
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">The <code>&lt;object&gt;</code> mainly used for Plug-ins</span>
+          <div>The <code>&lt;object&gt;</code> tag was originally designed to embed browser Plug-ins</div>
+          <div>Plug-ins are computer programs that extend the standard functionality of the browser</div>
+          <div>Plug-ins have been used for many different purposes, like scan for viruses and verify a bank id</div>
+          <div>Plug-ins have been used for running Java applets, but now most browsers no longer support Java Applets and Plug-ins</div>
+          <div>Plug-ins have been used for running ActiveX controls, but now are no longer supported in any browser</div>
+          <div>Plug-ins have been used for displaying Flash movies and maps, but the support for Shockwave Flash has also been turned off in modern browsers</div>
+        </div>
+      </div>
+    </div>
 
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="BreakGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Break-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="BreakEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Break-Event-Attributes"></div> </div>
-  </div>
+    <!-- PARAMETER TAG -->
+    <div id="Parameter-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;param&gt;</code></h3>
+      <div>The <code>&lt;param&gt;</code> tag is used to define parameters for an <code>&lt;object&gt;</code> element</div>
 
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>NONE</code></div>
-  </div>
-</div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="ParamGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Param-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ParamEventAttributes()"><em>HTML Event Attributes</em></code><div id="Param-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ParamNameAttributes()">&lt;param <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Param-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ParamValueAttributes()">&lt;param <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Param-Value-Attributes"></div></div>
+      </div>
 
-<!-- WORD BREAK TAG -->
-<div id="Word-Break-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;wbr&gt;</code></h3>
-  <div>The <code>&lt;wbr&gt;</code> tag specifies "Word Break Opportunity" where in a text it would be ok to add a line-break</div>
-  <div>When a word is too long, the browser might break it at the wrong place</div>
-  <div>User can use the <code>&lt;wbr&gt;</code> element to add word break opportunities</div>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>param { display: none; }</code></div>
+      </div>
+    </div>
 
-  <div class="Box-Attributes">
-    <h3>RELATED ATTRIBUTE(S)</h3>
-    <div><code class="Highlighted" onclick="WordBreakGlobalAttributes()"><em>HTML Global Attributes</em></code> <div id="Word-Break-Global-Attributes"></div> </div>
-    <div><code class="Highlighted" onclick="WordBreakEventAttributes()"><em>HTML Event Attributes</em></code> <div id="Word-Break-Event-Attributes"></div> </div>
-  </div>
+    <!-- CANVAS TAG -->
+    <div id="Canvas-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></h3>
+      <div>The <code>&lt;canvas&gt;</code> tag is used to draw graphics, on the fly, via scripting (usually JavaScript)</div>
+      <div>The <code>&lt;canvas&gt;</code> tag is transparent, and is only a container for graphics, user must use a script to actually draw the graphics</div>
+      <div>The <code>MyText</code> will be displayed in browsers with JavaScript disabled and in browsers that do not support canvas</div>
 
-  <div class="Box-CSS">
-    <h3>DEFAULT CSS SETTING(S)</h3>
-    <div><code>NONE</code></div>
-  </div>
-</div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="CanvasGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Canvas-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="CanvasEventAttributes()"><em>HTML Event Attributes</em></code><div id="Canvas-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="CanvasHeightAttributes()">&lt;canvas <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Canvas-Height-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="CanvasWidthAttributes()">&lt;canvas <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Canvas-Width-Attributes"></div></div>
+      </div>
 
-<!-- DATA TAG -->
-<div id="Data-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;data&gt; <em>MyText</em> &lt;/data&gt;</code></h3>
-</div>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>canvas { height: 150px; width: 300px; }</code></div>
+      </div>
+    </div>
 
-<!-- DIALOG TAG -->
-<div id="Dialog-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;dialog&gt; <em>MyText</em> &lt;/dialog&gt;</code></h3>
-</div>
+    <!-- HORIZONTAL RULE TAG -->
+    <div id="Horizontal-Rule-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;hr&gt;</code></h3>
+      <div>The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page</div>
+      <div>The <code>&lt;hr&gt;</code> element is most often displayed as a horizontal rule that is used to separate content in an HTML page</div>
 
-<!-- EMBED TAG -->
-<div id="Embed-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;embed&gt;</code></h3>
-</div>
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="HorizontalRuleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Horizontal-Rule-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="HorizontalRuleEventAttributes()"><em>HTML Event Attributes</em></code><div id="Horizontal-Rule-Event-Attributes"></div></div>
+      </div>
 
-<!-- IFRAME TAG -->
-<div id="Iframe-Tag" class="Sub-Topics Box-Elements">
-  <h3><code>&lt;iframe&gt;&lt;/iframe&gt;</code></h3>
-</div>
-</section>
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>hr { display: block; margin: 0.5em auto; border-style: inset; border-width: 1px; }</code></div>
+      </div>
+    </div>
 
-<!-- IMPORTING JS FILE -->
-<script src="Notes-HTML.js"></script>
-</body>
+    <!-- BREAK TAG -->
+    <div id="Break-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;br&gt;</code></h3>
+      <div>The <code>&lt;br&gt;</code> tag inserts a single line break</div>
+      <div>The <code>&lt;br&gt;</code> tag is useful for writing addresses or poems</div>
+      <div>Use the <code>&lt;br&gt;</code> tag to enter line breaks, not to add space between paragraphs</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="BreakGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Break-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BreakEventAttributes()"><em>HTML Event Attributes</em></code><div id="Break-Event-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- WORD BREAK TAG -->
+    <div id="Word-Break-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;wbr&gt;</code></h3>
+      <div>The <code>&lt;wbr&gt;</code> tag specifies "Word Break Opportunity" where in a text it would be ok to add a line-break</div>
+      <div>When a word is too long, the browser might break it at the wrong place</div>
+      <div>User can use the <code>&lt;wbr&gt;</code> element to add word break opportunities</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="WordBreakGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Word-Break-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="WordBreakEventAttributes()"><em>HTML Event Attributes</em></code><div id="Word-Break-Event-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- DATA TAG -->
+    <div id="Data-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;data&gt; <em>MyText</em> &lt;/data&gt;</code></h3>
+      <div>The <code>&lt;data&gt;</code> tag is used to add a machine-readable translation of a given content</div>
+      <div>This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DataGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Data-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DataValueAttributes()">&lt;data <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Data-Value-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- DIALOG TAG -->
+    <div id="Dialog-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;dialog&gt; <em>MyText</em> &lt;/dialog&gt;</code></h3>
+      <div>The <code>&lt;dialog&gt;</code> tag defines a dialog box or subwindow</div>
+      <div>The <code>&lt;dialog&gt;</code> element makes it easy to create popup dialogs and modals on a web page</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="DialogGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Dialog-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DialogEventAttributes()"><em>HTML Event Attributes</em></code><div id="Dialog-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="DialogOpenAttributes()">&lt;dialog <b>open</b>="<em>MyValue</em>"&gt;</code><div id="Dialog-Open-Attributes"></div></div>
+      </div>
+    </div>
+
+    <!-- EMBED TAG -->
+    <div id="Embed-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;embed&gt;</code></h3>
+      <div>The <code>&lt;embed&gt;</code> tag defines a container for an external resource, such as a web page, a picture, a media player, or a plug-in application</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="EmbedGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Embed-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="EmbedEventAttributes()"><em>HTML Event Attributes</em></code><div id="Embed-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="EmbedAttributes()">&lt;embed <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Embed-Height-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="EmbedAttributes()">&lt;embed <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Embed-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="EmbedAttributes()">&lt;embed <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Embed-Type-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="EmbedAttributes()">&lt;embed <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Embed-Width-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>embed:focus { outline: none; }</code></div>
+      </div>
+    </div>
+
+    <!-- IFRAME TAG -->
+    <div id="Iframe-Tag" class="Sub-Topics Box-Elements">
+    <h3><code>&lt;iframe&gt;&lt;/iframe&gt;</code></h3>
+      <div>The <code>&lt;iframe&gt;</code> tag specifies an inline frame</div>
+      <div>An inline frame is used to embed another document within the current HTML document</div>
+
+      <div class="Box-Attributes">
+      <h3>RELATED ATTRIBUTE(S)</h3>
+        <div><code class="Highlighted" onclick="IframeGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Iframe-Global-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeEventAttributes()"><em>HTML Event Attributes</em></code><div id="Iframe-Event-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeAllowAttributes()">&lt;iframe <b>allow</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Allow-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeAllowfullscreenAttributes()">&lt;iframe <b>allowfullscreen</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Allowfullscreen-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeAllowpaymentrequestAttributes()">&lt;iframe <b>allowpaymentrequest</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Allowpaymentrequest-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeHeightAttributes()">&lt;iframe <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Height-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeLoadingAttributes()">&lt;iframe <b>loading</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Loading-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeNameAttributes()">&lt;iframe <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeReferrerpolicyAttributes()">&lt;iframe <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Referrerpolicy-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeSandboxAttributes()">&lt;iframe <b>sandbox</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Sandbox-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeSrcAttributes()">&lt;iframe <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeSrcdocAttributes()">&lt;iframe <b>srcdoc</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Srcdoc-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="IframeWidthAttributes()">&lt;iframe <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Iframe-Width-Attributes"></div></div>
+      </div>
+
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>iframe:focus { outline: none; }</code></div>
+        <div><code>iframe[seamless] { display: block; }</code></div>
+      </div>
+    </div>
+  </section>
+
+  <!----------------------->
+  <!-- IMPORTING JS FILE -->
+  <!----------------------->
+  <script src="Notes-HTML.js"></script>
+
+  </body>
 </html>
