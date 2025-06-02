@@ -3,89 +3,280 @@
 ////////////////////////////
 function GlobalAttributes() {
   const myGlobalAttributes = {
-    accesskey: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>accesskey</b>=\"<em>myAccessKey</em>\"&gt;</code></div> -->",
+    accesskey:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>accesskey</b>=\"<em>myAccessKey</em>\"&gt;</code>" +
+      "  <div>The <code>accesskey</code> attribute specifies a shortcut key to activate/focus an element</div>" +
+      "  <div>The <code>accesskey</code> attribute value must be a single character (a letter or a digit)</div>" +
+      "  <table>" +
+      "    <tr><th><code>myAccessKey</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td rowspan=\"3\"><code><em>Character</em></code></td>" +
+      "        <td>Any single character that specifies the shortcut key to activate/focus the element<br>" +
+      "            Example: <code>accesskey=\"<b>S</b>\", accesskey=\"<b>s</b>\", accesskey=\"<b>4</b>\"</code>, etc." +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Applies additional key</b><br>" +
+      "      Using <code>accesskey</code> is difficult because they may conflict with other key standards in the browser<br>" +
+      "      To avoid this problem, most browsers will use <code>accesskey</code> only if pressed together with their own additional key<br>" +
+      "      &rarr; Chrome, Safari, Edge, IE, Opera 15+: <code><kbd>ALT</kbd> + <em>Character</em></code><br>" +
+      "      &rarr; Opera prior version 15: <code><kbd>SHIFT</kbd> + <kbd>ESC</kbd> + <em>Character</em></code><br>" +
+      "      &rarr; Firefox: <code><kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <em>Character</em></code>" +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Not applicable for all international languages</b><br>" +
+      "      Adapting <code>accesskey</code> to all international languages are difficult<br>" +
+      "      The <code>accesskey</code> value may not be present on all keyboards<br>" +
+      "      Therefore, it is advised not to use <code>accesskey</code>" +
+      "    </td></tr>" +
+      "  </table>" +
+      "</div>",
 
     class:
       "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>class</b>=\"<em>myClass</em>\"&gt;</code>" +
-      "<div>The <code>class</code> attribute specifies one or more class names for an element</div>" +
-      "<div>Naming convention" +
-      "<div>The class names must begin with a letter A-Z or a-z</div>" +
-      "<div>The class names can be followed by: letters (A-Za-z), digits (0-9), hyphens ('-'), and underscores ('_')</div>" +
-      "</div>" +
-      "<div>Syntax of writing multiple classes for an element" +
-      "<div>To specify multiple classes, separate the class names with a space</div>" +
-      "<div>This allows users to combine several CSS classes for one HTML element</div>" +
-      "<div>Example, <code>&lt;div class='<em>myClass1 myClass2 myClass3</em>'&gt;</code></div>" +
-      "</div>" +
-      "<div> Mostly used as node" +
-      "<div>The <code>class</code> attribute is mostly used to point to a class in a style sheet</div>" +
-      "<div>It can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class</div>" +
-      "</div> </div>",
+      "  <div>The <code>class</code> attribute specifies one or more class names for an element</div>" +
+      "  <table>" +
+      "    <tr><th><code>myClass</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td rowspan=\"4\"><code><em>String</em></code></td>" +
+      "        <td>Specifies one or more class names for an element<br>" +
+      "            Example; <code>class=\"<b>myClass</b>\", class=\"<b>Total</b>\", class=\"<b>National-3</b>\",</code> etc." +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Naming convention for class</b><br>" +
+      "      The class names must begin with a letter A-Z or a-z<br>" +
+      "      The class names can be followed by:<br>" +
+      "      &rarr; Letters (A-Za-z): <code>myClass</code><br>" +
+      "      &rarr; Digits (0-9): <code>myClass2</code><br>" +
+      "      &rarr; Hyphens (\"-\"): <code>my-Class</code><br>" +
+      "      &rarr; Underscores (\"_\"): <code>my_Class</code>" +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Syntax of writing multiple classes for an element</b><br>" +
+      "      To specify multiple classes, separate the class names with a space<br>" +
+      "      This allows users to combine several CSS classes for one HTML element<br>" +
+      "      Example; <code>&lt;<em>myElement</em> class=\"<b>myClass1 myClass2 myClass3</b>\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Mostly used as node</b><br>" +
+      "      The <code>class</code> attribute is mostly used to point to a class in a style sheet<br>" +
+      "      It can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class" +
+      "    </td></tr>" +
+      "  </table>" +
+      "</div>",
 
-    contenteditable: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>contenteditable</b>=\"<em>myContentEdible</em>\"&gt;</code></div> -->",
-    data: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>data-*</b>=\"<em>myData</em>\"&gt;</code></div> -->",
+    contenteditable:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>contenteditable</b>=\"<em>myContentEditable</em>\"&gt;</code>" +
+      "  <div>The <code>contenteditable</code> attribute specifies whether the content of an element is editable or not</div>" +
+      "  <div>When the <code>contenteditable</code> attribute is not set on an element, the element will inherit it from its parent</div>" +
+      "  <table>" +
+      "    <tr><th><code>myContentEditable</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code>true</code></td><td>Specifies that the element is editable</td></tr>" +
+      "    <tr><td><code>false</code></td><td>Specifies that the element is not editable</td></tr>" +
+      "  </table>" +
+      "</div>",
+
+    data:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>data-*</b>=\"<em>myData</em>\"&gt;</code>" +
+      "  <div>The <code>data-*</code> attributes is used to store custom data private to the page or application</div>" +
+      "  <div>The <code>data-*</code> attributes gives user the ability to embed custom data attributes on all HTML elements</div>" +
+      "  <div>The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience</div>" +
+      "  <div>This is done without any Ajax calls or server-side database queries</div>" +
+      "  <table>" +
+      "    <tr><th><code>myData</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td rowspan=\"2\"><code><em>String</em></code></td>" +
+      "        <td>Specifies the value of the attribute<br>" +
+      "            Example; <code>data-<em>mammal</em>=\"<b>Horse</b>\", data-<em>bird</em>=\"<b>Owl</b>\", data-<em>number</em>=\"<b>5</b>\"</code>, etc." +
+      "    </td></tr>" +
+      "    <tr><td><b>All parts of the attribute</b><br>" +
+      "      The <code>data-*</code> attributes consist of two parts:<br>" +
+      "      &rarr; The <code>*</code> should not contain any uppercase letters, and must be at least one character long after the prefix <code>\"data-\"</code><br>" +
+      "      &rarr; The value <code><em>myData</em></code> can be any string" +
+      "    </td></tr>" +
+      "  </table>" +
+      "</div>",
 
     direction:
       "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>dir</b>=\"<em>myDirection</em>\"&gt;</code>" +
-      "<div>The <code>dir</code> attribute specifies the text direction of the element's content</div>" +
-      "<div><code>ltr</code> &rarr; [Default] Specifies left-to-right text direction</div>" +
-      "<div><code>rtl</code> &rarr; Specifies right-to-left text direction</div>" +
-      "<div><code>auto</code> &rarr; Let the browser figure out the text direction, based on the content (Only recommended if the text direction is unknown)</div>" +
+      "  <div>The <code>dir</code> attribute specifies the text direction of the element's content</div>" +
+      "  <table>" +
+      "    <tr><th><code>myDirection</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code>ltr</code></td><td><b>[Default]</b> Specifies left-to-right text direction</td></tr>" +
+      "    <tr><td><code>rtl</code></td><td>Specifies right-to-left text direction</td></tr>" +
+      "    <tr><td><code>auto</code></td><td>Let the browser figure out the text direction, based on the content<br>" +
+      "            (Only recommended if the text direction is unknown)" +
+      "    </td></tr>" +
+      "  </table>" +
       "</div>",
 
-    draggable: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>draggable</b>=\"<em>myDraggable</em>\"&gt;</code></div> -->",
-    enterkeyhint: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>enterkeyhint</b>=\"<em>myEnterKeyHint</em>\"&gt;</code></div> -->",
-    hidden: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>hidden</b>=\"<em>myHidden</em>\"&gt;</code></div> -->",
+    draggable:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>draggable</b>=\"<em>myDraggable</em>\"&gt;</code>" +
+      "  <div>The <code>draggable</code> attribute specifies whether an element is draggable or not</div>" +
+      "  <div>Links and images are draggable by default</div>" +
+      "  <div></div>The <code>draggable</code> attribute is often used in drag and drop operations" +
+      "  <table>" +
+      "    <tr><th><code>myDraggable</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code>true</code></td><td>Specifies that the element is draggable</td></tr>" +
+      "    <tr><td><code>false</code></td><td>Specifies that the element is not draggable</td></tr>" +
+      "    <tr><td><code>auto</code></td><td>Uses the default behavior of the browser</td></tr>" +
+      "  </table>" +
+      "</div>",
+
+    enterkeyhint:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>enterkeyhint</b>=\"<em>myEnterKeyHint</em>\"&gt;</code>" +
+      "  <div>The <code>enterkeyhint</code> attribute allows user to change the appearance of the \"<kbd>Enter</kbd>\" key on a virtual keyboard</div>" +
+      "  <table>" +
+      "    <tr><th><code>myEnterKeyHint</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code>done</code></td><td>The enter key says \"Done\"</td></tr>" +
+      "    <tr><td><code>enter</code></td><td>The enter key says \"Enter\"</td></tr>" +
+      "    <tr><td><code>go</code></td><td>The enter key says \"Go\"</td></tr>" +
+      "    <tr><td><code>next</code></td><td>The enter key says \"Next\"</td></tr>" +
+      "    <tr><td><code>previous</code></td><td>The enter key says \"Previous\"</td></tr>" +
+      "    <tr><td><code>search</code></td><td>The enter key says \"Search\"</td></tr>" +
+      "    <tr><td><code>send</code></td><td>The enter key says \"Send\"</td></tr>" +
+      "  </table>" +
+      "</div>",
+
+    hidden:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>hidden</b>&gt;</code>" +
+      "  <div>The <code>hidden</code> attribute is a boolean attribute, which specifies that an element is not yet, or is no longer, relevant</div>" +
+      "  <div>Browsers should not display elements that have the <code>hidden</code> attribute specified</div>" +
+      "  <div>The <code>hidden</code> attribute can also be used to keep a user from seeing an element until some other condition has been met</div>" +
+      "  <div>Then, a JavaScript could remove the <code>hidden</code> attribute, and make the element visible</div>" +
+      "</div>",
 
     identifier:
       "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>id</b>=\"<em>myId</em>\"&gt;</code>" +
-      "<div>The <code>id</code> attribute specifies a unique id for an HTML element</div>" +
-      "<div>Naming convention" +
-      "<div>The id name must contain at least one character</div>" +
-      "<div>The id name must not contain any space characters</div>" +
-      "</div>" +
-      "<div>Unique Id" +
-      "<div>The value must be unique within the HTML document, which only one specific id can exist in the document</div>" +
-      "</div>" +
-      "<div>Mostly used as node" +
-      "<div>The <code>id</code> attribute is mostly used to point to a style in a style sheet</div>" +
-      "<div>It can also be used by a JavaScript (via the HTML DOM) to manipulate the element with the specific id</div>" +
-      "</div> </div>",
-
-    inert: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>inert</b>=\"<em>myInert</em>\"&gt;</code></div> -->",
-    inputmode: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>inputmode</b>=\"<em>myInputMode</em>\"&gt;</code></div> -->",
-
-    language:
-      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>lang</b>=\"<em><a href=\"https://www.w3schools.com/tags/ref_language_codes.asp\" target=\"_blank\">HTML Language Codes</a></em>\"&gt;</code>" +
-      "<div>The <code>lang</code> attribute specifies the language of the element's content</div>" +
-      "<div>Common examples are <code>'en'</code> for English, <code>'fr'</code> for French, and so on</div>" +
+      "  <div>The <code>id</code> attribute specifies a unique id for an HTML element</div>" +
+      "  <table>" +
+      "    <tr><th><code>myId</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td rowspan=\"4\"><code><em>String</em></code></td>" +
+      "        <td>Specifies a unique id for the element<br>" +
+      "            Example; <code>id=\"<b>myId</b>\", id=\"<b>Grade</b>\", class=\"<b>Team-5</b>\",</code> etc." +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Naming convention for id</b><br>" +
+      "      The identifier names must begin with a letter A-Z or a-z<br>" +
+      "      The identifier names can be followed by:<br>" +
+      "      &rarr; Letters (A-Za-z): <code>myId</code><br>" +
+      "      &rarr; Digits (0-9): <code>myId2</code><br>" +
+      "      &rarr; Hyphens (\"-\"): <code>my-Id</code><br>" +
+      "      &rarr; Underscores (\"_\"): <code>my_Id</code>" +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Unique id</b><br>" +
+      "      The value must be unique within the HTML document, which only one specific id can exist in the document" +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Mostly used as node</b><br>" +
+      "      The <code>id</code> attribute is mostly used to point to an id in a style sheet<br>" +
+      "      It can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified id" +
+      "    </td></tr>" +
+      "  </table>" +
       "</div>",
 
-    popover: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>popover</b>=\"<em>myPopOver</em>\"&gt;</code></div> -->",
-    spellcheck: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>spellcheck</b>=\"<em>mySpellCheck</em>\"&gt;</code></div> -->",
+    inert:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>inert</b>&gt;</code>" +
+      "  <div>The <code>inert</code> attribute is a boolean attribute, which disables an element and all the elements inside</div>" +
+      "  <div>The elements are still visible, but they have no function (Eg: buttons and links cannot be clicked, input fields are disabled, etc.)</div>" +
+      "  <div>The elements are also ignored by screen readers</div>" +
+      "</div>",
+
+    inputmode:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>inputmode</b>=\"<em>myInputMode</em>\"&gt;</code>" +
+      "  <div>The <code>inputmode</code> attribute allows user to change the appearance of the keyboard on a phone or tablet (any device with a virtual keyboard)</div>" +
+      "  <table>" +
+      "    <tr><th><code>myInputMode</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code>decimal</code></td><td>Numeric only keyboard, usually also a comma key</td></tr>" +
+      "    <tr><td><code>email</code></td><td>Text keyboard, with keys typically for e-mail addresses like <kbd>@</kbd></td></tr>" +
+      "    <tr><td><code>none</code></td><td>No keyboard should appear</td></tr>" +
+      "    <tr><td><code>numeric</code></td><td>Numeric only keyboard</td></tr>" +
+      "    <tr><td><code>search</code></td><td>Text keyboard, usually the <kbd>Enter</kbd> key says <kbd>Go</kbd></td></tr>" +
+      "    <tr><td><code>tel</code></td><td>Numeric only keyboard, usually also with <kbd>+, *, #</kbd> keys</td></tr>" +
+      "    <tr><td><code>text</code></td><td><b>[Default]</b> Text keyboard</td></tr>" +
+      "    <tr><td><code>url</code></td><td>Text keyboard, with keys typically for web addresses like <kbd>[.], [/], [.com]</kbd></td></tr>" +
+      "  </table>" +
+      "</div>",
+
+    language:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>lang</b>=\"<em>myLanguage</em>\"&gt;</code>" +
+      "  <div>The <code>lang</code> attribute specifies the language of the element's content</div>" +
+      "  <div>Common examples are <code>\"en\"</code> for English, <code>\"fr\"</code> for French, and so on</div>" +
+      "  <table>" +
+      "    <tr><th><code>myLanguage</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code><a href=\"https://www.w3schools.com/tags/ref_language_codes.asp\" target=\"_blank\"><em>HTML Language Codes</em></a></code></td>" +
+      "        <td>Specifies the language code for the element's content</td>" +
+      "    </tr>" +
+      "  </table>" +
+      "</div>",
+
+    popover:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>popover</b>&gt;</code>" +
+      "  <div>The <code>popover</code> attribute is a boolean attribute, which defines an element as a popover element</div>" +
+      "  <div>When it is invoked, it will be placed on top of the content, not interfere with the position of other HTML elements</div>" +
+      "  <div>A <code>popover</code> element will be invisible until it is invoked by another element</div>" +
+      "  <div>The other element must have a <code>popovertarget</code> attribute where the value refers to the popover element's id</div>" +
+      "  <div>The popover element will be placed on top of all other content, and by clicking the popovertarget element, the popover element will toggle between showing and hiding</div>" +
+      "</div>",
+
+    spellcheck:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>spellcheck</b>=\"<em>mySpellCheck</em>\"&gt;</code>" +
+      "  <div>The <code>spellcheck</code> attribute specifies whether the element is to have its spelling and grammar checked or not</div>" +
+      "  <div>The following can be spellchecked; text values in input elements (not include password), text in textarea elements, text in editable elements</div>" +
+      "  <table>" +
+      "    <tr><th><code>mySpellCheck</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code>true</code></td><td>The element is to have its spelling and grammar checked</td></tr>" +
+      "    <tr><td><code>false</code></td><td>The element is not to be checked</td></tr>" +
+      "  </table>" +
+      "</div>",
 
     style:
-      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>style</b>=\"<em><a href=\"Notes-CSS.html\" target=\"_blank\">CSS Properties</a></em>\"&gt;</code>" +
-      "<div>The <code>style</code> attribute specifies an inline style for an element</div>" +
-      "<div>Syntax of writing multiple properties and values" +
-      "<div>One or more CSS properties and values separated by semicolons</div>" +
-      "<div>Example, <code>&lt;div style='color:blue; text-align:center;'&gt;</code></div>" +
-      "</div>" +
-      "<div>Overrides any style set globally" +
-      "<div>The <code>style</code> attribute will override any style set globally, like styles specified in the <code>&lt;style&gt;</code> tag or in an external style sheet</div>" +
-      "<div>The <code>style</code> attribute can be used on any HTML element</div>" +
-      "<div>It will validate on any HTML element, however, it is not necessarily useful</div>" +
-      "</div> </div>",
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>style</b>=\"<em>myStyle</em>\"&gt;</code>" +
+      "  <div>The <code>style</code> attribute specifies an inline style for an element</div>" +
+      "  <table>" +
+      "    <tr><th><code>myStyle</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td rowspan=\"3\"><code><a href=\"Notes-CSS.html\" target=\"_blank\"><em>CSS Properties</em></a></code></td>" +
+      "        <td>Specifies an inline style for an element</td>" +
+      "    </tr>" +
+      "    <tr><td>" +
+      "      <b>Syntax of writing multiple properties and values</b><br>" +
+      "      One or more CSS properties and values separated by semicolons<br>" +
+      "      Example, <code>&lt;<em>myElement</em> style=\"<b>color:blue; text-align:center;</b>\"&gt;" +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Overrides any style set globally</b><br>" +
+      "      The <code>style</code> attribute will override any style set globally, like styles specified in the <code>&lt;style&gt;</code> tag or in an external style sheet<br>" +
+      "      The <code>style</code> attribute can be used on any HTML element" +
+      "    </td></tr>" +
+      "  </table>" +
+      "</div>",
 
-    tabindex: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>tabindex</b>=\"<em>myTabIndex</em>\"&gt;</code></div> -->",
+    tabindex:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>tabindex</b>=\"<em>myTabIndex</em>\"&gt;</code>" +
+      "  <div>The <code>tabindex</code> attribute specifies the tab order of an element (when the \"tab\" button is used for navigating)</div>" +
+      "  <div>The <code>tabindex</code> attribute can be used on any HTML element</div>" +
+      "  <table>" +
+      "    <tr><th><code>myTabIndex</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code><em>Number</em></code></td><td>Specifies the tabbing order of the element (1 is first)</td></tr>" +
+      "  </table>" +
+      "</div>",
 
     title:
       "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>title</b>=\"<em>myTitle</em>\"&gt;</code>" +
-      "<div>The <code>title</code> attribute specifies extra information about an element</div>" +
-      "<div>The information is most often shown as a tooltip text when the mouse moves over the element</div>" +
+      "  <div>The <code>title</code> attribute specifies extra information about an element</div>" +
+      "  <div>The information is most often shown as a tooltip text when the mouse moves over the element</div>" +
+      "  <table>" +
+      "    <tr><th><code>myTitle</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code><em>String</em></code></td><td>A tooltip text for an element</td></tr>" +
+      "  </table>" +
       "</div>",
 
-    translate: "<!-- <div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>translate</b>=\"<em>myTranslate</em>\"&gt;</code></div> -->"
+    translate:
+      "<div class=\"Box-Attributes\"><code>&lt;<em>MyElement</em> <b>translate</b>=\"<em>myTranslate</em>\"&gt;</code>" +
+      "  <div>The <code>translate</code> attribute specifies whether the content of an element should be translated or not</div>" +
+      "  <table>" +
+      "    <tr><th><code>myTranslate</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td><code><em>yes</em></code></td><td>Specifies that the content of the element should be translated</td></tr>" +
+      "    <tr><td><code><em>no</em></code></td><td>Specifies that the content of the element must not be translated</td></tr>" +
+      "  </table>" +
+      "</div>"
   };
   return myGlobalAttributes;
 }
@@ -113,7 +304,7 @@ function EventAttributes() {
       "<div><code>&lt;<em>MyElement</em> <b>onstorage</b>=\"<em>MyFunction</em>()\"&gt;</code>      = Script to be run when a Web Storage area is updated</div>" +
       "<div><code>&lt;<em>MyElement</em> <b>onunload</b>=\"<em>MyFunction</em>()\"&gt;</code>       = Fires once a page has unloaded (or the browser window has been closed)</div>" +
       "</div>",
-    
+
     form:
       "<div class=\"Box-Attributes\"><code><em>Form Event Attributes</em></code>" +
       "<div><code>&lt;<em>MyElement</em> <b>onblur</b>=\"<em>MyFunction</em>()\"&gt;</code>        = Fires the moment that the element loses focus</div>" +
@@ -200,6 +391,127 @@ function EventAttributes() {
       "</div>"
   };
   return myEventAttributes;
+}
+
+///////////////////////////////////
+// HTML MISCELLANEOUS ATTRIBUTES //
+///////////////////////////////////
+function MiscellaneousAttributes() {
+  const myMiscellaneous = {
+    media:
+      "<div class=\"Box-Attributes\">" +
+      "  <div>The <code>media</code> attribute specifies what media/device the CSS style is optimized for</div>" +
+      "  <div>This attribute is used to specify that the style is for special devices (like iPhone), speech or print media</div>" +
+      "  <table>" +
+      "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td rowspan=\"10\"><code><em>Device</em></code></td></tr>" +
+      "    <tr><td><code><b>all</b></code><br><b>[Default]</b> Suitable for all devices</td></tr>" +
+      "    <tr><td><code><b>aural</b></code><br>Specifies for speech synthesizers</td></tr>" +
+      "    <tr><td><code><b>braille</b></code><br>Specifies for braille feedback devices</td></tr>" +
+      "    <tr><td><code><b>handheld</b></code><br>Specifies for handheld devices (small screen, limited bandwidth)</td></tr>" +
+      "    <tr><td><code><b>projection</b></code><br>Specifies for projectors</td></tr>" +
+      "    <tr><td><code><b>print</b></code><br>Specifies for print preview mode/printed pages</td></tr>" +
+      "    <tr><td><code><b>screen</b></code><br>Specifies for computer screens</td></tr>" +
+      "    <tr><td><code><b>tty</b></code>Specifies for teletypes and similar media using a fixed-pitch character grid</td></tr>" +
+      "    <tr><td><code><b>tv</b></code><br>Specifies for television type devices (low resolution, limited scroll ability)</td></tr>" +
+      "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
+      "    <tr><td><code><b>and</b></code><br>Specifies an AND operator</td></tr>" +
+      "    <tr><td><code><b>not</b></code><br>Specifies an NOT operator</td></tr>" +
+      "    <tr><td><code><b>,</b></code><br>Specifies an OR operator</td></tr>" +
+      "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
+      "    <tr><td><code><b>width</b></code><br>" +
+      "            Specifies the width of the targeted display area<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (min-<b>width</b>:500px)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>height</b></code><br>" +
+      "            Specifies the height of the targeted display area<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (max-<b>height</b>:700px)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>device-width</b></code><br>" +
+      "            Specifies the width of the target display/paper<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (<b>device-width</b>:500px)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>device-height</b></code><br>" +
+      "            Specifies the height of the target display/paper<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (<b>device-height</b>:500px)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>orientation</b></code><br>" +
+      "            Specifies the orientation of the target display/paper<br>" +
+      "            <code>\"portrait\"</code> and <code>\"landscape\"</code> are one of the related variations for orientation<br>" +
+      "            Example; <code>&lt;style media=\"all and (<b>orientation</b>:landscape)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>aspect-ratio</b></code><br>" +
+      "            Specifies the width/height ratio of the targeted display area<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (<b>aspect-ratio</b>:16/9)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>device-aspect-ratio</b></code><br>" +
+      "            Specifies the device-width/device-height ratio of the target display/paper<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (<b>device-aspect-ratio</b>:16/9)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>color</b></code><br>" +
+      "            Specifies the bits per color of target display<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (<b>color</b>:3)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>color-index</b></code><br>" +
+      "            Specifies the bits per color of target display<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (min-<b>color-index</b>:255)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>monochrome</b></code><br>" +
+      "            Specifies the bits per pixel in a monochrome frame buffer<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"screen and (<b>monochrome</b>:2)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>resolution</b></code><br>" +
+      "            Specifies the pixel density (dpi or dpcm) of the target display/paper<br>" +
+      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "            Example; <code>&lt;style media=\"print and (<b>resolution</b>:300dpi)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>scan</b></code><br>" +
+      "            Specifies scanning method of a tv display<br>" +
+      "            <code>\"progressive\"</code> and <code>\"interlace\"</code> are one of the related variations for scan<br>" +
+      "            Example; <code>&lt;style media=\"tv and (<b>scan</b>:interlace)\"&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td><code><b>grid</b></code><br>" +
+      "            Specifies if the output device is grid or bitmap<br>" +
+      "            <code>\"1\"</code> for grid and <code>\"0\"</code> for otherwise<br>" +
+      "            Example; <code>&lt;style media=\"handheld and (<b>grid</b>:1)\"&gt;</code>" +
+      "    </td></tr>" +
+      "  </table>" +
+      "</div>",
+
+    type:
+      "<div class=\"Box-Attributes\">" +
+      "  <div>Test</div>" +
+      "</div>",
+
+    xmlns:
+      "<div class=\"Box-Attributes\">" +
+      "  <div>The <code>xmlns</code> attribute specifies the xml namespace for a document</div>" +
+      "  <table>" +
+      "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+      "    <tr><td rowspan=\"3\"><code>http://www.w3.org/1999/xhtml</code></td><td><b>[Default]</b> Specifies the namespace to use (for XHTML documents)</td></tr>" +
+      "    <tr><td>" +
+      "      <b>Applied tag(s)</b><br>" +
+      "      <code>&lt;html&gt;</code>" +
+      "    </td></tr>" +
+      "    <tr><td>" +
+      "      <b>Optional to include <code>xmlns</code> attribute</b><br>" +
+      "      The <code>xmlns</code> attribute is optional in HTML5, required in XHTML, and invalid in HTML 4.01<br>" +
+      "      The HTML validator at <a href=\"http://w3.org\" target=\"_blank\" title=\"World Wide Web Consortium\">W3C</a> does not complain when the <code>xmlns</code> attribute is missing in an XHTML document<br>" +
+      "      The namespace will be added to the <code>&lt;html&gt;</code> tag even if user do not include it anyway" +
+      "    </td></tr>" +
+      "  </table>" +
+      "</div>"
+  };
+  return myMiscellaneous;
 }
 
 ///////////////////////////////
@@ -291,6 +603,15 @@ function HTMLGlobalAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function HTMLXmlnsAttributes() {
+  let myVisibility = document.getElementById("HTML-Xmlns-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("HTML-Xmlns-Attributes").innerHTML = MiscellaneousAttributes().xmlns;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // HEAD TAG //
 function HeadTag() {
   let myVisibility = document.getElementById("Head-Tag");
@@ -364,6 +685,24 @@ function StyleEventAttributes() {
     document.getElementById("Style-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function StyleMediaAttributes() {
+  let myVisibility = document.getElementById("Style-Media-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Style-Media-Attributes").innerHTML = MiscellaneousAttributes().media;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function StyleTypeAttributes() {
+  let myVisibility = document.getElementById("Style-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Style-Type-Attributes").innerHTML = MiscellaneousAttributes().type;
   }
   else { myVisibility.style.display = "none"; }
 }

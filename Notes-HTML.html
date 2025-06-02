@@ -119,7 +119,7 @@
       <div class="Box-Attributes">
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="HTMLGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="HTML-Global-Attributes"></div></div>
-        <div><code class="Highlighted">&lt;html <b>xmlns</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted" onclick="HTMLXmlnsAttributes()">&lt;html <b>xmlns</b>="<em>myValue</em>"&gt;</code><div id="HTML-Xmlns-Attributes"></div></div>
       </div>
 
       <div class="Box-CSS">
@@ -143,7 +143,8 @@
     <h3><code>&lt;head&gt; <em>MyContents</em> &lt;/head&gt;</code></h3>
       <div>The <code>&lt;head&gt;</code> tag is a container for metadata, placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> tag</div>
       <div>Metadata typically define the document title, character set, styles, scripts, and other meta information, which they are not displayed in webpage</div>
-      <div>Hence, tags like <code>&lt;title&gt;, &lt;style&gt;, &lt;base&gt;, &lt;link&gt;, &lt;meta&gt;, &lt;script&gt;, &lt;noscript&gt;</code> are commonly placed here</div>
+      <div>Hence, tags like <code>&lt;title&gt;, &lt;style&gt;, &lt;base&gt;, &lt;link&gt;, &lt;meta&gt;</code> are commonly placed here</div>
+      <div>The <code>&lt;script&gt;</code> and <code>&lt;noscript&gt;</code> can also be placed here eventhough they are not considered the essential parts of the page structure</div>
 
       <div class="Box-Attributes">
       <h3>RELATED ATTRIBUTE(S)</h3>
@@ -161,7 +162,6 @@
     <h3><code>&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></h3>
       <div>The <code>&lt;title&gt;</code> tag defines the title of the document</div>
       <div>The title must be text-only, and it is shown in the browser's title bar or in the page's tab</div>
-      <div>The <code>&lt;title&gt;</code> tag is <b>required</b> in HTML documents</div>
 
       <div class="Box-Attributes">
       <h3>RELATED ATTRIBUTE(S)</h3>
@@ -177,11 +177,13 @@
       <h3>INSIGHT(S)</h3>
         <div class="Item-Insights">
         <span class="Highlight-Insights">The essential of the <code>&lt;title&gt;</code> element</span>
+          <div>The <code>&lt;title&gt;</code> tag is <b>required</b> in HTML documents</div>
           <div>The contents of a page title is very important for search engine optimization (SEO)</div>
           <div>The page title is used by search engine algorithms to decide the order when listing pages in search results</div>
+          <div>User can <b>not</b> have more than one <code>&lt;title&gt;</code> element in an HTML document</div>
         </div>
         <div class="Item-Insights">
-        <span class="Highlight-Insights">Best practice in creating title</span>
+        <span class="Highlight-Insights">Guidelines for creating <code>&lt;title&gt;</code> element</span>
           <div>Go for a longer, descriptive title (avoid one- or two-word titles)</div>
           <div>Search engines will display about 50-60 characters of the title, so try not to have titles longer than that</div>
           <div>Do not use just a list of words as the title (this may reduce the page's position in search results)</div>
@@ -200,8 +202,8 @@
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="StyleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Style-Global-Attributes"></div></div>
         <div><code class="Highlighted" onclick="StyleEventAttributes()"><em>HTML Event Attributes</em></code><div id="Style-Event-Attributes"></div></div>
-        <div><code class="Highlighted">&lt;html <b>media</b>="<em>MyValue</em>"&gt;</code></div>
-        <div><code class="Highlighted">&lt;html <b>type</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted" onclick="StyleMediaAttributes()">&lt;style <b>media</b>="<em>myValue</em>"&gt;</code><div id="Style-Media-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="StyleTypeAttributes()">&lt;style <b>type</b>="<em>myValue</em>"&gt;</code><div id="Style-Type-Attributes"></div></div>
       </div>
 
       <div class="Box-CSS">
@@ -212,7 +214,7 @@
       <div class="Box-Insights">
       <h3>INSIGHT(S)</h3>
         <div class="Item-Insights">
-        <span class="Highlight-Insights">CSS Specificity</span>
+        <span class="Highlight-Insights">CSS specificity</span>
           <div>When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet</div>
           <div>If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used</div>
           <div>There are more info regarding to CSS specificity in CSS section</div>
