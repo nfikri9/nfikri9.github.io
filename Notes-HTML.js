@@ -397,111 +397,125 @@ function EventAttributes() {
 // HTML MISCELLANEOUS ATTRIBUTES //
 ///////////////////////////////////
 function MiscellaneousAttributes() {
-  const myMiscellaneous = {
-    media:
-      "<div class=\"Box-Attributes\">" +
-      "  <div>The <code>media</code> attribute specifies what media/device the CSS style is optimized for</div>" +
-      "  <div>This attribute is used to specify that the style is for special devices (like iPhone), speech or print media</div>" +
-      "  <table>" +
-      "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-      "    <tr><td rowspan=\"10\"><code><em>Device</em></code></td></tr>" +
-      "    <tr><td><code><b>all</b></code><br><b>[Default]</b> Suitable for all devices</td></tr>" +
-      "    <tr><td><code><b>aural</b></code><br>Specifies for speech synthesizers</td></tr>" +
-      "    <tr><td><code><b>braille</b></code><br>Specifies for braille feedback devices</td></tr>" +
-      "    <tr><td><code><b>handheld</b></code><br>Specifies for handheld devices (small screen, limited bandwidth)</td></tr>" +
-      "    <tr><td><code><b>projection</b></code><br>Specifies for projectors</td></tr>" +
-      "    <tr><td><code><b>print</b></code><br>Specifies for print preview mode/printed pages</td></tr>" +
-      "    <tr><td><code><b>screen</b></code><br>Specifies for computer screens</td></tr>" +
-      "    <tr><td><code><b>tty</b></code>Specifies for teletypes and similar media using a fixed-pitch character grid</td></tr>" +
-      "    <tr><td><code><b>tv</b></code><br>Specifies for television type devices (low resolution, limited scroll ability)</td></tr>" +
-      "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
-      "    <tr><td><code><b>and</b></code><br>Specifies an AND operator</td></tr>" +
-      "    <tr><td><code><b>not</b></code><br>Specifies an NOT operator</td></tr>" +
-      "    <tr><td><code><b>,</b></code><br>Specifies an OR operator</td></tr>" +
-      "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
-      "    <tr><td><code><b>width</b></code><br>" +
-      "            Specifies the width of the targeted display area<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (min-<b>width</b>:500px)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>height</b></code><br>" +
-      "            Specifies the height of the targeted display area<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (max-<b>height</b>:700px)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>device-width</b></code><br>" +
-      "            Specifies the width of the target display/paper<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (<b>device-width</b>:500px)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>device-height</b></code><br>" +
-      "            Specifies the height of the target display/paper<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (<b>device-height</b>:500px)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>orientation</b></code><br>" +
-      "            Specifies the orientation of the target display/paper<br>" +
-      "            <code>\"portrait\"</code> and <code>\"landscape\"</code> are one of the related variations for orientation<br>" +
-      "            Example; <code>&lt;style media=\"all and (<b>orientation</b>:landscape)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>aspect-ratio</b></code><br>" +
-      "            Specifies the width/height ratio of the targeted display area<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (<b>aspect-ratio</b>:16/9)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>device-aspect-ratio</b></code><br>" +
-      "            Specifies the device-width/device-height ratio of the target display/paper<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (<b>device-aspect-ratio</b>:16/9)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>color</b></code><br>" +
-      "            Specifies the bits per color of target display<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (<b>color</b>:3)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>color-index</b></code><br>" +
-      "            Specifies the bits per color of target display<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (min-<b>color-index</b>:255)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>monochrome</b></code><br>" +
-      "            Specifies the bits per pixel in a monochrome frame buffer<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"screen and (<b>monochrome</b>:2)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>resolution</b></code><br>" +
-      "            Specifies the pixel density (dpi or dpcm) of the target display/paper<br>" +
-      "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "            Example; <code>&lt;style media=\"print and (<b>resolution</b>:300dpi)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>scan</b></code><br>" +
-      "            Specifies scanning method of a tv display<br>" +
-      "            <code>\"progressive\"</code> and <code>\"interlace\"</code> are one of the related variations for scan<br>" +
-      "            Example; <code>&lt;style media=\"tv and (<b>scan</b>:interlace)\"&gt;</code>" +
-      "    </td></tr>" +
-      "    <tr><td><code><b>grid</b></code><br>" +
-      "            Specifies if the output device is grid or bitmap<br>" +
-      "            <code>\"1\"</code> for grid and <code>\"0\"</code> for otherwise<br>" +
-      "            Example; <code>&lt;style media=\"handheld and (<b>grid</b>:1)\"&gt;</code>" +
-      "    </td></tr>" +
-      "  </table>" +
-      "</div>",
+  const myRelatedElements = {
+    media: "<div>Applied tag(s): <code>&lt;style&gt;</code></div>",
+    type : "<div>Applied tag(s): <code>&lt;style&gt;</code></div>"
+  };
 
-    type:
-      "<div class=\"Box-Attributes\">" +
-      "  <div>Test</div>" +
-      "</div>",
+  const myMiscellaneous = {
+    media: {
+      styleelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>media</code> attribute of the <code>&lt;style&gt;</code> tag specifies what media/device the CSS style is optimized for</div>" +
+        "  <div>This attribute is used to specify that the style is for special devices (like iPhone), speech or print media</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td rowspan=\"10\"><code><em>Device</em></code></td></tr>" +
+        "    <tr><td><code><b>all</b></code><br><b>[Default]</b> Suitable for all devices</td></tr>" +
+        "    <tr><td><code><b>aural</b></code><br>Specifies for speech synthesizers</td></tr>" +
+        "    <tr><td><code><b>braille</b></code><br>Specifies for braille feedback devices</td></tr>" +
+        "    <tr><td><code><b>handheld</b></code><br>Specifies for handheld devices (small screen, limited bandwidth)</td></tr>" +
+        "    <tr><td><code><b>projection</b></code><br>Specifies for projectors</td></tr>" +
+        "    <tr><td><code><b>print</b></code><br>Specifies for print preview mode/printed pages</td></tr>" +
+        "    <tr><td><code><b>screen</b></code><br>Specifies for computer screens</td></tr>" +
+        "    <tr><td><code><b>tty</b></code><br>Specifies for teletypes and similar media using a fixed-pitch character grid</td></tr>" +
+        "    <tr><td><code><b>tv</b></code><br>Specifies for television type devices (low resolution, limited scroll ability)</td></tr>" +
+        "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
+        "    <tr><td><code><b>and</b></code><br>Specifies an AND operator</td></tr>" +
+        "    <tr><td><code><b>not</b></code><br>Specifies a NOT operator</td></tr>" +
+        "    <tr><td><code><b>,</b></code><br>Specifies an OR operator</td></tr>" +
+        "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
+        "    <tr><td><code><b>width</b></code><br>" +
+        "            Specifies the width of the targeted display area<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (min-<b>width</b>:500px)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>height</b></code><br>" +
+        "            Specifies the height of the targeted display area<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (max-<b>height</b>:700px)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>device-width</b></code><br>" +
+        "            Specifies the width of the target display/paper<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (<b>device-width</b>:500px)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>device-height</b></code><br>" +
+        "            Specifies the height of the target display/paper<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (<b>device-height</b>:500px)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>orientation</b></code><br>" +
+        "            Specifies the orientation of the target display/paper<br>" +
+        "            <code>\"portrait\"</code> and <code>\"landscape\"</code> are one of the related variations for orientation<br>" +
+        "            Example; <code>&lt;style media=\"all and (<b>orientation</b>:landscape)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>aspect-ratio</b></code><br>" +
+        "            Specifies the width/height ratio of the targeted display area<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (<b>aspect-ratio</b>:16/9)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>device-aspect-ratio</b></code><br>" +
+        "            Specifies the device-width/device-height ratio of the target display/paper<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (<b>device-aspect-ratio</b>:16/9)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>color</b></code><br>" +
+        "            Specifies the bits per color of target display<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (<b>color</b>:3)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>color-index</b></code><br>" +
+        "            Specifies the bits per color of target display<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (min-<b>color-index</b>:255)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>monochrome</b></code><br>" +
+        "            Specifies the bits per pixel in a monochrome frame buffer<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"screen and (<b>monochrome</b>:2)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>resolution</b></code><br>" +
+        "            Specifies the pixel density (dpi or dpcm) of the target display/paper<br>" +
+        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+        "            Example; <code>&lt;style media=\"print and (<b>resolution</b>:300dpi)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>scan</b></code><br>" +
+        "            Specifies scanning method of a tv display<br>" +
+        "            <code>\"progressive\"</code> and <code>\"interlace\"</code> are one of the related variations for scan<br>" +
+        "            Example; <code>&lt;style media=\"tv and (<b>scan</b>:interlace)\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code><b>grid</b></code><br>" +
+        "            Specifies if the output device is grid or bitmap<br>" +
+        "            <code>\"1\"</code> for grid and <code>\"0\"</code> for otherwise<br>" +
+        "            Example; <code>&lt;style media=\"handheld and (<b>grid</b>:1)\"&gt;</code>" +
+        "    </td></tr>" +
+        "  </table>" +
+           myRelatedElements.media +
+        "</div>"
+    },
+
+    type: {
+      styleelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;style&gt;</code> tag specifies the Internet media type (formerly known as MIME type)</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em><a href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\" target=\"_blank\">IANA Media Type</a></em></code></td>" +
+        "        <td>Specifies the Internet media type of the style sheet<br>" +
+        "            Example: <code>&lt;style <b>type</b>=\"text/css\"&gt;</code>" +
+        "    </td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>"
+    },
 
     xmlns:
       "<div class=\"Box-Attributes\">" +
       "  <div>The <code>xmlns</code> attribute specifies the xml namespace for a document</div>" +
       "  <table>" +
       "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-      "    <tr><td rowspan=\"3\"><code>http://www.w3.org/1999/xhtml</code></td><td><b>[Default]</b> Specifies the namespace to use (for XHTML documents)</td></tr>" +
-      "    <tr><td>" +
-      "      <b>Applied tag(s)</b><br>" +
-      "      <code>&lt;html&gt;</code>" +
-      "    </td></tr>" +
+      "    <tr><td rowspan=\"2\"><code>http://www.w3.org/1999/xhtml</code></td><td><b>[Default]</b> Specifies the namespace to use (for XHTML documents)</td></tr>" +
       "    <tr><td>" +
       "      <b>Optional to include <code>xmlns</code> attribute</b><br>" +
       "      The <code>xmlns</code> attribute is optional in HTML5, required in XHTML, and invalid in HTML 4.01<br>" +
@@ -509,6 +523,7 @@ function MiscellaneousAttributes() {
       "      The namespace will be added to the <code>&lt;html&gt;</code> tag even if user do not include it anyway" +
       "    </td></tr>" +
       "  </table>" +
+      "  <div>Applied tag(s): <code>&lt;html&gt;</code></div>" +
       "</div>"
   };
   return myMiscellaneous;
@@ -693,7 +708,7 @@ function StyleMediaAttributes() {
   let myVisibility = document.getElementById("Style-Media-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Style-Media-Attributes").innerHTML = MiscellaneousAttributes().media;
+    document.getElementById("Style-Media-Attributes").innerHTML = MiscellaneousAttributes().media.styleelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -702,7 +717,7 @@ function StyleTypeAttributes() {
   let myVisibility = document.getElementById("Style-Type-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Style-Type-Attributes").innerHTML = MiscellaneousAttributes().type;
+    document.getElementById("Style-Type-Attributes").innerHTML = MiscellaneousAttributes().type.styleelement;
   }
   else { myVisibility.style.display = "none"; }
 }
