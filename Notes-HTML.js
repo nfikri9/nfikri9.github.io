@@ -393,6 +393,70 @@ function EventAttributes() {
   return myEventAttributes;
 }
 
+///////////////////////////////
+// HTML HYPERLINK ATTRIBUTES //
+///////////////////////////////
+function HyperlinkAttributes() {
+  const myRelatedElements = {
+    href  : "<div>Applied tag(s): <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code></div>",
+    target: "<div>Applied tag(s): <code>&lt;base&gt;</code></div>"
+  };
+
+  const Target = {
+    Blank : "Opens the link in a new window or tab",
+    Self  : "<b>[Default]</b> Opens the link in the same frame as it was clicked",
+    Parent: "Opens the link in the parent frame",
+    Top   : "Opens the link in the full body of the window"
+  };
+
+  const URL = {
+    Absolute: "Points/Refers to another website<br>Example; <code>http://www.example.com</code>",
+    Relative: "Points/Refers to a page within a website<br>Example; <code>example.html</code>"
+  };
+
+  const myHyperlink = {
+    href: {
+      baseelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>href</code> attribute of the <code>&lt;base&gt;</code> tag specifies the base URL for all relative URLs on a page</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.href +
+        "</div>",
+
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>href</code> attribute of the <code>&lt;link&gt;</code> tag specifies the location (URL) of the external resource (most often a style sheet file)</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.href +
+        "</div>"
+    },
+
+    target: {
+      baseelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>target</code> attribute of the <code>&lt;base&gt;</code> tag specifies the default target for all hyperlinks and forms in the page</div>" +
+        "  <div>This attribute can be overridden by using the <code>target</code> attribute for each hyperlink/form</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>_blank</code></td><td>" + Target.Blank + "</td></tr>" +
+        "    <tr><td><code>_self</code></td><td>" + Target.Self + "</td></tr>" +
+        "    <tr><td><code>_parent</code></td><td>" + Target.Parent + "</td></tr>" +
+        "    <tr><td><code>_top</code></td><td>" + Target.Top + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.target +
+        "</div>"
+    }
+  };
+  return myHyperlink;
+}
+
 ///////////////////////////////////
 // HTML MISCELLANEOUS ATTRIBUTES //
 ///////////////////////////////////
@@ -527,29 +591,6 @@ function MiscellaneousAttributes() {
       "</div>"
   };
   return myMiscellaneous;
-}
-
-///////////////////////////////
-// HTML HYPERLINK ATTRIBUTES //
-//////////////////////////////
-function HyperlinkAttributes() {
-  let AbsoluteURL =
-    "<div>Points to another web site</div>" +
-    "<div>Example &rarr; <code>http://www.example.com</code></div>";
-
-  let RelativeURL =
-    "<div>Points to a page within a web site</div>" +
-    "<div>Example &rarr; <code>example.html</code></div>";
-  
-  const myHyperlink = {
-    cite:
-      "<div class=\"Box-Attributes\">" +
-      "<div class=\"Box-Values\"><code>cite=\"<em><b>Absolute URL</b></em>\"</code>" + AbsoluteURL + "</div>" +
-      "<div class=\"Box-Values\"><code>cite=\"<em><b>Relative URL</b></em>\"</code>" + RelativeURL + "</div>" +
-      "<div>Applied Tag(s): <code>&lt;q&gt;, &lt;blockq&gt;, &lt;ins&gt;, &lt;del&gt;</code></div>" +
-      "</div>"
-  };
-  return myHyperlink;
 }
 
 //////////////////////////
@@ -744,13 +785,20 @@ function BaseGlobalAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-function BaseEventAttributes() {
-  let myVisibility = document.getElementById("Base-Event-Attributes");
+function BaseHrefAttributes() {
+  let myVisibility = document.getElementById("Base-Href-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Base-Event-Attributes").innerHTML =
-      EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
-      EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+    document.getElementById("Base-Href-Attributes").innerHTML = HyperlinkAttributes().href.baseelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function BaseTargetAttributes() {
+  let myVisibility = document.getElementById("Base-Target-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Base-Target-Attributes").innerHTML = HyperlinkAttributes().target.baseelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -784,6 +832,15 @@ function LinkEventAttributes() {
     document.getElementById("Link-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkHrefAttributes() {
+  let myVisibility = document.getElementById("Link-Href-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Href-Attributes").innerHTML = HyperlinkAttributes().href.linkelement;
   }
   else { myVisibility.style.display = "none"; }
 }
