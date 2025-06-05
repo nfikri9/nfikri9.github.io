@@ -404,8 +404,8 @@ function HyperlinkAttributes() {
 
   const Target = {
     Blank : "Opens the link in a new window or tab",
-    Self  : "<b>[Default]</b> Opens the link in the same frame as it was clicked",
     Parent: "Opens the link in the parent frame",
+    Self  : "<b>[Default]</b> Opens the link in the same frame as it was clicked",
     Top   : "Opens the link in the full body of the window"
   };
 
@@ -446,8 +446,8 @@ function HyperlinkAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code>_blank</code></td><td>" + Target.Blank + "</td></tr>" +
-        "    <tr><td><code>_self</code></td><td>" + Target.Self + "</td></tr>" +
         "    <tr><td><code>_parent</code></td><td>" + Target.Parent + "</td></tr>" +
+        "    <tr><td><code>_self</code></td><td>" + Target.Self + "</td></tr>" +
         "    <tr><td><code>_top</code></td><td>" + Target.Top + "</td></tr>" +
         "  </table>" +
            myRelatedElements.target +
@@ -462,104 +462,369 @@ function HyperlinkAttributes() {
 ///////////////////////////////////
 function MiscellaneousAttributes() {
   const myRelatedElements = {
-    media: "<div>Applied tag(s): <code>&lt;style&gt;</code></div>",
-    type : "<div>Applied tag(s): <code>&lt;style&gt;</code></div>"
+    crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    hreflang      : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    media         : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
+    referrerpolicy: "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    rel           : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    sizes         : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    type          : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
+    xlmns         : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
+  };
+
+  const Operator = {
+    And  : "<b><code>and</code></b><br>Specifies an AND operator",
+    Not  : "<b><code>not</code></b><br>Specifies a NOT operator",
+    Or   : "<b><code>,</code></b><br>Specifies an OR operator"
+  };
+
+  const Device = {
+    All       : "<b><code>all</code></b><br>Used for all media type devices",
+    Aural     : "<b><code>aural</code></b><br>Used for speech synthesizers",
+    Braille   : "<b><code>braille</code></b><br>Used for braille feedback devices",
+    Handheld  : "<b><code>handheld</code></b><br>Used for handheld devices (small screen, limited bandwidth)",
+    Print     : "<b><code>print</code></b><br>Used for print preview mode/printed pages",
+    Projection: "<b><code>projection</code></b><br>Used for projectors",
+    Screen    : "<b><code>screen</code></b><br>Used for computer screens, tablets, smart-phones, etc.",
+    Speech    : "<b><code>speech</code></b><br>Used for screenreaders that \"reads\" the page out loud",
+    Teletype  : "<b><code>tty</code></b><br>Used for teletypes and similar media using a fixed-pitch character grid",
+    Television: "<b><code>tv</code></b><br>Used for television type devices (low resolution, limited scroll ability)",
+  };
+
+  const Referrerpolicy = {
+    No_Referrer:
+      "No referrer information will be sent along with a request",
+    No_Referrer_When_Downgrade:
+      "<b>[Default]</b> The referrer header will not be sent to origins without HTTPS",
+    Origin:
+      "Send only scheme, host, and port to the request client",
+    Origin_When_Cross_Origin:
+      "For cross-origin requests: Send only scheme, host, and port<br>" +
+      "For same-origin requests: Also include the path",
+    Same_Origin:
+      "For same-origin requests: Referrer info will be sent<br>" +
+      "For cross-origin requests: No referrer info will be sent",
+    Strict_Origin:
+      "Only send referrer info if the security level is the same (e.g. HTTPS to HTTPS)<br>" +
+      "Do not send to a less secure destination (e.g. HTTPS to HTTP)",
+    Strict_Origin_When_Cross_Origin:
+      "Send full path when performing a same-origin request<br>" +
+      "Send only origin when the security level stays the same (e.g. HTTPS to HTTPS)" +
+      "Send no header to a less secure destination (HTTPS to HTTP)",
+    Unsafe_URL:
+      "Send origin, path and query string (but not fragment, password, or username)<br>" +
+      "This value is considered unsafe",
+  };
+
+  const Relation = {
+    Alternate:
+      "Provides a link to an alternate version of the document (i.e. print page, translated or mirror)",
+    Author:
+      "Provides a link to the author of the document",
+    DNS_Prefetch:
+      "Specifies that the browser should preemptively perform DNS resolution for the target resource's origin",
+    Help:
+      "Provides a link to a help document",
+    Icon:
+      "Imports an icon to represent the document",
+    License:
+      "Provides a link to copyright information for the document",
+    Next:
+      "Provides a link to the next document in the series",
+    Pingback:
+      "Provides the address of the pingback server that handles pingbacks to the current document",
+    Preconnect:
+      "Specifies that the browser should preemptively connect to the target resource's origin",
+    Prefetch:
+      "Specifies that the browser should preemptively fetch and cache the target resource as it is likely to be required for a follow-up navigation",
+    Preload:
+      "Specifies that the browser agent must preemptively fetch and cache the target resource for current navigation " +
+      "according to the destination given by the <code>as</code> attribute",
+    Prerender:
+      "Specifies that the browser should pre-render (load) the specified webpage in the background<br>" +
+      " So, if the user navigates to this page, it speeds up the page load (because the page is already loaded)<br>" +
+      "<b>Warning!</b> This wastes the user's bandwidth!<br>" +
+      "Only use prerender if the webpage is required at some point in the user's journey",
+    Prev:
+      "Indicates that the document is a part of a series, and that the previous document in the series is the referenced document",
+    Search:
+      "Provides a link to a resource that can be used to search through the current document and its related pages",
+    Stylesheet:
+      "Imports a style sheet"
+  };
+
+  const Value = {
+    Aspect_Ratio:
+      "<b><code>aspect-ratio</code></b><br>" +
+      "Specifies the width/height ratio of the targeted display area<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>aspect-ratio</b>:16/9)\"&gt;</code>",
+    Color:
+      "<b><code>color</code></b><br>" +
+      "Specifies the bits per color of target display<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>color</b>:3)\"&gt;</code>",
+    Color_Index:
+      "<b><code>color-index</code></b><br>" +
+      "Specifies the number of colors the target display can handle<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>color-index</b>:255)\"&gt;</code>",
+    Device_Aspect_Ratio:
+      "<b><code>device-aspect-ratio</code></b><br>" +
+      "Specifies the device-width/device-height ratio of the target display/paper<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-aspect-ratio</b>:16/9)\"&gt;</code>",
+    Device_Height:
+      "<b><code>device-height</code></b><br>" +
+      "Specifies the height of the target display/paper<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-height</b>:500px)\"&gt;</code>",
+    Device_Width:
+      "<b><code>device-width</code></b><br>" +
+      "Specifies the width of the target display/paper<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-width</b>:500px)\"&gt;</code>",
+    Grid:
+      "<b><code>grid</code></b><br>" +
+      "Specifies if the output device is grid or bitmap<br>" +
+      "<code>\"1\"</code> for grid and <code>\"0\"</code> for otherwise<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"handheld and (<b>grid</b>:1)\"&gt;</code>",
+    Height:
+      "<b><code>height</code></b><br>" +
+      "Specifies the height of the  targeted display area<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (max-<b>height</b>:700px)\"&gt;</code>",
+    Monochrome:
+      "<b><code>monochrome</code></b><br>" +
+      "Specifies the bits per pixel in a monochrome frame buffer<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>monochrome</b>:2)\"&gt;</code>",
+    Orientation:
+      "<b><code>orientation</code></b><br>" +
+      "Specifies the orientation of the target display/paper<br>" +
+      "<code>\"portrait\"</code> and <code>\"landscape\"</code> are one of the related variations for orientation<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"all and (<b>orientation</b>:landscape)\"&gt;</code>",
+    Resolution:
+      "<b><code>resolution</code></b><br>" +
+      "Specifies the pixel density (dpi or dpcm) of the target display/paper<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"print and (<b>resolution</b>:300dpi)\"&gt;</code>",
+    Scan:
+      "<b><code>scan</code></b><br>" +
+      "Specifies scanning method of a tv display<br>" +
+      "<code>\"progressive\"</code> and <code>\"interlace\"</code> are one of the related variations for scan<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"tv and (<b>scan</b>:interlace)\"&gt;</code>",
+    Width:
+      "<b><code>width</code></b><br>" +
+      "Specifies the width of the targeted display area<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>width</b>:500px)\"&gt;</code>",
+  };
+
+  const XMLNS = {
+    Description:
+      "<b>[Default]</b> Specifies the namespace to use (for XHTML documents)",
+    Insight1:
+      "<b>Optional to include <code>xmlns</code> attribute</b><br>" +
+      "The <code>xmlns</code> attribute is optional in HTML5, required in XHTML, and invalid in HTML 4.01<br>" +
+      "The HTML validator at <a href=\"http://w3.org\" target=\"_blank\" title=\"World Wide Web Consortium\">W3C</a> does not complain " +
+      "when the <code>xmlns</code> attribute is missing in an XHTML document<br>" +
+      "The namespace will be added to the <code>&lt;html&gt;</code> tag even if user do not include it anyway"
   };
 
   const myMiscellaneous = {
-    media: {
-      styleelement:
+    crossorigin: {
+      linkelement:
         "<div class=\"Box-Attributes\">" +
-        "  <div>The <code>media</code> attribute of the <code>&lt;style&gt;</code> tag specifies what media/device the CSS style is optimized for</div>" +
-        "  <div>This attribute is used to specify that the style is for special devices (like iPhone), speech or print media</div>" +
+        "  <div>The <code>crossorigin</code> attribute of the <code>&lt;link&gt;</code> tag specifies how the element handles cross-origin requests</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td rowspan=\"10\"><code><em>Device</em></code></td></tr>" +
-        "    <tr><td><code><b>all</b></code><br><b>[Default]</b> Suitable for all devices</td></tr>" +
-        "    <tr><td><code><b>aural</b></code><br>Specifies for speech synthesizers</td></tr>" +
-        "    <tr><td><code><b>braille</b></code><br>Specifies for braille feedback devices</td></tr>" +
-        "    <tr><td><code><b>handheld</b></code><br>Specifies for handheld devices (small screen, limited bandwidth)</td></tr>" +
-        "    <tr><td><code><b>projection</b></code><br>Specifies for projectors</td></tr>" +
-        "    <tr><td><code><b>print</b></code><br>Specifies for print preview mode/printed pages</td></tr>" +
-        "    <tr><td><code><b>screen</b></code><br>Specifies for computer screens</td></tr>" +
-        "    <tr><td><code><b>tty</b></code><br>Specifies for teletypes and similar media using a fixed-pitch character grid</td></tr>" +
-        "    <tr><td><code><b>tv</b></code><br>Specifies for television type devices (low resolution, limited scroll ability)</td></tr>" +
+        "    <tr><td><code>anonymous</code></td><td>The element handles cross-origin requests with <code>anonymous</code></td></tr>" +
+        "    <tr><td><code>use-credentials</code></td><td>The element handles cross-origin requests with <code>use-credentials</code></td></tr>" +
+        "  </table>" +
+           myRelatedElements.crossorigin +
+        "</div>"
+    },
+
+    hreflang: {
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>hreflang</code> attribute of the <code>&lt;link&gt;</code> tag specifies the language of the text in the linked document</div>" +
+        "  <div>It is <b>recommended</b> to be only used if the <code>href</code> attribute is set</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><a href=\"https://www.w3schools.com/tags/ref_language_codes.asp\" target=\"_blank\"><em>HTML Language Codes</em></a></code></td>" +
+        "        <td>Specifies the language code for the linked's document</td>" +
+        "    </tr>" +
+        "  </table>" +
+           myRelatedElements.hreflang +
+        "</div>"
+    },
+
+    media: {
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "<div>The <code>media</code> attribute of the <code>&lt;link&gt;</code> tag specifies what media/device the target resource is optimized for</div>" +
+        "<div>This attribute is mostly used with CSS style sheets to specify different styles for different media types</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
-        "    <tr><td><code><b>and</b></code><br>Specifies an AND operator</td></tr>" +
-        "    <tr><td><code><b>not</b></code><br>Specifies a NOT operator</td></tr>" +
-        "    <tr><td><code><b>,</b></code><br>Specifies an OR operator</td></tr>" +
+        "    <tr><td>" + Operator.And + "</td></tr>" +
+        "    <tr><td>" + Operator.Not + "</td></tr>" +
+        "    <tr><td>" + Operator.Or + "</td></tr>" +
+        "    <tr><td rowspan=\"11\"><code><em>Device</em></code></td></tr>" +
+        "    <tr><td>" + Device.All + "</td></tr>" +
+        "    <tr><td>" + Device.Aural + "</td></tr>" +
+        "    <tr><td>" + Device.Braille + "</td></tr>" +
+        "    <tr><td>" + Device.Handheld + "</td></tr>" +
+        "    <tr><td>" + Device.Print + "</td></tr>" +
+        "    <tr><td>" + Device.Projection + "</td></tr>" +
+        "    <tr><td>" + Device.Screen + "</td></tr>" +
+        "    <tr><td>" + Device.Speech + "</td></tr>" +
+        "    <tr><td>" + Device.Teletype + "</td></tr>" +
+        "    <tr><td>" + Device.Television + "</td></tr>" +
         "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
-        "    <tr><td><code><b>width</b></code><br>" +
-        "            Specifies the width of the targeted display area<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (min-<b>width</b>:500px)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>height</b></code><br>" +
-        "            Specifies the height of the targeted display area<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (max-<b>height</b>:700px)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>device-width</b></code><br>" +
-        "            Specifies the width of the target display/paper<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (<b>device-width</b>:500px)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>device-height</b></code><br>" +
-        "            Specifies the height of the target display/paper<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (<b>device-height</b>:500px)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>orientation</b></code><br>" +
-        "            Specifies the orientation of the target display/paper<br>" +
-        "            <code>\"portrait\"</code> and <code>\"landscape\"</code> are one of the related variations for orientation<br>" +
-        "            Example; <code>&lt;style media=\"all and (<b>orientation</b>:landscape)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>aspect-ratio</b></code><br>" +
-        "            Specifies the width/height ratio of the targeted display area<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (<b>aspect-ratio</b>:16/9)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>device-aspect-ratio</b></code><br>" +
-        "            Specifies the device-width/device-height ratio of the target display/paper<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (<b>device-aspect-ratio</b>:16/9)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>color</b></code><br>" +
-        "            Specifies the bits per color of target display<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (<b>color</b>:3)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>color-index</b></code><br>" +
-        "            Specifies the bits per color of target display<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (min-<b>color-index</b>:255)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>monochrome</b></code><br>" +
-        "            Specifies the bits per pixel in a monochrome frame buffer<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"screen and (<b>monochrome</b>:2)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>resolution</b></code><br>" +
-        "            Specifies the pixel density (dpi or dpcm) of the target display/paper<br>" +
-        "            <code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-        "            Example; <code>&lt;style media=\"print and (<b>resolution</b>:300dpi)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>scan</b></code><br>" +
-        "            Specifies scanning method of a tv display<br>" +
-        "            <code>\"progressive\"</code> and <code>\"interlace\"</code> are one of the related variations for scan<br>" +
-        "            Example; <code>&lt;style media=\"tv and (<b>scan</b>:interlace)\"&gt;</code>" +
-        "    </td></tr>" +
-        "    <tr><td><code><b>grid</b></code><br>" +
-        "            Specifies if the output device is grid or bitmap<br>" +
-        "            <code>\"1\"</code> for grid and <code>\"0\"</code> for otherwise<br>" +
-        "            Example; <code>&lt;style media=\"handheld and (<b>grid</b>:1)\"&gt;</code>" +
-        "    </td></tr>" +
+        "    <tr><td>" + Value.Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Value.Color + "</td></tr>" +
+        "    <tr><td>" + Value.Color_Index + "</td></tr>" +
+        "    <tr><td>" + Value.Device_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Value.Device_Height + "</td></tr>" +
+        "    <tr><td>" + Value.Device_Width + "</td></tr>" +
+        "    <tr><td>" + Value.Grid + "</td></tr>" +
+        "    <tr><td>" + Value.Height + "</td></tr>" +
+        "    <tr><td>" + Value.Monochrome + "</td></tr>" +
+        "    <tr><td>" + Value.Orientation + "</td></tr>" +
+        "    <tr><td>" + Value.Resolution + "</td></tr>" +
+        "    <tr><td>" + Value.Scan + "</td></tr>" +
+        "    <tr><td>" + Value.Width + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.media +
+        "</div>",
+
+      styleelement:
+        "<div class=\"Box-Attributes\">" +
+        "<div>The <code>media</code> attribute of the <code>&lt;style&gt;</code> tag specifies what media/device the CSS style is optimized for</div>" +
+        "<div>This attribute is used to specify that the style is for special devices (like iPhone), speech or print media</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
+        "    <tr><td>" + Operator.And + "</td></tr>" +
+        "    <tr><td>" + Operator.Not + "</td></tr>" +
+        "    <tr><td>" + Operator.Or + "</td></tr>" +
+        "    <tr><td rowspan=\"11\"><code><em>Device</em></code></td></tr>" +
+        "    <tr><td>" + Device.All + "</td></tr>" +
+        "    <tr><td>" + Device.Aural + "</td></tr>" +
+        "    <tr><td>" + Device.Braille + "</td></tr>" +
+        "    <tr><td>" + Device.Handheld + "</td></tr>" +
+        "    <tr><td>" + Device.Print + "</td></tr>" +
+        "    <tr><td>" + Device.Projection + "</td></tr>" +
+        "    <tr><td>" + Device.Screen + "</td></tr>" +
+        "    <tr><td>" + Device.Speech + "</td></tr>" +
+        "    <tr><td>" + Device.Teletype + "</td></tr>" +
+        "    <tr><td>" + Device.Television + "</td></tr>" +
+        "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
+        "    <tr><td>" + Value.Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Value.Color + "</td></tr>" +
+        "    <tr><td>" + Value.Color_Index + "</td></tr>" +
+        "    <tr><td>" + Value.Device_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Value.Device_Height + "</td></tr>" +
+        "    <tr><td>" + Value.Device_Width + "</td></tr>" +
+        "    <tr><td>" + Value.Grid + "</td></tr>" +
+        "    <tr><td>" + Value.Height + "</td></tr>" +
+        "    <tr><td>" + Value.Monochrome + "</td></tr>" +
+        "    <tr><td>" + Value.Orientation + "</td></tr>" +
+        "    <tr><td>" + Value.Resolution + "</td></tr>" +
+        "    <tr><td>" + Value.Scan + "</td></tr>" +
+        "    <tr><td>" + Value.Width + "</td></tr>" +
         "  </table>" +
            myRelatedElements.media +
         "</div>"
     },
 
+    referrerpolicy: {
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>referrerpolicy</code> attribute of the <code>&lt;link&gt;</code> tag specifies which referrer information to send when fetching an iframe</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>no-referrer</code></td><td>" + Referrerpolicy.No_Referrer + "</td></tr>" +
+        "    <tr><td><code>no-referrer-when-downgrade</code></td><td>" + Referrerpolicy.No_Referrer_When_Downgrade + "</td></tr>" +
+        "    <tr><td><code>origin</code></td><td>" + Referrerpolicy.Origin + "</td></tr>" +
+        "    <tr><td><code>origin-when-cross-origin</code></td><td>" + Referrerpolicy.Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>same-origin</code></td><td>" + Referrerpolicy.Same_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin</code></td><td>" + Referrerpolicy.Strict_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin-when-cross-origin</code></td><td>" + Referrerpolicy.Strict_Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.referrerpolicy +
+        "</div>"
+    },
+
+    rel: {
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>rel</code> attribute of the <code>&lt;link&gt;</code> tag specifies the relationship between the current document and the linked document/resource</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>alternate</code></td><td>" + Relation.Alternate + "</td></tr>" +
+        "    <tr><td><code>author</code></td><td>" + Relation.Author + "</td></tr>" +
+        "    <tr><td><code>dns-prefetch</code></td><td>" + Relation.DNS_Prefetch + "</td></tr>" +
+        "    <tr><td><code>help</code></td><td>" + Relation.Help + "</td></tr>" +
+        "    <tr><td><code>icon</code></td><td>" + Relation.Icon + "</td></tr>" +
+        "    <tr><td><code>license</code></td><td>" + Relation.License + "</td></tr>" +
+        "    <tr><td><code>next</code></td><td>" + Relation.Next + "</td></tr>" +
+        "    <tr><td><code>pingback</code></td><td>" + Relation.Pingback + "</td></tr>" +
+        "    <tr><td><code>preconnect</code></td><td>" + Relation.Preconnect + "</td></tr>" +
+        "    <tr><td><code>prefetch</code></td><td>" + Relation.Prefetch + "</td></tr>" +
+        "    <tr><td><code>preload</code></td><td>" + Relation.Preload + "</td></tr>" +
+        "    <tr><td><code>prerender</code></td><td>" + Relation.Prerender + "</td></tr>" +
+        "    <tr><td><code>prev</code></td><td>" + Relation.Prev + "</td></tr>" +
+        "    <tr><td><code>search</code></td><td>" + Relation.Search + "</td></tr>" +
+        "    <tr><td><code>stylesheet</code></td><td>" + Relation.Stylesheet + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.rel +
+        "</div>"
+    },
+
+    sizes: {
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>sizes</code> attribute of the <code>&lt;link&gt;</code> tag specifies the sizes of icons for visual media</div>" +
+        "  <div>This attribute is only used if <code>rel=\"icon\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Height</em>x<em>Width</em></code></td>" +
+        "        <td>Specifies one or more sizes for the linked icon<br>" +
+        "            The height and width values are separated by an \"x\" or \"X\"<br>" +
+        "            Example of 1 size; <code>&lt;rel=\"icon\" href=\"favicon.png\" <b>sizes</b>=\"16x16\" type=\"image/png\"&gt;</code><br>" +
+        "            Example of 2 sizes; <code>&lt;rel=\"icon\" href=\"favicon.png\" <b>sizes</b>=\"16x16 32x32\" type=\"image/png\"&gt;</code>" +
+        "    </td></tr>" +
+        "    <tr><td><code>any</code></td>" +
+        "        <td>Specifies that the icon is scalable (like an SVG image)<br>" +
+        "            Example; <code>&lt;rel=\"icon\" href=\"icon.svg\" <b>sizes</b>=\"any\" type=\"image/svg+xml\"&gt;</code>" +
+        "    </td></tr>" +
+        "  </table>" +
+           myRelatedElements.sizes +
+        "</div>"
+    },
+
     type: {
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;link&gt;</code> tag specifies  the media type of the linked document/resource</div>" +
+        "  <div>The most common value of type is <code>\"text/css\"</code></div>" +
+        "  <div>If the <code>type</code> attribute is omitted, the browser will look at the <code>rel</code> attribute to guess the correct type</div>" +
+        "  <div>So, if <code>rel=\"stylesheet\"</code>, the browser will assume the type is <code>\"text/css\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em><a href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\" target=\"_blank\">IANA Media Type</a></em></code></td>" +
+        "        <td>Specifies the media type of the linked document<br>" +
+        "            Example: <code>&lt;style <b>type</b>=\"text/css\"&gt;</code>" +
+        "    </td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>",
+
       styleelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>type</code> attribute of the <code>&lt;style&gt;</code> tag specifies the Internet media type (formerly known as MIME type)</div>" +
@@ -574,21 +839,18 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
-    xmlns:
-      "<div class=\"Box-Attributes\">" +
-      "  <div>The <code>xmlns</code> attribute specifies the xml namespace for a document</div>" +
-      "  <table>" +
-      "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-      "    <tr><td rowspan=\"2\"><code>http://www.w3.org/1999/xhtml</code></td><td><b>[Default]</b> Specifies the namespace to use (for XHTML documents)</td></tr>" +
-      "    <tr><td>" +
-      "      <b>Optional to include <code>xmlns</code> attribute</b><br>" +
-      "      The <code>xmlns</code> attribute is optional in HTML5, required in XHTML, and invalid in HTML 4.01<br>" +
-      "      The HTML validator at <a href=\"http://w3.org\" target=\"_blank\" title=\"World Wide Web Consortium\">W3C</a> does not complain when the <code>xmlns</code> attribute is missing in an XHTML document<br>" +
-      "      The namespace will be added to the <code>&lt;html&gt;</code> tag even if user do not include it anyway" +
-      "    </td></tr>" +
-      "  </table>" +
-      "  <div>Applied tag(s): <code>&lt;html&gt;</code></div>" +
-      "</div>"
+    xmlns: {
+      htmlelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>xmlns</code> attribute of the <code>&lt;html&gt;</code> tag specifies the xml namespace for a document</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td rowspan=\"2\"><code>http://www.w3.org/1999/xhtml</code></td><td>" + XMLNS.Description +"</td></tr>" +
+        "    <tr><td>" + XMLNS.Insight1 +"</td></tr>" +
+        "  </table>" +
+           myRelatedElements.xlmns +
+        "</div>"
+    }
   };
   return myMiscellaneous;
 }
@@ -663,7 +925,7 @@ function HTMLXmlnsAttributes() {
   let myVisibility = document.getElementById("HTML-Xmlns-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("HTML-Xmlns-Attributes").innerHTML = MiscellaneousAttributes().xmlns;
+    document.getElementById("HTML-Xmlns-Attributes").innerHTML = MiscellaneousAttributes().xmlns.htmlelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -836,11 +1098,74 @@ function LinkEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function LinkCrossoriginAttributes() {
+  let myVisibility = document.getElementById("Link-Crossorigin-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Crossorigin-Attributes").innerHTML = MiscellaneousAttributes().crossorigin.linkelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 function LinkHrefAttributes() {
   let myVisibility = document.getElementById("Link-Href-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
     document.getElementById("Link-Href-Attributes").innerHTML = HyperlinkAttributes().href.linkelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkHreflangAttributes() {
+  let myVisibility = document.getElementById("Link-Hreflang-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Hreflang-Attributes").innerHTML = MiscellaneousAttributes().hreflang.linkelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkMediaAttributes() {
+  let myVisibility = document.getElementById("Link-Media-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Media-Attributes").innerHTML = MiscellaneousAttributes().media.linkelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkReferrerpolicyAttributes() {
+  let myVisibility = document.getElementById("Link-Referrerpolicy-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Referrerpolicy-Attributes").innerHTML = MiscellaneousAttributes().referrerpolicy.linkelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkRelAttributes() {
+  let myVisibility = document.getElementById("Link-Rel-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Rel-Attributes").innerHTML = MiscellaneousAttributes().rel.linkelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkSizesAttributes() {
+  let myVisibility = document.getElementById("Link-Sizes-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Sizes-Attributes").innerHTML = MiscellaneousAttributes().sizes.linkelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LinkTypeAttributes() {
+  let myVisibility = document.getElementById("Link-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Link-Type-Attributes").innerHTML = MiscellaneousAttributes().type.linkelement;
   }
   else { myVisibility.style.display = "none"; }
 }
