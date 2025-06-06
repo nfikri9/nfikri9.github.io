@@ -462,9 +462,13 @@ function HyperlinkAttributes() {
 ///////////////////////////////////
 function MiscellaneousAttributes() {
   const myRelatedElements = {
+    charset       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+    content       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
     hreflang      : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    http_equiv    : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     media         : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
+    name          : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     referrerpolicy: "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
     rel           : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
     sizes         : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
@@ -473,9 +477,9 @@ function MiscellaneousAttributes() {
   };
 
   const Operator = {
-    And  : "<b><code>and</code></b><br>Specifies an AND operator",
-    Not  : "<b><code>not</code></b><br>Specifies a NOT operator",
-    Or   : "<b><code>,</code></b><br>Specifies an OR operator"
+    And: "<b><code>and</code></b><br>Specifies an AND operator",
+    Not: "<b><code>not</code></b><br>Specifies a NOT operator",
+    Or : "<b><code>,</code></b><br>Specifies an OR operator"
   };
 
   const Device = {
@@ -489,6 +493,47 @@ function MiscellaneousAttributes() {
     Speech    : "<b><code>speech</code></b><br>Used for screenreaders that \"reads\" the page out loud",
     Teletype  : "<b><code>tty</code></b><br>Used for teletypes and similar media using a fixed-pitch character grid",
     Television: "<b><code>tv</code></b><br>Used for television type devices (low resolution, limited scroll ability)",
+  };
+
+  const HTTP_Equiv = {
+    Content_Security_Policy:
+      "Specifies a content policy for the document<br>" +
+      "<code>&lt;meta <b>http-equiv</b>=\"content-security-policy\" content=\"default-src- 'self'\"&gt;</code>",
+    Content_Type:
+      "Specifies the character encoding for the document<br>" +
+      "<code>&lt;meta <b>http-equiv</b>=\"content-type\" content=\"text/html; charset=UTF-8\"&gt;</code>",
+    Default_Style:
+      "Specified the preferred style sheet to use<br>" +
+      "<code>&lt;meta <b>http-equiv</b>=\"default-style\" content=\"<em>Any document's preferred stylesheet</em>\"&gt;</code><br>" +
+      "The value of the <code>content</code> attribute above must match the value of the <code>title</code> attribute on a <code>&lt;link&gt;</code> element in the same document<br>" +
+      "Alternatively, it must match the value of the <code>title</code> attribute on a <code>&lt;style&gt;</code> element in the same document",
+    Refresh:
+      "Defines a time interval for the document to refresh itself<br>" +
+      "<code>&lt;meta <b>http-equiv</b>=\"refresh\" content=\"300\"&gt;</code><br>" +
+      "The value \"refresh\" should be used carefully, as it takes the control of a page away from the user<br>" +
+      "Using \"refresh\" will cause a failure in <a href=\"https://www.w3.org/WAI/standards-guidelines/wcag/\" target=\"_blank\">W3C's Web Content Accessibility Guidelines</a>",
+  };
+
+  const Name = {
+    Application_Name:
+      "Specifies the name of the Web application that the page represents",
+    Author:
+      "Specifies the name of the author of the document<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"author\" content=\"<em>Author's Name</em>\"&gt;</code>",
+    Description:
+      "Specifies a description of the page<br>" +
+      "Search engines can pick up this description to show with the results of searches<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"description\" content=\"<em>The Description</em>\"&gt;</code>",
+    Generator:
+      "Specifies one of the software packages used to generate the document (not used on hand-authored pages)<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"generator\" content=\"FrontPage 4.0\"&gt;</code>",
+    Keywords:
+      "Specifies a comma-separated list of keywords - relevant to the page<br>" +
+      "Informs search engines what the page is about<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"keywords\" content=\"HTML, CSS, JavaScript\"&gt;</code>",
+    Viewport:
+      "Controls the viewport (the user's visible area of a web page)<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;</code>"
   };
 
   const Referrerpolicy = {
@@ -633,6 +678,39 @@ function MiscellaneousAttributes() {
   };
 
   const myMiscellaneous = {
+    charset: {
+      metaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>charset</code> attribute of the <code>&lt;meta&gt;</code> tag specifies the character encoding for the HTML document</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Character Set</em></code></td>" +
+        "        <td>Specifies the character encoding for the HTML document<br>" +
+        "            The HTML5 specification encourages web developers to use the UTF-8 character set<br>" +
+        "            (covers almost all of the characters and symbols in the world)<br>" +
+        "            Example; <code>UTF-8, utf-8</code>" +
+        "    </td></tr>" +
+        "  </table>" +
+           myRelatedElements.charset +
+        "</div>"
+    },
+
+    content: {
+      metaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>content</code> attribute of the <code>&lt;meta&gt;</code> tag specifies the value associated with the <code>http-equiv</code> or <code>name</code> attribute</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Text</em></code></td>" +
+        "        <td>The content of the meta information<br>" +
+        "            Example; <code>&lt;meta name=\"description\" <b>content</b>=\"Front End Development\"&gt;</code><br>" +
+        "            Example; <code>&lt;meta http-equiv=\"refresh\" <b>content</b>=\"300\"&gt;</code>" +
+        "    </td></tr>" +
+        "  </table>" +
+           myRelatedElements.content +
+        "</div>"
+    },
+
     crossorigin: {
       linkelement:
         "<div class=\"Box-Attributes\">" +
@@ -658,6 +736,23 @@ function MiscellaneousAttributes() {
         "    </tr>" +
         "  </table>" +
            myRelatedElements.hreflang +
+        "</div>"
+    },
+
+    http_equiv: {
+      metaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>http-equiv</code> attribute of the <code>&lt;meta&gt;</code> tag provides an HTTP header for the information/value of the <code>content</code> attribute</div>" +
+        "  <div>The <code>http-equiv</code> attribute can be used to simulate an HTTP response header</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>content-security-policy</code></td><td>" + HTTP_Equiv.Content_Security_Policy + "</td>" +
+        "    <tr><td><code>content-type</code></td><td>" + HTTP_Equiv.Content_Type + "</td>" +
+        "    <tr><td><code>default-style</code></td><td>" + HTTP_Equiv.Default_Style + "</td>" +
+        "    <tr><td><code>refresh</code></td><td>" + HTTP_Equiv.Refresh + "</td>" +
+        "    </tr>" +
+        "  </table>" +
+           myRelatedElements.http_equiv +
         "</div>"
     },
 
@@ -738,6 +833,25 @@ function MiscellaneousAttributes() {
         "    <tr><td>" + Value.Width + "</td></tr>" +
         "  </table>" +
            myRelatedElements.media +
+        "</div>"
+    },
+
+    name: {
+      metaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;meta&gt;</code> tag specifies the name for the metadata</div>" +
+        "  <div>The <code>name</code> attribute specifies a name for the information/value of the <code>content</code> attribute</div>" +
+        "  <div>If the <code>http-equiv</code> attribute is set, the <code>name</code> attribute should not be set</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>application-name</code></td><td>" + Name.Application_Name + "</td></tr>" +
+        "    <tr><td><code>author</code></td><td>" + Name.Author + "</td></tr>" +
+        "    <tr><td><code>description</code></td><td>" + Name.Description + "</td></tr>" +
+        "    <tr><td><code>generator</code></td><td>" + Name.Generator + "</td></tr>" +
+        "    <tr><td><code>keywords</code></td><td>" + Name.Keywords + "</td></tr>" +
+        "    <tr><td><code>viewport</code></td><td>" + Name.Viewport + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
         "</div>"
     },
 
@@ -1188,6 +1302,42 @@ function MetaGlobalAttributes() {
       GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
       GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
       GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MetaCharsetAttributes() {
+  let myVisibility = document.getElementById("Meta-Charset-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meta-Charset-Attributes").innerHTML = MiscellaneousAttributes().charset.metaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MetaContentAttributes() {
+  let myVisibility = document.getElementById("Meta-Content-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meta-Content-Attributes").innerHTML = MiscellaneousAttributes().content.metaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MetaHttpequivAttributes() {
+  let myVisibility = document.getElementById("Meta-Httpequiv-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meta-Httpequiv-Attributes").innerHTML = MiscellaneousAttributes().http_equiv.metaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MetaNameAttributes() {
+  let myVisibility = document.getElementById("Meta-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meta-Name-Attributes").innerHTML = MiscellaneousAttributes().name.metaelement;
   }
   else { myVisibility.style.display = "none"; }
 }
