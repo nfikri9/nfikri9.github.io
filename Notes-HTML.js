@@ -393,29 +393,143 @@ function EventAttributes() {
   return myEventAttributes;
 }
 
+/////////////////////////////
+// HTML BOOLEAN ATTRIBUTES //
+/////////////////////////////
+function BooleanAttributes() {
+  /* LIST OF RELATED ELEMENTS */
+  const myRelatedElements = {
+    async: "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    defer: "<div>Applied tag(s): <code>&lt;script&gt;</code></div>"
+  };
+
+  /* NOTES OF BOOLEAN ATTRIBUTES */
+  const Parse = {
+    Insight1:
+      "<b>Required to include <code>src</code> attribute</b><br>" +
+      "These <code>async</code> and <code>defer</code> attributes are only for external scripts and should only be used if the <code>src</code> attribute is present",
+    Insight2:
+      "<b>Several ways an external script can be executed</b><br>" +
+      "If <code>async</code> is present: The script is downloaded in parallel to parsing the page, and executed as soon as it is available (before parsing completes)<br>" +
+      "If <code>defer</code> is present (without <code>async</code>): The script is downloaded in parallel to parsing the page, and executed after the page has finished parsing<br>" +
+      "If neither <code>async</code> or <code>defer</code> is present: The script is downloaded and executed immediately, blocking parsing until the script is completed"
+  };
+
+  /* LIST OF BOOLEAN ATTRIBUTES */
+  const myBoolean = {
+    async: {
+      scriptelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>async</code> attribute of the <code>&lt;script&gt;</code> tag specifies the script will be downloaded in parallel to parsing the page, and executed as soon as it is available</div>" +
+        "  <div>The parsing of the page is interrupted once the script is downloaded completely, and then the script is executed, before the parsing of the rest of the page continues</div>" +
+        "  <div>" + Parse.Insight1 + "</div>" +
+        "  <div>" + Parse.Insight2 + "</div>" +
+           myRelatedElements.async +
+        "</div>"
+    },
+
+    defer: {
+      scriptelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>defer</code> attribute of the <code>&lt;script&gt;</code> tag specifies the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing</div>" +
+        "  <div>" + Parse.Insight1 + "</div>" +
+        "  <div>" + Parse.Insight2 + "</div>" +
+           myRelatedElements.defer +
+        "</div>"
+    }
+  };
+  return myBoolean;
+}
+
 ///////////////////////////////
 // HTML HYPERLINK ATTRIBUTES //
 ///////////////////////////////
 function HyperlinkAttributes() {
+  /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    href  : "<div>Applied tag(s): <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code></div>",
-    target: "<div>Applied tag(s): <code>&lt;base&gt;</code></div>"
+    cite  : "<div>Applied tag(s): <code>&lt;blockquote&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;q&gt;</code></div>",
+    href  : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code></div>",
+    target: "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code></div>",
+    src   : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>"
   };
 
+  /* NOTES OF HYPERLINK ATTRIBUTES */
   const Target = {
-    Blank : "Opens the link in a new window or tab",
-    Parent: "Opens the link in the parent frame",
-    Self  : "<b>[Default]</b> Opens the link in the same frame as it was clicked",
-    Top   : "Opens the link in the full body of the window"
+    Blank     : "Opens the link in a new window or tab",
+    Frame_Name: "Opens the linked document in the named iframe",
+    Parent    : "Opens the link in the parent frame",
+    Self      : "<b>[Default]</b> Opens the link in the same frame as it was clicked",
+    Top       : "Opens the link in the full body of the window"
   };
 
   const URL = {
     Absolute: "Points/Refers to another website<br>Example; <code>http://www.example.com</code>",
+    Id      : "Link to an element with a specified id within the page<br>Example; <code>#myId</code>",
     Relative: "Points/Refers to a page within a website<br>Example; <code>example.html</code>"
   };
 
+  /* LIST OF HYPERLINK ATTRIBUTES */
   const myHyperlink = {
+    cite: {
+      blockquoteelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>cite</code> attribute of the <code>&lt;blockquote&gt;</code> tag specifies the source of a quotation</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.cite +
+        "</div>",
+
+      deleteelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>cite</code> attribute of the <code>&lt;del&gt;</code> tag specifies a URL to a document that explains the reason why the text was deleted/changed</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.cite +
+        "</div>",
+
+      insertelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>cite</code> attribute of the <code>&lt;ins&gt;</code> tag specifies a URL to a document that explains the reason why the text was inserted/changed</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.cite +
+        "</div>",
+
+      quoteelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>cite</code> attribute of the <code>&lt;q&gt;</code> tag specifies the source URL of a quote</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.cite +
+        "</div>"
+    },
+
     href: {
+      anchorelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>href</code> attribute of the <code>&lt;a&gt;</code> tag specifies the URL of the page the link goes to</div>" +
+        "  <div>If the <code>href</code> attribute is not present, the <code>&lt;a&gt;</code> tag will not be a hyperlink</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Relative URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "    <tr><td><code><em>Specified ID</em></code></td><td>" + URL.Id + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.href +
+        "</div>",
+
       baseelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>href</code> attribute of the <code>&lt;base&gt;</code> tag specifies the base URL for all relative URLs on a page</div>" +
@@ -438,7 +552,34 @@ function HyperlinkAttributes() {
         "</div>"
     },
 
+    src: {
+      scriptelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>src</code> attribute of the <code>&lt;script&gt;</code> tag specifies the URL of an external script file</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.src +
+        "</div>"
+    },
+
     target: {
+      anchorelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>target</code> attribute of the <code>&lt;a&gt;</code> tag specifies where to open the linked document</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>_blank</code></td><td>" + Target.Blank + "</td></tr>" +
+        "    <tr><td><code>_parent</code></td><td>" + Target.Parent + "</td></tr>" +
+        "    <tr><td><code>_self</code></td><td>" + Target.Self + "</td></tr>" +
+        "    <tr><td><code>_top</code></td><td>" + Target.Top + "</td></tr>" +
+        "    <tr><td><code><em>Frame Name</em></code></td><td>" + Target.Frame_Name + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.target +
+        "</div>",
+
       baseelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>target</code> attribute of the <code>&lt;base&gt;</code> tag specifies the default target for all hyperlinks and forms in the page</div>" +
@@ -457,43 +598,40 @@ function HyperlinkAttributes() {
   return myHyperlink;
 }
 
-///////////////////////////////////
-// HTML MISCELLANEOUS ATTRIBUTES //
-///////////////////////////////////
-function MiscellaneousAttributes() {
+/////////////////////////////
+// HTML NETWORK ATTRIBUTES //
+/////////////////////////////
+function NetworkAttributes() {
+  /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    charset       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
-    content       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
-    crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
-    hreflang      : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code></div>",
     http_equiv    : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
-    media         : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
-    name          : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
-    referrerpolicy: "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
-    rel           : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
-    sizes         : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
-    type          : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
-    xlmns         : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
+    integrity     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    ping          : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
+    referrerpolicy: "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code></div>"
   };
 
-  const Operator = {
-    And: "<b><code>and</code></b><br>Specifies an AND operator",
-    Not: "<b><code>not</code></b><br>Specifies a NOT operator",
-    Or : "<b><code>,</code></b><br>Specifies an OR operator"
+  /* NOTES OF NETWORK ATTRIBUTES */
+  const Crossorigin = {
+    Anonymous:
+      "Specifies the mode of the CORS request<br>" +
+      "A cross-origin request is performed where no credentials are sent",
+    CORS:
+      "<abbr title=\"Cross-Origin Resource Sharing\">CORS</abbr> is a mechanism that allows resources on a webpage to be requested from another domain outside their own domain<br>" +
+      "Resources could be anything like style sheets, iframes, images, fonts, or scripts<br>" +
+      "CORS defines a way of how a browser and server can interact to determine whether it is safe to allow the cross-origin request<br>" +
+      "CORS allows servers to specify who can access the assets on the server, among many other things<br>" +
+      "The opposite of cross-origin requests is same-origin requests<br>" +
+      "This means that a webpage can only interact with other documents that are also on the same server<br>" +
+      "This policy enforces that documents that interact with each other must have the same origin (domain)",
+    Use_Credentials:
+      "Specifies the mode of the CORS request<br>" +
+      "A cross-origin request is performed where credentials are sent (Eg; a cookie, a certificate, a HTTP Basic authentication)"
   };
 
-  const Device = {
-    All       : "<b><code>all</code></b><br>Used for all media type devices",
-    Aural     : "<b><code>aural</code></b><br>Used for speech synthesizers",
-    Braille   : "<b><code>braille</code></b><br>Used for braille feedback devices",
-    Handheld  : "<b><code>handheld</code></b><br>Used for handheld devices (small screen, limited bandwidth)",
-    Print     : "<b><code>print</code></b><br>Used for print preview mode/printed pages",
-    Projection: "<b><code>projection</code></b><br>Used for projectors",
-    Screen    : "<b><code>screen</code></b><br>Used for computer screens, tablets, smart-phones, etc.",
-    Speech    : "<b><code>speech</code></b><br>Used for screenreaders that \"reads\" the page out loud",
-    Teletype  : "<b><code>tty</code></b><br>Used for teletypes and similar media using a fixed-pitch character grid",
-    Television: "<b><code>tv</code></b><br>Used for television type devices (low resolution, limited scroll ability)",
-  };
+  const Custom_URL =
+    "Specifies the URL to be notified if the user follows the hyperlink<br>" +
+    " Must be a space separated list of one or more valid URLs";
 
   const HTTP_Equiv = {
     Content_Security_Policy:
@@ -514,26 +652,16 @@ function MiscellaneousAttributes() {
       "Using \"refresh\" will cause a failure in <a href=\"https://www.w3.org/WAI/standards-guidelines/wcag/\" target=\"_blank\">W3C's Web Content Accessibility Guidelines</a>",
   };
 
-  const Name = {
-    Application_Name:
-      "Specifies the name of the Web application that the page represents",
-    Author:
-      "Specifies the name of the author of the document<br>" +
-      "Example; <code>&lt;meta <b>name</b>=\"author\" content=\"<em>Author's Name</em>\"&gt;</code>",
-    Description:
-      "Specifies a description of the page<br>" +
-      "Search engines can pick up this description to show with the results of searches<br>" +
-      "Example; <code>&lt;meta <b>name</b>=\"description\" content=\"<em>The Description</em>\"&gt;</code>",
-    Generator:
-      "Specifies one of the software packages used to generate the document (not used on hand-authored pages)<br>" +
-      "Example; <code>&lt;meta <b>name</b>=\"generator\" content=\"FrontPage 4.0\"&gt;</code>",
-    Keywords:
-      "Specifies a comma-separated list of keywords - relevant to the page<br>" +
-      "Informs search engines what the page is about<br>" +
-      "Example; <code>&lt;meta <b>name</b>=\"keywords\" content=\"HTML, CSS, JavaScript\"&gt;</code>",
-    Viewport:
-      "Controls the viewport (the user's visible area of a web page)<br>" +
-      "Example; <code>&lt;meta <b>name</b>=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;</code>"
+  const Integrity = {
+    File_Hashing:
+      "The file hashing value of the external script file<br>" +
+      "User can use an online <a href=\"https://www.srihash.org/\" target=\"_blank\">SRI Hash Generator</a> to generate integrity hashes",
+    SRI:
+      "<abbr title=\"Subresource Integrity\">SRI</abbr> is a W3C specification that allows web developers to ensure that resources hosted on third-party servers have not been altered<br>" +
+      "Use of SRI is recommended<br>" +
+      "When using SRI, the webpage holds the hash and the server holds the file<br>" +
+      "The browser downloads the file, then checks it, to make sure that it is a match with the hash in the <code>integrity</code> attribute<br>" +
+      "If it matches, the file is used, and if not, the file is blocked"
   };
 
   const Referrerpolicy = {
@@ -558,7 +686,362 @@ function MiscellaneousAttributes() {
       "Send no header to a less secure destination (HTTPS to HTTP)",
     Unsafe_URL:
       "Send origin, path and query string (but not fragment, password, or username)<br>" +
-      "This value is considered unsafe",
+      "This value is considered unsafe"
+  };
+
+  /* LIST OF NETWORK ATTRIBUTES */
+  const myNetwork = {
+    crossorigin: {
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>crossorigin</code> attribute of the <code>&lt;link&gt;</code> tag specifies the mode of the request to an HTTP CORS Request</div>" +
+        "  <div>" + Crossorigin.CORS + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>anonymous</code></td><td>" + Crossorigin.Anonymous + "</td></tr>" +
+        "    <tr><td><code>use-credentials</code></td><td>" + Crossorigin.Use_Credentials + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.crossorigin +
+        "</div>",
+
+      scriptelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>crossorigin</code> attribute of the <code>&lt;script&gt;</code> tag specifies the mode of the request to an HTTP CORS Request</div>" +
+        "  <div>" + Crossorigin.CORS + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>anonymous</code></td><td>" + Crossorigin.Anonymous + "</td></tr>" +
+        "    <tr><td><code>use-credentials</code></td><td>" + Crossorigin.Use_Credentials + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.crossorigin +
+        "</div>"
+    },
+
+    http_equiv: {
+      metaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>http-equiv</code> attribute of the <code>&lt;meta&gt;</code> tag provides an HTTP header for the information/value of the <code>content</code> attribute</div>" +
+        "  <div>The <code>http-equiv</code> attribute can be used to simulate an HTTP response header</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>content-security-policy</code></td><td>" + HTTP_Equiv.Content_Security_Policy + "</td></tr>" +
+        "    <tr><td><code>content-type</code></td><td>" + HTTP_Equiv.Content_Type + "</td></tr>" +
+        "    <tr><td><code>default-style</code></td><td>" + HTTP_Equiv.Default_Style + "</td></tr>" +
+        "    <tr><td><code>refresh</code></td><td>" + HTTP_Equiv.Refresh + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.http_equiv +
+        "</div>"
+    },
+
+    integrity: {
+      scriptelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>integrity</code> attribute of the <code>&lt;script&gt;</code> tag allows a browser to check the fetched script to ensure that the code is never loaded if the source has been manipulated</div>" +
+        "  <div>" + Integrity.SRI + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>File Hash</em></code></td><td>" + Integrity.File_Hashing + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.integrity +
+        "</div>"
+    },
+
+    http_equiv: {
+      metaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>http-equiv</code> attribute of the <code>&lt;meta&gt;</code> tag provides an HTTP header for the information/value of the <code>content</code> attribute</div>" +
+        "  <div>The <code>http-equiv</code> attribute can be used to simulate an HTTP response header</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>content-security-policy</code></td><td>" + HTTP_Equiv.Content_Security_Policy + "</td></tr>" +
+        "    <tr><td><code>content-type</code></td><td>" + HTTP_Equiv.Content_Type + "</td></tr>" +
+        "    <tr><td><code>default-style</code></td><td>" + HTTP_Equiv.Default_Style + "</td></tr>" +
+        "    <tr><td><code>refresh</code></td><td>" + HTTP_Equiv.Refresh + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.http_equiv +
+        "</div>"
+    },
+
+    ping: {
+      anchorelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>ping</code> attribute of the <code>&lt;a&gt;</code> tag specifies a list of URLs to be notified if the user follows the hyperlink</div>" +
+        "  <div>When the user clicks on the hyperlink, the <code>ping</code> attribute will send a short HTTP POST request to the specified URL</div>" +
+        "  <div>This attribute is useful for monitoring/tracking</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>URL</em></code></td><td>" + Custom_URL + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.ping +
+        "</div>"
+    },
+
+    referrerpolicy: {
+      anchorelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>referrerpolicy</code> attribute of the <code>&lt;a&gt;</code> tag specifies which referrer information to send when user clicks on the hyperlink</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>no-referrer</code></td><td>" + Referrerpolicy.No_Referrer + "</td></tr>" +
+        "    <tr><td><code>no-referrer-when-downgrade</code></td><td>" + Referrerpolicy.No_Referrer_When_Downgrade + "</td></tr>" +
+        "    <tr><td><code>origin</code></td><td>" + Referrerpolicy.Origin + "</td></tr>" +
+        "    <tr><td><code>origin-when-cross-origin</code></td><td>" + Referrerpolicy.Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>same-origin</code></td><td>" + Referrerpolicy.Same_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin</code></td><td>" + Referrerpolicy.Strict_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin-when-cross-origin</code></td><td>" + Referrerpolicy.Strict_Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.referrerpolicy +
+        "</div>",
+
+      linkelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>referrerpolicy</code> attribute of the <code>&lt;link&gt;</code> tag specifies which referrer information to send when fetching an iframe</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>no-referrer</code></td><td>" + Referrerpolicy.No_Referrer + "</td></tr>" +
+        "    <tr><td><code>no-referrer-when-downgrade</code></td><td>" + Referrerpolicy.No_Referrer_When_Downgrade + "</td></tr>" +
+        "    <tr><td><code>origin</code></td><td>" + Referrerpolicy.Origin + "</td></tr>" +
+        "    <tr><td><code>origin-when-cross-origin</code></td><td>" + Referrerpolicy.Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>same-origin</code></td><td>" + Referrerpolicy.Same_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin</code></td><td>" + Referrerpolicy.Strict_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin-when-cross-origin</code></td><td>" + Referrerpolicy.Strict_Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.referrerpolicy +
+        "</div>",
+
+      scriptelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>referrerpolicy</code> attribute of the <code>&lt;script&gt;</code> tag specifies which referrer information to send when fetching a script</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>no-referrer</code></td><td>" + Referrerpolicy.No_Referrer + "</td></tr>" +
+        "    <tr><td><code>no-referrer-when-downgrade</code></td><td>" + Referrerpolicy.No_Referrer_When_Downgrade + "</td></tr>" +
+        "    <tr><td><code>origin</code></td><td>" + Referrerpolicy.Origin + "</td></tr>" +
+        "    <tr><td><code>origin-when-cross-origin</code></td><td>" + Referrerpolicy.Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>same-origin</code></td><td>" + Referrerpolicy.Same_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin</code></td><td>" + Referrerpolicy.Strict_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin-when-cross-origin</code></td><td>" + Referrerpolicy.Strict_Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.referrerpolicy +
+        "</div>"
+    }
+  };
+  return myNetwork;
+}
+
+//////////////////////////
+// HTML TIME ATTRIBUTES //
+//////////////////////////
+function TimeAttributes() {
+  /* LIST OF RELATED ELEMENTS */
+  const myRelatedElements = {
+    datetime: "<div>Applied tag(s): <code>&lt;del&gt;</code>, <code>&lt;ins&gt;, <code>&lt;time&gt;</code></div>"
+  };
+
+  /* NOTES OF TIME ATTRIBUTES */
+  const Datetime = {
+    Description1:
+      "<code><em>YYYY</em></code> = Represents year (Example; <code>2009</code>)<br>" +
+      "<code><em>MM</em></code> = Represents month (Example; <code>01</code> for January)<br>" +
+      "<code><em>DD</em></code> = Represents day of the month (Example; <code>08</code>)<br>" +
+      "<code><em>T</em></code> = Represents a separator (<b>Required</b> if time also specified)<br>" +
+      "<code><em>hh</em></code> = Represents hour (Example; <code>22</code> for 10PM)<br>" +
+      "<code><em>mm</em></code> = Represents minute (Example; <code>35</code>)<br>" +
+      "<code><em>ss</em></code> = Represents second (Example; <code>41</code>)<br>" +
+      "<code><em>TZD</em></code> = Time Zone Designator (Z denotes Zulu, also known as Greenwich Meridian Time, GMT)",
+    Description2:
+      "<code><em>P</em></code> = Represents a prefix for \"period\"<br>" +
+      "<code><em>T</em></code> = Represents a separator (<b>Required</b> if time also specified)<br>" +
+      "<code><em>D</em></code> = Represents a prefix for \"days\"<br>" +
+      "<code><em>H</em></code> = Represents a prefix for \"hours\"<br>" +
+      "<code><em>M</em></code> = Represents a prefix for \"minutes\"<br>" +
+      "<code><em>S</em></code> = Represents a prefix for \"seconds\"<br>"
+  };
+
+  /* LIST OF BOOLEAN ATTRIBUTES */
+  const myTime = {
+    datetime: {
+      deleteelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>datetime</code> attribute of the <code>&lt;del&gt;</code> tag specifies the date and time of when the text was deleted/changed</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>YYYY-MM-DDThh:mm:ssTZD</code></td><td>" + Datetime.Description1  + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.datetime +
+        "</div>",
+
+      insertelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>datetime</code> attribute of the <code>&lt;ins&gt;</code> tag specifies the date and time of when the text was inserted/changed</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>YYYY-MM-DDThh:mm:ssTZD</code></td><td>" + Datetime.Description1  + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.datetime +
+        "</div>",
+
+      timeelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>datetime</code> attribute of the <code>&lt;time&gt;</code> tag specifies a machine-readable format of a time element</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>YYYY-MM-DDThh:mm:ssTZD</code></td><td>" + Datetime.Description1  + "</td></tr>" +
+        "    <tr><td><code>PTDHMS</code></td><td>" + Datetime.Description2  + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.datetime +
+        "</div>"
+    }
+  };
+  return myTime;
+}
+
+///////////////////////////////////
+// HTML MISCELLANEOUS ATTRIBUTES //
+///////////////////////////////////
+function MiscellaneousAttributes() {
+  /* LIST OF RELATED ELEMENTS */
+  const myRelatedElements = {
+    charset       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+    content       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+    download      : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
+    hreflang      : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></div>",
+    media         : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
+    name          : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+    nomodule      : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    rel           : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></div>",
+    sizes         : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    type          : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code></div>",
+    xlmns         : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
+  };
+
+  /* NOTES OF MISCELLANEOUS ATTRIBUTES */
+  const Download = {
+    Description:
+      "<b>[Optional]</b> Specifies the new filename for the downloaded file<br>" +
+      "There are no restrictions on allowed values, and the browser will automatically detect the correct file extension and add it to the file (.img, .pdf, .txt, .html, etc.)<br>" +
+      "If the value is omitted, the original filename is used<br>" +
+      "Downloaded file will use custom name: <code>&lt;a href=\"<em>OriginalFile</em>.jpg\" download=\"<em>CustomFile</em>\"&gt; &lt;img src=\"<em>OriginalFile</em>.jpg\"&gt; &lt;/a&gt;</code><br>" +
+      "Downloaded file will use original name: <code>&lt;a href=\"<em>OriginalFile</em>.jpg\" download&gt; &lt;img src=\"<em>OriginalFile</em>.jpg\"&gt; &lt;/a&gt;</code>",
+  };
+
+  const Media = {
+    Device_All:
+      "<b><code>all</code></b><br>Used for all media type devices",
+    Device_Aural:
+      "<b><code>aural</code></b><br>Used for speech synthesizers",
+    Device_Braille:
+      "<b><code>braille</code></b><br>Used for braille feedback devices",
+    Device_Handheld:
+      "<b><code>handheld</code></b><br>Used for handheld devices (small screen, limited bandwidth)",
+    Device_Print:
+      "<b><code>print</code></b><br>Used for print preview mode/printed pages",
+    Device_Projection:
+      "<b><code>projection</code></b><br>Used for projectors",
+    Device_Screen:
+      "<b><code>screen</code></b><br>Used for computer screens, tablets, smart-phones, etc.",
+    Device_Speech:
+      "<b><code>speech</code></b><br>Used for screenreaders that \"reads\" the page out loud",
+    Device_Teletype:
+      "<b><code>tty</code></b><br>Used for teletypes and similar media using a fixed-pitch character grid",
+    Device_Television:
+      "<b><code>tv</code></b><br>Used for television type devices (low resolution, limited scroll ability)",
+    Operator_And:
+      "<b><code>and</code></b><br>Specifies an AND operator",
+    Operator_Not:
+      "<b><code>not</code></b><br>Specifies a NOT operator",
+    Operator_Or:
+      "<b><code>,</code></b><br>Specifies an OR operator",
+    Value_Aspect_Ratio:
+      "<b><code>aspect-ratio</code></b><br>" +
+      "Specifies the width/height ratio of the targeted display area<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>aspect-ratio</b>:16/9)\"&gt;</code>",
+    Value_Color:
+      "<b><code>color</code></b><br>" +
+      "Specifies the bits per color of target display<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>color</b>:3)\"&gt;</code>",
+    Value_Color_Index:
+      "<b><code>color-index</code></b><br>" +
+      "Specifies the number of colors the target display can handle<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>color-index</b>:255)\"&gt;</code>",
+    Value_Device_Aspect_Ratio:
+      "<b><code>device-aspect-ratio</code></b><br>" +
+      "Specifies the device-width/device-height ratio of the target display/paper<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-aspect-ratio</b>:16/9)\"&gt;</code>",
+    Value_Device_Height:
+      "<b><code>device-height</code></b><br>" +
+      "Specifies the height of the target display/paper<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-height</b>:500px)\"&gt;</code>",
+    Value_Device_Width:
+      "<b><code>device-width</code></b><br>" +
+      "Specifies the width of the target display/paper<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-width</b>:500px)\"&gt;</code>",
+    Value_Grid:
+      "<b><code>grid</code></b><br>" +
+      "Specifies if the output device is grid or bitmap<br>" +
+      "<code>\"1\"</code> for grid and <code>\"0\"</code> for otherwise<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"handheld and (<b>grid</b>:1)\"&gt;</code>",
+    Value_Height:
+      "<b><code>height</code></b><br>" +
+      "Specifies the height of the  targeted display area<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (max-<b>height</b>:700px)\"&gt;</code>",
+    Value_Monochrome:
+      "<b><code>monochrome</code></b><br>" +
+      "Specifies the bits per pixel in a monochrome frame buffer<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>monochrome</b>:2)\"&gt;</code>",
+    Value_Orientation:
+      "<b><code>orientation</code></b><br>" +
+      "Specifies the orientation of the target display/paper<br>" +
+      "<code>\"portrait\"</code> and <code>\"landscape\"</code> are one of the related variations for orientation<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"all and (<b>orientation</b>:landscape)\"&gt;</code>",
+    Value_Resolution:
+      "<b><code>resolution</code></b><br>" +
+      "Specifies the pixel density (dpi or dpcm) of the target display/paper<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"print and (<b>resolution</b>:300dpi)\"&gt;</code>",
+    Value_Scan:
+      "<b><code>scan</code></b><br>" +
+      "Specifies scanning method of a tv display<br>" +
+      "<code>\"progressive\"</code> and <code>\"interlace\"</code> are one of the related variations for scan<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"tv and (<b>scan</b>:interlace)\"&gt;</code>",
+    Value_Width:
+      "<b><code>width</code></b><br>" +
+      "Specifies the width of the targeted display area<br>" +
+      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
+      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>width</b>:500px)\"&gt;</code>"
+  };
+
+  const Name = {
+    Application_Name:
+      "Specifies the name of the Web application that the page represents",
+    Author:
+      "Specifies the name of the author of the document<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"author\" content=\"<em>Author's Name</em>\"&gt;</code>",
+    Description:
+      "Specifies a description of the page<br>" +
+      "Search engines can pick up this description to show with the results of searches<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"description\" content=\"<em>The Description</em>\"&gt;</code>",
+    Generator:
+      "Specifies one of the software packages used to generate the document (not used on hand-authored pages)<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"generator\" content=\"FrontPage 4.0\"&gt;</code>",
+    Keywords:
+      "Specifies a comma-separated list of keywords - relevant to the page<br>" +
+      "Informs search engines what the page is about<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"keywords\" content=\"HTML, CSS, JavaScript\"&gt;</code>",
+    Viewport:
+      "Controls the viewport (the user's visible area of a web page)<br>" +
+      "Example; <code>&lt;meta <b>name</b>=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;</code>"
   };
 
   const Relation = {
@@ -566,8 +1049,12 @@ function MiscellaneousAttributes() {
       "Provides a link to an alternate version of the document (i.e. print page, translated or mirror)",
     Author:
       "Provides a link to the author of the document",
+    Bookmark:
+      "Provides permanent URL for bookmarking",
     DNS_Prefetch:
       "Specifies that the browser should preemptively perform DNS resolution for the target resource's origin",
+    External:
+      "Indicates that the referenced document is not part of the same site as the current document",
     Help:
       "Provides a link to a help document",
     Icon:
@@ -576,6 +1063,13 @@ function MiscellaneousAttributes() {
       "Provides a link to copyright information for the document",
     Next:
       "Provides a link to the next document in the series",
+    Nofollow:
+      "Links to an unendorsed document, like a paid link<br>" +
+      "(This is used by Google, to specify that the Google search spider should not follow that link)",
+    Noopener:
+      "Requires that any browsing context created by following the hyperlink must not have an opener browsing context",
+    Noreferrer:
+      "Makes the referrer unknown; no referer header will be included when the user clicks the hyperlink",
     Pingback:
       "Provides the address of the pingback server that handles pingbacks to the current document",
     Preconnect:
@@ -595,75 +1089,27 @@ function MiscellaneousAttributes() {
     Search:
       "Provides a link to a resource that can be used to search through the current document and its related pages",
     Stylesheet:
-      "Imports a style sheet"
+      "Imports a style sheet",
+    Tag:
+      "A tag (keyword) for the current document"
   };
 
-  const Value = {
-    Aspect_Ratio:
-      "<b><code>aspect-ratio</code></b><br>" +
-      "Specifies the width/height ratio of the targeted display area<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>aspect-ratio</b>:16/9)\"&gt;</code>",
-    Color:
-      "<b><code>color</code></b><br>" +
-      "Specifies the bits per color of target display<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>color</b>:3)\"&gt;</code>",
-    Color_Index:
-      "<b><code>color-index</code></b><br>" +
-      "Specifies the number of colors the target display can handle<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>color-index</b>:255)\"&gt;</code>",
-    Device_Aspect_Ratio:
-      "<b><code>device-aspect-ratio</code></b><br>" +
-      "Specifies the device-width/device-height ratio of the target display/paper<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-aspect-ratio</b>:16/9)\"&gt;</code>",
-    Device_Height:
-      "<b><code>device-height</code></b><br>" +
-      "Specifies the height of the target display/paper<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-height</b>:500px)\"&gt;</code>",
-    Device_Width:
-      "<b><code>device-width</code></b><br>" +
-      "Specifies the width of the target display/paper<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>device-width</b>:500px)\"&gt;</code>",
-    Grid:
-      "<b><code>grid</code></b><br>" +
-      "Specifies if the output device is grid or bitmap<br>" +
-      "<code>\"1\"</code> for grid and <code>\"0\"</code> for otherwise<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"handheld and (<b>grid</b>:1)\"&gt;</code>",
-    Height:
-      "<b><code>height</code></b><br>" +
-      "Specifies the height of the  targeted display area<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (max-<b>height</b>:700px)\"&gt;</code>",
-    Monochrome:
-      "<b><code>monochrome</code></b><br>" +
-      "Specifies the bits per pixel in a monochrome frame buffer<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (<b>monochrome</b>:2)\"&gt;</code>",
-    Orientation:
-      "<b><code>orientation</code></b><br>" +
-      "Specifies the orientation of the target display/paper<br>" +
-      "<code>\"portrait\"</code> and <code>\"landscape\"</code> are one of the related variations for orientation<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"all and (<b>orientation</b>:landscape)\"&gt;</code>",
-    Resolution:
-      "<b><code>resolution</code></b><br>" +
-      "Specifies the pixel density (dpi or dpcm) of the target display/paper<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"print and (<b>resolution</b>:300dpi)\"&gt;</code>",
-    Scan:
-      "<b><code>scan</code></b><br>" +
-      "Specifies scanning method of a tv display<br>" +
-      "<code>\"progressive\"</code> and <code>\"interlace\"</code> are one of the related variations for scan<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"tv and (<b>scan</b>:interlace)\"&gt;</code>",
-    Width:
-      "<b><code>width</code></b><br>" +
-      "Specifies the width of the targeted display area<br>" +
-      "<code>\"min-\"</code> and <code>\"max-\"</code> prefixes can be used<br>" +
-      "Example; <code>&lt;<em>MyElement</em> media=\"screen and (min-<b>width</b>:500px)\"&gt;</code>",
+  const Type = {
+    IANA_Media_Type:
+      "Refer \"<a href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\" target=\"_blank\"><code>IANA Media Type</code></a>\" " +
+      "for a complete list of standard media types",
+
+    Link:
+      "Specifies the media type of the linked document<br>" +
+      "The default link type is <code>text/css</code><br>",
+
+    Script:
+      "Specifies the type of the script<br>" +
+      "The default script type is <code>text/javascript</code><br>",
+
+    Style:
+      "Specifies the Internet media type of the style sheet<br>" +
+      "The default style type is <code>text/css</code>, which indicates that the content is CSS<br>"
   };
 
   const XMLNS = {
@@ -677,6 +1123,7 @@ function MiscellaneousAttributes() {
       "The namespace will be added to the <code>&lt;html&gt;</code> tag even if user do not include it anyway"
   };
 
+  /* LIST OF MISCELLANEOUS ATTRIBUTES */
   const myMiscellaneous = {
     charset: {
       metaelement:
@@ -711,20 +1158,34 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
-    crossorigin: {
-      linkelement:
+    download: {
+      anchorelement:
         "<div class=\"Box-Attributes\">" +
-        "  <div>The <code>crossorigin</code> attribute of the <code>&lt;link&gt;</code> tag specifies how the element handles cross-origin requests</div>" +
+        "  <div>The <code>download</code> attribute of the <code>&lt;a&gt;</code> tag specifies that the file will be downloaded when a user clicks on the hyperlink</div>" +
+        "  <div>The file specified must has <code>href</code> attribute for <code>download</code> attribute to be working</div>" +
+        "  <div></div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code>anonymous</code></td><td>The element handles cross-origin requests with <code>anonymous</code></td></tr>" +
-        "    <tr><td><code>use-credentials</code></td><td>The element handles cross-origin requests with <code>use-credentials</code></td></tr>" +
+        "    <tr><td><code><em>File Name</em></code></td><td>" + Download.Description + "</td></tr>" +
         "  </table>" +
-           myRelatedElements.crossorigin +
+           myRelatedElements.download +
         "</div>"
     },
 
     hreflang: {
+      anchorelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>hreflang</code> attribute of the <code>&lt;a&gt;</code> tag specifies the language of the linked document</div>" +
+        "  <div>It is <b>recommended</b> to be only used if the <code>href</code> attribute is set</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><a href=\"https://www.w3schools.com/tags/ref_language_codes.asp\" target=\"_blank\"><em>HTML Language Codes</em></a></code></td>" +
+        "        <td>Specifies the language code for the linked's document</td>" +
+        "    </tr>" +
+        "  </table>" +
+           myRelatedElements.hreflang +
+        "</div>",
+
       linkelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>hreflang</code> attribute of the <code>&lt;link&gt;</code> tag specifies the language of the text in the linked document</div>" +
@@ -739,24 +1200,46 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
-    http_equiv: {
-      metaelement:
+    media: {
+      anchorelement:
         "<div class=\"Box-Attributes\">" +
-        "  <div>The <code>http-equiv</code> attribute of the <code>&lt;meta&gt;</code> tag provides an HTTP header for the information/value of the <code>content</code> attribute</div>" +
-        "  <div>The <code>http-equiv</code> attribute can be used to simulate an HTTP response header</div>" +
+        "<div>The <code>media</code> attribute of the <code>&lt;a&gt;</code> tag specifies what media/device the linked document is optimized for</div>" +
+        "<div>This attribute is mostly used with CSS style sheets to specify different styles for different media types</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code>content-security-policy</code></td><td>" + HTTP_Equiv.Content_Security_Policy + "</td>" +
-        "    <tr><td><code>content-type</code></td><td>" + HTTP_Equiv.Content_Type + "</td>" +
-        "    <tr><td><code>default-style</code></td><td>" + HTTP_Equiv.Default_Style + "</td>" +
-        "    <tr><td><code>refresh</code></td><td>" + HTTP_Equiv.Refresh + "</td>" +
-        "    </tr>" +
+        "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
+        "    <tr><td>" + Media.Operator_And + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Not + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Or + "</td></tr>" +
+        "    <tr><td rowspan=\"11\"><code><em>Device</em></code></td></tr>" +
+        "    <tr><td>" + Media.Device_All + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Aural + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Braille + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Handheld + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Print + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Projection + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Screen + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Speech + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Teletype + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Television + "</td></tr>" +
+        "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
+        "    <tr><td>" + Media.Value_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color_Index + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Width + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Grid + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Monochrome + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Orientation + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Resolution + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Scan + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Width + "</td></tr>" +
         "  </table>" +
-           myRelatedElements.http_equiv +
-        "</div>"
-    },
+           myRelatedElements.media +
+        "</div>",
 
-    media: {
       linkelement:
         "<div class=\"Box-Attributes\">" +
         "<div>The <code>media</code> attribute of the <code>&lt;link&gt;</code> tag specifies what media/device the target resource is optimized for</div>" +
@@ -764,34 +1247,34 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
-        "    <tr><td>" + Operator.And + "</td></tr>" +
-        "    <tr><td>" + Operator.Not + "</td></tr>" +
-        "    <tr><td>" + Operator.Or + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_And + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Not + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Or + "</td></tr>" +
         "    <tr><td rowspan=\"11\"><code><em>Device</em></code></td></tr>" +
-        "    <tr><td>" + Device.All + "</td></tr>" +
-        "    <tr><td>" + Device.Aural + "</td></tr>" +
-        "    <tr><td>" + Device.Braille + "</td></tr>" +
-        "    <tr><td>" + Device.Handheld + "</td></tr>" +
-        "    <tr><td>" + Device.Print + "</td></tr>" +
-        "    <tr><td>" + Device.Projection + "</td></tr>" +
-        "    <tr><td>" + Device.Screen + "</td></tr>" +
-        "    <tr><td>" + Device.Speech + "</td></tr>" +
-        "    <tr><td>" + Device.Teletype + "</td></tr>" +
-        "    <tr><td>" + Device.Television + "</td></tr>" +
+        "    <tr><td>" + Media.Device_All + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Aural + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Braille + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Handheld + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Print + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Projection + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Screen + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Speech + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Teletype + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Television + "</td></tr>" +
         "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
-        "    <tr><td>" + Value.Aspect_Ratio + "</td></tr>" +
-        "    <tr><td>" + Value.Color + "</td></tr>" +
-        "    <tr><td>" + Value.Color_Index + "</td></tr>" +
-        "    <tr><td>" + Value.Device_Aspect_Ratio + "</td></tr>" +
-        "    <tr><td>" + Value.Device_Height + "</td></tr>" +
-        "    <tr><td>" + Value.Device_Width + "</td></tr>" +
-        "    <tr><td>" + Value.Grid + "</td></tr>" +
-        "    <tr><td>" + Value.Height + "</td></tr>" +
-        "    <tr><td>" + Value.Monochrome + "</td></tr>" +
-        "    <tr><td>" + Value.Orientation + "</td></tr>" +
-        "    <tr><td>" + Value.Resolution + "</td></tr>" +
-        "    <tr><td>" + Value.Scan + "</td></tr>" +
-        "    <tr><td>" + Value.Width + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color_Index + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Width + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Grid + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Monochrome + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Orientation + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Resolution + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Scan + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Width + "</td></tr>" +
         "  </table>" +
            myRelatedElements.media +
         "</div>",
@@ -803,34 +1286,34 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
-        "    <tr><td>" + Operator.And + "</td></tr>" +
-        "    <tr><td>" + Operator.Not + "</td></tr>" +
-        "    <tr><td>" + Operator.Or + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_And + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Not + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Or + "</td></tr>" +
         "    <tr><td rowspan=\"11\"><code><em>Device</em></code></td></tr>" +
-        "    <tr><td>" + Device.All + "</td></tr>" +
-        "    <tr><td>" + Device.Aural + "</td></tr>" +
-        "    <tr><td>" + Device.Braille + "</td></tr>" +
-        "    <tr><td>" + Device.Handheld + "</td></tr>" +
-        "    <tr><td>" + Device.Print + "</td></tr>" +
-        "    <tr><td>" + Device.Projection + "</td></tr>" +
-        "    <tr><td>" + Device.Screen + "</td></tr>" +
-        "    <tr><td>" + Device.Speech + "</td></tr>" +
-        "    <tr><td>" + Device.Teletype + "</td></tr>" +
-        "    <tr><td>" + Device.Television + "</td></tr>" +
+        "    <tr><td>" + Media.Device_All + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Aural + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Braille + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Handheld + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Print + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Projection + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Screen + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Speech + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Teletype + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Television + "</td></tr>" +
         "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
-        "    <tr><td>" + Value.Aspect_Ratio + "</td></tr>" +
-        "    <tr><td>" + Value.Color + "</td></tr>" +
-        "    <tr><td>" + Value.Color_Index + "</td></tr>" +
-        "    <tr><td>" + Value.Device_Aspect_Ratio + "</td></tr>" +
-        "    <tr><td>" + Value.Device_Height + "</td></tr>" +
-        "    <tr><td>" + Value.Device_Width + "</td></tr>" +
-        "    <tr><td>" + Value.Grid + "</td></tr>" +
-        "    <tr><td>" + Value.Height + "</td></tr>" +
-        "    <tr><td>" + Value.Monochrome + "</td></tr>" +
-        "    <tr><td>" + Value.Orientation + "</td></tr>" +
-        "    <tr><td>" + Value.Resolution + "</td></tr>" +
-        "    <tr><td>" + Value.Scan + "</td></tr>" +
-        "    <tr><td>" + Value.Width + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color_Index + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Width + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Grid + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Monochrome + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Orientation + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Resolution + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Scan + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Width + "</td></tr>" +
         "  </table>" +
            myRelatedElements.media +
         "</div>"
@@ -855,26 +1338,42 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
-    referrerpolicy: {
-      linkelement:
+    nomodule: {
+      scriptelement:
         "<div class=\"Box-Attributes\">" +
-        "  <div>The <code>referrerpolicy</code> attribute of the <code>&lt;link&gt;</code> tag specifies which referrer information to send when fetching an iframe</div>" +
+        "  <div>The <code>nomodule</code> attribute of the <code>&lt;script&gt;</code> tag specifies the script should not be executed in browsers supporting ES2015 modules</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code>no-referrer</code></td><td>" + Referrerpolicy.No_Referrer + "</td></tr>" +
-        "    <tr><td><code>no-referrer-when-downgrade</code></td><td>" + Referrerpolicy.No_Referrer_When_Downgrade + "</td></tr>" +
-        "    <tr><td><code>origin</code></td><td>" + Referrerpolicy.Origin + "</td></tr>" +
-        "    <tr><td><code>origin-when-cross-origin</code></td><td>" + Referrerpolicy.Origin_When_Cross_Origin + "</td></tr>" +
-        "    <tr><td><code>same-origin</code></td><td>" + Referrerpolicy.Same_Origin + "</td></tr>" +
-        "    <tr><td><code>strict-origin</code></td><td>" + Referrerpolicy.Strict_Origin + "</td></tr>" +
-        "    <tr><td><code>strict-origin-when-cross-origin</code></td><td>" + Referrerpolicy.Strict_Origin_When_Cross_Origin + "</td></tr>" +
-        "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
+        "    <tr><td><code>true</code></td><td>The script should be executed in browsers supporting ES2015 modules</td></tr>" +
+        "    <tr><td><code>false</code></td><td>The script should not be executed in browsers supporting ES2015 modules</td></tr>" +
         "  </table>" +
-           myRelatedElements.referrerpolicy +
+           myRelatedElements.nomodule +
         "</div>"
     },
 
     rel: {
+      anchorelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>rel</code> attribute of the <code>&lt;a&gt;</code> tag specifies the relationship between the current document and the linked document/resource</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>alternate</code></td><td>" + Relation.Alternate + "</td></tr>" +
+        "    <tr><td><code>author</code></td><td>" + Relation.Author + "</td></tr>" +
+        "    <tr><td><code>bookmark</code></td><td>" + Relation.Bookmark + "</td></tr>" +
+        "    <tr><td><code>external</code></td><td>" + Relation.External + "</td></tr>" +
+        "    <tr><td><code>help</code></td><td>" + Relation.Help + "</td></tr>" +
+        "    <tr><td><code>license</code></td><td>" + Relation.License + "</td></tr>" +
+        "    <tr><td><code>next</code></td><td>" + Relation.Next + "</td></tr>" +
+        "    <tr><td><code>nofollow</code></td><td>" + Relation.Nofollow + "</td></tr>" +
+        "    <tr><td><code>noopener</code></td><td>" + Relation.Noopener + "</td></tr>" +
+        "    <tr><td><code>noreferrer</code></td><td>" + Relation.Noreferrer + "</td></tr>" +
+        "    <tr><td><code>prev</code></td><td>" + Relation.Prev + "</td></tr>" +
+        "    <tr><td><code>search</code></td><td>" + Relation.Search + "</td></tr>" +
+        "    <tr><td><code>tag</code></td><td>" + Relation.Tag + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.rel +
+        "</div>",
+
       linkelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>rel</code> attribute of the <code>&lt;link&gt;</code> tag specifies the relationship between the current document and the linked document/resource</div>" +
@@ -923,18 +1422,35 @@ function MiscellaneousAttributes() {
     },
 
     type: {
+      anchorelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;a&gt;</code> tag specifies the media type of the linked document/resource</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Link Type</em></code></td>" + "<td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>",
+
       linkelement:
         "<div class=\"Box-Attributes\">" +
-        "  <div>The <code>type</code> attribute of the <code>&lt;link&gt;</code> tag specifies  the media type of the linked document/resource</div>" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;link&gt;</code> tag specifies the media type of the linked document/resource</div>" +
         "  <div>The most common value of type is <code>\"text/css\"</code></div>" +
         "  <div>If the <code>type</code> attribute is omitted, the browser will look at the <code>rel</code> attribute to guess the correct type</div>" +
         "  <div>So, if <code>rel=\"stylesheet\"</code>, the browser will assume the type is <code>\"text/css\"</code></div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code><em><a href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\" target=\"_blank\">IANA Media Type</a></em></code></td>" +
-        "        <td>Specifies the media type of the linked document<br>" +
-        "            Example: <code>&lt;style <b>type</b>=\"text/css\"&gt;</code>" +
-        "    </td></tr>" +
+        "    <tr><td><code><em>Script Type</em></code></td>" + "<td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>",
+
+      scriptelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;script&gt;</code> tag specifies the type of the script</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Script Type</em></code></td>" + "<td>" + Type.Script + Type.IANA_Media_Type + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>",
@@ -944,10 +1460,7 @@ function MiscellaneousAttributes() {
         "  <div>The <code>type</code> attribute of the <code>&lt;style&gt;</code> tag specifies the Internet media type (formerly known as MIME type)</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code><em><a href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\" target=\"_blank\">IANA Media Type</a></em></code></td>" +
-        "        <td>Specifies the Internet media type of the style sheet<br>" +
-        "            Example: <code>&lt;style <b>type</b>=\"text/css\"&gt;</code>" +
-        "    </td></tr>" +
+        "    <tr><td><code><em>Internet Media Type</em></code></td>" + "<td>" + Type.Style + Type.IANA_Media_Type + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>"
@@ -960,26 +1473,13 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td rowspan=\"2\"><code>http://www.w3.org/1999/xhtml</code></td><td>" + XMLNS.Description +"</td></tr>" +
-        "    <tr><td>" + XMLNS.Insight1 +"</td></tr>" +
+        "    <tr><td>" + XMLNS.Insight1 + "</td></tr>" +
         "  </table>" +
            myRelatedElements.xlmns +
         "</div>"
     }
   };
   return myMiscellaneous;
-}
-
-//////////////////////////
-// HTML TIME ATTRIBUTES //
-//////////////////////////
-function TimeAttributes() {
-  const myTime = {
-    datetime:
-      "<div class=\"Box-Attributes\"><code>datetime=\"<em><b>YYYY-MM-DDThh:mm:ssTZD</b></em>\"</code>" +
-      "<div>Applied Tag(s): <code>&lt;ins&gt;, &lt;del&gt;</code></div>" +
-      "</div>"
-  };
-  return myTime;
 }
 
 ///////////////////////
@@ -1216,7 +1716,7 @@ function LinkCrossoriginAttributes() {
   let myVisibility = document.getElementById("Link-Crossorigin-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Link-Crossorigin-Attributes").innerHTML = MiscellaneousAttributes().crossorigin.linkelement;
+    document.getElementById("Link-Crossorigin-Attributes").innerHTML = NetworkAttributes().crossorigin.linkelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -1252,7 +1752,7 @@ function LinkReferrerpolicyAttributes() {
   let myVisibility = document.getElementById("Link-Referrerpolicy-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Link-Referrerpolicy-Attributes").innerHTML = MiscellaneousAttributes().referrerpolicy.linkelement;
+    document.getElementById("Link-Referrerpolicy-Attributes").innerHTML = NetworkAttributes().referrerpolicy.linkelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -1328,7 +1828,7 @@ function MetaHttpequivAttributes() {
   let myVisibility = document.getElementById("Meta-Httpequiv-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Meta-Httpequiv-Attributes").innerHTML = MiscellaneousAttributes().http_equiv.metaelement;
+    document.getElementById("Meta-Httpequiv-Attributes").innerHTML = NetworkAttributes().http_equiv.metaelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -1360,6 +1860,78 @@ function ScriptGlobalAttributes() {
       GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
       GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
       GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptAsyncAttributes() {
+  let myVisibility = document.getElementById("Script-Async-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Async-Attributes").innerHTML = BooleanAttributes().async.scriptelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptCrossoriginAttributes() {
+  let myVisibility = document.getElementById("Script-Crossorigin-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Crossorigin-Attributes").innerHTML = NetworkAttributes().crossorigin.scriptelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptDeferAttributes() {
+  let myVisibility = document.getElementById("Script-Defer-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Defer-Attributes").innerHTML = BooleanAttributes().defer.scriptelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptIntegrityAttributes() {
+  let myVisibility = document.getElementById("Script-Integrity-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Integrity-Attributes").innerHTML = NetworkAttributes().integrity.scriptelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptNomoduleAttributes() {
+  let myVisibility = document.getElementById("Script-Nomodule-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Nomodule-Attributes").innerHTML = MiscellaneousAttributes().nomodule.scriptelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptReferrerpolicyAttributes() {
+  let myVisibility = document.getElementById("Script-Referrerpolicy-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Referrerpolicy-Attributes").innerHTML = NetworkAttributes().referrerpolicy.scriptelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptSrcAttributes() {
+  let myVisibility = document.getElementById("Script-Src-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Src-Attributes").innerHTML = HyperlinkAttributes().src.scriptelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ScriptTypeAttributes() {
+  let myVisibility = document.getElementById("Script-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Script-Type-Attributes").innerHTML = MiscellaneousAttributes().type.scriptelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -1976,6 +2548,87 @@ function AnchorEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function AnchorDownloadAttributes() {
+  let myVisibility = document.getElementById("Anchor-Download-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Download-Attributes").innerHTML = MiscellaneousAttributes().download.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AnchorHrefAttributes() {
+  let myVisibility = document.getElementById("Anchor-Href-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Href-Attributes").innerHTML = HyperlinkAttributes().href.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AnchorHreflangAttributes() {
+  let myVisibility = document.getElementById("Anchor-Hreflang-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Hreflang-Attributes").innerHTML = MiscellaneousAttributes().hreflang.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AnchorMediaAttributes() {
+  let myVisibility = document.getElementById("Anchor-Media-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Media-Attributes").innerHTML = MiscellaneousAttributes().media.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AnchorPingAttributes() {
+  let myVisibility = document.getElementById("Anchor-Ping-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Ping-Attributes").innerHTML = NetworkAttributes().ping.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AnchorReferrerpolicyAttributes() {
+  let myVisibility = document.getElementById("Anchor-Referrerpolicy-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Referrerpolicy-Attributes").innerHTML = NetworkAttributes().referrerpolicy.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AnchorRelAttributes() {
+  let myVisibility = document.getElementById("Anchor-Rel-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Rel-Attributes").innerHTML = MiscellaneousAttributes().rel.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AnchorTargetAttributes() {
+  let myVisibility = document.getElementById("Anchor-Target-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Target-Attributes").innerHTML = HyperlinkAttributes().target.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AnchorTypeAttributes() {
+  let myVisibility = document.getElementById("Anchor-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Anchor-Type-Attributes").innerHTML = MiscellaneousAttributes().type.anchorelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // ADDRESS TAG //
 function AddressTag() {
   let myVisibility = document.getElementById("Address-Tag");
@@ -2145,7 +2798,7 @@ function QuoteCiteAttributes() {
   let myVisibility = document.getElementById("Quote-Cite-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Quote-Cite-Attributes").innerHTML = HyperlinkAttributes().cite;
+    document.getElementById("Quote-Cite-Attributes").innerHTML = HyperlinkAttributes().cite.quoteelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -2187,7 +2840,7 @@ function BlockquoteCiteAttributes() {
   let myVisibility = document.getElementById("Blockquote-Cite-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Blockquote-Cite-Attributes").innerHTML = HyperlinkAttributes().cite;
+    document.getElementById("Blockquote-Cite-Attributes").innerHTML = HyperlinkAttributes().cite.blockquoteelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -2295,7 +2948,7 @@ function InsertCiteAttributes() {
   let myVisibility = document.getElementById("Insert-Cite-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Insert-Cite-Attributes").innerHTML = HyperlinkAttributes().cite;
+    document.getElementById("Insert-Cite-Attributes").innerHTML = HyperlinkAttributes().cite.insertelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -2304,7 +2957,7 @@ function InsertDatetimeAttributes() {
   let myVisibility = document.getElementById("Insert-Datetime-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Insert-Datetime-Attributes").innerHTML = TimeAttributes().datetime;
+    document.getElementById("Insert-Datetime-Attributes").innerHTML = TimeAttributes().datetime.insertelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -2346,7 +2999,7 @@ function DeleteCiteAttributes() {
   let myVisibility = document.getElementById("Delete-Cite-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Delete-Cite-Attributes").innerHTML = HyperlinkAttributes().cite;
+    document.getElementById("Delete-Cite-Attributes").innerHTML = HyperlinkAttributes().cite.deleteelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -2355,7 +3008,7 @@ function DeleteDatetimeAttributes() {
   let myVisibility = document.getElementById("Delete-Datetime-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Delete-Datetime-Attributes").innerHTML = TimeAttributes().datetime;
+    document.getElementById("Delete-Datetime-Attributes").innerHTML = TimeAttributes().datetime.deleteelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -2892,7 +3545,7 @@ function TimeDatetimeAttributes() {
   let myVisibility = document.getElementById("Time-Datetime-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Time-Datetime-Attributes").innerHTML = TimeAttributes().datetime;
+    document.getElementById("Time-Datetime-Attributes").innerHTML = TimeAttributes().datetime.timeelement;
   }
   else { myVisibility.style.display = "none"; }
 }

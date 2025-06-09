@@ -314,19 +314,29 @@
       <div class="Box-Attributes">
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="ScriptGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Script-Global-Attributes"></div></div>
-        <div><code class="Highlighted">&lt;script <b>async</b>="<em>MyValue</em>"&gt;</code></div>
-        <div><code class="Highlighted">&lt;script <b>crossorigin</b>="<em>MyValue</em>"&gt;</code></div>
-        <div><code class="Highlighted">&lt;script <b>defer</b>="<em>MyValue</em>"&gt;</code></div>
-        <div><code class="Highlighted">&lt;script <b>integrity</b>="<em>MyValue</em>"&gt;</code></div>
-        <div><code class="Highlighted">&lt;script <b>nomodule</b>="<em>MyValue</em>"&gt;</code></div>
-        <div><code class="Highlighted">&lt;script <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code></div>
-        <div><code class="Highlighted">&lt;script <b>src</b>="<em>MyValue</em>"&gt;</code></div>
-        <div><code class="Highlighted">&lt;script <b>type</b>="<em>MyValue</em>"&gt;</code></div>
+        <div><code class="Highlighted" onclick="ScriptAsyncAttributes()">&lt;script <b>async</b>&gt;</code><div id="Script-Async-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ScriptCrossoriginAttributes()">&lt;script <b>crossorigin</b>="<em>myValue</em>"&gt;</code><div id="Script-Crossorigin-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ScriptDeferAttributes()">&lt;script <b>defer</b>&gt;</code><div id="Script-Defer-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ScriptIntegrityAttributes()">&lt;script <b>integrity</b>="<em>myValue</em>"&gt;</code><div id="Script-Integrity-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ScriptNomoduleAttributes()">&lt;script <b>nomodule</b>="<em>myValue</em>"&gt;</code><div id="Script-Nomodule-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ScriptReferrerpolicyAttributes()">&lt;script <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Script-Referrerpolicy-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ScriptSrcAttributes()">&lt;script <b>src</b>="<em>myValue</em>"&gt;</code><div id="Script-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="ScriptTypeAttributes()">&lt;script <b>type</b>="<em>myValue</em>"&gt;</code><div id="Script-Type-Attributes"></div></div>
       </div>
 
       <div class="Box-CSS">
       <h3>DEFAULT CSS SETTING(S)</h3>
         <div><code>script { display: none; }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">The usage of <code>&lt;script&gt;</code> and <code>&lt;noscript&gt;</code> tags</span>
+          <div>The <code>&lt;script&gt;</code> element can be used in both <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code></div>
+          <div>In <code>&lt;body&gt;</code>, the <code>&lt;noscript&gt;</code> is used in the case of <code>&lt;script&gt;</code> have been disabled in browser</div>
+          <div>It could also be used in the case of a browser that doesn't support client-side scripting</div>
+        </div>
       </div>
     </div>
 
@@ -344,7 +354,7 @@
       <div class="Box-Insights">
       <h3>INSIGHT(S)</h3>
         <div class="Item-Insights">
-        <span class="Highlight-Insights">The usage of <code>&lt;noscript&gt;</code></span>
+        <span class="Highlight-Insights">The usage of <code>&lt;noscript&gt;</code> tags</span>
           <div>The <code>&lt;noscript&gt;</code> element can be used in both <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code></div>
           <div>When used inside <code>&lt;head&gt;</code>, the element could only contain <code>&lt;link&gt;, &lt;style&gt;, &lt;meta&gt;</code> elements</div>
         </div>
@@ -485,6 +495,14 @@
       <h3>DEFAULT CSS SETTING(S)</h3>
         <div><code>nav { display: block; }</code></div>
       </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Provide better accessibility</span>
+          <div>Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content</div>
+        </div>
+      </div>
     </div>
 
     <!-- ASIDE TAG -->
@@ -575,7 +593,7 @@
     <!-- HEADING GROUP TAG -->
     <div id="Hgroup-Tag" class="Sub-Topics Box-Elements">
     <h3><code>&lt;hgroup&gt; <em>MyContents</em> &lt;/hgroup&gt;</code></h3>
-      <div>The <code>&lt;hgroup&gt;</code> tag is used to surround a heading and one or more &lt;p&gt; elements</div>
+      <div>The <code>&lt;hgroup&gt;</code> tag is used to surround a heading and one or more <code>&lt;p&gt;</code> elements</div>
       <div>The heading inside the <code>&lt;hgroup&gt;</code> element can be any of the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> headings</div>
 
       <div class="Box-Attributes">
@@ -727,6 +745,10 @@
       <div class="Box-Insights">
       <h3>INSIGHTS</h3>
         <div class="Item-Insights">
+        <span class="Highlight-Insights">The usage of <code>&lt;h1&gt;</code> tag</span>
+          <div>Only use one <code>&lt;h1&gt;</code> per page, which it should represent the main heading/subject for the whole page</div>
+        </div>
+        <div class="Item-Insights">
         <span class="Highlight-Insights">Heading flow level</span>
           <div>Do not skip heading levels, start with <code>&lt;h1&gt;</code>, then use <code>&lt;h2&gt;</code>, and so on until <code>&lt;h6&gt;</code></div>
         </div>
@@ -760,21 +782,35 @@
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="AnchorGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Anchor-Global-Attributes"></div></div>
         <div><code class="Highlighted" onclick="AnchorEventAttributes()"><em>HTML Event Attributes</em></code><div id="Anchor-Event-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Download-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Href-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Hreflang-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Media-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Ping-Attributes"></div> </div>
-        <div><code class="Highlighted" onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Referrerpolicy-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Rel-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Target-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Anchor-Type-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Download-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Href-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Hreflang-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Media-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Ping-Attributes"></div> </div>
+        <div><code class="Highlighted" onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Referrerpolicy-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Rel-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Target-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Type-Attributes"></div></div>
       </div>
 
       <div class="Box-CSS">
       <h3>DEFAULT CSS SETTING(S)</h3>
         <div><code>a:link, a:visited { color: (<em>internal value</em>); text-decoration: underline; cursor: auto; }</code></div>
         <div><code>a:link:active, a:visited:active { color: (<em>internal value</em>); }</code></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHTS</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Required to include <code>href</code> attribute</span>
+          <div>The <code>href</code> attribute indicates the link's destination for <code>&lt;a&gt;</code> tag</div>
+          <div>If the <code>href</code> attribute is omitted, it is only a placeholder for a hyperlink</div>
+        </div>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Optional to include <code>target</code> attribute</span>
+          <div>By default, a linked page is displayed in the current browser window</div>
+          <div>For some feature, it it beneficial when user specify another target so that the webpage is displayed on new tab without changing current webpage</div>
+        </div>
       </div>
     </div>
 
@@ -815,7 +851,7 @@
       <div class="Box-Insights">
       <h3>INSIGHT(S)</h3>
         <div class="Item-Insights">
-        <span class="Highlight-Insights">Best practice to include <code>title</code> attribute</span>
+        <span class="Highlight-Insights">Recommended to include <code>title</code> attribute</span>
           <div>This is the best way to show the description for the abbreviation/acronym</div>
           <div>User just simply mouse over the element and the desription will be displayed</div>
         </div>
@@ -867,7 +903,7 @@
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="QuoteGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Quote-Global-Attributes"></div></div>
         <div><code class="Highlighted" onclick="QuoteEventAttributes()"><em>HTML Event Attributes</em></code><div id="Quote-Event-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="QuoteCiteAttributes()">&lt;q <b>cite</b>="<em>MyValue</em>"&gt;</code><div id="Quote-Cite-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="QuoteCiteAttributes()">&lt;q <b>cite</b>="<em>myValue</em>"&gt;</code><div id="Quote-Cite-Attributes"></div></div>
       </div>
 
       <div class="Box-CSS">
@@ -887,7 +923,7 @@
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="BlockquoteGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Blockquote-Global-Attributes"></div></div>
         <div><code class="Highlighted" onclick="BlockquoteEventAttributes()"><em>HTML Event Attributes</em></code><div id="Blockquote-Event-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="BlockquoteCiteAttributes()">&lt;blockquote <b>cite</b>="<em>MyValue</em>"&gt;</code><div id="Blockquote-Cite-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="BlockquoteCiteAttributes()">&lt;blockquote <b>cite</b>="<em>myValue</em>"&gt;</code><div id="Blockquote-Cite-Attributes"></div></div>
       </div>
 
       <div class="Box-CSS">
@@ -941,8 +977,8 @@
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="InsertGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Insert-Global-Attributes"></div></div>
         <div><code class="Highlighted" onclick="InsertEventAttributes()"><em>HTML Event Attributes</em></code><div id="Insert-Event-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InsertCiteAttributes()">&lt;ins <b>cite</b>="<em>MyValue</em>"&gt;</code><div id="Insert-Cite-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InsertDatetimeAttributes()">&lt;ins <b>datetime</b>="<em>MyValue</em>"&gt;</code><div id="Insert-Datetime-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InsertCiteAttributes()">&lt;ins <b>cite</b>="<em>myValue</em>"&gt;</code><div id="Insert-Cite-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InsertDatetimeAttributes()">&lt;ins <b>datetime</b>="<em>myValue</em>"&gt;</code><div id="Insert-Datetime-Attributes"></div></div>
       </div>
 
       <div class="Box-CSS">
@@ -1222,10 +1258,15 @@
         <div><code class="Highlighted" onclick="BdoEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bdo-Event-Attributes"></div></div>
       </div>
 
+      <div class="Box-CSS">
+      <h3>DEFAULT CSS SETTING(S)</h3>
+        <div><code>bdo { unicode-bidi: bidi-override; }</code></div>
+      </div>
+
       <div class="Box-Insights">
       <h3>INSIGHT(S)</h3>
         <div class="Item-Insights">
-        <span class="Highlight-Insights">Best practice to include <code>dir</code> attribute</span>
+        <span class="Highlight-Insights">Required to include <code>dir</code> attribute</span>
           <div>The attribute is obviously required that specifies the text direction of the text inside the <code>&lt;bdo&gt;</code> element</div>
         </div>
       </div>
@@ -1240,7 +1281,16 @@
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="TimeGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Time-Global-Attributes"></div></div>
         <div><code class="Highlighted" onclick="TimeEventAttributes()"><em>HTML Event Attributes</em></code><div id="Time-Event-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="TimeDatetimeAttributes()">&lt;time <b>datetime</b>="<em>MyValue</em>"&gt;</code><div id="Time-Datetime-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="TimeDatetimeAttributes()">&lt;time <b>datetime</b>="<em>myValue</em>"&gt;</code><div id="Time-Datetime-Attributes"></div></div>
+      </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Recommended to include <code>datetime</code> attribute</span>
+          <div>The <code>datetime</code> attribute of this element is used translate the time into a machine-readable format</div>
+          <div>By doing this, browsers can offer to add date reminders through the user's calendar, and search engines can produce smarter search results</div>
+        </div>
       </div>
     </div>
   </section>
