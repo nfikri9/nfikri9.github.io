@@ -399,8 +399,9 @@ function EventAttributes() {
 function BooleanAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    async: "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    defer: "<div>Applied tag(s): <code>&lt;script&gt;</code></div>"
+    async     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    defer     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    novalidate: "<div>Applied tag(s): <code>&lt;form&gt;</code></div>"
   };
 
   /* NOTES OF BOOLEAN ATTRIBUTES */
@@ -436,9 +437,69 @@ function BooleanAttributes() {
         "  <div>" + Parse.Insight2 + "</div>" +
            myRelatedElements.defer +
         "</div>"
+    },
+
+    novalidate: {
+      formelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>novalidate</code> attribute of the <code>&lt;form&gt;</code> tag specifies that the form-data (input) should not be validated when submitted</div>" +
+           myRelatedElements.novalidate +
+        "</div>"
     }
   };
   return myBoolean;
+}
+
+///////////////////////////////
+// HTML CHARACTER ATTRIBUTES //
+///////////////////////////////
+function CharacterAttributes(){
+  /* LIST OF RELATED ELEMENTS */
+  const myRelatedElements = {
+    accept_charset: "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
+    charset       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+  };
+
+  /* NOTES OF CHARACTER ATTRIBUTES */
+  const Character = {
+    Description1:
+      "Specifies the character encoding<br>" +
+      "In theory, any character encoding can be used, but no browser understands all of them<br>" +
+      "The more widely a character encoding is used, the better the chance that a browser will understand it<br>" +
+      "The HTML5 specification encourages web developers to use the UTF-8 character set<br>" +
+      "The character set covers almost all of the characters and symbols in the world<br>" +
+      "<code>UTF-8</code> represents character encoding for Unicode<br>" +
+      "<code>ISO-8859-1</code> represents character encoding for the Latin alphabet"
+  };
+
+  /* LIST OF CHARACTER ATTRIBUTES */
+  const myCharacter = {
+    accept_charset: {
+      formelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>accept-charset</code> attribute of the <code>&lt;form&gt;</code> tag specifies the character encodings that are to be used for the form submission</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Character Set</em></code></td><td>" + Character.Description1 + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.accept_charset +
+        "</div>"
+    },
+
+    charset: {
+      metaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>charset</code> attribute of the <code>&lt;meta&gt;</code> tag specifies the character encoding for the HTML document</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Character Set</em></code></td><td>" + Character.Description1 + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.charset +
+        "</div>"
+    }
+  };
+
+  return myCharacter;
 }
 
 ///////////////////////////////
@@ -447,9 +508,10 @@ function BooleanAttributes() {
 function HyperlinkAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
+    action: "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     cite  : "<div>Applied tag(s): <code>&lt;blockquote&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;q&gt;</code></div>",
     href  : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code></div>",
-    target: "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code></div>",
+    target: "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;form&gt;</code></div>",
     src   : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>"
   };
 
@@ -470,6 +532,19 @@ function HyperlinkAttributes() {
 
   /* LIST OF HYPERLINK ATTRIBUTES */
   const myHyperlink = {
+    action: {
+      formelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>action</code> attribute of the <code>&lt;form&gt;</code> tag specifies where to send the form-data when a form is submitted</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.action +
+        "</div>"
+    },
+
     cite: {
       blockquoteelement:
         "<div class=\"Box-Attributes\">" +
@@ -592,6 +667,20 @@ function HyperlinkAttributes() {
         "    <tr><td><code>_top</code></td><td>" + Target.Top + "</td></tr>" +
         "  </table>" +
            myRelatedElements.target +
+        "</div>",
+
+      formelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>target</code> attribute of the <code>&lt;form&gt;</code> tag specifies a name or a keyword that indicates where to display the response that is received after submitting the form</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>_blank</code></td><td>" + Target.Blank + "</td></tr>" +
+        "    <tr><td><code>_parent</code></td><td>" + Target.Parent + "</td></tr>" +
+        "    <tr><td><code>_self</code></td><td>" + Target.Self + "</td></tr>" +
+        "    <tr><td><code>_top</code></td><td>" + Target.Top + "</td></tr>" +
+        "    <tr><td><code><em>Frame Name</em></code></td><td>" + Target.Frame_Name + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.target +
         "</div>"
     }
   };
@@ -605,8 +694,10 @@ function NetworkAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
     crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code></div>",
+    enctype       : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     http_equiv    : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     integrity     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    method        : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     ping          : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
     referrerpolicy: "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code></div>"
   };
@@ -627,6 +718,12 @@ function NetworkAttributes() {
     Use_Credentials:
       "Specifies the mode of the CORS request<br>" +
       "A cross-origin request is performed where credentials are sent (Eg; a cookie, a certificate, a HTTP Basic authentication)"
+  };
+
+  const Enctype = {
+    Application: "<b>[Default]</b> All characters are encoded before sent<br> Spaces are converted to \"+\" symbols, and special characters are converted to ASCII HEX values",
+    Multipart  : "This value is necessary if the user will upload a file through the form",
+    Text       : "<b>[Not recommended]</b> Sends data without any encoding at all"
   };
 
   const Custom_URL =
@@ -662,6 +759,23 @@ function NetworkAttributes() {
       "When using SRI, the webpage holds the hash and the server holds the file<br>" +
       "The browser downloads the file, then checks it, to make sure that it is a match with the hash in the <code>integrity</code> attribute<br>" +
       "If it matches, the file is used, and if not, the file is blocked"
+  };
+
+  const Method = {
+    Dialog:
+      "When the form is inside a <code>&lt;dialog&gt;</code> element, it closes the dialog and causes a submit event to be executed on submission, " +
+      "without submitting data or clearing the form",
+    Get:
+      "<b>[Default]</b> Appends the form-data to the URL in name/value pairs (<code>URL?name=value&name=value</code>)<br>" +
+      "The length of a URL is limited (about 3000 characters)<br>" +
+      "<b>Never</b> use <code>get</code> to send sensitive data! (will be visible in the URL)<br>" +
+      "Useful for form submissions where a user wants to bookmark the result<br>" +
+      "<code>get</code> is better for non-secure data, like query strings in Google",
+    Post:
+      "Sends the form-data as an HTTP post transaction<br>" +
+      "Appends form-data inside the body of the HTTP request (data is not shown in URL)<br>" +
+      "Has no size limitations<br>" +
+      "Form submissions with <code>post</code> cannot be bookmarked"
   };
 
   const Referrerpolicy = {
@@ -717,6 +831,21 @@ function NetworkAttributes() {
         "</div>"
     },
 
+    enctype: {
+      formelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>enctype</code> attribute of the <code>&lt;form&gt;</code> tag specifies how the form-data should be encoded when submitting it to the server</div>" +
+        "  <div>The <code>enctype</code> attribute can be used only if <code>method=\"post\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>application/x-www-form-urlencoded</code></td><td>" + Enctype.Application + "</td></tr>" +
+        "    <tr><td><code>multipart/form-data</code></td><td>" + Enctype.Multipart + "</td></tr>" +
+        "    <tr><td><code>text/plain</code></td><td>" + Enctype.Text + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.enctype +
+        "</div>"
+    },
+
     http_equiv: {
       metaelement:
         "<div class=\"Box-Attributes\">" +
@@ -759,6 +888,21 @@ function NetworkAttributes() {
         "    <tr><td><code>refresh</code></td><td>" + HTTP_Equiv.Refresh + "</td></tr>" +
         "  </table>" +
            myRelatedElements.http_equiv +
+        "</div>"
+    },
+
+    method: {
+      formelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>method</code> attribute of the <code>&lt;form&gt;</code> tag specifies how to send form-data that specified in the <code>action</code> attribute to the page</div>" +
+        "  <div>The form-data can be sent as URL variables (with <code>method=\"get\"</code>) or as HTTP post transaction (with <code>method=\"post\"</code>)</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>dialog</code></td><td>" + Method.Dialog + "</td></tr>" +
+        "    <tr><td><code>get</code></td><td>" + Method.Get + "</td></tr>" +
+        "    <tr><td><code>post</code></td><td>" + Method.Post + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.method +
         "</div>"
     },
 
@@ -905,20 +1049,25 @@ function TimeAttributes() {
 function MiscellaneousAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    charset       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+    autocomplete  : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     content       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     download      : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
     hreflang      : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></div>",
     media         : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
-    name          : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+    name          : "<div>Applied tag(s): <code>&lt;form&gt;</code>, <code>&lt;meta&gt;</code></div>",
     nomodule      : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    rel           : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></div>",
+    rel           : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;link&gt;</code></div>",
     sizes         : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
     type          : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code></div>",
     xlmns         : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
   };
 
   /* NOTES OF MISCELLANEOUS ATTRIBUTES */
+  const Autocomplete = {
+    Off: "The browser does not automatically complete entries, the user must enter a value into each field for every use",
+    On : "<b>[Default]</b> The browser will automatically complete values based on values that the user has entered before"
+  };
+
   const Download = {
     Description:
       "<b>[Optional]</b> Specifies the new filename for the downloaded file<br>" +
@@ -1125,20 +1274,18 @@ function MiscellaneousAttributes() {
 
   /* LIST OF MISCELLANEOUS ATTRIBUTES */
   const myMiscellaneous = {
-    charset: {
-      metaelement:
+    autocomplete: {
+      formelement:
         "<div class=\"Box-Attributes\">" +
-        "  <div>The <code>charset</code> attribute of the <code>&lt;meta&gt;</code> tag specifies the character encoding for the HTML document</div>" +
+        "  <div>The <code>autocomplete</code> attribute of the <code>&lt;form&gt;</code> tag specifies whether a form should have autocomplete on or off</div>" +
+        "  <div>When autocomplete is on, the browser automatically complete values based on values that the user has entered before</div>" +
+        "  <div>It is possible to have autocomplete \"on\" for the form, and \"off\" for specific input fields, or vice versa</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code><em>Character Set</em></code></td>" +
-        "        <td>Specifies the character encoding for the HTML document<br>" +
-        "            The HTML5 specification encourages web developers to use the UTF-8 character set<br>" +
-        "            (covers almost all of the characters and symbols in the world)<br>" +
-        "            Example; <code>UTF-8, utf-8</code>" +
-        "    </td></tr>" +
+        "    <tr><td><code>on</code></td><td>" + Autocomplete.On + "</td></tr>" +
+        "    <tr><td><code>off</code></td><td>" + Autocomplete.Off + "</td></tr>" +
         "  </table>" +
-           myRelatedElements.charset +
+           myRelatedElements.autocomplete +
         "</div>"
     },
 
@@ -1320,6 +1467,17 @@ function MiscellaneousAttributes() {
     },
 
     name: {
+      formelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;form&gt;</code> tag specifies the name of a form</div>" +
+        "  <div>The <code>name</code> attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies the name of the form</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
+        "</div>",
+
       metaelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>name</code> attribute of the <code>&lt;meta&gt;</code> tag specifies the name for the metadata</div>" +
@@ -1370,6 +1528,24 @@ function MiscellaneousAttributes() {
         "    <tr><td><code>prev</code></td><td>" + Relation.Prev + "</td></tr>" +
         "    <tr><td><code>search</code></td><td>" + Relation.Search + "</td></tr>" +
         "    <tr><td><code>tag</code></td><td>" + Relation.Tag + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.rel +
+        "</div>",
+
+      formelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>rel</code> attribute of the <code>&lt;form&gt;</code> tag specifies the relationship between the current document and the linked document</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>external</code></td><td>" + Relation.External + "</td></tr>" +
+        "    <tr><td><code>help</code></td><td>" + Relation.Help + "</td></tr>" +
+        "    <tr><td><code>license</code></td><td>" + Relation.License + "</td></tr>" +
+        "    <tr><td><code>next</code></td><td>" + Relation.Next + "</td></tr>" +
+        "    <tr><td><code>nofollow</code></td><td>" + Relation.Nofollow + "</td></tr>" +
+        "    <tr><td><code>noopener</code></td><td>" + Relation.Noopener + "</td></tr>" +
+        "    <tr><td><code>noreferrer</code></td><td>" + Relation.Noreferrer + "</td></tr>" +
+        "    <tr><td><code>prev</code></td><td>" + Relation.Prev + "</td></tr>" +
+        "    <tr><td><code>search</code></td><td>" + Relation.Search + "</td></tr>" +
         "  </table>" +
            myRelatedElements.rel +
         "</div>",
@@ -1810,7 +1986,7 @@ function MetaCharsetAttributes() {
   let myVisibility = document.getElementById("Meta-Charset-Attributes");
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
-    document.getElementById("Meta-Charset-Attributes").innerHTML = MiscellaneousAttributes().charset.metaelement;
+    document.getElementById("Meta-Charset-Attributes").innerHTML = CharacterAttributes().charset.metaelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -3590,6 +3766,87 @@ function FormEventAttributes() {
     document.getElementById("Form-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormAcceptCharsetAttributes() {
+  let myVisibility = document.getElementById("Form-Accept-Charset-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Accept-Charset-Attributes").innerHTML = CharacterAttributes().accept_charset.formelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormActionAttributes() {
+  let myVisibility = document.getElementById("Form-Action-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Action-Attributes").innerHTML = HyperlinkAttributes().action.formelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormAutocompleteAttributes() {
+  let myVisibility = document.getElementById("Form-Autocomplete-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Autocomplete-Attributes").innerHTML = MiscellaneousAttributes().autocomplete.formelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormEnctypeAttributes() {
+  let myVisibility = document.getElementById("Form-Enctype-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Enctype-Attributes").innerHTML = NetworkAttributes().enctype.formelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormMethodAttributes() {
+  let myVisibility = document.getElementById("Form-Method-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Method-Attributes").innerHTML = NetworkAttributes().method.formelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormNameAttributes() {
+  let myVisibility = document.getElementById("Form-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Name-Attributes").innerHTML = MiscellaneousAttributes().name.formelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormNovalidateAttributes() {
+  let myVisibility = document.getElementById("Form-Novalidate-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Novalidate-Attributes").innerHTML = BooleanAttributes().novalidate.formelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormRelAttributes() {
+  let myVisibility = document.getElementById("Form-Rel-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Rel-Attributes").innerHTML = MiscellaneousAttributes().rel.formelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FormTargetAttributes() {
+  let myVisibility = document.getElementById("Form-Target-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Form-Target-Attributes").innerHTML = HyperlinkAttributes().target.formelement;
   }
   else { myVisibility.style.display = "none"; }
 }
