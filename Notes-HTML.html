@@ -1381,6 +1381,14 @@
       <h3>DEFAULT CSS SETTING(S)</h3>
         <div><code>fieldset { display: block; margin: 0 2px; padding: 0.35em 0.75em 0.625em; border: 2px groove (<em>internal value</em>); }</code></div>
       </div>
+
+      <div class="Box-Insights">
+      <h3>INSIGHT(S)</h3>
+        <div class="Item-Insights">
+        <span class="Highlight-Insights">Recommended to include <code>legend</code> element together</span>
+          <div>The <code>legend</code> element is used to name the section of the fieldset</div>
+        </div>
+      </div>
     </div>
 
     <!-- LEGEND TAG -->
@@ -1409,8 +1417,8 @@
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="LabelGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Label-Global-Attributes"></div></div>
         <div><code class="Highlighted" onclick="LabelEventAttributes()"><em>HTML Event Attributes</em></code><div id="Label-Event-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="LabelForAttributes()">&lt;label <b>for</b>="<em>MyValue</em>"&gt;</code><div id="Label-For-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="LabelFormAttributes()">&lt;label <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Label-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LabelForAttributes()">&lt;label <b>for</b>="<em>myValue</em>"&gt;</code><div id="Label-For-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="LabelFormAttributes()">&lt;label <b>form</b>="<em>myValue</em>"&gt;</code><div id="Label-Form-Attributes"></div></div>
       </div>
 
       <div class="Box-CSS">
@@ -1427,12 +1435,8 @@
           <div>Other than that, it can serve as screen reader users (will read out loud the label, when the user is focused on the element)</div>
         </div>
         <div class="Item-Insights">
-        <span class="Highlight-Insights">Best practices to bound related element to <code>&lt;label&gt;</code></span>
-          <div><code>&lt;label for="<em>MyValue</em>"&gt;&lt;/label&gt; &lt;<em>MyElement</em> id="<em>MyValue</em>"&gt;&lt;/<em>MyElement</em>&gt;</code></div>
-          <div>The <code>for</code> attribute of <code>&lt;label&gt;</code> must be equal to the <code>id</code> attribute of the related element to bind them together</div>
-          <div><code>&lt;label&gt; &lt;<em>MyElement</em>&gt;&lt;/<em>MyElement</em>&gt; &lt;/label&gt;</code></div>
-          <div>A label can also be bound to an element by placing the element inside the <code>&lt;label&gt;</code> element</div>
-          <div>Only selective elements of the following can be bounded with label element</div>
+        <span class="Highlight-Insights">Recommended to bound related element to <code>&lt;label&gt;</code> tag</span>
+          <div>Only selective elements of the following can be bounded with label element:</div>
           <div><code>&lt;input type="checkbox"&gt;, &lt;input type="color"&gt;, &lt;input type="date"&gt;, &lt;input type="datetime-local"&gt;, &lt;input type="email"&gt;,
                &lt;input type="file"&gt;, &lt;input type="month"&gt;, &lt;input type="number"&gt;, &lt;input type="password"&gt;, &lt;input type="radio"&gt;,
                &lt;input type="range"&gt;, &lt;input type="search"&gt;, &lt;input type="tel"&gt;, &lt;input type="text"&gt;, &lt;input type="time"&gt;, &lt;input type="url"&gt;,
@@ -1453,46 +1457,46 @@
       <h3>RELATED ATTRIBUTE(S)</h3>
         <div><code class="Highlighted" onclick="InputGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Input-Global-Attributes"></div></div>
         <div><code class="Highlighted" onclick="InputEventAttributes()"><em>HTML Event Attributes</em></code><div id="Input-Event-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputAcceptAttributes()">&lt;input <b>accept</b>="<em>MyValue</em>"&gt;</code><div id="Input-Accept-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputAltAttributes()">&lt;input <b>alt</b>="<em>MyValue</em>"&gt;</code><div id="Input-Alt-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputAutocompleteAttributes()">&lt;input <b>autocomplete</b>="<em>MyValue</em>"&gt;</code><div id="Input-Autocomplete-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputAutofocusAttributes()">&lt;input <b>autofocus</b>="<em>MyValue</em>"&gt;</code><div id="Input-Autofocus-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputCheckedAttributes()">&lt;input <b>checked</b>="<em>MyValue</em>"&gt;</code><div id="Input-Checked-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputDirnameAttributes()">&lt;input <b>dirname</b>="<em>MyValue</em>"&gt;</code><div id="Input-Dirname-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputDisabledAttributes()">&lt;input <b>disabled</b>="<em>MyValue</em>"&gt;</code><div id="Input-Disabled-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputFormAttributes()">&lt;input <b>form</b>="<em>MyValue</em>"&gt;</code><div id="Input-Form-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputFormactionAttributes()">&lt;input <b>formaction</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formaction-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputFormenctypeAttributes()">&lt;input <b>formenctype</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formenctype-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputFormmethodAttributes()">&lt;input <b>formmethod</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formmethod-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputFormnovalidateAttributes()">&lt;input <b>formnovalidate</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formnovalidate-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputFormtargetAttributes()">&lt;input <b>formtarget</b>="<em>MyValue</em>"&gt;</code><div id="Input-Formtarget-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputHeightAttributes()">&lt;input <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Input-Height-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputListAttributes()">&lt;input <b>list</b>="<em>MyValue</em>"&gt;</code><div id="Input-List-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputMaxAttributes()">&lt;input <b>max</b>="<em>MyValue</em>"&gt;</code><div id="Input-Max-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputMaxlengthAttributes()">&lt;input <b>maxlength</b>="<em>MyValue</em>"&gt;</code><div id="Input-Maxlength-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputMinAttributes()">&lt;input <b>min</b>="<em>MyValue</em>"&gt;</code><div id="Input-Min-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputMinlengthAttributes()">&lt;input <b>minlength</b>="<em>MyValue</em>"&gt;</code><div id="Input-Minlength-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputMultipleAttributes()">&lt;input <b>multiple</b>="<em>MyValue</em>"&gt;</code><div id="Input-Multiple-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputNameAttributes()">&lt;input <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Input-Name-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputPatternAttributes()">&lt;input <b>pattern</b>="<em>MyValue</em>"&gt;</code><div id="Input-Pattern-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputPlaceholderAttributes()">&lt;input <b>placeholder</b>="<em>MyValue</em>"&gt;</code><div id="Input-Placeholder-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputPopovertargetAttributes()">&lt;input <b>popovertarget</b>="<em>MyValue</em>"&gt;</code><div id="Input-Popovertarget-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputPopovertargetactionAttributes()">&lt;input <b>popovertargetaction</b>="<em>MyValue</em>"&gt;</code><div id="Input-Popovertargetaction-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputReadonlyAttributes()">&lt;input <b>readonly</b>="<em>MyValue</em>"&gt;</code><div id="Input-Readonly-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputRequiredAttributes()">&lt;input <b>required</b>="<em>MyValue</em>"&gt;</code><div id="Input-Required-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputSizeAttributes()">&lt;input <b>size</b>="<em>MyValue</em>"&gt;</code><div id="Input-Size-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputSrcAttributes()">&lt;input <b>src</b>="<em>MyValue</em>"&gt;</code><div id="Input-Src-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputStepAttributes()">&lt;input <b>step</b>="<em>MyValue</em>"&gt;</code><div id="Input-Step-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputTypeAttributes()">&lt;input <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Input-Type-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputValueAttributes()">&lt;input <b>value</b>="<em>MyValue</em>"&gt;</code><div id="Input-Value-Attributes"></div></div>
-        <div><code class="Highlighted" onclick="InputWidthAttributes()">&lt;input <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Input-Width-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputAcceptAttributes()">&lt;input <b>accept</b>="<em>myValue</em>"&gt;</code><div id="Input-Accept-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputAltAttributes()">&lt;input <b>alt</b>="<em>myValue</em>"&gt;</code><div id="Input-Alt-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputAutocompleteAttributes()">&lt;input <b>autocomplete</b>="<em>myValue</em>"&gt;</code><div id="Input-Autocomplete-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputAutofocusAttributes()">&lt;input <b>autofocus</b>&gt;</code><div id="Input-Autofocus-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputCheckedAttributes()">&lt;input <b>checked</b>&gt;</code><div id="Input-Checked-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputDirnameAttributes()">&lt;input <b>dirname</b>="<em>myValue</em>"&gt;</code><div id="Input-Dirname-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputDisabledAttributes()">&lt;input <b>disabled</b>="<em>myValue</em>"&gt;</code><div id="Input-Disabled-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormAttributes()">&lt;input <b>form</b>="<em>myValue</em>"&gt;</code><div id="Input-Form-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormactionAttributes()">&lt;input <b>formaction</b>="<em>myValue</em>"&gt;</code><div id="Input-Formaction-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormenctypeAttributes()">&lt;input <b>formenctype</b>="<em>myValue</em>"&gt;</code><div id="Input-Formenctype-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormmethodAttributes()">&lt;input <b>formmethod</b>="<em>myValue</em>"&gt;</code><div id="Input-Formmethod-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormnovalidateAttributes()">&lt;input <b>formnovalidate</b>="<em>myValue</em>"&gt;</code><div id="Input-Formnovalidate-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputFormtargetAttributes()">&lt;input <b>formtarget</b>="<em>myValue</em>"&gt;</code><div id="Input-Formtarget-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputHeightAttributes()">&lt;input <b>height</b>="<em>myValue</em>"&gt;</code><div id="Input-Height-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputListAttributes()">&lt;input <b>list</b>="<em>myValue</em>"&gt;</code><div id="Input-List-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMaxAttributes()">&lt;input <b>max</b>="<em>myValue</em>"&gt;</code><div id="Input-Max-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMaxlengthAttributes()">&lt;input <b>maxlength</b>="<em>myValue</em>"&gt;</code><div id="Input-Maxlength-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMinAttributes()">&lt;input <b>min</b>="<em>myValue</em>"&gt;</code><div id="Input-Min-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMinlengthAttributes()">&lt;input <b>minlength</b>="<em>myValue</em>"&gt;</code><div id="Input-Minlength-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputMultipleAttributes()">&lt;input <b>multiple</b>="<em>myValue</em>"&gt;</code><div id="Input-Multiple-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputNameAttributes()">&lt;input <b>name</b>="<em>myValue</em>"&gt;</code><div id="Input-Name-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputPatternAttributes()">&lt;input <b>pattern</b>="<em>myValue</em>"&gt;</code><div id="Input-Pattern-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputPlaceholderAttributes()">&lt;input <b>placeholder</b>="<em>myValue</em>"&gt;</code><div id="Input-Placeholder-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputPopovertargetAttributes()">&lt;input <b>popovertarget</b>="<em>myValue</em>"&gt;</code><div id="Input-Popovertarget-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputPopovertargetactionAttributes()">&lt;input <b>popovertargetaction</b>="<em>myValue</em>"&gt;</code><div id="Input-Popovertargetaction-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputReadonlyAttributes()">&lt;input <b>readonly</b>="<em>myValue</em>"&gt;</code><div id="Input-Readonly-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputRequiredAttributes()">&lt;input <b>required</b>="<em>myValue</em>"&gt;</code><div id="Input-Required-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputSizeAttributes()">&lt;input <b>size</b>="<em>myValue</em>"&gt;</code><div id="Input-Size-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputSrcAttributes()">&lt;input <b>src</b>="<em>myValue</em>"&gt;</code><div id="Input-Src-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputStepAttributes()">&lt;input <b>step</b>="<em>myValue</em>"&gt;</code><div id="Input-Step-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputTypeAttributes()">&lt;input <b>type</b>="<em>myValue</em>"&gt;</code><div id="Input-Type-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputValueAttributes()">&lt;input <b>value</b>="<em>myValue</em>"&gt;</code><div id="Input-Value-Attributes"></div></div>
+        <div><code class="Highlighted" onclick="InputWidthAttributes()">&lt;input <b>width</b>="<em>myValue</em>"&gt;</code><div id="Input-Width-Attributes"></div></div>
       </div>
 
       <div class="Box-Insights">
       <h3>INSIGHT(S)</h3>
         <div class="Item-Insights">
-        <span class="Highlight-Insights">Best practice to pair <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> together</span>
-          <div>It serves greater accessibility for the following <code>&lt;input&gt;</code> elements</div>
+        <span class="Highlight-Insights">Recommended to include <code>&lt;label&gt;</code> tag together</span>
+          <div>It serves greater accessibility for the following <code>&lt;input&gt;</code> elements:</div>
           <div><code>&lt;input type="text"&gt;, &lt;input type="checkbox"&gt;, &lt;input type="radio"&gt;, &lt;input type="file"&gt;, &lt;input type="password"&gt;</code></div>
         </div>
       </div>

@@ -400,11 +400,21 @@ function BooleanAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
     async     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    autofocus : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    checked   : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     defer     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    disabled  : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code></div>",
     novalidate: "<div>Applied tag(s): <code>&lt;form&gt;</code></div>"
   };
 
   /* NOTES OF BOOLEAN ATTRIBUTES */
+  const Disabled = {
+    Description:
+      "A disabled element is unusable and un-clickable<br>" +
+      "The <code>disabled</code> attribute can be set to keep a user from using the element until some other condition has been met (like selecting a checkbox, etc.)<br>" +
+      "Then, a JavaScript could remove the disabled value, and make the element usable again"
+  };
+
   const Parse = {
     Insight1:
       "<b>Required to include <code>src</code> attribute</b><br>" +
@@ -429,6 +439,24 @@ function BooleanAttributes() {
         "</div>"
     },
 
+    autofocus: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>autofocus</code> attribute of the <code>&lt;input&gt;</code> tag specifies that an <code>&lt;input&gt;</code> element should automatically get focus when the page loads</div>" +
+           myRelatedElements.autofocus +
+        "</div>"
+    },
+
+    checked: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>checked</code> attribute of the <code>&lt;input&gt;</code> tag specifies that an <code>&lt;input&gt;</code> element should be pre-selected (checked) when the page loads</div>" +
+        "  <div>The checked attribute can be used with <code>&lt;input type=\"checkbox\"&gt; and &lt;input type=\"radio\"&gt;</code></div>" +
+        "  <div>The checked attribute can also be set after the page load, with a JavaScript</div>" +
+           myRelatedElements.checked +
+        "</div>"
+    },
+
     defer: {
       scriptelement:
         "<div class=\"Box-Attributes\">" +
@@ -436,6 +464,15 @@ function BooleanAttributes() {
         "  <div>" + Parse.Insight1 + "</div>" +
         "  <div>" + Parse.Insight2 + "</div>" +
            myRelatedElements.defer +
+        "</div>"
+    },
+
+    disabled: {
+      fieldsetelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>disabled</code> attribute of the <code>&lt;fieldset&gt;</code> tag specifies that a group of related form elements (a fieldset) should be disabled</div>" +
+        "  <div>" + Disabled.Description + "</div>" +
+           myRelatedElements.disabled +
         "</div>"
     },
 
@@ -1049,12 +1086,16 @@ function TimeAttributes() {
 function MiscellaneousAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    autocomplete  : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
+    accept        : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    alt           : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    autocomplete  : "<div>Applied tag(s): <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code></div>",
     content       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     download      : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
+    for           : "<div>Applied tag(s): <code>&lt;label&gt;</code></div>",
+    form          : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;label&gt;</code></div>",
     hreflang      : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></div>",
     media         : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
-    name          : "<div>Applied tag(s): <code>&lt;form&gt;</code>, <code>&lt;meta&gt;</code></div>",
+    name          : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;meta&gt;</code></div>",
     nomodule      : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     rel           : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;link&gt;</code></div>",
     sizes         : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
@@ -1063,9 +1104,77 @@ function MiscellaneousAttributes() {
   };
 
   /* NOTES OF MISCELLANEOUS ATTRIBUTES */
+  const Accept = {
+    Audio:
+      "The user can pick all sound files",
+    File_Extension:
+      "Specify the file extension(s) the user can pick from<br>" +
+      "Example; <code><em>myFile</em>.gif, <em>myFile</em>.jpg, <em>myFile</em>.png, <em>myFile</em>.doc, etc.</code>",
+    Image:
+      "The user can pick all image files",
+    Media_Type:
+      "A valid media type, with no parameters",
+    Video:
+      "The user can pick all video files"
+  };
+
   const Autocomplete = {
-    Off: "The browser does not automatically complete entries, the user must enter a value into each field for every use",
-    On : "<b>[Default]</b> The browser will automatically complete values based on values that the user has entered before"
+    Additional_Name       : "Expects the middle name",
+    Address_Line1         : "Expects the first line of the street address",
+    Address_Line2         : "Expects the second line of the street address",
+    Address_Line3         : "Expects the third line of the street address",
+    Address_Level1        : "Expects the first level of the address (Example; the county)",
+    Address_Level2        : "Expects the second level of the address (Example; the city)",
+    Address_Level3        : "Expects the third level of the address",
+    Address_Level4        : "Expects the fourth level of the address",
+    Birthday              : "Expects the full birthday date",
+    Birthday_Day          : "Expects the day of the birthday date",
+    Birthday_Month        : "Expects the month of the birthday date",
+    Birthday_Year         : "Expects the year of the birthday date",
+    CC_Additional_Name    : "Expects the credit card owner's middle name",
+    CC_CSC                : "Expects the CVC code",
+    CC_Expiration         : "Expects the credit card's expiration date",
+    CC_Expiration_Month   : "Expects the credit card's expiration month",
+    CC_Expiration_Year    : "Expects the credit card's expiration year",
+    CC_Family_Name        : "Expects the credit card owner's full name",
+    CC_Given_Name         : "Expects the credit card owner's first name",
+    CC_Name               : "Expects the credit card owner's full name",
+    CC_Number             : "Expects the credit card's number",
+    CC_Type               : "Expects the credit card's type of payment",
+    Country               : "Expects the country code",
+    Country_Name          : "Expects the country name",
+    Current_Password      : "Expects the current password",
+    Email                 : "Expects the email address",
+    Family_Name           : "Expects the last name",
+    Given_Name            : "Expects the first name",
+    Honoric_Prefix        : "Expects the title (Example; \"Mr.\", \"Ms.\", etc.)",
+    Honoric_Suffix        : "Expects the suffix (Example; \"IV\", \"Jr.\", \"3\", etc.)",
+    IMPP                  : "Expects the url of an instant messaging protocol endpoint",
+    Language              : "Expects the preferred language",
+    Name                  : "Expects the full name",
+    New_Password          : "Expects a new password",
+    Nickname              : "Expects the nickname",
+    Off                   : "The browser does not automatically complete entries, the user must enter a value into each field for every use",
+    On                    : "<b>[Default]</b> The browser will automatically complete values based on values that the user has entered before",
+    One_Time_Code         : "Expects a one time code for verification etc.",
+    Organization          : "Expects the company name",
+    Organization_Title    : "Expects the job title",
+    Photo                 : "Expects an image",
+    Postal_Code           : "Expects the post code",
+    Sex                   : "Expects the gender",
+    Street_Address        : "Expects the full street address",
+    Telephone             : "Expects the full phone number",
+    Telephone_Area_Code   : "Expects the area code of the phone number",
+    Telephone_Country_Code: "Expects the country code of the phone number",
+    Telephone_Extension   : "Expects the extension code of the phone number",
+    Telephone_Local       : "Expects the phone number with no country code and no area code",
+    Telephone_Local_Prefix: "Expects the local prefix of the phone number",
+    Telephone_Local_Suffix: "Expects the local suffix of the phone number",
+    Telephone_National    : "Expects the phone number with no country code",
+    Transaction_Amount    : "Expects a number, the amount",
+    Transaction_Currency  : "Expects the currency",
+    URL                   : "Expects a web address",
+    Username              : "Expects the username"
   };
 
   const Download = {
@@ -1274,6 +1383,38 @@ function MiscellaneousAttributes() {
 
   /* LIST OF MISCELLANEOUS ATTRIBUTES */
   const myMiscellaneous = {
+    accept: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>accept</code> attribute of the <code>&lt;input&gt;</code> tag specifies a filter for what file types the user can pick from the file input dialog box</div>" +
+        "  <div>The <code>accept</code> attribute can only be used with <code>&lt;input type=\"file\"&gt;</code></div>" +
+        "  <div>Do not use this attribute as a validation tool because file uploads should be validated on the server</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>audio/*</code></td><td>" + Accept.Audio + "</td></tr>" +
+        "    <tr><td><code>video/*</code></td><td>" + Accept.Video + "</td></tr>" +
+        "    <tr><td><code>image/*</code></td><td>" + Accept.Image + "</td></tr>" +
+        "    <tr><td><code><em>File Extension</em></code></td><td>" + Accept.File_Extension + "</td></tr>" +
+        "    <tr><td><code><em>Media Type</em></code></td><td>" + Accept.Media_Type + "<br>" + Type.IANA_Media_Type + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.accept +
+        "</div>"
+    },
+
+    alt: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>alt</code> attribute of the <code>&lt;input&gt;</code> tag specifies an alternate text for the user if the file cannot be viewed for some reason</div>" +
+        "  <div>It might be due to slow connection, an error in the <code>src</code> attribute, or if the user uses a screen reader</div>" +
+        "  <div>The <code>alt</code> attribute can only be used with <code>&lt;input type=\"image\"&gt;</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies an alternate text for the image's input</td></tr>" +
+        "  </table>" +
+           myRelatedElements.alt +
+        "</div>"
+    },
+
     autocomplete: {
       formelement:
         "<div class=\"Box-Attributes\">" +
@@ -1284,6 +1425,72 @@ function MiscellaneousAttributes() {
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code>on</code></td><td>" + Autocomplete.On + "</td></tr>" +
         "    <tr><td><code>off</code></td><td>" + Autocomplete.Off + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.autocomplete +
+        "</div>",
+
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>autocomplete</code> attribute of the <code>&lt;input&gt;</code> tag specifies if browsers should try to predict the value of an input field or not</div>" +
+        "  <div>User can also specify which type of expected value in the input field</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>on</code></td><td>" + Autocomplete.On + "</td></tr>" +
+        "    <tr><td><code>off</code></td><td>" + Autocomplete.Off + "</td></tr>" +
+        "    <tr><td><code>address-line1</code></td><td>" + Autocomplete.Address_Line1 + "</td></tr>" +
+        "    <tr><td><code>address-line2</code></td><td>" + Autocomplete.Address_Line2 + "</td></tr>" +
+        "    <tr><td><code>address-line3</code></td><td>" + Autocomplete.Address_Line3 + "</td></tr>" +
+        "    <tr><td><code>address-level1</code></td><td>" + Autocomplete.Address_Level1 + "</td></tr>" +
+        "    <tr><td><code>address-level2</code></td><td>" + Autocomplete.Address_Level2 + "</td></tr>" +
+        "    <tr><td><code>address-level3</code></td><td>" + Autocomplete.Address_Level3 + "</td></tr>" +
+        "    <tr><td><code>address-level4</code></td><td>" + Autocomplete.Address_Level4 + "</td></tr>" +
+        "    <tr><td><code>street-address</code></td><td>" + Autocomplete.Street_Address + "</td></tr>" +
+        "    <tr><td><code>country</code></td><td>" + Autocomplete.Country + "</td></tr>" +
+        "    <tr><td><code>country-name</code></td><td>" + Autocomplete.Country_Name + "</td></tr>" +
+        "    <tr><td><code>postal-code</code></td><td>" + Autocomplete.Postal_Code + "</td></tr>" +
+        "    <tr><td><code>name</code></td><td>" + Autocomplete.Name + "</td></tr>" +
+        "    <tr><td><code>additional-name</code></td><td>" + Autocomplete.Additional_Name + "</td></tr>" +
+        "    <tr><td><code>family-name</code></td><td>" + Autocomplete.Family_Name + "</td></tr>" +
+        "    <tr><td><code>given-name</code></td><td>" + Autocomplete.Given_Name + "</td></tr>" +
+        "    <tr><td><code>honoric-prefix</code></td><td>" + Autocomplete.Honoric_Prefix + "</td></tr>" +
+        "    <tr><td><code>honoric-suffix</code></td><td>" + Autocomplete.Honoric_Suffix + "</td></tr>" +
+        "    <tr><td><code>nickname</code></td><td>" + Autocomplete.Nickname + "</td></tr>" +
+        "    <tr><td><code>organization-title</code></td><td>" + Autocomplete.Organization_Title + "</td></tr>" +
+        "    <tr><td><code>username</code></td><td>" + Autocomplete.Username + "</td></tr>" +
+        "    <tr><td><code>new-password</code></td><td>" + Autocomplete.New_Password + "</td></tr>" +
+        "    <tr><td><code>current-password</code></td><td>" + Autocomplete.Current_Password + "</td></tr>" +
+        "    <tr><td><code>bday</code></td><td>" + Autocomplete.Birthday + "</td></tr>" +
+        "    <tr><td><code>bday-day-name</code></td><td>" + Autocomplete.Birthday_Day + "</td></tr>" +
+        "    <tr><td><code>bday-month</code></td><td>" + Autocomplete.Birthday_Month + "</td></tr>" +
+        "    <tr><td><code>bday-year</code></td><td>" + Autocomplete.Birthday_Year + "</td></tr>" +
+        "    <tr><td><code>sex</code></td><td>" + Autocomplete.Sex + "</td></tr>" +
+        "    <tr><td><code>one-time-code</code></td><td>" + Autocomplete.One_Time_Code + "</td></tr>" +
+        "    <tr><td><code>organization</code></td><td>" + Autocomplete.Organization + "</td></tr>" +
+        "    <tr><td><code>cc-name</code></td><td>" + Autocomplete.CC_Name + "</td></tr>" +
+        "    <tr><td><code>cc-given-name</code></td><td>" + Autocomplete.CC_Given_Name + "</td></tr>" +
+        "    <tr><td><code>cc-additional-name</code></td><td>" + Autocomplete.CC_Additional_Name + "</td></tr>" +
+        "    <tr><td><code>cc-family-name</code></td><td>" + Autocomplete.CC_Family_Name + "</td></tr>" +
+        "    <tr><td><code>cc-number</code></td><td>" + Autocomplete.CC_Number + "</td></tr>" +
+        "    <tr><td><code>cc-exp</code></td><td>" + Autocomplete.CC_Expiration + "</td></tr>" +
+        "    <tr><td><code>cc-exp-month</code></td><td>" + Autocomplete.CC_Expiration_Month + "</td></tr>" +
+        "    <tr><td><code>cc-exp-year</code></td><td>" + Autocomplete.CC_Expiration_Year + "</td></tr>" +
+        "    <tr><td><code>cc-csc</code></td><td>" + Autocomplete.CC_CSC + "</td></tr>" +
+        "    <tr><td><code>cc-type</code></td><td>" + Autocomplete.CC_Type + "</td></tr>" +
+        "    <tr><td><code>transaction-currency</code></td><td>" + Autocomplete.Transaction_Currency + "</td></tr>" +
+        "    <tr><td><code>transaction-amount</code></td><td>" + Autocomplete.Transaction_Amount + "</td></tr>" +
+        "    <tr><td><code>language</code></td><td>" + Autocomplete.Language + "</td></tr>" +
+        "    <tr><td><code>url</code></td><td>" + Autocomplete.URL + "</td></tr>" +
+        "    <tr><td><code>email</code></td><td>" + Autocomplete.Email + "</td></tr>" +
+        "    <tr><td><code>photo</code></td><td>" + Autocomplete.Photo + "</td></tr>" +
+        "    <tr><td><code>tel</code></td><td>" + Autocomplete.Telephone + "</td></tr>" +
+        "    <tr><td><code>tel-country-code</code></td><td>" + Autocomplete.Telephone_Country_Code + "</td></tr>" +
+        "    <tr><td><code>tel-national</code></td><td>" + Autocomplete.Telephone_National + "</td></tr>" +
+        "    <tr><td><code>tel-area-code</code></td><td>" + Autocomplete.Telephone_Area_Code + "</td></tr>" +
+        "    <tr><td><code>tel-local</code></td><td>" + Autocomplete.Telephone_Local + "</td></tr>" +
+        "    <tr><td><code>tel-local-prefix</code></td><td>" + Autocomplete.Telephone_Local_Prefix + "</td></tr>" +
+        "    <tr><td><code>tel-local-suffix</code></td><td>" + Autocomplete.Telephone_Local_Suffix + "</td></tr>" +
+        "    <tr><td><code>tel-extension</code></td><td>" + Autocomplete.Telephone_Extension + "</td></tr>" +
+        "    <tr><td><code>impp</code></td><td>" + Autocomplete.IMPP + "</td></tr>" +
         "  </table>" +
            myRelatedElements.autocomplete +
         "</div>"
@@ -1316,6 +1523,36 @@ function MiscellaneousAttributes() {
         "    <tr><td><code><em>File Name</em></code></td><td>" + Download.Description + "</td></tr>" +
         "  </table>" +
            myRelatedElements.download +
+        "</div>"
+    },
+
+    for: {
+      labelelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>for</code> attribute of the <code>&lt;label&gt;</code> tag specifies which specified element a label is bound to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a specified element in the same document</div>" +
+        "  <div>Example; <code>&lt;input id=\"<em>MyInput</em>\"&gt; &lt;label <b>for</b>=\"<em>MyInput</em>\"&gt;&lt;/label&gt;</code></div>" +
+        "  <div>A label can also be bound to an element by placing the element inside the <code>&lt;label&gt;</code> element</div>" +
+        "  <div>Example; <code>&lt;label&gt; &lt;input&gt; &lt;/label&gt;</code></div>" +
+           myRelatedElements.for +
+        "</div>"
+    },
+
+    form: {
+      fieldsetelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>form</code> attribute of the <code>&lt;fieldset&gt;</code> tag specifies the form the fieldset belongs to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
+        "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;fieldset <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/fieldset&gt;</code></div>" +
+           myRelatedElements.form +
+        "</div>",
+
+      labelelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>form</code> attribute of the <code>&lt;label&gt;</code> tag specifies the form the label belongs to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
+        "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;label <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/label&gt;</code></div>" +
+           myRelatedElements.form +
         "</div>"
     },
 
@@ -1467,6 +1704,17 @@ function MiscellaneousAttributes() {
     },
 
     name: {
+      fieldsetelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;fieldset&gt;</code> tag specifies the name for a fieldset</div>" +
+        "  <div>The <code>name</code> attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies the name of the fieldset</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
+        "</div>",
+
       formelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>name</code> attribute of the <code>&lt;form&gt;</code> tag specifies the name of a form</div>" +
@@ -3884,6 +4132,33 @@ function FieldsetEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function FieldsetDisabledAttributes() {
+  let myVisibility = document.getElementById("Fieldset-Disabled-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Fieldset-Disabled-Attributes").innerHTML = BooleanAttributes().disabled.fieldsetelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FieldsetFormAttributes() {
+  let myVisibility = document.getElementById("Fieldset-Form-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Fieldset-Form-Attributes").innerHTML = MiscellaneousAttributes().form.fieldsetelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function FieldsetNameAttributes() {
+  let myVisibility = document.getElementById("Fieldset-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Fieldset-Name-Attributes").innerHTML = MiscellaneousAttributes().name.fieldsetelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // LEGEND TAG //
 function LegendTag() {
   let myVisibility = document.getElementById("Legend-Tag");
@@ -3950,6 +4225,24 @@ function LabelEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function LabelForAttributes() {
+  let myVisibility = document.getElementById("Label-For-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Label-For-Attributes").innerHTML =  MiscellaneousAttributes().for.labelelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LabelFormAttributes() {
+  let myVisibility = document.getElementById("Label-Form-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Label-Form-Attributes").innerHTML =  MiscellaneousAttributes().form.labelelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // INPUT TAG //
 function InputTag() {
   let myVisibility = document.getElementById("Input-Tag");
@@ -3979,6 +4272,51 @@ function InputEventAttributes() {
     document.getElementById("Input-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputAcceptAttributes() {
+  let myVisibility = document.getElementById("Input-Accept-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Accept-Attributes").innerHTML = MiscellaneousAttributes().accept.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputAltAttributes() {
+  let myVisibility = document.getElementById("Input-Alt-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Alt-Attributes").innerHTML = MiscellaneousAttributes().alt.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputAutocompleteAttributes() {
+  let myVisibility = document.getElementById("Input-Autocomplete-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Autocomplete-Attributes").innerHTML = MiscellaneousAttributes().autocomplete.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputAutofocusAttributes() {
+  let myVisibility = document.getElementById("Input-Autofocus-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Autofocus-Attributes").innerHTML = BooleanAttributes().autofocus.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputCheckedAttributes() {
+  let myVisibility = document.getElementById("Input-Checked-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Checked-Attributes").innerHTML = BooleanAttributes().checked.inputelement;
   }
   else { myVisibility.style.display = "none"; }
 }
