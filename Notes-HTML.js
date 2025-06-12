@@ -399,12 +399,14 @@ function EventAttributes() {
 function BooleanAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    async     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    autofocus : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    checked   : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    defer     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    disabled  : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code></div>",
-    novalidate: "<div>Applied tag(s): <code>&lt;form&gt;</code></div>"
+    async         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    autofocus     : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    checked       : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    defer         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    disabled      : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;input&gt;</code></div>",
+    formnovalidate: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    multiple      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    novalidate    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>"
   };
 
   /* NOTES OF BOOLEAN ATTRIBUTES */
@@ -473,6 +475,35 @@ function BooleanAttributes() {
         "  <div>The <code>disabled</code> attribute of the <code>&lt;fieldset&gt;</code> tag specifies that a group of related form elements (a fieldset) should be disabled</div>" +
         "  <div>" + Disabled.Description + "</div>" +
            myRelatedElements.disabled +
+        "</div>",
+
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>disabled</code> attribute of the <code>&lt;input&gt;</code> tag specifies the <code>&lt;input&gt;</code> element should be disabled</div>" +
+        "  <div>" + Disabled.Description + "</div>" +
+        "  <div>Disabled <code>&lt;input&gt;</code> elements in a form will not be submitted</div>" +
+           myRelatedElements.disabled +
+        "</div>"
+    },
+
+    formnovalidate: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formnovalidate</code> attribute of the <code>&lt;input&gt;</code> tag specifies the input element should not be validated when submitted</div>" +
+        "  <div>The <code>formnovalidate</code> attribute overrides the <code>novalidate</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formnovalidate</code> attribute can be used with <code>type=\"submit\"</code></div>" +
+           myRelatedElements.formnovalidate +
+        "</div>"
+    },
+
+    multiple: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>multiple</code> attribute of the <code>&lt;input&gt;</code> tag specifies that the user is allowed to enter more than one value in the input element</div>" +
+        "  <div>The <code>multiple</code> attribute works with the following input types: email, and file</div>" +
+        "  <div>For <code>&lt;input type=\"file\"&gt;</code>: To select multiple files, hold down the <kbd>CTRL</kbd> or <kbd>SHIFT</kbd> key while selecting</div>" +
+        "  <div>For <code>&lt;input type=\"email\"&gt;</code>: Separate each email with a comma, like: mail@example.com, mail2@example.com, mail3@example.com in the email field</div>" +
+           myRelatedElements.multiple +
         "</div>"
     },
 
@@ -540,16 +571,53 @@ function CharacterAttributes(){
 }
 
 ///////////////////////////////
+// HTML DIMENSION ATTRIBUTES //
+///////////////////////////////
+function DimensionAttributes() {
+  /* LIST OF RELATED ELEMENTS */
+  const myRelatedElements = {
+    height: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
+  };
+
+  /* NOTES OF DIMENSION ATTRIBUTES */
+  const Dimension =
+    "Always specify both the <code>height</code> and <code>width</code> attributes for images<br>" +
+    "If height and width are set, the space required for the image is reserved when the page is loaded<br>" +
+    "However, without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it<br>" +
+    "The effect will be that the page layout will change during loading (while the images load)";
+
+  /* LIST OF DIMENSION ATTRIBUTES */
+  const myDimension = {
+    height: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>height</code> attribute of the <code>&lt;input&gt;</code> tag specifies the height of the input element</div>" +
+        "  <div>The <code>height</code> attribute is used only with <code>&lt;input type=\"image\"&gt;</code></div>" +
+        "  <div>" + Dimension + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Pixels</em></code></td><td>The height in pixels<br>Example; <code>&lt;input <b>height</b>=\"100\"&gt;</code></td></tr>" +
+        "  </table>" +
+           myRelatedElements.height +
+        "</div>"
+    }
+  };
+  return myDimension;
+}
+
+///////////////////////////////
 // HTML HYPERLINK ATTRIBUTES //
 ///////////////////////////////
 function HyperlinkAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    action: "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
-    cite  : "<div>Applied tag(s): <code>&lt;blockquote&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;q&gt;</code></div>",
-    href  : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code></div>",
-    target: "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;form&gt;</code></div>",
-    src   : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>"
+    action    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
+    cite      : "<div>Applied tag(s): <code>&lt;blockquote&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;q&gt;</code></div>",
+    formaction: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    formtarget: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    href      : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code></div>",
+    target    : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;form&gt;</code></div>",
+    src       : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>"
   };
 
   /* NOTES OF HYPERLINK ATTRIBUTES */
@@ -625,6 +693,39 @@ function HyperlinkAttributes() {
         "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
         "  </table>" +
            myRelatedElements.cite +
+        "</div>"
+    },
+
+    formaction: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formaction</code> attribute of the <code>&lt;input&gt;</code> tag specifies the URL of the file that will process the input control when the form is submitted</div>" +
+        "  <div>The <code>formaction</code> attribute overrides the <code>action</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formaction</code> attribute is used with <code>type=\"submit\" and type=\"image\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.formaction +
+        "</div>"
+    },
+
+    formtarget: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formtarget</code> attribute of the <code>&lt;input&gt;</code> tag specifies a name or a keyword that indicates where to display the response that is received after submitting the form</div>" +
+        "  <div>The <code>formtarget</code> attribute overrides the <code>target</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formtarget</code> attribute is used with <code>type=\"submit\" and type=\"image\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>_blank</code></td><td>" + Target.Blank + "</td></tr>" +
+        "    <tr><td><code>_parent</code></td><td>" + Target.Parent + "</td></tr>" +
+        "    <tr><td><code>_self</code></td><td>" + Target.Self + "</td></tr>" +
+        "    <tr><td><code>_top</code></td><td>" + Target.Top + "</td></tr>" +
+        "    <tr><td><code><em>Frame Name</em></code></td><td>" + Target.Frame_Name + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.formtarget +
         "</div>"
     },
 
@@ -732,6 +833,8 @@ function NetworkAttributes() {
   const myRelatedElements = {
     crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code></div>",
     enctype       : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
+    formenctype   : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    formmethod    : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     http_equiv    : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     integrity     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     method        : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
@@ -880,6 +983,38 @@ function NetworkAttributes() {
         "    <tr><td><code>text/plain</code></td><td>" + Enctype.Text + "</td></tr>" +
         "  </table>" +
            myRelatedElements.enctype +
+        "</div>"
+    },
+
+    formenctype: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formenctype</code> attribute of the <code>&lt;input&gt;</code> tag specifies how the form-data should be encoded when submitting it to the server</div>" +
+        "  <div>The <code>formenctype</code> attribute overrides the <code>enctype</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formenctype</code> attribute is used with <code>type=\"submit\" and type=\"image\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>application/x-www-form-urlencoded</code></td><td>" + Enctype.Application + "</td></tr>" +
+        "    <tr><td><code>multipart/form-data</code></td><td>" + Enctype.Multipart + "</td></tr>" +
+        "    <tr><td><code>text/plain</code></td><td>" + Enctype.Text + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.formenctype +
+        "</div>"
+    },
+
+    formmethod: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formmethod</code> attribute of the <code>&lt;input&gt;</code> tag specifiesthe HTTP method for sending form-data to the action URL</div>" +
+        "  <div>The <code>formmethod</code> attribute overrides the <code>method</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formmethod</code> attribute can be used with <code>type=\"submit\" and type=\"image\"</code></div>" +
+        "  <div>The form-data can be sent as URL variables (with <code>method=\"get\"</code>) or as HTTP post transaction (with <code>method=\"post\"</code>)</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>get</code></td><td>" + Method.Get + "</td></tr>" +
+        "    <tr><td><code>post</code></td><td>" + Method.Post + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.formmethod +
         "</div>"
     },
 
@@ -1080,27 +1215,125 @@ function TimeAttributes() {
   return myTime;
 }
 
+///////////////////////////
+// HTML VALUE ATTRIBUTES //
+///////////////////////////
+function ValueAttributes() {
+  /* LIST OF RELATED ELEMENTS */
+  const myRelatedElements = {
+    max      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    maxlength: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    min      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    minlength: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    pattern  : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
+  };
+
+  /* NOTES OF VALUE ATTRIBUTES */
+  const Value = {
+    Min_Max_Description: "It is recommended to use the <code>min</code> and <code>max</code> attributes together to create a range of legal values",
+    Min_Max_Input      : "The <code>min</code> and <code>max</code> attributes works with the following input types: number, range, date, datetime-local, month, time and week"
+  };
+
+  /* LIST OF VALUE ATTRIBUTES */
+  const myValue = {
+    max: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>max</code> attribute of the <code>&lt;input&gt;</code> tag specifies the maximum value for an input element</div>" +
+        "  <div>" + Value.Min_Max_Description + "</div>" +
+        "  <div>" + Value.Min_Max_Input + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the maximum value allowed</td></tr>" +
+        "    <tr><td><code><em>Date</em></code></td><td>Specifies the maximum date allowed</td></tr>" +
+        "  </table>" +
+           myRelatedElements.max +
+        "</div>"
+    },
+
+    maxlength: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>maxlength</code> attribute of the <code>&lt;input&gt;</code> tag specifies the maximum number of characters allowed in the input element</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the maximum of characters allowed<br>Default value is 524288</td></tr>" +
+        "  </table>" +
+           myRelatedElements.maxlength +
+        "</div>"
+    },
+
+    min: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>min</code> attribute of the <code>&lt;input&gt;</code> tag specifies the minimum value for an input element</div>" +
+        "  <div>" + Value.Min_Max_Description + "</div>" +
+        "  <div>" + Value.Min_Max_Input + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the maximum value allowed</td></tr>" +
+        "    <tr><td><code><em>Date</em></code></td><td>Specifies the maximum date allowed</td></tr>" +
+        "  </table>" +
+           myRelatedElements.min +
+        "</div>"
+    },
+
+    minlength: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>minlength</code> attribute of the <code>&lt;input&gt;</code> tag specifies the minimum number of characters required in the input element</div>" +
+        "  <div>The <code>minlength</code> attribute can be used with input type: text, search, url, tel, email, and password</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the minimum of characters required</td></tr>" +
+        "  </table>" +
+           myRelatedElements.minlength +
+        "</div>"
+    },
+
+    pattern: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>pattern</code> attribute of the <code>&lt;input&gt;</code> tag specifies a regular expression that the input element's value is checked against on form submission</div>" +
+        "  <div>The <code>pattern</code> attribute works with the following input types: text, date, search, url, tel, email, and password</div>" +
+        "  <div><b>Recommended</b> to use <code>title</code> attribute to describe the pattern to help the user</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Regular Expression</em></code></td><td>Specifies a regular expression that the input element's value is checked against</td></tr>" +
+        "  </table>" +
+           myRelatedElements.pattern +
+        "</div>"
+    }
+  };
+  return myValue;
+}
+
 ///////////////////////////////////
 // HTML MISCELLANEOUS ATTRIBUTES //
 ///////////////////////////////////
 function MiscellaneousAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    accept        : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    alt           : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    autocomplete  : "<div>Applied tag(s): <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code></div>",
-    content       : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
-    download      : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
-    for           : "<div>Applied tag(s): <code>&lt;label&gt;</code></div>",
-    form          : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;label&gt;</code></div>",
-    hreflang      : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></div>",
-    media         : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
-    name          : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;meta&gt;</code></div>",
-    nomodule      : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    rel           : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;link&gt;</code></div>",
-    sizes         : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
-    type          : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code></div>",
-    xlmns         : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
+    accept             : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    alt                : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    autocomplete       : "<div>Applied tag(s): <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code></div>",
+    content            : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+    dirname            : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    download           : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
+    for                : "<div>Applied tag(s): <code>&lt;label&gt;</code></div>",
+    form               : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code></div>",
+    hreflang           : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></div>",
+    list               : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    media              : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
+    name               : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;meta&gt;</code></div>",
+    nomodule           : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
+    placeholder        : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    popovertarget      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    popovertargetaction: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    rel                : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;link&gt;</code></div>",
+    sizes              : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    type               : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code></div>",
+    xlmns              : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
   };
 
   /* NOTES OF MISCELLANEOUS ATTRIBUTES */
@@ -1300,6 +1533,12 @@ function MiscellaneousAttributes() {
     Viewport:
       "Controls the viewport (the user's visible area of a web page)<br>" +
       "Example; <code>&lt;meta <b>name</b>=\"viewport\" content=\"width=device-width, initial-scale=1.0\"&gt;</code>"
+  };
+
+  const PopOverTargetAction = {
+    Hide  : "The popover element is hidden when user click the button",
+    Show  : "The popover element is showed when user click the button",
+    Toggle: "<b>[Default]</b> The popover element is toggled between hidding and showing when user click the button"
   };
 
   const Relation = {
@@ -1512,6 +1751,16 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    dirname: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>dirname</code> attribute of the <code>&lt;input&gt;</code> tag enables the submission of the text direction of the input field</div>" +
+        "  <div>The <code>dirname</code> attribute's value is always the name of the input field, followed by <code>\".dir\"</code></div>" +
+        "  <div>Example; <code>&lt;input name=\"<em>myName</em>\" <b>dirname</b>=\"<em>myName</em>.dir\"&gt;</code></div>" +
+           myRelatedElements.dirname +
+        "</div>"
+    },
+
     download: {
       anchorelement:
         "<div class=\"Box-Attributes\">" +
@@ -1544,6 +1793,14 @@ function MiscellaneousAttributes() {
         "  <div>The <code>form</code> attribute of the <code>&lt;fieldset&gt;</code> tag specifies the form the fieldset belongs to</div>" +
         "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
         "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;fieldset <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/fieldset&gt;</code></div>" +
+           myRelatedElements.form +
+        "</div>",
+
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>form</code> attribute of the <code>&lt;input&gt;</code> tag specifies the form the input belongs to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
+        "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;input <b>form</b>=\"<em>MyForm</em>\"&gt;</code></div>" +
            myRelatedElements.form +
         "</div>",
 
@@ -1581,6 +1838,15 @@ function MiscellaneousAttributes() {
         "    </tr>" +
         "  </table>" +
            myRelatedElements.hreflang +
+        "</div>"
+    },
+
+    list: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>list</code> attribute of the <code>&lt;input&gt;</code> tag refers to a <code>&lt;datalist&gt;</code> element that contains pre-defined options for an <code>&lt;input&gt;</code> element</div>" +
+        "  <div>Example; <code>&lt;input <b>list</b>=\"<em>myDatalist</em>\"&gt; &lt;datalist id=\"<em>myDatalist</em>\"&gt;&lt;/datalist&gt;</code></div>" +
+           myRelatedElements.list +
         "</div>"
     },
 
@@ -1726,6 +1992,18 @@ function MiscellaneousAttributes() {
            myRelatedElements.name +
         "</div>",
 
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;input&gt;</code> tag specifies the name of an input</div>" +
+        "  <div>The <code>name</code> attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted</div>" +
+        "  <div>Only form elements with a <code>name</code> attribute will have their values passed when submitting a form</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies the name of the input</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
+        "</div>",
+
       metaelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>name</code> attribute of the <code>&lt;meta&gt;</code> tag specifies the name for the metadata</div>" +
@@ -1754,6 +2032,49 @@ function MiscellaneousAttributes() {
         "    <tr><td><code>false</code></td><td>The script should not be executed in browsers supporting ES2015 modules</td></tr>" +
         "  </table>" +
            myRelatedElements.nomodule +
+        "</div>"
+    },
+
+    placeholder: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>placeholder</code> attribute of the <code>&lt;input&gt;</code> tag specifies a short hint that describes the expected value of an input field</div>" +
+        "  <div>The short hint is displayed in the input field before the user enters a value</div>" +
+        "  <div>The <code>placeholder</code> attribute works with the following input types: text, search, url, number, tel, email, and password</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>Specifies a short hint that describes the expected value of the input field</td></tr>" +
+        "  </table>" +
+           myRelatedElements.placeholder +
+        "</div>"
+    },
+
+    popovertarget: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>popovertarget</code> attribute of the <code>&lt;input&gt;</code> tag specifies the <code>popover</code> element with the specified id, and toggle between showing and hiding it</div>" +
+        "  <div>The <code>popovertarget</code> only works when <code>type=\"button\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>ID</em></code></td><td>The id of the popover element related to this button</td></tr>" +
+        "  </table>" +
+           myRelatedElements.popovertarget +
+        "</div>"
+    },
+
+    popovertargetaction: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>popovertargetaction</code> attribute of the <code>&lt;input&gt;</code> tag allows user to define what happens when the button is clicked</div>" +
+        "  <div>The <code>popovertargetaction</code> only works when <code>type=\"button\"</code></div>" +
+        "  <div>If the <code>popovertargetaction</code> attribute is not specified, the default \"toggle\" value will be used</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>hide</code></td><td>" + PopOverTargetAction.Hide + "</td></tr>" +
+        "    <tr><td><code>show</code></td><td>" + PopOverTargetAction.Show + "</td></tr>" +
+        "    <tr><td><code>toggle</code></td><td>" + PopOverTargetAction.Toggle + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.popovertargetaction +
         "</div>"
     },
 
@@ -4317,6 +4638,186 @@ function InputCheckedAttributes() {
   if (myVisibility.style.display === "none") {
     myVisibility.style.display = "block";
     document.getElementById("Input-Checked-Attributes").innerHTML = BooleanAttributes().checked.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputDirnameAttributes() {
+  let myVisibility = document.getElementById("Input-Dirname-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Dirname-Attributes").innerHTML = MiscellaneousAttributes().dirname.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputDisabledAttributes() {
+  let myVisibility = document.getElementById("Input-Disabled-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Disabled-Attributes").innerHTML = BooleanAttributes().disabled.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputFormAttributes() {
+  let myVisibility = document.getElementById("Input-Form-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Form-Attributes").innerHTML = MiscellaneousAttributes().form.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputFormactionAttributes() {
+  let myVisibility = document.getElementById("Input-Formaction-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Formaction-Attributes").innerHTML = HyperlinkAttributes().formaction.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputFormenctypeAttributes() {
+  let myVisibility = document.getElementById("Input-Formenctype-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Formenctype-Attributes").innerHTML = NetworkAttributes().formenctype.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputFormmethodAttributes() {
+  let myVisibility = document.getElementById("Input-Formmethod-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Formmethod-Attributes").innerHTML = NetworkAttributes().formmethod.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputFormnovalidateAttributes() {
+  let myVisibility = document.getElementById("Input-Formnovalidate-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Formnovalidate-Attributes").innerHTML = BooleanAttributes().formnovalidate.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputFormtargetAttributes() {
+  let myVisibility = document.getElementById("Input-Formtarget-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Formtarget-Attributes").innerHTML = HyperlinkAttributes().formtarget.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputHeightAttributes() {
+  let myVisibility = document.getElementById("Input-Height-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Height-Attributes").innerHTML = DimensionAttributes().height.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputListAttributes() {
+  let myVisibility = document.getElementById("Input-List-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-List-Attributes").innerHTML = MiscellaneousAttributes().list.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputMaxAttributes() {
+  let myVisibility = document.getElementById("Input-Max-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Max-Attributes").innerHTML = ValueAttributes().max.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputMaxlengthAttributes() {
+  let myVisibility = document.getElementById("Input-Maxlength-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Maxlength-Attributes").innerHTML = ValueAttributes().maxlength.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputMinAttributes() {
+  let myVisibility = document.getElementById("Input-Min-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Min-Attributes").innerHTML = ValueAttributes().min.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputMinlengthAttributes() {
+  let myVisibility = document.getElementById("Input-Minlength-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Minlength-Attributes").innerHTML = ValueAttributes().minlength.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputMultipleAttributes() {
+  let myVisibility = document.getElementById("Input-Multiple-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Multiple-Attributes").innerHTML = BooleanAttributes().multiple.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputNameAttributes() {
+  let myVisibility = document.getElementById("Input-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Name-Attributes").innerHTML = MiscellaneousAttributes().name.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputPatternAttributes() {
+  let myVisibility = document.getElementById("Input-Pattern-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Pattern-Attributes").innerHTML = ValueAttributes().pattern.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputPlaceholderAttributes() {
+  let myVisibility = document.getElementById("Input-Placeholder-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Placeholder-Attributes").innerHTML = MiscellaneousAttributes().placeholder.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputPopovertargetAttributes() {
+  let myVisibility = document.getElementById("Input-Popovertarget-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Popovertarget-Attributes").innerHTML = MiscellaneousAttributes().popovertarget.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputPopovertargetactionAttributes() {
+  let myVisibility = document.getElementById("Input-Popovertargetaction-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Popovertargetaction-Attributes").innerHTML = MiscellaneousAttributes().popovertargetaction.inputelement;
   }
   else { myVisibility.style.display = "none"; }
 }
