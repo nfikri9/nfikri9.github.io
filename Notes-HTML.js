@@ -400,13 +400,15 @@ function BooleanAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
     async         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    autofocus     : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    autofocus     : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     checked       : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     defer         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    disabled      : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;input&gt;</code></div>",
+    disabled      : "<div>Applied tag(s): <code>&lt;fieldset&gt;, &lt;input&gt;, &lt;textarea&gt;</code></div>",
     formnovalidate: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     multiple      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    novalidate    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>"
+    novalidate    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
+    readonly      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
+    required      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>"
   };
 
   /* NOTES OF BOOLEAN ATTRIBUTES */
@@ -446,6 +448,12 @@ function BooleanAttributes() {
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>autofocus</code> attribute of the <code>&lt;input&gt;</code> tag specifies that an <code>&lt;input&gt;</code> element should automatically get focus when the page loads</div>" +
            myRelatedElements.autofocus +
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>autofocus</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies the text area should automatically get focus when the page loads</div>" +
+           myRelatedElements.autofocus +
         "</div>"
     },
 
@@ -483,7 +491,14 @@ function BooleanAttributes() {
         "  <div>" + Disabled.Description + "</div>" +
         "  <div>Disabled <code>&lt;input&gt;</code> elements in a form will not be submitted</div>" +
            myRelatedElements.disabled +
-        "</div>"
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>disabled</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies that the text area should be disabled</div>" +
+        "  <div>" + Disabled.Description + "</div>" +
+           myRelatedElements.disabled +
+        "</div>",
     },
 
     formnovalidate: {
@@ -512,6 +527,42 @@ function BooleanAttributes() {
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>novalidate</code> attribute of the <code>&lt;form&gt;</code> tag specifies that the form-data (input) should not be validated when submitted</div>" +
            myRelatedElements.novalidate +
+        "</div>"
+    },
+
+    readonly: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>readonly</code> attribute of the <code>&lt;input&gt;</code> tag specifies that an input field is read-only</div>" +
+        "  <div>A read-only input field cannot be modified, however, a user can tab to it, highlight it, and copy the text from it</div>" +
+        "  <div>The <code>readonly</code> attribute can be set to keep a user from changing the value until some other conditions have been met (like selecting a checkbox, etc.)</div>" +
+        "  <div>Then, a JavaScript can remove the readonly value, and make the input field editable</div>" +
+        "  <div>A form will still submit an input field that is readonly, but will not submit an input field that is disabled</div>" +
+           myRelatedElements.readonly +
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>readonly</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies that a text area field is read-only</div>" +
+        "  <div>A read-only text area field cannot be modified, however, a user can tab to it, highlight it, and copy the text from it</div>" +
+        "  <div>The <code>readonly</code> attribute can be set to keep a user from using a text area until some other condition has been met (like selecting a checkbox, etc.)</div>" +
+        "  <div>Then, a JavaScript can remove the readonly value, and make the text area field editable</div>" +
+           myRelatedElements.readonly +
+        "</div>"
+    },
+
+    required: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>required</code> attribute of the <code>&lt;input&gt;</code> tag specifies that an input field must be filled out before submitting the form</div>" +
+        "  <div>The <code>required</code> attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file</div>" +
+           myRelatedElements.required +
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>required</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies that a text area field must be filled out before submitting the form</div>" +
+           myRelatedElements.required +
         "</div>"
     }
   };
@@ -576,7 +627,11 @@ function CharacterAttributes(){
 function DimensionAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    height: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
+    cols  : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
+    height: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    rows  : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
+    size  : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    width : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
   };
 
   /* NOTES OF DIMENSION ATTRIBUTES */
@@ -588,6 +643,19 @@ function DimensionAttributes() {
 
   /* LIST OF DIMENSION ATTRIBUTES */
   const myDimension = {
+    cols: {
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>cols</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies the visible width of a text area</div>" +
+        "  <div>The size of a text area can also be set by the CSS <code>height</code> and <code>width</code> properties</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the width of the text area<br>Default value is 20</td></tr>" +
+        "  </table>" +
+           myRelatedElements.cols +
+        "</div>"
+    },
+
     height: {
       inputelement:
         "<div class=\"Box-Attributes\">" +
@@ -599,6 +667,46 @@ function DimensionAttributes() {
         "    <tr><td><code><em>Pixels</em></code></td><td>The height in pixels<br>Example; <code>&lt;input <b>height</b>=\"100\"&gt;</code></td></tr>" +
         "  </table>" +
            myRelatedElements.height +
+        "</div>"
+    },
+
+    rows: {
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>rows</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies the visible height of a text area</div>" +
+        "  <div>The size of a text area can also be set by the CSS <code>height</code> and <code>width</code> properties</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the height of the text area<br>Default value is 2</td></tr>" +
+        "  </table>" +
+           myRelatedElements.rows +
+        "</div>"
+    },
+
+    size: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>size</code> attribute of the <code>&lt;input&gt;</code> tag specifies the visible width, in characters, of an input element</div>" +
+        "  <div>The <code>size</code> attribute works with the following input types: text, search, tel, url, email, and password</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the width of an input element, in characters<br>Default value is 20</td></tr>" +
+        "  </table>" +
+           myRelatedElements.size +
+        "</div>"
+    },
+
+    width: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>width</code> attribute of the <code>&lt;input&gt;</code> tag specifies  the width of the input element</div>" +
+        "  <div>The <code>width</code> attribute is used only with <code>&lt;input type=\"image\"&gt;</code></div>" +
+        "  <div>" + Dimension + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Pixels</em></code></td><td>The width in pixels<br>Example; <code>&lt;input <b>width</b>=\"100\"&gt;</code></td></tr>" +
+        "  </table>" +
+           myRelatedElements.width +
         "</div>"
     }
   };
@@ -612,12 +720,12 @@ function HyperlinkAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
     action    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
-    cite      : "<div>Applied tag(s): <code>&lt;blockquote&gt;</code>, <code>&lt;del&gt;</code>, <code>&lt;ins&gt;</code>, <code>&lt;q&gt;</code></div>",
+    cite      : "<div>Applied tag(s): <code>&lt;blockquote&gt;, &lt;del&gt;, &lt;ins&gt;, &lt;q&gt;</code></div>",
     formaction: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     formtarget: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    href      : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;link&gt;</code></div>",
-    target    : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;form&gt;</code></div>",
-    src       : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>"
+    href      : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;base&gt;, &lt;link&gt;</code></div>",
+    target    : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;base&gt;, &lt;form&gt;</code></div>",
+    src       : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;script&gt;</code></div>"
   };
 
   /* NOTES OF HYPERLINK ATTRIBUTES */
@@ -766,6 +874,18 @@ function HyperlinkAttributes() {
     },
 
     src: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>src</code> attribute of the <code>&lt;input&gt;</code> tag specifies the URL of the image to use as a submit button</div>" +
+        "  <div>The <code>src</code> attribute can only be used with (and is required for) <code>&lt;input type=\"image\"&gt;</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.src +
+        "</div>",
+
       scriptelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>src</code> attribute of the <code>&lt;script&gt;</code> tag specifies the URL of an external script file</div>" +
@@ -831,7 +951,7 @@ function HyperlinkAttributes() {
 function NetworkAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code></div>",
+    crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;, &lt;script&gt;</code></div>",
     enctype       : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     formenctype   : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     formmethod    : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
@@ -839,7 +959,7 @@ function NetworkAttributes() {
     integrity     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     method        : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     ping          : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
-    referrerpolicy: "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code></div>"
+    referrerpolicy: "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;, &lt;script&gt;</code></div>"
   };
 
   /* NOTES OF NETWORK ATTRIBUTES */
@@ -1154,7 +1274,7 @@ function NetworkAttributes() {
 function TimeAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    datetime: "<div>Applied tag(s): <code>&lt;del&gt;</code>, <code>&lt;ins&gt;, <code>&lt;time&gt;</code></div>"
+    datetime: "<div>Applied tag(s): <code>&lt;del&gt;, &lt;ins&gt;, &lt;time&gt;</code></div>"
   };
 
   /* NOTES OF TIME ATTRIBUTES */
@@ -1177,7 +1297,7 @@ function TimeAttributes() {
       "<code><em>S</em></code> = Represents a prefix for \"seconds\"<br>"
   };
 
-  /* LIST OF BOOLEAN ATTRIBUTES */
+  /* LIST OF TIME ATTRIBUTES */
   const myTime = {
     datetime: {
       deleteelement:
@@ -1222,10 +1342,12 @@ function ValueAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
     max      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    maxlength: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    maxlength: "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     min      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     minlength: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    pattern  : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
+    pattern  : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    step     : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    value    : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
   };
 
   /* NOTES OF VALUE ATTRIBUTES */
@@ -1255,6 +1377,16 @@ function ValueAttributes() {
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>maxlength</code> attribute of the <code>&lt;input&gt;</code> tag specifies the maximum number of characters allowed in the input element</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the maximum of characters allowed<br>Default value is 524288</td></tr>" +
+        "  </table>" +
+           myRelatedElements.maxlength +
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>maxlength</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies the maximum number of characters allowed in the text area element</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Number</em></code></td><td>Specifies the maximum of characters allowed<br>Default value is 524288</td></tr>" +
@@ -1303,6 +1435,37 @@ function ValueAttributes() {
         "  </table>" +
            myRelatedElements.pattern +
         "</div>"
+    },
+
+    step: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>step</code> attribute of the <code>&lt;input&gt;</code> tag specifies the interval between legal numbers in an input element</div>" +
+        "  <div>Example; if <code>step=\"3\"</code>, legal numbers could be -3, 0, 3, 6, etc.</div>" +
+        "  <div>The <code>step</code> attribute can be used together with the <code>min</code> and <code>max</code> attributes to create a range of legal values</div>" +
+        "  <div>The <code>step</code> attribute works with the following input types: number, range, date, datetime-local, month, time and week</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the interval between legal numbers in the input field<br>Default is 1</td></tr>" +
+        "  </table>" +
+           myRelatedElements.step +
+        "</div>"
+    },
+
+    value: {
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>value</code> attribute of the <code>&lt;input&gt;</code> tag specifies specifies the value of an input element</div>" +
+        "  <div>For <code>\"button\", \"reset\", \"submit\"</code> &rarr; It defines the text on the button</div>" +
+        "  <div>For <code>\"text\", \"password\", \"hidden\"</code> &rarr; It defines the initial (default) value of the input field</div>" +
+        "  <div>For <code>\"checkbox\", \"radio\", \"image\"</code> &rarr; It defines the value associated with the input (this is also the value that is sent on submit)</div>" +
+        "  <div>The <code>value</code> attribute cannot be used with <code>&lt;input type=\"file\"&gt;</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>Specifies the value of the input element</td></tr>" +
+        "  </table>" +
+           myRelatedElements.value +
+        "</div>"
     }
   };
   return myValue;
@@ -1316,23 +1479,24 @@ function MiscellaneousAttributes() {
   const myRelatedElements = {
     accept             : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     alt                : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    autocomplete       : "<div>Applied tag(s): <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code></div>",
+    autocomplete       : "<div>Applied tag(s): <code>&lt;form&gt;, &lt;input&gt;</code></div>",
     content            : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
-    dirname            : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    dirname            : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     download           : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
     for                : "<div>Applied tag(s): <code>&lt;label&gt;</code></div>",
-    form               : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code></div>",
-    hreflang           : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code></div>",
+    form               : "<div>Applied tag(s): <code>&lt;fieldset&gt;, &lt;input&gt;, &lt;label&gt;, &lt;textarea&gt;</code></div>",
+    hreflang           : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;</code></div>",
     list               : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    media              : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code></div>",
-    name               : "<div>Applied tag(s): <code>&lt;fieldset&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;meta&gt;</code></div>",
+    media              : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;, &lt;style&gt;</code></div>",
+    name               : "<div>Applied tag(s): <code>&lt;fieldset&gt;, &lt;form&gt;, &lt;input&gt;, &lt;meta&gt;, &lt;textarea&gt;</code></div>",
     nomodule           : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    placeholder        : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    placeholder        : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     popovertarget      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     popovertargetaction: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    rel                : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;link&gt;</code></div>",
+    rel                : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;form&gt;, &lt;link&gt;</code></div>",
     sizes              : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
-    type               : "<div>Applied tag(s): <code>&lt;a&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code></div>",
+    type               : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;input&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt;</code></div>",
+    wrap               : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
     xlmns              : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
   };
 
@@ -1417,6 +1581,101 @@ function MiscellaneousAttributes() {
       "If the value is omitted, the original filename is used<br>" +
       "Downloaded file will use custom name: <code>&lt;a href=\"<em>OriginalFile</em>.jpg\" download=\"<em>CustomFile</em>\"&gt; &lt;img src=\"<em>OriginalFile</em>.jpg\"&gt; &lt;/a&gt;</code><br>" +
       "Downloaded file will use original name: <code>&lt;a href=\"<em>OriginalFile</em>.jpg\" download&gt; &lt;img src=\"<em>OriginalFile</em>.jpg\"&gt; &lt;/a&gt;</code>",
+  };
+
+  const Input = {
+    Button:
+      "Defines a clickable button (mostly used with a JavaScript to activate a script)",
+    Checkbox:
+      "Defines a checkbox<br>" +
+      "The checkbox is shown as a square box that is ticked (checked) when activated<br>" +
+      "Checkboxes are used to let a user select one or more options of a limited number of choices<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Color:
+      "Defines a color picker<br>" +
+      "The default value is <code>#000000</code> (black)<br>" +
+      "The value must be in seven-character hexadecimal notation<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Date:
+      "Defines a date control (year, month, day - no time specified)<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Datetime_Local:
+      "Defines a date and time control (year, month, day, time - no timezone specified<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Email:
+      "Defines a field for an e-mail address<br>" +
+      "The input value is automatically validated to ensure it is a properly formatted e-mail address<br>" +
+      "To define an e-mail field that allows multiple e-mail addresses, add the <code>multiple</code> attribute<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    File:
+      "Defines a file-select field and a \"Browse\" button (for file uploads)<br>" +
+      "To define a file-select field that allows multiple files to be selected, add the <code>multiple</code> attribute<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Hidden:
+      "Defines a hidden input field<br>" +
+      "A hidden field lets web developers include data that cannot be seen or modified by users when a form is submitted<br>" +
+      "A hidden field often stores what database record that needs to be updated when the form is submitted<br>" +
+      "While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or \"View Source\" functionality<br>" +
+      "Do not use hidden inputs as a form of security",
+    Image:
+      "Defines an image as the submit button<br>" +
+      "The path to the image is specified in the <code>src</code> attribute",
+    Month:
+      "Defines a month and year control (no timezone specified)<br>" +
+      "The format is <code><em>YYYY-MM</em></code><br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Number:
+      "Defines a field for entering a number<br>" +
+      "Use the <code>min, max, step, value</code> attributes to specify the restictions needed<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Password:
+      "Defines a password field (characters are masked)<br>" +
+      "Any forms involving sensitive information like passwords should be served over HTTPS<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Radio:
+      "Defines a radio button<br>" +
+      "Radio buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options)<br>" +
+      "Only one radio button in a group can be selected at the same time<br>" +
+      "The radio group must share the same name (the value of the <code>name</code> attribute) to be treated as a group<br>" +
+      "Once the radio group is created, selecting any radio button in that group automatically deselects any other selected radio button in the same group<br>" +
+      "User can have as many radio groups on a page as needed, as long as each group has its own name<br>" +
+      "The <code>value</code> attribute defines the unique value associated with each radio button<br>" +
+      "The value is not shown to the user, but is the value that is sent to the server on \"submit\" to identify which radio button that was selected<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Range:
+      "Defines a range control (like a slider control)<br>" +
+      "Default range is 0 to 100, however the <code>min, max, step, value</code> attributes can be used to specify the restictions needed<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Reset:
+      "Defines a reset button which resets all form values to its initial values<br>" +
+      "<b>Avoid</b> reset buttons in forms as tt is frustrating for users if they click them by mistake",
+    Search:
+      "Defines a text field for entering a search string<br>" +
+      "The most common name for search inputs is q<br>" +
+      "Remember to set a name for the search field, otherwise nothing will be submitted<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Submit:
+      "Defines a submit button which submits all form values to a form-handler<br>" +
+      "The form-handler is typically a server page with a script for processing the input data<br>" +
+      "The form-handler is specified in the form's <code>action</code> attribute",
+    Telephone:
+      "Defines a field for entering a telephone number<br>" +
+      "Browsers that do not support <code>tel</code> fall back to being a standard <code>text</code> input" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Text:
+      "<b>[Default]</b> Defines a single-line text field<br>" +
+      "The default width of the text field is 20 characters<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Time:
+      "Defines a control for entering a time (no timezone specified)<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    URL:
+      "Defines a field for entering a URL<br>" +
+      "The input value is automatically validated before the form can be submitted<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+    Week:
+      "Defines a week and year control (no timezone specified)<br>" +
+      "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
   };
 
   const Media = {
@@ -1595,18 +1854,20 @@ function MiscellaneousAttributes() {
     IANA_Media_Type:
       "Refer \"<a href=\"https://www.iana.org/assignments/media-types/media-types.xhtml\" target=\"_blank\"><code>IANA Media Type</code></a>\" " +
       "for a complete list of standard media types",
-
     Link:
       "Specifies the media type of the linked document<br>" +
       "The default link type is <code>text/css</code><br>",
-
     Script:
       "Specifies the type of the script<br>" +
       "The default script type is <code>text/javascript</code><br>",
-
     Style:
       "Specifies the Internet media type of the style sheet<br>" +
       "The default style type is <code>text/css</code>, which indicates that the content is CSS<br>"
+  };
+
+  const Wrap = {
+    Hard: "The text in the textarea is wrapped (contains newlines) when submitted in a form<br>When <code>hard</code> is used, the <code>cols</code> attribute must be specified",
+    Soft: "<b>[Default]</b> The text in the textarea is not wrapped when submitted in a form"
   };
 
   const XMLNS = {
@@ -1758,6 +2019,14 @@ function MiscellaneousAttributes() {
         "  <div>The <code>dirname</code> attribute's value is always the name of the input field, followed by <code>\".dir\"</code></div>" +
         "  <div>Example; <code>&lt;input name=\"<em>myName</em>\" <b>dirname</b>=\"<em>myName</em>.dir\"&gt;</code></div>" +
            myRelatedElements.dirname +
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>dirname</code> attribute of the <code>&lt;textarea&gt;</code> tag enables the submission of the text direction of the text area</div>" +
+        "  <div>The <code>dirname</code> attribute's value is always the name of the text area field, followed by <code>\".dir\"</code></div>" +
+        "  <div>Example; <code>&lt;textarea name=\"<em>myName</em>\" <b>dirname</b>=\"<em>myName</em>.dir\"&gt;</code></div>" +
+           myRelatedElements.dirname +
         "</div>"
     },
 
@@ -1809,6 +2078,14 @@ function MiscellaneousAttributes() {
         "  <div>The <code>form</code> attribute of the <code>&lt;label&gt;</code> tag specifies the form the label belongs to</div>" +
         "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
         "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;label <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/label&gt;</code></div>" +
+           myRelatedElements.form +
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>form</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies the form the text area belongs to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
+        "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;textarea <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/textarea&gt;</code></div>" +
            myRelatedElements.form +
         "</div>"
     },
@@ -2019,6 +2296,17 @@ function MiscellaneousAttributes() {
         "    <tr><td><code>viewport</code></td><td>" + Name.Viewport + "</td></tr>" +
         "  </table>" +
            myRelatedElements.name +
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies the name for a text area</div>" +
+        "  <div>The <code>name</code> attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies the name of the textarea</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
         "</div>"
     },
 
@@ -2044,6 +2332,17 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>String</em></code></td><td>Specifies a short hint that describes the expected value of the input field</td></tr>" +
+        "  </table>" +
+           myRelatedElements.placeholder +
+        "</div>",
+
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>placeholder</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies a short hint that describes the expected value of a text area field</div>" +
+        "  <div>The short hint is displayed in the text area field before the user enters a value</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>Specifies a short hint that describes the expected value of the text area field</td></tr>" +
         "  </table>" +
            myRelatedElements.placeholder +
         "</div>"
@@ -2172,7 +2471,38 @@ function MiscellaneousAttributes() {
         "  <div>The <code>type</code> attribute of the <code>&lt;a&gt;</code> tag specifies the media type of the linked document/resource</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code><em>Link Type</em></code></td>" + "<td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
+        "    <tr><td><code><em>Link Type</em></code></td><td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>",
+
+      inputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;input&gt;</code> tag specifies the type of input element to display</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>button</code></td><td>" + Input.Button + "</td></tr>" +
+        "    <tr><td><code>checkbox</code></td><td>" + Input.Checkbox + "</td></tr>" +
+        "    <tr><td><code>color</code></td><td>" + Input.Color + "</td></tr>" +
+        "    <tr><td><code>date</code></td><td>" + Input.Date + "</td></tr>" +
+        "    <tr><td><code>datetime-local</code></td><td>" + Input.Datetime_Local + "</td></tr>" +
+        "    <tr><td><code>email</code></td><td>" + Input.Email + "</td></tr>" +
+        "    <tr><td><code>file</code></td><td>" + Input.File + "</td></tr>" +
+        "    <tr><td><code>hidden</code></td><td>" + Input.Hidden + "</td></tr>" +
+        "    <tr><td><code>image</code></td><td>" + Input.Image + "</td></tr>" +
+        "    <tr><td><code>month</code></td><td>" + Input.Month + "</td></tr>" +
+        "    <tr><td><code>number</code></td><td>" + Input.Number + "</td></tr>" +
+        "    <tr><td><code>password</code></td><td>" + Input.Password + "</td></tr>" +
+        "    <tr><td><code>radio</code></td><td>" + Input.Radio + "</td></tr>" +
+        "    <tr><td><code>range</code></td><td>" + Input.Range + "</td></tr>" +
+        "    <tr><td><code>reset</code></td><td>" + Input.Reset + "</td></tr>" +
+        "    <tr><td><code>search</code></td><td>" + Input.Search + "</td></tr>" +
+        "    <tr><td><code>submit</code></td><td>" + Input.Submit + "</td></tr>" +
+        "    <tr><td><code>tel</code></td><td>" + Input.Telephone + "</td></tr>" +
+        "    <tr><td><code>text</code></td><td>" + Input.Text + "</td></tr>" +
+        "    <tr><td><code>time</code></td><td>" + Input.Time + "</td></tr>" +
+        "    <tr><td><code>url</code></td><td>" + Input.URL + "</td></tr>" +
+        "    <tr><td><code>week</code></td><td>" + Input.Week + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>",
@@ -2185,7 +2515,7 @@ function MiscellaneousAttributes() {
         "  <div>So, if <code>rel=\"stylesheet\"</code>, the browser will assume the type is <code>\"text/css\"</code></div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code><em>Script Type</em></code></td>" + "<td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
+        "    <tr><td><code><em>Script Type</em></code></td><td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>",
@@ -2195,7 +2525,7 @@ function MiscellaneousAttributes() {
         "  <div>The <code>type</code> attribute of the <code>&lt;script&gt;</code> tag specifies the type of the script</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code><em>Script Type</em></code></td>" + "<td>" + Type.Script + Type.IANA_Media_Type + "</td></tr>" +
+        "    <tr><td><code><em>Script Type</em></code></td><td>" + Type.Script + Type.IANA_Media_Type + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>",
@@ -2205,9 +2535,22 @@ function MiscellaneousAttributes() {
         "  <div>The <code>type</code> attribute of the <code>&lt;style&gt;</code> tag specifies the Internet media type (formerly known as MIME type)</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
-        "    <tr><td><code><em>Internet Media Type</em></code></td>" + "<td>" + Type.Style + Type.IANA_Media_Type + "</td></tr>" +
+        "    <tr><td><code><em>Internet Media Type</em></code></td><td>" + Type.Style + Type.IANA_Media_Type + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
+        "</div>"
+    },
+
+    wrap: {
+      textareaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>wrap</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies how the text in a text area is to be wrapped when submitted in a form</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>soft</code></td><td>" + Wrap.Soft + "</td></tr>" +
+        "    <tr><td><code>hard</code></td><td>" + Wrap.Hard + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.wrap +
         "</div>"
     },
 
@@ -4822,6 +5165,78 @@ function InputPopovertargetactionAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function InputReadonlyAttributes() {
+  let myVisibility = document.getElementById("Input-Readonly-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Readonly-Attributes").innerHTML = BooleanAttributes().readonly.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputRequiredAttributes() {
+  let myVisibility = document.getElementById("Input-Required-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Required-Attributes").innerHTML = BooleanAttributes().required.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputSizeAttributes() {
+  let myVisibility = document.getElementById("Input-Size-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Size-Attributes").innerHTML = DimensionAttributes().size.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputSrcAttributes() {
+  let myVisibility = document.getElementById("Input-Src-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Src-Attributes").innerHTML = HyperlinkAttributes().src.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputStepAttributes() {
+  let myVisibility = document.getElementById("Input-Step-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Step-Attributes").innerHTML = ValueAttributes().step.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputTypeAttributes() {
+  let myVisibility = document.getElementById("Input-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Type-Attributes").innerHTML = MiscellaneousAttributes().type.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputValueAttributes() {
+  let myVisibility = document.getElementById("Input-Value-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Value-Attributes").innerHTML = ValueAttributes().value.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function InputWidthAttributes() {
+  let myVisibility = document.getElementById("Input-Width-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Input-Width-Attributes").innerHTML = DimensionAttributes().width.inputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // TEXTAREA TAG //
 function TextareaTag() {
   let myVisibility = document.getElementById("Textarea-Tag");
@@ -4851,6 +5266,114 @@ function TextareaEventAttributes() {
     document.getElementById("Textarea-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaAutofocusAttributes() {
+  let myVisibility = document.getElementById("Textarea-Autofocus-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Autofocus-Attributes").innerHTML = BooleanAttributes().autofocus.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaColsAttributes() {
+  let myVisibility = document.getElementById("Textarea-Cols-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Cols-Attributes").innerHTML = DimensionAttributes().cols.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaDirnameAttributes() {
+  let myVisibility = document.getElementById("Textarea-Dirname-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Dirname-Attributes").innerHTML = MiscellaneousAttributes().dirname.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaDisabledAttributes() {
+  let myVisibility = document.getElementById("Textarea-Disabled-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Disabled-Attributes").innerHTML = BooleanAttributes().disabled.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaFormAttributes() {
+  let myVisibility = document.getElementById("Textarea-Form-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Form-Attributes").innerHTML = MiscellaneousAttributes().form.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaMaxlengthAttributes() {
+  let myVisibility = document.getElementById("Textarea-Maxlength-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Maxlength-Attributes").innerHTML = ValueAttributes().maxlength.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaNameAttributes() {
+  let myVisibility = document.getElementById("Textarea-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Name-Attributes").innerHTML = MiscellaneousAttributes().name.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaPlaceholderAttributes() {
+  let myVisibility = document.getElementById("Textarea-Placeholder-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Placeholder-Attributes").innerHTML = MiscellaneousAttributes().placeholder.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaReadonlyAttributes() {
+  let myVisibility = document.getElementById("Textarea-Readonly-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Readonly-Attributes").innerHTML = BooleanAttributes().readonly.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaRequiredAttributes() {
+  let myVisibility = document.getElementById("Textarea-Required-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Required-Attributes").innerHTML = BooleanAttributes().required.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaRowsAttributes() {
+  let myVisibility = document.getElementById("Textarea-Rows-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Rows-Attributes").innerHTML = DimensionAttributes().rows.textareaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TextareaWrapAttributes() {
+  let myVisibility = document.getElementById("Textarea-Wrap-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Textarea-Wrap-Attributes").innerHTML = MiscellaneousAttributes().wrap.textareaelement;
   }
   else { myVisibility.style.display = "none"; }
 }
