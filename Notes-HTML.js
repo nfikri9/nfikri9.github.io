@@ -400,15 +400,17 @@ function BooleanAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
     async         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    autofocus     : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
+    autofocus     : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     checked       : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     defer         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
-    disabled      : "<div>Applied tag(s): <code>&lt;fieldset&gt;, &lt;input&gt;, &lt;textarea&gt;</code></div>",
-    formnovalidate: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    multiple      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    disabled      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;optgroup&gt;, &lt;option&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
+    formnovalidate: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
+    multiple      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;</code></div>",
     novalidate    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     readonly      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
-    required      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>"
+    required      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
+    reversed      : "<div>Applied tag(s): <code>&lt;ol&gt;</code></div>",
+    selected      : "<div>Applied tag(s): <code>&lt;option&gt;</code></div>"
   };
 
   /* NOTES OF BOOLEAN ATTRIBUTES */
@@ -444,9 +446,21 @@ function BooleanAttributes() {
     },
 
     autofocus: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>autofocus</code> attribute of the <code>&lt;button&gt;</code> tag specifies that a button should automatically get focus when the page loads</div>" +
+           myRelatedElements.autofocus +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>autofocus</code> attribute of the <code>&lt;input&gt;</code> tag specifies that an <code>&lt;input&gt;</code> element should automatically get focus when the page loads</div>" +
+           myRelatedElements.autofocus +
+        "</div>",
+
+      selectelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>autofocus</code> attribute of the <code>&lt;select&gt;</code> tag specifies that the drop-down list should automatically get focus when the page loads</div>" +
            myRelatedElements.autofocus +
         "</div>",
 
@@ -478,6 +492,13 @@ function BooleanAttributes() {
     },
 
     disabled: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>disabled</code> attribute of the <code>&lt;button&gt;</code> tag specifies that the button should be disabled</div>" +
+        "  <div>" + Disabled.Description + "</div>" +
+           myRelatedElements.disabled +
+        "</div>",
+
       fieldsetelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>disabled</code> attribute of the <code>&lt;fieldset&gt;</code> tag specifies that a group of related form elements (a fieldset) should be disabled</div>" +
@@ -493,15 +514,44 @@ function BooleanAttributes() {
            myRelatedElements.disabled +
         "</div>",
 
+      optgroupelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>disabled</code> attribute of the <code>&lt;optgroup&gt;</code> tag specifies that an option-group should be disabled</div>" +
+        "  <div>" + Disabled.Description + "</div>" +
+           myRelatedElements.disabled +
+        "</div>",
+
+      optionelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>disabled</code> attribute of the <code>&lt;option&gt;</code> tag specifies that an option should be disabled</div>" +
+        "  <div>" + Disabled.Description + "</div>" +
+           myRelatedElements.disabled +
+        "</div>",
+
+      selectelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>disabled</code> attribute of the <code>&lt;select&gt;</code> tag specifies that the drop-down list should be disabled</div>" +
+        "  <div>" + Disabled.Description + "</div>" +
+           myRelatedElements.disabled +
+        "</div>",
+
       textareaelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>disabled</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies that the text area should be disabled</div>" +
         "  <div>" + Disabled.Description + "</div>" +
            myRelatedElements.disabled +
-        "</div>",
+        "</div>"
     },
 
     formnovalidate: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formnovalidate</code> attribute of the <code>&lt;button&gt;</code> tag specifies that the form-data should not be validated on submission</div>" +
+        "  <div>The <code>formnovalidate</code> attribute overrides the <code>novalidate</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formnovalidate</code> attribute can be used with <code>type=\"submit\"</code></div>" +
+           myRelatedElements.formnovalidate +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>formnovalidate</code> attribute of the <code>&lt;input&gt;</code> tag specifies the input element should not be validated when submitted</div>" +
@@ -518,6 +568,16 @@ function BooleanAttributes() {
         "  <div>The <code>multiple</code> attribute works with the following input types: email, and file</div>" +
         "  <div>For <code>&lt;input type=\"file\"&gt;</code>: To select multiple files, hold down the <kbd>CTRL</kbd> or <kbd>SHIFT</kbd> key while selecting</div>" +
         "  <div>For <code>&lt;input type=\"email\"&gt;</code>: Separate each email with a comma, like: mail@example.com, mail2@example.com, mail3@example.com in the email field</div>" +
+           myRelatedElements.multiple +
+        "</div>",
+
+      selectelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>multiple</code> attribute of the <code>&lt;select&gt;</code> tag specifies multiple options can be selected at once</div>" +
+        "  <div>Selecting multiple options vary in different operating systems and browsers</div>" +
+        "  <div>For windows: Hold down the <kbd>CTRL</kbd> button to select multiple options</div>" +
+        "  <div>For Mac: Hold down the <kbd>COMMAND</kbd> button to select multiple options</div>" +
+        "  <div>Since there are different way of doing this and the user have to be informed that multiple selection is available, it is more user-friendly to use checkboxes instead</div>" +
            myRelatedElements.multiple +
         "</div>"
     },
@@ -559,12 +619,36 @@ function BooleanAttributes() {
            myRelatedElements.required +
         "</div>",
 
+      selectelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>required</code> attribute of the <code>&lt;select&gt;</code> tag specifies that a drop-dwon list field must be filled out before submitting the form</div>" +
+           myRelatedElements.required +
+        "</div>",
+
       textareaelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>required</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies that a text area field must be filled out before submitting the form</div>" +
            myRelatedElements.required +
         "</div>"
-    }
+    },
+
+    reversed: {
+      olelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>reversed</code> attribute of the <code>&lt;ol&gt;</code> tag specifies that the list order should be descending instead of ascending</div>" +
+           myRelatedElements.reversed +
+        "</div>"
+    },
+
+    selected: {
+      optionelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>selected</code> attribute of the <code>&lt;option&gt;</code> tag specifies that an option should be pre-selected when the page loads</div>" +
+        "  <div>The pre-selected option will be displayed first in the drop-down list</div>" +
+        "  <div>The <code>selected</code> attribute can also be set after the page loads, with a JavaScript</div>" +
+           myRelatedElements.selected +
+        "</div>"
+    },
   };
   return myBoolean;
 }
@@ -630,7 +714,7 @@ function DimensionAttributes() {
     cols  : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
     height: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     rows  : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
-    size  : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    size  : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;</code></div>",
     width : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
   };
 
@@ -640,6 +724,11 @@ function DimensionAttributes() {
     "If height and width are set, the space required for the image is reserved when the page is loaded<br>" +
     "However, without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it<br>" +
     "The effect will be that the page layout will change during loading (while the images load)";
+
+  const Select = 
+    "The number of visible options in the drop-down list<br>" +
+    "Default value is 1<br>" +
+    "If the <code>multiple</code> attribute is present, the default value is 4";
 
   /* LIST OF DIMENSION ATTRIBUTES */
   const myDimension = {
@@ -693,6 +782,19 @@ function DimensionAttributes() {
         "    <tr><td><code><em>Number</em></code></td><td>Specifies the width of an input element, in characters<br>Default value is 20</td></tr>" +
         "  </table>" +
            myRelatedElements.size +
+        "</div>",
+
+      selectelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>size</code> attribute of the <code>&lt;select&gt;</code> tag specifies the number of visible options in a drop-down list</div>" +
+        "  <div>If the value of the <code>size</code> attribute is greater than 1, but lower than the total number of options in the list, " +
+        "       the browser will add a scroll bar to indicate that there are more options to view" +
+        "  </div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>" + Select + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.size +
         "</div>"
     },
 
@@ -721,8 +823,8 @@ function HyperlinkAttributes() {
   const myRelatedElements = {
     action    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     cite      : "<div>Applied tag(s): <code>&lt;blockquote&gt;, &lt;del&gt;, &lt;ins&gt;, &lt;q&gt;</code></div>",
-    formaction: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    formtarget: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    formaction: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
+    formtarget: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     href      : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;base&gt;, &lt;link&gt;</code></div>",
     target    : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;base&gt;, &lt;form&gt;</code></div>",
     src       : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;script&gt;</code></div>"
@@ -805,6 +907,19 @@ function HyperlinkAttributes() {
     },
 
     formaction: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formaction</code> attribute of the <code>&lt;button&gt;</code> tag specifies where to send the form-data when a form is submitted</div>" +
+        "  <div>The <code>formaction</code> attribute overrides the <code>action</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formaction</code> attribute is used with <code>type=\"submit\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.formaction +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>formaction</code> attribute of the <code>&lt;input&gt;</code> tag specifies the URL of the file that will process the input control when the form is submitted</div>" +
@@ -820,6 +935,22 @@ function HyperlinkAttributes() {
     },
 
     formtarget: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formtarget</code> attribute of the <code>&lt;button&gt;</code> tag specifies where to display the response after submitting the form</div>" +
+        "  <div>The <code>formtarget</code> attribute overrides the <code>target</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formtarget</code> attribute is used with <code>type=\"submit\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>_blank</code></td><td>" + Target.Blank + "</td></tr>" +
+        "    <tr><td><code>_parent</code></td><td>" + Target.Parent + "</td></tr>" +
+        "    <tr><td><code>_self</code></td><td>" + Target.Self + "</td></tr>" +
+        "    <tr><td><code>_top</code></td><td>" + Target.Top + "</td></tr>" +
+        "    <tr><td><code><em>Frame Name</em></code></td><td>" + Target.Frame_Name + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.formtarget +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>formtarget</code> attribute of the <code>&lt;input&gt;</code> tag specifies a name or a keyword that indicates where to display the response that is received after submitting the form</div>" +
@@ -953,8 +1084,8 @@ function NetworkAttributes() {
   const myRelatedElements = {
     crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;, &lt;script&gt;</code></div>",
     enctype       : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
-    formenctype   : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    formmethod    : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    formenctype   : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
+    formmethod    : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     http_equiv    : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     integrity     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     method        : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
@@ -1107,6 +1238,20 @@ function NetworkAttributes() {
     },
 
     formenctype: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formenctype</code> attribute of the <code>&lt;button&gt;</code> tag specifies how form-data should be encoded before sending it to a server</div>" +
+        "  <div>The <code>formenctype</code> attribute overrides the <code>enctype</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formenctype</code> attribute is used with <code>type=\"submit\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>application/x-www-form-urlencoded</code></td><td>" + Enctype.Application + "</td></tr>" +
+        "    <tr><td><code>multipart/form-data</code></td><td>" + Enctype.Multipart + "</td></tr>" +
+        "    <tr><td><code>text/plain</code></td><td>" + Enctype.Text + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.formenctype +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>formenctype</code> attribute of the <code>&lt;input&gt;</code> tag specifies how the form-data should be encoded when submitting it to the server</div>" +
@@ -1123,6 +1268,20 @@ function NetworkAttributes() {
     },
 
     formmethod: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>formmethod</code> attribute of the <code>&lt;button&gt;</code> tag specifiesthe HTTP method for sending form-data to the action URL</div>" +
+        "  <div>The <code>formmethod</code> attribute overrides the <code>method</code> attribute of the <code>&lt;form&gt;</code> element</div>" +
+        "  <div>The <code>formmethod</code> attribute can be used with <code>type=\"submit\"</code></div>" +
+        "  <div>The form-data can be sent as URL variables (with <code>method=\"get\"</code>) or as HTTP post transaction (with <code>method=\"post\"</code>)</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>get</code></td><td>" + Method.Get + "</td></tr>" +
+        "    <tr><td><code>post</code></td><td>" + Method.Post + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.formmethod +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>formmethod</code> attribute of the <code>&lt;input&gt;</code> tag specifiesthe HTTP method for sending form-data to the action URL</div>" +
@@ -1341,16 +1500,23 @@ function TimeAttributes() {
 function ValueAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    max      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    high     : "<div>Applied tag(s): <code>&lt;meter&gt;</code></div>",
+    low      : "<div>Applied tag(s): <code>&lt;meter&gt;</code></div>",
+    max      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;meter&gt;, &lt;progress&gt;</code></div>",
     maxlength: "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
-    min      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    min      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;meter&gt;</code></div>",
     minlength: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    optimum  : "<div>Applied tag(s): <code>&lt;meter&gt;</code></div>",
     pattern  : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     step     : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    value    : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
+    value    : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;, &lt;li&gt;, &lt;meter&gt;, &lt;option&gt;, &lt;progress&gt;</code></div>"
   };
 
   /* NOTES OF VALUE ATTRIBUTES */
+  const Floating_Point =
+    "A floating point number that specifies how much work the task requires in total before it can be considered complete<br>" +
+    "Default value is 1";
+
   const Value = {
     Min_Max_Description: "It is recommended to use the <code>min</code> and <code>max</code> attributes together to create a range of legal values",
     Min_Max_Input      : "The <code>min</code> and <code>max</code> attributes works with the following input types: number, range, date, datetime-local, month, time and week"
@@ -1358,6 +1524,32 @@ function ValueAttributes() {
 
   /* LIST OF VALUE ATTRIBUTES */
   const myValue = {
+    high: {
+      meterelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>high</code> attribute of the <code>&lt;meter&gt;</code> tag specifies the range where the gauge's value is considered to be a high value</div>" +
+        "  <div>The <code>high</code> attribute value must be less than the <code>max</code> attribute value, and it also must be greater than the <code>low, min</code> attribute values</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies a floating point number that is considered to be a high value</td></tr>" +
+        "  </table>" +
+           myRelatedElements.high +
+        "</div>"
+    },
+
+    low: {
+      meterelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>low</code> attribute of the <code>&lt;meter&gt;</code> tag specifies the range where the gauge's value is considered to be a low value</div>" +
+        "  <div>The <code>low</code> attribute value must be greater than the <code>min</code> attribute value, and it also must be less than the <code>high, max</code> attribute values</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies a floating point number that is considered to be a low value</td></tr>" +
+        "  </table>" +
+           myRelatedElements.high +
+        "</div>"
+    },
+
     max: {
       inputelement:
         "<div class=\"Box-Attributes\">" +
@@ -1368,6 +1560,29 @@ function ValueAttributes() {
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Number</em></code></td><td>Specifies the maximum value allowed</td></tr>" +
         "    <tr><td><code><em>Date</em></code></td><td>Specifies the maximum date allowed</td></tr>" +
+        "  </table>" +
+           myRelatedElements.max +
+        "</div>",
+
+      meterelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>max</code> attribute of the <code>&lt;meter&gt;</code> tag specifies the upper bound of the gauge</div>" +
+        "  <div>The <code>max</code> attribute value must be greater than the <code>min</code> attribute value</div>" +
+        "  <div>If unspecified, the default value is 1</div>" +
+        "  <div>The <code>max</code> attribute, together with the <code>min</code> attribute, specifies the full range of the gauge</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>" + Floating_Point + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.max +
+        "</div>",
+
+      progresselement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>max</code> attribute of the <code>&lt;progress&gt;</code> tag specifies how much work the task requires in total</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>" + Floating_Point + "</td></tr>" +
         "  </table>" +
            myRelatedElements.max +
         "</div>"
@@ -1407,6 +1622,19 @@ function ValueAttributes() {
         "    <tr><td><code><em>Date</em></code></td><td>Specifies the maximum date allowed</td></tr>" +
         "  </table>" +
            myRelatedElements.min +
+        "</div>",
+
+      meterelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>min</code> attribute of the <code>&lt;meter&gt;</code> tag specifies the lower bound of the gauge</div>" +
+        "  <div>The <code>min</code> attribute value must be less than the <code>max</code> attribute value</div>" +
+        "  <div>If unspecified, the default value is 0</div>" +
+        "  <div>The <code>min</code> attribute, together with the <code>max</code> attribute, specifies the full range of the gauge</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>" + Floating_Point + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.min +
         "</div>"
     },
 
@@ -1420,6 +1648,18 @@ function ValueAttributes() {
         "    <tr><td><code><em>Number</em></code></td><td>Specifies the minimum of characters required</td></tr>" +
         "  </table>" +
            myRelatedElements.minlength +
+        "</div>"
+    },
+
+    optimum: {
+      meterelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>optimum</code> attribute of the <code>&lt;meter&gt;</code> tag specifies the range where the gauge's value is considered to be an optimal value</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies a floating point number that is the optimal value of the gauge</td></tr>" +
+        "  </table>" +
+           myRelatedElements.optimum +
         "</div>"
     },
 
@@ -1453,9 +1693,20 @@ function ValueAttributes() {
     },
 
     value: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>value</code> attribute of the <code>&lt;button&gt;</code> tag specifies the initial value for a button in an HTML form</div>" +
+        "  <div>In a form, the button and its value is only submitted if the button itself was used to submit the form</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>The initial value of the button</td></tr>" +
+        "  </table>" +
+           myRelatedElements.value +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
-        "  <div>The <code>value</code> attribute of the <code>&lt;input&gt;</code> tag specifies specifies the value of an input element</div>" +
+        "  <div>The <code>value</code> attribute of the <code>&lt;input&gt;</code> tag specifies the value of an input element</div>" +
         "  <div>For <code>\"button\", \"reset\", \"submit\"</code> &rarr; It defines the text on the button</div>" +
         "  <div>For <code>\"text\", \"password\", \"hidden\"</code> &rarr; It defines the initial (default) value of the input field</div>" +
         "  <div>For <code>\"checkbox\", \"radio\", \"image\"</code> &rarr; It defines the value associated with the input (this is also the value that is sent on submit)</div>" +
@@ -1463,6 +1714,52 @@ function ValueAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>String</em></code></td><td>Specifies the value of the input element</td></tr>" +
+        "  </table>" +
+           myRelatedElements.value +
+        "</div>",
+
+      lielement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>value</code> attribute of the <code>&lt;li&gt;</code> tag specifies the value of a list item</div>" +
+        "  <div>The following list items will increment from that number</div>" +
+        "  <div>The value must be a number and can only be used in ordered lists</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the value of the list item</td></tr>" +
+        "  </table>" +
+           myRelatedElements.value +
+        "</div>",
+
+      meterelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>value</code> attribute of the <code>&lt;meter&gt;</code> tag specifies the current, or \"measured\" value of the gauge</div>" +
+        "  <div>The <code>value</code> attribute must be between the <code>min</code> and <code>max</code> attribute values</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td><b>Required</b>Specifies a floating point number that is the current value of the gauge</td></tr>" +
+        "  </table>" +
+           myRelatedElements.value +
+        "</div>",
+
+      optionelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>value</code> attribute of the <code>&lt;option&gt;</code> tag specifies the value to be sent to a server when a form is submitted</div>" +
+        "  <div>The content between the opening and closing of <code>&lt;option&gt;</code> tags is what the browsers will display in a drop-down list</div>" +
+        "  <div>However, the value of the <code>value</code> attribute is what will be sent to the server when a form is submitted</div>" +
+        "  <div>If the <code>value</code> attribute is not specified, the content will be passed as a value instead</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>The value to be sent to the server</td></tr>" +
+        "  </table>" +
+           myRelatedElements.value +
+        "</div>",
+
+      progresselement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>value</code> attribute of the <code>&lt;progress&gt;</code> tag specifies how much of the task has been completed</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>A floating point number that specifies how much work the task requires in total before it can be considered complete</td></tr>" +
         "  </table>" +
            myRelatedElements.value +
         "</div>"
@@ -1477,25 +1774,33 @@ function ValueAttributes() {
 function MiscellaneousAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
+    abbr               : "<div>Applied tag(s): <code>&lt;th&gt;</code></div>",
     accept             : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     alt                : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     autocomplete       : "<div>Applied tag(s): <code>&lt;form&gt;, &lt;input&gt;</code></div>",
+    colspan            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     content            : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
     dirname            : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     download           : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
-    for                : "<div>Applied tag(s): <code>&lt;label&gt;</code></div>",
-    form               : "<div>Applied tag(s): <code>&lt;fieldset&gt;, &lt;input&gt;, &lt;label&gt;, &lt;textarea&gt;</code></div>",
+    for                : "<div>Applied tag(s): <code>&lt;label&gt;, &lt;output&gt;</code></div>",
+    form               : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;label&gt;, &lt;meter&gt;, &lt;output&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
+    headers            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     hreflang           : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;</code></div>",
+    label              : "<div>Applied tag(s): <code>&lt;optgroup&gt;, &lt;option&gt;</code></div>",
     list               : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     media              : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;, &lt;style&gt;</code></div>",
-    name               : "<div>Applied tag(s): <code>&lt;fieldset&gt;, &lt;form&gt;, &lt;input&gt;, &lt;meta&gt;, &lt;textarea&gt;</code></div>",
+    name               : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;form&gt;, &lt;input&gt;, &lt;meta&gt;, &lt;output&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     nomodule           : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     placeholder        : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
-    popovertarget      : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    popovertargetaction: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    popovertarget      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
+    popovertargetaction: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     rel                : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;form&gt;, &lt;link&gt;</code></div>",
+    rowspan            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
+    scope              : "<div>Applied tag(s): <code>&lt;th&gt;</code></div>",
     sizes              : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
-    type               : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;input&gt;, &lt;link&gt;, &lt;script&gt;, &lt;style&gt;</code></div>",
+    span               : "<div>Applied tag(s): <code>&lt;col&gt;, &lt;colgroup&gt;</code></div>",
+    start              : "<div>Applied tag(s): <code>&lt;ol&gt;</code></div>",
+    type               : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;button&gt;, &lt;input&gt;, &lt;link&gt;, &lt;ol&gt;, &lt;script&gt;, &lt;style&gt;</code></div>",
     wrap               : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
     xlmns              : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
   };
@@ -1883,6 +2188,18 @@ function MiscellaneousAttributes() {
 
   /* LIST OF MISCELLANEOUS ATTRIBUTES */
   const myMiscellaneous = {
+    abbr: {
+      thelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>abbr</code> attribute of the <code>&lt;th&gt;</code> tag specifies a shorter version of the content in a header cell</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>A short description of the header cell content</td></tr>" +
+        "  </table>" +
+           myRelatedElements.abbr +
+        "</div>"
+    },
+
     accept: {
       inputelement:
         "<div class=\"Box-Attributes\">" +
@@ -1996,6 +2313,28 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    colspan: {
+      tdelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>colspan</code> attribute of the <code>&lt;td&gt;</code> tag defines the number of columns a data cell should span</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the number of columns a data cell should span</td></tr>" +
+        "  </table>" +
+           myRelatedElements.colspan +
+        "</div>",
+
+      thelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>colspan</code> attribute of the <code>&lt;th&gt;</code> tag defines the number of columns a header cell should span</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Sets the number of columns a header cell should span</td></tr>" +
+        "  </table>" +
+           myRelatedElements.colspan +
+        "</div>"
+    },
+
     content: {
       metaelement:
         "<div class=\"Box-Attributes\">" +
@@ -2053,10 +2392,24 @@ function MiscellaneousAttributes() {
         "  <div>A label can also be bound to an element by placing the element inside the <code>&lt;label&gt;</code> element</div>" +
         "  <div>Example; <code>&lt;label&gt; &lt;input&gt; &lt;/label&gt;</code></div>" +
            myRelatedElements.for +
+        "</div>",
+
+      outputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>for</code> attribute of the <code>&lt;output&gt;</code> tag specifies the relationship between the result of the calculation, and the elements used in the calculation</div>" +
+           myRelatedElements.for +
         "</div>"
     },
 
     form: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>form</code> attribute of the <code>&lt;button&gt;</code> tag specifies the form the button belongs to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
+        "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;button <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/button&gt;</code></div>" +
+           myRelatedElements.form +
+        "</div>",
+
       fieldsetelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>form</code> attribute of the <code>&lt;fieldset&gt;</code> tag specifies the form the fieldset belongs to</div>" +
@@ -2081,12 +2434,58 @@ function MiscellaneousAttributes() {
            myRelatedElements.form +
         "</div>",
 
+      meterelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>form</code> attribute of the <code>&lt;meter&gt;</code> tag specifies the form the meter belongs to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
+        "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;meter <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/meter&gt;</code></div>" +
+           myRelatedElements.form +
+        "</div>",
+
+      outputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>form</code> attribute of the <code>&lt;output&gt;</code> tag specifies the form the output belongs to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
+        "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;output <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/output&gt;</code></div>" +
+           myRelatedElements.form +
+        "</div>",
+
+      selectelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>form</code> attribute of the <code>&lt;select&gt;</code> tag specifies the form the drop-down list belongs to</div>" +
+        "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
+        "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;select <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/select&gt;</code></div>" +
+           myRelatedElements.form +
+        "</div>",
+
       textareaelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>form</code> attribute of the <code>&lt;textarea&gt;</code> tag specifies the form the text area belongs to</div>" +
         "  <div>The value of this attribute must be equal to the <code>id</code> attribute of a <code>&lt;form&gt;</code> element in the same document</div>" +
         "  <div>Example; <code>&lt;form id=\"<em>MyForm</em>\"&gt;&lt;/form&gt; &lt;textarea <b>form</b>=\"<em>MyForm</em>\"&gt;&lt;/textarea&gt;</code></div>" +
            myRelatedElements.form +
+        "</div>"
+    },
+
+    headers: {
+      tdelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>headers</code> attribute of the <code>&lt;td&gt;</code> tag specifies one or more header cells a data cell is related to</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>Specifies a space-separated list of id's to one or more header cells the data cell is related to</td></tr>" +
+        "  </table>" +
+           myRelatedElements.headers +
+        "</div>",
+
+      thelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>headers</code> attribute of the <code>&lt;th&gt;</code> tag specifies one or more header cells a header cell is related to</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>Specifies a space-separated list of id's to one or more header cells the header cell is related to</td></tr>" +
+        "  </table>" +
+           myRelatedElements.headers +
         "</div>"
     },
 
@@ -2115,6 +2514,29 @@ function MiscellaneousAttributes() {
         "    </tr>" +
         "  </table>" +
            myRelatedElements.hreflang +
+        "</div>"
+    },
+
+    label: {
+      optgroupelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>label</code> attribute of the <code>&lt;optgroup&gt;</code> tag specifies a label for an option-group</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>Specifies a label/description for the option-group</td></tr>" +
+        "  </table>" +
+           myRelatedElements.label +
+        "</div>",
+
+      optionelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>label</code> attribute of the <code>&lt;option&gt;</code> tag specifies a shorter version of an option</div>" +
+        "  <div>The shorter version will be displayed in the drop-down list</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>A shorter version for the option</td></tr>" +
+        "  </table>" +
+           myRelatedElements.label +
         "</div>"
     },
 
@@ -2247,6 +2669,19 @@ function MiscellaneousAttributes() {
     },
 
     name: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;button&gt;</code> tag specifies the name for a button</div>" +
+        "  <div>The <code>name</code> attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted</div>" +
+        "  <div>Several <code>&lt;button&gt;</code> elements can share the same name</div>" +
+        "  <div>This allows user to have several buttons with equal names, which can submit different values when used in a form</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies the name of the button</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
+        "</div>",
+
       fieldsetelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>name</code> attribute of the <code>&lt;fieldset&gt;</code> tag specifies the name for a fieldset</div>" +
@@ -2294,6 +2729,28 @@ function MiscellaneousAttributes() {
         "    <tr><td><code>generator</code></td><td>" + Name.Generator + "</td></tr>" +
         "    <tr><td><code>keywords</code></td><td>" + Name.Keywords + "</td></tr>" +
         "    <tr><td><code>viewport</code></td><td>" + Name.Viewport + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
+        "</div>",
+
+      outputelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;output&gt;</code> tag specifies the name for an output</div>" +
+        "  <div>The <code>name</code> attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies the name of the output</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
+        "</div>",
+
+      selectelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;select&gt;</code> tag specifies the name for a drop-down list</div>" +
+        "  <div>The <code>name</code> attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies the name of the drop-down list</td></tr>" +
         "  </table>" +
            myRelatedElements.name +
         "</div>",
@@ -2349,6 +2806,16 @@ function MiscellaneousAttributes() {
     },
 
     popovertarget: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>popovertarget</code> attribute of the <code>&lt;button&gt;</code> tag specifies the <code>popover</code> element with the specified id, and toggle between showing and hiding it</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>ID</em></code></td><td>The id of the popover element related to this button</td></tr>" +
+        "  </table>" +
+           myRelatedElements.popovertarget +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>popovertarget</code> attribute of the <code>&lt;input&gt;</code> tag specifies the <code>popover</code> element with the specified id, and toggle between showing and hiding it</div>" +
@@ -2362,6 +2829,19 @@ function MiscellaneousAttributes() {
     },
 
     popovertargetaction: {
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>popovertargetaction</code> attribute of the <code>&lt;button&gt;</code> tag allows user to define what happens when the button is clicked</div>" +
+        "  <div>If the <code>popovertargetaction</code> attribute is not specified, the default \"toggle\" value will be used</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>hide</code></td><td>" + PopOverTargetAction.Hide + "</td></tr>" +
+        "    <tr><td><code>show</code></td><td>" + PopOverTargetAction.Show + "</td></tr>" +
+        "    <tr><td><code>toggle</code></td><td>" + PopOverTargetAction.Toggle + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.popovertargetaction +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>popovertargetaction</code> attribute of the <code>&lt;input&gt;</code> tag allows user to define what happens when the button is clicked</div>" +
@@ -2443,6 +2923,43 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    rowspan: {
+      tdelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>rowspan</code> attribute of the <code>&lt;td&gt;</code> tag specifies the number of rows a data cell should span</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Sets the number of rows a data cell should span</td></tr>" +
+        "  </table>" +
+           myRelatedElements.rowspan +
+        "</div>",
+
+      thelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>rowspan</code> attribute of the <code>&lt;th&gt;</code> tag specifies the number of rows a header cell should span</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Sets the number of rows a header cell should span</td></tr>" +
+        "  </table>" +
+           myRelatedElements.rowspan +
+        "</div>"
+    },
+
+    scope: {
+      thelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>scope</code> attribute of the <code>&lt;th&gt;</code> tag specifies whether a header cell is a header for a column, row, or group of columns or rows</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>col</code></td><td>Specifies that the cell is a header for a column</td></tr>" +
+        "    <tr><td><code>colgroup</code></td><td>Specifies that the cell is a header for a group of columns</td></tr>" +
+        "    <tr><td><code>row</code></td><td>Specifies that the cell is a header for a row</td></tr>" +
+        "    <tr><td><code>rowgroup</code></td><td>Specifies that the cell is a header for a group of rows</td></tr>" +
+        "  </table>" +
+           myRelatedElements.scope +
+        "</div>"
+    },
+
     sizes: {
       linkelement:
         "<div class=\"Box-Attributes\">" +
@@ -2465,6 +2982,43 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    span: {
+      colelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>span</code> attribute of the <code>&lt;col&gt;</code> tag defines the number of columns a <code>&lt;col&gt;</code> element should span</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Sets the number of columns a <code>col</code> should span</td></tr>" +
+        "  </table>" +
+           myRelatedElements.span +
+        "</div>",
+
+      colgroupelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>span</code> attribute of the <code>&lt;colgroup&gt;</code> tag defines the number of columns a <code>&lt;colgroup&gt;</code> element should span</div>" +
+        "  <div>To define different properties to a column within a <code>&lt;colgroup&gt;</code>, use the <code>&lt;col&gt;</code> tag within the <code>&lt;colgroup&gt;</code> tag</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Sets the number of columns a column group should span</td></tr>" +
+        "  </table>" +
+           myRelatedElements.span +
+        "</div>"
+    },
+
+    start: {
+      olelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>start</code> attribute of the <code>&lt;ol&gt;</code> tag specifies the start value of the first list item in an ordered list</div>" +
+        "  <div>This value is always an integer, even when the numbering type is letters or romans</div>" +
+        "  <div>Example, to start counting list items from the letter \"c\" or the roman number \"iii\", use <code>&lt;ol start=\"3\"&gt;</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Number</em></code></td><td>Specifies the start value of the first list item in the ordered list</td></tr>" +
+        "  </table>" +
+           myRelatedElements.start +
+        "</div>"
+    },
+
     type: {
       anchorelement:
         "<div class=\"Box-Attributes\">" +
@@ -2472,6 +3026,19 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Link Type</em></code></td><td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>",
+
+      buttonelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;button&gt;</code> tag specifies the type of button</div>" +
+        "  <div>Always specify the type attribute for the <code>&lt;button&gt;</code> element</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>button</code></td><td>The button is a clickable button</td></tr>" +
+        "    <tr><td><code>submit</code></td><td>The button is a submit button (submits form-data)</td></tr>" +
+        "    <tr><td><code>reset</code></td><td>The button is a reset button (resets the form-data to its initial values)</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>",
@@ -2516,6 +3083,21 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Script Type</em></code></td><td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>",
+
+      olelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;ol&gt;</code> tag specifies the kind of marker to use in the list (letters or numbers)</div>" +
+        "  <div>The CSS list-style-type property offers more types than the <code>type</code> attribute</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>1</code></td><td><b>[Default]</b> Decimal numbers (1, 2, 3, 4, ...)</td></tr>" +
+        "    <tr><td><code>a</code></td><td>Alphabetically ordered list, lowercase (a, b, c, d, ...)</td></tr>" +
+        "    <tr><td><code>A</code></td><td>Alphabetically ordered list, uppercase (A, B, C, D, ...)</td></tr>" +
+        "    <tr><td><code>i</code></td><td>Roman numbers, lowercase (i, ii, iii, iv, ...)</td></tr>" +
+        "    <tr><td><code>I</code></td><td>Roman numbers, uppercase (I, II, III, IV), ...</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>",
@@ -5411,6 +5993,69 @@ function SelectEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function SelectAutofocusAttributes() {
+  let myVisibility = document.getElementById("Select-Autofocus-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Autofocus-Attributes").innerHTML = BooleanAttributes().autofocus.selectelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SelectDisabledAttributes() {
+  let myVisibility = document.getElementById("Select-Disabled-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Disabled-Attributes").innerHTML = BooleanAttributes().disabled.selectelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SelectFormAttributes() {
+  let myVisibility = document.getElementById("Select-Form-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Form-Attributes").innerHTML = MiscellaneousAttributes().form.selectelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SelectMultipleAttributes() {
+  let myVisibility = document.getElementById("Select-Multiple-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Multiple-Attributes").innerHTML = BooleanAttributes().multiple.selectelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SelectNameAttributes() {
+  let myVisibility = document.getElementById("Select-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Name-Attributes").innerHTML = MiscellaneousAttributes().name.selectelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SelectRequiredAttributes() {
+  let myVisibility = document.getElementById("Select-Required-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Required-Attributes").innerHTML = BooleanAttributes().required.selectelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SelectSizeAttributes() {
+  let myVisibility = document.getElementById("Select-Size-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Select-Size-Attributes").innerHTML = DimensionAttributes().size.selectelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // OPTION GROUP TAG //
 function OptgroupTag() {
   let myVisibility = document.getElementById("Optgroup-Tag");
@@ -5444,6 +6089,24 @@ function OptgroupEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function OptgroupDisabledAttributes() {
+  let myVisibility = document.getElementById("Optgroup-Disabled-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Optgroup-Disabled-Attributes").innerHTML = BooleanAttributes().disabled.optgroupelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptgroupLabelAttributes() {
+  let myVisibility = document.getElementById("Optgroup-Label-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Optgroup-Label-Attributes").innerHTML = MiscellaneousAttributes().label.optgroupelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // OPTION TAG //
 function OptionTag() {
   let myVisibility = document.getElementById("Option-Tag");
@@ -5473,6 +6136,42 @@ function OptionEventAttributes() {
     document.getElementById("Option-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptionDisabledAttributes() {
+  let myVisibility = document.getElementById("Option-Disabled-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Option-Disabled-Attributes").innerHTML = BooleanAttributes().disabled.optionelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptionLabelAttributes() {
+  let myVisibility = document.getElementById("Option-Label-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Option-Label-Attributes").innerHTML = MiscellaneousAttributes().label.optionelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptionSelectedAttributes() {
+  let myVisibility = document.getElementById("Option-Selected-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Option-Selected-Attributes").innerHTML = BooleanAttributes().selected.optionelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OptionValueAttributes() {
+  let myVisibility = document.getElementById("Option-Value-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Option-Value-Attributes").innerHTML = ValueAttributes().value.optionelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -5543,6 +6242,24 @@ function ProgressEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function ProgressMaxAttributes() {
+  let myVisibility = document.getElementById("Progress-Max-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Progress-Max-Attributes").innerHTML = ValueAttributes().max.progresselement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ProgressValueAttributes() {
+  let myVisibility = document.getElementById("Progress-Value-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Progress-Value-Attributes").innerHTML = ValueAttributes().value.progresselement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // METER TAG //
 function MeterTag() {
   let myVisibility = document.getElementById("Meter-Tag");
@@ -5572,6 +6289,69 @@ function MeterEventAttributes() {
     document.getElementById("Meter-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterFormAttributes() {
+  let myVisibility = document.getElementById("Meter-Form-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-Form-Attributes").innerHTML = MiscellaneousAttributes().form.meterelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterHighAttributes() {
+  let myVisibility = document.getElementById("Meter-High-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-High-Attributes").innerHTML = ValueAttributes().high.meterelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterLowAttributes() {
+  let myVisibility = document.getElementById("Meter-Low-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-Low-Attributes").innerHTML = ValueAttributes().low.meterelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterMaxAttributes() {
+  let myVisibility = document.getElementById("Meter-Max-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-Max-Attributes").innerHTML = ValueAttributes().max.meterelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterMinAttributes() {
+  let myVisibility = document.getElementById("Meter-Min-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-Min-Attributes").innerHTML = ValueAttributes().min.meterelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterOptimumAttributes() {
+  let myVisibility = document.getElementById("Meter-Optimum-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-Optimum-Attributes").innerHTML = ValueAttributes().optimum.meterelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MeterValueAttributes() {
+  let myVisibility = document.getElementById("Meter-Value-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Meter-Value-Attributes").innerHTML = ValueAttributes().value.meterelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -5609,6 +6389,33 @@ function OutputEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function OutputForAttributes() {
+  let myVisibility = document.getElementById("Output-For-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Output-For-Attributes").innerHTML = MiscellaneousAttributes().for.outputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OutputFormAttributes() {
+  let myVisibility = document.getElementById("Output-Form-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Output-Form-Attributes").innerHTML = MiscellaneousAttributes().form.outputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OutputNameAttributes() {
+  let myVisibility = document.getElementById("Output-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Output-Name-Attributes").innerHTML = MiscellaneousAttributes().name.outputelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // BUTTON TAG //
 function ButtonTag() {
   let myVisibility = document.getElementById("Button-Tag");
@@ -5638,6 +6445,123 @@ function ButtonEventAttributes() {
     document.getElementById("Button-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonAutofocusAttributes() {
+  let myVisibility = document.getElementById("Button-Autofocus-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Autofocus-Attributes").innerHTML = BooleanAttributes().autofocus.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonDisabledAttributes() {
+  let myVisibility = document.getElementById("Button-Disabled-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Disabled-Attributes").innerHTML = BooleanAttributes().disabled.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonFormAttributes() {
+  let myVisibility = document.getElementById("Button-Form-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Form-Attributes").innerHTML = MiscellaneousAttributes().form.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonFormactionAttributes() {
+  let myVisibility = document.getElementById("Button-Formaction-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Formaction-Attributes").innerHTML = HyperlinkAttributes().formaction.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonFormenctypeAttributes() {
+  let myVisibility = document.getElementById("Button-Formenctype-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Formenctype-Attributes").innerHTML = NetworkAttributes().formenctype.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonFormmethodAttributes() {
+  let myVisibility = document.getElementById("Button-Formmethod-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Formmethod-Attributes").innerHTML = NetworkAttributes().formmethod.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonFormnovalidateAttributes() {
+  let myVisibility = document.getElementById("Button-Formnovalidate-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Formnovalidate-Attributes").innerHTML = BooleanAttributes().formnovalidate.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonFormtargetAttributes() {
+  let myVisibility = document.getElementById("Button-Formtarget-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Formtarget-Attributes").innerHTML = HyperlinkAttributes().formtarget.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonPopovertargetAttributes() {
+  let myVisibility = document.getElementById("Button-Popovertarget-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Popovertarget-Attributes").innerHTML = MiscellaneousAttributes().popovertarget.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonPopovertargetactionAttributes() {
+  let myVisibility = document.getElementById("Button-Popovertargetaction-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Popovertargetaction-Attributes").innerHTML = MiscellaneousAttributes().popovertargetaction.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonNameAttributes() {
+  let myVisibility = document.getElementById("Button-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Name-Attributes").innerHTML = MiscellaneousAttributes().name.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonTypeAttributes() {
+  let myVisibility = document.getElementById("Button-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Type-Attributes").innerHTML = MiscellaneousAttributes().type.buttonelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ButtonValueAttributes() {
+  let myVisibility = document.getElementById("Button-Value-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Button-Value-Attributes").innerHTML = ValueAttributes().value.buttonelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -5752,6 +6676,15 @@ function ColgroupEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function ColgroupSpanAttributes() {
+  let myVisibility = document.getElementById("Colgroup-Span-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Colgroup-Span-Attributes").innerHTML = MiscellaneousAttributes().span.colgroupelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // COLUMN TAG //
 function ColTag() {
   let myVisibility = document.getElementById("Col-Tag");
@@ -5781,6 +6714,15 @@ function ColEventAttributes() {
     document.getElementById("Col-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ColSpanAttributes() {
+  let myVisibility = document.getElementById("Col-Span-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Col-Span-Attributes").innerHTML = MiscellaneousAttributes().span.colelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -5884,6 +6826,51 @@ function ThEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function ThAbbrAttributes() {
+  let myVisibility = document.getElementById("Th-Abbr-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Th-Abbr-Attributes").innerHTML = MiscellaneousAttributes().abbr.thelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ThColspanAttributes() {
+  let myVisibility = document.getElementById("Th-Colspan-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Th-Colspan-Attributes").innerHTML = MiscellaneousAttributes().colspan.thelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ThHeadersAttributes() {
+  let myVisibility = document.getElementById("Th-Headers-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Th-Headers-Attributes").innerHTML = MiscellaneousAttributes().headers.thelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ThRowspanAttributes() {
+  let myVisibility = document.getElementById("Th-Rowspan-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Th-Rowspan-Attributes").innerHTML = MiscellaneousAttributes().rowspan.thelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ThScopeAttributes() {
+  let myVisibility = document.getElementById("Th-Scope-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Th-Scope-Attributes").innerHTML = MiscellaneousAttributes().scope.thelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // TABLE BODY TAG //
 function TbodyTag() {
   let myVisibility = document.getElementById("Tbody-Tag");
@@ -5946,6 +6933,33 @@ function TdEventAttributes() {
     document.getElementById("Td-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TdColspanAttributes() {
+  let myVisibility = document.getElementById("Td-Colspan-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Td-Colspan-Attributes").innerHTML = MiscellaneousAttributes().colspan.tdelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TdHeadersAttributes() {
+  let myVisibility = document.getElementById("Td-Headers-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Td-Headers-Attributes").innerHTML = MiscellaneousAttributes().headers.tdelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TdRowspanAttributes() {
+  let myVisibility = document.getElementById("Td-Rowspan-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Td-Rowspan-Attributes").innerHTML = MiscellaneousAttributes().rowspan.tdelement;
   }
   else { myVisibility.style.display = "none"; }
 }
@@ -6027,6 +7041,33 @@ function OlEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function OlReversedAttributes() {
+  let myVisibility = document.getElementById("Ol-Reversed-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Ol-Reversed-Attributes").innerHTML = BooleanAttributes().reversed.olelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OlStartAttributes() {
+  let myVisibility = document.getElementById("Ol-Start-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Ol-Start-Attributes").innerHTML = MiscellaneousAttributes().start.olelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function OlTypeAttributes() {
+  let myVisibility = document.getElementById("Ol-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Ol-Type-Attributes").innerHTML = MiscellaneousAttributes().type.olelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // LIST ITEM TAG //
 function LiTag() {
   let myVisibility = document.getElementById("Li-Tag");
@@ -6056,6 +7097,15 @@ function LiEventAttributes() {
     document.getElementById("Li-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function LiValueAttributes() {
+  let myVisibility = document.getElementById("Li-Value-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Li-Value-Attributes").innerHTML = ValueAttributes().value.lielement;
   }
   else { myVisibility.style.display = "none"; }
 }
