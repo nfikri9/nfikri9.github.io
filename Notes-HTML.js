@@ -405,6 +405,7 @@ function BooleanAttributes() {
     defer         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     disabled      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;optgroup&gt;, &lt;option&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     formnovalidate: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
+    ismap         : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
     multiple      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;</code></div>",
     novalidate    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     readonly      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
@@ -561,6 +562,16 @@ function BooleanAttributes() {
         "</div>"
     },
 
+    ismap: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>ismap</code> attribute of the <code>&lt;img&gt;</code> tag specifies that the image is part of a server-side image map (an image map is an image with clickable areas)</div>" +
+        "  <div>When clicking on a server-side image map, the click coordinates are sent to the server as a URL query string</div>" +
+        "  <div>The <code>ismap</code> attribute is allowed only if the <code>&lt;img&gt;</code> element is a descendant of an <code>&lt;a&gt;</code> element with a valid <code>href</code> attribute</div>" +
+           myRelatedElements.ismap +
+        "</div>"
+    },
+
     multiple: {
       inputelement:
         "<div class=\"Box-Attributes\">" +
@@ -712,18 +723,24 @@ function DimensionAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
     cols  : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
-    height: "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    height: "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;</code></div>",
     rows  : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
     size  : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;</code></div>",
-    width : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>"
+    width : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;</code></div>"
   };
 
   /* NOTES OF DIMENSION ATTRIBUTES */
-  const Dimension =
-    "Always specify both the <code>height</code> and <code>width</code> attributes for images<br>" +
-    "If height and width are set, the space required for the image is reserved when the page is loaded<br>" +
-    "However, without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it<br>" +
-    "The effect will be that the page layout will change during loading (while the images load)";
+  const Dimension = {
+    Description1:
+      "Always specify both the <code>height</code> and <code>width</code> attributes for images<br>" +
+      "If height and width are set, the space required for the image is reserved when the page is loaded<br>" +
+      "However, without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it<br>" +
+      "The effect will be that the page layout will change during loading (while the images load)",
+
+    Description2:
+      "Downsizing a large image with the <code>height, width</code> attributes forces a user to download the large image (even if it looks small on the page)<br>" +
+      "To avoid this, rescale the image with a program before using it on a page"
+  };
 
   const Select = 
     "The number of visible options in the drop-down list<br>" +
@@ -746,11 +763,22 @@ function DimensionAttributes() {
     },
 
     height: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>height</code> attribute of the <code>&lt;img&gt;</code> tag specifies the height of an image element</div>" +
+        "  <div>" + Dimension.Description2 + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Pixels</em></code></td><td>The height in pixels<br>Example; <code>&lt;img <b>height</b>=\"100\"&gt;</code></td></tr>" +
+        "  </table>" +
+           myRelatedElements.height +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>height</code> attribute of the <code>&lt;input&gt;</code> tag specifies the height of the input element</div>" +
         "  <div>The <code>height</code> attribute is used only with <code>&lt;input type=\"image\"&gt;</code></div>" +
-        "  <div>" + Dimension + "</div>" +
+        "  <div>" + Dimension.Description1  + "</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Pixels</em></code></td><td>The height in pixels<br>Example; <code>&lt;input <b>height</b>=\"100\"&gt;</code></td></tr>" +
@@ -799,11 +827,22 @@ function DimensionAttributes() {
     },
 
     width: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>width</code> attribute of the <code>&lt;img&gt;</code> tag specifies the width of the img element</div>" +
+        "  <div>" + Dimension.Description2  + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Pixels</em></code></td><td>The width in pixels<br>Example; <code>&lt;img <b>width</b>=\"100\"&gt;</code></td></tr>" +
+        "  </table>" +
+           myRelatedElements.width +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
-        "  <div>The <code>width</code> attribute of the <code>&lt;input&gt;</code> tag specifies  the width of the input element</div>" +
+        "  <div>The <code>width</code> attribute of the <code>&lt;input&gt;</code> tag specifies the width of the input element</div>" +
         "  <div>The <code>width</code> attribute is used only with <code>&lt;input type=\"image\"&gt;</code></div>" +
-        "  <div>" + Dimension + "</div>" +
+        "  <div>" + Dimension.Description1  + "</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Pixels</em></code></td><td>The width in pixels<br>Example; <code>&lt;input <b>width</b>=\"100\"&gt;</code></td></tr>" +
@@ -826,8 +865,10 @@ function HyperlinkAttributes() {
     formaction: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     formtarget: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     href      : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;base&gt;, &lt;link&gt;</code></div>",
+    longdesc  : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
     target    : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;base&gt;, &lt;form&gt;</code></div>",
-    src       : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;script&gt;</code></div>"
+    src       : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;, &lt;script&gt;</code></div>",
+    srcset    : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>"
   };
 
   /* NOTES OF HYPERLINK ATTRIBUTES */
@@ -1004,7 +1045,32 @@ function HyperlinkAttributes() {
         "</div>"
     },
 
+    longdesc: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>longdesc</code> attribute of the <code>&lt;img&gt;</code> tag specifies a hyperlink to a detailed description of an image</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "    <tr><td><code><em>Specified ID</em></code></td><td>" + URL.Id + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.longdesc +
+        "</div>"
+    },
+
     src: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>src</code> attribute of the <code>&lt;img&gt;</code> tag specifies the URL of the image</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.src +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>src</code> attribute of the <code>&lt;input&gt;</code> tag specifies the URL of the image to use as a submit button</div>" +
@@ -1026,6 +1092,18 @@ function HyperlinkAttributes() {
         "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
         "  </table>" +
            myRelatedElements.src +
+        "</div>"
+    },
+
+    srcset: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>srcset</code> attribute of the <code>&lt;img&gt;</code> tag specifies a list of image files to use in different situations</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>URL List</em></code></td><td>Specifies a list of image files to use in different situations</td></tr>" +
+        "  </table>" +
+           myRelatedElements.srcset +
         "</div>"
     },
 
@@ -1082,7 +1160,7 @@ function HyperlinkAttributes() {
 function NetworkAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
-    crossorigin   : "<div>Applied tag(s): <code>&lt;link&gt;, &lt;script&gt;</code></div>",
+    crossorigin   : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;link&gt;, &lt;script&gt;</code></div>",
     enctype       : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     formenctype   : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     formmethod    : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
@@ -1090,7 +1168,7 @@ function NetworkAttributes() {
     integrity     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     method        : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     ping          : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
-    referrerpolicy: "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;, &lt;script&gt;</code></div>"
+    referrerpolicy: "<div>Applied tag(s): <code>&lt;a&gt;, &lt;img&gt;, &lt;link&gt;, &lt;script&gt;</code></div>"
   };
 
   /* NOTES OF NETWORK ATTRIBUTES */
@@ -1197,6 +1275,17 @@ function NetworkAttributes() {
   /* LIST OF NETWORK ATTRIBUTES */
   const myNetwork = {
     crossorigin: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>crossorigin</code> attribute of the <code>&lt;img&gt;</code> tag allows images from third-party sites that allow cross-origin access to be used with canvas</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>anonymous</code></td><td>" + Crossorigin.Anonymous + "</td></tr>" +
+        "    <tr><td><code>use-credentials</code></td><td>" + Crossorigin.Use_Credentials + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.crossorigin +
+        "</div>",
+
       linkelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>crossorigin</code> attribute of the <code>&lt;link&gt;</code> tag specifies the mode of the request to an HTTP CORS Request</div>" +
@@ -1384,6 +1473,20 @@ function NetworkAttributes() {
         "    <tr><td><code>same-origin</code></td><td>" + Referrerpolicy.Same_Origin + "</td></tr>" +
         "    <tr><td><code>strict-origin</code></td><td>" + Referrerpolicy.Strict_Origin + "</td></tr>" +
         "    <tr><td><code>strict-origin-when-cross-origin</code></td><td>" + Referrerpolicy.Strict_Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.referrerpolicy +
+        "</div>",
+
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>referrerpolicy</code> attribute of the <code>&lt;img&gt;</code> tag specifies which referrer information to use when fetching an image</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>no-referrer</code></td><td>" + Referrerpolicy.No_Referrer + "</td></tr>" +
+        "    <tr><td><code>no-referrer-when-downgrade</code></td><td>" + Referrerpolicy.No_Referrer_When_Downgrade + "</td></tr>" +
+        "    <tr><td><code>origin</code></td><td>" + Referrerpolicy.Origin + "</td></tr>" +
+        "    <tr><td><code>origin-when-cross-origin</code></td><td>" + Referrerpolicy.Origin_When_Cross_Origin + "</td></tr>" +
         "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
         "  </table>" +
            myRelatedElements.referrerpolicy +
@@ -1776,7 +1879,7 @@ function MiscellaneousAttributes() {
   const myRelatedElements = {
     abbr               : "<div>Applied tag(s): <code>&lt;th&gt;</code></div>",
     accept             : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    alt                : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    alt                : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;</code></div>",
     autocomplete       : "<div>Applied tag(s): <code>&lt;form&gt;, &lt;input&gt;</code></div>",
     colspan            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     content            : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
@@ -1788,8 +1891,9 @@ function MiscellaneousAttributes() {
     hreflang           : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;</code></div>",
     label              : "<div>Applied tag(s): <code>&lt;optgroup&gt;, &lt;option&gt;</code></div>",
     list               : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    loading            : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
     media              : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;, &lt;style&gt;</code></div>",
-    name               : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;form&gt;, &lt;input&gt;, &lt;meta&gt;, &lt;output&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
+    name               : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;form&gt;, &lt;map&gt;, &lt;input&gt;, &lt;meta&gt;, &lt;output&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     nomodule           : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     placeholder        : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     popovertarget      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
@@ -1797,10 +1901,11 @@ function MiscellaneousAttributes() {
     rel                : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;form&gt;, &lt;link&gt;</code></div>",
     rowspan            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     scope              : "<div>Applied tag(s): <code>&lt;th&gt;</code></div>",
-    sizes              : "<div>Applied tag(s): <code>&lt;link&gt;</code></div>",
+    sizes              : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;link&gt;</code></div>",
     span               : "<div>Applied tag(s): <code>&lt;col&gt;, &lt;colgroup&gt;</code></div>",
     start              : "<div>Applied tag(s): <code>&lt;ol&gt;</code></div>",
     type               : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;button&gt;, &lt;input&gt;, &lt;link&gt;, &lt;ol&gt;, &lt;script&gt;, &lt;style&gt;</code></div>",
+    usemap             : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
     wrap               : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
     xlmns              : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
   };
@@ -1819,6 +1924,12 @@ function MiscellaneousAttributes() {
     Video:
       "The user can pick all video files"
   };
+
+  const Alternate_Text = 
+    "Specifies an alternate text for an image<br>" +
+    "The text should describe the image if the image contains information<br>" +
+    "The text should explain where the link goes if the image is inside an <code>a</code> element" +
+    "Use <code>alt=\"\"</code> if the image is only for decoration";
 
   const Autocomplete = {
     Additional_Name       : "Expects the middle name",
@@ -1981,6 +2092,11 @@ function MiscellaneousAttributes() {
     Week:
       "Defines a week and year control (no timezone specified)<br>" +
       "It is <b>recommended</b> to add the <code>&lt;label&gt;</code> tag for best accessibility practices",
+  };
+
+  const Loading = {
+    Eager: "<b>[Default]</b> Loads an image immediately",
+    Lazy : "Defer loading of images until some conditions are met<br>Add this attribute only to images which are positioned below the fold"
   };
 
   const Media = {
@@ -2219,6 +2335,18 @@ function MiscellaneousAttributes() {
     },
 
     alt: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>alt</code> attribute of the <code>&lt;img&gt;</code> tag specifies an alternate text for an image, if the image cannot be displayed</div>" +
+        "  <div>The <code>alt</code> attribute provides alternative information for an image if a user for some reason cannot view it</div>" +
+        "  <div>One of the reason might be due to slow connection, an error in the <code>src</code> attribute, or if the user uses a screen reader</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>" + Alternate_Text + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.alt +
+        "</div>",
+
       inputelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>alt</code> attribute of the <code>&lt;input&gt;</code> tag specifies an alternate text for the user if the file cannot be viewed for some reason</div>" +
@@ -2549,6 +2677,19 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    loading: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>loading</code> attribute of the <code>&lt;img&gt;</code> tag specifies whether a browser should load an image immediately or to defer loading of off-screen images until for example the user scrolls near them</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>eager</code></td><td>" + Loading.Eager + "</td></tr>" +
+        "    <tr><td><code>lazy</code></td><td>" + Loading.Lazy + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.loading +
+        "</div>"
+    },
+
     media: {
       anchorelement:
         "<div class=\"Box-Attributes\">" +
@@ -2712,6 +2853,17 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code>String</code></td><td>Specifies the name of the input</td></tr>" +
+        "  </table>" +
+           myRelatedElements.name +
+        "</div>",
+
+      mapelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>name</code> attribute of the <code>&lt;map&gt;</code> tag specifies the name for an image map</div>" +
+        "  <div>The <code>name</code> attribute is associated with the <code>&lt;img&gt;</code>'s <code>usemap</code> attribute and creates a relationship between the image and the map</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>Specifies the name of the image map</td></tr>" +
         "  </table>" +
            myRelatedElements.name +
         "</div>",
@@ -2961,6 +3113,16 @@ function MiscellaneousAttributes() {
     },
 
     sizes: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>sizes</code> attribute of the <code>&lt;img&gt;</code> tag specifies image sizes for different page layouts</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Sizes</em></code></td><td>Specifies image sizes for different page layouts</td></tr>" +
+        "  </table>" +
+           myRelatedElements.sizes +
+        "</div>",
+
       linkelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>sizes</code> attribute of the <code>&lt;link&gt;</code> tag specifies the sizes of icons for visual media</div>" +
@@ -3120,6 +3282,20 @@ function MiscellaneousAttributes() {
         "    <tr><td><code><em>Internet Media Type</em></code></td><td>" + Type.Style + Type.IANA_Media_Type + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
+        "</div>"
+    },
+
+    usemap: {
+      imgelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>usemap</code> attribute of the <code>&lt;img&gt;</code> tag specifies an image as a client-side image map (an image map is an image with clickable areas)</div>" +
+        "  <div>The <code>usemap</code> attribute is associated with a <code>&lt;map&gt;</code> element's <code>name</code> attribute, and creates a relationship between the <code>&lt;img&gt;</code> and the <code>&lt;map&gt;</code></div>" +
+        "  <div>The <code>usemap</code> attribute cannot be used if the <code>&lt;img&gt;</code> element is a descendant of an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elemen</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>#MapName</em></code></td><td>Specifies the name of the map element with prefix of \"#\"</td></tr>" +
+        "  </table>" +
+           myRelatedElements.usemap +
         "</div>"
     },
 
@@ -7352,6 +7528,114 @@ function ImageEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function ImageAltAttributes() {
+  let myVisibility = document.getElementById("Image-Alt-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Alt-Attributes").innerHTML = MiscellaneousAttributes().alt.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageCrossoriginAttributes() {
+  let myVisibility = document.getElementById("Image-Crossorigin-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Crossorigin-Attributes").innerHTML = NetworkAttributes().crossorigin.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageHeightAttributes() {
+  let myVisibility = document.getElementById("Image-Height-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Height-Attributes").innerHTML = DimensionAttributes().height.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageIsmapAttributes() {
+  let myVisibility = document.getElementById("Image-Ismap-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Ismap-Attributes").innerHTML = BooleanAttributes().ismap.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageLoadingAttributes() {
+  let myVisibility = document.getElementById("Image-Loading-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Loading-Attributes").innerHTML = MiscellaneousAttributes().loading.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageLongdescAttributes() {
+  let myVisibility = document.getElementById("Image-Longdesc-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Longdesc-Attributes").innerHTML = HyperlinkAttributes().longdesc.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageReferrerpolicyAttributes() {
+  let myVisibility = document.getElementById("Image-Referrerpolicy-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Referrerpolicy-Attributes").innerHTML = NetworkAttributes().referrerpolicy.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageSizesAttributes() {
+  let myVisibility = document.getElementById("Image-Sizes-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Sizes-Attributes").innerHTML = MiscellaneousAttributes().sizes.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageSrcAttributes() {
+  let myVisibility = document.getElementById("Image-Src-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Src-Attributes").innerHTML = HyperlinkAttributes().src.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageSrcsetAttributes() {
+  let myVisibility = document.getElementById("Image-Srcset-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Srcset-Attributes").innerHTML = HyperlinkAttributes().srcset.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageUsemapAttributes() {
+  let myVisibility = document.getElementById("Image-Usemap-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Usemap-Attributes").innerHTML = MiscellaneousAttributes().usemap.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function ImageWidthAttributes() {
+  let myVisibility = document.getElementById("Image-Width-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Image-Width-Attributes").innerHTML = DimensionAttributes().width.imgelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // MAP TAG //
 function MapTag() {
   let myVisibility = document.getElementById("Map-Tag");
@@ -7381,6 +7665,15 @@ function MapEventAttributes() {
     document.getElementById("Map-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function MapNameAttributes() {
+  let myVisibility = document.getElementById("Map-Name-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Map-Name-Attributes").innerHTML = MiscellaneousAttributes().name.mapelement;
   }
   else { myVisibility.style.display = "none"; }
 }
