@@ -1,56 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+  <!-- BROWSER TAB -->
+  <title>JQUERY</title>
+  <link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
 
-<head>
-<!-- BROWSER TAB -->
-<title>JQUERY</title>
-<link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
+  <!-- OTHERS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Notes-JQuery.css">
+  </head>
 
-<!-- OTHERS -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Notes-JQuery.css">
-</head>
+  <body>
+  <!------------------>
+  <!-- NAVIGATE BAR -->
+  <!------------------>
+  <nav class="My-Navigate-Bar">
+    <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
+    <div>
+      <a href="Notes-HTML.html">HTML</a>
+      <a href="Notes-CSS.html">CSS</a>
+      <a href="Notes-JavaScript.html">JAVASCRIPT</a>
+      <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
+      <a href="Notes-JQuery.html">JQUERY</a>
+      <a href="Notes-SASS.html">SASS</a>
+      <a href="Notes-React.html">REACT</a>
+      <a href="Notes-Redux.html">REDUX</a>
+      <a href="Notes-Git.html">GIT</a>
+    </div>
+  </nav>
 
-<body>
-<!------------------>
-<!-- NAVIGATE BAR -->
-<!------------------>
-<nav class="My-Navigate-Bar">
-  <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
-  <div>
-    <a href="Notes-HTML.html">HTML</a>
-    <a href="Notes-CSS.html">CSS</a>
-    <a href="Notes-JavaScript.html">JAVASCRIPT</a>
-    <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
-    <a href="Notes-JQuery.html">JQUERY</a>
-    <a href="Notes-SASS.html">SASS</a>
-    <a href="Notes-React.html">REACT</a>
-    <a href="Notes-Redux.html">REDUX</a>
-    <a href="Notes-Git.html">GIT</a>
+  <!---------------------->
+  <!-- TOPIC SELECTIONS -->
+  <!---------------------->
+  <div id="Box-Topic-Selections">
+    <button onclick="JQueryIntroduction()">JQUERY INTRODUCTION</button>
   </div>
-</nav>
 
-<!---------------------->
-<!-- TOPIC SELECTIONS -->
-<!---------------------->
-<div id="Box-Topic-Selections">
-  <button onclick="JQueryIntroduction()">JQUERY INTRODUCTION</button>
-</div>
+  <!------------------------->
+  <!-- JQUERY INTRODUCTION -->
+  <!------------------------->
+  <section id="JQuery-Introduction">
+  <h1>JQUERY INTRODUCTION</h1>
+    <div class="Sub-Topics">
+    <h3>What is JQuery?</h3>
+      <div>JQuery is a JavaScript library</div>
+      <div>JQuery greatly simplifies JavaScript programming</div>
+      <div>JQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that dev can call with a single line of code</div>
+      <div>JQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation</div>
+    </div>
 
-<!------------------------->
-<!-- JQUERY INTRODUCTION -->
-<!------------------------->
-<section id="JQuery-Introduction">
-<h1>JQUERY INTRODUCTION</h1>
+    <div class="Sub-Topics">
+    <h3>Adding JQuery</h3>
+      <div>Download the jQuery library from <a href="https://jquery.com/download/" target="_blank">jQuery.com</a>
+        <li>There are 2 versions of jQuery available for downloading</li>
+        <li>1. Production version (this is for your live website because it has been minified and compressed)</li>
+        <li>2. Development version (this is for testing and development - uncompressed and readable code)</li>
+        <li>Place the downloaded file in the same directory as the pages where you wish to use it</li>
+        <li>The jQuery library is a single JavaScript file, and you reference it with the HTML <code>&lt;script&gt;</code> tag</li>
+        <li>Notice that the <code>&lt;script&gt;</code> tag should be inside the <code>&lt;head&gt;</code> section</li>
+        <li><code>&lt;head&gt; &lt;script src="jquery-3.7.1.min.js"&gt;&lt;/script&gt;  &lt;/head&gt;</code></li>
+      </div>
+      <div>Include jQuery from a CDN
+        <li><code>&lt;head&gt; &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;  &lt;/head&gt;</code></li>
+      </div>
+    </div>
 
-<div class="Sub-Topics"> <h3>What is JQuery?</h3>
-  <div>JQuery is a JavaScript Library</div>
-  <div>jQuery greatly simplifies JavaScript programming</div>
-</div>
-</section>
+    <div class="Sub-Topics">
+    <h3>JQuery Syntaxes</h3>
+      <div>Basic syntax is: <code>$(<em>mySelector</em>).<em>myAction</em>()</code>
+        <li>A <code>$</code> sign to define/access jQuery</li>
+        <li>A <code>(<em>mySelector</em>)</code> to "query (or find)" HTML elements</li>
+        <li>A <code><em>myAction</em>()</code> is the action to be performed on the element(s)</li>
+      </div>
+      <div>Syntax for the Document Ready Event is <code>$(document).ready(function(){ // jQuery methods go here... });</code></div>
+      <div>The shorter version is <code>$(function(){ // jQuery methods go here... });</code></div>
+      <div>This is to prevent any jQuery code from running before the document is finished loading (is ready)</div>
+      <div>It is good practice to wait for the document to be fully loaded and ready before working with it</div>
+      <div>This also allows you to have your JavaScript code before the body of your document, in the head section</div>
+    </div>
 
-<!-- IMPORTING JS FILE -->
-<script src="Notes-JQuery.js"></script>
-</body>
+    <div class="Sub-Topics">
+    <h3>JQuery Selectors</h3>
+      <div>All selectors in jQuery start with the dollar sign and parentheses, <code>$()</code></div>
+      <div>JQuery Element Selectors
+        <li>The jQuery element selector selects elements based on the element name</li>
+        <li>Example; <code>$("p")</code></li>
+      </div>
+      <div>JQuery Id Selectors
+        <li>The jQuery <code>#id</code> selector uses the id attribute of an HTML tag to find the specific element</li>
+        <li>Example; <code>$("#<em>myID</em>")</code></li>
+      </div>
+      <div>JQuery Class Selectors
+        <li>The jQuery <code>.class</code> selector finds elements with a specific class</li>
+        <li>Example; <code>$(".<em>myClass</em>")</code></li>
+      </div>
+      <div>More jQuery selectors
+        <li><code>$("*")</code> = Select all elements</li>
+        <li><code>$(this)</code> = Select current element</li>
+        <li><code>$("p.<em>myClass</em>")</code> = Select paragraph element class="myClass"</li>
+      </div>
+    </div>
+  </section>
+
+  <!----------------------->
+  <!-- IMPORTING JS FILE -->
+  <!----------------------->
+  <script src="Notes-JQuery.js"></script>
+
+  </body>
 </html>

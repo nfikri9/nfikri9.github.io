@@ -864,9 +864,9 @@ function HyperlinkAttributes() {
     cite      : "<div>Applied tag(s): <code>&lt;blockquote&gt;, &lt;del&gt;, &lt;ins&gt;, &lt;q&gt;</code></div>",
     formaction: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     formtarget: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
-    href      : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;base&gt;, &lt;link&gt;</code></div>",
+    href      : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;link&gt;</code></div>",
     longdesc  : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
-    target    : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;base&gt;, &lt;form&gt;</code></div>",
+    target    : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;form&gt;</code></div>",
     src       : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;, &lt;script&gt;</code></div>",
     srcset    : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>"
   };
@@ -1023,6 +1023,19 @@ function HyperlinkAttributes() {
            myRelatedElements.href +
         "</div>",
 
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>href</code> attribute of the <code>&lt;area&gt;</code> tag specifies the hyperlink target for the area</div>" +
+        "  <div>If the <code>href</code> attribute is not present, the <code>&lt;area&gt;</code> tag is not a hyperlink</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Relative URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "    <tr><td><code><em>Specified ID</em></code></td><td>" + URL.Id + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.href +
+        "</div>",
+
       baseelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>href</code> attribute of the <code>&lt;base&gt;</code> tag specifies the base URL for all relative URLs on a page</div>" +
@@ -1122,6 +1135,20 @@ function HyperlinkAttributes() {
            myRelatedElements.target +
         "</div>",
 
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>target</code> attribute of the <code>&lt;area&gt;</code> tag specifies where to open the linked document</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>_blank</code></td><td>" + Target.Blank + "</td></tr>" +
+        "    <tr><td><code>_parent</code></td><td>" + Target.Parent + "</td></tr>" +
+        "    <tr><td><code>_self</code></td><td>" + Target.Self + "</td></tr>" +
+        "    <tr><td><code>_top</code></td><td>" + Target.Top + "</td></tr>" +
+        "    <tr><td><code><em>Frame Name</em></code></td><td>" + Target.Frame_Name + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.target +
+        "</div>",
+
       baseelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>target</code> attribute of the <code>&lt;base&gt;</code> tag specifies the default target for all hyperlinks and forms in the page</div>" +
@@ -1168,7 +1195,7 @@ function NetworkAttributes() {
     integrity     : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     method        : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     ping          : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
-    referrerpolicy: "<div>Applied tag(s): <code>&lt;a&gt;, &lt;img&gt;, &lt;link&gt;, &lt;script&gt;</code></div>"
+    referrerpolicy: "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;img&gt;, &lt;link&gt;, &lt;script&gt;</code></div>"
   };
 
   /* NOTES OF NETWORK ATTRIBUTES */
@@ -1472,6 +1499,22 @@ function NetworkAttributes() {
         "    <tr><td><code>origin-when-cross-origin</code></td><td>" + Referrerpolicy.Origin_When_Cross_Origin + "</td></tr>" +
         "    <tr><td><code>same-origin</code></td><td>" + Referrerpolicy.Same_Origin + "</td></tr>" +
         "    <tr><td><code>strict-origin</code></td><td>" + Referrerpolicy.Strict_Origin + "</td></tr>" +
+        "    <tr><td><code>strict-origin-when-cross-origin</code></td><td>" + Referrerpolicy.Strict_Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.referrerpolicy +
+        "</div>",
+
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>referrerpolicy</code> attribute of the <code>&lt;area&gt;</code> tag specifies which referrer information to send when the user clicks on the hyperlink</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>no-referrer</code></td><td>" + Referrerpolicy.No_Referrer + "</td></tr>" +
+        "    <tr><td><code>no-referrer-when-downgrade</code></td><td>" + Referrerpolicy.No_Referrer_When_Downgrade + "</td></tr>" +
+        "    <tr><td><code>origin</code></td><td>" + Referrerpolicy.Origin + "</td></tr>" +
+        "    <tr><td><code>origin-when-cross-origin</code></td><td>" + Referrerpolicy.Origin_When_Cross_Origin + "</td></tr>" +
+        "    <tr><td><code>same-origin</code></td><td>" + Referrerpolicy.Same_Origin + "</td></tr>" +
         "    <tr><td><code>strict-origin-when-cross-origin</code></td><td>" + Referrerpolicy.Strict_Origin_When_Cross_Origin + "</td></tr>" +
         "    <tr><td><code>unsafe-url</code></td><td>" + Referrerpolicy.Unsafe_URL + "</td></tr>" +
         "  </table>" +
@@ -1879,32 +1922,34 @@ function MiscellaneousAttributes() {
   const myRelatedElements = {
     abbr               : "<div>Applied tag(s): <code>&lt;th&gt;</code></div>",
     accept             : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    alt                : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;</code></div>",
+    alt                : "<div>Applied tag(s): <code>&lt;area&gt;, &lt;img&gt;, &lt;input&gt;</code></div>",
     autocomplete       : "<div>Applied tag(s): <code>&lt;form&gt;, &lt;input&gt;</code></div>",
     colspan            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     content            : "<div>Applied tag(s): <code>&lt;meta&gt;</code></div>",
+    coords             : "<div>Applied tag(s): <code>&lt;area&gt;</code></div>",
     dirname            : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
-    download           : "<div>Applied tag(s): <code>&lt;a&gt;</code></div>",
+    download           : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;</code></div>",
     for                : "<div>Applied tag(s): <code>&lt;label&gt;, &lt;output&gt;</code></div>",
     form               : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;label&gt;, &lt;meter&gt;, &lt;output&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     headers            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
-    hreflang           : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;</code></div>",
+    hreflang           : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;</code></div>",
     label              : "<div>Applied tag(s): <code>&lt;optgroup&gt;, &lt;option&gt;</code></div>",
     list               : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     loading            : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
-    media              : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;link&gt;, &lt;style&gt;</code></div>",
+    media              : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;, &lt;style&gt;</code></div>",
     name               : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;form&gt;, &lt;map&gt;, &lt;input&gt;, &lt;meta&gt;, &lt;output&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     nomodule           : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     placeholder        : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     popovertarget      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     popovertargetaction: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
-    rel                : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;form&gt;, &lt;link&gt;</code></div>",
+    rel                : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;form&gt;, &lt;link&gt;</code></div>",
     rowspan            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     scope              : "<div>Applied tag(s): <code>&lt;th&gt;</code></div>",
+    shape              : "<div>Applied tag(s): <code>&lt;area&gt;</code></div>",
     sizes              : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;link&gt;</code></div>",
     span               : "<div>Applied tag(s): <code>&lt;col&gt;, &lt;colgroup&gt;</code></div>",
     start              : "<div>Applied tag(s): <code>&lt;ol&gt;</code></div>",
-    type               : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;button&gt;, &lt;input&gt;, &lt;link&gt;, &lt;ol&gt;, &lt;script&gt;, &lt;style&gt;</code></div>",
+    type               : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;button&gt;, &lt;input&gt;, &lt;link&gt;, &lt;ol&gt;, &lt;script&gt;, &lt;style&gt;</code></div>",
     usemap             : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
     wrap               : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
     xlmns              : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
@@ -1988,6 +2033,16 @@ function MiscellaneousAttributes() {
     Transaction_Currency  : "Expects the currency",
     URL                   : "Expects a web address",
     Username              : "Expects the username"
+  };
+
+  const Coordinates = {
+    Rectangle:
+      "Specifies the coordinates of the top-left and bottom-right corner of the rectangle (<code>shape=\"rect\"</code>)",
+    Circle:
+      "Specifies the coordinates of the circle center and the radius (<code>shape=\"circle\"</code>)",
+    Polygon:
+      "Specifies the coordinates of the edges of the polygon<br>" +
+      "If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon (<code>shape=\"poly\"</code>)"
   };
 
   const Download = {
@@ -2335,6 +2390,18 @@ function MiscellaneousAttributes() {
     },
 
     alt: {
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>alt</code> attribute of the <code>&lt;area&gt;</code> tag specifies an alternate text for an area, if the image cannot be displayed</div>" +
+        "  <div>The <code>alt</code> attribute provides alternative information for an image if a user for some reason cannot view it</div>" +
+        "  <div>One of the reason might be due to slow connection, an error in the <code>src</code> attribute, or if the user uses a screen reader</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>String</code></td><td>" + Alternate_Text + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.alt +
+        "</div>",
+
       imgelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>alt</code> attribute of the <code>&lt;img&gt;</code> tag specifies an alternate text for an image, if the image cannot be displayed</div>" +
@@ -2479,6 +2546,22 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    coords: {
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>accept</code> attribute of the <code>&lt;area&gt;</code> tag specifies the coordinates of an area in an image map</div>" +
+        "  <div>The <code>accept</code> attribute is used together with the <code>shape</code> attribute to specify the size, shape, and placement of an area</div>" +
+        "  <div>The coordinates of the top-left corner of an area are 0,0</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>x<sub>1</sub>,y<sub>1</sub>,x<sub>2</sub>,y<sub>2</sub></em></code></td><td>" + Coordinates.Rectangle + "</td></tr>" +
+        "    <tr><td><code><em>x,y,radius</em></code></td><td>" + Coordinates.Circle + "</td></tr>" +
+        "    <tr><td><code><em>x<sub>1</sub>,y<sub>1</sub>,x<sub>2</sub>,y<sub>2</sub>,...,x<sub>n</sub>,y<sub>n</sub></em></code></td><td>" + Coordinates.Polygon + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.coords +
+        "</div>"
+    },
+
     dirname: {
       inputelement:
         "<div class=\"Box-Attributes\">" +
@@ -2502,10 +2585,23 @@ function MiscellaneousAttributes() {
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>download</code> attribute of the <code>&lt;a&gt;</code> tag specifies that the file will be downloaded when a user clicks on the hyperlink</div>" +
         "  <div>The file specified must has <code>href</code> attribute for <code>download</code> attribute to be working</div>" +
-        "  <div></div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>File Name</em></code></td><td>" + Download.Description + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.download +
+        "</div>",
+
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>download</code> attribute of the <code>&lt;area&gt;</code> tag specifies that the target will be downloaded when a user clicks on the hyperlink</div>" +
+        "  <div>The file specified must has <code>href</code> attribute for <code>download</code> attribute to be working</div>" +
+        "  <div>The optional value of the <code>download</code> attribute will be the new name of the file after it is downloaded</div>" +
+        "  <div>There are no restrictions on allowed values, and the browser will automatically detect the correct file extension and add it to the file (.img, .pdf, .txt, .html, etc.)</div>" +
+        "  <div>If the value is omitted, the original filename is used</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>File Name</em></code></td><td><b>[Optional]</b> Specifies the new filename for the downloaded file</td></tr>" +
         "  </table>" +
            myRelatedElements.download +
         "</div>"
@@ -2631,6 +2727,19 @@ function MiscellaneousAttributes() {
            myRelatedElements.hreflang +
         "</div>",
 
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>hreflang</code> attribute of the <code>&lt;area&gt;</code> tag specifies the language of the target URL in the area</div>" +
+        "  <div>This attribute is purely advisory and only used if the <code>href</code> attribute is set</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><a href=\"https://www.w3schools.com/tags/ref_language_codes.asp\" target=\"_blank\"><em>HTML Language Codes</em></a></code></td>" +
+        "        <td>Specifies the language code for the linked's document</td>" +
+        "    </tr>" +
+        "  </table>" +
+           myRelatedElements.hreflang +
+        "</div>",
+
       linkelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>hreflang</code> attribute of the <code>&lt;link&gt;</code> tag specifies the language of the text in the linked document</div>" +
@@ -2710,6 +2819,43 @@ function MiscellaneousAttributes() {
         "    <tr><td>" + Media.Device_Projection + "</td></tr>" +
         "    <tr><td>" + Media.Device_Screen + "</td></tr>" +
         "    <tr><td>" + Media.Device_Speech + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Teletype + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Television + "</td></tr>" +
+        "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
+        "    <tr><td>" + Media.Value_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color_Index + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Width + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Grid + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Monochrome + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Orientation + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Resolution + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Scan + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Width + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.media +
+        "</div>",
+
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "<div>The <code>media</code> attribute of the <code>&lt;area&gt;</code> tag specifies what media/device the linked document is optimized for</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
+        "    <tr><td>" + Media.Operator_And + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Not + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Or + "</td></tr>" +
+        "    <tr><td rowspan=\"10\"><code><em>Device</em></code></td></tr>" +
+        "    <tr><td>" + Media.Device_All + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Aural + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Braille + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Handheld + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Print + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Projection + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Screen + "</td></tr>" +
         "    <tr><td>" + Media.Device_Teletype + "</td></tr>" +
         "    <tr><td>" + Media.Device_Television + "</td></tr>" +
         "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
@@ -3032,6 +3178,27 @@ function MiscellaneousAttributes() {
            myRelatedElements.rel +
         "</div>",
 
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>rel</code> attribute of the <code>&lt;area&gt;</code> tag specifies the relationship between the current document and the linked document</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>alternate</code></td><td>" + Relation.Alternate + "</td></tr>" +
+        "    <tr><td><code>author</code></td><td>" + Relation.Author + "</td></tr>" +
+        "    <tr><td><code>bookmark</code></td><td>" + Relation.Bookmark + "</td></tr>" +
+        "    <tr><td><code>help</code></td><td>" + Relation.Help + "</td></tr>" +
+        "    <tr><td><code>license</code></td><td>" + Relation.License + "</td></tr>" +
+        "    <tr><td><code>next</code></td><td>" + Relation.Next + "</td></tr>" +
+        "    <tr><td><code>nofollow</code></td><td>" + Relation.Nofollow + "</td></tr>" +
+        "    <tr><td><code>noreferrer</code></td><td>" + Relation.Noreferrer + "</td></tr>" +
+        "    <tr><td><code>prev</code></td><td>" + Relation.Prefetch + "</td></tr>" +
+        "    <tr><td><code>prev</code></td><td>" + Relation.Prev + "</td></tr>" +
+        "    <tr><td><code>search</code></td><td>" + Relation.Search + "</td></tr>" +
+        "    <tr><td><code>tag</code></td><td>" + Relation.Tag + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.rel +
+        "</div>",
+
       formelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>rel</code> attribute of the <code>&lt;form&gt;</code> tag specifies the relationship between the current document and the linked document</div>" +
@@ -3112,6 +3279,22 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    shape: {
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>shape</code> attribute of the <code>&lt;area&gt;</code> tag specifies the shape of an area</div>" +
+        "  <div>The <code>shape</code> attribute is used together with the <code>coords</code> attribute to specify the size, shape, and placement of an area</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>default</code></td><td>Specifies the entire region</td></tr>" +
+        "    <tr><td><code>circle</code></td><td>Defines a circular region</td></tr>" +
+        "    <tr><td><code>polygon</code></td><td>Defines a polygonal region</td></tr>" +
+        "    <tr><td><code>rect</code></td><td>Defines a rectangular region</td></tr>" +
+        "  </table>" +
+           myRelatedElements.shape +
+        "</div>"
+    },
+
     sizes: {
       imgelement:
         "<div class=\"Box-Attributes\">" +
@@ -3188,6 +3371,17 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Link Type</em></code></td><td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>",
+
+      areaelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;area&gt;</code> tag specifies the Internet media type (formerly known as MIME type) of the target URL</div>" +
+        "  <div>This attribute is only used if the <code>href</code> attribute is set</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Media Type</em></code></td><td>" + Type.Link + Type.IANA_Media_Type + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>",
@@ -7707,6 +7901,105 @@ function AreaEventAttributes() {
     document.getElementById("Area-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaAltAttributes() {
+  let myVisibility = document.getElementById("Area-Alt-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Alt-Attributes").innerHTML = MiscellaneousAttributes().alt.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaCoordsAttributes() {
+  let myVisibility = document.getElementById("Area-Coords-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Coords-Attributes").innerHTML = MiscellaneousAttributes().coords.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaDownloadAttributes() {
+  let myVisibility = document.getElementById("Area-Download-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Download-Attributes").innerHTML = MiscellaneousAttributes().download.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaHrefAttributes() {
+  let myVisibility = document.getElementById("Area-Href-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Href-Attributes").innerHTML = HyperlinkAttributes().href.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaHreflangAttributes() {
+  let myVisibility = document.getElementById("Area-Hreflang-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Hreflang-Attributes").innerHTML = MiscellaneousAttributes().hreflang.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaMediaAttributes() {
+  let myVisibility = document.getElementById("Area-Media-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Media-Attributes").innerHTML = MiscellaneousAttributes().media.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaReferrerpolicyAttributes() {
+  let myVisibility = document.getElementById("Area-Referrerpolicy-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Referrerpolicy-Attributes").innerHTML = NetworkAttributes().referrerpolicy.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaRelAttributes() {
+  let myVisibility = document.getElementById("Area-Rel-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Rel-Attributes").innerHTML = MiscellaneousAttributes().rel.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaShapeAttributes() {
+  let myVisibility = document.getElementById("Area-Shape-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Shape-Attributes").innerHTML = MiscellaneousAttributes().shape.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaTargetAttributes() {
+  let myVisibility = document.getElementById("Area-Target-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Target-Attributes").innerHTML = HyperlinkAttributes().target.areaelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AreaTypeAttributes() {
+  let myVisibility = document.getElementById("Area-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Area-Type-Attributes").innerHTML = MiscellaneousAttributes().type.areaelement;
   }
   else { myVisibility.style.display = "none"; }
 }
