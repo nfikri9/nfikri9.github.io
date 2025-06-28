@@ -401,12 +401,17 @@ function BooleanAttributes() {
   const myRelatedElements = {
     async         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     autofocus     : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
+    autoplay      : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
     checked       : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
+    controls      : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
+    default       : "<div>Applied tag(s): <code>&lt;track&gt;</code></div>",
     defer         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     disabled      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;optgroup&gt;, &lt;option&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     formnovalidate: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     ismap         : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
+    loop          : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
     multiple      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;</code></div>",
+    muted         : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
     novalidate    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
     readonly      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     required      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
@@ -472,6 +477,15 @@ function BooleanAttributes() {
         "</div>"
     },
 
+    autoplay: {
+      audioelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>autoplay</code> attribute of the <code>&lt;audio&gt;</code> tag specifies the audio will automatically start playing as soon as it can do so without stopping</div>" +
+        "  <div>Add <code>muted</code> after <code>autoplay</code> to let the audio file start playing automatically (but muted)</div>" +
+           myRelatedElements.autoplay +
+        "</div>"
+    },
+
     checked: {
       inputelement:
         "<div class=\"Box-Attributes\">" +
@@ -479,6 +493,24 @@ function BooleanAttributes() {
         "  <div>The checked attribute can be used with <code>&lt;input type=\"checkbox\"&gt; and &lt;input type=\"radio\"&gt;</code></div>" +
         "  <div>The checked attribute can also be set after the page load, with a JavaScript</div>" +
            myRelatedElements.checked +
+        "</div>"
+    },
+
+    controls: {
+      audioelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>controls</code> attribute of the <code>&lt;audio&gt;</code> tag specifies that audio controls should be displayed</div>" +
+        "  <div>Audio controls include play, pause, seeking, volume</div>" +
+           myRelatedElements.controls +
+        "</div>"
+    },
+
+    default: {
+      trackelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>default</code> attribute of the <code>&lt;track&gt;</code> tag specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate</div>" +
+        "  <div>There must only be one <code>&lt;track&gt;</code> element with a <code>default</code> attribute per <code>&lt;media&gt;</code> element</div>" +
+           myRelatedElements.default +
         "</div>"
     },
 
@@ -572,6 +604,14 @@ function BooleanAttributes() {
         "</div>"
     },
 
+    loop: {
+      audioelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>loop</code> attribute of the <code>&lt;audio&gt;</code> tag specifies that the audio will start over again, every time it is finished</div>" +
+           myRelatedElements.loop +
+        "</div>"
+    },
+
     multiple: {
       inputelement:
         "<div class=\"Box-Attributes\">" +
@@ -590,6 +630,14 @@ function BooleanAttributes() {
         "  <div>For Mac: Hold down the <kbd>COMMAND</kbd> button to select multiple options</div>" +
         "  <div>Since there are different way of doing this and the user have to be informed that multiple selection is available, it is more user-friendly to use checkboxes instead</div>" +
            myRelatedElements.multiple +
+        "</div>"
+    },
+
+    muted: {
+      audioelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>muted</code> attribute of the <code>&lt;audio&gt;</code> tag specifies that the audio output should be muted</div>" +
+           myRelatedElements.muted +
         "</div>"
     },
 
@@ -867,7 +915,7 @@ function HyperlinkAttributes() {
     href      : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;link&gt;</code></div>",
     longdesc  : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
     target    : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;form&gt;</code></div>",
-    src       : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;, &lt;script&gt;</code></div>",
+    src       : "<div>Applied tag(s): <code>&lt;audio&gt;, &lt;img&gt;, &lt;input&gt;, &lt;script&gt;, &lt;source&gt;, &lt;track&gt;</code></div>",
     srcset    : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>"
   };
 
@@ -1073,6 +1121,19 @@ function HyperlinkAttributes() {
     },
 
     src: {
+      audioelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>src</code> attribute of the <code>&lt;audio&gt;</code> tag specifies the URL of the audio</div>" +
+        "  <div>Use <code>&lt;source&gt;</code> elements inside the <code>&lt;audio&gt;</code> element</div>" +
+        "  <div>Each <code>&lt;source&gt;</code> element can link to different audio files and the browser will use the first recognized format</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.src +
+        "</div>",
+
       imgelement:
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>src</code> attribute of the <code>&lt;img&gt;</code> tag specifies the URL of the image</div>" +
@@ -1105,7 +1166,30 @@ function HyperlinkAttributes() {
         "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
         "  </table>" +
            myRelatedElements.src +
-        "</div>"
+        "</div>",
+
+      sourceelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>src</code> attribute of the <code>&lt;source&gt;</code> tag specifies the URL of the media file to play</div>" +
+        "  <div>This attribute is required when <code>&lt;source&gt;</code> is used in <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.src +
+        "</div>",
+
+      trackelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>src</code> attribute of the <code>&lt;track&gt;</code> tag specifies the URL of the track</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.src +
+        "</div>",
     },
 
     srcset: {
@@ -1933,23 +2017,26 @@ function MiscellaneousAttributes() {
     form               : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;label&gt;, &lt;meter&gt;, &lt;output&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     headers            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     hreflang           : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;</code></div>",
-    label              : "<div>Applied tag(s): <code>&lt;optgroup&gt;, &lt;option&gt;</code></div>",
+    kind               : "<div>Applied tag(s): <code>&lt;track&gt;</code></div>",
+    label              : "<div>Applied tag(s): <code>&lt;optgroup&gt;, &lt;option&gt;, &lt;track&gt;</code></div>",
     list               : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
     loading            : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
-    media              : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;, &lt;style&gt;</code></div>",
+    media              : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;link&gt;, &lt;source&gt;, &lt;style&gt;</code></div>",
     name               : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;form&gt;, &lt;map&gt;, &lt;input&gt;, &lt;meta&gt;, &lt;output&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     nomodule           : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     placeholder        : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     popovertarget      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     popovertargetaction: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
+    preload            : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
     rel                : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;form&gt;, &lt;link&gt;</code></div>",
     rowspan            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     scope              : "<div>Applied tag(s): <code>&lt;th&gt;</code></div>",
     shape              : "<div>Applied tag(s): <code>&lt;area&gt;</code></div>",
     sizes              : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;link&gt;</code></div>",
     span               : "<div>Applied tag(s): <code>&lt;col&gt;, &lt;colgroup&gt;</code></div>",
+    srclang            : "<div>Applied tag(s): <code>&lt;track&gt;</code></div>",
     start              : "<div>Applied tag(s): <code>&lt;ol&gt;</code></div>",
-    type               : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;button&gt;, &lt;input&gt;, &lt;link&gt;, &lt;ol&gt;, &lt;script&gt;, &lt;style&gt;</code></div>",
+    type               : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;button&gt;, &lt;input&gt;, &lt;link&gt;, &lt;ol&gt;, &lt;script&gt;, &lt;source&gt;, &lt;style&gt;</code></div>",
     usemap             : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
     wrap               : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
     xlmns              : "<div>Applied tag(s): <code>&lt;html&gt;</code></div>"
@@ -2691,6 +2778,22 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    kind: {
+      trackelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>kind</code> attribute of the <code>&lt;track&gt;</code> tag specifies the kind of text track</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>captions</code></td><td>The track defines translation of dialogue and sound effects (suitable for deaf users)</td></tr>" +
+        "    <tr><td><code>chapters</code></td><td>The track defines chapter titles (suitable for navigating the media resource)</td></tr>" +
+        "    <tr><td><code>descriptions</code></td><td>The track defines a textual description of the video content (suitable for blind users)</td></tr>" +
+        "    <tr><td><code>metadata</code></td><td>The track defines content used by scripts. Not visible for the user</td></tr>" +
+        "    <tr><td><code>subtitles</code></td><td>The track defines subtitles, used to display subtitles in a video</td></tr>" +
+        "  </table>" +
+           myRelatedElements.kind +
+        "</div>"
+    },
+
     headers: {
       tdelement:
         "<div class=\"Box-Attributes\">" +
@@ -2772,6 +2875,16 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>String</em></code></td><td>A shorter version for the option</td></tr>" +
+        "  </table>" +
+           myRelatedElements.label +
+        "</div>",
+
+      trackelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>label</code> attribute of the <code>&lt;track&gt;</code> tag specifies the title of the text track, and is used by the browser when listing available text tracks</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>String</em></code></td><td>Specifies the title of the text track</td></tr>" +
         "  </table>" +
            myRelatedElements.label +
         "</div>"
@@ -2895,6 +3008,44 @@ function MiscellaneousAttributes() {
         "    <tr><td>" + Media.Device_Projection + "</td></tr>" +
         "    <tr><td>" + Media.Device_Screen + "</td></tr>" +
         "    <tr><td>" + Media.Device_Speech + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Teletype + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Television + "</td></tr>" +
+        "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
+        "    <tr><td>" + Media.Value_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Color_Index + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Aspect_Ratio + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Device_Width + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Grid + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Height + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Monochrome + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Orientation + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Resolution + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Scan + "</td></tr>" +
+        "    <tr><td>" + Media.Value_Width + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.media +
+        "</div>",
+
+      sourceelement:
+        "<div class=\"Box-Attributes\">" +
+        "<div>The <code>media</code> attribute of the <code>&lt;source&gt;</code> tag specifies any valid media query that would normally be defined in a CSS</div>" +
+        "<div>This attribute can accept several values</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td rowspan=\"4\"><code><em>Operator</em></code></td></tr>" +
+        "    <tr><td>" + Media.Operator_And + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Not + "</td></tr>" +
+        "    <tr><td>" + Media.Operator_Or + "</td></tr>" +
+        "    <tr><td rowspan=\"10\"><code><em>Device</em></code></td></tr>" +
+        "    <tr><td>" + Media.Device_All + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Aural + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Braille + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Handheld + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Print + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Projection + "</td></tr>" +
+        "    <tr><td>" + Media.Device_Screen + "</td></tr>" +
         "    <tr><td>" + Media.Device_Teletype + "</td></tr>" +
         "    <tr><td>" + Media.Device_Television + "</td></tr>" +
         "    <tr><td rowspan=\"14\"><code><em>Value</em></code></td></tr>" +
@@ -3155,6 +3306,23 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    preload: {
+      audioelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>preload</code> attribute of the <code>&lt;audio&gt;</code> tag specifies if and how the author thinks that the audio file should be loaded when the page loads</div>" +
+        "  <div>The <code>preload</code> attribute allows the author to provide a hint to the browser about what they think will lead to the best user experience</div>" +
+        "  <div>This attribute may be ignored in some instances</div>" +
+        "  <div>The <code>preload</code> attribute is ignored if <code>autoplay</code> is present</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>auto</code></td><td>The author thinks that the browser should load the entire audio file when the page loads</td></tr>" +
+        "    <tr><td><code>metadata</code></td><td>The author thinks that the browser should load only metadata when the page loads</td></tr>" +
+        "    <tr><td><code>none</code></td><td>The author thinks that the browser should NOT load the audio file when the page loads</td></tr>" +
+        "  </table>" +
+           myRelatedElements.preload +
+        "</div>"
+    },
+
     rel: {
       anchorelement:
         "<div class=\"Box-Attributes\">" +
@@ -3350,6 +3518,20 @@ function MiscellaneousAttributes() {
         "</div>"
     },
 
+    srclang: {
+      trackelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>srclang</code> attribute of the <code>&lt;track&gt;</code> tag specifies the language of the track text data</div>" +
+        "  <div>This attribute is required if <code>kind=\"subtitles\"</code></div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><a href=\"https://www.w3schools.com/tags/ref_language_codes.asp\" target=\"_blank\"><em>HTML Language Codes</em></a></code></td>" +
+        "        <td>Specifies a two-letter language code that specifies the language of the track text data</td></tr>" +
+        "  </table>" +
+           myRelatedElements.srclang +
+        "</div>"
+    },
+
     start: {
       olelement:
         "<div class=\"Box-Attributes\">" +
@@ -3464,6 +3646,16 @@ function MiscellaneousAttributes() {
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Script Type</em></code></td><td>" + Type.Script + Type.IANA_Media_Type + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.type +
+        "</div>",
+
+      sourceelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>type</code> attribute of the <code>&lt;source&gt;</code> tag specifies the Internet media type (formerly known as MIME type) of the media resource</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Link Type</em></code></td><td>" + Type.IANA_Media_Type + "</td></tr>" +
         "  </table>" +
            myRelatedElements.type +
         "</div>",
@@ -8070,6 +8262,60 @@ function AudioEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function AudioAutoplayAttributes() {
+  let myVisibility = document.getElementById("Audio-Autoplay-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Audio-Autoplay-Attributes").innerHTML = BooleanAttributes().autoplay.audioelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AudioControlsAttributes() {
+  let myVisibility = document.getElementById("Audio-Controls-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Audio-Controls-Attributes").innerHTML = BooleanAttributes().controls.audioelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AudioLoopAttributes() {
+  let myVisibility = document.getElementById("Audio-Loop-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Audio-Loop-Attributes").innerHTML = BooleanAttributes().loop.audioelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AudioMutedAttributes() {
+  let myVisibility = document.getElementById("Audio-Muted-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Audio-Muted-Attributes").innerHTML = BooleanAttributes().muted.audioelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AudioPreloadAttributes() {
+  let myVisibility = document.getElementById("Audio-Preload-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Audio-Preload-Attributes").innerHTML = MiscellaneousAttributes().preload.audioelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function AudioSrcAttributes() {
+  let myVisibility = document.getElementById("Audio-Src-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Audio-Src-Attributes").innerHTML = HyperlinkAttributes().src.audioelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // SOURCE TAG //
 function SourceTag() {
   let myVisibility = document.getElementById("Source-Tag");
@@ -8103,6 +8349,33 @@ function SourceEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function SourceMediaAttributes() {
+  let myVisibility = document.getElementById("Source-Media-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Source-Media-Attributes").innerHTML = MiscellaneousAttributes().media.sourceelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SourceSrcAttributes() {
+  let myVisibility = document.getElementById("Source-Src-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Source-Src-Attributes").innerHTML = HyperlinkAttributes().src.sourceelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function SourceTypeAttributes() {
+  let myVisibility = document.getElementById("Source-Type-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Source-Type-Attributes").innerHTML = MiscellaneousAttributes().type.sourceelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 // TRACK TAG //
 function TrackTag() {
   let myVisibility = document.getElementById("Track-Tag");
@@ -8132,6 +8405,51 @@ function TrackEventAttributes() {
     document.getElementById("Track-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrackDefaultAttributes() {
+  let myVisibility = document.getElementById("Track-Default-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Track-Default-Attributes").innerHTML = BooleanAttributes().default.trackelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrackKindAttributes() {
+  let myVisibility = document.getElementById("Track-Kind-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Track-Kind-Attributes").innerHTML = MiscellaneousAttributes().kind.trackelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrackLabelAttributes() {
+  let myVisibility = document.getElementById("Track-Label-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Track-Label-Attributes").innerHTML = MiscellaneousAttributes().label.trackelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrackSrcAttributes() {
+  let myVisibility = document.getElementById("Track-Src-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Track-Src-Attributes").innerHTML = HyperlinkAttributes().src.trackelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function TrackSrclangAttributes() {
+  let myVisibility = document.getElementById("Track-Srclang-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Track-Srclang-Attributes").innerHTML = MiscellaneousAttributes().srclang.trackelement;
   }
   else { myVisibility.style.display = "none"; }
 }
