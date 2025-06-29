@@ -401,18 +401,19 @@ function BooleanAttributes() {
   const myRelatedElements = {
     async         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     autofocus     : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
-    autoplay      : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
+    autoplay      : "<div>Applied tag(s): <code>&lt;audio&gt;, &lt;video&gt;</code></div>",
     checked       : "<div>Applied tag(s): <code>&lt;input&gt;</code></div>",
-    controls      : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
+    controls      : "<div>Applied tag(s): <code>&lt;audio&gt;, &lt;video&gt;</code></div>",
     default       : "<div>Applied tag(s): <code>&lt;track&gt;</code></div>",
     defer         : "<div>Applied tag(s): <code>&lt;script&gt;</code></div>",
     disabled      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;fieldset&gt;, &lt;input&gt;, &lt;optgroup&gt;, &lt;option&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     formnovalidate: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     ismap         : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
-    loop          : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
+    loop          : "<div>Applied tag(s): <code>&lt;audio&gt;, &lt;video&gt;</code></div>",
     multiple      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;</code></div>",
-    muted         : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
+    muted         : "<div>Applied tag(s): <code>&lt;audio&gt;, &lt;video&gt;</code></div>",
     novalidate    : "<div>Applied tag(s): <code>&lt;form&gt;</code></div>",
+    open          : "<div>Applied tag(s): <code>&lt;details&gt;</code></div>",
     readonly      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     required      : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</code></div>",
     reversed      : "<div>Applied tag(s): <code>&lt;ol&gt;</code></div>",
@@ -483,6 +484,13 @@ function BooleanAttributes() {
         "  <div>The <code>autoplay</code> attribute of the <code>&lt;audio&gt;</code> tag specifies the audio will automatically start playing as soon as it can do so without stopping</div>" +
         "  <div>Add <code>muted</code> after <code>autoplay</code> to let the audio file start playing automatically (but muted)</div>" +
            myRelatedElements.autoplay +
+        "</div>",
+
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>autoplay</code> attribute of the <code>&lt;video&gt;</code> tag specifies the video will automatically start playing</div>" +
+        "  <div>Add <code>muted</code> after <code>autoplay</code> to let the video file start playing automatically (but muted)</div>" +
+           myRelatedElements.autoplay +
         "</div>"
     },
 
@@ -501,6 +509,13 @@ function BooleanAttributes() {
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>controls</code> attribute of the <code>&lt;audio&gt;</code> tag specifies that audio controls should be displayed</div>" +
         "  <div>Audio controls include play, pause, seeking, volume</div>" +
+           myRelatedElements.controls +
+        "</div>",
+
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>controls</code> attribute of the <code>&lt;video&gt;</code> tag specifies that video controls should be displayed</div>" +
+        "  <div>Audio controls include play, pause, seeking, volume, fullscreen toggle, captions/subtitles (when available), track (when available)</div>" +
            myRelatedElements.controls +
         "</div>"
     },
@@ -609,6 +624,12 @@ function BooleanAttributes() {
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>loop</code> attribute of the <code>&lt;audio&gt;</code> tag specifies that the audio will start over again, every time it is finished</div>" +
            myRelatedElements.loop +
+        "</div>",
+
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>loop</code> attribute of the <code>&lt;video&gt;</code> tag specifies that the video will start over again, every time it is finished</div>" +
+           myRelatedElements.loop +
         "</div>"
     },
 
@@ -638,6 +659,12 @@ function BooleanAttributes() {
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>muted</code> attribute of the <code>&lt;audio&gt;</code> tag specifies that the audio output should be muted</div>" +
            myRelatedElements.muted +
+        "</div>",
+
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>muted</code> attribute of the <code>&lt;video&gt;</code> tag specifies that the video output should be muted</div>" +
+           myRelatedElements.muted +
         "</div>"
     },
 
@@ -646,6 +673,14 @@ function BooleanAttributes() {
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>novalidate</code> attribute of the <code>&lt;form&gt;</code> tag specifies that the form-data (input) should not be validated when submitted</div>" +
            myRelatedElements.novalidate +
+        "</div>"
+    },
+
+    open: {
+      detailselement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>open</code> attribute of the <code>&lt;details&gt;</code> tag specifies that the details should be visible (open) to the user</div>" +
+           myRelatedElements.open +
         "</div>"
     },
 
@@ -771,23 +806,23 @@ function DimensionAttributes() {
   /* LIST OF RELATED ELEMENTS */
   const myRelatedElements = {
     cols  : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
-    height: "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;</code></div>",
+    height: "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;, &lt;video&gt;</code></div>",
     rows  : "<div>Applied tag(s): <code>&lt;textarea&gt;</code></div>",
     size  : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;select&gt;</code></div>",
-    width : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;</code></div>"
+    width : "<div>Applied tag(s): <code>&lt;img&gt;, &lt;input&gt;, &lt;video&gt;</code></div>"
   };
 
   /* NOTES OF DIMENSION ATTRIBUTES */
   const Dimension = {
     Description1:
-      "Always specify both the <code>height</code> and <code>width</code> attributes for images<br>" +
-      "If height and width are set, the space required for the image is reserved when the page is loaded<br>" +
-      "However, without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it<br>" +
-      "The effect will be that the page layout will change during loading (while the images load)",
+      "Always specify both the <code>height</code> and <code>width</code> attributes for this media file<br>" +
+      "If height and width are set, the space required for the file is reserved when the page is loaded<br>" +
+      "However, without these attributes, the browser does not know the size of the file, and cannot reserve the appropriate space to it<br>" +
+      "The effect will be that the page layout will change during loading (while the files load)",
 
     Description2:
-      "Downsizing a large image with the <code>height, width</code> attributes forces a user to download the large image (even if it looks small on the page)<br>" +
-      "To avoid this, rescale the image with a program before using it on a page"
+      "Downsizing a large file with the <code>height, width</code> attributes forces a user to download the large file (even if it looks small on the page)<br>" +
+      "To avoid this, rescale the file with a program before using it on a page"
   };
 
   const Select = 
@@ -826,10 +861,22 @@ function DimensionAttributes() {
         "<div class=\"Box-Attributes\">" +
         "  <div>The <code>height</code> attribute of the <code>&lt;input&gt;</code> tag specifies the height of the input element</div>" +
         "  <div>The <code>height</code> attribute is used only with <code>&lt;input type=\"image\"&gt;</code></div>" +
-        "  <div>" + Dimension.Description1  + "</div>" +
+        "  <div>" + Dimension.Description1 + "</div>" +
         "  <table>" +
         "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
         "    <tr><td><code><em>Pixels</em></code></td><td>The height in pixels<br>Example; <code>&lt;input <b>height</b>=\"100\"&gt;</code></td></tr>" +
+        "  </table>" +
+           myRelatedElements.height +
+        "</div>",
+
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>height</code> attribute of the <code>&lt;video&gt;</code> tag specifies the height of a video player, in pixels</div>" +
+        "  <div>" + Dimension.Description1 + "</div>" +
+        "  <div>" + Dimension.Description2 + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Pixels</em></code></td><td>The height in pixels<br>Example; <code>&lt;video <b>height</b>=\"100\"&gt;</code></td></tr>" +
         "  </table>" +
            myRelatedElements.height +
         "</div>"
@@ -896,6 +943,18 @@ function DimensionAttributes() {
         "    <tr><td><code><em>Pixels</em></code></td><td>The width in pixels<br>Example; <code>&lt;input <b>width</b>=\"100\"&gt;</code></td></tr>" +
         "  </table>" +
            myRelatedElements.width +
+        "</div>",
+
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>width</code> attribute of the <code>&lt;video&gt;</code> tag specifies the width of a video player, in pixels</div>" +
+        "  <div>" + Dimension.Description1 + "</div>" +
+        "  <div>" + Dimension.Description2 + "</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Pixels</em></code></td><td>The width in pixels<br>Example; <code>&lt;video <b>width</b>=\"100\"&gt;</code></td></tr>" +
+        "  </table>" +
+           myRelatedElements.width +
         "</div>"
     }
   };
@@ -914,8 +973,9 @@ function HyperlinkAttributes() {
     formtarget: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     href      : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;link&gt;</code></div>",
     longdesc  : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>",
+    poster    : "<div>Applied tag(s): <code>&lt;video&gt;</code></div>",
     target    : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;base&gt;, &lt;form&gt;</code></div>",
-    src       : "<div>Applied tag(s): <code>&lt;audio&gt;, &lt;img&gt;, &lt;input&gt;, &lt;script&gt;, &lt;source&gt;, &lt;track&gt;</code></div>",
+    src       : "<div>Applied tag(s): <code>&lt;audio&gt;, &lt;img&gt;, &lt;input&gt;, &lt;script&gt;, &lt;source&gt;, &lt;track&gt;, &lt;video&gt;</code></div>",
     srcset    : "<div>Applied tag(s): <code>&lt;img&gt;</code></div>"
   };
 
@@ -1120,6 +1180,20 @@ function HyperlinkAttributes() {
         "</div>"
     },
 
+    poster: {
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>poster</code> attribute of the <code>&lt;video&gt;</code> tag specifies an image to be shown while the video is downloading, or until the user hits the play button</div>" +
+        "  <div>If this is not included, the first frame of the video will be used instead</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.poster +
+        "</div>"
+    },
+
     src: {
       audioelement:
         "<div class=\"Box-Attributes\">" +
@@ -1190,6 +1264,19 @@ function HyperlinkAttributes() {
         "  </table>" +
            myRelatedElements.src +
         "</div>",
+
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>src</code> attribute of the <code>&lt;video&gt;</code> tag specifies the URL of the video</div>" +
+        "  <div>Use <code>&lt;source&gt;</code> elements inside the <code>&lt;video&gt;</code> element</div>" +
+        "  <div>Each <code>&lt;source&gt;</code> element can link to different video files and the browser will use the first recognized format</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Absolute + "</td></tr>" +
+        "    <tr><td><code><em>Absolute URL</em></code></td><td>" + URL.Relative + "</td></tr>" +
+        "  </table>" +
+           myRelatedElements.src +
+        "</div>"
     },
 
     srcset: {
@@ -2027,7 +2114,7 @@ function MiscellaneousAttributes() {
     placeholder        : "<div>Applied tag(s): <code>&lt;input&gt;, &lt;textarea&gt;</code></div>",
     popovertarget      : "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
     popovertargetaction: "<div>Applied tag(s): <code>&lt;button&gt;, &lt;input&gt;</code></div>",
-    preload            : "<div>Applied tag(s): <code>&lt;audio&gt;</code></div>",
+    preload            : "<div>Applied tag(s): <code>&lt;audio&gt;, &lt;video&gt;</code></div>",
     rel                : "<div>Applied tag(s): <code>&lt;a&gt;, &lt;area&gt;, &lt;form&gt;, &lt;link&gt;</code></div>",
     rowspan            : "<div>Applied tag(s): <code>&lt;td&gt;, &lt;th&gt;</code></div>",
     scope              : "<div>Applied tag(s): <code>&lt;th&gt;</code></div>",
@@ -3318,6 +3405,21 @@ function MiscellaneousAttributes() {
         "    <tr><td><code>auto</code></td><td>The author thinks that the browser should load the entire audio file when the page loads</td></tr>" +
         "    <tr><td><code>metadata</code></td><td>The author thinks that the browser should load only metadata when the page loads</td></tr>" +
         "    <tr><td><code>none</code></td><td>The author thinks that the browser should NOT load the audio file when the page loads</td></tr>" +
+        "  </table>" +
+           myRelatedElements.preload +
+        "</div>",
+
+      videoelement:
+        "<div class=\"Box-Attributes\">" +
+        "  <div>The <code>preload</code> attribute of the <code>&lt;video&gt;</code> tag specifies if and how the author thinks that the video file should be loaded when the page loads</div>" +
+        "  <div>The <code>preload</code> attribute allows the author to provide a hint to the browser about what they think will lead to the best user experience</div>" +
+        "  <div>This attribute may be ignored in some instances</div>" +
+        "  <div>The <code>preload</code> attribute is ignored if <code>autoplay</code> is present</div>" +
+        "  <table>" +
+        "    <tr><th><code>myValue</code></th><th>DESCRIPTION(S)</th></tr>" +
+        "    <tr><td><code>auto</code></td><td>The author thinks that the browser should load the entire video file when the page loads</td></tr>" +
+        "    <tr><td><code>metadata</code></td><td>The author thinks that the browser should load only metadata when the page loads</td></tr>" +
+        "    <tr><td><code>none</code></td><td>The author thinks that the browser should NOT load the video file when the page loads</td></tr>" +
         "  </table>" +
            myRelatedElements.preload +
         "</div>"
@@ -8487,6 +8589,87 @@ function VideoEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
+function VideoAutoplayAttributes() {
+  let myVisibility = document.getElementById("Video-Autoplay-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Autoplay-Attributes").innerHTML = BooleanAttributes().autoplay.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function VideoControlsAttributes() {
+  let myVisibility = document.getElementById("Video-Controls-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Controls-Attributes").innerHTML = BooleanAttributes().controls.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function VideoHeightAttributes() {
+  let myVisibility = document.getElementById("Video-Height-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Height-Attributes").innerHTML = DimensionAttributes().height.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function VideoLoopAttributes() {
+  let myVisibility = document.getElementById("Video-Loop-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Loop-Attributes").innerHTML = BooleanAttributes().loop.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function VideoMutedAttributes() {
+  let myVisibility = document.getElementById("Video-Muted-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Muted-Attributes").innerHTML = BooleanAttributes().muted.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function VideoPosterAttributes() {
+  let myVisibility = document.getElementById("Video-Poster-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Poster-Attributes").innerHTML = HyperlinkAttributes().poster.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function VideoPreloadAttributes() {
+  let myVisibility = document.getElementById("Video-Preload-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Preload-Attributes").innerHTML = MiscellaneousAttributes().preload.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function VideoSrcAttributes() {
+  let myVisibility = document.getElementById("Video-Src-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Src-Attributes").innerHTML = HyperlinkAttributes().src.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function VideoWidthAttributes() {
+  let myVisibility = document.getElementById("Video-Width-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Video-Width-Attributes").innerHTML = DimensionAttributes().width.videoelement;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
 /////////////////////
 // RUBY ANNOTATION //
 /////////////////////
@@ -8637,6 +8820,15 @@ function DetailsEventAttributes() {
     document.getElementById("Details-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
+  }
+  else { myVisibility.style.display = "none"; }
+}
+
+function DetailsOpenAttributes() {
+  let myVisibility = document.getElementById("Details-Open-Attributes");
+  if (myVisibility.style.display === "none") {
+    myVisibility.style.display = "block";
+    document.getElementById("Details-Open-Attributes").innerHTML = BooleanAttributes().open.detailselement;
   }
   else { myVisibility.style.display = "none"; }
 }
