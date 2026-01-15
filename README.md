@@ -1,10 +1,10 @@
-# Full Stack Developer - Beginner
+# Junior Web Developer
 I am currently exploring, learning and also improving the following skill sets:
-- **HTML**
-- **CSS**
-- **JavaScript**
+- **HTML5**
+- **CSS3**
+- **JavaScript (ES6)**
 - **Git**
-- **Bootstrap**
+- **Bootstrap 5**
 - **SASS**
 - **jQuery**
 - **React**
