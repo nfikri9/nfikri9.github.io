@@ -2,13 +2,22 @@
 <html>
   <head>
     <!-- Browser Tab -->
-    <title>PORTFOLIO</title>
+    <title>PROFILE</title>
     <link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
 
-    <!-- Others -->
-    <meta charset="utf-8">
+    <!-- Metadata -->
+    <meta name="author" content="Nabil Fikri">
+    <meta name="description" content="Profile page, listing work experiences, achievements and languages.">
+    <meta name="keywords" content="HTML, CSS, Bootstrap">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="Profile.css">
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="Profile page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Logo-NF.jpg">
+    <meta property="og:url" content="nfikri9.github.io/">
 
     <!-- Bootstrap -->
     <link
@@ -138,11 +147,17 @@
               <img src="Badge - Endpoint Security.png" alt="Badge - Endpoint Security" class="Badges">
             </a>
           </div>
+
+          <div class="Badge-Box">
+            <a href="https://www.credly.com/badges/2268395c-6566-40f1-a074-16c4d992625d/public_url" target="_blank">
+              <img src="Badge - HTML Essentials.png" alt="Badge - HTML Essentials" class="Badges">
+            </a>
+          </div>
         </div>
       </fieldset>
 
       <fieldset class="border p-2">
-        <legend class="float-none w-auto p-2"><em>Language</em></legend>
+        <legend class="float-none w-auto p-2"><em>Languages</em></legend>
         <table class="table">
           <tr>
             <th>LANGUAGE</th>
@@ -165,5 +180,6 @@
         </table>
       </fieldset>
     </main>
+
   </body>
 </html>
