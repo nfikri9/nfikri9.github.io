@@ -3,45 +3,44 @@
 ///////////////////
 function CSSSelectors() {
   let myVisibility = document.getElementById("CSS-Selectors");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ELEMENT SELECTORS //
 function ElementSelectors() {
     let myVisibility = document.getElementById("Element-Selectors");
     myVisibility.style.margin = "10px 0";
-    if (myVisibility.style.display === "none") {
-      myVisibility.style.display = "block";
+    if (myVisibility.style.display === "block") {myVisibility.style.display = "none"; }
+    else {
+      myVisibility.style.display = "block"; 
       document.getElementById("Element-Selectors").innerHTML =
         "<div>The element selector selects HTML elements based on the element name</div>" +
-        "<div><code>body { <em>CSS Codes</em>; } <br> div { <em>CSS Codes</em>; } <br> p { <em>CSS Codes</em>; }</code></div>";
-    }
-    else { myVisibility.style.display = "none"; }
+        "<div><code>body { <em>CSS Codes</em>; } <br> div { <em>CSS Codes</em>; } <br> p { <em>CSS Codes</em>; }</code></div>"; }
 }
 
 // ID SELECTORS //
 function IdSelectors() {
   let myVisibility = document.getElementById("Id-Selectors");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Id-Selectors").innerHTML =
       "<div>The id selector uses the <code>id</code> attribute of an HTML element to select a specific element</div>" +
       "<div>The id of an element is unique within a page, so the id selector is used to select one unique element</div>" +
       "<div><code><em>#Container { CSS Codes; } <br> #Button-Link { CSS Codes; } <br> #myId { CSS Codes; }</em></code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // CLASS SELECTORS //
 function ClassSelectors() {
   let myVisibility = document.getElementById("Class-Selectors");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Class-Selectors").innerHTML =
       "<div>The class selectors select HTML elements with a specific <code>class</code> attribute</div>" +
       "<div>Unlike id selectors, class selectors are used by multiple elements</div>" +
@@ -50,72 +49,72 @@ function ClassSelectors() {
       "<div>The class selectors also can select only one type of elements with multiple specific class</div>" +
       "<div><code><em>div.box { CSS Codes; } <br> span.myClass.StepA { CSS Codes; }</em></code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // GROUP SELECTORS //
 function GroupSelectors() {
   let myVisibility = document.getElementById("Group-Selectors");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-    document.getElementById("Group-Selectors").innerHTML =
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
+    
+  }
+  else { myVisibility.style.display = "block"; document.getElementById("Group-Selectors").innerHTML =
       "<div>The grouping selectors select all the HTML elements with the same style definitions</div>" +
       "<div>To group selectors, separate each selector with a comma to minimize the code</div>" +
-      "<div><code>div, <em>#myId, .myClass { CSS Codes; }</em></code></div>";
-  }
-  else { myVisibility.style.display = "none"; }
+      "<div><code>div, <em>#myId, .myClass { CSS Codes; }</em></code></div>"; }
 }
 
 // UNIVERSAL SELECTOR //
 function UniversalSelector() {
   let myVisibility = document.getElementById("Universal-Selector");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Universal-Selector").innerHTML =
       "<div>The universal selector selects all HTML elements on the page</div>" +
       "<div><code><em>* { CSS Codes; }</em></code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // DESCENDANT COMBINATOR //
 function DescendantCombinator() {
   let myVisibility = document.getElementById("Descendant-Combinator");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Descendant-Combinator").innerHTML =
       "<div>The descendant combinator matches all elements that are descendants of a specified element</div>" +
       "<div>As long as the matched elements are inside of a specified element, it is considered descendant combinator</div>" +
       "<div><code>div p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; inside &lt;div&gt; * /<br></div>" +
       "<div>section div span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; inside &lt;div&gt;, &lt;div&gt; inside &lt;section&gt; */</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // CHILD COMBINATOR //
 function ChildCombinator() {
   let myVisibility = document.getElementById("Child-Combinator");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Child-Combinator").innerHTML =
       "<div>The child combinator selects all elements that are the children of a specified element</div>" +
       "<div>When there is another nested element of a specified element, that nested element is not considered child combinator, but it is descendant combinator</div>" +
       "<div><code>div > p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; child of &lt;div&gt; */ <br></div>" +
       "<div>section > ul > li { <em>CSS Codes;</em> } /* Selects all &lt;li&gt; child of &lt;ul&gt;, &lt;ul&gt; child of &lt;section&gt; */</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // NEXT SIBLING COMBINATOR //
 function NextSiblingCombinator() {
   let myVisibility = document.getElementById("Next-Sibling-Combinator");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Next-Sibling-Combinator").innerHTML =
       "<div>The next sibling combinator is used to select an element that is directly after another specific element</div>" +
       "<div>Sibling elements must have the same parent element, and 'adjacent' means 'immediately following'</div>" +
@@ -123,120 +122,120 @@ function NextSiblingCombinator() {
       "<div><code>div + p { <em>CSS Codes;</em> } /* Select the first &lt;p&gt; right after &lt;div&gt; */ <br></div>" +
       "<div>nav + div + a { <em>CSS Codes;</em> } /* Select the first &lt;a&gt; right after &lt;div&gt;, &lt;div&gt; is right after &lt;nav&gt; */</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // SUBSEQUENT-SIBLING COMBINATOR //
 function SubsequentSiblingCombinator() {
   let myVisibility = document.getElementById("Subsequent-Sibling-Combinator");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Subsequent-Sibling-Combinator").innerHTML =
       "<div>The subsequent-sibling combinator selects all elements that are next siblings of a specified element</div>" +
       "<div><code>div ~ p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; after &lt;div&gt; */ <br></div>" +
       "<div>div ~ p ~ span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; after &lt;p&gt;, &lt;p&gt; after &lt;div&gt; */</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ATTRIBUTE SELECTOR 1 //
 function AttributeSelector1() {
   let myVisibility = document.getElementById("Attribute-Selector1");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Attribute-Selector1").innerHTML =
       "<div>The selector is used to select elements with a specified attribute</div>" +
       "<div><code>a[target] { <em>CSS Codes;</em> } /* Selects all &lt;a&gt; with a target attribute */</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ATTRIBUTE SELECTOR 2 //
 function AttributeSelector2() {
   let myVisibility = document.getElementById("Attribute-Selector2");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Attribute-Selector2").innerHTML =
       "<div>The selector is used to select elements with a specified attribute and value</div>" +
       "<div><code>a[target = '_blank'] { <em>CSS Codes;</em> } /* Select all &lt;a&gt; with a target='_blank' attribute */</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ATTRIBUTE SELECTOR 3 //
 function AttributeSelector3() {
   let myVisibility = document.getElementById("Attribute-Selector3");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Attribute-Selector3").innerHTML =
       "<div>The selector is used to select elements with the specified attribute</div>" +
       "<div>The value containing atleast a specified word</div>" +
       "<div>Example; <code>[class ~= 'test']</code> matches <code>[class = 'test'], [class = 'my test'], [class = 'test semester']</code></div>" +
       "<div>It does not work for <code>[class = 'my-test'], [class = 'test-sample'], [class = 'tests']</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ATTRIBUTE SELECTOR 4 //
 function AttributeSelector4() {
   let myVisibility = document.getElementById("Attribute-Selector4");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Attribute-Selector4").innerHTML =
       "<div>The selector is used to select elements with the specified attribute</div>" +
       "<div>The value can be exactly the specified word, or the specified word followed by a hyphen (-)</div>" +
       "<div>Example; <code>[class |= 'test']</code> matches <code>[class = 'test'], [class = 'test-sample']</code></div>" +
       "<div>It does not work for <code>[class = 'my test'], [class = 'test semester'], [class = 'my-test'], [class = 'tests']</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ATTRIBUTE SELECTOR 5 //
 function AttributeSelector5() {
   let myVisibility = document.getElementById("Attribute-Selector5");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Attribute-Selector5").innerHTML =
       "<div>The selector is used to select elements with the specified attribute, which the value starts with the specified value</div>" +
       "<div>The value does not have to be a whole word</div>" +
       "<div>Example; <code>[class ^= 'test']</code> matches <code>[class = 'test'], [class = 'test semester'], [class = 'test-sample'], [class = 'tests']</code></div>" +
       "<div>It does not work for <code>[class = 'my test'], [class = 'my-test']</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ATTRIBUTE SELECTOR 6 //
 function AttributeSelector6() {
   let myVisibility = document.getElementById("Attribute-Selector6");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Attribute-Selector6").innerHTML =
       "<div>The selector is used to select elements whose attribute value ends with a specified value</div>" +
       "<div>The value does not have to be a whole word</div>" +
       "<div>Example; <code>[class $= 'test']</code> matches <code>[class = 'test'], [class = 'my-test'], [class = 'mytest']</code></div>" +
       "<div>It does not work for <code>[class = 'test semester'], [class = 'test-sample'], [class = 'tests']</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ATTRIBUTE SELECTOR 7 //
 function AttributeSelector7() {
   let myVisibility = document.getElementById("Attribute-Selector7");
   myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Attribute-Selector7").innerHTML =
       "<div>The selector is used to select elements whose attribute value contains a specified value</div>" +
       "<div>Example; <code>[class *= 'te']</code> matches <code>[class = 'test'], [class = 'cute']</code></div>";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 ///////////////////
@@ -244,10 +243,10 @@ function AttributeSelector7() {
 ///////////////////
 function CSSBoxModel() {
   let myVisibility = document.getElementById("CSS-Box-Model");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 ////////////////////
@@ -255,10 +254,10 @@ function CSSBoxModel() {
 ////////////////////
 function CSSBoxLayout() {
   let myVisibility = document.getElementById("CSS-Box-Layout");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 ///////////////////////////////
@@ -266,10 +265,10 @@ function CSSBoxLayout() {
 ///////////////////////////////
 function CSSAnimationTransition() {
   let myVisibility = document.getElementById("CSS-Animation-Transition");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 ////////////////////
@@ -277,10 +276,10 @@ function CSSAnimationTransition() {
 ////////////////////
 function CSSTypography() {
   let myVisibility = document.getElementById("CSS-Typography");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 ///////////////////////
@@ -4719,4 +4718,12 @@ function InsightsTypography() {
     myVisibility.style.display = "block";
   }
   else { myVisibility.style.display = "none"; }
+}
+
+function rawnotes() {
+  let myVisibility = document.getElementById("raw-notes");
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
+  }
+  else { myVisibility.style.display = "block"; }
 }

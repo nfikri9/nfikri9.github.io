@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Browser Tab -->
+    <title>CASCADING STYLE SHEETS</title>
+    <link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
 
-<head>
-<!-- BROWSER TAB -->
-<title>CASCADING STYLE SHEETS</title>
-<link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
+    <!-- Metadata -->
+    <meta name="author" content="Nabil Fikri">
+    <meta name="description" content="CSS page, which includes notes that has been applied or covered.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Notes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Notes-CSS.css">
 
-<!--Others-->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Notes-CSS.css">
-</head>
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="Main page of the portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Logo-NF.jpg">
+    <meta property="og:url" content="nfikri9.github.io/">
+  </head>
 
-<body>
-<!------------------>
-<!-- NAVIGATE BAR -->
-<!------------------>
-<nav class="My-Navigate-Bar">
-  <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
-  <div>
-    <a href="Notes-HTML.html">HTML</a>
-    <a href="Notes-CSS.html">CSS</a>
-    <a href="Notes-JavaScript.html">JAVASCRIPT</a>
-    <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
-    <a href="Notes-JQuery.html">JQUERY</a>
-    <a href="Notes-SASS.html">SASS</a>
-    <a href="Notes-React.html">REACT</a>
-    <a href="Notes-Redux.html">REDUX</a>
-    <a href="Notes-Git.html">GIT</a>
-  </div>
-</nav>
+  <body>
+  <!------------------>
+  <!-- NAVIGATE BAR -->
+  <!------------------>
+  <nav class="My-Navigate-Bar">
+    <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
+    <div>
+      <a href="Notes-HTML.html">HTML</a>
+      <a href="Notes-CSS.html">CSS</a>
+      <a href="Notes-JavaScript.html">JAVASCRIPT</a>
+      <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
+      <a href="Notes-JQuery.html">JQUERY</a>
+      <a href="Notes-SASS.html">SASS</a>
+      <a href="Notes-React.html">REACT</a>
+      <a href="Notes-Redux.html">REDUX</a>
+      <a href="Notes-Git.html">GIT</a>
+    </div>
+  </nav>
 
 <!---------------------->
 <!-- TOPIC SELECTIONS -->
@@ -40,6 +48,7 @@
   <button onclick="CSSBoxLayout()">BOX LAYOUT</button>
   <button onclick="CSSAnimationTransition()">ANIMATION & TRANSITION</button>
   <button onclick="CSSTypography()">TYPOGRAPHY</button>
+  <button onclick="rawnotes()">NOTES</button>
 </div>
 
 <!------------------->
@@ -1409,646 +1418,221 @@ transition: transition-property transition-duration transition-timing-function t
 </div>
 </section>
 
-<!-- IMPORTING JS FILE -->
-<script src="Notes-CSS.js"></script>
+  <!-- RAW NOTES -->
+  <section id="raw-notes" class="Box-Contents">
+    <h2>COLOR THEORY</h2>
+    <p>Color theory is the study of how colors interact with each other and how they affect our perception.</p>
+    <p>It covers color relationships, color harmony, and the psychological impact of color.</p>
+    <p>There are two color models; Additive Colors (RGB) and Subtractive Colors (RYB).</p>
+    <p>Each color model can be classified as either primary, secondary, or tertiary.</p>
+    <br>
+    <h3>Primary Color</h3>
+    <p>Primary colors are the fundamental hues from which all other colors are derived</p>
+    <p>RGB: <span style="color: red;">red</span>, <span style="color: green;">green</span>, <span style="color: blue;">blue</span></p>
+    <p>RYB: <span style="color: red;">red</span>, <span style="color: yellow;">yellow</span>, <span style="color: blue;">blue</span></p>
+    <br>
+    <h3>Secondary Color</h3>
+    <p>Secondary colors result from mixing equal amounts of two primary colors. Green, orange, and purple are examples of secondary colors.</p>
+    <p>RGB:
+       <span style="color: yellow;">yellow</span> (<span style="color: red;">red</span> + <span style="color: green;">green</span>),
+       <span style="color: cyan;">Cyan</span> (<span style="color: green;">green</span> + <span style="color: blue;">blue</span>),
+       <span style="color: magenta;">Magenta</span> (<span style="color: red;">red</span> + <span style="color: blue;">blue</span>)
+    </p>
+    <p>RYB:
+       <span style="color: orange;">orange</span> (<span style="color: red;">red</span> + <span style="color: yellow;">yellow</span>),
+       <span style="color: green;">green</span> (<span style="color: yellow;">yellow</span> + <span style="color: blue;">blue</span>),
+       <span style="color: purple;">purple</span> (<span style="color: red;">red</span> + <span style="color: blue;">blue</span>),
+    </p>
+    <br>
+    <h3>Tertiary Color</h3>
+    <p>Tertiary colors result from combining a primary color with a neighboring secondary color.</p>
+    <p>RGB:
+       <span style="color: orange;">orange</span> (<span style="color: red;">red</span> + <span style="color: yellow;">yellow</span>),
+       <span style="color: chartreuse;">chartreuse</span> (<span style="color: red;">yellow</span> + <span style="color: green;">green</span>),
+       <span style="color: springgreen;">spring green</span> (<span style="color: green;">green</span> + <span style="color: cyan;">cyan</span>),
+       <span style="color: #007FFF;">azure</span> (<span style="color: cyan;">cyan</span> + <span style="color: blue;">blue</span>),
+       <span style="color: violet;">violet</span> (<span style="color: blue;">blue</span> + <span style="color: magenta;">magenta</span>),
+       <span style="color: #FF007F;">rose</span> (<span style="color: magenta;">magenta</span> + <span style="color: red;">red</span>)
+    </p>
+    <p>RYB:
+       <span style="color: magenta;">magenta</span> (<span style="color: red;">red</span> + <span style="color: violet;">violet</span>),
+       <span style="color: #8A2BE2;">blue violet</span> (<span style="color: violet;">violet</span> + <span style="color: blue;">blue</span>),
+       <span style="color: #0D98BA;">shady cyan</span> (<span style="color: blue;">blue</span> + <span style="color: green;">green</span>),
+       <span style="color: lime;">lime</span> (<span style="color: green;">green</span> + <span style="color: yellow;">yellow</span>),
+       <span style="color: #FFAE42 ;">amber</span> (<span style="color: yellow;">yellow</span> + <span style="color: orange;">orange</span>),
+       <span style="color: #FF5349;">red orange</span> (<span style="color: orange;">orange</span> + <span style="color: red;">red</span>)
+    </p>
+    <br>
+    <h3>Warm Color</h3>
+    <p>Warm colors evoke feelings of comfort, warmth, and coziness.</p>
+    <p>Eg: <span style="color: red;">red</span>, <span style="color: orange;">orange</span>, <span style="color: yellow;">yellow</span></p>
+    <br>
+    <h3>Cool Color</h3>
+    <p>Cool colors  evoke feelings of calmness, serenity, and professionalism</p>
+    <p>Eg: <span style="color: blue;">blue</span>, <span style="color: green;">green</span>, <span style="color: purple;">purple</span></p>
+    <br>
+    <p>Colors can also be represented through color models.</p>
+    <p>They are essential for describing and reproducing colors in a standard way.</p>
+    <p>Frequently used color models include the RGB model, the HSV model, and the HSL model.</p>
+    <p>They represent colors based on different properties.</p>
+    <br>
+    <h3>Color Wheel</h3>
+    <p>The color wheel is a circular diagram that shows how colors relate to each other.</p>
+    <p>It's an essential tool for designers because it helps them to select color combinations.</p>
+    <p>This is very helpful for creating color palettes and color schemes.</p>
+    <br>
+    <h4>Color Scheme</h4>
+    <p>A color scheme is the set of colors chosen for a specific design or project.</p>
+    <p>They are usually based on the principles of color theory.</p>
+    <p>By understanding the relationships between colors on the wheel, you can develop different types of color schemes.</p>
+    <br>
+    <h4>Analogous Color</h4>
+    <p>Analogous color schemes create cohesive and soothing experiences.</p>
+    <p>They have analogous colors, which are adjacent to each other in the color wheel.</p>
+    <br>
+    <h4>Complementary Color</h4>
+    <p>Complementary color schemes create high contrast and visual impact.</p>
+    <p>Their colors are located on the opposite ends of the color wheel, relative to each other.</p>
+    <p>For example, magenta is complementary to green and blue is complementary to yellow and so on.</p>
+    <p>Color contrast is essential for web accessibility.</p>
+    <p>It ensures that text and other important elements are clearly distinguishable from their background.</p>
+    <p>This is especially important for people with visual disabilities.</p>
+    <br>
+    <h4>Triadic Color</h4>
+    <p>A triadic color scheme has vibrant colors.</p>
+    <p>They are made from colors that are approximately equidistant from each other.</p>
+    <p>If they are connected, they form an equilateral triangle on the color wheel.</p>
+    <br>
+    <h4>Monochromatic Color</h4>
+    <p>In this color scheme, all the colors are derived from the same base color by adjusting its lightness, darkness, and saturation.</p>
+    <p>This evokes a feeling of unity and harmony while still creating contrast.</p>
+    <br>
+    <h3>Choosing Color in Web Development</h3>
+    <p>Create a color scheme that defines your website's branding.</p>
+    <p>Use colors to evoke the emotions and perceptions that align with your goals.</p>
+    <p>Choose colors with enough contrast to make your website accessible for everyone.</p>
+    <p>Use color to highlight important elements of your website, like buttons.</p>
+    <p>Use color consistently and use it to create a visual hierarchy.</p>
+    <br>
+    <p>Color theory is a core aspect of design.</p>
+    <p>By understanding color psychology, harmonies, and accessibility, you can create effective designs, evoke emotions, and enhance user experience.</p>
 
+    <br><hr><br>
 
+    <h2>CSS COLORS</h2>
+    <p>In CSS, colors play a crucial role in designing web pages, enhancing readability, setting the mood, and improving user experience.</p>
+    <br>
+    <h3>Named Colors</h3>
+    <p>Named colors are predefined color names recognized by browsers.</p>
+    <p>Named colors in CSS are a collection of 140 standard color names</p>
+    <p>A = aliceblue | antiquewhite | aqua | aquamarine | azure <br>
+       B = beige | bisque | black | blanchedalmond | blue | blueviolet | brown | burlywood <br>
+       C = cadetblue | chartreuse | chocolate | coral | cornflowerblue | cornsilk | crimson | cyan <br>
+       D = darkblue | darkcyan | darkgoldenrod | darkgray | darkgreen | darkgrey | darkkhaki | darkmagenta | darkolivegreen | darkorange | darkorchid | darkred | darksalmon |
+           darkseagreen | darkslateblue | darkslategray | darkslategrey | darkturquoise | darkviolet | deeppink | deepskyblue | dimgray | dimgrey | dodgerblue <br>
+       F = firebrick | floralwhite | forestgreen | fuchsia <br>
+       G = gainsboro | ghostwhite | gold | goldenrod | gray | green | greenyellow | grey <br>
+       H = honeydew | hotpink <br>
+       I = indianred | indigo | ivory <br>
+       K = khaki <br>
+       L = lavender | lavenderblush | lawngreen | lemonchiffon | lightblue | lightcoral | lightcyan | lightgoldenrodyellow | lightgray | lightgreen | lightgrey | lightpink |
+           lightsalmon | lightseagreen | lightskyblue | lightslategray | lightslategrey | lightsteelblue | lightyellow | lime | limegreen | linen
+       currentColor | inherit | initial <br>
+       M = magenta | maroon | mediumaquamarine | mediumblue | mediumorchid | mediumpurple | mediumseagreen | mediumslateblue | mediumspringgreen | mediumturquoise |
+           mediumvioletred | midnightblue | mintcream | mistyrose | moccasin <br>
+       N = navajowhite | navy
+       <!-- FUNCTION COLOR
+       calc() | color | color relative | color mix | color mix hue | hsl relative | hwb | hwb relative | lab | lab relative | lch | lch relative |
+       
+       DONE: hsl() | hsla() | rgb() | rgba() |
+       -->
+    </p>
+    <ul>Benefits:
+       <li>These names are simple to use and make your code more readable, and they are self-descriptive.</li>
+       <li>Named colors are useful for quick prototyping, simple designs, and improving code readability.</li>
+       <li>The readability of the code improved since named colors provide an immediate visual understanding of the intended style.</li>
+    </ul>
+    <ul>Limitations:
+       <li>Limited to only 140 available options.</li>
+       <li>They may not offer the precise shade needed for more detailed designs.</li>
+    </ul>
+    <br>
+    <h3>RGB Colors</h3>
+    <p>The RGB color model is an additive color model, which means colors are created by combining light at varying intensities.</p>
+    <p>RGB stands for Red, Green, and Blue — the primary colors of light.</p>
+    <p>These three colors are combined in different intensities to create a wide range of colors.</p>
+    <p>The intensity of each color can range from 0 (which means no light) to 255 (which means full light).</p>
+    <p>By mixing different levels of red, green, and blue, developer can produce any color they see on the screen.</p>
+    <ul>
+      <li>Red is represented by rgb(255, 0, 0), with full intensity for red and none for green or blue.</li>
+      <li>Green is represented by rgb(0, 255, 0), with full intensity for green and none for red or blue.</li>
+      <li>Blue is represented by rgb(0, 0, 255), with full intensity for blue and none for red or green.</li>
+      <li>White is represented by rgb(255, 255, 255), which means full light intensity for all three colors.</li>
+      <li>Black is represented by rgb(0, 0, 0), which means no light for any of the three colors.</li>
+    </ul>
+    <p>The rgb() function define colors using the RGB color model.</p>
+    <p>The function takes three values, each representing the intensity of red, green, and blue light, respectively.</p>
+    <p>The rgba() function adds a fourth value — alpha, that controls the transparency of the color.</p>
+    <p>The alpha value ranges from 0 (completely transparent) to 1 (completely opaque).</p>
+    <ul> Benefits
+      <li>The RGB color model is especially useful for digital media because it directly corresponds to how screens display colors.</li>
+      <li>Monitors and displays use tiny red, green, and blue pixels to create the colors they see.</li>
+      <li>By controlling the intensity of these pixels through RGB values, developer can achieve a wide range of colors for their web design.</li>
+      <li>Additionally, the RGB model is ideal when working with dynamic designs.</li>
+      <li>For instance, if developer want to create animations or color effects that require real-time changes, the flexibility of the
+          RGB function allows them to modify colors programmatically.
+      </li>
+    </ul>
+    <br>
+    <h3>HSL Colors</h3>
+    <p>The HSL color model represents colors in a way that is more in line with how humans perceive color.</p>
+    <p>HSL stands for Hue, Saturation, and Lightness — three key components that define a color.</p>
+    <p>The hue is the color type, represented as an angle on the color wheel, which ranges from 0 to 360 degrees.</p>
+    <p>For example, 0 degrees represents red, 120 degrees is green, and 240 degrees is blue.</p>
+    <p>By adjusting the hue, developer shift through different colors on the spectrum.</p>
+    <p>Saturation refers to the intensity or purity of the color.</p>
+    <p>It is measured as a percentage from 0% (a completely desaturated, grayscale color) to 100% (the most vibrant form of that color).</p>
+    <p>A color with 100% saturation is fully vivid, while a color with 0% saturation appears as a shade of gray.</p>
+    <p>Lightness determines how light or dark the color is, again measured as a percentage.</p>
+    <p>A lightness value of 0% will produce black, 50% will give you the normal tone of the hue, and 100% will result in white.</p>
+    <p>The hsl() function define colors using the HSL color model.</p>
+    <p>The function takes three values, each representing the hue, saturation of the hue, lightness of the hue.</p>
+    <p>The hsla() function adds a fourth value — alpha, that controls the transparency of the color.</p>
+    <ul>Benefits
+      <li>One of the main advantages of the HSL color model is its intuitive nature.</li>
+      <li>It makes it easy to adjust a color's vibrancy or lightness by tweaking the saturation and lightness values without having to alter the core color (hue).</li>
+      <li>The HSL color model is particularly useful when developer need to create color schemes and adjust shades or tints easily.</li>
+      <li>Additionally, HSL makes color values more readable and understandable when compared to other methods like hex codes or RGB.</li>
+      <li>Developer can more clearly see the intent behind the color and adjust accordingly, especially when experimenting with different designs.</li>
+    </ul>
+    <br>
+    <h3>Hex Code Colors</h3>
+    <p>Hexadecimal color values, or hex codes, are a concise way to represent colors in the RGB color model.</p>
+    <p>A hex code (short for hexadecimal code) is a six-character string used to represent colors in the RGB color model.</p>
+    <p>The "hex" refers to the base-16 numbering system, which uses digits 0 to 9 and letters A to F.</p>
+    <p>In the context of colors, hex codes specify the amounts of red, green, and blue (RGB) that make up a particular color.</p>
+    <p>Each hex code starts with a hash symbol (#), followed by six characters that define the intensity of red, green, and blue in the color.</p>
+    <p>Here, #RRGGBB is a placeholder for the actual hex code.</p>
+    <p>The RR, GG, and BB pairs each represent the intensity of red, green, and blue, respectively.</p>
+    <p>These pairs can range from 00 (the lowest intensity) to FF (the highest intensity).</p>
+    <p>The higher the number, the more of that color will be present in the final mix.</p>
+    <ul>Benefits
+      <li>Hex codes are popular because they are precise and easy to use.</li>
+      <li>They allow developer to fine-tune their colors, making them ideal for designs where consistency is important.</li>
+      <li>You may notice hex codes written in shorthand format, using only three characters instead of six.</li>
+      <li>This is possible when both characters in each color pair are the same.</li>
+      <li>For instance, #FF5733 cannot be shortened, but #FFFFFF (white) can be written as #FFF.</li>
+      <li>Hex codes are popular for their precision and compatibility, allowing for over 16 million colors across all browsers.</li>
+      <li>They're ideal when you need specific branding colors, want to control exact shades that aren't easily defined by named colors or HSL,
+          or when you're copying colors from design software that provides hex codes by default.
+      </li>
+    </ul>
+    <br>
+    <h3>Linear & Radial Gradients</h3>
+  </section>
 
+  <!-- Importing JS File -->
+  <script src="Notes-CSS.js"></script>
 
-
-
-
-
-  <!-- FONT -->
-  <li><code>font: font-style font-variant font-weight font-size/line-height font-family;</code>
-
-  <!-- FONT VARIANT -->
-  <li><code>font-variant: <em>myValue</em>;</code>
-  <ul><li>The <code>font-variant</code> property specifies whether or not a text should be displayed in a small-caps font</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>default value</b> which the browser displays a normal font )</li>
-  <!--  <li><code>small-caps</code>
-  <ul><li>The browser displays a small-caps font</li>
-  <li>In a small-caps font, all lowercase letters are converted to uppercase letters</li>
-  <li>The converted uppercase letters appears in a smaller font size than the original uppercase letters in the text</li> -->
-  </ul></li> </ul></li> <br>
-
-  <!-- FONT WEIGHT -->
-  <li><code>font-weight: <em>myValue</em>;</code>
-  <ul><li>The <code>font-weight</code> property sets how thick or thin characters in text should be displayed</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>Default value</b> which displays normal characters )</li>
-  <!--  <li><code>lighter</code> ( Defines lighter characters )</li>
-  <li><code>bold</code> ( Defines thick characters )</li>
-  <li><code>bolder</code> ( Defines thicker characters )</li>
-  <li><code> 0 &le; <em>Numbers</em> &le; 1000</code>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- FONT SIZE -->
-  <li><code>font-size: <em>myValue</em>;</code>
-  <ul><li>The <code>font-size</code> property sets the size of a font</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>medium</code> ( A <b>default value</b> which the font is set to a medium size )</li>
-  <!--  <li><code>xx-small</code> ( The font is set to an xx-small size )</li>
-  <li><code>x-small</code> ( The font is set to an extra small size )</li>
-  <li><code>small</code> ( The font is set to a small size )</li>
-  <li><code>large</code> ( The font is set to a large size )</li>
-  <li><code>x-large</code> ( The font is set to an extra large size )</li>
-  <li><code>xx-large</code> ( The font is set to an xx-large size )</li>
-  <li><code>smaller</code> ( The font is set to a smaller size than the parent element )</li>
-  <li><code>larger</code> ( The font is set to a larger size than the parent element )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- LINE HEIGHT -->
-  <li><code>line-height: <em>myValue</em>;</code>
-  <ul><li>The <code>line-height</code> property specifies the height of a line</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>default value</b> which line height is sets to normal )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- FONT FAMILY -->
-  <li><code>font-family: <em>myValues</em>;</code>
-  <ul><li>The <code>font-family</code> property specifies the font for an element</li>
-  <li>The <code>font-family</code> property can hold several font names</li>
-  <li>If the browser does not support the first font, it tries the next font</li>
-  <li>Separate each value with a comma</li>
-  <li>If a font name contains white-space, it must be quoted</li>
-  <li>Single quotes must be used when using the <code>style</code> attribute in HTML</li>
-  <li>There are two types of font family names:
-  <ul><li>Family Name = <code>times, courier, arial</code>, etc.</li>
-  <li>Generic Family = <code>serif, sans-serif, cursive, fantasy, monospace</code>, etc.</li>
-  </ul></li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>Arial</code></li>
-  <li><code>'Arial Narrow'</code></li>
-  <li><code>'Arial Narrow Bold'</code></li>
-  <li><code>Calibri</code></li>
-  <li><code>Cambria</code></li>
-  <li><code>Cochin</code></li>
-  <li><code>Courier</code></li>
-  <li><code>'Courier New'</code></li>
-  <li><code>cursive</code></li>
-  <li><code>fantasy</code></li>
-  <li><code>'Franklin Gothic Medium'</code></li>
-  <li><code>Geneva</code></li>
-  <li><code>Georgia</code></li>
-  <li><code>'Gill Sans'</code></li>
-  <li><code>'Gill Sans MT'</code></li>
-  <li><code>Haettenschweiler</code></li>
-  <li><code>Helvetica</code></li>
-  <li><code>Impact</code></li>
-  <li><code>'Lucida Grande'</code></li>
-  <li><code>'Lucida Sans'</code></li>
-  <li><code>'Lucida Sans Regular'</code></li>
-  <li><code>'Lucida Sans Unicode'</code></li>
-  <li><code>monospace</code></li>
-  <li><code>sans-serif</code></li>
-  <li><code>'Segoe UI'</code></li>
-  <li><code>serif</code></li>
-  <li><code>Tahoma</code></li>
-  <li><code>Times</code></li>
-  <li><code>'Times New Roman'</code></li>
-  <li><code>'Trebuchet MS'</code></li>
-  <li><code>Verdana</code></li>
-  </ul></li> </ul></li> </ul></li> <br>
-
-  <!-- FONT KERNING -->
-  <li><code>font-kerning</code>
-  <ul><li>The <code>font-kerning</code> property controls the usage of the kerning information stored in a font</li>
-  <li>Kerning defines how letters are spaced</li>
-  <li>For fonts that do not include kerning data, this property will have no visible effect</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>auto</code> ( A <b>default value</b> which the browser determines whether font kerning should be applied or not )</li>
-  <li><code>normal</code> ( Specifies that font kerning is applied )</li>
-  <li><code>none</code> ( Specifies that font kerning is not applied )</li>
-  </ul></li> </ul></li> <br>
-
-  <!--  <li><code>font-feature-settings</code></li>
-  <li><code>font-size-adjust</code></li>
-  <li><code>font-stretch</code></li>
-  <li><code>font-variant-caps</code></li>  -->
-
-  <!-- TEXT ALIGN -->
-  <li><code>text-align: <em>myValue</em>;</code>
-  <ul><li>The <code>text-align</code> property specifies the horizontal alignment of text in an element</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>left</code> ( A <b>default value</b> where the text align is on the left when <code>direction: ltr;</code> )</li>
-  <li><code>right</code> ( A <b>default value</b> where the text align is on the right when <code>direction: ltr;</code> )</li>
-  <li><code>center</code> ( Text align is centered ) </li>
-  <li><code>justify</code> ( Stretches the lines so that each line has equal width, like in newspapers and magazines )</li>
-  <!--  <li><code>start</code> ( The text is aligned at the beginning of the line )</li>
-  <li><code>end</code> ( The text is aligned at the end of the line )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT ALIGN LAST -->
-  <li><code>text-align-last: <em>myValue</em>;</code>
-  <ul><li>The <code>text-align-last</code> property specifies how to align the last line of a text</li>
-  <li>The <code>text-align-last</code> property sets the alignment for all last lines within the selected element</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>auto</code> ( A <b>default value</b> where the last line is justified and aligned left )</li>
-  <!--  <li><code>center</code> ( The last line is center-aligned )</li>
-  <li><code>justify</code> ( The last line is justified as the rest of the lines )</li>
-  <li><code>left</code> ( The last line is aligned to the left )</li>
-  <li><code>right</code> ( The last line is aligned to the right )</li>
-  <li><code>start</code> ( The last line is aligned at the beginning of the line )</li>
-  <li><code>end</code> ( The last line is aligned at the end of the line)</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT DECORATION -->
-  <li><code>text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;</code>
-
-  <!-- TEXT DECORATION LINE -->
-  <ul><li><code>text-decoration-line: <em>myValue</em>;</code>
-  <ul><li>The <code>text-decoration-line</code> property sets the kind of text decoration to use</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>none</code> ( A <b>default value</b> which there is no text decoration line specified )</li>
-  <!--  <li><code>overline</code> ( Specifies that a line will be displayed over the text )</li>
-  <li><code>line-through</code> ( Specifies that a line will be displayed through the text )</li>
-  <li><code>underline</code> ( Specifies that a line will be displayed under the text )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT DECORATION COLOR -->
-  <li><code>text-decoration-color: <em>myValue</em>;</code>
-  <ul><li>The <code>text-decoration-color</code> property specifies the color of the text-decoration</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <li><code>currentColor</code> ( A <b>default value</b> where the text decoration color is based on the value of the <code>color</code> property of the element )</li>
-  <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT DECORATION STYLE -->
-  <li><code>text-decoration-style: <em>myValue</em>;</code>
-  <ul><li>The <code>text-decoration-style</code> property sets the style of the text decoration</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>solid</code> ( A <b>default value</b> which the line will display as a single line )</li>
-  <!--  <li><code>double</code> ( The line will display as a double line )</li>
-  <li><code>dashed</code> ( The line will display as a dashed line )</li>
-  <li><code>dotted</code> ( The line will display as a dotted line )</li>
-  <li><code>none</code> ( There is no text decoration style specified)</li>
-  <li><code>wavy</code> ( The line will display as a wavy line )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT DECORATION THICKNESS -->
-  <li><code>text-decoration-thickness: <em>myValue</em>;</code>
-  <ul><li>The <code>text-decoration-thickness</code> property specifies the thickness of the decoration line</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code> (A <b>default value</b> which the browser automatically chooses the thickness of the decoration line )</li>
-  </ul></li> </ul></li> </ul></li> <br>
-
-  <!-- TEXT EMPHASIS -->
-  <li><code>text-emphasis: text-emphasis-style text-emphasis-color;</code>
-
-  <!-- TEXT EMPHASIS STYLE -->
-  <ul><li><code>text-emphasis-style: <em>myValue</em>;</code>
-  <ul><li>The <code>text-emphasis-style</code> property sets the style of emphasis marks</li>
-  <li>The size of the emphasis marks is about 50% of the size of the font</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>'<em>Strings</em>'</code> ( The emphasis marks are the given string, one character )</li>
-  <li><code>none</code> ( A <b>default value</b> which no emphasis marks are applied )</li>
-  <!--  <li><code>filled</code> ( The emphasis marks are filled with a solid color )</li>
-  <li><code>open</code> ( The emphasis marks are hollow )</li>
-  <li><code>dot</code> ( The emphasis marks are small circles )</li>
-  <li><code>circle</code> ( The emphasis marks are circles )</li>
-  <li><code>double-circle</code> ( The emphasis marks are double circles )</li>
-  <li><code>triangle</code> ( The emphasis marks are triangles )</li>
-  <li><code>sesame</code> ( The emphasis marks are sesames )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <li><code>text-emphasis-color: <em>myValue</em>;</code>
-  <ul><li>The <code>text-emphasis-color</code> property sets the color of emphasis marks</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <li><code>currentColor</code> ( A <b>default value</b> where the text emphasis color is based on the value of the <code>color</code> property of the element )</li>
-  <!--  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> </ul></li> <br>
-
-  <!-- TEXT EMPHASIS POSITION -->
-  <li><code>text-emphasis-position: <em>myValue</em>;</code>
-  <ul><li>The <code>text-emphasis-position</code> property specifies the position of the emphasis marks</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>over</code> ( The emphasis marks are applied over the text in horizontal writing mode )</li>
-  <li><code>under</code> (  The emphasis marks are applied under the text in horizontal writing mode )</li>
-  <li><code>left</code> ( The emphasis marks are applied to the left of the text in vertical writing mode )</li>
-  <li><code>right</code> ( The emphasis marks are applied to the right of the text in vertical writing mode )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT INDENT -->
-  <li><code>text-indent: <em>myValue</em>;</code>
-  <ul><li>The <code>text-indent</code> property specifies the indentation of the first line in a text-block</li>
-  <li>The first line will be indented to the left if the value is negative</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>0</code> ( A <b>default value</b> where there is no text indentation )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT JUSTIFY -->
-  <li><code>text-justify: <em>myValue</em>;</code>
-  <ul><li>The <code>text-justify</code> property specifies the justification method of text when <code>text-align: justify;</code></li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>auto</code> ( A <b>default value</b> where the browser determines the justification algorithm )</li>
-  <!--  <li><code>distribute</code></li>
-  <li><code>distribute-all-lines</code></li>
-  <li><code>inter-character</code> ( Increases/Decreases the space between characters )</li>
-  <li><code>inter-cluster</code></li>
-  <li><code>inter-ideograph</code></li>
-  <li><code>inter-word</code> ( Increases/Decreases the space between words )</li>
-  <li><code>kashida</code></li>
-  <li><code>newspaper</code></li>
-  <li><code>none</code> ( Disables justification methods )</li> -->
-  </ul></li> </ul></li> <br>
-
-  <li><code>text-orientation: <em>myValue</em>;</code>
-  <ul><li>The <code>text-orientation</code> property specifies the orientation of characters</li>
-  <li><b>related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>mixed</code> ( A <b>default value</b> where characters are rotated 90 degrees clockwise )</li>
-  <!--  <li><code>sideways</code> ( Characters are orientated the same as the text lines are oriented with writing-mode vertical, 90 degrees clockwise )</li>
-  <li><code>sideways-right</code> ( Equal to property value sideways, kept for compatibility purposes )</li>
-  <li><code>upright</code> ( Characters are not rotated, but standing upright )</li>
-  <li><code>use-glyph-orientation</code> ( For use in SVG elements )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <li><code>text-overflow: <em>myValue</em>;</code>
-  <ul><li>The <code>text-overflow</code> property specifies how overflowed content that is not displayed should be signaled to the user</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code><em>Strings</em></code> ( Render the given string to represent the clipped text )</li>
-  <li><code>clip</code> ( A <b>default value</b> where the text is clipped and not accessible )</li>
-  <!--  <li><code>ellipsis</code> ( Render an ellipsis ("...") to represent the clipped text )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT SHADOW -->
-  <li><code>text-shadow: <em>H-Offset V-Offset Blur-Radius Color</em>;</code>
-  <ul><li>The <code>text-shadow</code> property adds shadow to text</li>
-  <li><code><em>H-Offset</em></code>
-  <ul><li><b>Required</b> parameter which specifies the position of the horizontal shadow</li>
-  <li>Negative values are allowed</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  </ul></li> </ul></li>
-  <li><code><em>V-Offset</em></code>
-  <ul><li><b>Required</b> parameter which specifies the position of the vertical shadow</li>
-  <li>Negative values are allowed</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  </ul></li> </ul></li>
-  <li><code><em>Blur-Radius</em></code>
-  <ul><li><b>Optional</b> parameter which spcefies the blur radius of the shadow</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  </ul></li> </ul></li>
-  <li><code><em>Color</em></code>
-  <ul><li><b>Optional</b> parameter which specifies the color of the shadow</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Color-Values"><code><em>CSS Color Values</em></code></a></li>
-  <!--  <li><code>currentColor</code></li>
-  <li><code>transparent</code></li>  -->
-  </ul></li> </ul></li> </ul></li> <br>
-
-  <!-- TEXT TRANSFORM -->
-  <li><code>text-transform: <em>myValue</em>;</code>
-  <ul><li>The <code>text-transform </code> property controls the capitalization of text</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>none</code> ( A <b>default value</b> which there is no capitalization )</li>
-  <!--  <li><code>capitalize</code> ( Transforms the first character of each word to uppercase )</li>
-  <li><code>lowercase</code> ( Transforms all characters to lowercase )</li>
-  <li><code>uppercase</code> ( Transforms all characters to uppercase )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT UNDERLINE OFFSET -->
-  <li><code>text-underline-offset: <em>myValue</em>;</code>
-  <ul><li>The <code>text-underline-offset</code> property specifies the offset distance of underline text decorations</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>auto</code> ( A <b>default value</b> which the browser sets the appropriate offset for the underline )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- TEXT UNDERLINE POSITION -->
-  <li><code>text-underline-position: <em>myValue</em>;</code>
-  <ul><li>The <code>text-underline-position</code> property specifies the position of underline text decorations</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>auto</code> ( A <b>default value</b> which the browser sets the position of the underline )</li>
-  <!--  <li><code>above</code> ( Sets the underline above the alphabetic baseline )</li>
-  <li><code>below</code> ( Sets the underline below the alphabetic baseline )</li>
-  <li><code>under</code> ( Sets the underline below the alphabetic baseline )</li>
-  <li><code>from-font</code> ( If the font file includes information about underline position, use that value, if not, use <code>auto</code> )</li>
-  <li><code>left</code> ( In vertical writing mode the underline will be placed to the left of the text while
-                          in horizontal writing mode the underline will be placed as auto )</li>
-  <li><code>right</code> ( In vertical writing mode the underline will be placed to the right of the text while
-                           in horizontal writing mode the underline will be placed as auto )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- LETTER SPACING -->
-  <li><code>letter-spacing: <em>myValue</em>;</code>
-  <ul><li>The <code>letter-spacing</code> property increases or decreases the space between characters in a text</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>default value</b> which defines normal space between characters )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- DIRECTION -->
-  <li><code>direction: <em>myValue</em>;</code>
-  <ul><li>The <code>direction</code> property specifies the text direction/writing direction within a block-level element</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>ltr</code> ( A <b>default value</b> which text direction goes from left-to-right )</li>
-  <li><code>rtl</code> ( Text direction goes from right-to-left )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- UNICODE BIDI -->
-  <li><code>unicode-bidi: <em>myValue</em>;</code>
-  <ul><li>The <code>unicode-bidi</code> property specifies whether the text should be overridden to support multiple languages in the same document</li>
-  <li>The <code>unicode-bidi</code> property is used together with the <code>direction</code> property</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>default value</b> which the element does not open an additional level of embedding )</li>
-  <!--  <li><code>bidi-override</code>
-  <ul><li>For inline elements, this creates an override</li>
-  <li>For block elements, this creates an override for inline-level descendants not within another block element</li>
-  </ul></li>
-  <li><code>embed</code> ( For inline elements, this value opens an additional level of embedding )</li>
-  <li><code>isolate</code> ( The element is isolated from its siblings )</li>
-  <li><code>isolate-override</code></li>
-  <li><code>plaintext</code></li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- WHITE SPACE -->
-  <li><code>white-space: <em>myValue</em>;</code>
-  <ul><li>The <code>white-space</code> property specifies how white-space inside an element is handled</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>normal</code>
-  <ul><li>A <b>default value</b> which sequences of whitespace will collapse into a single whitespace</li>
-  <li>Text will wrap when necessary </li>
-  </ul></li>
-  <!--  <li><code>nowrap</code>
-  <ul><li>Sequences of whitespace will collapse into a single whitespace</li>
-  <li>Text will never wrap to the next line</li>
-  <li>The text continues on the same line until a <code>&lt;br&gt;</code> tag is encountered</li>
-  </ul></li>
-  <li><code>pre</code>
-  <ul><li>Whitespace is preserved by the browser</li>
-  <li>Text will only wrap on line breaks</li>
-  <li>Acts like the <code>&lt;pre&gt;</code> tag in HTML</li>
-  </ul></li>
-  <li><code>pre-line</code>
-  <ul><li>Sequences of whitespace will collapse into a single whitespace</li>
-  <li>Text will wrap when necessary, and on line breaks</li>
-  </ul></li>
-  <li><code>pre-wrap</code>
-  <ul><li>Whitespace is preserved by the browser</li>
-  <li>Text will wrap when necessary, and on line breaks</li> -->
-  </ul></li> </ul></li> <br>
-
-  <!-- WORD BREAK -->
-  <li><code>word-break: <em>myValue</em>;</code>
-  <ul><li>The <code>word-break</code> property specifies how words should break when reaching the end of a line</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>default value</b> which uses default line break rules )</li>
-  <!--  <li><code>break-all</code> ( To prevent overflow, word may be broken at any character )</li>
-  <li><code>keep-all</code> ( Word breaks should not be used for Chinese/Japanese/Korean (CJK) text, non-CJK text behavior is the same as value <code>normal</code> )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- WORD SPACING -->
-  <li><code>word-spacing: <em>myValue</em>;</code>
-  <ul><li>The <code>word-spacing</code> property increases or decreases the white space between words</li>
-  <li>Negative values are allowed</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>default value</b> which defines normal space between words, around <code>0.25em</code> )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- WORD WRAP -->
-  <li><code>word-wrap: <em>myValue</em>;</code>
-  <ul><li>The <code>word-wrap</code> property allows long words to be able to be broken and wrap onto the next line</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>normal</code> ( A <b>default value</b> which break words only at allowed break points )</li>
-  <!--  <li><code>break-word</code> ( Allows unbreakable words to be broken )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- WRITING MODE -->
-  <li><code>writing-mode: <em>myValue</em>;</code>
-  <ul><li>The <code>writing-mode</code> property specifies whether lines of text are laid out horizontally or vertically</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>horizontal-tb</code> ( Let the content flow horizontally from left to right, vertically from top to bottom )</li>
-  <li><code>sideways-lr</code></li>
-  <li><code>sideways-rl</code></li>
-  <li><code>vertical-lr</code> ( Let the content flow vertically from top to bottom, horizontally from left to right )</li>
-  <li><code>vertical-rl</code> ( Let the content flow vertically from top to bottom, horizontally from right to left )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- TAB SIZE -->
-  <li><code>tab-size: <em>myValue</em>;</code>
-  <ul><li>The <code>tab-size</code> property specifies the width of a tab character</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><a href="#CSS-Length-Values"><code><em>CSS Length Values</em></code></a></li>
-  <li><code>8</code> ( A <b>default value</b> which the number of space-characters to be displayed for each tab-character )</li>
-  </ul></li> </ul></li> <br>
-
-  <!-- HYPHENS -->
-  <li><code>hyphens: <em>myValue</em>;</code>
-  <ul><li>The <code>hyphens</code> property defines whether hyphenation is allowed to create more soft wrap opportunities within a line of text</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code>manual</code> ( A <b>default value</b> which Words are only hyphenated at <code>&hyphen;</code> or <code>&shy;</code>, if needed )</li>
-  <!--  <li><code>none</code> ( Words are not hyphenated )</li>
-  <li><code>auto</code> ( Words are hyphenated where the algorithm is decidin, if needed )</li>  -->
-  </ul></li> </ul></li> <br>
-
-  <!-- HYPHENATE CHARACTER -->
-  <li><code>hyphenate-character: <em>myValue</em>;</code>
-  <ul><li>The <code>hyphenate-character</code> property defines the character used at the end of line, before a hyphenation break</li>
-  <li><b>Related Value(s):</b>
-  <ul><li><a href="#CSS-Global-Values"><code><em>CSS Global Values</em></code></a></li>
-  <li><code><em>Strings</em></code> ( The character used at the end of line, before a hyphenation break )</li>
-  <li><code>auto</code> ( A <b>default value</b> which the browser selects an appropriate character based on the current typographic conventions )</li>
-  </ul></li> </ul></li>
-
-  <!-- INITIAL LETTER -->
-  <!--  <li><code>initial-letter: <em>myValue</em>;</code></li>  -->
-
-  <!-- QUOTES -->
-  <!--  <li><code>quotes: <em>myValue</em>;</code></li>  -->
-
-  <!-- USER SELECT -->
-  <!--  <li><code>user-select: <em>myValue</em>;</code></li>  -->
-  </ul></li> </ul></li> </ul></p> </div>
-
-  <p><mark><b>INSIGHTS:</b></mark>
-  <ul><li>Common fallback system
-  <ul><li><code>Arial, Helvetica, sans-serif</code></li>
-  <li><code>Cambria, Cochin, Georgia, Times, 'Times New Roman', serif</code></li>
-  <li><code>'Courier New', Courier, monospace</code></li>
-  <li><code>'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif</code></li>
-  <li><code>Georgia, 'Times New Roman', Times, serif</code></li>
-  <li><code>'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif</code></li>
-  <li><code>Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif</code></li>
-  <li><code>'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif</code></li>
-  <li><code>'Segoe UI', Tahoma, Geneva, Verdana, sans-serif</code></li>
-  <li><code>'Times New Roman', Times, serif</code></li>
-  <li><code>'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif</code></li>
-  <li><code>Verdana, Geneva, Tahoma, sans-serif</code></li>
-  </ul></li>
-  <li>How <code>text-align-last</code> property works
-  <ul><li>If there is a <code>&lt;div&gt;</code> with three <code>&lt;p&gt;</code> in it, <code>text-align-last</code> will apply to the last line of each of the paragraphs</li>
-  <li>Use <code>:last-child</code> pseudo-class to apply <code>text-align-last</code> on only the last paragraph in the container</li>
-  </ul></li>
-  <li>Other properties that are required to ensure the <code>text-overflow</code> is working
-  <ul><li>Other properties required are <code>white-space: nowrap;</code> and <code>overflow: hidden;</code></li>
-
-  <!---------------------------->
-  <!-- BACKGROUND, IMAGE, SVG -->
-  <!---------------------------->
-  <!--  <section id="Background-Image-SVG">
-  <h1>BACKGROUND, IMAGE, SVG</h1>
-  <li><code>background: background-color background-image background-position background-size background-repeat background-origin background-clip background-attachment;</code></li>
-  <li><code>background-blend-mode: <em>myValue</em>;</code></li>
-  <li><code>background-position-x: <em>myValue</em>;</code></li>
-  <li><code>background-position-y: <em>myValue</em>;</code></li>
-  <li><code>border-image: border-image-source border-image-slice border-image-width border-image-outset border-image-repeat;</code></li>
-  <li><code>mask: mask-image mask-mode mask-repeat mask-position mask-clip mask-origin mask-size mask-composite;</code></li>
-  <li><code>offset: offset-anchor offset-distance offset-path offset-position offset-rotate;</code></li>
-  <li><code>filter: <em>myValue</em>;</code></li>
-  <li><code>backdrop-filter: <em>myValue</em>;</code></li>
-  <li><code>opacity: <em>myValue</em>;</code></li>
-  <li><code>marker: <em>myValue</em>;</code></li>
-  <li><code>marker-start: <em>myValue</em>;</code></li>
-  <li><code>marker-mid: <em>myValue</em>;</code></li>
-  <li><code>marker-end: <em>myValue</em>;</code></li>
-  <li><code>mask-type: <em>myValue</em>;</code></li>
-  <li><code>paint-order: <em>myValue</em>;</code></li>
-  <li><code>object-fit: <em>myValue</em>;</code></li>
-  <li><code>object-position: <em>myValue</em>;</code></li>
-  <li><code>mix-blend-mode: <em>myValue</em>;</code></li>
-  <li><code>isolation: <em>myValue</em>;</code></li>
-  <li><code>image-rendering: <em>myValue</em>;</code></li>
-  <li><code>color-scheme: <em>myValue</em>;</code></li>
-  <li><code>clip: <em>myValue</em>;</code></li>
-  <li><code>clip-path: <em>myValue</em>;</code></li>
-  </section>  -->
-
-  <!-- MEDIA QUERY -->
-  <section id="Media-Query">
-  <h1>CSS MEDIA QUERY</h1>
-  <div class="Box">
-  <p><code>@media not|only <em>Media Type</em> and (<em>Media Feature</em> and|or|not <em>Media Feature</em>) {<em>CSS Codes;</em>}</code>
-  <ul><li><code>@media</code></li>
-  <li><code><em>MediaType</em></code>
-  <ul><li><code>screen</code></li>
-  <li><code>print</code></li>
-  </ul></li>
-  <li><code><em>MediaFeature</em></code>
-  <ul><li><code>orientation: landscape|portrait</code></li>
-  <li><code>min-width: <em>Screen Size</em></code></li>
-  <li><code>max-width: <em>Screen Size</em></code></li>
-  </ul></li>
-  <li><code>and</code></li>
-  <li><code>or</code></li>
-  <li><code>not</code></li>
-  <li><code>only</code></li>
-  </ul></p>
-
-  <p>Breakpoints
-  <ul><li><code><em>X-Small = Screen Size</em> &le; 575px</code></li>
-  <li><code><em>Small = Screen Size</em> &ge; 576px</code></li>
-  <li><code><em>Medium = Screen Size</em> &ge; 768px</code></li>
-  <li><code><em>Large = Screen Size</em> &ge; 992px</code></li>
-  <li><code><em>X-Large = Screen Size</em> &ge; 1200px</code></li>
-  <li><code><em>XX-Large = Screen Size</em> &ge; 1400px</code></li>
-  </ul></p>
-  
-  <p><b>INSIGHTS:</b>
-  <ul><li>Standard structure for <code>@media</code> rule
-  <ul><li>Place the <code>@media</code> rule at the very bottom of the CSS codes</li>
-  <li>List all breakpoints in increasing order</li>
-  </ul></li> </ul></p> </div></section>
-
-  <!--  @charset | @font-face | @import | @keyframes | @media | @property
-
-  <div id="Box-Shape" class="Box">
-  <h3>BOX SHAPE</h3>
-  <p><b>Related Properties:</b>
-  <ul><li><code>perspective: <em>myValue</em>;</code></li>
-  <li><code>perspective-origin: <em>myValue</em>;</code></li>
-  <li><code>rotate: <em>myValue</em>;</code></li>
-  <li><code>scale: <em>myValue</em>;</code></li>
-  <li><code>transform: <em>myValue</em>;</code></li>
-  <li><code>transform-origin: <em>myValue</em>;</code></li>
-  <li><code>transform-style: <em>myValue</em>;</code></li>
-  <li><code>translate: <em>myValue</em>;</code></li>
-  <li><code>backface-visibility: <em>myValue</em>;</code></li>
-  </ul></p> </div>
-
-  INPUT
-  <li><code>accent-color: <em>myValue</em>;</code></li>
-  <li>caret-color: <em>myValue</em>;</code></li>
-
-  MOUSE CURSOR
-  <li><code>cursor: <em>myValue</em>;</code></li>
-  <li><code>pointer-events: <em>myValue</em>;</code></li>
-
-  OTHERS
-  <li><code>all: <em>myValue</em>;</code></li>
-  <li><code>box-decoration-break: <em>myValue</em>;</code></li>
-  <li><code>box-reflect: <em>myValue</em>;</code></li>
-  <li><code>resize: <em>myValue</em>;</code></li>
-  <li><code>visibility: <em>myValue</em>;</code></li>
-  <li><code>zoom: <em>myValue</em>;</code></li>
-
-  PAGE & PRINT
-  <li><code>break-inside: <em>myValue</em>;</code> (replace <code>page-break-inside</code> property)</li>
-  <li><code>break-before: <em>myValue</em>;</code> (replace <code>page-break-before</code> property)</li>
-  <li><code>break-after: <em>myValue</em>;</code> (replace <code>page-break-after</code> property)</li>
-  <li><code>orphans: <em>myValue</em>;</code></li> 
-  <li><code>widows: <em>myValue</em>;</code></li>
-
-  SCROLL
-  <li><code>overflow: <em>myValue</em>;</code></li>
-  <li><code>overflow-anchor: <em>myValue</em>;</code></li>
-  <li><code>overflow-wrap: <em>myValue</em>;</code></li>
-  <li><code>overflow-x: <em>myValue</em>;</code></li>
-  <li><code>overflow-y: <em>myValue</em>;</code></li>
-  <li><code>overscroll-behavior: overscroll-behavior-x overscroll-behavior-y;</code></li>
-  <li><code>scroll-behavior: <em>myValue</em>;</code></li>
-  <li><code>scrollbar-color: <em>myValue</em>;</code></li>
-  <li><code>scroll-snap-type: <em>myValue</em>;</code></li>
-  <li><code>scroll-snap-align: <em>myValue</em>;</code></li>
-  <li><code>scroll-snap-stop: <em>myValue</em>;</code></li>
-  <li><code>scroll-margin: scroll-margin-top scroll-margin-right scroll-margin-bottom scroll-margin-left;</code></li>
-  <li><code>scroll-padding: scroll-padding-top scroll-padding-right scroll-padding-bottom scroll-padding-left;</code></li>  -->
-
-</body>
+  </body>
 </html>
