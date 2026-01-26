@@ -1540,9 +1540,18 @@ transition: transition-property transition-duration transition-timing-function t
        currentColor | inherit | initial <br>
        M = magenta | maroon | mediumaquamarine | mediumblue | mediumorchid | mediumpurple | mediumseagreen | mediumslateblue | mediumspringgreen | mediumturquoise |
            mediumvioletred | midnightblue | mintcream | mistyrose | moccasin <br>
-       N = navajowhite | navy
+       N = navajowhite | navy <br>
+       O = oldlace | olive | olivedrab | orange | orangered | orchid <br>
+       P = palegoldenrod | palegreen | paleturquoise | palevioletred | papayawhip | peachpuff | peru | pink | plum | powderblue | purple <br>
+       R = rebeccapurple | red | rosybrown | royalblue <br>
+       S = saddlebrown | salmon | sandybrown | seagreen | seashell | sienna | silver | skyblue | slateblue | slategray | slategrey | snow | springgreen | steelblue  <br>
+       T = tan | teal | thistle | tomato | turquoise <br>
+       V = violet <br>
+       W = wheat | white | whitesmoke <br>
+       Y = yellow | yellowgreen
        <!-- FUNCTION COLOR
-       calc() | color | color relative | color mix | color mix hue | hsl relative | hwb | hwb relative | lab | lab relative | lch | lch relative |
+       calc() | color | color relative | color mix | color mix hue | hsl relative | hwb | hwb relative | inherit | initial | lab | lab relative | lch | lch relative | oklab |
+       oklab relative | oklch | oklch relative | rgb relative | transparent | unset |
        
        DONE: hsl() | hsla() | rgb() | rgba() |
        -->
@@ -1629,6 +1638,68 @@ transition: transition-property transition-duration transition-timing-function t
     </ul>
     <br>
     <h3>Linear & Radial Gradients</h3>
+    <p>Gradients in CSS creates smooth transitions between two or more specified colors.</p>
+    <p>They are often used to add depth, texture, and visual interest to web designs without the need for image files.</p>
+    <ul>Linear Gradient
+      <li>Linear gradients create a gradual blend between colors along a straight line.</li>
+      <li>You can control the direction of this line and the colors used.</li>
+    </ul>
+    <ul>Radial gradients
+      <li>Radial gradients create circular or elliptical gradients that radiate from a central point.</li>
+    </ul>
+    <p>Gradients can be used wherever you would use an image in CSS.</p>
+    <p>This makes them versatile for creating backgrounds, buttons, or even text effects when combined with other CSS properties.</p>
+    <p>Remember, while gradients can enhance the visual appeal of your website, it's important to ensure sufficient contrast for accessibility,
+       especially when using gradients behind text.
+    </p>
+
+    <br><hr><br>
+
+    <h2>STYLING INPUT ELEMENT</h2>
+
+    <p>As with all text elements you need to ensure the styles you apply to the text input are accessible.</p>
+    <p>This means the font needs to be adequately sized and the color needs to have sufficient contrast with the background.</p>
+    <p>The placeholder, however, is often forgotten.</p>
+    <p>It's important to remember that this is also text and you will likely need to change the styling to ensure it's readable.</p>
+    <p>Another thing to keep in mind is that you should allow the user to modify the input.</p>
+    <p>For example, if it's a text area you should not remove the ability to resize it.</p>
+    <p>The input should also scale accordingly when the user zooms the page.</p>
+    <p>Input elements are also focusable.</p>
+    <p>When you are editing your styles you should take care that you preserve a noticeable indicator when the element has focus such as a bold border.</p>
+    <p>Additionally there is the error state to consider.</p>
+    <p>When the user's text does not pass the input validation there is a visual indicator that shows there is something wrong.</p>
+    <p>To have the error message dynamically update, you would need to use JavaScript,</p>
+    <p>As you give your element your personal flair, you want to be sure that the error state is still noticeable and that it does not look similar to the focus indicator.</p>
+    <p>With all this in mind you can now create captivating user forms.</p>
+    <br>
+    <h3>When Should You Use appearance: none to Deal with Issues Styling Search Inputs and Checkboxes?</h3>
+    <p>Browsers apply default styling to a lot of elements.</p>
+    <p>In the case of input elements your ability to style them with CSS can feel rather restricted.</p>
+    <p>So, you may want to use appearance: none to hide aspects of the default element and build your own instead.</p>
+    <p>For example, this would hide the default checkboxes for a checkbox input allowing you to use custom indicators like a green tick and a red X to show the state.</p>
+    <p>For a search input, WebKit based browsers will show a default search icon and a cancel button.</p>
+    <p>Hiding these allows you to create your own indicators that would appear on all browsers.</p>
+    <p>WebKit is a software engine that helps web browsers display websites.</p>
+    <p>Browsers like Safari use WebKit to make sure web pages look and work correctly.</p>
+    <p>This appearance: none CSS property gives you complete control over the styling, but it does come with some things to look out for.</p>
+    <p>The default interactive components of input elements include features such as focus and error indicators which you will need to ensure aren't lost.</p>
+    <p>Creating consistent cross-platform styling is a great reason to use this property.</p>
+    <p>You can also use it to ensure that tap targets on a mobile device are large enough or that the colors of a checkbox have enough contrast.</p>
+    <br>
+    <h3>What Are Common Issues When Styling Special Input Elements?</h3>
+    <p>some of the common issues when trying to style special input elements like the datetime-local and color inputs</p>
+    <p>These special types of inputs rely on complex pseudo-elements to create things like the date and color pickers.</p>
+    <p>This presents a significant challenge for styling these inputs.</p>
+    <p>One challenge is that, because the default styling depends entirely on the browser, CSS that makes the picker look right in one browser may produce a
+       very different result in another.
+    </p>
+    <p>Another may be the complexity of the pseudo-element.</p>
+    <p>Consider the date selector; there are a lot of moving parts here and the complex structure of the pseudo-element might pose a significant challenge in applying
+       styling to the right areas.
+    </p>
+    <p>Of course, with these complex elements, you also run the risk of accidentally losing important functionality when you manually style them.</p>
+    <p>Not only could you lose important indicators like the focus state or selected item but you could potentially break the selector entirely.</p>
+    <p>For these reasons many developers rely on JavaScript libraries or custom components entirely instead of using the browser's built-in components.</p>
   </section>
 
   <!-- Importing JS File -->
