@@ -2066,6 +2066,137 @@ transition: transition-property transition-duration transition-timing-function t
     <p>A section where you can find and download icons for your web projects.</p>
     <p>A section where you can learn more about fonts and their best practices, followed by frequently asked questions.</p>
 
+    <br><hr><br>
+    <h2>ACCESSIBILITY</h2>
+
+    <h3>What Are Some Tools to Check for Good Color Contrast on Sites?</h3>
+    <p>When designing websites, ensuring good color contrast is crucial for accessibility and readability.</p>
+    <p>Several tools are available to help developers and designers check and maintain appropriate color contrast ratios on their sites.</p>
+    <p>One popular tool is WebAIM's Color Contrast Checker.</p>
+    <p>This online tool allows you to input the foreground and background colors of your design and instantly see if they meet the
+      Web Content Accessibility Guidelines (WCAG) standards.
+    </p>
+    <p>It's user-friendly and provides immediate feedback on whether your color choices pass or fail the contrast requirements.</p>
+    <p>To use WebAIM's Color Contrast Checker, simply visit their website and enter the hexadecimal codes for your foreground and background colors.</p>
+    <p>The tool will then calculate the contrast ratio and indicate whether it meets the WCAG 2.0 level AA or AAA standards.</p>
+    <p>Another valuable tool is the TPGi Colour Contrast Analyzer.</p>
+    <p>This desktop application offers more advanced features compared to online tools.</p>
+    <p>It allows you to analyze entire web pages, not just individual color pairs.</p>
+    <p>You can use its color picker to select colors directly from your screen, making it easier to check contrast ratios for existing designs.</p>
+    <p>The TPGi Colour Contrast Analyzer also provides simulations for different types of color vision deficiencies, helping you ensure
+       your design is accessible to users with various forms of color blindness.
+    </p>
+    <p>To use the TPGi Colour Contrast Analyzer, download and install the application on your computer.</p>
+    <p>Once installed, you can use its eyedropper tool to select colors from your screen and instantly see the contrast ratio.</p>
+    <p>This is particularly useful when working with complex designs or checking contrast on live websites.</p>
+    <p>Both these tools are invaluable for creating accessible and readable websites.</p>
+    <p>They help ensure that your text is legible against its background, which is essential for all users but particularly important for those with visual impairments.</p>
+    <p>Remember, while these tools are extremely helpful, they should be used in conjunction with manual testing and user feedback.</p>
+    <p>Different contexts and user needs may require adjustments beyond what automated tools can suggest.</p>
+    <br>
+    <h3>What Are Best Practices for Hiding Content So It Doesn't Become Inaccessible?</h3>
+    <p>Hiding content on a webpage is a common practice in web development, but it's crucial to do it in a way that doesn't compromise accessibility.</p>
+    <p>Different hiding techniques can have varying impacts on how assistive technologies interpret and present the content to users.</p>
+    <p>One common method to hide content is using display: none.</p>
+    <p>While this effectively hides the content visually, it also removes it from the accessibility tree.</p>
+    <p>The accessibility tree is a structure used by assistive technologies, such as screen readers, to interpret and interact with the content on a web page.</p>
+    <p>It represents the content and its semantic meaning in a way that assistive technology can understand and present to the user.</p>
+    <p>Using display: none means that screen readers and other assistive technologies won't be able to access this content, as it is not included in the accessibility tree.</p>
+    <p>Therefore, it is important to use this method only when you want to completely remove content from both visual presentation and accessibility.</p>
+    <p>Another approach to hiding content is using visibility: hidden</p>
+    <p>visibility: hidden hides the content visually but keeps it in the document flow, meaning it still occupies space on the page.</p>
+    <p>Like display: none, visibility: hidden also removes content from the accessibility tree.</p>
+    <p>This means that assistive technologies, like screen readers, will not be able to access the hidden content.</p>
+    <p>Only use visibility: hidden when you want to hide content from everyone, including people who use assistive technology.</p>
+    <p>For content that should be hidden visually but remain accessible to screen readers, you can use a technique often referred to as "visually hidden" or "screen reader only".</p>
+    <p>Here is an example using the .sr-only CSS class which is a common technique used to visually hide content while keeping it accessible to screen readers</p>
+    <p>In this example, we are using properties like position, clip, and white-space</p>
+    <p>this CSS rule effectively hides the content visually while keeping it accessible to screen readers.</p>
+    <p>It's useful for providing additional context to screen reader users without affecting the visual layout.</p>
+    <p>For toggling content visibility, consider using the hidden attribute</p>
+    <p>The hidden attribute is supported by most modern browsers and hides content both visually and from the accessibility tree.</p>
+    <p>It can be easily toggled with JavaScript.</p>
+    <p>Lastly, be cautious about hiding important content.</p>
+    <p>If information is crucial for understanding or using the website, it should be visible and accessible to all users.</p>
+    <p>Only hide content when doing so genuinely enhances the user experience.</p>
+    <p>By following these best practices, you can ensure that your content remains accessible to all users, regardless of how they interact with your website.</p>
+
+    <br><hr><br>
+
+    <h2>POSITIONING</h2>
+    <p>Floats in CSS are a technique originally designed to allow text to wrap around an element, such as an image.</p>
+    <p>Over time, however, developers found new ways to use floats, applying them to layout design in creative ways.</p>
+    <p>While modern layout methods like Flexbox and Grid are now more commonly used, understanding floats is still important,
+       especially when working with older code or needing to achieve specific layout effects.
+    </p>
+    <p>When an element is floated, it's taken out of the normal document flow and pushed to the left or right of its container.</p>
+    <p>The content that follows will wrap around the floated element, filling the remaining space.</p>
+    <p>One classic use is wrapping text around images, where an image is floated to one side, and text wraps around it.</p>
+    <p>This technique is still widely used, especially in articles and blogs where images need to be placed alongside text.</p>
+    <p>Floats were also popular for creating multi-column layouts before Flexbox and Grid became widespread.</p>
+    <p>By floating elements next to each other, developers could create columns that aligned horizontally.</p>
+    <p>However, when using floats, it's important to handle the problem of collapsing parent elements when their child elements are floated.</p>
+    <p>The clearfix technique solution is applied to the class container element to fix this issue.</p>
+    <p>::after is a pseudo-element that adds an invisible block after the content of the container.</p>
+    <p>content: "" ensures the pseudo-element is present but doesn't display any content.</p>
+    <p>display: block makes the pseudo-element a block-level element.</p>
+    <p>clear: both ensures the pseudo-element clears both sides of any floated elements above it.</p>
+    <p>The clearfix technique ensures the parent element wraps around its floated children properly.</p>
+    <p>Clearfix forces the parent container to "see" the floated child elements by adding a clear property after the floated content.</p>
+    <br>
+    <h3>What Is Relative Positioning, and How Does This Differ from the Default Static Positioning?</h3>
+    <p>Two common types of positioning are static positioning and relative positioning.</p>
+    <p>By default, elements are statically positioned.</p>
+    <p>This means they follow the normal flow of the document, one after another, from top to bottom, left to right.</p>
+    <p>Static positioning is the default for all elements and doesn't need any special declaration in CSS.</p>
+    <p>You won't notice anything different when using static positioning because it just keeps elements where they naturally occur in the document.</p>
+    <p>When rendered in the browser, this paragraph will appear in its natural position, following the normal document flow.</p>
+    <p>No special styling is applied to move it, and it remains where it would naturally appear in the layout.</p>
+    <p>Relative positioning, on the other hand, allows an element to be shifted from its normal position without disrupting the flow of the document.</p>
+    <p>Think of it as moving the element from its default static position by giving it new coordinates.</p>
+    <p>Relative positioning is very useful when you want to move an element slightly without affecting the rest of the layout.</p>
+    <br>
+    <h3>Absolute Positioning, and How Does It Work?</h3>
+    <p>Absolute positioning allows you to take an element out of the normal document flow, making it behave independently from other elements.</p>
+    <p>When an element is positioned absolutely, it is placed in its own layer, completely separate from everything else in the layout.</p>
+    <p>This makes it useful for creating floating UI features such as modals, tooltips, or dropdown menus, which can overlap other elements on the page.</p>
+    <p>By default, absolutely positioned elements are placed relative to the closest positioned ancestor.</p>
+    <p>If no positioned ancestor is found, the element will be positioned relative to the initial containing block, which is usually the browser's viewport.</p>
+    <p>You can move the absolutely positioned element around using the top, bottom, left, and right properties to specify how far away it should be
+        from the edges of its containing element.
+    </p>
+    <p>Absolute positioning can be especially helpful for creating elements that are meant to float over the rest of the content, like overlays or modal windows.</p>
+    <p>However, since the element is removed from the document flow, it can also create gaps or cause other elements to collapse together if not handled properly.</p>
+    <br>
+    <h3>What Is Fixed and Sticky Positioning, and How Does It Differ from Absolute Positioning?</h3>
+    <p>Fixed and sticky positioning are two important CSS positioning strategies, each offering distinct behaviors compared to absolute positioning.</p>
+    <p>When an element is positioned with position: fixed, it is removed from the normal document flow and placed relative to the viewport,
+       meaning it stays in the same position even when the user scrolls.
+    </p>
+    <p>This is often used for elements like headers or navigation bars that need to remain visible at all times.</p>
+    <p>position: sticky behaves as a hybrid between relative and fixed positioning.</p>
+    <p>Initially, the element behaves as though it's positioned relatively, staying within the flow of the document.</p>
+    <p>However, once the user scrolls the element past a certain point, it "sticks" to the viewport (usually the top) and behaves as though it is fixed.</p>
+    <p>This is great for creating elements like sticky navigation bars, which only become fixed once the user scrolls to a certain position.</p>
+    <ul> Here are some key differences between absolute, fixed and sticky positioning:
+    <li>Absolute positioning removes an element from the document flow and positions it relative to the nearest positioned ancestor, or the initial containing 
+        block if none exists.
+    </li>
+    <li>The element stays in that position regardless of scrolling.</li>
+    <li>Fixed positioning also removes the element from the document flow but fixes it relative to the viewport, meaning it will stay visible in the 
+        same spot even as the page is scrolled.
+    </li>
+    <li>Sticky positioning keeps the element in the normal flow initially but allows it to stick in place after scrolling past a defined threshold.</li>
+    </ul>
+    <br>
+    <h3>What Is the Z-Index Property, and How Does It Work to Control the Stacking of Positioned Elements?</h3>
+    <p>The z-index property in CSS is used to control the vertical stacking order of positioned elements that overlap on the page.</p>
+    <p>When multiple elements are stacked on top of each other, the z-index value determines which element appears on top.</p>
+    <p>The higher the z-index value, the closer the element is to the viewer, while lower values place the element farther back in the stack.</p>
+    <p>However, the z-index only works on elements that are positioned, which means the element must have a position value other than static, such as relative, absolute, or fixed.</p>
+    <p>The default z-index value is auto, which places the element in the default stacking order. </p>
+    <p>For the container, the positioning will be set to relative and all of the boxes nested inside will be set to absolute positioning.</p>
+    <p>Each box has a different value for the z-index which results in the boxes being layered on top of each other.</p>
   </section>
 
   <!-- Importing JS File -->
