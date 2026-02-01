@@ -2197,6 +2197,252 @@ transition: transition-property transition-duration transition-timing-function t
     <p>The default z-index value is auto, which places the element in the default stacking order. </p>
     <p>For the container, the positioning will be set to relative and all of the boxes nested inside will be set to absolute positioning.</p>
     <p>Each box has a different value for the z-index which results in the boxes being layered on top of each other.</p>
+
+    <br><hr><br>
+
+    <h2>ATTRIBUTE SELECTOR</h2>
+
+    <h3>What Is the Attribute Selector, and How Can It Be Used to Target Links with the href and title Attributes?</h3>
+    <p>he attribute selector in CSS is a powerful tool that allows you to target HTML elements based on their attributes.</p>
+    <p>This means you can apply styles to elements that have specific attributes or even certain values for those attributes.</p>
+    <p>It's particularly useful when you want to style elements dynamically or when class names alone don't provide enough specificity.</p>
+    <p>You can also combine attribute selectors to get even more precise, eg: a[href][title] { property: value; }</p>
+    <p>The [attr~=value] syntax is used here to target all anchor elements where the class attribute contains the word "primary"</p>
+    <p>he a[href^="https://"] selector will target all anchor elements where the href attribute value starts with "https://"</p>
+    <p>To target elements where the attribute value ends with a specific value, you can use the [attr$=value]</p>
+
+    <h3>How to Use the Attribute Selector to Target Elements with the lang and data-lang Attributes?</h3>
+    <p>When building multilingual websites or handling custom data attributes, you often need to style elements based on the language they contain or specific data values.</p>
+    <p>the lang and data-lang attributes selector in CSS allows you to apply styles based on these attributes effectively.</p>
+    <p>The lang attribute is used in HTML to specify the language of the content within an element.</p>
+    <p>You might want to style elements differently based on the language they are written in, especially on a multilingual website.</p>
+    <p>Custom data attributes like data-lang are commonly used to store additional information in elements, such as specifying the language used within a specific section of text.</p>
+
+    <h3>How to Use the Attribute Selector to Target Ordered List Elements with the type Attribute?</h3>
+    <p>When working with ordered lists in HTML, the type attribute allows you to specify the style of numbering used, such as numerical, alphabetical, or Roman numerals.</p>
+    <ul> The type attribute can be set on an ol (ordered list) element to control the numbering format:
+      <li>1 for numerical lists (such as 1, 2, 3, ...),</li>
+      <li>A for uppercase alphabetical lists (such as A, B, C, ...),</li>
+      <li>a for lowercase alphabetical lists (such as a, b, c, ...),</li>
+      <li>I for uppercase Roman numerals (such as I, II, III, ...),</li>
+      <li>i for lowercase Roman numerals (such as i, ii, iii, ...).</li>
+    </ul>
+
+    <br><hr><br>
+
+    <h2>RESPONSIVE DESIGN</h2>
+    <h3>What Is Responsive Web Design, and What Is Its Relationship to Tools Like CSS Grid and Flexbox?</h3>
+    <p>Responsive web design is an approach to web development that aims to create websites that provide an optimal viewing and interaction experience
+       across a wide range of devices, from desktop computers to mobile phones.
+    </p>
+    <p>The core principle of responsive design is adaptability - the ability of a website to adjust its layout and content based on the screen size
+       and capabilities of the device it's being viewed on.
+    </p>
+    <ul>Responsive design typically relies on three main components
+      <li>Fluid grids use relative units like percentages instead of fixed units like pixels, allowing content to resize and reflow based on screen size</li>
+      <li>Flexible images are set to resize within their containing elements, ensuring they don't overflow their containers on smaller screens.</li>
+      <li>media queries allow developers to apply different styles based on the characteristics of the device, primarily the viewport width.</li>
+    </ul>
+    <p>The relationship between responsive web design and tools like CSS Grid and Flexbox is symbiotic.</p>
+    <p>While responsive design is a concept or approach, CSS Grid and Flexbox are practical tools that make implementing responsive designs much easier and more efficient.</p>
+    <p>CSS Grid, is a two-dimensional layout system that allows for more complex arrangements.</p>
+    <p>It's excellent for creating overall page layouts as well as smaller component layouts</p>
+    <p>Both Flexbox and Grid offer significant advantages over older layout methods like floats or table-based layouts.</p>
+    <p>They provide more flexibility and control, require less code, and are designed with responsiveness in mind.</p>T
+    <p>They allow developers to create complex, responsive layouts with relative ease, making them invaluable tools in implementing responsive web design.</p>
+    <p>It's worth noting that Flexbox and Grid are often used together in responsive designs.</p>
+    <p>Flexbox is typically used for components and one-dimensional layouts, while Grid is used for overall page structure and two-dimensional layouts.</p>
+    <p>The choice between them often depends on the specific layout needs of the design.</p>
+    <p>The calc() function, for instance, allows for mixing units and performing calculations, which can be very useful in creating flexible layouts.</p>
+    <p>Responsive images are another crucial aspect of responsive web design.</p>
+    <p>The srcset attribute and picture element in HTML5 allow for serving different image files based on device capabilities,
+       ensuring that users don't download unnecessarily large image files on devices with smaller screens or lower resolution.
+    </p>
+    <br>
+    <h3>How Do Media Queries Work, and What Are Some Common Media Types and Features?</h3>
+    <p>Media queries are a fundamental component of responsive web design, allowing developers to apply different styles based on the characteristics of the user's device or browser.</p>
+    <p>They provide a way to tailor the presentation of content to a variety of devices without changing the content itself.</p>
+    <p>At its core, a media query consists of a media type and one or more expressions that check for specific conditions.</p>
+    <p>If these conditions are true, the corresponding styles are applied.</p>
+    <p>This mechanism allows for the creation of responsive designs that adapt to different screen sizes, resolutions, and device capabilities.</p>
+    <br>
+    <h3>What Are Media Breakpoints, and What Are Common Breakpoints in Modern Design?</h3>
+    <p>Media breakpoints are specific points in a website's design where the layout and content adjust to accommodate different screen sizes.</p>
+    <p>These breakpoints are crucial in responsive web design, allowing developers to create websites that look and function well across various devices,
+       from mobile phones to large desktop monitors.
+    </p>
+    <p>In CSS, media breakpoints are implemented using media queries.</p>
+    <p>These queries allow you to apply different styles based on the characteristics of the device, most commonly the viewport width.</p>
+    <p>For example, you might set a breakpoint at 768 pixels to differentiate between mobile and tablet layouts.</p>
+    <p> When it comes to choosing breakpoints, there's no one-size-fits-all solution.</p>
+    <p>The appropriate breakpoints for your website will depend on your specific design and content.</p>
+    <p>However, there are some common breakpoints that many designers use as starting points in modern web design.</p>
+    <ul> A popular set of breakpoints corresponds to common device categories:
+      <li>Small devices (smartphones): up to 640px.</li>
+      <li>Medium devices (tablets): 641px to 1024px.</li>
+      <li>Large devices (desktops): 1025px and larger.</li>
+    </ul>
+    <ul> Some designers prefer a more granular approach, using breakpoints like:
+      <li>Extra small devices: up to 576px.</li>
+      <li>Small devices: 577px to 768px.</li>
+      <li>Medium devices: 769px to 992px.</li>
+      <li>Large devices: 993px to 1200px.</li>
+      <li>Extra large devices: 1201px and larger.</li>
+    </ul>
+    <p>The trend in modern responsive design is moving towards a more fluid approach, where designs adapt smoothly across a wide range of screen sizes,
+    rather than making dramatic changes at set breakpoints.
+    </p>
+    <ul> Here are some other common examples for breakpoints:
+      <li>Extra small device: under 576px.</li>
+      <li>Small device: more than or equal to 576px.</li>
+      <li>Medium device: more than or equal to 768px.</li>
+      <li>Large device: more than or equal to 992px.</li>
+      <li>Extra large device: more than or equal to 1200px.</li>
+      <li>Extra extra large device: more than or equal to 1400px.</li>
+    </ul>
+    <br>
+    <h3>What Is the Mobile First Approach in Responsive Web Design?</h3>
+    <p>The mobile-first approach is a design philosophy and development strategy in responsive web design that prioritizes creating websites for mobile devices
+    before designing for larger screens.
+    </p>
+    <p>This approach has gained significant traction in recent years, becoming a cornerstone of modern web development practices.</p>
+    <p>At its core, the mobile-first approach involves designing and developing the mobile version of a website as the primary step.</p>
+    <p>This version serves as the foundation, which is then progressively enhanced for larger screens and devices with more capabilities.</p>
+    <p>This methodology stands in contrast to the traditional approach, where websites were initially designed for desktop computers
+       and subsequently scaled down or modified to fit smaller screens.
+    </p>
+    <p>The principle behind mobile-first design is to ensure that the most essential content and functionality are available and optimized for the smallest screens first.</p>
+    <p>This forces designers and developers to focus on the core content and features, leading to a more streamlined and efficient user experience across all devices.</p>
+    <p>One of the primary drivers behind the adoption of the mobile-first approach is the dramatic shift in internet usage patterns.</p>
+    <p>With mobile devices now accounting for over half of global web traffic, designing for mobile first ensures that websites cater to a large and growing user base.</p>
+    <p>This approach aligns with the current digital landscape where many users primarily access the internet through their smartphones.</p>
+    <p>Performance optimization is another crucial aspect of the mobile-first approach.</p>
+    <p>Mobile devices often have less processing power and may be connected to slower networks compared to desktop computers.</p>
+    <p>By designing for mobile first, developers are encouraged to optimize performance from the outset.</p>
+    <p>This focus on efficiency benefits not only mobile users but also translates to improved performance across all devices.</p>
+    <p>The limited screen space on mobile devices necessitates careful content prioritization.</p>
+    <p>Designers must make critical decisions about what content is absolutely essential and how to present it effectively on a small screen.</p>
+    <p>This constraint often results in a more focused and user-friendly experience, which can then be expanded upon for larger screens without losing the
+       core essence of the content.
+    </p>
+    <p>Implementing a mobile-first approach typically involves using CSS media queries to progressively enhance the design for larger screens.</p>
+    <p>The mobile-first approach also aligns well with search engine optimization (SEO) strategies.</p>
+    <p>Google, for instance, uses mobile-first indexing, meaning it predominantly uses the mobile version of the content for indexing and ranking.</p>
+    <p>By prioritizing the mobile experience, websites can potentially improve their search engine rankings and visibility.</p>
+    <p>While the mobile-first approach offers numerous benefits, it's not without challenges.</p>
+    <p>Designing for mobile first can sometimes constrain creativity for larger screens, and it may be difficult to conceptualize complex features on mobile devices initially.</p>
+    <p>Additionally, convincing stakeholders to prioritize mobile design can be challenging, especially if they're accustomed to seeing desktop designs first.</p>
+    <p>Despite these challenges, the mobile-first approach remains a powerful strategy in responsive web design.</p>
+
+    <br><hr><br>
+    <h2>CSS VARIABLES</h2>
+
+    <h3>CSS Custom Properties, and How Do They Work?</h3>
+    <p>CSS custom properties, also known as CSS variables, are entities defined by CSS authors that contain specific values to be reused throughout a document.</p>
+    <p>They are a powerful feature that allows for more efficient, maintainable, and flexible stylesheets.</p>
+    <p>he syntax for declaring a custom property is straightforward. It begins with two dashes (--) followed by the property name :root {--main-color: #3498db;}</p>
+    <p>The :root pseudo-class is commonly used to declare global custom properties, as it represents the highest-level parent in the DOM tree</p>
+    <p>employ the var() function: .button { background-color: var(--main-color); }</p>
+    <p>One of the key features of custom properties is that they follow the CSS cascade. </p>
+    <p>Custom properties also support fallback values. If a custom property is not defined or is invalid, you can provide a fallback value</p>
+    <p>Custom properties are particularly useful in creating themeable designs. You can define a set of properties for different themes</p>
+    <p>Switching themes becomes as simple as adding or removing a class from the body element.</p>
+    <p>This approach allows for more maintainable responsive layouts, as you can change values in one place rather than throughout your stylesheet.</p>
+    <p>This can significantly reduce repetition in your stylesheets, especially for frequently used, complex values</p>
+    <br>
+    <h3>What Is the @property Rule, and How Does It Work with Fallbacks?</h3>
+    <p>The @property rule is a powerful CSS feature that allows developers to define custom properties with greater control over their behavior,
+       including how they animate and their initial values.
+    </p>
+    <p>This rule provides a way to enhance the functionality of CSS custom properties and offers more flexibility in their application.</p>
+    <p>The --property-name is the name of the custom property you're defining.</p>
+    <p>Like all custom properties, it must start with two dashes. --property-name can be things like color, length, number, percentage or more complex types.</p>
+    <p> syntax defines the type of the property.</p>
+    <p>inherits specifies whether the property should inherit its value from its parent element.</p>
+    <p>initial-value sets the default value of the property.</p>
+    <p>Fallbacks are crucial in CSS to ensure that styles degrade gracefully in browsers that don't support certain features.</p>
+    <p>With the @property, fallbacks work on two levels: for the rule itself and for the use of the custom property.</p>
+
+    <br><hr><br>
+    <h2>CSS GRID</h2>
+
+    <h3>What Is CSS Grid, and How Does It Differ from Flexbox?</h3>
+    <p>CSS Grid is a powerful layout system that allows web developers to create complex and responsive web page layouts with ease.</p>
+    <p>Flexbox is one-dimensional, while Grid is two-dimensional.</p>
+    <p>This means Flexbox works great for laying things out in a single row or column, while Grid excels at creating layouts with both rows and columns.</p>
+    <p>Flexbox is content-first, meaning it adjusts the layout based on the content.</p>
+    <p>Grid, on the other hand, is layout-first, allowing you to create the layout and then place items into it.</p>
+    <p>Grid gives you more precise control over placement. You can tell an item exactly which row and column to occupy.</p>
+    <br>
+    <h3>How Can You Create Flexible Grids with the fr Unit?</h3>
+    <p>grid-template-columns is used to set the size for each column.</p>
+    <p>Then the gap property is used to create space around each column.</p>
+    <p>The fr unit is a fractional unit which represents a fraction of the space for the grid container</p>
+    <p>Each column will take up one fraction of the available space.</p>
+    <p>Since there are four columns, each column will have an equal share of the space available in the grid container.</p>
+    <br>
+    <h3>How Can You Create Gaps Between Tracks in a Grid?</h3>
+    <p>A track is the space between two neighboring grid lines.</p>
+    <p>These lines are automatically created when you use CSS Grid.</p>
+    <p>tracks generally refer to the rows and columns that make up the grid layout.</p>
+    <p>To create gaps between columns in a CSS Grid, you can use the column-gap property.</p>
+    <p>Acceptable values for this property include pixels, the em unit, percentages, or the normal keyword.</p>
+    <p>If you use the normal value for the column-gap property, then the result will be 0 for grid layouts and 1em for multi-column layouts.</p>
+    <p>If we wanted to change the example to have two rows of blue boxes and create more space between the rows, we can use the row-gap property</p>
+    <p>Just like the column-gap property, acceptable values for the row-gap property can include percentages, em, and pixels</p>
+    <br>
+    <h3>Repeat Track Listings in a Grid Layout?</h3>
+    <p>The repeat() function is used to repeat a section or all of the tracks for columns or rows.</p>
+    <p>This function takes in a repeat count and the tracks you wish to repeat.</p>
+    <p>The repeat() function will accept any valid pattern that you can use for rows or columns.</p>
+    <p>Sometimes, you might opt to write out each individual value instead of using the repeat() function.</p>
+    <p>But there are times when this function comes in handy, especially when you want to repeat a particular pattern for a track listing.</p>
+    <br>
+    <h3>the Difference Between an Implicit and Explicit Grid?</h3>
+    <p>Implicit grid refers to the rows and columns automatically created by the browser when placing items in a grid layout</p>
+    <p>- those not explicitly defined using grid-template-rows or grid-template-columns.</p>
+    <p>The properties that control the columns and rows created implicitly by the browser are grid-auto-columns and grid-auto-rows.</p>
+    <p>Implicit grid also refers to the additional rows and columns the browser automatically generates when you place an item outside the explicitly defined rows and columns.</p>
+    <br>
+    <h3>What Is the minmax() Function and How Does It Work?</h3>
+    <p>The minmax() function defines the range for the size of a grid track, specifying how much space a row or column can occupy.</p>
+    <p>Remember that you can set the track size with units like px (pixels), rem, or even em, and with fractional units (fr).</p>
+    <p>The minmax() function takes things a bit further by allowing you to set a minimum size and a maximum size for the grid track.</p>
+    <p>min is the minimum size of the grid track, which can be set using pixels, percentage, or auto.</p>
+    <p>And max is the maximum size of the grid track which you can set with the same units.</p>
+    <ul>The two values work together this way:
+      <li>The min value ensures the grid track will never shrink below a set size.</li>
+      <li>The max value limits how large the grid track can grow.</li>
+    </ul>
+    <p>The grid track size adjusts dynamically between the min and max values based on content and container size.</p>
+    <p>The advantage of the minmax() function over fixed sizes and even fr units is that it is more flexible, making it ideal for adaptability and responsiveness.</p>
+    <br>
+    <h3>How Do the grid-column and grid-row Properties Work?</h3>
+    <p>The grid-column and grid-row properties let you specify the horizontal and vertical placement of grid items within a grid layout.</p>
+    <p>In other words, they both allow you to control where a grid item begins and ends by referencing grid lines.</p>
+    <p>These grid lines are the boundaries that separate rows and columns you have already defined using the grid-template-rows and grid-template-columns properties.</p>
+    <p>start-line is the grid line where the item starts and end-line is the grid line where the item ends.</p>
+    <p>Both are 1-indexed, that is, you start counting them from 1, not 0.</p>
+    <p>grid lines for rows are generated based on the number of rows specified in the grid-template-rows property.</p>
+    <p>The same applies to columns with the grid-template-columns property.</p>
+    <br>
+    <h3>How Can You Position Items on the Grid Using the grid-template-areas Property?</h3>
+    <p>The grid-template-areas property lets you design a visual grid layout by using named labels.</p>
+    <p>You then assign the labels to specific grid items using the grid-area property. </p>
+    <p>So, in other words, those named labels are also called "grid area names".</p>
+    <ul>Here are the points to take away from the basic syntax:
+      <li>Values like header and main are the names of the grid areas.</li>
+      <li>Each space-separated value within a string corresponds to a column.</li>
+      <li>Each string represents a row in the grid.</li>
+    </ul>
+    <p>After defining the template, you then have to use the grid-area property and the named labels (or areas) as values to tell CSS that a specific element belongs
+       in that area of the grid.
+    </p>
+    <p>The grid-area property connects the grid item to the named region you define in the grid-template-areas.</p>
+    <p>A popular way to demonstrate the capabilities of the grid-template-areas property is by creating the classic Holy Grail layout.</p>
+    <p>If you don't know what it is, the Holy Grail layout is a web design pattern with a header, footer, two sidebars, and a main content area.</p>
+    <p>It ensures the main content takes priority, while sidebars and other sections adjust responsively within the layout.</p>
+    <p>Many solutions exist to implement the holy grail layout, but using grid-template-areas and the grid-area property is the most straightforward way to create it.</p>
   </section>
 
   <!-- Importing JS File -->
