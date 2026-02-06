@@ -11,6 +11,54 @@ function HTMLPageStructure() {
   else { myVisibility.style.display = "block"; }
 }
 
+function HTMLSemanticContainer() {
+  let myVisibility = document.getElementById("HTML-Semantic-Container");
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
+}
+
+function HTMLSemanticText() {
+  let myVisibility = document.getElementById("HTML-Semantic-Text");
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
+}
+
+function HTMLFormStructure() {
+  let myVisibility = document.getElementById("HTML-Form");
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
+}
+
+function HTMLTableStructure() {
+  let myVisibility = document.getElementById("HTML-Table");
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
+}
+
+function HTMLListStructure() {
+  let myVisibility = document.getElementById("HTML-List");
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
+}
+
+function HTMLMediaStructure() {
+  let myVisibility = document.getElementById("HTML-Media");
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
+}
+
+function RubyAnnotationStructure() {
+  let myVisibility = document.getElementById("Ruby-Annotation");
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
+}
+
+function HTMLMisc() {
+  let myVisibility = document.getElementById("HTML-Misc");
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
+}
+
 function HTMLReferences() {
   let myVisibility = document.getElementById("HTML-References");
   if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
@@ -4390,48 +4438,36 @@ function FooterEventAttributes() {
   else { myVisibility.style.display = "block"; }
 }
 
-/////////////////////////////
-// HTML SEMANTIC CONTAINER //
-/////////////////////////////
-function HTMLSemanticContainer() {
-  let myVisibility = document.getElementById("HTML-Semantic-Container");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
+//////////////////////////////////////////////////// HTML SEMANTIC CONTAINER /////////////////////////////////////////////////////
 // NAVIGATE TAG //
 function NavTag() {
   let myVisibility = document.getElementById("Nav-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
+  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 function NavGlobalAttributes() {
   let myVisibility = document.getElementById("Nav-Global-Attributes");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Nav-Global-Attributes").innerHTML =
       GlobalAttributes().accesskey + GlobalAttributes().class + GlobalAttributes().contenteditable + GlobalAttributes().data + GlobalAttributes().direction +
       GlobalAttributes().draggable + GlobalAttributes().enterkeyhint + GlobalAttributes().hidden + GlobalAttributes().identifier + GlobalAttributes().inert +
       GlobalAttributes().inputmode + GlobalAttributes().language + GlobalAttributes().popover + GlobalAttributes().spellcheck + GlobalAttributes().style +
       GlobalAttributes().tabindex + GlobalAttributes().title + GlobalAttributes().translate;
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 function NavEventAttributes() {
   let myVisibility = document.getElementById("Nav-Event-Attributes");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
+  if (myVisibility.style.display === "block") {
+    myVisibility.style.display = "none";
     document.getElementById("Nav-Event-Attributes").innerHTML =
       EventAttributes().windows + EventAttributes().form + EventAttributes().keyboard + EventAttributes().mouse + EventAttributes().drag +
       EventAttributes().clipboard + EventAttributes().media + EventAttributes().misc;
   }
-  else { myVisibility.style.display = "none"; }
+  else { myVisibility.style.display = "block"; }
 }
 
 // ASIDE TAG //
@@ -4729,17 +4765,7 @@ function TemplateGlobalAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-////////////////////////
-// HTML SEMANTIC TEXT //
-////////////////////////
-function HTMLSemanticText() {
-  let myVisibility = document.getElementById("HTML-Semantic-Text");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
+/////////////////////////////////////////////////////// HTML SEMANTIC TEXT ///////////////////////////////////////////////////////
 // COMMENT TAG //
 function CommentTag() {
   let myVisibility = document.getElementById("Comment-Tag");
@@ -5850,17 +5876,7 @@ function TimeDatetimeAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-///////////////
-// HTML FORM //
-///////////////
-function HTMLFormStructure() {
-  let myVisibility = document.getElementById("HTML-Form");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
+/////////////////////////////////////////////////////////// HTML FORM ////////////////////////////////////////////////////////////
 // FORM TAG //
 function FormTag() {
   let myVisibility = document.getElementById("Form-Tag");
@@ -7196,17 +7212,7 @@ function ButtonValueAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-////////////////
-// HTML TABLE //
-////////////////
-function HTMLTableStructure() {
-  let myVisibility = document.getElementById("HTML-Table");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
+/////////////////////////////////////////////////////////// HTML TABLE /////////////////////////////////////\//////////////////////
 // TABLE TAG //
 function TableTag() {
   let myVisibility = document.getElementById("Table-Tag");
@@ -7627,17 +7633,8 @@ function TfootEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-///////////////
-// HTML LIST //
-///////////////
-function HTMLListStructure() {
-  let myVisibility = document.getElementById("HTML-List");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
 
+/////////////////////////////////////////////////////////// HTML LIST ////////////////////////////////////////////////////////////
 // ORDERED LIST TAG //
 function OlTag() {
   let myVisibility = document.getElementById("Ol-Tag");
@@ -7905,17 +7902,7 @@ function DdEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-////////////////
-// HTML MEDIA //
-////////////////
-function HTMLMediaStructure() {
-  let myVisibility = document.getElementById("HTML-Media");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
+/////////////////////////////////////////////////////////// HTML MEDIA ///////////////////////////////////////////////////////////
 // FIGURE TAG //
 function FigureTag() {
   let myVisibility = document.getElementById("Figure-Tag");
@@ -8636,17 +8623,7 @@ function VideoWidthAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-/////////////////////
-// RUBY ANNOTATION //
-/////////////////////
-function RubyAnnotationStructure() {
-  let myVisibility = document.getElementById("Ruby-Annotation");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
+//////////////////////////////////////////////////////// RUBY ANNOTATION /////////////////////////////////////////////////////////
 // RUBY TAG //
 function RubyTag() {
   let myVisibility = document.getElementById("Ruby-Tag");
@@ -8746,17 +8723,7 @@ function RtEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-///////////////
-// HTML MISC //
-///////////////
-function HTMLMisc() {
-  let myVisibility = document.getElementById("HTML-Misc");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
+/////////////////////////////////////////////////////////// HTML MISC ////////////////////////////////////////////////////////////
 // DETAILS TAG //
 function DetailsTag() {
   let myVisibility = document.getElementById("Details-Tag");
