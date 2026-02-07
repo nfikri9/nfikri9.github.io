@@ -43,7 +43,7 @@
       <!------------------------------------------------------------------- TOPIC SELECTIONS ------------------------------------------------------------------->
       <section id="Box-Topic-Selections">
         <button onclick="HTMLIntroduction()">INTRODUCTION</button>
-        <button onclick="HTMLPageStructure()">PAGE STRUCTURE</button>
+        <button onclick="HTMLReferences()">HTML TAGS</button>
         <button onclick="HTMLSemanticContainer()">SEMANTIC CONTAINER</button>
         <button onclick="HTMLSemanticText()">SEMANTIC TEXT</button>
         <button onclick="HTMLFormStructure()">FORM</button>
@@ -52,7 +52,6 @@
         <button onclick="HTMLMediaStructure()">MEDIA</button>
         <button onclick="RubyAnnotationStructure()">RUBY ANNOTATION</button>
         <button onclick="HTMLMisc()">MISC</button>
-        <button onclick="HTMLReferences()">REFERENCES</button>
       </section>
 
       <!------------------------------------------------------------------ HTML INTRODUCTION ------------------------------------------------------------------->
@@ -89,132 +88,382 @@
           <p>It is placed inside the opening tag of an HTML element.</p>
           <p>The <code>myValue</code> can be a string or a number, depending on the attribute used for the specific element.</p>
         </article>
+
+        <br><hr><br>
+
+        <article id="HTML-Boilerplate">
+          <h3>HTML Boilerplate</h3>
+          <div class="Box-Structures">
+            <div class="Indent-Level1"><code class="Highlighted">&lt;!DOCTYPE html&gt;</code></div>
+            <div class="Indent-Level1"><code class="Highlighted">&lt;html lang="en"&gt;</code></div>
+            <div class="Indent-Level2"><code class="Highlighted">&lt;head&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;title&gt;<i>MyProjectName</i>&lt;/title&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;link rel="icon" type="image/x-icon" href="<i>MyLogo</i>"</code></div>
+            <br>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="author" content="<i>MyName</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="description" content="<i>MyDescription</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="keywords" content="<i>Keyword1, Keyword2, ...</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta charset="utf-8"&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;link rel="stylesheet" href="<i>MyFile</i>"&gt;</code></div>
+            <div class="Indent-Level2"><code class="Highlighted">&lt;/head&gt;</code></div>
+            <br>
+            <div class="Indent-Level2"><code class="Highlighted">&lt;body&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;header&gt; <i>MyContents</i> &lt;/header&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;main&gt; <i>MyContents</i> &lt;/main&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;footer&gt; <i>MyContents</i> &lt;/footer&gt;</code></div>
+            <div class="Indent-Level2"><code class="Highlighted">&lt;/body&gt;</code></div>
+            <div class="Indent-Level1"><code class="Highlighted">&lt;/html&gt;</code></div>
+          </div>
+          <p>HTML Boilerplate is a ready-made template for the webpages.</p>
+          <p>A boilerplate includes the basic structure and essential elements every HTML document needs.</p>
+          <p>It saves developer time and helps ensure the pages are set up properly.</p>
+
+          <h4>The Important of HTML Boilerplate</h4>
+          <p>It ensures the pages are structured correctly and work well across different browsers.</p>
+          <p>Using a boilerplate helps developers avoid common mistakes and follow best practices.</p>
+          <p>It's a great starting point for any web project.</p>
+          <p>Plus, they can customize their own boilerplate to fit their needs.</p>
+          <p>As you gain experience, you might add your own preferred elements or meta tags.</p>
+        </article>
+      </section>
+
+      <!--------------------------------------------------------------------- LIST OF HTML ELEMENTS ---------------------------------------------------------------------->
+      <section id="HTML-Elements" class="Box-Contents">
+        <h2>LIST OF HTML TAGS</h2>
+        <input type="text" id="HTML-References-Input" onkeyup="SearchHTMLReferences()" placeholder="Find HTML tag..">
+        <ul id="HTML-References-List">
+          <li><a onclick="example()"><code>&lt;!-- --&gt;</code> <span></span></a></li>
+          <li><a onclick="HTMLDeclaration()"><code>&lt;!DOCTYPE&gt;</code> <span>Defines the document type</span></a></li>
+          <li><a onclick="example()"><code>&lt;a&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;abbr&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;address&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;area&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;article&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;aside&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;audio&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;b&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;base&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;bdi&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;bdo&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;blockquote&gt;</code> <span></span></a></li>
+          <li><a onclick="BodyTag()"><code>&lt;body&gt;</code> <span>Defines the document's body</span></a></li>
+          <li><a onclick="example()"><code>&lt;br&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;button&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;canvas&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;caption&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;cite&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;code&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;col&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;colgroup&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;data&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;datalist&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;dd&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;del&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;details&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;dfn&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;dialog&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;div&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;dl&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;dt&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;em&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;embed&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;fieldset&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;figcaption&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;figure&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;footer&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;form&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;h1&gt; to &lt;h6&gt;</code> <span></span></a></li>
+          <li><a onclick="HeadTag()"><code>&lt;head&gt;</code> <span>Contains metadata/information for the document</span></a></li>
+          <li><a onclick="example()"><code>&lt;header&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;hgroup&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;hr&gt;</code> <span></span></a></li>
+          <li><a onclick="HTMLTag()"><code>&lt;html&gt;</code> <span>Defines the root of an HTML document</span></a></li>
+          <li><a onclick="example()"><code>&lt;i&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;iframe&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;img&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;input&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;ins&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;kbd&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;label&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;legend&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;li&gt;</code> <span></span></a></li>
+          <li><a onclick="LinkTag()"><code>&lt;link&gt;</code> <span>Defines the relationship between a document and an external resource</span></a></li>
+          <li><a onclick="example()"><code>&lt;main&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;map&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;mark&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;menu&gt;</code> <span></span></a></li>
+          <li><a onclick="MetaTag()"><code>&lt;meta&gt;</code> <span>Defines metadata about an HTML document</span></a></li>
+          <li><a onclick="example()"><code>&lt;meter&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;nav&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;noscript&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;object&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;ol&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;optgroup&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;option&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;output&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;p&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;param&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;picture&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;pre&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;progress&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;q&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;rp&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;rt&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;ruby&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;s&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;samp&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;script&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;search&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;section&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;select&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;small&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;source&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;span&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;strong&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;style&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;sub&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;summary&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;sup&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;svg&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;table&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;tbody&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;td&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;template&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;textarea&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;tfoot&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;th&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;thead&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;time&gt;</code> <span></span></a></li>
+          <li><a onclick="TitleTag()"><code>&lt;title&gt;</code> <span>Defines a title for the document</span></a></li>
+          <li><a onclick="example()"><code>&lt;tr&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;track&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;u&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;ul&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;var&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;video&gt;</code> <span></span></a></li>
+          <li><a onclick="example()"><code>&lt;wbr&gt;</code> <span></span></a></li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------ HTML DECLARATION ------------------------------------------------------------------------>
+      <section id="HTML-Declaration" class="Box-Contents">
+        <header>
+          <h2 onclick="HTMLDeclaration()">HTML DECLARATION</h2>
+          <p>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration.</p>
+          <p>The declaration is not an HTML tag, but it is an "information" to the browser about what document type to expect.</p>
+          <p>Therefore, this <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this is an HTML 5 document (latest version of HTML).</p>
+        </header>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">No case sensitivity</span>
+            <p>The <code>&lt;!DOCTYPE&gt;</code> declaration can be written either in uppercase, lowercase or mixed.</p>
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- BODY TAG ---------------------------------------------------------------------------->
+      <section id="Body-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="BodyTag()">BODY ELEMENT</h2>
+          <p>The <code>&lt;body&gt;</code> tag defines the document's body.</p>
+          <p>The <code>&lt;body&gt;</code> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</p>
+          <p>There can only be one <code>&lt;body&gt;</code> element in an HTML document.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="BodyGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Body-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="BodyEventAttributes()"><em>HTML Event Attributes</em></code><div id="Body-Event-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>body { display: block; margin: 8px; }</code></p>
+          <p><code>body:focus { outline: none; }</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- HEAD TAG ---------------------------------------------------------------------------->
+      <section id="Head-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="HeadTag()">HEAD ELEMENT</h2>
+          <p>The <code>&lt;head&gt;</code> tag is a container for metadata, placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> tag.</p>
+          <p>Metadata typically define the document title, character set, styles, scripts, and other meta information, which they are not displayed in webpage.</p>
+          <p>Hence, tags like <code>&lt;title&gt;, &lt;style&gt;, &lt;base&gt;, &lt;link&gt;, &lt;meta&gt;</code> are commonly placed here.</p>
+          <p>The <code>&lt;script&gt;</code> and <code>&lt;noscript&gt;</code> can also be placed here eventhough they are not considered the essential parts of the page structure.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="HeadGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Head-Global-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>head { display: none; }</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- HTML TAG ---------------------------------------------------------------------------->
+      <section id="HTML-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="HTMLTag()">HTML ELEMENT</h2>
+          <p>The <code>&lt;html&gt;</code> tag represents the root of an HTML document.</p>
+          <p>The <code>&lt;html&gt;</code> tag is the container for all other HTML elements except for the <code>&lt;!DOCTYPE&gt;</code> declaration.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="HTMLGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="HTML-Global-Attributes" class="Appear"></div></div>
+          <div><code class="Highlighted" onclick="HTMLXmlnsAttributes()">&lt;html <b>xmlns</b>="<em>myValue</em>"&gt;</code><div id="HTML-Xmlns-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>html { display: block; }</code></p>
+          <p><code>html:focus { outline: none; }</code></p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Recommended to include <code>lang</code> attribute</span>
+            <p>Always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the webpage.</p>
+            <p>This is meant to assist search engines and browsers.</p>
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- LINK TAG ---------------------------------------------------------------------------->
+      <section id="Link-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="LinkTag()">LINK ELEMENT</h2>
+          <p>The <code>&lt;link&gt;</code> tag is used to link to external resources.</p>
+          <p>The <code>&lt;link&gt;</code> tag should be placed inside the <code>&lt;head&gt;</code> tag.</p>
+          <p>There can be multiple link elements that link to different stylesheets, fonts, icons, etc.</p>
+          <p>It is considered best practice to separate HTML and CSS in different files.</p>
+          <p>Developers will use the link element for their external CSS file instead of writing everything in the HTML document.</p>
+        </header>
+        
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="LinkGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Link-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkEventAttributes()"><em>HTML Event Attributes</em></code><div id="Link-Event-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkCrossoriginAttributes()">&lt;link <b>crossorigin</b>="<em>myValue</em>"&gt;</code><div id="Link-Crossorigin-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkHrefAttributes()">&lt;link <b>href</b>="<em>myValue</em>"&gt;</code><div id="Link-Href-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkHreflangAttributes()">&lt;link <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Link-Hreflang-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkMediaAttributes()">&lt;link <b>media</b>="<em>myValue</em>"&gt;</code><div id="Link-Media-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkReferrerpolicyAttributes()">&lt;link <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Link-Referrerpolicy-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkRelAttributes()">&lt;link <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Link-Rel-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkSizesAttributes()">&lt;link <b>sizes</b>="<em>myValue</em>"&gt;</code><div id="Link-Sizes-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkTypeAttributes()">&lt;link <b>type</b>="<em>myValue</em>"&gt;</code><div id="Link-Type-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>link { display: none; }</code></p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Custom favicon</span>
+            <p>A favicon is a small image displayed next to the page title in the browser tab.</p>
+            <p>User can use any image as the desired favicon, or can also create "<a href="https://www.favicon.cc" target="_blank">custom favicon</a>" on the site.</p>
+            <p>The favicon should be a simple image with high contrast due to its small size.</p>
+            <p>The attributes required for creating favicon are <code>rel, type, href</code>.</p>
+            <p>Example; <code>&lt;link rel="icon" type="image/x-icon" href="<em>myFavicon</em>.ico"&gt;</code>.</p>
+          </div>
+
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Google fonts</span>
+            <p>Google Fonts are a set of free and open source custom fonts that can be used in the page.</p>
+            <p>Example;<br>
+               <code>
+               &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt; <br>
+               &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin &gt; <br>
+               &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap"&gt;
+               </code>
+            </p>
+            <p>The <code>preconnect</code> value tells the browser to create an early connection to the value specified in the <code>href</code> attribute.</p>
+            <p>This is done to speed up loading times for these external resources.</p>
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- META TAG ---------------------------------------------------------------------------->
+      <section id="Meta-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="MetaTag()">META ELEMENT</h2>
+          <p>The <code>&lt;meta&gt;</code> tag defines metadata (informations) about an HTML document.</p>
+          <p>The tag is typically used to specify character set, page description, keywords, author of the document, and viewport settings.</p>
+          <p>Metadata will not be displayed on the page, but is machine parsable.</p>
+          <p>Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="MetaGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Meta-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="MetaCharsetAttributes()">&lt;meta <b>charset</b>="<em>myValue</em>"&gt;</code><div id="Meta-Charset-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="MetaContentAttributes()">&lt;meta <b>content</b>="<em>myValue</em>"&gt;</code><div id="Meta-Content-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="MetaHttpequivAttributes()">&lt;meta <b>http-equiv</b>="<em>myValue</em>"&gt;</code><div id="Meta-Httpequiv-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="MetaNameAttributes()">&lt;meta <b>name</b>="<em>myValue</em>"&gt;</code><div id="Meta-Name-Attributes"></div></div>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Custom setting on viewport</span>
+            <p><code>&lt;<b>meta</b> name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>.</p>
+            <p>This gives the browser instructions on how to control the page's dimensions and scaling.</p>
+            <p>The <code>width=device-width</code> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).</p>
+            <p>The <code>initial-scale=1.0</code> part sets the initial zoom level when the page is first loaded by the browser.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------------- TITLE TAG ---------------------------------------------------------------------------->
+      <section id="Title-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="TitleTag()">TITLE ELEMENT</h2>
+          <p>The <code>&lt;title&gt;</code> tag defines the title of the document.</p>
+          <p>The title must be text-only, and it is shown in the browser's title bar or in the page's tab.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="TitleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Title-Global-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>title { display: none; }</code></p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Required to include <code>&lt;title&gt;</code> element</span>
+            <p>The <code>&lt;title&gt;</code> tag is <b>required</b> in HTML documents.</p>
+            <p>The contents of a page title is very important for search engine optimization (SEO).</p>
+            <p>The page title is used by search engine algorithms to decide the order when listing pages in search results.</p>
+            <p>User can <b>not</b> have more than one <code>&lt;title&gt;</code> element in an HTML document.</p>
+          </div>
+
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Guidelines for creating <code>&lt;title&gt;</code> element</span>
+            <p>Go for a longer, descriptive title (avoid one- or two-word titles).</p>
+            <p>Search engines will display about 50-60 characters of the title, so try not to have titles longer than that.</p>
+            <p>Do not use just a list of words as the title (this may reduce the page's position in search results).</p>
+          </div>
+        </div>
       </section>
 
       <!----------------------------------------------------------------- HTML PAGE STRUCTURE ------------------------------------------------------------------>
       <section id="HTML-Page" class="Box-Contents">
-        <h2>HTML PAGE STRUCTURE</h2>
-        <div class="Box-Structures">
-          <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLDeclaration()">&lt;!DOCTYPE html&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLTag()">&lt;html&gt;</code></div>
-          <br>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="HeadTag()">&lt;head&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="TitleTag()">&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="StyleTag()">&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="BaseTag()">&lt;base&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="LinkTag()">&lt;link&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="MetaTag()">&lt;meta&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="ScriptTag()">&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="NoscriptTag()">&lt;noscript&gt; <em>MyText</em> &lt;/noscript&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="HeadTag()">&lt;/head&gt;</code></div>
-          <br>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="BodyTag()">&lt;body&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="HeaderTag()">&lt;header&gt; <em>MyContents</em> &lt;/header&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="MainTag()">&lt;main&gt; <em>MyContents</em> &lt;/main&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="FooterTag()">&lt;footer&gt; <em>MyContents</em> &lt;/footer&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="BodyTag()">&lt;/body&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="HTMLTag()">&lt;/html&gt;</code></div>
-        </div>
-
-        <!-- HTML Declaration -->
-        <div id="HTML-Declaration" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;!DOCTYPE&gt;</code></h3>
-          <p>All HTML documents must start with a <code>&lt;!DOCTYPE&gt;</code> declaration</p>
-          <p>The declaration is not an HTML tag, but it is an "information" to the browser about what document type to expect</p>
-          <p>Therefore, this <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this is an HTML 5 document (latest version of HTML)</p>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">No case sensitivity</span>
-              <p>The <code>&lt;!DOCTYPE&gt;</code> declaration can be written either in uppercase, lowercase or mixed</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- HTML Tag -->
-        <div id="HTML-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;html&gt; <em>MyContents</em> &lt;/html&gt;</code></h3>
-          <p>The <code>&lt;html&gt;</code> tag represents the root of an HTML document</p>
-          <p>The <code>&lt;html&gt;</code> tag is the container for all other HTML elements except for the <code>&lt;!DOCTYPE&gt;</code> declaration</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="HTMLGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="HTML-Global-Attributes" class="Appear"></div></div>
-            <div><code class="Highlighted" onclick="HTMLXmlnsAttributes()">&lt;html <b>xmlns</b>="<em>myValue</em>"&gt;</code><div id="HTML-Xmlns-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>html { display: block; }</code></p>
-            <p><code>html:focus { outline: none; }</code></p>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Recommended to include <code>lang</code> attribute</span>
-              <p>Always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the webpage</p>
-              <p>This is meant to assist search engines and browsers</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Head Tag -->
-        <div id="Head-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;head&gt; <em>MyContents</em> &lt;/head&gt;</code></h3>
-          <p>The <code>&lt;head&gt;</code> tag is a container for metadata, placed between the <code>&lt;html&gt;</code> tag and the <code>&lt;body&gt;</code> tag</p>
-          <p>Metadata typically define the document title, character set, styles, scripts, and other meta information, which they are not displayed in webpage</p>
-          <p>Hence, tags like <code>&lt;title&gt;, &lt;style&gt;, &lt;base&gt;, &lt;link&gt;, &lt;meta&gt;</code> are commonly placed here</p>
-          <p>The <code>&lt;script&gt;</code> and <code>&lt;noscript&gt;</code> can also be placed here eventhough they are not considered the essential parts of the page structure</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="HeadGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Head-Global-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>head { display: none; }</code></p>
-          </div>
-        </div>
-
-        <!-- Title Tag -->
-        <div id="Title-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;title&gt; <em>MyText</em> &lt;/title&gt;</code></h3>
-          <p>The <code>&lt;title&gt;</code> tag defines the title of the document</p>
-          <p>The title must be text-only, and it is shown in the browser's title bar or in the page's tab</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="TitleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Title-Global-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>title { display: none; }</code></p>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Required to include <code>&lt;title&gt;</code> element</span>
-              <p>The <code>&lt;title&gt;</code> tag is <b>required</b> in HTML documents</p>
-              <p>The contents of a page title is very important for search engine optimization (SEO)</p>
-              <p>The page title is used by search engine algorithms to decide the order when listing pages in search results</p>
-              <p>User can <b>not</b> have more than one <code>&lt;title&gt;</code> element in an HTML document</p>
-            </div>
-
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Guidelines for creating <code>&lt;title&gt;</code> element</span>
-              <p>Go for a longer, descriptive title (avoid one- or two-word titles)</p>
-              <p>Search engines will display about 50-60 characters of the title, so try not to have titles longer than that</p>
-              <p>Do not use just a list of words as the title (this may reduce the page's position in search results)</p>
-            </div>
-          </div>
-        </div>
-
         <!-- Style Tag -->
         <div id="Style-Tag" class="Sub-Topics Box-Elements">
           <h3><code>&lt;style&gt; <em>MyContents</em> &lt;/style&gt;</code></h3>
@@ -258,73 +507,6 @@
             <div><code class="Highlighted" onclick="BaseGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Base-Global-Attributes"></div></div>
             <div><code class="Highlighted" onclick="BaseHrefAttributes()">&lt;base <b>href</b>="<em>myValue</em>"&gt;</code><div id="Base-Href-Attributes"></div></div>
             <div><code class="Highlighted" onclick="BaseTargetAttributes()">&lt;base <b>target</b>="<em>myValue</em>"&gt;</code><div id="Base-Target-Attributes"></div></div>
-          </div>
-        </div>
-
-        <!-- Link Tag -->
-        <div id="Link-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;link&gt;</code></h3>
-          <p>The <code>&lt;link&gt;</code> tag defines the relationship between the current document and an external resource</p>
-          <p>The <code>&lt;link&gt;</code> tag is most often used to link to external style sheets or to add a favicon to the website</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="LinkGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Link-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkEventAttributes()"><em>HTML Event Attributes</em></code><div id="Link-Event-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkCrossoriginAttributes()">&lt;link <b>crossorigin</b>="<em>myValue</em>"&gt;</code><div id="Link-Crossorigin-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkHrefAttributes()">&lt;link <b>href</b>="<em>myValue</em>"&gt;</code><div id="Link-Href-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkHreflangAttributes()">&lt;link <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Link-Hreflang-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkMediaAttributes()">&lt;link <b>media</b>="<em>myValue</em>"&gt;</code><div id="Link-Media-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkReferrerpolicyAttributes()">&lt;link <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Link-Referrerpolicy-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkRelAttributes()">&lt;link <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Link-Rel-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkSizesAttributes()">&lt;link <b>sizes</b>="<em>myValue</em>"&gt;</code><div id="Link-Sizes-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="LinkTypeAttributes()">&lt;link <b>type</b>="<em>myValue</em>"&gt;</code><div id="Link-Type-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h3>DEFAULT CSS SETTING(S)</h3>
-            <p><code>link { display: none; }</code></p>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Custom favicon</span>
-              <p>A favicon is a small image displayed next to the page title in the browser tab</p>
-              <p>User can use any image as the desired favicon, or can also create "<a href="https://www.favicon.cc" target="_blank">custom favicon</a>" on the site</p>
-              <p>The favicon should be a simple image with high contrast due to its small size</p>
-              <p>The attributes required for creating favicon are <code>rel, type, href</code></p>
-              <p>Example; <code>&lt;link rel="icon" type="image/x-icon" href="<em>myFavicon</em>.ico"&gt;</code></p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Meta Tag -->
-        <div id="Meta-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;meta&gt;</code></h3>
-          <p>The <code>&lt;meta&gt;</code> tag defines metadata (informations) about an HTML document</p>
-          <p>The tag is typically used to specify character set, page description, keywords, author of the document, and viewport settings</p>
-          <p>Metadata will not be displayed on the page, but is machine parsable</p>
-          <p>Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="MetaGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Meta-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="MetaCharsetAttributes()">&lt;meta <b>charset</b>="<em>myValue</em>"&gt;</code><div id="Meta-Charset-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="MetaContentAttributes()">&lt;meta <b>content</b>="<em>myValue</em>"&gt;</code><div id="Meta-Content-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="MetaHttpequivAttributes()">&lt;meta <b>http-equiv</b>="<em>myValue</em>"&gt;</code><div id="Meta-Httpequiv-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="MetaNameAttributes()">&lt;meta <b>name</b>="<em>myValue</em>"&gt;</code><div id="Meta-Name-Attributes"></div></div>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Custom setting on viewport</span>
-              <p><code>&lt;<b>meta</b> name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></p>
-              <p>This gives the browser instructions on how to control the page's dimensions and scaling</p>
-              <p>The <code>width=device-width</code> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device)</p>
-              <p>The <code>initial-scale=1.0</code> part sets the initial zoom level when the page is first loaded by the browser</p>
-            </div>
           </div>
         </div>
 
@@ -382,26 +564,6 @@
               <p>The <code>&lt;noscript&gt;</code> element can be used in both <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code></p>
               <p>When used inside <code>&lt;head&gt;</code>, the element could only contain <code>&lt;link&gt;, &lt;style&gt;, &lt;meta&gt;</code> elements</p>
             </div>
-          </div>
-        </div>
-
-        <!-- Body Tag -->
-        <div id="Body-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;body&gt; <em>MyContents</em> &lt;/body&gt;</code></h3>
-          <p>The <code>&lt;body&gt;</code> tag defines the document's body</p>
-          <p>The <code>&lt;body&gt;</code> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</p>
-          <p>There can only be one <code>&lt;body&gt;</code> element in an HTML document</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="BodyGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Body-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="BodyEventAttributes()"><em>HTML Event Attributes</em></code><div id="Body-Event-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>body { display: block; margin: 8px; }</code></p>
-            <p><code>body:focus { outline: none; }</code></p>
           </div>
         </div>
 
@@ -2775,124 +2937,6 @@
             <p><code>iframe[seamless] { display: block; }</code></p>
           </div>
         </div>
-      </section>
-
-      <!---------------------------------------------------------------------- REFERENCES ---------------------------------------------------------------------->
-      <section id="HTML-References" class="Box-Contents">
-        <h2>REFERENCES</h2>
-        <input type="text" id="HTML-References-Input" onkeyup="SearchHTMLReferences()" placeholder="Find HTML tag..">
-        <ul id="HTML-References-List">
-          <li><a onclick="example()"><code>&lt;!--<i>MyComments</i>--&gt;</code> <span>Comment</span></a></li>
-          <li><a onclick="example()"><code>&lt;!DOCTYPE&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;a&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;abbr&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;address&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;area&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;article&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;aside&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;audio&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;b&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;base&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;bdi&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;bdo&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;blockquote&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;body&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;br&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;button&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;canvas&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;caption&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;cite&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;code&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;col&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;colgroup&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;data&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;datalist&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;dd&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;del&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;details&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;dfn&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;dialog&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;div&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;dl&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;dt&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;em&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;embed&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;fieldset&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;figcaption&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;figure&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;footer&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;form&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;h1&gt; to &lt;h6&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;head&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;header&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;hgroup&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;hr&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;html&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;i&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;iframe&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;img&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;input&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;ins&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;kbd&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;label&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;legend&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;li&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;link&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;main&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;map&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;mark&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;menu&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;meta&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;meter&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;nav&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;noscript&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;object&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;ol&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;optgroup&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;option&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;output&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;p&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;param&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;picture&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;pre&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;progress&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;q&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;rp&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;rt&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;ruby&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;s&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;samp&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;script&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;search&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;section&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;select&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;small&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;source&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;span&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;strong&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;style&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;sub&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;summary&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;sup&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;svg&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;table&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;tbody&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;td&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;template&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;textarea&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;tfoot&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;th&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;thead&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;time&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;title&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;tr&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;track&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;u&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;ul&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;var&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;video&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;wbr&gt;</code> <span></span></a></li>
-        </ul>
       </section>
 
       <!------------------------------------------------------------------ IMPORTING JS FILE ------------------------------------------------------------------->

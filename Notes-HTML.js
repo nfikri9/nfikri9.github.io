@@ -1,4 +1,4 @@
-//////////////////////////////////////////////////////// TOPIC SELECTIONS ////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////// TOPIC SELECTIONS ////////////////////////////////////////////////////////////////////////////
 function HTMLIntroduction() {
   let myVisibility = document.getElementById("HTML-Introduction");
   if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
@@ -60,9 +60,108 @@ function HTMLMisc() {
 }
 
 function HTMLReferences() {
-  let myVisibility = document.getElementById("HTML-References");
+  let myVisibility = document.getElementById("HTML-Elements");
   if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
   else { myVisibility.style.display = "block"; }
+}
+
+///////////////////////////////////////////////////////////////////////// LIST OF HTML ELEMENTS //////////////////////////////////////////////////////////////////////////
+function HTMLDeclaration() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let HTMLDeclaration = document.getElementById("HTML-Declaration");
+
+  if (HTMLDeclaration.style.display === "block") {
+    HTMLDeclaration.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    HTMLDeclaration.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function BodyTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let BodyTag = document.getElementById("Body-Tag");
+
+  if (BodyTag.style.display === "block") {
+    BodyTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    BodyTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function HeadTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let HeadTag = document.getElementById("Head-Tag");
+
+  if (HeadTag.style.display === "block") {
+    HeadTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    HeadTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function HTMLTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let HTMLTag = document.getElementById("HTML-Tag");
+
+  if (HTMLTag.style.display === "block") {
+    HTMLTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    HTMLTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function LinkTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let LinkTag = document.getElementById("Link-Tag");
+
+  if (LinkTag.style.display === "block") {
+    LinkTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    LinkTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function MetaTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let MetaTag = document.getElementById("Meta-Tag");
+
+  if (MetaTag.style.display === "block") {
+    MetaTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    MetaTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function TitleTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let TitleTag = document.getElementById("Title-Tag");
+
+  if (TitleTag.style.display === "block") {
+    TitleTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    TitleTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
 }
 
 ///////////////////////////////////////////////////// HTML GLOBAL ATTRIBUTES /////////////////////////////////////////////////////
@@ -3880,20 +3979,6 @@ function MiscellaneousAttributes() {
 }
 
 ////////////////////////////////////////////////////// HTML PAGE STRUCTURE ///////////////////////////////////////////////////////
-// HTML DECLARATION //
-function HTMLDeclaration() {
-  let myVisibility = document.getElementById("HTML-Declaration");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
-// HTML TAG //
-function HTMLTag() {
-  let myVisibility = document.getElementById("HTML-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function HTMLGlobalAttributes() {
   let myVisibility = document.getElementById("HTML-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -3917,12 +4002,6 @@ function HTMLXmlnsAttributes() {
 }
 
 // HEAD TAG //
-function HeadTag() {
-  let myVisibility = document.getElementById("Head-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function HeadGlobalAttributes() {
   let myVisibility = document.getElementById("Head-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -3937,12 +4016,6 @@ function HeadGlobalAttributes() {
 }
 
 // TITLE TAG //
-function TitleTag() {
-  let myVisibility = document.getElementById("Title-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function TitleGlobalAttributes() {
   let myVisibility = document.getElementById("Title-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -4044,12 +4117,6 @@ function BaseTargetAttributes() {
 }
 
 // LINK TAG //
-function LinkTag() {
-  let myVisibility = document.getElementById("Link-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function LinkGlobalAttributes() {
   let myVisibility = document.getElementById("Link-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -4147,12 +4214,6 @@ function LinkTypeAttributes() {
 }
 
 // META TAG //
-function MetaTag() {
-  let myVisibility = document.getElementById("Meta-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function MetaGlobalAttributes() {
   let myVisibility = document.getElementById("Meta-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -4315,12 +4376,6 @@ function NoscriptGlobalAttributes() {
 }
 
 // BODY TAG //
-function BodyTag() {
-  let myVisibility = document.getElementById("Body-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function BodyGlobalAttributes() {
   let myVisibility = document.getElementById("Body-Global-Attributes");
   if (myVisibility.style.display === "block") {
