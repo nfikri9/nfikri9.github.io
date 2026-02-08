@@ -79,7 +79,12 @@ td, th { border: 1px solid black; padding: 8px; }
 .Highlight-Insights { border: 1px solid black; }
 
 /******************************************************* HTML REFERENCES ********************************************************/
-#HTML-References-Input {
+#HTML-Elements {
+  height: 83vh;
+  overflow: auto;
+}
+
+#HTML-Elements-Input {
   background-image: url(https://www.w3schools.com/css/searchicon.png);
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -90,13 +95,13 @@ td, th { border: 1px solid black; padding: 8px; }
   margin-bottom: 12px;
 }
 
-#HTML-References-List {
+#HTML-Elements-List {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-#HTML-References-List li a {
+#HTML-Elements-List li a {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6;
@@ -107,4 +112,4 @@ td, th { border: 1px solid black; padding: 8px; }
   display: block;
 }
 
-#HTML-References-List li a:hover:not(.header) { background-color: #eee; }
+#HTML-Elements-List li a:hover:not(.header) { background-color: #eee; }

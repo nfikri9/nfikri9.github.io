@@ -66,6 +66,21 @@ function HTMLReferences() {
 }
 
 ///////////////////////////////////////////////////////////////////////// LIST OF HTML ELEMENTS //////////////////////////////////////////////////////////////////////////
+function SearchHTMLElements() {
+  let input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("HTML-Elements-Input");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("HTML-Elements-List");
+  li = ul.getElementsByTagName("li");
+  
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) { li[i].style.display = ""; }
+    else { li[i].style.display = "none"; }
+  }
+}
+
 function HTMLDeclaration() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let HTMLDeclaration = document.getElementById("HTML-Declaration");
@@ -80,6 +95,174 @@ function HTMLDeclaration() {
   }
 }
 
+function AbbreviationTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let AbbreviationTag = document.getElementById("Abbreviation-Tag");
+
+  if (AbbreviationTag.style.display === "block") {
+    AbbreviationTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    AbbreviationTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function AddressTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let AddressTag = document.getElementById("Address-Tag");
+
+  if (AddressTag.style.display === "block") {
+    AddressTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    AddressTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function AnchorTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let AnchorTag = document.getElementById("Anchor-Tag");
+
+  if (AnchorTag.style.display === "block") {
+    AnchorTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    AnchorTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function AreaTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let AreaTag = document.getElementById("Area-Tag");
+
+  if (AreaTag.style.display === "block") {
+    AreaTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    AreaTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ArticleTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ArticleTag = document.getElementById("Article-Tag");
+
+  if (ArticleTag.style.display === "block") {
+    ArticleTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ArticleTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function AsideTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let AsideTag = document.getElementById("Aside-Tag");
+
+  if (AsideTag.style.display === "block") {
+    AsideTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    AsideTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function AudioTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let AudioTag = document.getElementById("Audio-Tag");
+
+  if (AudioTag.style.display === "block") {
+    AudioTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    AudioTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function BaseTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let BaseTag = document.getElementById("Base-Tag");
+
+  if (BaseTag.style.display === "block") {
+    BaseTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    BaseTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function BiDirectionalIsolationTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let BiDirectionalIsolationTag = document.getElementById("Bi-Directional-Isolation-Tag");
+
+  if (BiDirectionalIsolationTag.style.display === "block") {
+    BiDirectionalIsolationTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    BiDirectionalIsolationTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function BiDirectionalOverrideTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let BiDirectionalOverrideTag = document.getElementById("Bi-Directional-Override-Tag");
+
+  if (BiDirectionalOverrideTag.style.display === "block") {
+    BiDirectionalOverrideTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    BiDirectionalOverrideTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function BlockquoteTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let BlockquoteTag = document.getElementById("Blockquote-Tag");
+
+  if (BlockquoteTag.style.display === "block") {
+    BlockquoteTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    BlockquoteTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function BoldTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let BoldTag = document.getElementById("Bold-Tag");
+
+  if (BoldTag.style.display === "block") {
+    BoldTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    BoldTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
 function BodyTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let BodyTag = document.getElementById("Body-Tag");
@@ -90,6 +273,48 @@ function BodyTag() {
   }
   else {
     BodyTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function BreakTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let BreakTag = document.getElementById("Break-Tag");
+
+  if (BreakTag.style.display === "block") {
+    BreakTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    BreakTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ButtonTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ButtonTag = document.getElementById("Button-Tag");
+
+  if (ButtonTag.style.display === "block") {
+    ButtonTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ButtonTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function CommentTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let CommentTag = document.getElementById("Comment-Tag");
+
+  if (CommentTag.style.display === "block") {
+    CommentTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    CommentTag.style.display = "block";
     HTMLElements.style.display = "none";
   }
 }
@@ -1115,22 +1340,6 @@ function DimensionAttributes() {
     }
   };
   return myDimension;
-}
-
-//////////////////////////////////////////////////////// HTML REFERENCES /////////////////////////////////////////////////////////
-function SearchHTMLReferences() {
-  let input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("HTML-References-Input");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("HTML-References-List");
-  li = ul.getElementsByTagName("li");
-  
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) { li[i].style.display = ""; }
-    else { li[i].style.display = "none"; }
-  }
 }
 
 /////////////////////////////////////////////////// HTML HYPERLINK ATTRIBUTES ////////////////////////////////////////////////////
@@ -4079,12 +4288,6 @@ function StyleTypeAttributes() {
 }
 
 // BASE TAG //
-function BaseTag() {
-  let myVisibility = document.getElementById("Base-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function BaseGlobalAttributes() {
   let myVisibility = document.getElementById("Base-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -4526,14 +4729,6 @@ function NavEventAttributes() {
 }
 
 // ASIDE TAG //
-function AsideTag() {
-  let myVisibility = document.getElementById("Aside-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function AsideGlobalAttributes() {
   let myVisibility = document.getElementById("Aside-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -4559,14 +4754,6 @@ function AsideEventAttributes() {
 }
 
 // ARTICLE TAG //
-function ArticleTag() {
-  let myVisibility = document.getElementById("Article-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ArticleGlobalAttributes() {
   let myVisibility = document.getElementById("Article-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -4821,15 +5008,6 @@ function TemplateGlobalAttributes() {
 }
 
 /////////////////////////////////////////////////////// HTML SEMANTIC TEXT ///////////////////////////////////////////////////////
-// COMMENT TAG //
-function CommentTag() {
-  let myVisibility = document.getElementById("Comment-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 // HEADING TAG //
 function HeadingTag() {
   let myVisibility = document.getElementById("Heading-Tag");
@@ -4897,14 +5075,6 @@ function ParagraphEventAttributes() {
 }
 
 // ANCHOR TAG //
-function AnchorTag() {
-  let myVisibility = document.getElementById("Anchor-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function AnchorGlobalAttributes() {
   let myVisibility = document.getElementById("Anchor-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5011,14 +5181,6 @@ function AnchorTypeAttributes() {
 }
 
 // ADDRESS TAG //
-function AddressTag() {
-  let myVisibility = document.getElementById("Address-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function AddressGlobalAttributes() {
   let myVisibility = document.getElementById("Address-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5044,14 +5206,6 @@ function AddressEventAttributes() {
 }
 
 // ABBREVIATION TAG //
-function AbbreviationTag() {
-  let myVisibility = document.getElementById("Abbreviation-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function AbbreviationGlobalAttributes() {
   let myVisibility = document.getElementById("Abbreviation-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5185,14 +5339,6 @@ function QuoteCiteAttributes() {
 }
 
 // BLOCKQUOTE TAG //
-function BlockquoteTag() {
-  let myVisibility = document.getElementById("Blockquote-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function BlockquoteGlobalAttributes() {
   let myVisibility = document.getElementById("Blockquote-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5395,14 +5541,6 @@ function DeleteDatetimeAttributes() {
 }
 
 // BOLD TAG //
-function BoldTag() {
-  let myVisibility = document.getElementById("Bold-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function BoldGlobalAttributes() {
   let myVisibility = document.getElementById("Bold-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5824,14 +5962,6 @@ function VariableEventAttributes() {
 }
 
 // BIDIRECTIONAL ISOLATION TAG //
-function BiDirectionalIsolationTag() {
-  let myVisibility = document.getElementById("Bi-Directional-Isolation-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function BdiGlobalAttributes() {
   let myVisibility = document.getElementById("Bdi-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5857,14 +5987,6 @@ function BdiEventAttributes() {
 }
 
 // BIDIRECTIONAL OVERRIDE TAG //
-function BiDirectionalOverrideTag() {
-  let myVisibility = document.getElementById("Bi-Directional-Override-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function BdoGlobalAttributes() {
   let myVisibility = document.getElementById("Bdo-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7118,14 +7240,6 @@ function OutputNameAttributes() {
 }
 
 // BUTTON TAG //
-function ButtonTag() {
-  let myVisibility = document.getElementById("Button-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ButtonGlobalAttributes() {
   let myVisibility = document.getElementById("Button-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8175,14 +8289,6 @@ function MapNameAttributes() {
 }
 
 // AREA TAG //
-function AreaTag() {
-  let myVisibility = document.getElementById("Area-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function AreaGlobalAttributes() {
   let myVisibility = document.getElementById("Area-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8340,14 +8446,6 @@ function FigcaptionEventAttributes() {
 }
 
 // AUDIO TAG //
-function AudioTag() {
-  let myVisibility = document.getElementById("Audio-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function AudioGlobalAttributes() {
   let myVisibility = document.getElementById("Audio-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8987,14 +9085,6 @@ function HorizontalRuleEventAttributes() {
 }
 
 // BREAK TAG //
-function BreakTag() {
-  let myVisibility = document.getElementById("Break-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function BreakGlobalAttributes() {
   let myVisibility = document.getElementById("Break-Global-Attributes");
   if (myVisibility.style.display === "none") {

@@ -97,9 +97,11 @@
             <div class="Indent-Level1"><code class="Highlighted">&lt;!DOCTYPE html&gt;</code></div>
             <div class="Indent-Level1"><code class="Highlighted">&lt;html lang="en"&gt;</code></div>
             <div class="Indent-Level2"><code class="Highlighted">&lt;head&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;!-- Browser Tab --&gt;</code></div>
             <div class="Indent-Level3"><code class="Highlighted">&lt;title&gt;<i>MyProjectName</i>&lt;/title&gt;</code></div>
             <div class="Indent-Level3"><code class="Highlighted">&lt;link rel="icon" type="image/x-icon" href="<i>MyLogo</i>"</code></div>
             <br>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;!-- Metadata --&gt;</code></div>
             <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="author" content="<i>MyName</i>"&gt;</code></div>
             <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="description" content="<i>MyDescription</i>"&gt;</code></div>
             <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="keywords" content="<i>Keyword1, Keyword2, ...</i>"&gt;</code></div>
@@ -108,10 +110,16 @@
             <div class="Indent-Level3"><code class="Highlighted">&lt;link rel="stylesheet" href="<i>MyFile</i>"&gt;</code></div>
             <div class="Indent-Level2"><code class="Highlighted">&lt;/head&gt;</code></div>
             <br>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;!-- Open Graph Protocol --&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta property="og:title" content="<i>MyTitle</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta property="og:type" content="website"&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta property="og:image" content="<i>MyLogo</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;meta property="og:url" content="<i>MyPageURL</i>"&gt;</code></div>
+            <br>
             <div class="Indent-Level2"><code class="Highlighted">&lt;body&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;header&gt; <i>MyContents</i> &lt;/header&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;main&gt; <i>MyContents</i> &lt;/main&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;footer&gt; <i>MyContents</i> &lt;/footer&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;header&gt;&lt;/header&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;main&gt;&lt;/main&gt;</code></div>
+            <div class="Indent-Level3"><code class="Highlighted">&lt;footer&gt;&lt;/footer&gt;</code></div>
             <div class="Indent-Level2"><code class="Highlighted">&lt;/body&gt;</code></div>
             <div class="Indent-Level1"><code class="Highlighted">&lt;/html&gt;</code></div>
           </div>
@@ -124,32 +132,34 @@
           <p>Using a boilerplate helps developers avoid common mistakes and follow best practices.</p>
           <p>It's a great starting point for any web project.</p>
           <p>Plus, they can customize their own boilerplate to fit their needs.</p>
-          <p>As you gain experience, you might add your own preferred elements or meta tags.</p>
+          <p>As developer gain experience, they might add their own preferred elements or meta tags.</p>
         </article>
       </section>
 
       <!--------------------------------------------------------------------- LIST OF HTML ELEMENTS ---------------------------------------------------------------------->
       <section id="HTML-Elements" class="Box-Contents">
         <h2>LIST OF HTML TAGS</h2>
-        <input type="text" id="HTML-References-Input" onkeyup="SearchHTMLReferences()" placeholder="Find HTML tag..">
-        <ul id="HTML-References-List">
-          <li><a onclick="example()"><code>&lt;!-- --&gt;</code> <span></span></a></li>
+        <input type="text" id="HTML-Elements-Input" onkeyup="SearchHTMLElements()" placeholder="Find HTML tag..">
+        <ul id="HTML-Elements-List">
+          <li><a onclick="CommentTag()"><code>&lt;!-- --&gt;</code> <span>Defines a comment</span></a></li>
           <li><a onclick="HTMLDeclaration()"><code>&lt;!DOCTYPE&gt;</code> <span>Defines the document type</span></a></li>
-          <li><a onclick="example()"><code>&lt;a&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;abbr&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;address&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;area&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;article&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;aside&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;audio&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;b&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;base&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;bdi&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;bdo&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;blockquote&gt;</code> <span></span></a></li>
+          <li><a onclick="AnchorTag()"><code>&lt;a&gt;</code> <span>Defines a hyperlink</span></a></li>
+          <li><a onclick="AbbreviationTag()"><code>&lt;abbr&gt;</code> <span>Defines an abbreviation or an acronym</span></a></li>
+          <li><a onclick="AddressTag()"><code>&lt;address&gt;</code> <span>Defines contact information for the author/owner of a document</span></a></li>
+          <li><a onclick="AreaTag()"><code>&lt;area&gt;</code> <span>Defines an area inside an image map</span></a></li>
+          <li><a onclick="ArticleTag()"><code>&lt;article&gt;</code> <span>Defines an article</span></a></li>
+          <li><a onclick="AsideTag()"><code>&lt;aside&gt;</code> <span>Defines content aside from the page content</span></a></li>
+          <li><a onclick="AudioTag()"><code>&lt;audio&gt;</code> <span>Defines embedded sound content</span></a></li>
+          <li><a onclick="BoldTag()"><code>&lt;b&gt;</code> <span>Defines bold text</span></a></li>
+          <li><a onclick="BaseTag()"><code>&lt;base&gt;</code> <span>Specifies the base URL/target for all relative URLs in a document</span></a></li>
+          <li><a onclick="BiDirectionalIsolationTag()"><code>&lt;bdi&gt;</code>
+              <span>Isolates a part of text that might be formatted in a different direction from other text outside it</span></a>
+          </li>
+          <li><a onclick="BiDirectionalOverrideTag()"><code>&lt;bdo&gt;</code> <span>Overrides the current text direction</span></a></li>
+          <li><a onclick="BlockquoteTag()"><code>&lt;blockquote&gt;</code> <span>Defines a section that is quoted from another source</span></a></li>
           <li><a onclick="BodyTag()"><code>&lt;body&gt;</code> <span>Defines the document's body</span></a></li>
-          <li><a onclick="example()"><code>&lt;br&gt;</code> <span></span></a></li>
-          <li><a onclick="example()"><code>&lt;button&gt;</code> <span></span></a></li>
+          <li><a onclick="BreakTag()"><code>&lt;br&gt;</code> <span>Defines a single line break</span></a></li>
+          <li><a onclick="ButtonTag()"><code>&lt;button&gt;</code> <span>Defines a clickable button</span></a></li>
           <li><a onclick="example()"><code>&lt;canvas&gt;</code> <span></span></a></li>
           <li><a onclick="example()"><code>&lt;caption&gt;</code> <span></span></a></li>
           <li><a onclick="example()"><code>&lt;cite&gt;</code> <span></span></a></li>
@@ -246,6 +256,17 @@
         </ul>
       </section>
 
+      <!-------------------------------------------------------------------------- HTML COMMENT -------------------------------------------------------------------------->
+      <section id="Comment-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="CommentTag()">COMMENT TAG</h2>
+          <p>The comment tag is used to insert comments in the source code.</p>
+          <p>Comments are not displayed in the browsers.</p>
+          <p>Developer can use comments to explain the code, which can help them when they edit the source code at a later date.</p>
+          <p>This is especially useful if developer have a lot of code.</p>
+        </header>
+      </section>
+
       <!------------------------------------------------------------------------ HTML DECLARATION ------------------------------------------------------------------------>
       <section id="HTML-Declaration" class="Box-Contents">
         <header>
@@ -261,6 +282,308 @@
             <span class="Highlight-Insights">No case sensitivity</span>
             <p>The <code>&lt;!DOCTYPE&gt;</code> declaration can be written either in uppercase, lowercase or mixed.</p>
           </div>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------------- ANCHOR TAG --------------------------------------------------------------------------->
+      <section id="Anchor-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="AnchorTag()">ANCHOR ELEMENT</h2>
+          <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="AnchorGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Anchor-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorEventAttributes()"><em>HTML Event Attributes</em></code><div id="Anchor-Event-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Download-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Href-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Hreflang-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Media-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Ping-Attributes"></div> </div>
+          <div><code class="Highlighted" onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Referrerpolicy-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Rel-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Target-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Type-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>a:link, a:visited { color: (<em>internal value</em>); text-decoration: underline; cursor: auto; }</code></p>
+          <p><code>a:link:active, a:visited:active { color: (<em>internal value</em>); }</code></p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHTS</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Required to include <code>href</code> attribute</span>
+            <p>The <code>href</code> attribute indicates the link's destination for <code>&lt;a&gt;</code> tag.</p>
+            <p>If the <code>href</code> attribute is omitted, it is only a placeholder for a hyperlink.</p>
+          </div>
+
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Optional to include <code>target</code> attribute</span>
+            <p>By default, a linked page is displayed in the current browser window.</p>
+            <p>For some feature, it it beneficial when user specify another target so that the webpage is displayed on new tab without changing current webpage.</p>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------ ABBREVIATION TAG ------------------------------------------------------------------------>
+      <section id="Abbreviation-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="AbbreviationTag()">ABBREVIATION ELEMENT</h2>
+          <p>The <code>&lt;abbr&gt;</code> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP".</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="AbbreviationGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Abbreviation-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AbbreviationEventAttributes()"><em>HTML Event Attributes</em></code><div id="Abbreviation-Event-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>abbr { display: inline; }</code></p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Recommended to include <code>title</code> attribute</span>
+            <p>This is the best way to show the description for the abbreviation/acronym.</p>
+            <p>User just simply mouse over the element and the desription will be displayed.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------------------------- ADDRESS TAG --------------------------------------------------------------------------->
+      <section id="Address-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="AddressTag()">ADDRESS ELEMENT</h2>
+          <p>The <code>&lt;address&gt;</code> tag defines the contact information for the author/owner of a document or an article.</p>
+          <p>The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="AddressGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Address-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AddressEventAttributes()"><em>HTML Event Attributes</em></code><div id="Address-Event-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>address { display: block; font-style: italic; }</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- AREA TAG ---------------------------------------------------------------------------->
+      <section id="Area-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="AreaTag()">AREA ELEMENT</h2>
+          <p>The <code>&lt;area&gt;</code> tag defines an area inside an image map (an image map is an image with clickable areas).</p>
+          <p><code>&lt;area&gt;</code> elements are always nested inside a <code>&lt;map&gt;</code> tag.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="AreaGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Area-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaEventAttributes()"><em>HTML Event Attributes</em></code><div id="Area-Event-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaAltAttributes()">&lt;area <b>alt</b>="<em>myValue</em>"&gt;</code><div id="Area-Alt-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaCoordsAttributes()">&lt;area <b>coords</b>="<em>myValue</em>"&gt;</code><div id="Area-Coords-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaDownloadAttributes()">&lt;area <b>download</b>="<em>myValue</em>"&gt;</code><div id="Area-Download-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaHrefAttributes()">&lt;area <b>href</b>="<em>myValue</em>"&gt;</code><div id="Area-Href-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaHreflangAttributes()">&lt;area <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Area-Hreflang-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaMediaAttributes()">&lt;area <b>media</b>="<em>myValue</em>"&gt;</code><div id="Area-Media-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaReferrerpolicyAttributes()">&lt;area <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Area-Referrerpolicy-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaRelAttributes()">&lt;area <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Area-Rel-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaShapeAttributes()">&lt;area <b>shape</b>="<em>myValue</em>"&gt;</code><div id="Area-Shape-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaTargetAttributes()">&lt;area <b>target</b>="<em>myValue</em>"&gt;</code><div id="Area-Target-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaTypeAttributes()">&lt;area <b>type</b>="<em>myValue</em>"&gt;</code><div id="Area-Type-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>area { display: none; }</code></p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Recommended to include <code>name</code> attribute</span>
+            <p>Since <code>&lt;area&gt;</code> elements nested within <code>&lt;map&gt;</code>, the elements also needed <code>&lt;img&gt;</code> too.</p>
+            <p>The <code>name</code> attribute will be associated with the <code>&lt;img&gt;</code>'s usemap attribute and creates a relationship between the image and the map.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------------------------- ARTICLE TAG --------------------------------------------------------------------------->
+      <section id="Article-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="ArticleTag()">ARTICLE ELEMENT</code></h2>
+          <p>The <code>&lt;article&gt;</code> tag specifies independent, self-contained content.</p>
+          <p>Potential sources for the <code>&lt;article&gt;</code> element are like forum post, blog post, news story.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="ArticleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Article-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ArticleEventAttributes()"><em>HTML Event Attributes</em></code><div id="Article-Event-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>article { display: block; }</code></p>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------------- ASIDE TAG ---------------------------------------------------------------------------->
+      <section id="Aside-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="AsideTag()">ASIDE ELEMENT</h2>
+          <p>The <code>&lt;aside&gt;</code> tag defines some content aside from the content it is placed in.</p>
+          <p>The aside content should be indirectly related to the surrounding content.</p>
+          <p>The <code>&lt;aside&gt;</code> content is often placed as a sidebar in a document.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="AsideGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Aside-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AsideEventAttributes()"><em>HTML Event Attributes</em></code><div id="Aside-Event-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>aside { display: block; }</code></p>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------------- AUDIO TAG ---------------------------------------------------------------------------->
+      <section id="Audio-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="AudioTag()">AUDIO ELEMENT</h2>
+          <p>The <code>&lt;audio&gt;</code> tag is used to embed sound content in a document, such as music or other audio streams.</p>
+          <p>The <code>MyText</code> between the <code>&lt;audio&gt;</code> tags will only be displayed in browsers that do not support the audio element.</p>
+          <p>There are three supported audio formats in HTML: MP3, WAV, and OGG.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="AudioGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Audio-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AudioEventAttributes()"><em>HTML Event Attributes</em></code><div id="Audio-Event-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AudioAutoplayAttributes()">&lt;audio <b>autoplay</b>&gt;</code><div id="Audio-Autoplay-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AudioControlsAttributes()">&lt;audio <b>controls</b>&gt;</code><div id="Audio-Controls-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AudioLoopAttributes()">&lt;audio <b>loop</b>&gt;</code><div id="Audio-Loop-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AudioMutedAttributes()">&lt;audio <b>muted</b>&gt;</code><div id="Audio-Muted-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AudioPreloadAttributes()">&lt;audio <b>preload</b>="<em>myValue</em>"&gt;</code><div id="Audio-Preload-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AudioSrcAttributes()">&lt;audio <b>src</b>="<em>myValue</em>"&gt;</code><div id="Audio-Src-Attributes"></div></div>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Multiple <code>&lt;source&gt;</code> tags within <code>&lt;audio&gt;</code></span>
+            <p>The <code>&lt;audio&gt;</code> tag can contains one or more <code>&lt;source&gt;</code> tags with different audio sources.</p>
+            <p>The browser will choose the first source it supports.</p>
+          </div>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- BOLD TAG ---------------------------------------------------------------------------->
+      <section id="Bold-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="BoldTag()">BOLD ELEMENT</h2>
+          <p>The <code>&lt;b&gt;</code> tag specifies bold text without any extra importance.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="BoldGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bold-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="BoldEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bold-Event-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>b { font-weight: bold; }</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- BASE TAG ---------------------------------------------------------------------------->
+      <section id="Base-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="BaseTag()">BASE ELEMENT</h2>
+          <p>The <code>&lt;base&gt;</code> tag specifies the base URL and/or target for all relative URLs in a document.</p>
+          <p>Hence, the <code>&lt;base&gt;</code> tag must have either <code>href</code> or <code>target</code> attribute present, or both.</p>
+          <p>There can only be one single <code>&lt;base&gt;</code> element in a document, and it must be inside the <code>&lt;head&gt;</code> element.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="BaseGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Base-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="BaseHrefAttributes()">&lt;base <b>href</b>="<em>myValue</em>"&gt;</code><div id="Base-Href-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="BaseTargetAttributes()">&lt;base <b>target</b>="<em>myValue</em>"&gt;</code><div id="Base-Target-Attributes"></div></div>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------ BI-DIRECTIONAL ISOLATION TAG ------------------------------------------------------------------>
+      <section id="Bi-Directional-Isolation-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="BiDirectionalIsolationTag()">BI-DIRECTIONAL ISOLATION ELEMENT</h2>
+          <p>The <code>&lt;bdi&gt;</code> tag isolates a part of text that might be formatted in a different direction from other text outside it.</p>
+          <p>This element is useful when embedding user-generated content with an unknown text direction.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="BdiGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bdi-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="BdiEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bdi-Event-Attributes"></div></div>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------ BI-DIRECTI0NAL OVERRIDE TAG ------------------------------------------------------------------->
+      <section id="Bi-Directional-Override-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="BiDirectionalOverrideTag()">BI-DIRECTIONAL OVERRIDE ELEMENT</h2>
+          <p>The <code>&lt;bdo&gt;</code> tag is used to override the current text direction.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="BdoGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bdo-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="BdoEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bdo-Event-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>bdo { unicode-bidi: bidi-override; }</code></p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHT(S)</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Required to include <code>dir</code> attribute</span>
+            <p>The attribute is obviously required that specifies the text direction of the text inside the <code>&lt;bdo&gt;</code> element.</p>
+          </div>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- BLOCKQUOTE TAG ------------------------------------------------------------------------->
+      <section id="Blockquote-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="BlockquoteTag()">BLOCKQUOTE ELEMENT</h2>
+          <p>The <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another source.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="BlockquoteGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Blockquote-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="BlockquoteEventAttributes()"><em>HTML Event Attributes</em></code><div id="Blockquote-Event-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="BlockquoteCiteAttributes()">&lt;blockquote <b>cite</b>="<em>myValue</em>"&gt;</code><div id="Blockquote-Cite-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>blockquote { display: block; margin: 1em 40px; }</code></p>
         </div>
       </section>
 
@@ -283,6 +606,51 @@
           <h3>DEFAULT CSS SETTING(S)</h3>
           <p><code>body { display: block; margin: 8px; }</code></p>
           <p><code>body:focus { outline: none; }</code></p>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------------- BREAK TAG ---------------------------------------------------------------------------->
+      <section id="Break-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="BreakTag()">BREAK ELEMENT</h2>
+          <p>The <code>&lt;br&gt;</code> tag inserts a single line break.</p>
+          <p>The <code>&lt;br&gt;</code> tag is useful for writing addresses or poems.</p>
+          <p>Use the <code>&lt;br&gt;</code> tag to enter line breaks, not to add space between paragraphs.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <p><code class="Highlighted" onclick="BreakGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Break-Global-Attributes"></div></p>
+          <p><code class="Highlighted" onclick="BreakEventAttributes()"><em>HTML Event Attributes</em></code><div id="Break-Event-Attributes"></div></p>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------------- BUTTON TAG --------------------------------------------------------------------------->
+      <section id="Button-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="ButtonTag()">BUTTON ELEMENT</h2>
+          <p>The <code>&lt;button&gt;</code> tag defines a clickable button.</p>
+          <p>Inside a <code>&lt;button&gt;</code> element user can put text, or tags <code>&lt;i&gt;, &lt;b&gt;, &lt;strong&gt;, &lt;br&gt;, &lt;img&gt;</code>, etc.</p>
+          <p>That is not possible with a button created with the <code>&lt;input&gt;</code> element.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h4>RELATED ATTRIBUTE(S)</h4>
+          <div><code class="Highlighted" onclick="ButtonGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Button-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonEventAttributes()"><em>HTML Event Attributes</em></code><div id="Button-Event-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonAutofocusAttributes()">&lt;button <b>autofocus</b>&gt;</code><div id="Button-Autofocus-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonDisabledAttributes()">&lt;button <b>disabled</b>&gt;</code><div id="Button-Disabled-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonFormAttributes()">&lt;button <b>form</b>="<em>myValue</em>"&gt;</code><div id="Button-Form-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonFormactionAttributes()">&lt;button <b>formaction</b>="<em>myValue</em>"&gt;</code><div id="Button-Formaction-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonFormenctypeAttributes()">&lt;button <b>formenctype</b>="<em>myValue</em>"&gt;</code><div id="Button-Formenctype-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonFormmethodAttributes()">&lt;button <b>formmethod</b>="<em>myValue</em>"&gt;</code><div id="Button-Formmethod-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonFormnovalidateAttributes()">&lt;button <b>formnovalidate</b>="<em>myValue</em>"&gt;</code><div id="Button-Formnovalidate-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonFormtargetAttributes()">&lt;button <b>formtarget</b>="<em>myValue</em>"&gt;</code><div id="Button-Formtarget-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonPopovertargetAttributes()">&lt;button <b>popovertarget</b>="<em>myValue</em>"&gt;</code><div id="Button-Popovertarget-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonPopovertargetactionAttributes()">&lt;button <b>popovertargetaction</b>="<em>myValue</em>"&gt;</code><div id="Button-Popovertargetaction-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonNameAttributes()">&lt;button <b>name</b>="<em>myValue</em>"&gt;</code><div id="Button-Name-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonTypeAttributes()">&lt;button <b>type</b>="<em>myValue</em>"&gt;</code><div id="Button-Type-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonValueAttributes()">&lt;button <b>value</b>="<em>myValue</em>"&gt;</code><div id="Button-Value-Attributes"></div></div>
         </div>
       </section>
 
@@ -495,21 +863,6 @@
           </div>
         </div>
 
-        <!-- Base Tag -->
-        <div id="Base-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;base&gt;</code></h3>
-          <p>The <code>&lt;base&gt;</code> tag specifies the base URL and/or target for all relative URLs in a document</p>
-          <p>Hence, the <code>&lt;base&gt;</code> tag must have either <code>href</code> or <code>target</code> attribute present, or both</p>
-          <p>There can only be one single <code>&lt;base&gt;</code> element in a document, and it must be inside the <code>&lt;head&gt;</code> element</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="BaseGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Base-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="BaseHrefAttributes()">&lt;base <b>href</b>="<em>myValue</em>"&gt;</code><div id="Base-Href-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="BaseTargetAttributes()">&lt;base <b>target</b>="<em>myValue</em>"&gt;</code><div id="Base-Target-Attributes"></div></div>
-          </div>
-        </div>
-
         <!-- Script Tag -->
         <div id="Script-Tag" class="Sub-Topics Box-Elements">
           <h3><code>&lt;script&gt; <em>MyContents</em> &lt;/script&gt;</code></h3>
@@ -689,43 +1042,6 @@
           </div>
         </div>
 
-        <!-- Aside Tag -->
-        <div id="Aside-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;aside&gt; <em>MyContents</em> &lt;/aside&gt;</code></h3>
-          <p>The <code>&lt;aside&gt;</code> tag defines some content aside from the content it is placed in</p>
-          <p>The aside content should be indirectly related to the surrounding content</p>
-          <p>The <code>&lt;aside&gt;</code> content is often placed as a sidebar in a document</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="AsideGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Aside-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AsideEventAttributes()"><em>HTML Event Attributes</em></code><div id="Aside-Event-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h3>DEFAULT CSS SETTING(S)</h3>
-            <p><code>aside { display: block; }</code></p>
-          </div>
-        </div>
-
-        <!-- Article Tag -->
-        <div id="Article-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;article&gt; <em>MyContents</em> &lt;/article&gt;</code></h3>
-          <p>The <code>&lt;article&gt;</code> tag specifies independent, self-contained content</p>
-          <p>Potential sources for the <code>&lt;article&gt;</code> element are like forum post, blog post, news story</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="ArticleGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Article-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ArticleEventAttributes()"><em>HTML Event Attributes</em></code><div id="Article-Event-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h3>DEFAULT CSS SETTING(S)</h3>
-            <p><code>article { display: block; }</code></p>
-          </div>
-        </div>
-
         <!-- Section Tag -->
         <div id="Section-Tag" class="Sub-Topics Box-Elements">
           <h3><code>&lt;section&gt; <em>MyContents</em> &lt;/section&gt;</code></h3>
@@ -892,15 +1208,6 @@
           <div class="Indent-Level1"><code class="Highlighted" onclick="BiDirectionalOverrideTag()">&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></div>
           <div class="Indent-Level1"><code class="Highlighted" onclick="TimeTag()">&lt;time&gt; <em>MyText</em> &lt;/time&gt;</code></div>
         </div>
-        
-        <!-- Comment Tag -->
-        <div id="Comment-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;!-- <em>MyText</em> --&gt;</code></h3>
-          <p>The comment tag is used to insert comments in the source code</p>
-          <p>Comments are not displayed in the browsers</p>
-          <p>User can use comments to explain the code, which can help them when they edit the source code at a later date</p>
-          <p>This is especially useful if user have a lot of code</p>
-        </div>
 
         <!-- Heading Tag -->
         <div id="Heading-Tag" class="Sub-Topics Box-Elements">
@@ -953,92 +1260,6 @@
           <div class="Box-CSS">
             <h3>DEFAULT CSS SETTING(S)</h3>
             <p><code>p { display: block; margin: 1em 0; }</code></p>
-          </div>
-        </div>
-
-        <!-- Anchor Tag -->
-        <div id="Anchor-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;a&gt; <em>MyText</em> &lt;/a&gt;</code></h3>
-          <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="AnchorGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Anchor-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorEventAttributes()"><em>HTML Event Attributes</em></code><div id="Anchor-Event-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Download-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Href-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Hreflang-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Media-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Ping-Attributes"></div> </div>
-            <div><code class="Highlighted" onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Referrerpolicy-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Rel-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Target-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Type-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>a:link, a:visited { color: (<em>internal value</em>); text-decoration: underline; cursor: auto; }</code></p>
-            <p><code>a:link:active, a:visited:active { color: (<em>internal value</em>); }</code></p>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHTS</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Required to include <code>href</code> attribute</span>
-              <p>The <code>href</code> attribute indicates the link's destination for <code>&lt;a&gt;</code> tag</p>
-              <p>If the <code>href</code> attribute is omitted, it is only a placeholder for a hyperlink</p>
-            </div>
-
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Optional to include <code>target</code> attribute</span>
-              <p>By default, a linked page is displayed in the current browser window</p>
-              <p>For some feature, it it beneficial when user specify another target so that the webpage is displayed on new tab without changing current webpage</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Address Tag -->
-        <div id="Address-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;address&gt; <em>MyText</em> &lt;/address&gt;</code></h3>
-          <p>The <code>&lt;address&gt;</code> tag defines the contact information for the author/owner of a document or an article</p>
-          <p>The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="AddressGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Address-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AddressEventAttributes()"><em>HTML Event Attributes</em></code><div id="Address-Event-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>address { display: block; font-style: italic; }</code></p>
-          </div>
-        </div>
-
-        <!-- Abbreviation Tag -->
-        <div id="Abbreviation-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;abbr&gt; <em>MyText</em> &lt;/abbr&gt;</code></h3>
-          <p>The <code>&lt;abbr&gt;</code> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP"</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="AbbreviationGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Abbreviation-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AbbreviationEventAttributes()"><em>HTML Event Attributes</em></code><div id="Abbreviation-Event-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>abbr { display: inline; }</code></p>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Recommended to include <code>title</code> attribute</span>
-              <p>This is the best way to show the description for the abbreviation/acronym</p>
-              <p>User just simply mouse over the element and the desription will be displayed</p>
-            </div>
           </div>
         </div>
 
@@ -1095,24 +1316,6 @@
             <p><code>q { display: inline; }</code></p>
             <p><code>q:before { content: open-quote; }</code></p>
             <p><code>q:after { content: close-quote; }</code></p>
-          </div>
-        </div>
-
-        <!-- Blockquote Tag -->
-        <div id="Blockquote-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;blockquote&gt; <em>MyText</em> &lt;/blockquote&gt;</code></h3>
-          <p>The <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another source</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="BlockquoteGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Blockquote-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="BlockquoteEventAttributes()"><em>HTML Event Attributes</em></code><div id="Blockquote-Event-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="BlockquoteCiteAttributes()">&lt;blockquote <b>cite</b>="<em>myValue</em>"&gt;</code><div id="Blockquote-Cite-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h3>DEFAULT CSS SETTING(S)</h3>
-            <p><code>blockquote { display: block; margin: 1em 40px; }</code></p>
           </div>
         </div>
 
@@ -1187,23 +1390,6 @@
           <div class="Box-CSS">
             <h3>DEFAULT CSS SETTING(S)</h3>
             <p><code>del { text-decoration: line-through; }</code></p>
-          </div>
-        </div>
-
-        <!-- Bold Tag -->
-        <div id="Bold-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;b&gt; <em>MyText</em> &lt;/b&gt;</code></h3>
-          <p>The <code>&lt;b&gt;</code> tag specifies bold text without any extra importance</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="BoldGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bold-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="BoldEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bold-Event-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h3>DEFAULT CSS SETTING(S)</h3>
-            <p><code>b { font-weight: bold; }</code></p>
           </div>
         </div>
 
@@ -1415,44 +1601,6 @@
           <div class="Box-CSS">
             <h4>DEFAULT CSS SETTING(S)</h4>
             <p><code>var { font-style: italic; }</code></p>
-          </div>
-        </div>
-
-        <!-- Bidirectional Isolation Tag -->
-        <div id="Bi-Directional-Isolation-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;bdi&gt; <em>MyText</em> &lt;/bdi&gt;</code></h3>
-          <p>The <code>&lt;bdi&gt;</code> tag isolates a part of text that might be formatted in a different direction from other text outside it</p>
-          <p>This element is useful when embedding user-generated content with an unknown text direction</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="BdiGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bdi-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="BdiEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bdi-Event-Attributes"></div></div>
-          </div>
-        </div>
-
-        <!-- Bidirectional Override Tag -->
-        <div id="Bi-Directional-Override-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></h3>
-          <p>The <code>&lt;bdo&gt;</code> tag is used to override the current text direction</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="BdoGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Bdo-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="BdoEventAttributes()"><em>HTML Event Attributes</em></code><div id="Bdo-Event-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>bdo { unicode-bidi: bidi-override; }</code></p>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Required to include <code>dir</code> attribute</span>
-              <p>The attribute is obviously required that specifies the text direction of the text inside the <code>&lt;bdo&gt;</code> element</p>
-            </div>
           </div>
         </div>
 
@@ -1875,33 +2023,6 @@
           <div class="Box-CSS">
             <h4>DEFAULT CSS SETTING(S)</h4>
             <p><code>output { display: inline; }</code></p>
-          </div>
-        </div>
-
-        <!-- Button Tag -->
-        <div id="Button-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;button&gt; <em>MyText</em> &lt;/button&gt;</code></h3>
-          <p>The <code>&lt;button&gt;</code> tag defines a clickable button</p>
-          <p>Inside a <code>&lt;button&gt;</code> element user can put text, or tags <code>&lt;i&gt;, &lt;b&gt;, &lt;strong&gt;, &lt;br&gt;, &lt;img&gt;</code>, etc.</p>
-          <p>That is not possible with a button created with the <code>&lt;input&gt;</code> element</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="ButtonGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Button-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonEventAttributes()"><em>HTML Event Attributes</em></code><div id="Button-Event-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonAutofocusAttributes()">&lt;button <b>autofocus</b>&gt;</code><div id="Button-Autofocus-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonDisabledAttributes()">&lt;button <b>disabled</b>&gt;</code><div id="Button-Disabled-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonFormAttributes()">&lt;button <b>form</b>="<em>myValue</em>"&gt;</code><div id="Button-Form-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonFormactionAttributes()">&lt;button <b>formaction</b>="<em>myValue</em>"&gt;</code><div id="Button-Formaction-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonFormenctypeAttributes()">&lt;button <b>formenctype</b>="<em>myValue</em>"&gt;</code><div id="Button-Formenctype-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonFormmethodAttributes()">&lt;button <b>formmethod</b>="<em>myValue</em>"&gt;</code><div id="Button-Formmethod-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonFormnovalidateAttributes()">&lt;button <b>formnovalidate</b>="<em>myValue</em>"&gt;</code><div id="Button-Formnovalidate-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonFormtargetAttributes()">&lt;button <b>formtarget</b>="<em>myValue</em>"&gt;</code><div id="Button-Formtarget-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonPopovertargetAttributes()">&lt;button <b>popovertarget</b>="<em>myValue</em>"&gt;</code><div id="Button-Popovertarget-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonPopovertargetactionAttributes()">&lt;button <b>popovertargetaction</b>="<em>myValue</em>"&gt;</code><div id="Button-Popovertargetaction-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonNameAttributes()">&lt;button <b>name</b>="<em>myValue</em>"&gt;</code><div id="Button-Name-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonTypeAttributes()">&lt;button <b>type</b>="<em>myValue</em>"&gt;</code><div id="Button-Type-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="ButtonValueAttributes()">&lt;button <b>value</b>="<em>myValue</em>"&gt;</code><div id="Button-Value-Attributes"></div></div>
           </div>
         </div>
       </section>
@@ -2440,44 +2561,6 @@
           </div>
         </div>
 
-        <!-- Area Tag -->
-        <div id="Area-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;area&gt;</code></h3>
-          <p>The <code>&lt;area&gt;</code> tag defines an area inside an image map (an image map is an image with clickable areas)</p>
-          <p><code>&lt;area&gt;</code> elements are always nested inside a <code>&lt;map&gt;</code> tag</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="AreaGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Area-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaEventAttributes()"><em>HTML Event Attributes</em></code><div id="Area-Event-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaAltAttributes()">&lt;area <b>alt</b>="<em>myValue</em>"&gt;</code><div id="Area-Alt-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaCoordsAttributes()">&lt;area <b>coords</b>="<em>myValue</em>"&gt;</code><div id="Area-Coords-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaDownloadAttributes()">&lt;area <b>download</b>="<em>myValue</em>"&gt;</code><div id="Area-Download-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaHrefAttributes()">&lt;area <b>href</b>="<em>myValue</em>"&gt;</code><div id="Area-Href-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaHreflangAttributes()">&lt;area <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Area-Hreflang-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaMediaAttributes()">&lt;area <b>media</b>="<em>myValue</em>"&gt;</code><div id="Area-Media-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaReferrerpolicyAttributes()">&lt;area <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Area-Referrerpolicy-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaRelAttributes()">&lt;area <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Area-Rel-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaShapeAttributes()">&lt;area <b>shape</b>="<em>myValue</em>"&gt;</code><div id="Area-Shape-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaTargetAttributes()">&lt;area <b>target</b>="<em>myValue</em>"&gt;</code><div id="Area-Target-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AreaTypeAttributes()">&lt;area <b>type</b>="<em>myValue</em>"&gt;</code><div id="Area-Type-Attributes"></div></div>
-          </div>
-
-          <div class="Box-CSS">
-            <h4>DEFAULT CSS SETTING(S)</h4>
-            <p><code>area { display: none; }</code></p>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Recommended to include <code>name</code> attribute</span>
-              <p>Since <code>&lt;area&gt;</code> elements nested within <code>&lt;map&gt;</code>, the elements also needed <code>&lt;img&gt;</code> too</p>
-              <p>The <code>name</code> attribute will be associated with the <code>&lt;img&gt;</code>'s usemap attribute and creates a relationship between the image and the map</p>
-            </div>
-          </div>
-        </div>
-
         <!-- Figure Caption Tag -->
         <div id="Figcaption-Tag" class="Sub-Topics Box-Elements">
           <h3><code>&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></h3>
@@ -2493,35 +2576,6 @@
           <div class="Box-CSS">
             <h4>DEFAULT CSS SETTING(S)</h4>
             <p><code>figcaption { display: block; }</code></p>
-          </div>
-        </div>
-
-        <!-- Audio Tag -->
-        <div id="Audio-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;audio&gt; <em>MyContents</em> &lt;/audio&gt;</code></h3>
-          <p>The <code>&lt;audio&gt;</code> tag is used to embed sound content in a document, such as music or other audio streams</p>
-          <p>The <code>MyText</code> between the <code>&lt;audio&gt;</code> tags will only be displayed in browsers that do not support the audio element</p>
-          <p>There are three supported audio formats in HTML: MP3, WAV, and OGG</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <div><code class="Highlighted" onclick="AudioGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Audio-Global-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AudioEventAttributes()"><em>HTML Event Attributes</em></code><div id="Audio-Event-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AudioAutoplayAttributes()">&lt;audio <b>autoplay</b>&gt;</code><div id="Audio-Autoplay-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AudioControlsAttributes()">&lt;audio <b>controls</b>&gt;</code><div id="Audio-Controls-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AudioLoopAttributes()">&lt;audio <b>loop</b>&gt;</code><div id="Audio-Loop-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AudioMutedAttributes()">&lt;audio <b>muted</b>&gt;</code><div id="Audio-Muted-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AudioPreloadAttributes()">&lt;audio <b>preload</b>="<em>myValue</em>"&gt;</code><div id="Audio-Preload-Attributes"></div></div>
-            <div><code class="Highlighted" onclick="AudioSrcAttributes()">&lt;audio <b>src</b>="<em>myValue</em>"&gt;</code><div id="Audio-Src-Attributes"></div></div>
-          </div>
-
-          <div class="Box-Insights">
-            <h4>INSIGHT(S)</h4>
-            <div class="Item-Insights">
-              <span class="Highlight-Insights">Multiple <code>&lt;source&gt;</code> tags within <code>&lt;audio&gt;</code></span>
-              <p>The <code>&lt;audio&gt;</code> tag can contains one or more <code>&lt;source&gt;</code> tags with different audio sources</p>
-              <p>The browser will choose the first source it supports</p>
-            </div>
           </div>
         </div>
 
@@ -2829,20 +2883,6 @@
           <div class="Box-CSS">
             <h4>DEFAULT CSS SETTING(S)</h4>
             <p><code>hr { display: block; margin: 0.5em auto; border-style: inset; border-width: 1px; }</code></p>
-          </div>
-        </div>
-
-        <!-- Break Tag -->
-        <div id="Break-Tag" class="Sub-Topics Box-Elements">
-          <h3><code>&lt;br&gt;</code></h3>
-          <p>The <code>&lt;br&gt;</code> tag inserts a single line break</p>
-          <p>The <code>&lt;br&gt;</code> tag is useful for writing addresses or poems</p>
-          <p>Use the <code>&lt;br&gt;</code> tag to enter line breaks, not to add space between paragraphs</p>
-
-          <div class="Box-Attributes">
-            <h4>RELATED ATTRIBUTE(S)</h4>
-            <p><code class="Highlighted" onclick="BreakGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Break-Global-Attributes"></div></p>
-            <p><code class="Highlighted" onclick="BreakEventAttributes()"><em>HTML Event Attributes</em></code><div id="Break-Event-Attributes"></div></p>
           </div>
         </div>
 
