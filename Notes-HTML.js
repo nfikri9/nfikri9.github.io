@@ -305,6 +305,90 @@ function ButtonTag() {
   }
 }
 
+function CanvasTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let CanvasTag = document.getElementById("Canvas-Tag");
+
+  if (CanvasTag.style.display === "block") {
+    CanvasTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    CanvasTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function CaptionTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let CaptionTag = document.getElementById("Caption-Tag");
+
+  if (CaptionTag.style.display === "block") {
+    CaptionTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    CaptionTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function CiteTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let CiteTag = document.getElementById("Cite-Tag");
+
+  if (CiteTag.style.display === "block") {
+    CiteTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    CiteTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function CodeTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let CodeTag = document.getElementById("Code-Tag");
+
+  if (CodeTag.style.display === "block") {
+    CodeTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    CodeTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ColumnTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ColumnTag = document.getElementById("Column-Tag");
+
+  if (ColumnTag.style.display === "block") {
+    ColumnTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ColumnTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ColumnGroupTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ColumnGroupTag = document.getElementById("Column-Group-Tag");
+
+  if (ColumnGroupTag.style.display === "block") {
+    ColumnGroupTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ColumnGroupTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
 function CommentTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let CommentTag = document.getElementById("Comment-Tag");
@@ -315,6 +399,244 @@ function CommentTag() {
   }
   else {
     CommentTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DataTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DataTag = document.getElementById("Data-Tag");
+
+  if (DataTag.style.display === "block") {
+    DataTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DataTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DatalistTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DatalistTag = document.getElementById("Datalist-Tag");
+
+  if (DatalistTag.style.display === "block") {
+    DatalistTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DatalistTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DefinitionTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DefinitionTag = document.getElementById("Definition-Tag");
+
+  if (DefinitionTag.style.display === "block") {
+    DefinitionTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DefinitionTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DeleteTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DeleteTag = document.getElementById("Delete-Tag");
+
+  if (DeleteTag.style.display === "block") {
+    DeleteTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DeleteTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DescriptionDataTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DescriptionDataTag = document.getElementById("Description-Data-Tag");
+
+  if (DescriptionDataTag.style.display === "block") {
+    DescriptionDataTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DescriptionDataTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DescriptionListTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DescriptionListTag = document.getElementById("Description-List-Tag");
+
+  if (DescriptionListTag.style.display === "block") {
+    DescriptionListTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DescriptionListTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DescriptionTermTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DescriptionTermTag = document.getElementById("Description-Term-Tag");
+
+  if (DescriptionTermTag.style.display === "block") {
+    DescriptionTermTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DescriptionTermTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DetailsTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DetailsTag = document.getElementById("Details-Tag");
+
+  if (DetailsTag.style.display === "block") {
+    DetailsTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DetailsTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DialogTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DialogTag = document.getElementById("Dialog-Tag");
+
+  if (DialogTag.style.display === "block") {
+    DialogTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DialogTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function DivisionTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let DivisionTag = document.getElementById("Division-Tag");
+
+  if (DivisionTag.style.display === "block") {
+    DivisionTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    DivisionTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function EmbedTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let EmbedTag = document.getElementById("Embed-Tag");
+
+  if (EmbedTag.style.display === "block") {
+    EmbedTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    EmbedTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function EmphasizeTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let EmphasizeTag = document.getElementById("Emphasize-Tag");
+
+  if (EmphasizeTag.style.display === "block") {
+    EmphasizeTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    EmphasizeTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function FieldsetTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let FieldsetTag = document.getElementById("Fieldset-Tag");
+
+  if (FieldsetTag.style.display === "block") {
+    FieldsetTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    FieldsetTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function FigureTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let FigureTag = document.getElementById("Figure-Tag");
+
+  if (FigureTag.style.display === "block") {
+    FigureTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    FigureTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function FigureCaptionTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let FigureCaptionTag = document.getElementById("Figure-Caption-Tag");
+
+  if (FigureCaptionTag.style.display === "block") {
+    FigureCaptionTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    FigureCaptionTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function FooterTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let FooterTag = document.getElementById("Footer-Tag");
+
+  if (FooterTag.style.display === "block") {
+    FooterTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    FooterTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function FormTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let FormTag = document.getElementById("Form-Tag");
+
+  if (FormTag.style.display === "block") {
+    FormTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    FormTag.style.display = "block";
     HTMLElements.style.display = "none";
   }
 }
@@ -333,6 +655,62 @@ function HeadTag() {
   }
 }
 
+function HeaderTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let HeaderTag = document.getElementById("Header-Tag");
+
+  if (HeaderTag.style.display === "block") {
+    HeaderTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    HeaderTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function HeadingTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let HeadingTag = document.getElementById("Heading-Tag");
+
+  if (HeadingTag.style.display === "block") {
+    HeadingTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    HeadingTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function HeadingGroupTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let HeadingGroupTag = document.getElementById("Heading-Group-Tag");
+
+  if (HeadingGroupTag.style.display === "block") {
+    HeadingGroupTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    HeadingGroupTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function HorizontalRuleTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let HorizontalRuleTag = document.getElementById("Horizontal-Rule-Tag");
+
+  if (HorizontalRuleTag.style.display === "block") {
+    HorizontalRuleTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    HorizontalRuleTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
 function HTMLTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let HTMLTag = document.getElementById("HTML-Tag");
@@ -343,6 +721,20 @@ function HTMLTag() {
   }
   else {
     HTMLTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ImageTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ImageTag = document.getElementById("Image-Tag");
+
+  if (ImageTag.style.display === "block") {
+    ImageTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ImageTag.style.display = "block";
     HTMLElements.style.display = "none";
   }
 }
@@ -361,6 +753,34 @@ function LinkTag() {
   }
 }
 
+function ListItemTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ListItemTag = document.getElementById("List-Item-Tag");
+
+  if (ListItemTag.style.display === "block") {
+    ListItemTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ListItemTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function MainTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let MainTag = document.getElementById("Main-Tag");
+
+  if (MainTag.style.display === "block") {
+    MainTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    MainTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
 function MetaTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let MetaTag = document.getElementById("Meta-Tag");
@@ -375,6 +795,104 @@ function MetaTag() {
   }
 }
 
+function OrderedListTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let OrderedListTag = document.getElementById("Ordered-List-Tag");
+
+  if (OrderedListTag.style.display === "block") {
+    OrderedListTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    OrderedListTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ParagraphTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ParagraphTag = document.getElementById("Paragraph-Tag");
+
+  if (ParagraphTag.style.display === "block") {
+    ParagraphTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ParagraphTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ScalableVectorGraphicTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ScalableVectorGraphicTag = document.getElementById("Scalable-Vector-Graphic-Tag");
+
+  if (ScalableVectorGraphicTag.style.display === "block") {
+    ScalableVectorGraphicTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ScalableVectorGraphicTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ScriptTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ScriptTag = document.getElementById("Script-Tag");
+
+  if (ScriptTag.style.display === "block") {
+    ScriptTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ScriptTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function SectionTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let SectionTag = document.getElementById("Section-Tag");
+
+  if (SectionTag.style.display === "block") {
+    SectionTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    SectionTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function SourceTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let SourceTag = document.getElementById("Source-Tag");
+
+  if (SourceTag.style.display === "block") {
+    SourceTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    SourceTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function StrongTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let StrongTag = document.getElementById("Strong-Tag");
+
+  if (StrongTag.style.display === "block") {
+    StrongTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    StrongTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
 function TitleTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let TitleTag = document.getElementById("Title-Tag");
@@ -385,6 +903,34 @@ function TitleTag() {
   }
   else {
     TitleTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function UnorderedListTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let UnorderedListTag = document.getElementById("Unordered-List-Tag");
+
+  if (UnorderedListTag.style.display === "block") {
+    UnorderedListTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    UnorderedListTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function VideoTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let VideoTag = document.getElementById("Video-Tag");
+
+  if (VideoTag.style.display === "block") {
+    VideoTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    VideoTag.style.display = "block";
     HTMLElements.style.display = "none";
   }
 }
@@ -4467,12 +5013,6 @@ function MetaNameAttributes() {
 }
 
 // SCRIPT TAG //
-function ScriptTag() {
-  let myVisibility = document.getElementById("Script-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function ScriptGlobalAttributes() {
   let myVisibility = document.getElementById("Script-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -4604,12 +5144,6 @@ function BodyEventAttributes() {
 }
 
 // HEADER TAG //
-function HeaderTag() {
-  let myVisibility = document.getElementById("Header-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function HeaderGlobalAttributes() {
   let myVisibility = document.getElementById("Header-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -4635,12 +5169,6 @@ function HeaderEventAttributes() {
 }
 
 // MAIN TAG //
-function MainTag() {
-  let myVisibility = document.getElementById("Main-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function MainGlobalAttributes() {
   let myVisibility = document.getElementById("Main-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -4666,12 +5194,6 @@ function MainEventAttributes() {
 }
 
 // FOOTER TAG //
-function FooterTag() {
-  let myVisibility = document.getElementById("Footer-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function FooterGlobalAttributes() {
   let myVisibility = document.getElementById("Footer-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -4779,14 +5301,6 @@ function ArticleEventAttributes() {
 }
 
 // SECTION TAG //
-function SectionTag() {
-  let myVisibility = document.getElementById("Section-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function SectionGlobalAttributes() {
   let myVisibility = document.getElementById("Section-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -4812,14 +5326,6 @@ function SectionEventAttributes() {
 }
 
 // DIVISION TAG //
-function DivisionTag() {
-  let myVisibility = document.getElementById("Division-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DivisionGlobalAttributes() {
   let myVisibility = document.getElementById("Division-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -4878,14 +5384,6 @@ function SpanEventAttributes() {
 }
 
 // HEADING GROUP TAG //
-function HgroupTag() {
-  let myVisibility = document.getElementById("Hgroup-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function HgroupGlobalAttributes() {
   let myVisibility = document.getElementById("Hgroup-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -4976,15 +5474,6 @@ function SearchEventAttributes() {
   else { myVisibility.style.display = "none"; }
 }
 
-// SVG TAG //
-function SvgTag() {
-  let myVisibility = document.getElementById("Svg-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 // TEMPLATE TAG //
 function TemplateTag() {
   let myVisibility = document.getElementById("Template-Tag");
@@ -5009,14 +5498,6 @@ function TemplateGlobalAttributes() {
 
 /////////////////////////////////////////////////////// HTML SEMANTIC TEXT ///////////////////////////////////////////////////////
 // HEADING TAG //
-function HeadingTag() {
-  let myVisibility = document.getElementById("Heading-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function HeadingGlobalAttributes() {
   let myVisibility = document.getElementById("Heading-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5042,14 +5523,6 @@ function HeadingEventAttributes() {
 }
 
 // PARAGRAPH TAG //
-function ParagraphTag() {
-  let myVisibility = document.getElementById("Paragraph-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ParagraphGlobalAttributes() {
   let myVisibility = document.getElementById("Paragraph-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5231,14 +5704,6 @@ function AbbreviationEventAttributes() {
 }
 
 // DEFINITION TAG //
-function DefinitionTag() {
-  let myVisibility = document.getElementById("Definition-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DefinitionGlobalAttributes() {
   let myVisibility = document.getElementById("Definition-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5264,14 +5729,6 @@ function DefinitionEventAttributes() {
 }
 
 // CITE TAG //
-function CiteTag() {
-  let myVisibility = document.getElementById("Cite-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function CiteGlobalAttributes() {
   let myVisibility = document.getElementById("Cite-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5373,14 +5830,6 @@ function BlockquoteCiteAttributes() {
 }
 
 // STRONG TAG //
-function StrongTag() {
-  let myVisibility = document.getElementById("Strong-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function StrongGlobalAttributes() {
   let myVisibility = document.getElementById("Strong-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5406,14 +5855,6 @@ function StrongEventAttributes() {
 }
 
 // EMPHASIZE TAG //
-function EmphasizeTag() {
-  let myVisibility = document.getElementById("Emphasize-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function EmphasizeGlobalAttributes() {
   let myVisibility = document.getElementById("Emphasize-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5490,14 +5931,6 @@ function InsertDatetimeAttributes() {
 }
 
 // DELETE TAG //
-function DeleteTag() {
-  let myVisibility = document.getElementById("Delete-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DeleteGlobalAttributes() {
   let myVisibility = document.getElementById("Delete-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5797,14 +6230,6 @@ function SubscriptEventAttributes() {
 }
 
 // CODE TAG //
-function CodeTag() {
-  let myVisibility = document.getElementById("Code-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function CodeGlobalAttributes() {
   let myVisibility = document.getElementById("Code-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -6055,14 +6480,6 @@ function TimeDatetimeAttributes() {
 
 /////////////////////////////////////////////////////////// HTML FORM ////////////////////////////////////////////////////////////
 // FORM TAG //
-function FormTag() {
-  let myVisibility = document.getElementById("Form-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function FormGlobalAttributes() {
   let myVisibility = document.getElementById("Form-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -6169,14 +6586,6 @@ function FormTargetAttributes() {
 }
 
 // FIELDSET TAG //
-function FieldsetTag() {
-  let myVisibility = document.getElementById("Fieldset-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function FieldsetGlobalAttributes() {
   let myVisibility = document.getElementById("Fieldset-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7000,14 +7409,6 @@ function OptionValueAttributes() {
 }
 
 // DATALIST TAG //
-function DatalistTag() {
-  let myVisibility = document.getElementById("Datalist-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DatalistGlobalAttributes() {
   let myVisibility = document.getElementById("Datalist-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7416,14 +7817,6 @@ function TableEventAttributes() {
 }
 
 // CAPTION TAG //
-function CaptionTag() {
-  let myVisibility = document.getElementById("Caption-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function CaptionGlobalAttributes() {
   let myVisibility = document.getElementById("Caption-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7449,14 +7842,6 @@ function CaptionEventAttributes() {
 }
 
 // COLUMN GROUP TAG //
-function ColgroupTag() {
-  let myVisibility = document.getElementById("Colgroup-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ColgroupGlobalAttributes() {
   let myVisibility = document.getElementById("Colgroup-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7491,14 +7876,6 @@ function ColgroupSpanAttributes() {
 }
 
 // COLUMN TAG //
-function ColTag() {
-  let myVisibility = document.getElementById("Col-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ColGlobalAttributes() {
   let myVisibility = document.getElementById("Col-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7804,15 +8181,6 @@ function TfootEventAttributes() {
 
 
 /////////////////////////////////////////////////////////// HTML LIST ////////////////////////////////////////////////////////////
-// ORDERED LIST TAG //
-function OlTag() {
-  let myVisibility = document.getElementById("Ol-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function OlGlobalAttributes() {
   let myVisibility = document.getElementById("Ol-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7865,14 +8233,6 @@ function OlTypeAttributes() {
 }
 
 // LIST ITEM TAG //
-function LiTag() {
-  let myVisibility = document.getElementById("Li-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function LiGlobalAttributes() {
   let myVisibility = document.getElementById("Li-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7907,14 +8267,6 @@ function LiValueAttributes() {
 }
 
 // UNORDERED LIST TAG //
-function UlTag() {
-  let myVisibility = document.getElementById("Ul-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function UlGlobalAttributes() {
   let myVisibility = document.getElementById("Ul-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7973,14 +8325,6 @@ function MenuEventAttributes() {
 }
 
 // DESCRIPTION LIST TAG //
-function DlTag() {
-  let myVisibility = document.getElementById("Dl-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DlGlobalAttributes() {
   let myVisibility = document.getElementById("Dl-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8006,14 +8350,6 @@ function DlEventAttributes() {
 }
 
 // DESCRIPTION TERM TAG //
-function DtTag() {
-  let myVisibility = document.getElementById("Dt-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DtGlobalAttributes() {
   let myVisibility = document.getElementById("Dt-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8039,14 +8375,6 @@ function DtEventAttributes() {
 }
 
 // DESCRIPTION DATA TAG //
-function DdTag() {
-  let myVisibility = document.getElementById("Dd-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DdGlobalAttributes() {
   let myVisibility = document.getElementById("Dd-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8073,14 +8401,6 @@ function DdEventAttributes() {
 
 /////////////////////////////////////////////////////////// HTML MEDIA ///////////////////////////////////////////////////////////
 // FIGURE TAG //
-function FigureTag() {
-  let myVisibility = document.getElementById("Figure-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function FigureGlobalAttributes() {
   let myVisibility = document.getElementById("Figure-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8106,14 +8426,6 @@ function FigureEventAttributes() {
 }
 
 // IMAGE TAG //
-function ImageTag() {
-  let myVisibility = document.getElementById("Image-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ImageGlobalAttributes() {
   let myVisibility = document.getElementById("Image-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8413,14 +8725,6 @@ function AreaTypeAttributes() {
 }
 
 // FIGURE CAPTION TAG //
-function FigcaptionTag() {
-  let myVisibility = document.getElementById("Figcaption-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function FigcaptionGlobalAttributes() {
   let myVisibility = document.getElementById("Figcaption-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8525,14 +8829,6 @@ function AudioSrcAttributes() {
 }
 
 // SOURCE TAG //
-function SourceTag() {
-  let myVisibility = document.getElementById("Source-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function SourceGlobalAttributes() {
   let myVisibility = document.getElementById("Source-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8663,14 +8959,6 @@ function TrackSrclangAttributes() {
 }
 
 // VIDEO TAG //
-function VideoTag() {
-  let myVisibility = document.getElementById("Video-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function VideoGlobalAttributes() {
   let myVisibility = document.getElementById("Video-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8878,14 +9166,6 @@ function RtEventAttributes() {
 
 /////////////////////////////////////////////////////////// HTML MISC ////////////////////////////////////////////////////////////
 // DETAILS TAG //
-function DetailsTag() {
-  let myVisibility = document.getElementById("Details-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DetailsGlobalAttributes() {
   let myVisibility = document.getElementById("Details-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9019,14 +9299,6 @@ function ParamEventAttributes() {
 }
 
 // CANVAS TAG //
-function CanvasTag() {
-  let myVisibility = document.getElementById("Canvas-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function CanvasGlobalAttributes() {
   let myVisibility = document.getElementById("Canvas-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9052,14 +9324,6 @@ function CanvasEventAttributes() {
 }
 
 // HORIZONTAL RULE TAG //
-function HorizontalRuleTag() {
-  let myVisibility = document.getElementById("Horizontal-Rule-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function HorizontalRuleGlobalAttributes() {
   let myVisibility = document.getElementById("Horizontal-Rule-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9143,14 +9407,6 @@ function WordBreakEventAttributes() {
 }
 
 // DATA TAG //
-function DataTag() {
-  let myVisibility = document.getElementById("Data-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DataGlobalAttributes() {
   let myVisibility = document.getElementById("Data-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9165,14 +9421,6 @@ function DataGlobalAttributes() {
 }
 
 // DIALOG TAG //
-function DialogTag() {
-  let myVisibility = document.getElementById("Dialog-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function DialogGlobalAttributes() {
   let myVisibility = document.getElementById("Dialog-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9198,14 +9446,6 @@ function DialogEventAttributes() {
 }
 
 // EMBED TAG //
-function EmbedTag() {
-  let myVisibility = document.getElementById("Embed-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function EmbedGlobalAttributes() {
   let myVisibility = document.getElementById("Embed-Global-Attributes");
   if (myVisibility.style.display === "none") {
