@@ -739,6 +739,104 @@ function ImageTag() {
   }
 }
 
+function InlineFrameTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let InlineFrameTag = document.getElementById("Inline-Frame-Tag");
+
+  if (InlineFrameTag.style.display === "block") {
+    InlineFrameTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    InlineFrameTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function InputTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let InputTag = document.getElementById("Input-Tag");
+
+  if (InputTag.style.display === "block") {
+    InputTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    InputTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function InsertTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let InsertTag = document.getElementById("Insert-Tag");
+
+  if (InsertTag.style.display === "block") {
+    InsertTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    InsertTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ItalicTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ItalicTag = document.getElementById("Italic-Tag");
+
+  if (ItalicTag.style.display === "block") {
+    ItalicTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ItalicTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function KeyboardTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let KeyboardTag = document.getElementById("Keyboard-Tag");
+
+  if (KeyboardTag.style.display === "block") {
+    KeyboardTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    KeyboardTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function LabelTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let LabelTag = document.getElementById("Label-Tag");
+
+  if (LabelTag.style.display === "block") {
+    LabelTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    LabelTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function LegendTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let LegendTag = document.getElementById("Legend-Tag");
+
+  if (LegendTag.style.display === "block") {
+    LegendTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    LegendTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
 function LinkTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let LinkTag = document.getElementById("Link-Tag");
@@ -781,6 +879,48 @@ function MainTag() {
   }
 }
 
+function MapTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let MapTag = document.getElementById("Map-Tag");
+
+  if (MapTag.style.display === "block") {
+    MapTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    MapTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function MarkTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let MarkTag = document.getElementById("Mark-Tag");
+
+  if (MarkTag.style.display === "block") {
+    MarkTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    MarkTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function MenuTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let MenuTag = document.getElementById("Menu-Tag");
+
+  if (MenuTag.style.display === "block") {
+    MenuTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    MenuTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
 function MetaTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let MetaTag = document.getElementById("Meta-Tag");
@@ -791,6 +931,90 @@ function MetaTag() {
   }
   else {
     MetaTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function MeterTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let MeterTag = document.getElementById("Meter-Tag");
+
+  if (MeterTag.style.display === "block") {
+    MeterTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    MeterTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function NavigateTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let NavigateTag = document.getElementById("Navigate-Tag");
+
+  if (NavigateTag.style.display === "block") {
+    NavigateTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    NavigateTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function NoScriptTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let NoScriptTag = document.getElementById("No-Script-Tag");
+
+  if (NoScriptTag.style.display === "block") {
+    NoScriptTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    NoScriptTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ObjectTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ObjectTag = document.getElementById("Object-Tag");
+
+  if (ObjectTag.style.display === "block") {
+    ObjectTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ObjectTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function OptionTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let OptionTag = document.getElementById("Option-Tag");
+
+  if (OptionTag.style.display === "block") {
+    OptionTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    OptionTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function OptionGroupTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let OptionGroupTag = document.getElementById("Option-Group-Tag");
+
+  if (OptionGroupTag.style.display === "block") {
+    OptionGroupTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    OptionGroupTag.style.display = "block";
     HTMLElements.style.display = "none";
   }
 }
@@ -809,6 +1033,20 @@ function OrderedListTag() {
   }
 }
 
+function OutputTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let OutputTag = document.getElementById("Output-Tag");
+
+  if (OutputTag.style.display === "block") {
+    OutputTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    OutputTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
 function ParagraphTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
   let ParagraphTag = document.getElementById("Paragraph-Tag");
@@ -819,6 +1057,118 @@ function ParagraphTag() {
   }
   else {
     ParagraphTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ParameterTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ParameterTag = document.getElementById("Parameter-Tag");
+
+  if (ParameterTag.style.display === "block") {
+    ParameterTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ParameterTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function PictureTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let PictureTag = document.getElementById("Picture-Tag");
+
+  if (PictureTag.style.display === "block") {
+    PictureTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    PictureTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function PreformatTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let PreformatTag = document.getElementById("Preformat-Tag");
+
+  if (PreformatTag.style.display === "block") {
+    PreformatTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    PreformatTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function ProgressTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let ProgressTag = document.getElementById("Progress-Tag");
+
+  if (ProgressTag.style.display === "block") {
+    ProgressTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    ProgressTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function QuoteTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let QuoteTag = document.getElementById("Quote-Tag");
+
+  if (QuoteTag.style.display === "block") {
+    QuoteTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    QuoteTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function RubyTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let RubyTag = document.getElementById("Ruby-Tag");
+
+  if (RubyTag.style.display === "block") {
+    RubyTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    RubyTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function RubyParanthesesTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let RubyParanthesesTag = document.getElementById("Ruby-Parantheses-Tag");
+
+  if (RubyParanthesesTag.style.display === "block") {
+    RubyParanthesesTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    RubyParanthesesTag.style.display = "block";
+    HTMLElements.style.display = "none";
+  }
+}
+
+function RubyTextTag() {
+  let HTMLElements = document.getElementById("HTML-Elements");
+  let RubyTextTag = document.getElementById("Ruby-Text-Tag");
+
+  if (RubyTextTag.style.display === "block") {
+    RubyTextTag.style.display = "none";
+    HTMLElements.style.display = "block";
+  }
+  else {
+    RubyTextTag.style.display = "block";
     HTMLElements.style.display = "none";
   }
 }
@@ -5099,12 +5449,6 @@ function ScriptTypeAttributes() {
 }
 
 // NOSCRIPT TAG //
-function NoscriptTag() {
-  let myVisibility = document.getElementById("Noscript-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function NoscriptGlobalAttributes() {
   let myVisibility = document.getElementById("Noscript-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -5220,12 +5564,6 @@ function FooterEventAttributes() {
 
 //////////////////////////////////////////////////// HTML SEMANTIC CONTAINER /////////////////////////////////////////////////////
 // NAVIGATE TAG //
-function NavTag() {
-  let myVisibility = document.getElementById("Nav-Tag");
-  if (myVisibility.style.display === "block") { myVisibility.style.display = "none"; }
-  else { myVisibility.style.display = "block"; }
-}
-
 function NavGlobalAttributes() {
   let myVisibility = document.getElementById("Nav-Global-Attributes");
   if (myVisibility.style.display === "block") {
@@ -5409,14 +5747,6 @@ function HgroupEventAttributes() {
 }
 
 // PICTURE TAG //
-function PictureTag() {
-  let myVisibility = document.getElementById("Picture-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function PictureGlobalAttributes() {
   let myVisibility = document.getElementById("Picture-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5754,14 +6084,6 @@ function CiteEventAttributes() {
 }
 
 // QUOTE TAG //
-function QuoteTag() {
-  let myVisibility = document.getElementById("Quote-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function QuoteGlobalAttributes() {
   let myVisibility = document.getElementById("Quote-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5880,14 +6202,6 @@ function EmphasizeEventAttributes() {
 }
 
 // INSERT TAG //
-function InsertTag() {
-  let myVisibility = document.getElementById("Insert-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function InsertGlobalAttributes() {
   let myVisibility = document.getElementById("Insert-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -5999,14 +6313,6 @@ function BoldEventAttributes() {
 }
 
 // ITALIC TAG //
-function ItalicTag() {
-  let myVisibility = document.getElementById("Italic-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ItalicGlobalAttributes() {
   let myVisibility = document.getElementById("Italic-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -6098,14 +6404,6 @@ function StrikeEventAttributes() {
 }
 
 // MARK TAG //
-function MarkTag() {
-  let myVisibility = document.getElementById("Mark-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function MarkGlobalAttributes() {
   let myVisibility = document.getElementById("Mark-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -6255,14 +6553,6 @@ function CodeEventAttributes() {
 }
 
 // KEYBOARD TAG //
-function KeyboardTag() {
-  let myVisibility = document.getElementById("Keyboard-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function KeyboardGlobalAttributes() {
   let myVisibility = document.getElementById("Keyboard-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -6288,14 +6578,6 @@ function KeyboardEventAttributes() {
 }
 
 // PREFORMAT TAG //
-function PreformatTag() {
-  let myVisibility = document.getElementById("Preformat-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function PreformatGlobalAttributes() {
   let myVisibility = document.getElementById("Preformat-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -6638,14 +6920,6 @@ function FieldsetNameAttributes() {
 }
 
 // LEGEND TAG //
-function LegendTag() {
-  let myVisibility = document.getElementById("Legend-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function LegendGlobalAttributes() {
   let myVisibility = document.getElementById("Legend-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -6671,14 +6945,6 @@ function LegendEventAttributes() {
 }
 
 // LABEL TAG //
-function LabelTag() {
-  let myVisibility = document.getElementById("Label-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function LabelGlobalAttributes() {
   let myVisibility = document.getElementById("Label-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -6722,14 +6988,6 @@ function LabelFormAttributes() {
 }
 
 // INPUT TAG //
-function InputTag() {
-  let myVisibility = document.getElementById("Input-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function InputGlobalAttributes() {
   let myVisibility = document.getElementById("Input-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7289,14 +7547,6 @@ function SelectSizeAttributes() {
 }
 
 // OPTION GROUP TAG //
-function OptgroupTag() {
-  let myVisibility = document.getElementById("Optgroup-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function OptgroupGlobalAttributes() {
   let myVisibility = document.getElementById("Optgroup-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7340,14 +7590,6 @@ function OptgroupLabelAttributes() {
 }
 
 // OPTION TAG //
-function OptionTag() {
-  let myVisibility = document.getElementById("Option-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function OptionGlobalAttributes() {
   let myVisibility = document.getElementById("Option-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7434,14 +7676,6 @@ function DatalistEventAttributes() {
 }
 
 // PROGRESS TAG //
-function ProgressTag() {
-  let myVisibility = document.getElementById("Progress-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ProgressGlobalAttributes() {
   let myVisibility = document.getElementById("Progress-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7485,14 +7719,6 @@ function ProgressValueAttributes() {
 }
 
 // METER TAG //
-function MeterTag() {
-  let myVisibility = document.getElementById("Meter-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function MeterGlobalAttributes() {
   let myVisibility = document.getElementById("Meter-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -7581,14 +7807,6 @@ function MeterValueAttributes() {
 }
 
 // OUTPUT TAG //
-function OutputTag() {
-  let myVisibility = document.getElementById("Output-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function OutputGlobalAttributes() {
   let myVisibility = document.getElementById("Output-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8292,14 +8510,6 @@ function UlEventAttributes() {
 }
 
 // MENU TAG //
-function MenuTag() {
-  let myVisibility = document.getElementById("Menu-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function MenuGlobalAttributes() {
   let myVisibility = document.getElementById("Menu-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -8559,14 +8769,6 @@ function ImageWidthAttributes() {
 }
 
 // MAP TAG //
-function MapTag() {
-  let myVisibility = document.getElementById("Map-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function MapGlobalAttributes() {
   let myVisibility = document.getElementById("Map-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9066,14 +9268,6 @@ function VideoWidthAttributes() {
 
 //////////////////////////////////////////////////////// RUBY ANNOTATION /////////////////////////////////////////////////////////
 // RUBY TAG //
-function RubyTag() {
-  let myVisibility = document.getElementById("Ruby-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function RubyGlobalAttributes() {
   let myVisibility = document.getElementById("Ruby-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9099,14 +9293,6 @@ function RubyEventAttributes() {
 }
 
 // RUBY PARANTHESES TAG //
-function RpTag() {
-  let myVisibility = document.getElementById("Rp-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function RpGlobalAttributes() {
   let myVisibility = document.getElementById("Rp-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9132,14 +9318,6 @@ function RpEventAttributes() {
 }
 
 // RUBY TEXT TAG //
-function RtTag() {
-  let myVisibility = document.getElementById("Rt-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function RtGlobalAttributes() {
   let myVisibility = document.getElementById("Rt-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9233,14 +9411,6 @@ function SummaryEventAttributes() {
 }
 
 // OBJECT TAG //
-function ObjectTag() {
-  let myVisibility = document.getElementById("Object-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ObjectGlobalAttributes() {
   let myVisibility = document.getElementById("Object-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9266,14 +9436,6 @@ function ObjectEventAttributes() {
 }
 
 // PARAMETER TAG //
-function ParameterTag() {
-  let myVisibility = document.getElementById("Parameter-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function ParamGlobalAttributes() {
   let myVisibility = document.getElementById("Param-Global-Attributes");
   if (myVisibility.style.display === "none") {
@@ -9471,14 +9633,6 @@ function EmbedEventAttributes() {
 }
 
 // IFRAME TAG //
-function IframeTag() {
-  let myVisibility = document.getElementById("Iframe-Tag");
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
 function IframeGlobalAttributes() {
   let myVisibility = document.getElementById("Iframe-Global-Attributes");
   if (myVisibility.style.display === "none") {
