@@ -229,7 +229,7 @@
           <li><a onclick="FigureTag()"><code>&lt;figure&gt;</code> <span>Specifies self-contained content</span></a></li>
           <li><a onclick="FooterTag()"><code>&lt;footer&gt;</code> <span>Defines a footer for a document or section</span></a></li>
           <li><a onclick="FormTag()"><code>&lt;form&gt;</code> <span>Defines an HTML form for user input</span></a></li>
-          <li><a onclick="HeadingTag()"><code>&lt;h1&gt; to &lt;h6&gt;</code> <span>Defines HTML headings</span></a></li>
+          <li><a onclick="HeadingTag()"><code>&lt;h1&gt; - &lt;h6&gt;</code> <span>Defines HTML headings</span></a></li>
           <li><a onclick="HeadTag()"><code>&lt;head&gt;</code> <span>Contains metadata/information for the document</span></a></li>
           <li><a onclick="HeaderTag()"><code>&lt;header&gt;</code> <span>Defines a header for a document or section</span></a></li>
           <li><a onclick="HeadingGroupTag()"><code>&lt;hgroup&gt;</code> <span>Defines a header and related content</span></a></li>
@@ -1411,6 +1411,53 @@
           <div class="Item-Insights">
             <span class="Highlight-Insights">Establish image as a clickable link</span>
             <p>To link an image to another document, simply nest the <code>&lt;img&gt;</code> tag inside an <code>&lt;a&gt;</code> tag.</p>
+          </div>
+
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Image optimization</span>
+            <h4>Size</h4>
+            <p>When preparing an image, the image should be scaled to a 640x480 size (<code>width=640px, height=480px</code>).</p>
+            <p>If the image size is 1920x1080 but styling it to be much smaller, the users may be required to download unnecessary data.</p>
+            <p>A smaller resolution results in a smaller file size.</p> <br>
+
+            <h4>Format</h4>
+            <p>Developer should consider using a more optimized format, like WEBP or AVIF.</p>
+            <p>Two of the most common file formats are PNG and JPG, but these are no longer the most ideal formats for serving images.</p> <br>
+
+            <h4>Compression</h4>
+            <p>A compression algorithm is used to reduce the size for files or data.</p>
+            <p>There are options like <b>pngcrush</b> to compress the images locally, or developer can use online compression tools.</p>
+            <p>However, it's worth noting that specific file formats, such as JPG, are not lossless.</p>
+            <p>Lossless means that the original data can be perfectly reconstructed from the compressed data.</p>
+            <p>Example, if the JPG image is compressed, it will result in a degraded quality.</p>
+          </div>
+
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Image licenses</span>
+            <h4>All right reserved</h4>
+            <p>Images are considered intellectual property, this means that they are protected by copyright regulations, most often belonging to the creator.</p>
+            <p>By default, images are released as all rights reserved.</p>
+            <p>The creator, or publisher sometimes, holds all copyright for the image.</p>
+            <p>This means that developer cannot use them in their web page unless they do one of three things: <br>
+               Obtain written permission from the copyright holder <br>
+               Purchase a license from the copyright holder <br>
+               Incorporate the image in a way that falls under fair use
+            </p> <br>
+
+            <h4>Fair use</h4>
+            <p>Fair use requires that their use of the image is both limited and transformative.</p>
+            <p>Some examples of fair use would be to comment on or review the art or create a parody of the image.</p> <br>
+
+            <h4>Permissive license</h4>
+            <p>Some images might be released under a permissive license, like a <b>Creative Commons</b> license, or the <b>BSD</b> license.</p>
+            <p>Developer might be required to make their website open source, or they may not be permitted to modify the image in any way.</p> <br>
+
+            <h4>Public domain</h4>
+            <p>An image under the public domain has no copyright attached to it and is free to be used without any restrictions.</p>
+            <p>Images licensed specifically under the <b>Creative Commons 0</b> license are considered public domain.</p> <br>
+
+            <h4>Free-to-use image</h4>
+            <p>There are also sites like <b>Pixabay</b> and <b>Unsplash</b>, which offer free-to-use images.</p>
           </div>
         </div>
       </section>
@@ -3023,174 +3070,180 @@
         <input type="text" id="HTML-Attributes-Input" onkeyup="SearchHTMLAttributes()" placeholder="Find HTML attribute..">
         <ul id="HTML-Attributes-List">
           <li><a onclick="AcceptAttribute()"><code>accept</code> <span>Specifies the types of files that the server accepts</span></a></li>
-          <li><a onclick="example()"><code>accept-charset</code> <span></span></a></li>
-          <li><a onclick="example()"><code>accesskey</code> <span></span></a></li>
-          <li><a onclick="example()"><code>action</code> <span></span></a></li>
-          <li><a onclick="example()"><code>alt</code> <span></span></a></li>
-          <li><a onclick="example()"><code>async</code> <span></span></a></li>
-          <li><a onclick="example()"><code>autocomplete</code> <span></span></a></li>
-          <li><a onclick="example()"><code>autofocus</code> <span></span></a></li>
-          <li><a onclick="example()"><code>autoplay</code> <span></span></a></li>
-          <li><a onclick="example()"><code>charset</code> <span></span></a></li>
-          <li><a onclick="example()"><code>checked</code> <span></span></a></li>
-          <li><a onclick="example()"><code>cite</code> <span></span></a></li>
-          <li><a onclick="example()"><code>class</code> <span></span></a></li>
-          <li><a onclick="example()"><code>cols</code> <span></span></a></li>
-          <li><a onclick="example()"><code>colspan</code> <span></span></a></li>
-          <li><a onclick="example()"><code>content</code> <span></span></a></li>
-          <li><a onclick="example()"><code>contenteditable</code> <span></span></a></li>
-          <li><a onclick="example()"><code>controls</code> <span></span></a></li>
-          <li><a onclick="example()"><code>coords</code> <span></span></a></li>
-          <li><a onclick="example()"><code>data</code> <span></span></a></li>
-          <li><a onclick="example()"><code>data-*</code> <span></span></a></li>
-          <li><a onclick="example()"><code>datetime</code> <span></span></a></li>
-          <li><a onclick="example()"><code>default</code> <span></span></a></li>
-          <li><a onclick="example()"><code>defer</code> <span></span></a></li>
-          <li><a onclick="example()"><code>dir</code> <span></span></a></li>
-          <li><a onclick="example()"><code>dirname</code> <span></span></a></li>
-          <li><a onclick="example()"><code>disabled</code> <span></span></a></li>
-          <li><a onclick="example()"><code>download</code> <span></span></a></li>
-          <li><a onclick="example()"><code>draggable</code> <span></span></a></li>
-          <li><a onclick="example()"><code>enctype</code> <span></span></a></li>
-          <li><a onclick="example()"><code>enterkeyhint</code> <span></span></a></li>
-          <li><a onclick="example()"><code>for</code> <span></span></a></li>
-          <li><a onclick="example()"><code>form</code> <span></span></a></li>
-          <li><a onclick="example()"><code>formaction</code> <span></span></a></li>
-          <li><a onclick="example()"><code>headers</code> <span></span></a></li>
-          <li><a onclick="example()"><code>height</code> <span></span></a></li>
-          <li><a onclick="example()"><code>hidden</code> <span></span></a></li>
-          <li><a onclick="example()"><code>high</code> <span></span></a></li>
-          <li><a onclick="example()"><code>href</code> <span></span></a></li>
-          <li><a onclick="example()"><code>hreflang</code> <span></span></a></li>
-          <li><a onclick="example()"><code>http-equiv</code> <span></span></a></li>
-          <li><a onclick="example()"><code>id</code> <span></span></a></li>
-          <li><a onclick="example()"><code>inert</code> <span></span></a></li>
-          <li><a onclick="example()"><code>inputmode</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ismap</code> <span></span></a></li>
-          <li><a onclick="example()"><code>kind</code> <span></span></a></li>
-          <li><a onclick="example()"><code>label</code> <span></span></a></li>
-          <li><a onclick="example()"><code>lang</code> <span></span></a></li>
-          <li><a onclick="example()"><code>list</code> <span></span></a></li>
-          <li><a onclick="example()"><code>loop</code> <span></span></a></li>
-          <li><a onclick="example()"><code>low</code> <span></span></a></li>
-          <li><a onclick="example()"><code>max</code> <span></span></a></li>
-          <li><a onclick="example()"><code>maxlength</code> <span></span></a></li>
-          <li><a onclick="example()"><code>media</code> <span></span></a></li>
-          <li><a onclick="example()"><code>method</code> <span></span></a></li>
-          <li><a onclick="example()"><code>min</code> <span></span></a></li>
-          <li><a onclick="example()"><code>multiple</code> <span></span></a></li>
-          <li><a onclick="example()"><code>muted</code> <span></span></a></li>
-          <li><a onclick="example()"><code>name</code> <span></span></a></li>
-          <li><a onclick="example()"><code>novalidate</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onabort</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onafterprint</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onbeforeprint</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onbeforeunload</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onblur</code> <span></span></a></li>
-          <li><a onclick="example()"><code>oncanplay</code> <span></span></a></li>
-          <li><a onclick="example()"><code>oncanplaythrough</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onchange</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onclick</code> <span></span></a></li>
-          <li><a onclick="example()"><code>oncontextmenu</code> <span></span></a></li>
-          <li><a onclick="example()"><code>oncopy</code> <span></span></a></li>
-          <li><a onclick="example()"><code>oncuechange</code> <span></span></a></li>
-          <li><a onclick="example()"><code>oncut</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondblclick</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondrag</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondragend</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondragenter</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondragleave</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondragover</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondragstart</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondrop</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ondurationchange</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onemptied</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onended</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onerror</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onfocus</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onhashchange</code> <span></span></a></li>
-          <li><a onclick="example()"><code>oninput</code> <span></span></a></li>
-          <li><a onclick="example()"><code>oninvalid</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onkeydown</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onkeypress</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onkeyup</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onload</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onloadeddata</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onloadedmetadata</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onloadstart</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onmousedown</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onmousemove</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onmouseout</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onmouseover</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onmouseup</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onmousewheel</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onoffline</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ononline</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onpagehide</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onpageshow</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onpaste</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onpause</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onplay</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onplaying</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onpopstate</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onprogress</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onratechange</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onreset</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onresize</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onscroll</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onsearch</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onseeked</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onseeking</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onselect</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onstalled</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onstorage</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onsubmit</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onsuspend</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ontimeupdate</code> <span></span></a></li>
-          <li><a onclick="example()"><code>ontoggle</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onunload</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onvolumechange</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onwaiting</code> <span></span></a></li>
-          <li><a onclick="example()"><code>onwheel</code> <span></span></a></li>
-          <li><a onclick="example()"><code>open</code> <span></span></a></li>
-          <li><a onclick="example()"><code>optimum</code> <span></span></a></li>
-          <li><a onclick="example()"><code>pattern</code> <span></span></a></li>
-          <li><a onclick="example()"><code>placeholder</code> <span></span></a></li>
-          <li><a onclick="example()"><code>popover</code> <span></span></a></li>
-          <li><a onclick="example()"><code>popovertarget</code> <span></span></a></li>
-          <li><a onclick="example()"><code>popovertargetaction</code> <span></span></a></li>
-          <li><a onclick="example()"><code>poster</code> <span></span></a></li>
-          <li><a onclick="example()"><code>preload</code> <span></span></a></li>
-          <li><a onclick="example()"><code>readonly</code> <span></span></a></li>
-          <li><a onclick="example()"><code>rel</code> <span></span></a></li>
-          <li><a onclick="example()"><code>required</code> <span></span></a></li>
-          <li><a onclick="example()"><code>reversed</code> <span></span></a></li>
-          <li><a onclick="example()"><code>rows</code> <span></span></a></li>
-          <li><a onclick="example()"><code>rowspan</code> <span></span></a></li>
-          <li><a onclick="example()"><code>sandbox</code> <span></span></a></li>
-          <li><a onclick="example()"><code>scope</code> <span></span></a></li>
-          <li><a onclick="example()"><code>selected</code> <span></span></a></li>
-          <li><a onclick="example()"><code>shape</code> <span></span></a></li>
-          <li><a onclick="example()"><code>size</code> <span></span></a></li>
-          <li><a onclick="example()"><code>sizes</code> <span></span></a></li>
-          <li><a onclick="example()"><code>span</code> <span></span></a></li>
-          <li><a onclick="example()"><code>spellcheck</code> <span></span></a></li>
-          <li><a onclick="example()"><code>src</code> <span></span></a></li>
-          <li><a onclick="example()"><code>srcdoc</code> <span></span></a></li>
-          <li><a onclick="example()"><code>srclang</code> <span></span></a></li>
-          <li><a onclick="example()"><code>srcset</code> <span></span></a></li>
-          <li><a onclick="example()"><code>start</code> <span></span></a></li>
-          <li><a onclick="example()"><code>step</code> <span></span></a></li>
-          <li><a onclick="example()"><code>style</code> <span></span></a></li>
-          <li><a onclick="example()"><code>tabindex</code> <span></span></a></li>
-          <li><a onclick="example()"><code>target</code> <span></span></a></li>
-          <li><a onclick="example()"><code>title</code> <span></span></a></li>
-          <li><a onclick="example()"><code>translate</code> <span></span></a></li>
-          <li><a onclick="example()"><code>type</code> <span></span></a></li>
-          <li><a onclick="example()"><code>usemap</code> <span></span></a></li>
-          <li><a onclick="example()"><code>value</code> <span></span></a></li>
-          <li><a onclick="example()"><code>width</code> <span></span></a></li>
-          <li><a onclick="example()"><code>wrap</code> <span></span></a></li>
+          <li><a onclick="example()"><code>accept-charset</code> <span>Specifies the character encodings that are to be used for the form submission</span></a></li>
+          <li><a onclick="example()"><code>accesskey</code> <span>Specifies a shortcut key to activate/focus an element</span></a></li>
+          <li><a onclick="example()"><code>action</code> <span>Specifies where to send the form-data when a form is submitted</span></a></li>
+          <li><a onclick="example()"><code>alt</code> <span>Specifies an alternate text when the original element fails to display</span></a></li>
+          <li><a onclick="example()"><code>async</code> <span>Specifies that the script is executed asynchronously (for external scripts)</span></a></li>
+          <li><a onclick="example()"><code>autocomplete</code> <span>Specifies whether the element should have autocomplete enabled (for form and input)</span></a></li>
+          <li><a onclick="example()"><code>autofocus</code> <span>Specifies that the element should automatically get focus when the page loads</span></a></li>
+          <li><a onclick="example()"><code>autoplay</code> <span>Specifies that the audio/video will start playing as soon as it is ready</span></a></li>
+          <li><a onclick="example()"><code>charset</code> <span>Specifies the character encoding</span></a></li>
+          <li><a onclick="example()"><code>checked</code> <span>Specifies that an input element should be pre-selected when the page loads (for checkbox and radio)</span></a></li>
+          <li><a onclick="example()"><code>cite</code> <span>Specifies a URL which explains the quote/deleted/inserted text</span></a></li>
+          <li><a onclick="example()"><code>class</code> <span>Specifies one or more class names for an element</span></a></li>
+          <li><a onclick="example()"><code>cols</code> <span>Specifies the visible width of a text area</span></a></li>
+          <li><a onclick="example()"><code>colspan</code> <span>Specifies the number of columns a table cell should span</span></a></li>
+          <li><a onclick="example()"><code>content</code> <span>Gives the value associated with the http-equiv or name attribute</span></a></li>
+          <li><a onclick="example()"><code>contenteditable</code> <span>Specifies whether the content of an element is editable or not</span></a></li>
+          <li><a onclick="example()"><code>controls</code> <span>Specifies that audio/video controls should be displayed</span></a></li>
+          <li><a onclick="example()"><code>coords</code> <span>Specifies the coordinates of the area</span></a></li>
+          <li><a onclick="example()"><code>data</code> <span>Specifies the URL of the resource to be used by the object</span></a></li>
+          <li><a onclick="example()"><code>data-*</code> <span>Used to store custom data private to the page or application</span></a></li>
+          <li><a onclick="example()"><code>datetime</code> <span>Specifies the date and time</span></a></li>
+          <li><a onclick="example()"><code>default</code>
+            <span>Specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate</span></a>
+          </li>
+          <li><a onclick="example()"><code>defer</code> <span>Specifies that the script is executed when the page has finished parsing (for external scripts)</span></a></li>
+          <li><a onclick="example()"><code>dir</code> <span>Specifies the text direction for the content in an element</span></a></li>
+          <li><a onclick="example()"><code>dirname</code> <span>Specifies that the text direction will be submitted</span></a></li>
+          <li><a onclick="example()"><code>disabled</code> <span>Specifies that the specified element/group of elements should be disabled</span></a></li>
+          <li><a onclick="example()"><code>download</code> <span>Specifies that the target will be downloaded when a user clicks on the hyperlink</span></a></li>
+          <li><a onclick="example()"><code>draggable</code> <span>Specifies whether an element is draggable or not</span></a></li>
+          <li><a onclick="example()"><code>enctype</code> <span>Specifies how the form-data should be encoded when submitting it to the server (for post)</span></a></li>
+          <li><a onclick="example()"><code>enterkeyhint</code> <span>Specifies the text of the enter-key on a virtual keyboard</span></a></li>
+          <li><a onclick="example()"><code>for</code> <span>Specifies which form element(s) a label/calculation is bound to</span></a></li>
+          <li><a onclick="example()"><code>form</code> <span>Specifies the name of the form the element belongs to</span></a></li>
+          <li><a onclick="example()"><code>formaction</code> <span>Specifies where to send the form-data when a form is submitted</span></a></li>
+          <li><a onclick="example()"><code>headers</code> <span>Specifies one or more headers cells a cell is related to</span></a></li>
+          <li><a onclick="example()"><code>height</code> <span>Specifies the height of the element</span></a></li>
+          <li><a onclick="example()"><code>hidden</code> <span>Specifies that an element is not yet, or is no longer, relevant</span></a></li>
+          <li><a onclick="example()"><code>high</code> <span>Specifies the range that is considered to be a high value</span></a></li>
+          <li><a onclick="example()"><code>href</code> <span>Specifies the URL of the page the link goes to</span></a></li>
+          <li><a onclick="example()"><code>hreflang</code> <span>Specifies the language of the linked document</span></a></li>
+          <li><a onclick="example()"><code>http-equiv</code> <span>Provides an HTTP header for the information/value of the content attribute</span></a></li>
+          <li><a onclick="example()"><code>id</code> <span>Specifies a unique id for an element</span></a></li>
+          <li><a onclick="example()"><code>inert</code> <span>Specifies that the browser should ignore this section</span></a></li>
+          <li><a onclick="example()"><code>inputmode</code> <span>Specifies the mode of a virtual keyboard</span></a></li>
+          <li><a onclick="example()"><code>ismap</code> <span>Specifies an image as a server-side image map</span></a></li>
+          <li><a onclick="example()"><code>kind</code> <span>Specifies the kind of text track</span></a></li>
+          <li><a onclick="example()"><code>label</code> <span>Specifies the title of the text track</span></a></li>
+          <li><a onclick="example()"><code>lang</code> <span>Specifies the language of the element's content</span></a></li>
+          <li><a onclick="example()"><code>list</code> <span>Refers to a datalist element that contains pre-defined options for an input element</span></a></li>
+          <li><a onclick="example()"><code>loop</code> <span>Specifies that the audio/video will start over again, every time it is finished</span></a></li>
+          <li><a onclick="example()"><code>low</code> <span>Specifies the range that is considered to be a low value</span></a></li>
+          <li><a onclick="example()"><code>max</code> <span>Specifies the maximum value</span></a></li>
+          <li><a onclick="example()"><code>maxlength</code> <span>Specifies the maximum number of characters allowed in an element</span></a></li>
+          <li><a onclick="example()"><code>media</code> <span>Specifies what media/device the linked document is optimized for</span></a></li>
+          <li><a onclick="example()"><code>method</code> <span>Specifies the HTTP method to use when sending form-data</span></a></li>
+          <li><a onclick="example()"><code>min</code> <span>Specifies a minimum value</span></a></li>
+          <li><a onclick="example()"><code>multiple</code> <span>Specifies that a user can enter more than one value</span></a></li>
+          <li><a onclick="example()"><code>muted</code> <span>Specifies that the audio output of the video should be muted</span></a></li>
+          <li><a onclick="example()"><code>name</code> <span>Specifies the name of the element</span></a></li>
+          <li><a onclick="example()"><code>novalidate</code> <span>Specifies that the form should not be validated when submitted</span></a></li>
+          <li><a onclick="example()"><code>onabort</code> <span>Script to be run on abort</span></a></li>
+          <li><a onclick="example()"><code>onafterprint</code> <span>Script to be run after the document is printed</span></a></li>
+          <li><a onclick="example()"><code>onbeforeprint</code> <span>Script to be run before the document is printed</span></a></li>
+          <li><a onclick="example()"><code>onbeforeunload</code> <span>Script to be run when the document is about to be unloaded</span></a></li>
+          <li><a onclick="example()"><code>onblur</code> <span>Script to be run when the element loses focus</span></a></li>
+          <li><a onclick="example()"><code>oncanplay</code> <span>Script to be run when a file is ready to start playing</span></a></li>
+          <li><a onclick="example()"><code>oncanplaythrough</code>
+            <span>Script to be run when a file can be played all the way to the end without pausing for buffering</span></a>
+          </li>
+          <li><a onclick="example()"><code>onchange</code> <span>Script to be run when the value of the element is changed</span></a></li>
+          <li><a onclick="example()"><code>onclick</code> <span>Script to be run when the element is being clicked</span></a></li>
+          <li><a onclick="example()"><code>oncontextmenu</code> <span>Script to be run when a context menu is triggered</span></a></li>
+          <li><a onclick="example()"><code>oncopy</code> <span>Script to be run when the content of the element is being copied</span></a></li>
+          <li><a onclick="example()"><code>oncuechange</code> <span>Script to be run when the cue changes in a track element</span></a></li>
+          <li><a onclick="example()"><code>oncut</code> <span>Script to be run when the content of the element is being cut</span></a></li>
+          <li><a onclick="example()"><code>ondblclick</code> <span>Script to be run when the element is being double-clicked</span></a></li>
+          <li><a onclick="example()"><code>ondrag</code> <span>Script to be run when the element is being dragged</span></a></li>
+          <li><a onclick="example()"><code>ondragend</code> <span>Script to be run at the end of a drag operation</span></a></li>
+          <li><a onclick="example()"><code>ondragenter</code> <span>Script to be run when an element has been dragged to a valid drop target</span></a></li>
+          <li><a onclick="example()"><code>ondragleave</code> <span>Script to be run when an element leaves a valid drop target</span></a></li>
+          <li><a onclick="example()"><code>ondragover</code> <span>Script to be run when an element is being dragged over a valid drop target</span></a></li>
+          <li><a onclick="example()"><code>ondragstart</code> <span>Script to be run at the start of a drag operation</span></a></li>
+          <li><a onclick="example()"><code>ondrop</code> <span>Script to be run when dragged element is being dropped</span></a></li>
+          <li><a onclick="example()"><code>ondurationchange</code> <span>Script to be run when the length of the media changes</span></a></li>
+          <li><a onclick="example()"><code>onemptied</code> <span>Script to be run when something bad happens and the file is suddenly unavailable</span></a></li>
+          <li><a onclick="example()"><code>onended</code> <span>Script to be run when the media has reach the end</span></a></li>
+          <li><a onclick="example()"><code>onerror</code> <span>Script to be run when an error occurs</span></a></li>
+          <li><a onclick="example()"><code>onfocus</code> <span>Script to be run when the element gets focus</span></a></li>
+          <li><a onclick="example()"><code>onhashchange</code> <span>Script to be run when there has been changes to the anchor part of the a URL</span></a></li>
+          <li><a onclick="example()"><code>oninput</code> <span>Script to be run when the element gets user input</span></a></li>
+          <li><a onclick="example()"><code>oninvalid</code> <span>Script to be run when the element is invalid</span></a></li>
+          <li><a onclick="example()"><code>onkeydown</code> <span>Script to be run when a user is pressing a key</span></a></li>
+          <li><a onclick="example()"><code>onkeypress</code> <span>Script to be run when a user presses a key</span></a></li>
+          <li><a onclick="example()"><code>onkeyup</code> <span>Script to be run when a user releases a key</span></a></li>
+          <li><a onclick="example()"><code>onload</code> <span>Script to be run when the element is finished loading</span></a></li>
+          <li><a onclick="example()"><code>onloadeddata</code> <span>Script to be run when media data is loaded</span></a></li>
+          <li><a onclick="example()"><code>onloadedmetadata</code> <span>Script to be run when meta data (like dimensions and duration) are loaded</span></a></li>
+          <li><a onclick="example()"><code>onloadstart</code> <span>Script to be run just as the file begins to load before anything is actually loaded</span></a></li>
+          <li><a onclick="example()"><code>onmousedown</code> <span>Script to be run when a mouse button is pressed down on an element</span></a></li>
+          <li><a onclick="example()"><code>onmousemove</code> <span>Script to be run as long as the  mouse pointer is moving over an element</span></a></li>
+          <li><a onclick="example()"><code>onmouseout</code> <span>Script to be run when a mouse pointer moves out of an element</span></a></li>
+          <li><a onclick="example()"><code>onmouseover</code> <span>Script to be run when a mouse pointer moves over an element</span></a></li>
+          <li><a onclick="example()"><code>onmouseup</code> <span>Script to be run when a mouse button is released over an element</span></a></li>
+          <li><a onclick="example()"><code>onmousewheel</code> <span>Script to be run when a mouse wheel is being scrolled over an element</span></a></li>
+          <li><a onclick="example()"><code>onoffline</code> <span>Script to be run when the browser starts to work offline</span></a></li>
+          <li><a onclick="example()"><code>ononline</code> <span>Script to be run when the browser starts to work online</span></a></li>
+          <li><a onclick="example()"><code>onpagehide</code> <span>Script to be run when a user navigates away from a page</span></a></li>
+          <li><a onclick="example()"><code>onpageshow</code> <span>Script to be run when a user navigates to a page</span></a></li>
+          <li><a onclick="example()"><code>onpaste</code> <span>Script to be run when the user pastes some content in an element</span></a></li>
+          <li><a onclick="example()"><code>onpause</code> <span>Script to be run when the media is paused either by the user or programmatically</span></a></li>
+          <li><a onclick="example()"><code>onplay</code> <span>Script to be run when the media has started playing</span></a></li>
+          <li><a onclick="example()"><code>onplaying</code> <span>Script to be run when the media has started playing</span></a></li>
+          <li><a onclick="example()"><code>onpopstate</code> <span>Script to be run when the window's history changes.</span></a></li>
+          <li><a onclick="example()"><code>onprogress</code> <span>Script to be run when the browser is in the process of getting the media data</span></a></li>
+          <li><a onclick="example()"><code>onratechange</code> <span>Script to be run each time the playback rate changes</span></a></li>
+          <li><a onclick="example()"><code>onreset</code> <span>Script to be run when a reset button in a form is clicked</span></a></li>
+          <li><a onclick="example()"><code>onresize</code> <span>Script to be run when the browser window is being resized</span></a></li>
+          <li><a onclick="example()"><code>onscroll</code> <span>Script to be run when an element's scrollbar is being scrolled</span></a></li>
+          <li><a onclick="example()"><code>onsearch</code> <span>Script to be run when the user writes something in a search field</span></a></li>
+          <li><a onclick="example()"><code>onseeked</code> <span>Script to be run when the seeking attribute is set to false indicating that seeking has ended</span></a></li>
+          <li><a onclick="example()"><code>onseeking</code> <span>Script to be run when the seeking attribute is set to true indicating that seeking is active</span></a></li>
+          <li><a onclick="example()"><code>onselect</code> <span>Script to be run when the element gets selected</span></a></li>
+          <li><a onclick="example()"><code>onstalled</code> <span>Script to be run when the browser is unable to fetch the media data for whatever reason</span></a></li>
+          <li><a onclick="example()"><code>onstorage</code> <span>Script to be run when a Web Storage area is updated</span></a></li>
+          <li><a onclick="example()"><code>onsubmit</code> <span>Script to be run when a form is submitted</span></a></li>
+          <li><a onclick="example()"><code>onsuspend</code>
+            <span>Script to be run when fetching the media data is stopped before it is completely loaded for whatever reason</span></a>
+          </li>
+          <li><a onclick="example()"><code>ontimeupdate</code> <span>Script to be run when the playing position has changed</span></a></li>
+          <li><a onclick="example()"><code>ontoggle</code> <span>Script to be run when the user opens or closes the details element</span></a></li>
+          <li><a onclick="example()"><code>onunload</code> <span>Script to be run when a page has unloaded (or the browser window has been closed)</span></a></li>
+          <li><a onclick="example()"><code>onvolumechange</code> <span>Script to be run each time the volume of a video/audio has been changed</span></a></li>
+          <li><a onclick="example()"><code>onwaiting</code> <span>Script to be run when the media has paused but is expected to resume</span></a></li>
+          <li><a onclick="example()"><code>onwheel</code> <span>Script to be run when the mouse wheel rolls up or down over an element</span></a></li>
+          <li><a onclick="example()"><code>open</code> <span>Specifies that the details should be visible (open) to the user</span></a></li>
+          <li><a onclick="example()"><code>optimum</code> <span>Specifies what value is the optimal value for the gauge</span></a></li>
+          <li><a onclick="example()"><code>pattern</code> <span>Specifies a regular expression that an input element's value is checked against</span></a></li>
+          <li><a onclick="example()"><code>placeholder</code> <span>Specifies a short hint that describes the expected value of the element</span></a></li>
+          <li><a onclick="example()"><code>popover</code> <span>Specifies a popover element</span></a></li>
+          <li><a onclick="example()"><code>popovertarget</code> <span>Specifies which popover element to invoked</span></a></li>
+          <li><a onclick="example()"><code>popovertargetaction</code> <span>Specifies what happens to the popover element when the button is clicked</span></a></li>
+          <li><a onclick="example()"><code>poster</code> <span>Specifies an image to be shown while the video is downloading, or until the user hits the play button</span></a></li>
+          <li><a onclick="example()"><code>preload</code> <span>Specifies if and how the author thinks the audio/video should be loaded when the page loads</span></a></li>
+          <li><a onclick="example()"><code>readonly</code> <span>Specifies that the element is read-only</span></a></li>
+          <li><a onclick="example()"><code>rel</code> <span>Specifies the relationship between the current document and the linked document</span></a></li>
+          <li><a onclick="example()"><code>required</code> <span>Specifies that the element must be filled out before submitting the form</span></a></li>
+          <li><a onclick="example()"><code>reversed</code> <span>Specifies that the list order should be descending (9,8,7...)</span></a></li>
+          <li><a onclick="example()"><code>rows</code> <span>Specifies the visible number of lines in a text area</span></a></li>
+          <li><a onclick="example()"><code>rowspan</code> <span>Specifies the number of rows a table cell should span</span></a></li>
+          <li><a onclick="example()"><code>sandbox</code> <span>Enables an extra set of restrictions for the content in an iframe</span></a></li>
+          <li><a onclick="example()"><code>scope</code> <span>Specifies whether a header cell is a header for a column, row, or group of columns or rows</span></a></li>
+          <li><a onclick="example()"><code>selected</code> <span>Specifies that an option should be pre-selected when the page loads</span></a></li>
+          <li><a onclick="example()"><code>shape</code> <span>Specifies the shape of the area</span></a></li>
+          <li><a onclick="example()"><code>size</code> <span>Specifies the width, in characters (for input) or specifies the number of visible options (for select)</span></a></li>
+          <li><a onclick="example()"><code>sizes</code> <span>Specifies the size of the linked resource</span></a></li>
+          <li><a onclick="example()"><code>span</code> <span>Specifies the number of columns to span</span></a></li>
+          <li><a onclick="example()"><code>spellcheck</code> <span>Specifies whether the element is to have its spelling and grammar checked or not</span></a></li>
+          <li><a onclick="example()"><code>src</code> <span>Specifies the URL of the media file</span></a></li>
+          <li><a onclick="example()"><code>srcdoc</code> <span>Specifies the HTML content of the page to show in the iframe</span></a></li>
+          <li><a onclick="example()"><code>srclang</code> <span>Specifies the language of the track text data</span></a></li>
+          <li><a onclick="example()"><code>srcset</code> <span>Specifies the URL of the image to use in different situations</span></a></li>
+          <li><a onclick="example()"><code>start</code> <span>Specifies the start value of an ordered list</span></a></li>
+          <li><a onclick="example()"><code>step</code> <span>Specifies the legal number intervals for an input field</span></a></li>
+          <li><a onclick="example()"><code>style</code> <span>Specifies an inline CSS style for an element</span></a></li>
+          <li><a onclick="example()"><code>tabindex</code> <span>Specifies the tabbing order of an element</span></a></li>
+          <li><a onclick="example()"><code>target</code> <span>Specifies the target for where to open the linked document or where to submit the form</span></a></li>
+          <li><a onclick="example()"><code>title</code> <span>Specifies extra information about an element</span></a></li>
+          <li><a onclick="example()"><code>translate</code> <span>Specifies whether the content of an element should be translated or not</span></a></li>
+          <li><a onclick="example()"><code>type</code> <span>Specifies the type of element</span></a></li>
+          <li><a onclick="example()"><code>usemap</code> <span>Specifies an image as a client-side image map</span></a></li>
+          <li><a onclick="example()"><code>value</code> <span>Specifies the value of the element</span></a></li>
+          <li><a onclick="example()"><code>width</code> <span>Specifies the width of the element</span></a></li>
+          <li><a onclick="example()"><code>wrap</code> <span>Specifies how the text in a text area is to be wrapped when submitted in a form</span></a></li>
         </ul>
       </section>
 

@@ -113,3 +113,13 @@ td, th { border: 1px solid black; padding: 8px; }
 }
 
 #HTML-Elements-List li a:hover:not(.header), #HTML-Attributes-List li a:hover:not(.header) { background-color: #eee; }
+
+#HTML-Elements-List code, #HTML-Attributes-List code {
+  display: inline-block;
+  width: 20%;
+}
+
+#HTML-Elements-List span, #HTML-Attributes-List span {
+  display: inline-block;
+  width: 79%;
+}
