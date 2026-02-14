@@ -180,6 +180,42 @@
           <p>The following elements make the webpage easier to read and help with accessibility.</p>
           <p><code>&lt;img alt="<i>MyAlternativeText</i>"&gt;</code>.</p>
         </article>
+
+        <br><hr><br>
+
+        <article>
+          <h3>Semantic HTML</h3>
+          <p>The semantic meaning of an element refers to what special information that element conveys.</p>
+          <p>For example, the semantic meaning of a <code>p</code> element, is a paragraph of text.</p>
+          <p>The <code>div</code> element is one of the very few that does not represent semantic HTML.</p>
+
+          <h4>Important of Semantic HTML</h4>
+          <p>Using proper semantic HTML will improve accessibility and ensure the best experience for users with assistive technology like screen readers.</p>
+          <p>It can also improves SEO.</p>
+          <p>Improve development experience.</p>
+        </article>
+
+        <br><hr><br>
+
+        <article>
+          <h3>Structural Hierarchy</h3>
+          <p>The most important aspect of creating a structural hierarchy is the proper use of heading elements.</p>
+          <p>Heading elements are numbered as <code>h1</code>, <code>h2</code>, <code>h3</code>, and so on.</p>
+          <p>These numbers represent the heading level for that element.</p>
+
+          <h4>Important of good Structural Hierarchy</h4>
+          <p>Ensure to use correct order in heading levels and never skip the level.</p>
+          <p>The <code>h1</code> element is a top-level heading and it should be exist only one per page that come before all of developer's content.</p>
+          <p>The <code>h2</code> element is a sub-heading and should be come after <code>h1</code> (it can have multiple <code>h2</code> per page).</p>
+          <p>Using the right hierarchy is important for accessibility.</p>
+          <p>Assistive technologies, like screen readers, rely on the structure of a web page to determine how to parse and announce that web page to the user.</p>
+          <p>Proper structure is also important for SEO.</p>
+          <p>Search engines use automation to parse the content of the web page and determine when and where it should show up in results.</p>
+          <p>If the structure is malformed, search engines may not be able to rank very well in the relevant search results.</p>
+          <p>Depending on how incorrect the structure is, the HTML may not even be technically valid.</p>
+          <p>When this happens, the web browser has to effectively guess what the developer meant to do.</p>
+          <p>And what it guesses might not even be what the developer want at all.</p>
+        </article>
       </section>
 
       <!--------------------------------------------------------------------- LIST OF HTML ELEMENTS ---------------------------------------------------------------------->
@@ -331,51 +367,6 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- ANCHOR TAG --------------------------------------------------------------------------->
-      <section id="Anchor-Tag" class="Box-Contents">
-        <header>
-          <h2 onclick="AnchorTag()">ANCHOR ELEMENT</h2>
-          <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
-          <p>A link's text must be placed between the opening and closing tags of an anchor element.</p>
-        </header>
-
-        <div class="Box-Attributes">
-          <h3>RELATED ATTRIBUTE(S)</h3>
-          <div><code class="Highlighted" onclick="AnchorGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Anchor-Global-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorEventAttributes()"><em>HTML Event Attributes</em></code><div id="Anchor-Event-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Download-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Href-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Hreflang-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Media-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Ping-Attributes"></div> </div>
-          <div><code class="Highlighted" onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Referrerpolicy-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Rel-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Target-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Type-Attributes"></div></div>
-        </div>
-
-        <div class="Box-CSS">
-          <h3>DEFAULT CSS SETTING(S)</h3>
-          <p><code>a:link, a:visited { color: (<em>internal value</em>); text-decoration: underline; cursor: auto; }</code></p>
-          <p><code>a:link:active, a:visited:active { color: (<em>internal value</em>); }</code></p>
-        </div>
-
-        <div class="Box-Insights">
-          <h3>INSIGHTS</h3>
-          <div class="Item-Insights">
-            <span class="Highlight-Insights">Required to include <code>href</code> attribute</span>
-            <p>The <code>href</code> attribute indicates the link's destination for <code>&lt;a&gt;</code> tag.</p>
-            <p>If the <code>href</code> attribute is omitted, it is only a placeholder for a hyperlink.</p>
-          </div>
-
-          <div class="Item-Insights">
-            <span class="Highlight-Insights">Optional to include <code>target</code> attribute</span>
-            <p>By default, a linked page is displayed in the current browser window.</p>
-            <p>For some feature, it it beneficial when user specify another target so that the webpage is displayed on new tab without changing current webpage.</p>
-          </div>
-        </div>
-      </section>
-
       <!------------------------------------------------------------------------ ABBREVIATION TAG ------------------------------------------------------------------------>
       <section id="Abbreviation-Tag" class="Box-Contents">
         <header>
@@ -424,6 +415,53 @@
         </div>
       </section>
 
+      <!--------------------------------------------------------------------------- ANCHOR TAG --------------------------------------------------------------------------->
+      <section id="Anchor-Tag" class="Box-Contents">
+        <header>
+          <h2 onclick="AnchorTag()">ANCHOR ELEMENT</h2>
+          <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+          <p>A link's text must be placed between the opening and closing tags of an anchor element.</p>
+        </header>
+
+        <div class="Box-Attributes">
+          <h3>RELATED ATTRIBUTE(S)</h3>
+          <div><code class="Highlighted" onclick="AnchorGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Anchor-Global-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorEventAttributes()"><em>HTML Event Attributes</em></code><div id="Anchor-Event-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorDownloadAttributes()">&lt;a <b>download</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Download-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorHrefAttributes()">&lt;a <b>href</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Href-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorHreflangAttributes()">&lt;a <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Hreflang-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorMediaAttributes()">&lt;a <b>media</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Media-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorPingAttributes()">&lt;a <b>ping</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Ping-Attributes"></div> </div>
+          <div><code class="Highlighted" onclick="AnchorReferrerpolicyAttributes()">&lt;a <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code>
+            <div id="Anchor-Referrerpolicy-Attributes"></div>
+          </div>
+          <div><code class="Highlighted" onclick="AnchorRelAttributes()">&lt;a <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Rel-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorTargetAttributes()">&lt;a <b>target</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Target-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AnchorTypeAttributes()">&lt;a <b>type</b>="<em>myValue</em>"&gt;</code><div id="Anchor-Type-Attributes"></div></div>
+        </div>
+
+        <div class="Box-CSS">
+          <h3>DEFAULT CSS SETTING(S)</h3>
+          <p><code>a:link, a:visited { color: (<em>internal value</em>); text-decoration: underline; cursor: auto; }</code></p>
+          <p><code>a:link:active, a:visited:active { color: (<em>internal value</em>); }</code></p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3>INSIGHTS</h3>
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Required to include <code>href</code> attribute</span>
+            <p>The <code>href</code> attribute indicates the link's destination for <code>&lt;a&gt;</code> tag.</p>
+            <p>If the <code>href</code> attribute is omitted, it is only a placeholder for a hyperlink.</p>
+          </div>
+
+          <div class="Item-Insights">
+            <span class="Highlight-Insights">Optional to include <code>target</code> attribute</span>
+            <p>By default, a linked page is displayed in the current browser window.</p>
+            <p>For some feature, it it beneficial when user specify another target so that the webpage is displayed on new tab without changing current webpage.</p>
+          </div>
+        </div>
+      </section>
+
       <!---------------------------------------------------------------------------- AREA TAG ---------------------------------------------------------------------------->
       <section id="Area-Tag" class="Box-Contents">
         <header>
@@ -442,7 +480,9 @@
           <div><code class="Highlighted" onclick="AreaHrefAttributes()">&lt;area <b>href</b>="<em>myValue</em>"&gt;</code><div id="Area-Href-Attributes"></div></div>
           <div><code class="Highlighted" onclick="AreaHreflangAttributes()">&lt;area <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Area-Hreflang-Attributes"></div></div>
           <div><code class="Highlighted" onclick="AreaMediaAttributes()">&lt;area <b>media</b>="<em>myValue</em>"&gt;</code><div id="Area-Media-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="AreaReferrerpolicyAttributes()">&lt;area <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Area-Referrerpolicy-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="AreaReferrerpolicyAttributes()">&lt;area <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code>
+            <div id="Area-Referrerpolicy-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="AreaRelAttributes()">&lt;area <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Area-Rel-Attributes"></div></div>
           <div><code class="Highlighted" onclick="AreaShapeAttributes()">&lt;area <b>shape</b>="<em>myValue</em>"&gt;</code><div id="Area-Shape-Attributes"></div></div>
           <div><code class="Highlighted" onclick="AreaTargetAttributes()">&lt;area <b>target</b>="<em>myValue</em>"&gt;</code><div id="Area-Target-Attributes"></div></div>
@@ -688,13 +728,27 @@
           <div><code class="Highlighted" onclick="ButtonAutofocusAttributes()">&lt;button <b>autofocus</b>&gt;</code><div id="Button-Autofocus-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ButtonDisabledAttributes()">&lt;button <b>disabled</b>&gt;</code><div id="Button-Disabled-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ButtonFormAttributes()">&lt;button <b>form</b>="<em>myValue</em>"&gt;</code><div id="Button-Form-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ButtonFormactionAttributes()">&lt;button <b>formaction</b>="<em>myValue</em>"&gt;</code><div id="Button-Formaction-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ButtonFormenctypeAttributes()">&lt;button <b>formenctype</b>="<em>myValue</em>"&gt;</code><div id="Button-Formenctype-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ButtonFormmethodAttributes()">&lt;button <b>formmethod</b>="<em>myValue</em>"&gt;</code><div id="Button-Formmethod-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ButtonFormnovalidateAttributes()">&lt;button <b>formnovalidate</b>="<em>myValue</em>"&gt;</code><div id="Button-Formnovalidate-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ButtonFormtargetAttributes()">&lt;button <b>formtarget</b>="<em>myValue</em>"&gt;</code><div id="Button-Formtarget-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ButtonPopovertargetAttributes()">&lt;button <b>popovertarget</b>="<em>myValue</em>"&gt;</code><div id="Button-Popovertarget-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ButtonPopovertargetactionAttributes()">&lt;button <b>popovertargetaction</b>="<em>myValue</em>"&gt;</code><div id="Button-Popovertargetaction-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ButtonFormactionAttributes()">&lt;button <b>formaction</b>="<em>myValue</em>"&gt;</code>
+            <div id="Button-Formaction-Attributes"></div>
+          </div>
+          <div><code class="Highlighted" onclick="ButtonFormenctypeAttributes()">&lt;button <b>formenctype</b>="<em>myValue</em>"&gt;</code>
+            <div id="Button-Formenctype-Attributes"></div>
+          </div>
+          <div><code class="Highlighted" onclick="ButtonFormmethodAttributes()">&lt;button <b>formmethod</b>="<em>myValue</em>"&gt;</code>
+            <div id="Button-Formmethod-Attributes"></div>
+          </div>
+          <div><code class="Highlighted" onclick="ButtonFormnovalidateAttributes()">&lt;button <b>formnovalidate</b>="<em>myValue</em>"&gt;</code>
+            <div id="Button-Formnovalidate-Attributes"></div>
+          </div>
+          <div><code class="Highlighted" onclick="ButtonFormtargetAttributes()">&lt;button <b>formtarget</b>="<em>myValue</em>"&gt;</code>
+            <div id="Button-Formtarget-Attributes"></div>
+          </div>
+          <div><code class="Highlighted" onclick="ButtonPopovertargetAttributes()">&lt;button <b>popovertarget</b>="<em>myValue</em>"&gt;</code>
+            <div id="Button-Popovertarget-Attributes"></div>
+          </div>
+          <div><code class="Highlighted" onclick="ButtonPopovertargetactionAttributes()">&lt;button <b>popovertargetaction</b>="<em>myValue</em>"&gt;</code>
+            <div id="Button-Popovertargetaction-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="ButtonNameAttributes()">&lt;button <b>name</b>="<em>myValue</em>"&gt;</code><div id="Button-Name-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ButtonTypeAttributes()">&lt;button <b>type</b>="<em>myValue</em>"&gt;</code><div id="Button-Type-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ButtonValueAttributes()">&lt;button <b>value</b>="<em>myValue</em>"&gt;</code><div id="Button-Value-Attributes"></div></div>
@@ -1381,12 +1435,16 @@
           <div><code class="Highlighted" onclick="ImageGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Image-Global-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ImageEventAttributes()"><em>HTML Event Attributes</em></code><div id="Image-Event-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ImageAltAttributes()">&lt;img <b>alt</b>="<em>myValue</em>"&gt;</code><div id="Image-Alt-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ImageCrossoriginAttributes()">&lt;img <b>crossorigin</b>="<em>myValue</em>"&gt;</code><div id="Image-Crossorigin-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ImageCrossoriginAttributes()">&lt;img <b>crossorigin</b>="<em>myValue</em>"&gt;</code>
+            <div id="Image-Crossorigin-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="ImageHeightAttributes()">&lt;img <b>height</b>="<em>myValue</em>"&gt;</code><div id="Image-Height-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ImageIsmapAttributes()">&lt;img <b>ismap</b>&gt;</code><div id="Image-Ismap-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ImageLoadingAttributes()">&lt;img <b>loading</b>="<em>myValue</em>"&gt;</code><div id="Image-Loading-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ImageLongdescAttributes()">&lt;img <b>longdesc</b>="<em>myValue</em>"&gt;</code><div id="Image-Longdesc-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ImageReferrerpolicyAttributes()">&lt;img <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Image-Referrerpolicy-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ImageReferrerpolicyAttributes()">&lt;img <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code>
+            <div id="Image-Referrerpolicy-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="ImageSizesAttributes()">&lt;img <b>sizes</b>="<em>myValue</em>"&gt;</code><div id="Image-Sizes-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ImageSrcAttributes()">&lt;img <b>src</b>="<em>myValue</em>"&gt;</code><div id="Image-Src-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ImageSrcsetAttributes()">&lt;img <b>srcset</b>="<em>myValue</em>"&gt;</code><div id="Image-Srcset-Attributes"></div></div>
@@ -1710,11 +1768,15 @@
           <h3>RELATED ATTRIBUTE(S)</h3>
           <div><code class="Highlighted" onclick="LinkGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Link-Global-Attributes"></div></div>
           <div><code class="Highlighted" onclick="LinkEventAttributes()"><em>HTML Event Attributes</em></code><div id="Link-Event-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="LinkCrossoriginAttributes()">&lt;link <b>crossorigin</b>="<em>myValue</em>"&gt;</code><div id="Link-Crossorigin-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkCrossoriginAttributes()">&lt;link <b>crossorigin</b>="<em>myValue</em>"&gt;</code>
+            <div id="Link-Crossorigin-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="LinkHrefAttributes()">&lt;link <b>href</b>="<em>myValue</em>"&gt;</code><div id="Link-Href-Attributes"></div></div>
           <div><code class="Highlighted" onclick="LinkHreflangAttributes()">&lt;link <b>hreflang</b>="<em>myValue</em>"&gt;</code><div id="Link-Hreflang-Attributes"></div></div>
           <div><code class="Highlighted" onclick="LinkMediaAttributes()">&lt;link <b>media</b>="<em>myValue</em>"&gt;</code><div id="Link-Media-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="LinkReferrerpolicyAttributes()">&lt;link <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Link-Referrerpolicy-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="LinkReferrerpolicyAttributes()">&lt;link <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code>
+            <div id="Link-Referrerpolicy-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="LinkRelAttributes()">&lt;link <b>rel</b>="<em>myValue</em>"&gt;</code><div id="Link-Rel-Attributes"></div></div>
           <div><code class="Highlighted" onclick="LinkSizesAttributes()">&lt;link <b>sizes</b>="<em>myValue</em>"&gt;</code><div id="Link-Sizes-Attributes"></div></div>
           <div><code class="Highlighted" onclick="LinkTypeAttributes()">&lt;link <b>type</b>="<em>myValue</em>"&gt;</code><div id="Link-Type-Attributes"></div></div>
@@ -1999,7 +2061,9 @@
           <div><code class="Highlighted" onclick="ObjectHeightAttributes()">&lt;object <b>height</b>="<em>MyValue</em>"&gt;</code><div id="Object-Height-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ObjectNameAttributes()">&lt;object <b>name</b>="<em>MyValue</em>"&gt;</code><div id="Object-Name-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ObjectTypeAttributes()">&lt;object <b>type</b>="<em>MyValue</em>"&gt;</code><div id="Object-Type-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ObjectTypemustmatchAttributes()">&lt;object <b>typemustmatch</b>="<em>MyValue</em>"&gt;</code><div id="Object-Typemustmatch-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ObjectTypemustmatchAttributes()">&lt;object <b>typemustmatch</b>="<em>MyValue</em>"&gt;</code>
+            <div id="Object-Typemustmatch-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="ObjectUsemapAttributes()">&lt;object <b>usemap</b>="<em>MyValue</em>"&gt;</code><div id="Object-Usemap-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ObjectWidthAttributes()">&lt;object <b>width</b>="<em>MyValue</em>"&gt;</code><div id="Object-Width-Attributes"></div></div>
         </div>
@@ -2338,8 +2402,55 @@
         <header>
           <h2 onclick="ScalableVectorGraphicTag()">SCALABLE VECTOR GRAPHIC ELEMENT</h2>
           <p>The <code>&lt;svg&gt;</code> tag defines a container for SVG graphics.</p>
+          <p>It sets up the space where all the shapes appear.</p>
           <p>SVG has several methods for drawing paths, boxes, circles, text, and graphic images.</p>
+          <p>The circle element is used to draw a circle.</p>
+          <p>The path element is used to draw a curved line.</p>
         </header>
+
+        <div class="Box-Attributes">
+          <h3>COMMON IMAGES VS SVG</h3>
+          <p>Common image formats like PNG and JPG are classified as raster formats.</p>
+          <p>This essentially means that they are pixel-based, with the data tracking the color value in each pixel.</p>
+          <p>A large downside of raster based images is that they do not upscale well.</p>
+          <p>If the PNG files is edited to be larger file, it can becomes pixelated, or blurry.</p>
+          <p>As for SVG, a vector graphic tracks data based on paths and equations to plot points, lines, and curves.</p>
+          <p>It can be scaled to any size without impacting the quality.</p>
+          <p>SVGs specifically have the added benefit of storing data in XML.</p>
+          <p>Developer can use them directly in their code as raw HTML with the SVG element.</p>
+          <p>It also means they can programmatically change the color of the image.</p>
+        </div>
+
+        <div class="Box-Attributes">
+          <h3>BENEFITS</h3>
+          <p>SVG is great for icons uses.</p>
+          <p>If developer want to create custom bullet points, or add icons to their links to represent social media platforms, using SVGs is the best approach.</p>
+          <p>One of the most popular icon libraries, <b>Font Awesome</b>, uses SVG images for their icons.</p>
+          <p>SVGs are also great for webpage logos, because they scale perfectly.</p>
+          <p>They allow developer to adapt their layout to any responsive design they need.</p>
+        </div>
+
+        <div>
+          <h3>HEART ICONS</h3>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="red">
+            <path d="M12 21s-6-4.35-9.33-8.22C-.5 7.39 3.24 1 8.4 4.28 10.08 5.32 12 7.5 12 7.5s1.92-2.18 3.6-3.22C20.76 1 24.5 7.39 21.33 12.78 18 16.65 12 21 12 21z"></path>
+          </svg>
+
+          <h4>Path Element</h4>
+          <p>The <code>path</code> element defines the image shape.</p> <br>
+
+          <h4>Distance Attribute</h4>
+          <p>The <code>d</code> attribute defines a series of command letters and numbers that draw a shape.</p>
+          <p>The letters represent commands like move to, draw line, and close, while the numbers represent coordinates.</p> <br>
+          
+          <h4>Viewbox Attribute</h4>
+          <p>The <code>viewBox="a b c d"</code> attribute controls what part of the image is visible inside the SVG.</p>
+          <p>The first two numbers (a b) set the starting position of the viewBox, which is the top-left corner (x and y).</p>
+          <p>The next two numbers (c d) define the viewBox's width and height.</p> <br>
+
+          <h4>Fill Attribute</h4>
+          <p>The <code>fill="<i>myColor</i>"</code> attribute defines the color.</p>
+        </div>
       </section>
 
       <!--------------------------------------------------------------------------- SCRIPT TAG --------------------------------------------------------------------------->
@@ -2355,11 +2466,17 @@
           <h3>RELATED ATTRIBUTE(S)</h3>
           <div><code class="Highlighted" onclick="ScriptGlobalAttributes()"><em>HTML Global Attributes</em></code><div id="Script-Global-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ScriptAsyncAttributes()">&lt;script <b>async</b>&gt;</code><div id="Script-Async-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ScriptCrossoriginAttributes()">&lt;script <b>crossorigin</b>="<em>myValue</em>"&gt;</code><div id="Script-Crossorigin-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ScriptCrossoriginAttributes()">&lt;script <b>crossorigin</b>="<em>myValue</em>"&gt;</code>
+            <div id="Script-Crossorigin-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="ScriptDeferAttributes()">&lt;script <b>defer</b>&gt;</code><div id="Script-Defer-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ScriptIntegrityAttributes()">&lt;script <b>integrity</b>="<em>myValue</em>"&gt;</code><div id="Script-Integrity-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ScriptIntegrityAttributes()">&lt;script <b>integrity</b>="<em>myValue</em>"&gt;</code>
+            <div id="Script-Integrity-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="ScriptNomoduleAttributes()">&lt;script <b>nomodule</b>="<em>myValue</em>"&gt;</code><div id="Script-Nomodule-Attributes"></div></div>
-          <div><code class="Highlighted" onclick="ScriptReferrerpolicyAttributes()">&lt;script <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code><div id="Script-Referrerpolicy-Attributes"></div></div>
+          <div><code class="Highlighted" onclick="ScriptReferrerpolicyAttributes()">&lt;script <b>referrerpolicy</b>="<em>myValue</em>"&gt;</code>
+            <div id="Script-Referrerpolicy-Attributes"></div>
+          </div>
           <div><code class="Highlighted" onclick="ScriptSrcAttributes()">&lt;script <b>src</b>="<em>myValue</em>"&gt;</code><div id="Script-Src-Attributes"></div></div>
           <div><code class="Highlighted" onclick="ScriptTypeAttributes()">&lt;script <b>type</b>="<em>myValue</em>"&gt;</code><div id="Script-Type-Attributes"></div></div>
         </div>
@@ -3070,67 +3187,69 @@
         <input type="text" id="HTML-Attributes-Input" onkeyup="SearchHTMLAttributes()" placeholder="Find HTML attribute..">
         <ul id="HTML-Attributes-List">
           <li><a onclick="AcceptAttribute()"><code>accept</code> <span>Specifies the types of files that the server accepts</span></a></li>
-          <li><a onclick="example()"><code>accept-charset</code> <span>Specifies the character encodings that are to be used for the form submission</span></a></li>
-          <li><a onclick="example()"><code>accesskey</code> <span>Specifies a shortcut key to activate/focus an element</span></a></li>
-          <li><a onclick="example()"><code>action</code> <span>Specifies where to send the form-data when a form is submitted</span></a></li>
-          <li><a onclick="example()"><code>alt</code> <span>Specifies an alternate text when the original element fails to display</span></a></li>
-          <li><a onclick="example()"><code>async</code> <span>Specifies that the script is executed asynchronously (for external scripts)</span></a></li>
-          <li><a onclick="example()"><code>autocomplete</code> <span>Specifies whether the element should have autocomplete enabled (for form and input)</span></a></li>
-          <li><a onclick="example()"><code>autofocus</code> <span>Specifies that the element should automatically get focus when the page loads</span></a></li>
-          <li><a onclick="example()"><code>autoplay</code> <span>Specifies that the audio/video will start playing as soon as it is ready</span></a></li>
-          <li><a onclick="example()"><code>charset</code> <span>Specifies the character encoding</span></a></li>
-          <li><a onclick="example()"><code>checked</code> <span>Specifies that an input element should be pre-selected when the page loads (for checkbox and radio)</span></a></li>
-          <li><a onclick="example()"><code>cite</code> <span>Specifies a URL which explains the quote/deleted/inserted text</span></a></li>
-          <li><a onclick="example()"><code>class</code> <span>Specifies one or more class names for an element</span></a></li>
-          <li><a onclick="example()"><code>cols</code> <span>Specifies the visible width of a text area</span></a></li>
-          <li><a onclick="example()"><code>colspan</code> <span>Specifies the number of columns a table cell should span</span></a></li>
-          <li><a onclick="example()"><code>content</code> <span>Gives the value associated with the http-equiv or name attribute</span></a></li>
-          <li><a onclick="example()"><code>contenteditable</code> <span>Specifies whether the content of an element is editable or not</span></a></li>
-          <li><a onclick="example()"><code>controls</code> <span>Specifies that audio/video controls should be displayed</span></a></li>
-          <li><a onclick="example()"><code>coords</code> <span>Specifies the coordinates of the area</span></a></li>
-          <li><a onclick="example()"><code>data</code> <span>Specifies the URL of the resource to be used by the object</span></a></li>
-          <li><a onclick="example()"><code>data-*</code> <span>Used to store custom data private to the page or application</span></a></li>
-          <li><a onclick="example()"><code>datetime</code> <span>Specifies the date and time</span></a></li>
-          <li><a onclick="example()"><code>default</code>
+          <li><a onclick="AcceptCharsetAttribute()"><code>accept-charset</code> <span>Specifies the character encodings that are to be used for the form submission</span></a></li>
+          <li><a onclick="AccesskeyAttribute()"><code>accesskey</code> <span>Specifies a shortcut key to activate/focus an element</span></a></li>
+          <li><a onclick="ActionAttribute()"><code>action</code> <span>Specifies where to send the form-data when a form is submitted</span></a></li>
+          <li><a onclick="AlternateAttribute()"><code>alt</code> <span>Specifies an alternate text when the original element fails to display</span></a></li>
+          <li><a onclick="AsynchronousAttribute()"><code>async</code> <span>Specifies that the script is executed asynchronously (for external scripts)</span></a></li>
+          <li><a onclick="AutocompleteAttribute()"><code>autocomplete</code> <span>Specifies whether the element should have autocomplete enabled (for form and input)</span></a></li>
+          <li><a onclick="AutofocusAttribute()"><code>autofocus</code> <span>Specifies that the element should automatically get focus when the page loads</span></a></li>
+          <li><a onclick="AutoplayAttribute()"><code>autoplay</code> <span>Specifies that the audio/video will start playing as soon as it is ready</span></a></li>
+          <li><a onclick="CharsetAttribute()"><code>charset</code> <span>Specifies the character encoding</span></a></li>
+          <li><a onclick="CheckedAttribute()"><code>checked</code>
+            <span>Specifies that an input element should be pre-selected when the page loads (for checkbox and radio)</span></a>
+          </li>
+          <li><a onclick="CiteAttribute()"><code>cite</code> <span>Specifies a URL which explains the quote/deleted/inserted text</span></a></li>
+          <li><a onclick="ClassAttribute()"><code>class</code> <span>Specifies one or more class names for an element</span></a></li>
+          <li><a onclick="ColumnsAttribute()"><code>cols</code> <span>Specifies the visible width of a text area</span></a></li>
+          <li><a onclick="ColumnspanAttribute()"><code>colspan</code> <span>Specifies the number of columns a table cell should span</span></a></li>
+          <li><a onclick="ContentAttribute()"><code>content</code> <span>Gives the value associated with the http-equiv or name attribute</span></a></li>
+          <li><a onclick="ContenteditableAttribute()"><code>contenteditable</code> <span>Specifies whether the content of an element is editable or not</span></a></li>
+          <li><a onclick="ControlsAttribute()"><code>controls</code> <span>Specifies that audio/video controls should be displayed</span></a></li>
+          <li><a onclick="CoordinatesAttribute()"><code>coords</code> <span>Specifies the coordinates of the area</span></a></li>
+          <li><a onclick="DataAttribute()"><code>data</code> <span>Specifies the URL of the resource to be used by the object</span></a></li>
+          <li><a onclick="DataMydataAttribute()"><code>data-*</code> <span>Used to store custom data private to the page or application</span></a></li>
+          <li><a onclick="DatetimeAttribute()"><code>datetime</code> <span>Specifies the date and time</span></a></li>
+          <li><a onclick="DefaultAttribute()"><code>default</code>
             <span>Specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate</span></a>
           </li>
-          <li><a onclick="example()"><code>defer</code> <span>Specifies that the script is executed when the page has finished parsing (for external scripts)</span></a></li>
-          <li><a onclick="example()"><code>dir</code> <span>Specifies the text direction for the content in an element</span></a></li>
-          <li><a onclick="example()"><code>dirname</code> <span>Specifies that the text direction will be submitted</span></a></li>
-          <li><a onclick="example()"><code>disabled</code> <span>Specifies that the specified element/group of elements should be disabled</span></a></li>
-          <li><a onclick="example()"><code>download</code> <span>Specifies that the target will be downloaded when a user clicks on the hyperlink</span></a></li>
-          <li><a onclick="example()"><code>draggable</code> <span>Specifies whether an element is draggable or not</span></a></li>
-          <li><a onclick="example()"><code>enctype</code> <span>Specifies how the form-data should be encoded when submitting it to the server (for post)</span></a></li>
-          <li><a onclick="example()"><code>enterkeyhint</code> <span>Specifies the text of the enter-key on a virtual keyboard</span></a></li>
-          <li><a onclick="example()"><code>for</code> <span>Specifies which form element(s) a label/calculation is bound to</span></a></li>
-          <li><a onclick="example()"><code>form</code> <span>Specifies the name of the form the element belongs to</span></a></li>
-          <li><a onclick="example()"><code>formaction</code> <span>Specifies where to send the form-data when a form is submitted</span></a></li>
-          <li><a onclick="example()"><code>headers</code> <span>Specifies one or more headers cells a cell is related to</span></a></li>
-          <li><a onclick="example()"><code>height</code> <span>Specifies the height of the element</span></a></li>
-          <li><a onclick="example()"><code>hidden</code> <span>Specifies that an element is not yet, or is no longer, relevant</span></a></li>
-          <li><a onclick="example()"><code>high</code> <span>Specifies the range that is considered to be a high value</span></a></li>
-          <li><a onclick="example()"><code>href</code> <span>Specifies the URL of the page the link goes to</span></a></li>
-          <li><a onclick="example()"><code>hreflang</code> <span>Specifies the language of the linked document</span></a></li>
-          <li><a onclick="example()"><code>http-equiv</code> <span>Provides an HTTP header for the information/value of the content attribute</span></a></li>
-          <li><a onclick="example()"><code>id</code> <span>Specifies a unique id for an element</span></a></li>
-          <li><a onclick="example()"><code>inert</code> <span>Specifies that the browser should ignore this section</span></a></li>
-          <li><a onclick="example()"><code>inputmode</code> <span>Specifies the mode of a virtual keyboard</span></a></li>
-          <li><a onclick="example()"><code>ismap</code> <span>Specifies an image as a server-side image map</span></a></li>
-          <li><a onclick="example()"><code>kind</code> <span>Specifies the kind of text track</span></a></li>
-          <li><a onclick="example()"><code>label</code> <span>Specifies the title of the text track</span></a></li>
-          <li><a onclick="example()"><code>lang</code> <span>Specifies the language of the element's content</span></a></li>
-          <li><a onclick="example()"><code>list</code> <span>Refers to a datalist element that contains pre-defined options for an input element</span></a></li>
-          <li><a onclick="example()"><code>loop</code> <span>Specifies that the audio/video will start over again, every time it is finished</span></a></li>
-          <li><a onclick="example()"><code>low</code> <span>Specifies the range that is considered to be a low value</span></a></li>
-          <li><a onclick="example()"><code>max</code> <span>Specifies the maximum value</span></a></li>
-          <li><a onclick="example()"><code>maxlength</code> <span>Specifies the maximum number of characters allowed in an element</span></a></li>
-          <li><a onclick="example()"><code>media</code> <span>Specifies what media/device the linked document is optimized for</span></a></li>
-          <li><a onclick="example()"><code>method</code> <span>Specifies the HTTP method to use when sending form-data</span></a></li>
-          <li><a onclick="example()"><code>min</code> <span>Specifies a minimum value</span></a></li>
-          <li><a onclick="example()"><code>multiple</code> <span>Specifies that a user can enter more than one value</span></a></li>
-          <li><a onclick="example()"><code>muted</code> <span>Specifies that the audio output of the video should be muted</span></a></li>
-          <li><a onclick="example()"><code>name</code> <span>Specifies the name of the element</span></a></li>
-          <li><a onclick="example()"><code>novalidate</code> <span>Specifies that the form should not be validated when submitted</span></a></li>
+          <li><a onclick="DeferAttribute()"><code>defer</code> <span>Specifies that the script is executed when the page has finished parsing (for external scripts)</span></a></li>
+          <li><a onclick="DirectionAttribute()"><code>dir</code> <span>Specifies the text direction for the content in an element</span></a></li>
+          <li><a onclick="DirectionnameAttribute()"><code>dirname</code> <span>Specifies that the text direction will be submitted</span></a></li>
+          <li><a onclick="DisabledAttribute()"><code>disabled</code> <span>Specifies that the specified element/group of elements should be disabled</span></a></li>
+          <li><a onclick="DownloadAttribute()"><code>download</code> <span>Specifies that the target will be downloaded when a user clicks on the hyperlink</span></a></li>
+          <li><a onclick="DraggableAttribute()"><code>draggable</code> <span>Specifies whether an element is draggable or not</span></a></li>
+          <li><a onclick="ENCodetypeAttribute()"><code>enctype</code> <span>Specifies how the form-data should be encoded when submitting it to the server (for post)</span></a></li>
+          <li><a onclick="EnterkeyhintAttribute()"><code>enterkeyhint</code> <span>Specifies the text of the enter-key on a virtual keyboard</span></a></li>
+          <li><a onclick="ForAttribute()"><code>for</code> <span>Specifies which form element(s) a label/calculation is bound to</span></a></li>
+          <li><a onclick="FormAttribute()"><code>form</code> <span>Specifies the name of the form the element belongs to</span></a></li>
+          <li><a onclick="FormactionAttribute()"><code>formaction</code> <span>Specifies where to send the form-data when a form is submitted</span></a></li>
+          <li><a onclick="HeadersAttribute()"><code>headers</code> <span>Specifies one or more headers cells a cell is related to</span></a></li>
+          <li><a onclick="HeightAttribute()"><code>height</code> <span>Specifies the height of the element</span></a></li>
+          <li><a onclick="HiddenAttribute()"><code>hidden</code> <span>Specifies that an element is not yet, or is no longer, relevant</span></a></li>
+          <li><a onclick="HighAttribute()"><code>high</code> <span>Specifies the range that is considered to be a high value</span></a></li>
+          <li><a onclick="HyperlinkreferenceAttribute()"><code>href</code> <span>Specifies the URL of the page the link goes to</span></a></li>
+          <li><a onclick="HyperlinkreferencelanguageAttribute()"><code>hreflang</code> <span>Specifies the language of the linked document</span></a></li>
+          <li><a onclick="HTTPEquivalentAttribute()"><code>http-equiv</code> <span>Provides an HTTP header for the information/value of the content attribute</span></a></li>
+          <li><a onclick="IdentifierAttribute()"><code>id</code> <span>Specifies a unique id for an element</span></a></li>
+          <li><a onclick="InertAttribute()"><code>inert</code> <span>Specifies that the browser should ignore this section</span></a></li>
+          <li><a onclick="InputmodeAttribute()"><code>inputmode</code> <span>Specifies the mode of a virtual keyboard</span></a></li>
+          <li><a onclick="IsmapAttribute()"><code>ismap</code> <span>Specifies an image as a server-side image map</span></a></li>
+          <li><a onclick="KindAttribute()"><code>kind</code> <span>Specifies the kind of text track</span></a></li>
+          <li><a onclick="LabelAttribute()"><code>label</code> <span>Specifies the title of the text track</span></a></li>
+          <li><a onclick="LanguageAttribute()"><code>lang</code> <span>Specifies the language of the element's content</span></a></li>
+          <li><a onclick="ListAttribute()"><code>list</code> <span>Refers to a datalist element that contains pre-defined options for an input element</span></a></li>
+          <li><a onclick="LoopAttribute()"><code>loop</code> <span>Specifies that the audio/video will start over again, every time it is finished</span></a></li>
+          <li><a onclick="LowAttribute()"><code>low</code> <span>Specifies the range that is considered to be a low value</span></a></li>
+          <li><a onclick="MaximumAttribute()"><code>max</code> <span>Specifies the maximum value</span></a></li>
+          <li><a onclick="MaximumlengthAttribute()"><code>maxlength</code> <span>Specifies the maximum number of characters allowed in an element</span></a></li>
+          <li><a onclick="MediaAttribute()"><code>media</code> <span>Specifies what media/device the linked document is optimized for</span></a></li>
+          <li><a onclick="MethodAttribute()"><code>method</code> <span>Specifies the HTTP method to use when sending form-data</span></a></li>
+          <li><a onclick="MinimumAttribute()"><code>min</code> <span>Specifies a minimum value</span></a></li>
+          <li><a onclick="MultipleAttribute()"><code>multiple</code> <span>Specifies that a user can enter more than one value</span></a></li>
+          <li><a onclick="MutedAttribute()"><code>muted</code> <span>Specifies that the audio output of the video should be muted</span></a></li>
+          <li><a onclick="NameAttribute()"><code>name</code> <span>Specifies the name of the element</span></a></li>
+          <li><a onclick="NovalidateAttribute()"><code>novalidate</code> <span>Specifies that the form should not be validated when submitted</span></a></li>
           <li><a onclick="example()"><code>onabort</code> <span>Script to be run on abort</span></a></li>
           <li><a onclick="example()"><code>onafterprint</code> <span>Script to be run after the document is printed</span></a></li>
           <li><a onclick="example()"><code>onbeforeprint</code> <span>Script to be run before the document is printed</span></a></li>
@@ -3252,64 +3371,563 @@
         <h2 onclick="AcceptAttribute()">ACCEPT ATTRIBUTE</h2>
       </section>
 
-      <section id="HTML-Semantic-Container" class="Box-Contents">
-        <h2>HTML SEMANTIC CONTAINER</h2>
-        <div class="Box-Structures">
-          <div class="Indent-Level1"><code class="Highlighted" onclick="NavTag()">&lt;nav&gt; <em>MyContents</em> &lt;/nav&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="AsideTag()">&lt;aside&gt; <em>MyContents</em> &lt;/aside&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="ArticleTag()">&lt;article&gt; <em>MyContents</em> &lt;/article&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="SectionTag()">&lt;section&gt; <em>MyContents</em> &lt;/section&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="DivisionTag()">&lt;div&gt; <em>MyContents</em> &lt;/div&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="SpanTag()">&lt;span&gt; <em>MyContents</em> &lt;/span&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="HgroupTag()">&lt;hgroup&gt; <em>MyContents</em> &lt;/hgroup&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="PictureTag()">&lt;picture&gt; <em>MyContents</em> &lt;/picture&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="SearchTag()">&lt;search&gt; <em>MyContents</em> &lt;/search&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="SvgTag()">&lt;svg&gt; <em>MyContents</em> &lt;/svg&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="TemplateTag()">&lt;template&gt; <em>MyContents</em> &lt;/template&gt;</code></div>
-        </div>
+      <!-------------------------------------------------------------------- ACCEPT-CHARSET ATTRIBUTE -------------------------------------------------------------------->
+      <section id="Accept-Charset-Attribute" class="Box-Contents">
+        <h2 onclick="AcceptCharsetAttribute()">ACCEPT-CHARSET ATTRIBUTE</h2>
       </section>
 
-      <section id="HTML-Semantic-Text" class="Box-Contents">
-        <h1>HTML SEMANTIC TEXT</h1>
-        <div class="Box-Structures">
-          <div class="Indent-Level1"><code class="Highlighted" onclick="CommentTag()">&lt;!-- <em>MyText</em> --&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="HeadingTag()">&lt;h1&gt; <em>MyText</em> &lt;/h1&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="ParagraphTag()">&lt;p&gt; <em>MyText</em> &lt;/p&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="AnchorTag()">&lt;a&gt; <em>MyText</em> &lt;/a&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="AddressTag()">&lt;address&gt; <em>MyText</em> &lt;/address&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="AbbreviationTag()">&lt;abbr&gt; <em>MyText</em> &lt;/abbr&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="DefinitionTag()">&lt;dfn&gt; <em>MyText</em> &lt;/dfn&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="CiteTag()">&lt;cite&gt; <em>MyText</em> &lt;/cite&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="QuoteTag()">&lt;q&gt; <em>MyText</em> &lt;/q&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="BlockquoteTag()">&lt;blockquote&gt; <em>MyText</em> &lt;/blockquote&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="StrongTag()">&lt;strong&gt; <em>MyText</em> &lt;/strong&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="EmphasizeTag()">&lt;em&gt; <em>MyText</em> &lt;/em&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="InsertTag()">&lt;ins&gt; <em>MyText</em> &lt;/ins&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="DeleteTag()">&lt;del&gt; <em>MyText</em> &lt;/del&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="BoldTag()">&lt;b&gt; <em>MyText</em> &lt;/b&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="ItalicTag()">&lt;i&gt; <em>MyText</em> &lt;/i&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="UnarticulateTag()">&lt;u&gt; <em>MyText</em> &lt;/u&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="StrikeTag()">&lt;s&gt; <em>MyText</em> &lt;/s&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="MarkTag()">&lt;mark&gt; <em>MyText</em> &lt;/mark&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="SmallTag()">&lt;small&gt; <em>MyText</em> &lt;/small&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="SuperscriptTag()">&lt;sup&gt; <em>MyText</em> &lt;/sup&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="SubscriptTag()">&lt;sub&gt; <em>MyText</em> &lt;/sub&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="CodeTag()">&lt;code&gt; <em>MyText</em> &lt;/code&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="KeyboardTag()">&lt;kbd&gt; <em>MyText</em> &lt;/kbd&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="PreformatTag()">&lt;pre&gt; <em>MyText</em> &lt;/pre&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="SampleTag()">&lt;samp&gt; <em>MyText</em> &lt;/samp&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="VariableTag()">&lt;var&gt; <em>MyText</em> &lt;/var&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="BiDirectionalIsolationTag()">&lt;bdi&gt; <em>MyText</em> &lt;/bdi&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="BiDirectionalOverrideTag()">&lt;bdo&gt; <em>MyText</em> &lt;/bdo&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="TimeTag()">&lt;time&gt; <em>MyText</em> &lt;/time&gt;</code></div>
-        </div>
+      <!---------------------------------------------------------------------- ACCESSKEY ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Accesskey-Attribute" class="Box-Contents">
+        <h2 onclick="AccesskeyAttribute()">ACCESSKEY ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ ACTION ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Action-Attribute" class="Box-Contents">
+        <h2 onclick="ActionAttribute()">ACTION ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ALTERNATE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Alternate-Attribute" class="Box-Contents">
+        <h2 onclick="AlternateAttribute()">ALTERNATE ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- ASYNCHRONOUS ATTRIBUTE --------------------------------------------------------------------->
+      <section id="Asynchronous-Attribute" class="Box-Contents">
+        <h2 onclick="AsynchronousAttribute()">ASYNCHRONOUS ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- AUTOCOMPLETE ATTRIBUTE --------------------------------------------------------------------->
+      <section id="Autocomplete-Attribute" class="Box-Contents">
+        <h2 onclick="AutocompleteAttribute()">AUTOCOMPLETE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- AUTOFOCUS ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Autofocus-Attribute" class="Box-Contents">
+        <h2 onclick="AutofocusAttribute()">AUTOFOCUS ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- AUTOPLAY ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Autoplay-Attribute" class="Box-Contents">
+        <h2 onclick="AutoplayAttribute()">AUTOPLAY ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- CHARSET ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Charset-Attribute" class="Box-Contents">
+        <h2 onclick="CharsetAttribute()">CHARSET ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- CHECKED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Checked-Attribute" class="Box-Contents">
+        <h2 onclick="CheckedAttribute()">CHECKED ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- CITE ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Cite-Attribute" class="Box-Contents">
+        <h2 onclick="CiteAttribute()">CITE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ CLASS ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Class-Attribute" class="Box-Contents">
+        <h2 onclick="ClassAttribute()">CLASS ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- COLUMNS ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Columns-Attribute" class="Box-Contents">
+        <h2 onclick="ColumnsAttribute()">COLUMNS ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- COLUMNSPAN ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Columnspan-Attribute" class="Box-Contents">
+        <h2 onclick="ColumnspanAttribute()">COLUMNSPAN ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- CONTENT ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Content-Attribute" class="Box-Contents">
+        <h2 onclick="ContentAttribute()">CONTENT ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------- CONTENTEDITABLE ATTRIBUTE -------------------------------------------------------------------->
+      <section id="Contenteditable-Attribute" class="Box-Contents">
+        <h2 onclick="ContenteditableAttribute()">CONTENTEDITABLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- CONTROLS ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Controls-Attribute" class="Box-Contents">
+        <h2 onclick="ControlsAttribute()">CONTROLS ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- COORDINATES ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Coordinates-Attribute" class="Box-Contents">
+        <h2 onclick="CoordinatesAttribute()">COORDINATES ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- DATA ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Data-Attribute" class="Box-Contents">
+        <h2 onclick="DataAttribute()">DATA ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ DATA-* ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Data-Mydata-Attribute" class="Box-Contents">
+        <h2 onclick="DataMydataAttribute()">DATA-* ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- DATETIME ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Datetime-Attribute" class="Box-Contents">
+        <h2 onclick="DatetimeAttribute()">DATETIME ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ DEFAULT ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Default-Attribute" class="Box-Contents">
+        <h2 onclick="DefaultAttribute()">DEFAULT ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- DEFER ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Defer-Attribute" class="Box-Contents">
+        <h2 onclick="DeferAttribute()">DEFER ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- DIRECTION ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Direction-Attribute" class="Box-Contents">
+        <h2 onclick="DirectionAttribute()">DIRECTION ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------- DIRECTIONNAME ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Directionname-Attribute" class="Box-Contents">
+        <h2 onclick="DirectionnameAttribute()">DIRECTIONNAME ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- DISABLED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Disabled-Attribute" class="Box-Contents">
+        <h2 onclick="DisabledAttribute()">DISABLED ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- DOWNLOAD ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Download-Attribute" class="Box-Contents">
+        <h2 onclick="DownloadAttribute()">DOWNLOAD ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- DRAGGABLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Draggable-Attribute" class="Box-Contents">
+        <h2 onclick="DraggableAttribute()">DRAGGABLE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ENCODETYPE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="EN-Codetype-Attribute" class="Box-Contents">
+        <h2 onclick="ENCodetypeAttribute()">ENCODETYPE ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- ENTERKEYHINT ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Enterkeyhint-Attribute" class="Box-Contents">
+        <h2 onclick="EnterkeyhintAttribute()">ENTERKEYHINT ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------------- FOR ATTRIBUTE --------------------------------------------------------------------------->
+      <section id="For-Attribute" class="Box-Contents">
+        <h2 onclick="ForAttribute()">FOR ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------------- FORM ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Form-Attribute" class="Box-Contents">
+        <h2 onclick="FormAttribute()">FORM ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- FORMACTION ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Formaction-Attribute" class="Box-Contents">
+        <h2 onclick="FormactionAttribute()">FORMACTION ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ HEADERS ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Headers-Attribute" class="Box-Contents">
+        <h2 onclick="HeadersAttribute()">HEADERS ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- HEIGHT ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Height-Attribute" class="Box-Contents">
+        <h2 onclick="HeightAttribute()">HEIGHT ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- HIDDEN ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Hidden-Attribute" class="Box-Contents">
+        <h2 onclick="HiddenAttribute()">HIDDEN ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- HIGH ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="High-Attribute" class="Box-Contents">
+        <h2 onclick="HighAttribute()">HIGH ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------ HYPERLINKREFERENCE ATTRIBUTE --------------------------------------------------------------------->
+      <section id="Hyperlinkreference-Attribute" class="Box-Contents">
+        <h2 onclick="HyperlinkreferenceAttribute()">HYPERLINKREFERENCE ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------- HYPERLINKREFERENCELANGUAGE ATTRIBUTE ---------------------------------------------------------------->
+      <section id="Hyperlinkreferencelanguage-Attribute" class="Box-Contents">
+        <h2 onclick="HyperlinkreferencelanguageAttribute()">HYPERLINKREFERENCELANGUAGE ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------- HTTP-EQUIVALENT ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="HTTP-Equivalent-Attribute" class="Box-Contents">
+        <h2 onclick="HTTPEquivalentAttribute()">HTTP-EQUIVALENT ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- IDENTIFIER ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Identifier-Attribute" class="Box-Contents">
+        <h2 onclick="IdentifierAttribute()">IDENTIFIER ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- INERT ATTRIBUTE --------------------------------------------------------------------------->
+      <section id="Inert-Attribute" class="Box-Contents">
+        <h2 onclick="InertAttribute()">INERT ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ INPUTMODE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Inputmode-Attribute" class="Box-Contents">
+        <h2 onclick="InputmodeAttribute()">INPUTMODE ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------------- ISMAP ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Ismap-Attribute" class="Box-Contents">
+        <h2 onclick="IsmapAttribute()">ISMAP ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------------- KIND ATTRIBUTE --------------------------------------------------------------------------->
+      <section id="Kind-Attribute" class="Box-Contents">
+        <h2 onclick="KindAttribute()">KIND ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------------- LABEL ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Label-Attribute" class="Box-Contents">
+        <h2 onclick="LabelAttribute()">LABEL ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ LANGUAGE ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Language-Attribute" class="Box-Contents">
+        <h2 onclick="LanguageAttribute()">LANGUAGE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ LIST ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="List-Attribute" class="Box-Contents">
+        <h2 onclick="ListAttribute()">LIST ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- LOOP ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Loop-Attribute" class="Box-Contents">
+        <h2 onclick="LoopAttribute()">LOOP ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------------- LOW ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Low-Attribute" class="Box-Contents">
+        <h2 onclick="LowAttribute()">LOW ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- MAXIMUM ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Maximum-Attribute" class="Box-Contents">
+        <h2 onclick="MaximumAttribute()">MAXIMUM ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------- MAXIMUMLENGTH ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Maximumlength-Attribute" class="Box-Contents">
+        <h2 onclick="MaximumlengthAttribute()">MAXIMUMLENGTH ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ MEDIA ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Media-Attribute" class="Box-Contents">
+        <h2 onclick="MediaAttribute()">MEDIA ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ METHOD ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Method-Attribute" class="Box-Contents">
+        <h2 onclick="MethodAttribute()">METHOD ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- MINIMUM ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Minimum-Attribute" class="Box-Contents">
+        <h2 onclick="MinimumAttribute()">MINIMUM ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- MULTIPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Multiple-Attribute" class="Box-Contents">
+        <h2 onclick="MultipleAttribute()">MULTIPLE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ MUTED ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Muted-Attribute" class="Box-Contents">
+        <h2 onclick="MutedAttribute()">MUTED ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- NAME ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Name-Attribute" class="Box-Contents">
+        <h2 onclick="NameAttribute()">NAME ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- NOVALIDATE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Novalidate-Attribute" class="Box-Contents">
+        <h2 onclick="NovalidateAttribute()">NOVALIDATE ATTRIBUTE</h2>
+      </section>
+
+
+
+
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Example-Attribute" class="Box-Contents">
+        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
       </section>
 
       <section id="HTML-Form" class="Box-Contents">
@@ -3452,15 +4070,6 @@
           <br>
           <div class="Indent-Level1"><code class="Highlighted" onclick="CanvasTag()">&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></div>
           <div class="Indent-Level1"><code class="Highlighted">&lt;script&gt;&lt;/script&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="HorizontalRuleTag()">&lt;hr&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="BreakTag()">&lt;br&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="WordBreakTag()">&lt;wbr&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="DataTag()">&lt;data&gt; <em>MyText</em> &lt;/data&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="DialogTag()">&lt;dialog&gt; <em>MyText</em> &lt;/dialog&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="EmbedTag()">&lt;embed&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="IframeTag()">&lt;iframe&gt;&lt;/iframe&gt;</code></div>
         </div>
       </section>
 
