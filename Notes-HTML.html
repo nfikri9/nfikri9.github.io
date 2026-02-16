@@ -177,8 +177,76 @@
 
         <article>
           <h3>Accessibility</h3>
-          <p>The following elements make the webpage easier to read and help with accessibility.</p>
+          <p>Accessibility is making websites that everyone can understand and interact with, including people with visual, auditory, motor, and cognitive disabilities.</p>
+          <p>The following are group of people that has disabilities: <br>
+             Blindness <br>
+             Low vision <br>
+             Color blindness <br>
+             Deafness <br>
+             Difficulty using keyboards, mice, or touchscreens <br>
+             Attention disorders <br>
+             Memory issues <br>
+             Difficulty speaking or understanding spoken language <br>
+             Sensitivity to flashing lights
+          </p>
+          <p><b>World Wide Web Consortium (W3C)</b> developed a set of international standards that developer can follow to make their websites more accessible
+             and easier to use for people with disabilities.
+          </p> <br>
+
+          <h4>Web Content Accessibility Guidelines (WCAG)</h4>
+          <p>These guidelines are designed with four core principles in mind, known as POUR.</p>
+
+          <h5>[P] Perceivable</h5>
+          <p>Users must be able to perceive the information that developer are presenting.</p>
+          <p>For example, developer can provide alternative text for images, so users who access the website with a screen reader can understand them.</p>
           <p><code>&lt;img alt="<i>MyAlternativeText</i>"&gt;</code>.</p>
+
+          <h5>[O] Operable</h5>
+          <p>Users must be able to interact with the user interface.</p>
+          <p>For example, developer can make sure that all functionality is accessible through the keyboard too, not just the mouse.</p>
+
+          <h5>[U] Understandable</h5>
+          <p>Users must be able to understand the information.</p>
+          <p>For example, developer can avoid complex sentences and use simple language as much as possible.</p>
+
+          <h5>[R] Robust</h5>
+          <p>A wide range of browsers and other tools, including assistive technologies, must be able to interpret the content.</p>
+
+          <p>Using semantic HTML is very helpful for making the website compatible with different browsers and assistive technologies.</p> <br>
+
+          <h4>Screen Readers</h4>
+          <p>Screen readers are assistive technology programs that help blind and visually impaired people use computers and mobile devices.</p>
+          <p>Screen readers are not just tools for the blind and visually impaired to access computers and mobile devices.</p>
+          <p>They empower these individuals to access education, work opportunities, and social media.</p>
+          <p>This ensures digital inclusion and enhances their ability to participate fully in society.</p>
+
+          <h5>Text-to-speech devices</h5>
+          <p>Text-to-speech devices render the text to speech output.</p>
+          <p>Some screen readers even render the text to braille output instead of speech.</p>
+          <p>Other notable features of screen readers are navigation aids and web browsing assistance.</p>
+
+          <p>Screen reader programs are also not only made for the blind and visually impaired.</p>
+          <p>Dyslexic individuals and people with cognitive disabilities also use screen readers.</p>
+
+          <p>Large text and braille keyboards are designed for users with visual disabilities.</p>
+          <p>In Large Text Keyboards, also called Large Print Keyboards, the letters, numbers, and symbols are larger compared to standard keyboards.</p>
+          <p>This design is helpful for people who may find smaller text in the keys difficult to see.</p>
+          <p>Most of them also have enhanced contrast and brightness.</p>
+          <p>A large print keyboard made by the brand MaxiAids has yellow keys with black, big, and bold letters, numbers, and symbols on them.</p>
+          <p>This is helpful for people with low vision.</p>
+          <p>Another keyboard is the black large print keyboard with white print on the keys.</p>
+          <p>This keyboard is also backlit, so users can adjust its brightness to different lighting conditions.</p>
+          <p>While large print keyboards provide visual cues for users with low vision, braille keyboards provide a completely tactile experience for people
+             with more severe vision disabilities, including people who are blind.
+          </p>
+          <p>Braille is a tactile reading and writing system.</p>
+          <p>It consists of raised dots arranged in specific patterns to represent letters, numbers, and punctuation.</p>
+
+          <p>Braille keyboards use this system to help users find the right keys on the keyboard by feeling these patterns with their fingers.</p>
+          <p>The keys have raised dots in patterns that represent letters, numbers and symbols.</p>
+
+          <p>And some keyboards combine both approaches; large fonts and braille patterns in the keys.</p>
+          <p>This is helpful for people with visual disabilities and for people who are learning braille.</p>
         </article>
 
         <br><hr><br>
@@ -186,6 +254,9 @@
         <article>
           <h3>Semantic HTML</h3>
           <p>The semantic meaning of an element refers to what special information that element conveys.</p>
+          <p>It describes the content of the elements, so it's much easier to read, understand, and maintain.</p>
+          <p>Search engines can easily understand the website when developer use semantic HTML.</p>
+          <p>It's also helpful for accessibility purposes, because screen readers need semantic information to describe what's on the web page.</p>
           <p>For example, the semantic meaning of a <code>p</code> element, is a paragraph of text.</p>
           <p>The <code>div</code> element is one of the very few that does not represent semantic HTML.</p>
 
@@ -207,6 +278,13 @@
           <p>Ensure to use correct order in heading levels and never skip the level.</p>
           <p>The <code>h1</code> element is a top-level heading and it should be exist only one per page that come before all of developer's content.</p>
           <p>The <code>h2</code> element is a sub-heading and should be come after <code>h1</code> (it can have multiple <code>h2</code> per page).</p>
+          <p>Use headings in a hierarchy that reflects clear organization.</p>
+          <p>For example, the page title should be an h1, major sections should be introduced with h2 headings, subsections with h3 , and so on, down to h6.</p>
+          <p>Don't skip from h1 to h3, or from h2 to h4, and so on.</p>
+          <p>Use clear and descriptive text that summarizes the content that follows each heading.</p>
+          <p>Don't use a heading in isolation - some content must follow the heading.</p>
+          <p>Use appropriate headings where necessary instead of formatting text to look like headings.</p>
+          <p>Each page should have a single h1 element representing the main topic or title.</p>
           <p>Using the right hierarchy is important for accessibility.</p>
           <p>Assistive technologies, like screen readers, rely on the structure of a web page to determine how to parse and announce that web page to the user.</p>
           <p>Proper structure is also important for SEO.</p>
@@ -215,6 +293,84 @@
           <p>Depending on how incorrect the structure is, the HTML may not even be technically valid.</p>
           <p>When this happens, the web browser has to effectively guess what the developer meant to do.</p>
           <p>And what it guesses might not even be what the developer want at all.</p>
+        </article>
+
+        <br><hr><br>
+
+        <article>
+          <h3>WAI-ARIA</h3>
+          <p>WAI-ARIA stands for Web Accessibility Initiative - Accessible Rich Internet Applications.</p>
+          <p>It's a specification that enhances accessibility for dynamic content and UI (User Interface) components.</p>
+          <p>Note that WCAG and WAI-ARIA are not the same.</p>
+          <p>WCAG provides general guidelines for web accessibility, while WAI-ARIA offers specific rules for making dynamic and interactive content accessible
+             for users of assistive technologies.
+          </p>
+          <p>So, the primary purpose of WAI-ARIA is to improve accessibility for dynamic content and UI components that do not have native HTML equivalents.</p>
+          <p>WAI-ARIA works by introducing a set of attributes developer can add to HTML elements to provide additional semantic information.</p>
+          <p>These attributes are categorized into roles, states, and properties.</p> <br>
+
+          <h4>Role Attribute</h4>
+          <p>ARIA roles specify the semantic meaning of HTML elements.</p>
+          <p>They're essential for making web content accessible to people who use assistive technologies, like screen readers.</p>
+          <p>HTML has semantic and non-semantic elements, based on whether they convey meaning about their content.</p>
+          <p>Many semantic HTML elements already have an ARIA role assigned by default.</p>
+          <p>For example, the button element has a default ARIA role of button.</p>
+          <p>But non-semantic elements don't have a role.</p>
+          <p>For example, screen readers will not know how to interpret the purpose of a div if developer don't specify its role explicitly.</p>
+          <p>Example; <code>&lt;div&gt;Click Me&lt;/div&gt;</code></p>
+          <p>To specify the ARIA role of an element, add the role attribute where value is the name of a role in the ARIA specification.</p>
+          <p>Example; <code>&lt;div role="button"&gt;Click Me&lt;/div&gt;</code></p>
+          <p>By putting <code>role="button"</code> in an element, developer is indicating to assistive technology that the element is a button.</p>
+          <p>Roles do not provide any functionality however.</p>
+          <p>Merely giving this div a role of button will not make it act like a button.</p>
+          <p>To make it look and behave like a button developer would need to use CSS and JavaScript to get the desired result.</p> <br>
+
+          <h5>Document Structure Roles</h5>
+          <p>Document structure roles define the overall structure of the web page.</p>
+          <p>With these roles, assistive technologies can understand the relationships between different sections and help users navigate the content.</p>
+          <p>Examples; toolbar, tooltip, feed, math, presentation, none, note.</p>
+          <p>However, most of the document structure roles are not used in modern web development because browsers already support equivalent semantic HTML elements,
+             which should be prioritized whenever possible.
+          </p>
+          <p>Example; <code>&lt;div role="math" aria-label="x squared + y squared = 3"&gt; x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; = 3 &lt;/div&gt;</code></p> 
+          <p>The aria-label attribute is used to represent the expression.</p> <br>
+
+          <h5>Widget Roles</h5>
+          <p>Widget roles define the purpose and functionality of interactive elements, like scrollbars.</p>
+          <p>Example; scrollbar, searchbox, separator (when focusable), slider, spinbutton, switch, tab, tabpanel, treeitem.</p> <br>
+
+          <h5>Landmark Roles</h5>
+          <p>Landmark roles classify and label the primary sections of a web page.</p>
+          <p>Screen readers use them to provide convenient navigation to important sections of a page.</p>
+          <p>Example; banner, complementary, contentinfo, form, main, navigation, region, search.</p>
+          <p>Each of these roles has a corresponding HTML equivalent, such as header, footer, aside, form, main, nav, section, and search.</p> <br>
+
+          <h5>Live Region Roles</h5>
+          <p>Live region roles define elements with content that will change dynamically.</p>
+          <p>This way, screen readers and other assistive technologies can announce changes to users with visual disabilities.</p>
+          <p>Example; alert, log, marquee, status, and timer.</p> <br>
+
+          <h5>Window Roles</h5>
+          <p>Window roles define sub-windows, like pop up modal dialogues.</p>
+          <p>Example; alertdialog and dialog.</p>
+          <p>Please note that it is now considered a best practice to use the HTML dialog element and its associated JavaScript methods instead of manually creating a dialog</p> <br>
+
+          <h5>Abstract Roles</h5>
+          <p>Abstract roles help organize the document.</p>
+          <p>They're only meant to be used internally by the browser, not by developers, so you should know that they exist but you shouldn't use them
+             on your websites or web applications.
+          </p> <br>
+
+          <h4>Aria-Labelledby Property</h4>
+          <p>The <code>aria-labelledby</code> property lets an element connect to a specific label.</p>
+          <p>Example; <br>
+             <code>
+              &lt;h2 id="header-id"&gt;About Me&lt;/h2&gt; <br>
+              &lt;button id="button-id" aria-labelledby="header-id button-id"&gt;Learn More&lt;/button&gt;
+             </code>
+          </p>
+          <p>This will make the elements understandable and navigable for users of assistive technologies.</p>
+          <p>To get the best out of WAI-ARIA, try to stick with native HTML whenever possible since it generally provides more accessibility out of the box.</p>
         </article>
       </section>
 
@@ -271,7 +427,7 @@
           <li><a onclick="HeadingGroupTag()"><code>&lt;hgroup&gt;</code> <span>Defines a header and related content</span></a></li>
           <li><a onclick="HorizontalRuleTag()"><code>&lt;hr&gt;</code> <span>Defines a thematic change in the content</span></a></li>
           <li><a onclick="HTMLTag()"><code>&lt;html&gt;</code> <span>Defines the root of an HTML document</span></a></li>
-          <li><a onclick="ItalicTag()"><code>&lt;i&gt;</code> <span>Defines a part of text in an alternate voice or mood</span></a></li>
+          <li><a onclick="IdiomaticTag()"><code>&lt;i&gt;</code> <span>Defines a part of text in an alternate voice or mood</span></a></li>
           <li><a onclick="InlineFrameTag()"><code>&lt;iframe&gt;</code> <span>Defines an inline frame</span></a></li>
           <li><a onclick="ImageTag()"><code>&lt;img&gt;</code> <span>Defines an image</span></a></li>
           <li><a onclick="InputTag()"><code>&lt;input&gt;</code> <span>Defines an input control</span></a></li>
@@ -1654,10 +1810,10 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- ITALIC TAG --------------------------------------------------------------------------->
-      <section id="Italic-Tag" class="Box-Contents">
+      <!------------------------------------------------------------------------- IDIOMATIC TAG -------------------------------------------------------------------------->
+      <section id="Idiomatic-Tag" class="Box-Contents">
         <header>
-          <h2 onclick="ItalicTag()">ITALIC ELEMENT</h2>
+          <h2 onclick="IdiomaticTag()">IDIOMATIC ELEMENT</h2>
           <p>The <code>&lt;i&gt;</code> tag defines a part of text in an alternate voice or mood.</p>
           <p>The <code>&lt;i&gt;</code> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.</p>
         </header>
@@ -3250,119 +3406,125 @@
           <li><a onclick="MutedAttribute()"><code>muted</code> <span>Specifies that the audio output of the video should be muted</span></a></li>
           <li><a onclick="NameAttribute()"><code>name</code> <span>Specifies the name of the element</span></a></li>
           <li><a onclick="NovalidateAttribute()"><code>novalidate</code> <span>Specifies that the form should not be validated when submitted</span></a></li>
-          <li><a onclick="example()"><code>onabort</code> <span>Script to be run on abort</span></a></li>
-          <li><a onclick="example()"><code>onafterprint</code> <span>Script to be run after the document is printed</span></a></li>
-          <li><a onclick="example()"><code>onbeforeprint</code> <span>Script to be run before the document is printed</span></a></li>
-          <li><a onclick="example()"><code>onbeforeunload</code> <span>Script to be run when the document is about to be unloaded</span></a></li>
-          <li><a onclick="example()"><code>onblur</code> <span>Script to be run when the element loses focus</span></a></li>
-          <li><a onclick="example()"><code>oncanplay</code> <span>Script to be run when a file is ready to start playing</span></a></li>
-          <li><a onclick="example()"><code>oncanplaythrough</code>
+          <li><a onclick="OnabortAttribute()"><code>onabort</code> <span>Script to be run on abort</span></a></li>
+          <li><a onclick="OnafterprintAttribute()"><code>onafterprint</code> <span>Script to be run after the document is printed</span></a></li>
+          <li><a onclick="OnbeforeprintAttribute()"><code>onbeforeprint</code> <span>Script to be run before the document is printed</span></a></li>
+          <li><a onclick="OnbeforeunloadAttribute()"><code>onbeforeunload</code> <span>Script to be run when the document is about to be unloaded</span></a></li>
+          <li><a onclick="OnblurAttribute()"><code>onblur</code> <span>Script to be run when the element loses focus</span></a></li>
+          <li><a onclick="OncanplayAttribute()"><code>oncanplay</code> <span>Script to be run when a file is ready to start playing</span></a></li>
+          <li><a onclick="OncanplaythroughAttribute()"><code>oncanplaythrough</code>
             <span>Script to be run when a file can be played all the way to the end without pausing for buffering</span></a>
           </li>
-          <li><a onclick="example()"><code>onchange</code> <span>Script to be run when the value of the element is changed</span></a></li>
-          <li><a onclick="example()"><code>onclick</code> <span>Script to be run when the element is being clicked</span></a></li>
-          <li><a onclick="example()"><code>oncontextmenu</code> <span>Script to be run when a context menu is triggered</span></a></li>
-          <li><a onclick="example()"><code>oncopy</code> <span>Script to be run when the content of the element is being copied</span></a></li>
-          <li><a onclick="example()"><code>oncuechange</code> <span>Script to be run when the cue changes in a track element</span></a></li>
-          <li><a onclick="example()"><code>oncut</code> <span>Script to be run when the content of the element is being cut</span></a></li>
-          <li><a onclick="example()"><code>ondblclick</code> <span>Script to be run when the element is being double-clicked</span></a></li>
-          <li><a onclick="example()"><code>ondrag</code> <span>Script to be run when the element is being dragged</span></a></li>
-          <li><a onclick="example()"><code>ondragend</code> <span>Script to be run at the end of a drag operation</span></a></li>
-          <li><a onclick="example()"><code>ondragenter</code> <span>Script to be run when an element has been dragged to a valid drop target</span></a></li>
-          <li><a onclick="example()"><code>ondragleave</code> <span>Script to be run when an element leaves a valid drop target</span></a></li>
-          <li><a onclick="example()"><code>ondragover</code> <span>Script to be run when an element is being dragged over a valid drop target</span></a></li>
-          <li><a onclick="example()"><code>ondragstart</code> <span>Script to be run at the start of a drag operation</span></a></li>
-          <li><a onclick="example()"><code>ondrop</code> <span>Script to be run when dragged element is being dropped</span></a></li>
-          <li><a onclick="example()"><code>ondurationchange</code> <span>Script to be run when the length of the media changes</span></a></li>
-          <li><a onclick="example()"><code>onemptied</code> <span>Script to be run when something bad happens and the file is suddenly unavailable</span></a></li>
-          <li><a onclick="example()"><code>onended</code> <span>Script to be run when the media has reach the end</span></a></li>
-          <li><a onclick="example()"><code>onerror</code> <span>Script to be run when an error occurs</span></a></li>
-          <li><a onclick="example()"><code>onfocus</code> <span>Script to be run when the element gets focus</span></a></li>
-          <li><a onclick="example()"><code>onhashchange</code> <span>Script to be run when there has been changes to the anchor part of the a URL</span></a></li>
-          <li><a onclick="example()"><code>oninput</code> <span>Script to be run when the element gets user input</span></a></li>
-          <li><a onclick="example()"><code>oninvalid</code> <span>Script to be run when the element is invalid</span></a></li>
-          <li><a onclick="example()"><code>onkeydown</code> <span>Script to be run when a user is pressing a key</span></a></li>
-          <li><a onclick="example()"><code>onkeypress</code> <span>Script to be run when a user presses a key</span></a></li>
-          <li><a onclick="example()"><code>onkeyup</code> <span>Script to be run when a user releases a key</span></a></li>
-          <li><a onclick="example()"><code>onload</code> <span>Script to be run when the element is finished loading</span></a></li>
-          <li><a onclick="example()"><code>onloadeddata</code> <span>Script to be run when media data is loaded</span></a></li>
-          <li><a onclick="example()"><code>onloadedmetadata</code> <span>Script to be run when meta data (like dimensions and duration) are loaded</span></a></li>
-          <li><a onclick="example()"><code>onloadstart</code> <span>Script to be run just as the file begins to load before anything is actually loaded</span></a></li>
-          <li><a onclick="example()"><code>onmousedown</code> <span>Script to be run when a mouse button is pressed down on an element</span></a></li>
-          <li><a onclick="example()"><code>onmousemove</code> <span>Script to be run as long as the  mouse pointer is moving over an element</span></a></li>
-          <li><a onclick="example()"><code>onmouseout</code> <span>Script to be run when a mouse pointer moves out of an element</span></a></li>
-          <li><a onclick="example()"><code>onmouseover</code> <span>Script to be run when a mouse pointer moves over an element</span></a></li>
-          <li><a onclick="example()"><code>onmouseup</code> <span>Script to be run when a mouse button is released over an element</span></a></li>
-          <li><a onclick="example()"><code>onmousewheel</code> <span>Script to be run when a mouse wheel is being scrolled over an element</span></a></li>
-          <li><a onclick="example()"><code>onoffline</code> <span>Script to be run when the browser starts to work offline</span></a></li>
-          <li><a onclick="example()"><code>ononline</code> <span>Script to be run when the browser starts to work online</span></a></li>
-          <li><a onclick="example()"><code>onpagehide</code> <span>Script to be run when a user navigates away from a page</span></a></li>
-          <li><a onclick="example()"><code>onpageshow</code> <span>Script to be run when a user navigates to a page</span></a></li>
-          <li><a onclick="example()"><code>onpaste</code> <span>Script to be run when the user pastes some content in an element</span></a></li>
-          <li><a onclick="example()"><code>onpause</code> <span>Script to be run when the media is paused either by the user or programmatically</span></a></li>
-          <li><a onclick="example()"><code>onplay</code> <span>Script to be run when the media has started playing</span></a></li>
-          <li><a onclick="example()"><code>onplaying</code> <span>Script to be run when the media has started playing</span></a></li>
-          <li><a onclick="example()"><code>onpopstate</code> <span>Script to be run when the window's history changes.</span></a></li>
-          <li><a onclick="example()"><code>onprogress</code> <span>Script to be run when the browser is in the process of getting the media data</span></a></li>
-          <li><a onclick="example()"><code>onratechange</code> <span>Script to be run each time the playback rate changes</span></a></li>
-          <li><a onclick="example()"><code>onreset</code> <span>Script to be run when a reset button in a form is clicked</span></a></li>
-          <li><a onclick="example()"><code>onresize</code> <span>Script to be run when the browser window is being resized</span></a></li>
-          <li><a onclick="example()"><code>onscroll</code> <span>Script to be run when an element's scrollbar is being scrolled</span></a></li>
-          <li><a onclick="example()"><code>onsearch</code> <span>Script to be run when the user writes something in a search field</span></a></li>
-          <li><a onclick="example()"><code>onseeked</code> <span>Script to be run when the seeking attribute is set to false indicating that seeking has ended</span></a></li>
-          <li><a onclick="example()"><code>onseeking</code> <span>Script to be run when the seeking attribute is set to true indicating that seeking is active</span></a></li>
-          <li><a onclick="example()"><code>onselect</code> <span>Script to be run when the element gets selected</span></a></li>
-          <li><a onclick="example()"><code>onstalled</code> <span>Script to be run when the browser is unable to fetch the media data for whatever reason</span></a></li>
-          <li><a onclick="example()"><code>onstorage</code> <span>Script to be run when a Web Storage area is updated</span></a></li>
-          <li><a onclick="example()"><code>onsubmit</code> <span>Script to be run when a form is submitted</span></a></li>
-          <li><a onclick="example()"><code>onsuspend</code>
+          <li><a onclick="OnchangeAttribute()"><code>onchange</code> <span>Script to be run when the value of the element is changed</span></a></li>
+          <li><a onclick="OnclickAttribute()"><code>onclick</code> <span>Script to be run when the element is being clicked</span></a></li>
+          <li><a onclick="OncontextmenuAttribute()"><code>oncontextmenu</code> <span>Script to be run when a context menu is triggered</span></a></li>
+          <li><a onclick="OncopyAttribute()"><code>oncopy</code> <span>Script to be run when the content of the element is being copied</span></a></li>
+          <li><a onclick="OncuechangeAttribute()"><code>oncuechange</code> <span>Script to be run when the cue changes in a track element</span></a></li>
+          <li><a onclick="OncutAttribute()"><code>oncut</code> <span>Script to be run when the content of the element is being cut</span></a></li>
+          <li><a onclick="OndoubleclickAttribute()"><code>ondblclick</code> <span>Script to be run when the element is being double-clicked</span></a></li>
+          <li><a onclick="OndragAttribute()"><code>ondrag</code> <span>Script to be run when the element is being dragged</span></a></li>
+          <li><a onclick="OndragendAttribute()"><code>ondragend</code> <span>Script to be run at the end of a drag operation</span></a></li>
+          <li><a onclick="OndragenterAttribute()"><code>ondragenter</code> <span>Script to be run when an element has been dragged to a valid drop target</span></a></li>
+          <li><a onclick="OndragleaveAttribute()"><code>ondragleave</code> <span>Script to be run when an element leaves a valid drop target</span></a></li>
+          <li><a onclick="OndragoverAttribute()"><code>ondragover</code> <span>Script to be run when an element is being dragged over a valid drop target</span></a></li>
+          <li><a onclick="OndragstartAttribute()"><code>ondragstart</code> <span>Script to be run at the start of a drag operation</span></a></li>
+          <li><a onclick="OndropAttribute()"><code>ondrop</code> <span>Script to be run when dragged element is being dropped</span></a></li>
+          <li><a onclick="OndurationchangeAttribute()"><code>ondurationchange</code> <span>Script to be run when the length of the media changes</span></a></li>
+          <li><a onclick="OnemptiedAttribute()"><code>onemptied</code> <span>Script to be run when something bad happens and the file is suddenly unavailable</span></a></li>
+          <li><a onclick="OnendedAttribute()"><code>onended</code> <span>Script to be run when the media has reach the end</span></a></li>
+          <li><a onclick="OnerrorAttribute()"><code>onerror</code> <span>Script to be run when an error occurs</span></a></li>
+          <li><a onclick="OnfocusAttribute()"><code>onfocus</code> <span>Script to be run when the element gets focus</span></a></li>
+          <li><a onclick="OnhashchangeAttribute()"><code>onhashchange</code> <span>Script to be run when there has been changes to the anchor part of the a URL</span></a></li>
+          <li><a onclick="OninputAttribute()"><code>oninput</code> <span>Script to be run when the element gets user input</span></a></li>
+          <li><a onclick="OninvalidAttribute()"><code>oninvalid</code> <span>Script to be run when the element is invalid</span></a></li>
+          <li><a onclick="OnkeydownAttribute()"><code>onkeydown</code> <span>Script to be run when a user is pressing a key</span></a></li>
+          <li><a onclick="OnkeypressAttribute()"><code>onkeypress</code> <span>Script to be run when a user presses a key</span></a></li>
+          <li><a onclick="OnkeyupAttribute()"><code>onkeyup</code> <span>Script to be run when a user releases a key</span></a></li>
+          <li><a onclick="OnloadAttribute()"><code>onload</code> <span>Script to be run when the element is finished loading</span></a></li>
+          <li><a onclick="OnloadeddataAttribute()"><code>onloadeddata</code> <span>Script to be run when media data is loaded</span></a></li>
+          <li><a onclick="OnloadedmetadataAttribute()"><code>onloadedmetadata</code> <span>Script to be run when meta data (like dimensions and duration) are loaded</span></a></li>
+          <li><a onclick="OnloadstartAttribute()"><code>onloadstart</code> <span>Script to be run just as the file begins to load before anything is actually loaded</span></a></li>
+          <li><a onclick="OnmousedownAttribute()"><code>onmousedown</code> <span>Script to be run when a mouse button is pressed down on an element</span></a></li>
+          <li><a onclick="OnmousemoveAttribute()"><code>onmousemove</code> <span>Script to be run as long as the  mouse pointer is moving over an element</span></a></li>
+          <li><a onclick="OnmouseoutAttribute()"><code>onmouseout</code> <span>Script to be run when a mouse pointer moves out of an element</span></a></li>
+          <li><a onclick="OnmouseoverAttribute()"><code>onmouseover</code> <span>Script to be run when a mouse pointer moves over an element</span></a></li>
+          <li><a onclick="OnmouseupAttribute()"><code>onmouseup</code> <span>Script to be run when a mouse button is released over an element</span></a></li>
+          <li><a onclick="OnmousewheelAttribute()"><code>onmousewheel</code> <span>Script to be run when a mouse wheel is being scrolled over an element</span></a></li>
+          <li><a onclick="OnofflineAttribute()"><code>onoffline</code> <span>Script to be run when the browser starts to work offline</span></a></li>
+          <li><a onclick="OnonlineAttribute()"><code>ononline</code> <span>Script to be run when the browser starts to work online</span></a></li>
+          <li><a onclick="OnpagehideAttribute()"><code>onpagehide</code> <span>Script to be run when a user navigates away from a page</span></a></li>
+          <li><a onclick="OnpageshowAttribute()"><code>onpageshow</code> <span>Script to be run when a user navigates to a page</span></a></li>
+          <li><a onclick="OnpasteAttribute()"><code>onpaste</code> <span>Script to be run when the user pastes some content in an element</span></a></li>
+          <li><a onclick="OnpauseAttribute()"><code>onpause</code> <span>Script to be run when the media is paused either by the user or programmatically</span></a></li>
+          <li><a onclick="OnplayAttribute()"><code>onplay</code> <span>Script to be run when the media has started playing</span></a></li>
+          <li><a onclick="OnplayingAttribute()"><code>onplaying</code> <span>Script to be run when the media has started playing</span></a></li>
+          <li><a onclick="OnpopstateAttribute()"><code>onpopstate</code> <span>Script to be run when the window's history changes.</span></a></li>
+          <li><a onclick="OnprogressAttribute()"><code>onprogress</code> <span>Script to be run when the browser is in the process of getting the media data</span></a></li>
+          <li><a onclick="OnratechangeAttribute()"><code>onratechange</code> <span>Script to be run each time the playback rate changes</span></a></li>
+          <li><a onclick="OnresetAttribute()"><code>onreset</code> <span>Script to be run when a reset button in a form is clicked</span></a></li>
+          <li><a onclick="OnresizeAttribute()"><code>onresize</code> <span>Script to be run when the browser window is being resized</span></a></li>
+          <li><a onclick="OnscrollAttribute()"><code>onscroll</code> <span>Script to be run when an element's scrollbar is being scrolled</span></a></li>
+          <li><a onclick="OnseacrhAttribute()"><code>onsearch</code> <span>Script to be run when the user writes something in a search field</span></a></li>
+          <li><a onclick="OnseekedAttribute()"><code>onseeked</code> <span>Script to be run when the seeking attribute is set to false indicating that seeking has ended</span></a></li>
+          <li><a onclick="OnseekingAttribute()"><code>onseeking</code> <span>Script to be run when the seeking attribute is set to true indicating that seeking is active</span></a></li>
+          <li><a onclick="OnselectAttribute()"><code>onselect</code> <span>Script to be run when the element gets selected</span></a></li>
+          <li><a onclick="OnstalledAttribute()"><code>onstalled</code> <span>Script to be run when the browser is unable to fetch the media data for whatever reason</span></a></li>
+          <li><a onclick="OnstorageAttribute()"><code>onstorage</code> <span>Script to be run when a Web Storage area is updated</span></a></li>
+          <li><a onclick="OnsubmitAttribute()"><code>onsubmit</code> <span>Script to be run when a form is submitted</span></a></li>
+          <li><a onclick="OnsuspendAttribute()"><code>onsuspend</code>
             <span>Script to be run when fetching the media data is stopped before it is completely loaded for whatever reason</span></a>
           </li>
-          <li><a onclick="example()"><code>ontimeupdate</code> <span>Script to be run when the playing position has changed</span></a></li>
-          <li><a onclick="example()"><code>ontoggle</code> <span>Script to be run when the user opens or closes the details element</span></a></li>
-          <li><a onclick="example()"><code>onunload</code> <span>Script to be run when a page has unloaded (or the browser window has been closed)</span></a></li>
-          <li><a onclick="example()"><code>onvolumechange</code> <span>Script to be run each time the volume of a video/audio has been changed</span></a></li>
-          <li><a onclick="example()"><code>onwaiting</code> <span>Script to be run when the media has paused but is expected to resume</span></a></li>
-          <li><a onclick="example()"><code>onwheel</code> <span>Script to be run when the mouse wheel rolls up or down over an element</span></a></li>
-          <li><a onclick="example()"><code>open</code> <span>Specifies that the details should be visible (open) to the user</span></a></li>
-          <li><a onclick="example()"><code>optimum</code> <span>Specifies what value is the optimal value for the gauge</span></a></li>
-          <li><a onclick="example()"><code>pattern</code> <span>Specifies a regular expression that an input element's value is checked against</span></a></li>
-          <li><a onclick="example()"><code>placeholder</code> <span>Specifies a short hint that describes the expected value of the element</span></a></li>
-          <li><a onclick="example()"><code>popover</code> <span>Specifies a popover element</span></a></li>
-          <li><a onclick="example()"><code>popovertarget</code> <span>Specifies which popover element to invoked</span></a></li>
-          <li><a onclick="example()"><code>popovertargetaction</code> <span>Specifies what happens to the popover element when the button is clicked</span></a></li>
-          <li><a onclick="example()"><code>poster</code> <span>Specifies an image to be shown while the video is downloading, or until the user hits the play button</span></a></li>
-          <li><a onclick="example()"><code>preload</code> <span>Specifies if and how the author thinks the audio/video should be loaded when the page loads</span></a></li>
-          <li><a onclick="example()"><code>readonly</code> <span>Specifies that the element is read-only</span></a></li>
-          <li><a onclick="example()"><code>rel</code> <span>Specifies the relationship between the current document and the linked document</span></a></li>
-          <li><a onclick="example()"><code>required</code> <span>Specifies that the element must be filled out before submitting the form</span></a></li>
-          <li><a onclick="example()"><code>reversed</code> <span>Specifies that the list order should be descending (9,8,7...)</span></a></li>
-          <li><a onclick="example()"><code>rows</code> <span>Specifies the visible number of lines in a text area</span></a></li>
-          <li><a onclick="example()"><code>rowspan</code> <span>Specifies the number of rows a table cell should span</span></a></li>
-          <li><a onclick="example()"><code>sandbox</code> <span>Enables an extra set of restrictions for the content in an iframe</span></a></li>
-          <li><a onclick="example()"><code>scope</code> <span>Specifies whether a header cell is a header for a column, row, or group of columns or rows</span></a></li>
-          <li><a onclick="example()"><code>selected</code> <span>Specifies that an option should be pre-selected when the page loads</span></a></li>
-          <li><a onclick="example()"><code>shape</code> <span>Specifies the shape of the area</span></a></li>
-          <li><a onclick="example()"><code>size</code> <span>Specifies the width, in characters (for input) or specifies the number of visible options (for select)</span></a></li>
-          <li><a onclick="example()"><code>sizes</code> <span>Specifies the size of the linked resource</span></a></li>
-          <li><a onclick="example()"><code>span</code> <span>Specifies the number of columns to span</span></a></li>
-          <li><a onclick="example()"><code>spellcheck</code> <span>Specifies whether the element is to have its spelling and grammar checked or not</span></a></li>
-          <li><a onclick="example()"><code>src</code> <span>Specifies the URL of the media file</span></a></li>
-          <li><a onclick="example()"><code>srcdoc</code> <span>Specifies the HTML content of the page to show in the iframe</span></a></li>
-          <li><a onclick="example()"><code>srclang</code> <span>Specifies the language of the track text data</span></a></li>
-          <li><a onclick="example()"><code>srcset</code> <span>Specifies the URL of the image to use in different situations</span></a></li>
-          <li><a onclick="example()"><code>start</code> <span>Specifies the start value of an ordered list</span></a></li>
-          <li><a onclick="example()"><code>step</code> <span>Specifies the legal number intervals for an input field</span></a></li>
-          <li><a onclick="example()"><code>style</code> <span>Specifies an inline CSS style for an element</span></a></li>
-          <li><a onclick="example()"><code>tabindex</code> <span>Specifies the tabbing order of an element</span></a></li>
-          <li><a onclick="example()"><code>target</code> <span>Specifies the target for where to open the linked document or where to submit the form</span></a></li>
-          <li><a onclick="example()"><code>title</code> <span>Specifies extra information about an element</span></a></li>
-          <li><a onclick="example()"><code>translate</code> <span>Specifies whether the content of an element should be translated or not</span></a></li>
-          <li><a onclick="example()"><code>type</code> <span>Specifies the type of element</span></a></li>
-          <li><a onclick="example()"><code>usemap</code> <span>Specifies an image as a client-side image map</span></a></li>
-          <li><a onclick="example()"><code>value</code> <span>Specifies the value of the element</span></a></li>
-          <li><a onclick="example()"><code>width</code> <span>Specifies the width of the element</span></a></li>
-          <li><a onclick="example()"><code>wrap</code> <span>Specifies how the text in a text area is to be wrapped when submitted in a form</span></a></li>
+          <li><a onclick="OntimeupdateAttribute()"><code>ontimeupdate</code> <span>Script to be run when the playing position has changed</span></a></li>
+          <li><a onclick="OntoggleAttribute()"><code>ontoggle</code> <span>Script to be run when the user opens or closes the details element</span></a></li>
+          <li><a onclick="OnunloadAttribute()"><code>onunload</code> <span>Script to be run when a page has unloaded (or the browser window has been closed)</span></a></li>
+          <li><a onclick="OnvolumechangeAttribute()"><code>onvolumechange</code> <span>Script to be run each time the volume of a video/audio has been changed</span></a></li>
+          <li><a onclick="OnwaitingAttribute()"><code>onwaiting</code> <span>Script to be run when the media has paused but is expected to resume</span></a></li>
+          <li><a onclick="OnwheelAttribute()"><code>onwheel</code> <span>Script to be run when the mouse wheel rolls up or down over an element</span></a></li>
+          <li><a onclick="OpenAttribute()"><code>open</code> <span>Specifies that the details should be visible (open) to the user</span></a></li>
+          <li><a onclick="OptimumAttribute()"><code>optimum</code> <span>Specifies what value is the optimal value for the gauge</span></a></li>
+          <li><a onclick="PatternAttribute()"><code>pattern</code> <span>Specifies a regular expression that an input element's value is checked against</span></a></li>
+          <li><a onclick="PlaceholderAttribute()"><code>placeholder</code> <span>Specifies a short hint that describes the expected value of the element</span></a></li>
+          <li><a onclick="PopoverAttribute()"><code>popover</code> <span>Specifies a popover element</span></a></li>
+          <li><a onclick="PopovertargetAttribute()"><code>popovertarget</code> <span>Specifies which popover element to invoked</span></a></li>
+          <li><a onclick="PopovertargetactionAttribute()"><code>popovertargetaction</code>
+            <span>Specifies what happens to the popover element when the button is clicked</span></a>
+          </li>
+          <li><a onclick="PosterAttribute()"><code>poster</code>
+            <span>Specifies an image to be shown while the video is downloading, or until the user hits the play button</span></a>
+          </li>
+          <li><a onclick="PreloadAttribute()"><code>preload</code> <span>Specifies if and how the author thinks the audio/video should be loaded when the page loads</span></a></li>
+          <li><a onclick="ReadonlyAttribute()"><code>readonly</code> <span>Specifies that the element is read-only</span></a></li>
+          <li><a onclick="RelationAttribute()"><code>rel</code> <span>Specifies the relationship between the current document and the linked document</span></a></li>
+          <li><a onclick="RequiredAttribute()"><code>required</code> <span>Specifies that the element must be filled out before submitting the form</span></a></li>
+          <li><a onclick="ReversedAttribute()"><code>reversed</code> <span>Specifies that the list order should be descending (9,8,7...)</span></a></li>
+          <li><a onclick="RowsAttribute()"><code>rows</code> <span>Specifies the visible number of lines in a text area</span></a></li>
+          <li><a onclick="RowspanAttribute()"><code>rowspan</code> <span>Specifies the number of rows a table cell should span</span></a></li>
+          <li><a onclick="SandboxAttribute()"><code>sandbox</code> <span>Enables an extra set of restrictions for the content in an iframe</span></a></li>
+          <li><a onclick="ScopeAttribute()"><code>scope</code> <span>Specifies whether a header cell is a header for a column, row, or group of columns or rows</span></a></li>
+          <li><a onclick="SelectedAttribute()"><code>selected</code> <span>Specifies that an option should be pre-selected when the page loads</span></a></li>
+          <li><a onclick="ShapeAttribute()"><code>shape</code> <span>Specifies the shape of the area</span></a></li>
+          <li><a onclick="SizeAttribute()"><code>size</code>
+            <span>Specifies the width, in characters (for input) or specifies the number of visible options (for select)</span></a>
+          </li>
+          <li><a onclick="SizesAttribute()"><code>sizes</code> <span>Specifies the size of the linked resource</span></a></li>
+          <li><a onclick="SpanAttribute()"><code>span</code> <span>Specifies the number of columns to span</span></a></li>
+          <li><a onclick="SpellcheckAttribute()"><code>spellcheck</code> <span>Specifies whether the element is to have its spelling and grammar checked or not</span></a></li>
+          <li><a onclick="SourceAttribute()"><code>src</code> <span>Specifies the URL of the media file</span></a></li>
+          <li><a onclick="SourcedocumentAttribute()"><code>srcdoc</code> <span>Specifies the HTML content of the page to show in the iframe</span></a></li>
+          <li><a onclick="SourcelanguageAttribute()"><code>srclang</code> <span>Specifies the language of the track text data</span></a></li>
+          <li><a onclick="SourcesetAttribute()"><code>srcset</code> <span>Specifies the URL of the image to use in different situations</span></a></li>
+          <li><a onclick="StartAttribute()"><code>start</code> <span>Specifies the start value of an ordered list</span></a></li>
+          <li><a onclick="StepAttribute()"><code>step</code> <span>Specifies the legal number intervals for an input field</span></a></li>
+          <li><a onclick="StyleAttribute()"><code>style</code> <span>Specifies an inline CSS style for an element</span></a></li>
+          <li><a onclick="TabindexAttribute()"><code>tabindex</code> <span>Specifies the tabbing order of an element</span></a></li>
+          <li><a onclick="TargetAttribute()"><code>target</code> <span>Specifies the target for where to open the linked document or where to submit the form</span></a></li>
+          <li><a onclick="TitleAttribute()"><code>title</code> <span>Specifies extra information about an element</span></a></li>
+          <li><a onclick="TranslateAttribute()"><code>translate</code> <span>Specifies whether the content of an element should be translated or not</span></a></li>
+          <li><a onclick="TypeAttribute()"><code>type</code> <span>Specifies the type of element</span></a></li>
+          <li><a onclick="UsemapAttribute()"><code>usemap</code> <span>Specifies an image as a client-side image map</span></a></li>
+          <li><a onclick="ValueAttribute()"><code>value</code> <span>Specifies the value of the element</span></a></li>
+          <li><a onclick="WidthAttribute()"><code>width</code> <span>Specifies the width of the element</span></a></li>
+          <li><a onclick="WrapAttribute()"><code>wrap</code> <span>Specifies how the text in a text area is to be wrapped when submitted in a form</span></a></li>
         </ul>
       </section>
 
@@ -3666,268 +3828,549 @@
         <h2 onclick="NovalidateAttribute()">NOVALIDATE ATTRIBUTE</h2>
       </section>
 
-
-
-
-
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONABORT ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onabort-Attribute" class="Box-Contents">
+        <h2 onclick="OnabortAttribute()">ONABORT ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONAFTERPRINT ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Onafterprint-Attribute" class="Box-Contents">
+        <h2 onclick="OnafterprintAttribute()">ONAFTERPRINT ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------- ONBEFOREPRINT ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Onbeforeprint-Attribute" class="Box-Contents">
+        <h2 onclick="OnbeforeprintAttribute()">ONBEFOREPRINT ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------- ONBEFOREUNLOAD ATTRIBUTE --------------------------------------------------------------------->
+      <section id="Onbeforeunload-Attribute" class="Box-Contents">
+        <h2 onclick="OnbeforeunloadAttribute()">ONBEFOREUNLOAD ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------------ ONBLUR ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onblur-Attribute" class="Box-Contents">
+        <h2 onclick="OnblurAttribute()">ONBLUR ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONCANPLAY ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Oncanplay-Attribute" class="Box-Contents">
+        <h2 onclick="OncanplayAttribute()">ONCANPLAY ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------ ONCANPLAYTRHOUGH ATTRIBUTE -------------------------------------------------------------------->
+      <section id="Oncanplaythrough-Attribute" class="Box-Contents">
+        <h2 onclick="OncanplaythroughAttribute()">ONCANPLAYTHROUGH ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!---------------------------------------------------------------------- ONCHANGE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onchange-Attribute" class="Box-Contents">
+        <h2 onclick="OnchangeAttribute()">ONCHANGE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONCLICK ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onclick-Attribute" class="Box-Contents">
+        <h2 onclick="OnclickAttribute()">ONCLICK ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------- ONCONTEXTMENU ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Oncontextmenu-Attribute" class="Box-Contents">
+        <h2 onclick="OncontextmenuAttribute()">ONCONTEXTMENU ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONCOPY ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Oncopy-Attribute" class="Box-Contents">
+        <h2 onclick="OncopyAttribute()">ONCOPY ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONCUECHANGE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Oncuechange-Attribute" class="Box-Contents">
+        <h2 onclick="OncuechangeAttribute()">ONCUECHANGE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONCUT ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Oncut-Attribute" class="Box-Contents">
+        <h2 onclick="OncutAttribute()">ONCUT ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------- ONDOUBLECLICK ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Ondoubleclick-Attribute" class="Box-Contents">
+        <h2 onclick="OndoubleclickAttribute()">ONDOUBLECLICK ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------------ ONDRAG ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Ondrag-Attribute" class="Box-Contents">
+        <h2 onclick="OndragAttribute()">ONDRAG ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONDRAGEND ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Ondragend-Attribute" class="Box-Contents">
+        <h2 onclick="OndragendAttribute()">ONDRAGEND ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONDRAGENTER ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Ondragenter-Attribute" class="Box-Contents">
+        <h2 onclick="OndragenterAttribute()">ONDRAGENTER ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONDRAGLEAVE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Ondragleave-Attribute" class="Box-Contents">
+        <h2 onclick="OndragleaveAttribute()">ONDRAGLEAVE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONDRAGOVER ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Ondragover-Attribute" class="Box-Contents">
+        <h2 onclick="OndragoverAttribute()">ONDRAGOVER ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONDRAGSTART ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Ondragstart-Attribute" class="Box-Contents">
+        <h2 onclick="OndragstartAttribute()">ONDRAGSTART ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------------ ONDROP ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Ondrop-Attribute" class="Box-Contents">
+        <h2 onclick="OndropAttribute()">ONDROP ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------ ONDURATIONCHANGE ATTRIBUTE -------------------------------------------------------------------->
+      <section id="Ondurationchange-Attribute" class="Box-Contents">
+        <h2 onclick="OndurationchangeAttribute()">ONDURATIONCHANGE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONEMPTIED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onemptied-Attribute" class="Box-Contents">
+        <h2 onclick="OnemptiedAttribute()">ONEMPTIED ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONENDED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onended-Attribute" class="Box-Contents">
+        <h2 onclick="OnendedAttribute()">ONENDED ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONERROR ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onerror-Attribute" class="Box-Contents">
+        <h2 onclick="OnerrorAttribute()">ONERROR ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONFOCUS ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onfocus-Attribute" class="Box-Contents">
+        <h2 onclick="OnfocusAttribute()">ONFOCUS ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONHASHCHANGE ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Onhashchange-Attribute" class="Box-Contents">
+        <h2 onclick="OnhashchangeAttribute()">ONHASHCHANGE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONINPUT ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Oninput-Attribute" class="Box-Contents">
+        <h2 onclick="OninputAttribute()">ONINPUT ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONINVALID ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Oninvalid-Attribute" class="Box-Contents">
+        <h2 onclick="OninvalidAttribute()">ONINVALID ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!---------------------------------------------------------------------- ONKEYDOWN ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onkeydown-Attribute" class="Box-Contents">
+        <h2 onclick="OnkeydownAttribute()">ONKEYDOWN ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONKEYPRESS ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onkeypress-Attribute" class="Box-Contents">
+        <h2 onclick="OnkeypressAttribute()">ONKEYPRESS ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONKEYUP ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onkeyup-Attribute" class="Box-Contents">
+        <h2 onclick="OnkeyupAttribute()">ONKEYUP ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------------ ONLOAD ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onload-Attribute" class="Box-Contents">
+        <h2 onclick="OnloadAttribute()">ONLOAD ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONLOADEDDATA ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Onloadeddata-Attribute" class="Box-Contents">
+        <h2 onclick="OnloadeddataAttribute()">ONLOADEDDATA ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------ ONLOADEDMETADATA ATTRIBUTE -------------------------------------------------------------------->
+      <section id="Onloadedmetadata-Attribute" class="Box-Contents">
+        <h2 onclick="OnloadedmetadataAttribute()">ONLOADEDMETADATA ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONLOADSTART ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onloadstart-Attribute" class="Box-Contents">
+        <h2 onclick="OnloadstartAttribute()">ONLOADSTART ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONMOUSEDOWN ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Onmousedown-Attribute" class="Box-Contents">
+        <h2 onclick="OnmousedownAttribute()">ONMOUSEDOWN ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONMOUSEMOVE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onmousemove-Attribute" class="Box-Contents">
+        <h2 onclick="OnmousemoveAttribute()">ONMOUSEMOVE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONMOUSEOUT ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onmouseout-Attribute" class="Box-Contents">
+        <h2 onclick="OnmouseoutAttribute()">ONMOUSEOUT ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONMOUSEOVER ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onmouseover-Attribute" class="Box-Contents">
+        <h2 onclick="OnmouseoverAttribute()">ONMOUSEOVER ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!---------------------------------------------------------------------- ONMOUSEUP ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onmouseup-Attribute" class="Box-Contents">
+        <h2 onclick="OnmouseupAttribute()">ONMOUSEUP ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!-------------------------------------------------------------------- ONMOUSEWHEEL ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Onmousewheel-Attribute" class="Box-Contents">
+        <h2 onclick="OnmousewheelAttribute()">ONMOUSEWHEEL ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!---------------------------------------------------------------------- ONOFFLINE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onoffline-Attribute" class="Box-Contents">
+        <h2 onclick="OnofflineAttribute()">ONOFFLINE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!---------------------------------------------------------------------- ONONLINE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Ononline-Attribute" class="Box-Contents">
+        <h2 onclick="OnonlineAttribute()">ONONLINE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONPAGEHIDE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onpagehide-Attribute" class="Box-Contents">
+        <h2 onclick="OnpagehideAttribute()">ONPAGEHIDE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONPAGESHOW ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onpageshow-Attribute" class="Box-Contents">
+        <h2 onclick="OnpageshowAttribute()">ONPAGESHOW ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONPASTE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onpaste-Attribute" class="Box-Contents">
+        <h2 onclick="OnpasteAttribute()">ONPASTE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!----------------------------------------------------------------------- ONPAUSE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onpause-Attribute" class="Box-Contents">
+        <h2 onclick="OnpauseAttribute()">ONPAUSE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!------------------------------------------------------------------------ ONPLAY ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onplay-Attribute" class="Box-Contents">
+        <h2 onclick="OnplayAttribute()">ONPLAY ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONPLAYING ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onplaying-Attribute" class="Box-Contents">
+        <h2 onclick="OnplayingAttribute()">ONPLAYING ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONPOPSTATE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onpopstate-Attribute" class="Box-Contents">
+        <h2 onclick="OnpopstateAttribute()">ONPOPSTATE ATTRIBUTE</h2>
       </section>
 
-      <!----------------------------------------------------------------------- EXAMPLE ATTRIBUTE ------------------------------------------------------------------------>
-      <section id="Example-Attribute" class="Box-Contents">
-        <h2 onclick="exampleAttribute()">EXAMPLE ATTRIBUTE</h2>
+      <!--------------------------------------------------------------------- ONPROGRESS ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onprogress-Attribute" class="Box-Contents">
+        <h2 onclick="OnprogressAttribute()">ONPROGRESS ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------- ONRATECHANGE ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Onratechange-Attribute" class="Box-Contents">
+        <h2 onclick="OnratechangeAttribute()">ONRATECHANGE ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- ONRESET ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onreset-Attribute" class="Box-Contents">
+        <h2 onclick="OnresetAttribute()">ONRESET ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONRESIZE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onresize-Attribute" class="Box-Contents">
+        <h2 onclick="OnresizeAttribute()">ONRESIZE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONSCROLL ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onscroll-Attribute" class="Box-Contents">
+        <h2 onclick="OnscrollAttribute()">ONSCROLL ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONSEARCH ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onsearch-Attribute" class="Box-Contents">
+        <h2 onclick="OnseacrhAttribute()">ONSEARCH ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONSEEKED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onseeked-Attribute" class="Box-Contents">
+        <h2 onclick="OnseekedAttribute()">ONSEEKED ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- ONSEEKING ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onseeking-Attribute" class="Box-Contents">
+        <h2 onclick="OnseekingAttribute()">ONSEEKING ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONSELECT ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onselect-Attribute" class="Box-Contents">
+        <h2 onclick="OnselectAttribute()">ONSELECT ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- ONSTALLED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onstalled-Attribute" class="Box-Contents">
+        <h2 onclick="OnstalledAttribute()">ONSTALLED ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- ONSTORAGE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onstorage-Attribute" class="Box-Contents">
+        <h2 onclick="OnstorageAttribute()">ONSTORAGE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONSUBMIT ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onsubmit-Attribute" class="Box-Contents">
+        <h2 onclick="OnsubmitAttribute()">ONSUBMIT ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONSUSPEND ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Onsuspend-Attribute" class="Box-Contents">
+        <h2 onclick="OnsuspendAttribute()">ONSUSPEND ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------- ONTIMEUPDATE ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Ontimeupdate-Attribute" class="Box-Contents">
+        <h2 onclick="OntimeupdateAttribute()">ONTIMEUPDATE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONTOGGLE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Ontoggle-Attribute" class="Box-Contents">
+        <h2 onclick="OntoggleAttribute()">ONTOGGLE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- ONUNLOAD ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onunload-Attribute" class="Box-Contents">
+        <h2 onclick="OnunloadAttribute()">ONUNLOAD ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------- ONVOLUMECHANGE ATTRIBUTE --------------------------------------------------------------------->
+      <section id="Onvolumechange-Attribute" class="Box-Contents">
+        <h2 onclick="OnvolumechangeAttribute()">ONVOLUMECHANGE ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- ONWAITING ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onwaiting-Attribute" class="Box-Contents">
+        <h2 onclick="OnwaitingAttribute()">ONWAITING ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- ONWHEEL ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Onwheel-Attribute" class="Box-Contents">
+        <h2 onclick="OnwheelAttribute()">ONWHEEL ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- OPEN ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Open-Attribute" class="Box-Contents">
+        <h2 onclick="OpenAttribute()">OPEN ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- OPTIMUM ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Optimum-Attribute" class="Box-Contents">
+        <h2 onclick="OptimumAttribute()">OPTIMUM ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- PATTERN ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Pattern-Attribute" class="Box-Contents">
+        <h2 onclick="PatternAttribute()">PATTERN ATTRIBUTE</h2>
+      </section>
+
+      <!-------------------------------------------------------------------- PLACEHOLDER ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Placeholder-Attribute" class="Box-Contents">
+        <h2 onclick="PlaceholderAttribute()">PLACEHOLDER ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- POPOVER ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Popover-Attribute" class="Box-Contents">
+        <h2 onclick="PopoverAttribute()">POPOVER ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------- POPOVERTARGET ATTRIBUTE ---------------------------------------------------------------------->
+      <section id="Popovertarget-Attribute" class="Box-Contents">
+        <h2 onclick="PopovertargetAttribute()">POPOVERTARGET ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------- POPOVERTARGETACTION ATTRIBUTE ------------------------------------------------------------------->
+      <section id="Popovertargetaction-Attribute" class="Box-Contents">
+        <h2 onclick="PopovertargetactionAttribute()">POPOVERTARGETACTION ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ POSTER ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Poster-Attribute" class="Box-Contents">
+        <h2 onclick="PosterAttribute()">POSTER ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- PRELOAD ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Preload-Attribute" class="Box-Contents">
+        <h2 onclick="PreloadAttribute()">PRELOAD ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- READONLY ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Readonly-Attribute" class="Box-Contents">
+        <h2 onclick="ReadonlyAttribute()">READONLY ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- RELATION ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Relation-Attribute" class="Box-Contents">
+        <h2 onclick="RelationAttribute()">RELATION ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- REQUIRED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Required-Attribute" class="Box-Contents">
+        <h2 onclick="RequiredAttribute()">REQUIRED ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- REVERSED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Reversed-Attribute" class="Box-Contents">
+        <h2 onclick="ReversedAttribute()">REVERSED ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- ROWS ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Rows-Attribute" class="Box-Contents">
+        <h2 onclick="RowsAttribute()">ROWS ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- ROWSPAN ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Rowspan-Attribute" class="Box-Contents">
+        <h2 onclick="RowspanAttribute()">ROWSPAN ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- SANDBOX ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Sandbox-Attribute" class="Box-Contents">
+        <h2 onclick="SandboxAttribute()">SANDBOX ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ SCOPE ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Scope-Attribute" class="Box-Contents">
+        <h2 onclick="ScopeAttribute()">SCOPE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- SELECTED ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Selected-Attribute" class="Box-Contents">
+        <h2 onclick="SelectedAttribute()">SELECTED ATTRIBUTE</h2>
+      </section>
+
+      <!----------------------------------------------------------------------- SHAPE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Shape-Attribute" class="Box-Contents">
+        <h2 onclick="ShapeAttribute()">SHAPE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- SIZE ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Size-Attribute" class="Box-Contents">
+        <h2 onclick="SizeAttribute()">SIZE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ SIZES ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Sizes-Attribute" class="Box-Contents">
+        <h2 onclick="SizesAttribute()">SIZES ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- SPAN ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Span-Attribute" class="Box-Contents">
+        <h2 onclick="SpanAttribute()">SPAN ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- SPELLCHECK ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Spellcheck-Attribute" class="Box-Contents">
+        <h2 onclick="SpellcheckAttribute()">SPELLCHECK ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ SOURCE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Source-Attribute" class="Box-Contents">
+        <h2 onclick="SourceAttribute()">SOURCE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------- SOURCEDOCUMENT ATTRIBUTE --------------------------------------------------------------------->
+      <section id="Sourcedocument-Attribute" class="Box-Contents">
+        <h2 onclick="SourcedocumentAttribute()">SOURCEDOCUMENT ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------- SOURCELANGUAGE ATTRIBUTE --------------------------------------------------------------------->
+      <section id="Sourcelanguage-Attribute" class="Box-Contents">
+        <h2 onclick="SourcelanguageAttribute()">SOURCELANGUAGE ATTRIBUTE</h2>
+      </section>
+
+      <!--------------------------------------------------------------------- SOURCESET ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Sourceset-Attribute" class="Box-Contents">
+        <h2 onclick="SourcesetAttribute()">SOURCESET ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ START ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Start-Attribute" class="Box-Contents">
+        <h2 onclick="StartAttribute()">START ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ STEP ATTRIBUTE -------------------------------------------------------------------------->
+      <section id="Step-Attribute" class="Box-Contents">
+        <h2 onclick="StepAttribute()">STEP ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ STYLE ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Style-Attribute" class="Box-Contents">
+        <h2 onclick="StyleAttribute()">STYLE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- TABINDEX ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Tabindex-Attribute" class="Box-Contents">
+        <h2 onclick="TabindexAttribute()">TABINDEX ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ TARGET ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Target-Attribute" class="Box-Contents">
+        <h2 onclick="TargetAttribute()">TARGET ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ TITLE ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Title-Attribute" class="Box-Contents">
+        <h2 onclick="TitleAttribute()">TITLE ATTRIBUTE</h2>
+      </section>
+
+      <!---------------------------------------------------------------------- TRANSLATE ATTRIBUTE ----------------------------------------------------------------------->
+      <section id="Translate-Attribute" class="Box-Contents">
+        <h2 onclick="TranslateAttribute()">TRANSLATE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- TYPE ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Type-Attribute" class="Box-Contents">
+        <h2 onclick="TypeAttribute()">TYPE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ USEMAP ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Usemap-Attribute" class="Box-Contents">
+        <h2 onclick="UsemapAttribute()">USEMAP ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- VALUE ATTRIBUTE ------------------------------------------------------------------------>
+      <section id="Value-Attribute" class="Box-Contents">
+        <h2 onclick="ValueAttribute()">VALUE ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------ WIDTH ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Width-Attribute" class="Box-Contents">
+        <h2 onclick="WidthAttribute()">WIDTH ATTRIBUTE</h2>
+      </section>
+
+      <!------------------------------------------------------------------------- WRAP ATTRIBUTE ------------------------------------------------------------------------->
+      <section id="Wrap-Attribute" class="Box-Contents">
+        <h2 onclick="WrapAttribute()">WRAP ATTRIBUTE</h2>
       </section>
 
       <section id="HTML-Form" class="Box-Contents">

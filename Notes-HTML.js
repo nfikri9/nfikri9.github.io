@@ -733,16 +733,16 @@ function InsertTag() {
   }
 }
 
-function ItalicTag() {
+function IdiomaticTag() {
   let HTMLElements = document.getElementById("HTML-Elements");
-  let ItalicTag = document.getElementById("Italic-Tag");
+  let IdiomaticTag = document.getElementById("Idiomatic-Tag");
 
-  if (ItalicTag.style.display === "block") {
-    ItalicTag.style.display = "none";
+  if (IdiomaticTag.style.display === "block") {
+    IdiomaticTag.style.display = "none";
     HTMLElements.style.display = "block";
   }
   else {
-    ItalicTag.style.display = "block";
+    IdiomaticTag.style.display = "block";
     HTMLElements.style.display = "none";
   }
 }
@@ -2425,6 +2425,1532 @@ function NovalidateAttribute() {
   }
   else {
     NovalidateAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnabortAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnabortAttribute = document.getElementById("Onabort-Attribute");
+
+  if (OnabortAttribute.style.display === "block") {
+    OnabortAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnabortAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnafterprintAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnafterprintAttribute = document.getElementById("Onafterprint-Attribute");
+
+  if (OnafterprintAttribute.style.display === "block") {
+    OnafterprintAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnafterprintAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnbeforeprintAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnbeforeprintAttribute = document.getElementById("Onbeforeprint-Attribute");
+
+  if (OnbeforeprintAttribute.style.display === "block") {
+    OnbeforeprintAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnbeforeprintAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnbeforeunloadAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnbeforeunloadAttribute = document.getElementById("Onbeforeunload-Attribute");
+
+  if (OnbeforeunloadAttribute.style.display === "block") {
+    OnbeforeunloadAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnbeforeunloadAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnblurAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnblurAttribute = document.getElementById("Onblur-Attribute");
+
+  if (OnblurAttribute.style.display === "block") {
+    OnblurAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnblurAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OncanplayAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OncanplayAttribute = document.getElementById("Oncanplay-Attribute");
+
+  if (OncanplayAttribute.style.display === "block") {
+    OncanplayAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OncanplayAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OncanplaythroughAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OncanplaythroughAttribute = document.getElementById("Oncanplaythrough-Attribute");
+
+  if (OncanplaythroughAttribute.style.display === "block") {
+    OncanplaythroughAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OncanplaythroughAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnchangeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnchangeAttribute = document.getElementById("Onchange-Attribute");
+
+  if (OnchangeAttribute.style.display === "block") {
+    OnchangeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnchangeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnclickAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnclickAttribute = document.getElementById("Onclick-Attribute");
+
+  if (OnclickAttribute.style.display === "block") {
+    OnclickAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnclickAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OncontextmenuAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OncontextmenuAttribute = document.getElementById("Oncontextmenu-Attribute");
+
+  if (OncontextmenuAttribute.style.display === "block") {
+    OncontextmenuAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OncontextmenuAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OncopyAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OncopyAttribute = document.getElementById("Oncopy-Attribute");
+
+  if (OncopyAttribute.style.display === "block") {
+    OncopyAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OncopyAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OncuechangeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OncuechangeAttribute = document.getElementById("Oncuechange-Attribute");
+
+  if (OncuechangeAttribute.style.display === "block") {
+    OncuechangeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OncuechangeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OncutAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OncutAttribute = document.getElementById("Oncut-Attribute");
+
+  if (OncutAttribute.style.display === "block") {
+    OncutAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OncutAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndoubleclickAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndoubleclickAttribute = document.getElementById("Ondoubleclick-Attribute");
+
+  if (OndoubleclickAttribute.style.display === "block") {
+    OndoubleclickAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndoubleclickAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndragAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndragAttribute = document.getElementById("Ondrag-Attribute");
+
+  if (OndragAttribute.style.display === "block") {
+    OndragAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndragAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndragendAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndragendAttribute = document.getElementById("Ondragend-Attribute");
+
+  if (OndragendAttribute.style.display === "block") {
+    OndragendAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndragendAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndragenterAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndragenterAttribute = document.getElementById("Ondragenter-Attribute");
+
+  if (OndragenterAttribute.style.display === "block") {
+    OndragenterAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndragenterAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndragleaveAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndragleaveAttribute = document.getElementById("Ondragleave-Attribute");
+
+  if (OndragleaveAttribute.style.display === "block") {
+    OndragleaveAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndragleaveAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndragoverAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndragoverAttribute = document.getElementById("Ondragover-Attribute");
+
+  if (OndragoverAttribute.style.display === "block") {
+    OndragoverAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndragoverAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndragstartAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndragstartAttribute = document.getElementById("Ondragstart-Attribute");
+
+  if (OndragstartAttribute.style.display === "block") {
+    OndragstartAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndragstartAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndropAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndropAttribute = document.getElementById("Ondrop-Attribute");
+
+  if (OndropAttribute.style.display === "block") {
+    OndropAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndropAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OndurationchangeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OndurationchangeAttribute = document.getElementById("Ondurationchange-Attribute");
+
+  if (OndurationchangeAttribute.style.display === "block") {
+    OndurationchangeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OndurationchangeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnemptiedAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnemptiedAttribute = document.getElementById("Onemptied-Attribute");
+
+  if (OnemptiedAttribute.style.display === "block") {
+    OnemptiedAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnemptiedAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnendedAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnendedAttribute = document.getElementById("Onended-Attribute");
+
+  if (OnendedAttribute.style.display === "block") {
+    OnendedAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnendedAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnerrorAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnerrorAttribute = document.getElementById("Onerror-Attribute");
+
+  if (OnerrorAttribute.style.display === "block") {
+    OnerrorAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnerrorAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnfocusAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnfocusAttribute = document.getElementById("Onfocus-Attribute");
+
+  if (OnfocusAttribute.style.display === "block") {
+    OnfocusAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnfocusAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnhashchangeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnhashchangeAttribute = document.getElementById("Onhashchange-Attribute");
+
+  if (OnhashchangeAttribute.style.display === "block") {
+    OnhashchangeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnhashchangeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OninputAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OninputAttribute = document.getElementById("Oninput-Attribute");
+
+  if (OninputAttribute.style.display === "block") {
+    OninputAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OninputAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OninvalidAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OninvalidAttribute = document.getElementById("Oninvalid-Attribute");
+
+  if (OninvalidAttribute.style.display === "block") {
+    OninvalidAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OninvalidAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnkeydownAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnkeydownAttribute = document.getElementById("Onkeydown-Attribute");
+
+  if (OnkeydownAttribute.style.display === "block") {
+    OnkeydownAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnkeydownAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnkeypressAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnkeypressAttribute = document.getElementById("Onkeypress-Attribute");
+
+  if (OnkeypressAttribute.style.display === "block") {
+    OnkeypressAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnkeypressAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnkeyupAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnkeyupAttribute = document.getElementById("Onkeyup-Attribute");
+
+  if (OnkeyupAttribute.style.display === "block") {
+    OnkeyupAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnkeyupAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnloadAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnloadAttribute = document.getElementById("Onload-Attribute");
+
+  if (OnloadAttribute.style.display === "block") {
+    OnloadAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnloadAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnloadeddataAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnloadeddataAttribute = document.getElementById("Onloadeddata-Attribute");
+
+  if (OnloadeddataAttribute.style.display === "block") {
+    OnloadeddataAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnloadeddataAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnloadedmetadataAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnloadedmetadataAttribute = document.getElementById("Onloadedmetadata-Attribute");
+
+  if (OnloadedmetadataAttribute.style.display === "block") {
+    OnloadedmetadataAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnloadedmetadataAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnloadstartAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnloadstartAttribute = document.getElementById("Onloadstart-Attribute");
+
+  if (OnloadstartAttribute.style.display === "block") {
+    OnloadstartAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnloadstartAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnmousedownAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnmousedownAttribute = document.getElementById("Onmousedown-Attribute");
+
+  if (OnmousedownAttribute.style.display === "block") {
+    OnmousedownAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnmousedownAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnmousemoveAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnmousemoveAttribute = document.getElementById("Onmousemove-Attribute");
+
+  if (OnmousemoveAttribute.style.display === "block") {
+    OnmousemoveAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnmousemoveAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnmouseoutAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnmouseoutAttribute = document.getElementById("Onmouseout-Attribute");
+
+  if (OnmouseoutAttribute.style.display === "block") {
+    OnmouseoutAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnmouseoutAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnmouseoverAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnmouseoverAttribute = document.getElementById("Onmouseover-Attribute");
+
+  if (OnmouseoverAttribute.style.display === "block") {
+    OnmouseoverAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnmouseoverAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnmouseupAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnmouseupAttribute = document.getElementById("Onmouseup-Attribute");
+
+  if (OnmouseupAttribute.style.display === "block") {
+    OnmouseupAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnmouseupAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnmousewheelAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnmousewheelAttribute = document.getElementById("Onmousewheel-Attribute");
+
+  if (OnmousewheelAttribute.style.display === "block") {
+    OnmousewheelAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnmousewheelAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnofflineAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnofflineAttribute = document.getElementById("Onoffline-Attribute");
+
+  if (OnofflineAttribute.style.display === "block") {
+    OnofflineAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnofflineAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnonlineAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnonlineAttribute = document.getElementById("Ononline-Attribute");
+
+  if (OnonlineAttribute.style.display === "block") {
+    OnonlineAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnonlineAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnpagehideAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnpagehideAttribute = document.getElementById("Onpagehide-Attribute");
+
+  if (OnpagehideAttribute.style.display === "block") {
+    OnpagehideAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnpagehideAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnpageshowAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnpageshowAttribute = document.getElementById("Onpageshow-Attribute");
+
+  if (OnpageshowAttribute.style.display === "block") {
+    OnpageshowAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnpageshowAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnpasteAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnpasteAttribute = document.getElementById("Onpaste-Attribute");
+
+  if (OnpasteAttribute.style.display === "block") {
+    OnpasteAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnpasteAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnpauseAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnpauseAttribute = document.getElementById("Onpause-Attribute");
+
+  if (OnpauseAttribute.style.display === "block") {
+    OnpauseAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnpauseAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnplayAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnplayAttribute = document.getElementById("Onplay-Attribute");
+
+  if (OnplayAttribute.style.display === "block") {
+    OnplayAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnplayAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnplayingAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnplayingAttribute = document.getElementById("Onplaying-Attribute");
+
+  if (OnplayingAttribute.style.display === "block") {
+    OnplayingAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnplayingAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnpopstateAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnpopstateAttribute = document.getElementById("Onpopstate-Attribute");
+
+  if (OnpopstateAttribute.style.display === "block") {
+    OnpopstateAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnpopstateAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnprogressAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnprogressAttribute = document.getElementById("Onprogress-Attribute");
+
+  if (OnprogressAttribute.style.display === "block") {
+    OnprogressAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnprogressAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnratechangeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnratechangeAttribute = document.getElementById("Onratechange-Attribute");
+
+  if (OnratechangeAttribute.style.display === "block") {
+    OnratechangeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnratechangeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnresetAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnresetAttribute = document.getElementById("Onreset-Attribute");
+
+  if (OnresetAttribute.style.display === "block") {
+    OnresetAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnresetAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnresizeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnresizeAttribute = document.getElementById("Onresize-Attribute");
+
+  if (OnresizeAttribute.style.display === "block") {
+    OnresizeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnresizeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnscrollAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnscrollAttribute = document.getElementById("Onscroll-Attribute");
+
+  if (OnscrollAttribute.style.display === "block") {
+    OnscrollAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnscrollAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnseacrhAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnsearchAttribute = document.getElementById("Onsearch-Attribute");
+
+  if (OnsearchAttribute.style.display === "block") {
+    OnsearchAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnsearchAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnseekedAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnseekedAttribute = document.getElementById("Onseeked-Attribute");
+
+  if (OnseekedAttribute.style.display === "block") {
+    OnseekedAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnseekedAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnseekingAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnseekingAttribute = document.getElementById("Onseeking-Attribute");
+
+  if (OnseekingAttribute.style.display === "block") {
+    OnseekingAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnseekingAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnselectAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnselectAttribute = document.getElementById("Onselect-Attribute");
+
+  if (OnselectAttribute.style.display === "block") {
+    OnselectAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnselectAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnstalledAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnstalledAttribute = document.getElementById("Onstalled-Attribute");
+
+  if (OnstalledAttribute.style.display === "block") {
+    OnstalledAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnstalledAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnstorageAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnstorageAttribute = document.getElementById("Onstorage-Attribute");
+
+  if (OnstorageAttribute.style.display === "block") {
+    OnstorageAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnstorageAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnsubmitAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnsubmitAttribute = document.getElementById("Onsubmit-Attribute");
+
+  if (OnsubmitAttribute.style.display === "block") {
+    OnsubmitAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnsubmitAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnsuspendAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnsuspendAttribute = document.getElementById("Onsuspend-Attribute");
+
+  if (OnsuspendAttribute.style.display === "block") {
+    OnsuspendAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnsuspendAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OntimeupdateAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OntimeupdateAttribute = document.getElementById("Ontimeupdate-Attribute");
+
+  if (OntimeupdateAttribute.style.display === "block") {
+    OntimeupdateAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OntimeupdateAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OntoggleAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OntoggleAttribute = document.getElementById("Ontoggle-Attribute");
+
+  if (OntoggleAttribute.style.display === "block") {
+    OntoggleAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OntoggleAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnunloadAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnunloadAttribute = document.getElementById("Onunload-Attribute");
+
+  if (OnunloadAttribute.style.display === "block") {
+    OnunloadAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnunloadAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnvolumechangeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnvolumechangeAttribute = document.getElementById("Onvolumechange-Attribute");
+
+  if (OnvolumechangeAttribute.style.display === "block") {
+    OnvolumechangeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnvolumechangeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnwaitingAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnwaitingAttribute = document.getElementById("Onwaiting-Attribute");
+
+  if (OnwaitingAttribute.style.display === "block") {
+    OnwaitingAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnwaitingAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OnwheelAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OnwheelAttribute = document.getElementById("Onwheel-Attribute");
+
+  if (OnwheelAttribute.style.display === "block") {
+    OnwheelAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OnwheelAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OpenAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OpenAttribute = document.getElementById("Open-Attribute");
+
+  if (OpenAttribute.style.display === "block") {
+    OpenAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OpenAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function OptimumAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let OptimumAttribute = document.getElementById("Optimum-Attribute");
+
+  if (OptimumAttribute.style.display === "block") {
+    OptimumAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    OptimumAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function PatternAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let PatternAttribute = document.getElementById("Pattern-Attribute");
+
+  if (PatternAttribute.style.display === "block") {
+    PatternAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    PatternAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function PlaceholderAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let PlaceholderAttribute = document.getElementById("Placeholder-Attribute");
+
+  if (PlaceholderAttribute.style.display === "block") {
+    PlaceholderAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    PlaceholderAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function PopoverAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let PopoverAttribute = document.getElementById("Popover-Attribute");
+
+  if (PopoverAttribute.style.display === "block") {
+    PopoverAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    PopoverAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function PopovertargetAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let PopovertargetAttribute = document.getElementById("Popovertarget-Attribute");
+
+  if (PopovertargetAttribute.style.display === "block") {
+    PopovertargetAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    PopovertargetAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function PopovertargetactionAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let PopovertargetactionAttribute = document.getElementById("Popovertargetaction-Attribute");
+
+  if (PopovertargetactionAttribute.style.display === "block") {
+    PopovertargetactionAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    PopovertargetactionAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function PosterAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let PosterAttribute = document.getElementById("Poster-Attribute");
+
+  if (PosterAttribute.style.display === "block") {
+    PosterAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    PosterAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function PreloadAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let PreloadAttribute = document.getElementById("Preload-Attribute");
+
+  if (PreloadAttribute.style.display === "block") {
+    PreloadAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    PreloadAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function ReadonlyAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let ReadonlyAttribute = document.getElementById("Readonly-Attribute");
+
+  if (ReadonlyAttribute.style.display === "block") {
+    ReadonlyAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    ReadonlyAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function RelationAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let RelationAttribute = document.getElementById("Relation-Attribute");
+
+  if (RelationAttribute.style.display === "block") {
+    RelationAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    RelationAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function RequiredAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let RequiredAttribute = document.getElementById("Required-Attribute");
+
+  if (RequiredAttribute.style.display === "block") {
+    RequiredAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    RequiredAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function ReversedAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let ReversedAttribute = document.getElementById("Reversed-Attribute");
+
+  if (ReversedAttribute.style.display === "block") {
+    ReversedAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    ReversedAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function RowsAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let RowsAttribute = document.getElementById("Rows-Attribute");
+
+  if (RowsAttribute.style.display === "block") {
+    RowsAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    RowsAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function RowspanAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let RowspanAttribute = document.getElementById("Rowspan-Attribute");
+
+  if (RowspanAttribute.style.display === "block") {
+    RowspanAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    RowspanAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SandboxAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SandboxAttribute = document.getElementById("Sandbox-Attribute");
+
+  if (SandboxAttribute.style.display === "block") {
+    SandboxAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SandboxAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function ScopeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let ScopeAttribute = document.getElementById("Scope-Attribute");
+
+  if (ScopeAttribute.style.display === "block") {
+    ScopeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    ScopeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SelectedAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SelectedAttribute = document.getElementById("Selected-Attribute");
+
+  if (SelectedAttribute.style.display === "block") {
+    SelectedAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SelectedAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function ShapeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let ShapeAttribute = document.getElementById("Shape-Attribute");
+
+  if (ShapeAttribute.style.display === "block") {
+    ShapeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    ShapeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SizeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SizeAttribute = document.getElementById("Size-Attribute");
+
+  if (SizeAttribute.style.display === "block") {
+    SizeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SizeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SizesAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SizesAttribute = document.getElementById("Sizes-Attribute");
+
+  if (SizesAttribute.style.display === "block") {
+    SizesAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SizesAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SpanAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SpanAttribute = document.getElementById("Span-Attribute");
+
+  if (SpanAttribute.style.display === "block") {
+    SpanAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SpanAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SpellcheckAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SpellcheckAttribute = document.getElementById("Spellcheck-Attribute");
+
+  if (SpellcheckAttribute.style.display === "block") {
+    SpellcheckAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SpellcheckAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SourceAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SourceAttribute = document.getElementById("Source-Attribute");
+
+  if (SourceAttribute.style.display === "block") {
+    SourceAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SourceAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SourcedocumentAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SourcedocumentAttribute = document.getElementById("Sourcedocument-Attribute");
+
+  if (SourcedocumentAttribute.style.display === "block") {
+    SourcedocumentAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SourcedocumentAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SourcelanguageAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SourcelanguageAttribute = document.getElementById("Sourcelanguage-Attribute");
+
+  if (SourcelanguageAttribute.style.display === "block") {
+    SourcelanguageAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SourcelanguageAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function SourcesetAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let SourcesetAttribute = document.getElementById("Sourceset-Attribute");
+
+  if (SourcesetAttribute.style.display === "block") {
+    SourcesetAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    SourcesetAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function StartAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let StartAttribute = document.getElementById("Start-Attribute");
+
+  if (StartAttribute.style.display === "block") {
+    StartAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    StartAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function StepAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let StepAttribute = document.getElementById("Step-Attribute");
+
+  if (StepAttribute.style.display === "block") {
+    StepAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    StepAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function StyleAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let StyleAttribute = document.getElementById("Style-Attribute");
+
+  if (StyleAttribute.style.display === "block") {
+    StyleAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    StyleAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function TabindexAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let TabindexAttribute = document.getElementById("Tabindex-Attribute");
+
+  if (TabindexAttribute.style.display === "block") {
+    TabindexAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    TabindexAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function TargetAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let TargetAttribute = document.getElementById("Target-Attribute");
+
+  if (TargetAttribute.style.display === "block") {
+    TargetAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    TargetAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function TitleAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let TitleAttribute = document.getElementById("Title-Attribute");
+
+  if (TitleAttribute.style.display === "block") {
+    TitleAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    TitleAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function TranslateAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let TranslateAttribute = document.getElementById("Translate-Attribute");
+
+  if (TranslateAttribute.style.display === "block") {
+    TranslateAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    TranslateAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function TypeAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let TypeAttribute = document.getElementById("Type-Attribute");
+
+  if (TypeAttribute.style.display === "block") {
+    TypeAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    TypeAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function UsemapAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let UsemapAttribute = document.getElementById("Usemap-Attribute");
+
+  if (UsemapAttribute.style.display === "block") {
+    UsemapAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    UsemapAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function ValueAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let ValueAttribute = document.getElementById("Value-Attribute");
+
+  if (ValueAttribute.style.display === "block") {
+    ValueAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    ValueAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function WidthAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let WidthAttribute = document.getElementById("Width-Attribute");
+
+  if (WidthAttribute.style.display === "block") {
+    WidthAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    WidthAttribute.style.display = "block";
+    HTMLAttributes.style.display = "none";
+  }
+}
+
+function WrapAttribute() {
+  let HTMLAttributes = document.getElementById("HTML-Attributes");
+  let WrapAttribute = document.getElementById("Wrap-Attribute");
+
+  if (WrapAttribute.style.display === "block") {
+    WrapAttribute.style.display = "none";
+    HTMLAttributes.style.display = "block";
+  }
+  else {
+    WrapAttribute.style.display = "block";
     HTMLAttributes.style.display = "none";
   }
 }
