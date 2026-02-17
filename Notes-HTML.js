@@ -1,3 +1,165 @@
+const HTMLFormStructure =
+  "<div class=\"Indent-Level1\"><code>&lt;form&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;fieldset&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;legend&gt; <i>MyText</i> &lt;/legend&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level3\"><code>&lt;label&gt; <i>MyText</i> &lt;/label&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;input&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level3\"><code>&lt;label&gt; <i>MyText</i> &lt;/label&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;textarea&gt; <i>MyText</i> &lt;/textarea&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level3\"><code>&lt;label&gt; <i>MyText</i> &lt;/label&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;select&gt;</code></div>" +
+  "<div class=\"Indent-Level4\"><code>&lt;optgroup&gt;</code></div>" +
+  "<div class=\"Indent-Level5\"><code>&lt;option&gt; <i>MyText</i> &lt;/option&gt;</code></div>" +
+  "<div class=\"Indent-Level4\"><code>&lt;/optgroup&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;/select&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level3\"><code>&lt;label&gt; <i>MyText</i> &lt;/label&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;datalist&gt;</code></div>" +
+  "<div class=\"Indent-Level4\"><code>&lt;option&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;/datalist&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level3\"><code>&lt;label&gt; <i>MyText</i> &lt;/label&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;progress&gt; <i>MyText</i> &lt;/progress&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level3\"><code>&lt;label&gt; <i>MyText</i> &lt;/label&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;meter&gt; <i>MyText</i> &lt;/meter&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level3\"><code>&lt;output&gt;&lt;/output&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;button&gt; <i>MyText</i> &lt;/button&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level2\"><code>&lt;/fieldset&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/form&gt;</code></div>";
+
+document.getElementById("FormStructure-ButtonTag").innerHTML      = HTMLFormStructure;
+document.getElementById("FormStructure-DatalistTag").innerHTML    = HTMLFormStructure;
+document.getElementById("FormStructure-FieldsetTag").innerHTML    = HTMLFormStructure;
+document.getElementById("FormStructure-FormTag").innerHTML        = HTMLFormStructure;
+document.getElementById("FormStructure-InputTag").innerHTML       = HTMLFormStructure;
+document.getElementById("FormStructure-LabelTag").innerHTML       = HTMLFormStructure;
+document.getElementById("FormStructure-LegendTag").innerHTML      = HTMLFormStructure;
+document.getElementById("FormStructure-MeterTag").innerHTML       = HTMLFormStructure;
+document.getElementById("FormStructure-OptionTag").innerHTML      = HTMLFormStructure;
+document.getElementById("FormStructure-OptionGroupTag").innerHTML = HTMLFormStructure;
+document.getElementById("FormStructure-OutputTag").innerHTML      = HTMLFormStructure;
+document.getElementById("FormStructure-ProgressTag").innerHTML    = HTMLFormStructure;
+document.getElementById("FormStructure-SelectTag").innerHTML      = HTMLFormStructure;
+document.getElementById("FormStructure-TextareaTag").innerHTML    = HTMLFormStructure;
+
+const HTMLListStructure =
+  "<div class=\"Indent-Level1\"><code>&lt;ol&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;li&gt; <i>MyText</i> &lt;/li&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/ol&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level1\"><code>&lt;ul&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;li&gt; <i>MyText</i> &lt;/li&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/ul&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level1\"><code>&lt;menu&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;li&gt; <i>MyText</i> &lt;/li&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/menu&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level1\"><code>&lt;dl&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;dt&gt; <i>MyText</i> &lt;/dt&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;dd&gt; <i>MyText</i> &lt;/dd&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/dl&gt;</code></div>";
+
+document.getElementById("ListStructure-DescriptionDataTag").innerHTML = HTMLListStructure;
+document.getElementById("ListStructure-DescriptionListTag").innerHTML = HTMLListStructure;
+document.getElementById("ListStructure-DescriptionTermTag").innerHTML = HTMLListStructure;
+document.getElementById("ListStructure-ListItemTag").innerHTML        = HTMLListStructure;
+document.getElementById("ListStructure-MenuTag").innerHTML            = HTMLListStructure;
+document.getElementById("ListStructure-OrderedListTag").innerHTML     = HTMLListStructure;
+document.getElementById("ListStructure-UnorderedListTag").innerHTML   = HTMLListStructure;
+
+const HTMLRubyStructure =
+  "<div class=\"Indent-Level1\"><code>&lt;ruby&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;rp&gt; ( &lt;/rp&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;rt&gt; <i>MyText</i> &lt;/rt&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;rp&gt; ) &lt;/rp&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/ruby&gt;</code></div>";
+
+document.getElementById("RubyStructure-RubyTag").innerHTML            = HTMLRubyStructure;
+document.getElementById("RubyStructure-RubyParanthesesTag").innerHTML = HTMLRubyStructure;
+document.getElementById("RubyStructure-RubyTextTag").innerHTML        = HTMLRubyStructure;
+
+const HTMLTableStructure =
+  "<div class=\"Indent-Level1\"><code>&lt;table&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;caption&gt; <i>MyCaption</i> &lt;/caption&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;colgroup&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;col&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;/colgroup&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level2\"><code>&lt;thead&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;tr&gt;</code></div>" +
+  "<div class=\"Indent-Level4\"><code>&lt;th&gt; <i>MyTableHeader</i> &lt;/th&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;/tr&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;/thead&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level2\"><code>&lt;tbody&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;tr&gt;</code></div>" +
+  "<div class=\"Indent-Level4\"><code>&lt;td&gt; <i>MyTableData</i> &lt;/td&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;/tr&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;/tbody&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level2\"><code>&lt;tfoot&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;tr&gt;</code></div>" +
+  "<div class=\"Indent-Level4\"><code>&lt;td&gt; <i>MyTableData</i> &lt;/td&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;/tr&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;/tfoot&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/table&gt;</code></div>";
+  
+document.getElementById("TableStructure-CaptionTag").innerHTML     = HTMLTableStructure;
+document.getElementById("TableStructure-ColumnTag").innerHTML      = HTMLTableStructure;
+document.getElementById("TableStructure-ColumnGroupTag").innerHTML = HTMLTableStructure;
+document.getElementById("TableStructure-TableTag").innerHTML       = HTMLTableStructure;
+document.getElementById("TableStructure-TableBodyTag").innerHTML   = HTMLTableStructure;
+document.getElementById("TableStructure-TableHeadTag").innerHTML   = HTMLTableStructure;
+document.getElementById("TableStructure-TableHeaderTag").innerHTML = HTMLTableStructure;
+document.getElementById("TableStructure-TableDataTag").innerHTML   = HTMLTableStructure;
+document.getElementById("TableStructure-TableFooterTag").innerHTML = HTMLTableStructure;
+document.getElementById("TableStructure-TableRowTag").innerHTML    = HTMLTableStructure;
+
+/*        <div id="FormStructure-ButtonTag" class="Box-Structures"></div>
+
+        <h2>HTML MEDIA STRUCTURE</h2>
+        <div class="Box-Structures">
+          <div class="Indent-Level1"><code class="Highlighted" onclick="FigureTag()">&lt;figure&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="ImageTag()">&lt;img&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="MapTag()">&lt;map&gt;</code></div>
+          <div class="Indent-Level3"><code class="Highlighted" onclick="AreaTag()">&lt;area&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="MapTag()">&lt;/map&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="FigcaptionTag()">&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></div>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="FigureTag()">&lt;/figure&gt;</code></div>
+          <br>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="AudioTag()">&lt;audio&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="SourceTag()">&lt;source&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="TrackTag()">&lt;track&gt;</code></div>
+          <div class="Indent-Level2"><code><em>MyText</em></code></div>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="AudioTag()">&lt;/audio&gt;</code></div>
+          <br>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="VideoTag()">&lt;video&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="SourceTag()">&lt;source&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="TrackTag()">&lt;track&gt;</code></div>
+          <div class="Indent-Level2"><code><em>MyText</em></code></div>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="VideoTag()">&lt;/video&gt;</code></div>
+
+        <h2>MISC</h2>
+        <div class="Box-Structures">
+          <div class="Indent-Level1"><code class="Highlighted" onclick="DetailsTag()">&lt;details&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="SummaryTag()">&lt;summary&gt; <em>MyText</em> &lt;/summary&gt;</code></div>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="DetailsTag()">&lt;/details&gt;</code></div>
+          <br>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="ObjectTag()">&lt;object&gt;</code></div>
+          <div class="Indent-Level2"><code class="Highlighted" onclick="ParameterTag()">&lt;param&gt;</code></div>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="ObjectTag()">&lt;/object&gt;</code></div>
+          <br>
+          <div class="Indent-Level1"><code class="Highlighted" onclick="CanvasTag()">&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></div>
+          <div class="Indent-Level1"><code class="Highlighted">&lt;script&gt;&lt;/script&gt;</code></div>
+*/
+
 //////////////////////////////////////////////////////////////////////////// TOPIC SELECTIONS ////////////////////////////////////////////////////////////////////////////
 function HTMLIntroduction() {
   let HTMLIntroduction = document.getElementById("HTML-Introduction");
