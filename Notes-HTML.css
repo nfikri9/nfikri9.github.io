@@ -79,12 +79,12 @@ td, th { border: 1px solid black; padding: 8px; }
 .Highlight-Insights { border: 1px solid black; }
 
 /******************************************************** HTML ELEMENTS *********************************************************/
-#HTML-Elements, #HTML-Attributes {
+#HTML-Elements, #HTML-Attributes, #HTML-AccessibilityAndSEO {
   height: 83vh;
   overflow: auto;
 }
 
-#HTML-Elements-Input, #HTML-Attributes-Input {
+#HTML-Elements-Input, #HTML-Attributes-Input, #HTML-AccessibilityAndSEO-Input {
   background-image: url(https://www.w3schools.com/css/searchicon.png);
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -95,13 +95,13 @@ td, th { border: 1px solid black; padding: 8px; }
   margin-bottom: 12px;
 }
 
-#HTML-Elements-List, #HTML-Attributes-List {
+#HTML-Elements-List, #HTML-Attributes-List, #HTML-AccessibilityAndSEO-List {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-#HTML-Elements-List li a, #HTML-Attributes-List li a {
+#HTML-Elements-List li a, #HTML-Attributes-List li a, #HTML-AccessibilityAndSEO-List li a {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6;

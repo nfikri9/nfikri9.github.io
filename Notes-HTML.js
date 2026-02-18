@@ -74,6 +74,55 @@ document.getElementById("ListStructure-MenuTag").innerHTML            = HTMLList
 document.getElementById("ListStructure-OrderedListTag").innerHTML     = HTMLListStructure;
 document.getElementById("ListStructure-UnorderedListTag").innerHTML   = HTMLListStructure;
 
+const HTMLMediaStructure =
+  "<div class=\"Indent-Level1\"><code>&lt;figure&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;img&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;map&gt;</code></div>" +
+  "<div class=\"Indent-Level3\"><code>&lt;area&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;/map&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;figcaption&gt; <i>MyText</i> &lt;/figcaption&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/figure&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level1\"><code>&lt;audio&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;source&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;track&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code><i>MyText</i></code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/audio&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level1\"><code>&lt;video&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;source&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;track&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code><i>MyText</i></code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/video&gt;</code></div>";
+
+document.getElementById("MediaStructure-AreaTag").innerHTML          = HTMLMediaStructure;
+document.getElementById("MediaStructure-AudioTag").innerHTML         = HTMLMediaStructure;
+document.getElementById("MediaStructure-FigureTag").innerHTML        = HTMLMediaStructure;
+document.getElementById("MediaStructure-FigureCaptionTag").innerHTML = HTMLMediaStructure;
+document.getElementById("MediaStructure-ImageTag").innerHTML         = HTMLMediaStructure;
+document.getElementById("MediaStructure-MapTag").innerHTML           = HTMLMediaStructure;
+document.getElementById("MediaStructure-SourceTag").innerHTML        = HTMLMediaStructure;
+document.getElementById("MediaStructure-TrackTag").innerHTML         = HTMLMediaStructure;
+document.getElementById("MediaStructure-VideoTag").innerHTML         = HTMLMediaStructure;
+
+const HTMLMiscStructure =
+  "<div class=\"Indent-Level1\"><code>&lt;details&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;summary&gt; <i>MyText</i> &lt;/summary&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/details&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level1\"><code>&lt;object&gt;</code></div>" +
+  "<div class=\"Indent-Level2\"><code>&lt;param&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;/object&gt;</code></div>" +
+  "<br>" +
+  "<div class=\"Indent-Level1\"><code>&lt;canvas&gt; <i>MyText</i> &lt;/canvas&gt;</code></div>" +
+  "<div class=\"Indent-Level1\"><code>&lt;script&gt;&lt;/script&gt;</code></div>";
+
+document.getElementById("MiscStructure-CanvasTag").innerHTML    = HTMLMiscStructure;
+document.getElementById("MiscStructure-DetailsTag").innerHTML   = HTMLMiscStructure;
+document.getElementById("MiscStructure-ObjectTag").innerHTML    = HTMLMiscStructure;
+document.getElementById("MiscStructure-ParameterTag").innerHTML = HTMLMiscStructure;
+document.getElementById("MiscStructure-SummaryTag").innerHTML   = HTMLMiscStructure;
+
 const HTMLRubyStructure =
   "<div class=\"Indent-Level1\"><code>&lt;ruby&gt;</code></div>" +
   "<div class=\"Indent-Level2\"><code>&lt;rp&gt; ( &lt;/rp&gt;</code></div>" +
@@ -122,49 +171,17 @@ document.getElementById("TableStructure-TableDataTag").innerHTML   = HTMLTableSt
 document.getElementById("TableStructure-TableFooterTag").innerHTML = HTMLTableStructure;
 document.getElementById("TableStructure-TableRowTag").innerHTML    = HTMLTableStructure;
 
-/*        <div id="FormStructure-ButtonTag" class="Box-Structures"></div>
-
-        <h2>HTML MEDIA STRUCTURE</h2>
-        <div class="Box-Structures">
-          <div class="Indent-Level1"><code class="Highlighted" onclick="FigureTag()">&lt;figure&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="ImageTag()">&lt;img&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="MapTag()">&lt;map&gt;</code></div>
-          <div class="Indent-Level3"><code class="Highlighted" onclick="AreaTag()">&lt;area&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="MapTag()">&lt;/map&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="FigcaptionTag()">&lt;figcaption&gt; <em>MyText</em> &lt;/figcaption&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="FigureTag()">&lt;/figure&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="AudioTag()">&lt;audio&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="SourceTag()">&lt;source&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="TrackTag()">&lt;track&gt;</code></div>
-          <div class="Indent-Level2"><code><em>MyText</em></code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="AudioTag()">&lt;/audio&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="VideoTag()">&lt;video&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="SourceTag()">&lt;source&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="TrackTag()">&lt;track&gt;</code></div>
-          <div class="Indent-Level2"><code><em>MyText</em></code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="VideoTag()">&lt;/video&gt;</code></div>
-
-        <h2>MISC</h2>
-        <div class="Box-Structures">
-          <div class="Indent-Level1"><code class="Highlighted" onclick="DetailsTag()">&lt;details&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="SummaryTag()">&lt;summary&gt; <em>MyText</em> &lt;/summary&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="DetailsTag()">&lt;/details&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="ObjectTag()">&lt;object&gt;</code></div>
-          <div class="Indent-Level2"><code class="Highlighted" onclick="ParameterTag()">&lt;param&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="ObjectTag()">&lt;/object&gt;</code></div>
-          <br>
-          <div class="Indent-Level1"><code class="Highlighted" onclick="CanvasTag()">&lt;canvas&gt; <em>MyText</em> &lt;/canvas&gt;</code></div>
-          <div class="Indent-Level1"><code class="Highlighted">&lt;script&gt;&lt;/script&gt;</code></div>
-*/
-
 //////////////////////////////////////////////////////////////////////////// TOPIC SELECTIONS ////////////////////////////////////////////////////////////////////////////
 function HTMLIntroduction() {
   let HTMLIntroduction = document.getElementById("HTML-Introduction");
   if (HTMLIntroduction.style.display === "block") { HTMLIntroduction.style.display = "none"; }
   else { HTMLIntroduction.style.display = "block"; }
+}
+
+function HTMLAccessibilityAndSEO() {
+  let HTMLAccessibilityAndSEO = document.getElementById("HTML-AccessibilityAndSEO");
+  if (HTMLAccessibilityAndSEO.style.display === "block") { HTMLAccessibilityAndSEO.style.display = "none"; }
+  else { HTMLAccessibilityAndSEO.style.display = "block"; }
 }
 
 function HTMLTags() {
@@ -177,6 +194,106 @@ function HTMLAttributes() {
   let HTMLAttributes = document.getElementById("HTML-Attributes");
   if (HTMLAttributes.style.display === "block") { HTMLAttributes.style.display = "none"; }
   else { HTMLAttributes.style.display = "block"; }
+}
+
+///////////////////////////////////////////////////////////////////////// ACCESSIBILITY AND SEO //////////////////////////////////////////////////////////////////////////
+function SearchAccessibilityAndSEO() {
+  let input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("HTML-AccessibilityAndSEO-Input");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("HTML-AccessibilityAndSEO-List");
+  li = ul.getElementsByTagName("li");
+  
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) { li[i].style.display = ""; }
+    else { li[i].style.display = "none"; }
+  }
+}
+
+function Accessibility() {
+  let HTMLAccessibilityAndSEO = document.getElementById("HTML-AccessibilityAndSEO");
+  let Accessibility = document.getElementById("Accessibility");
+
+  if (Accessibility.style.display === "block") {
+    Accessibility.style.display = "none";
+    HTMLAccessibilityAndSEO.style.display = "block";
+  }
+  else {
+    Accessibility.style.display = "block";
+    HTMLAccessibilityAndSEO.style.display = "none";
+  }
+}
+
+function SEO() {
+  let HTMLAccessibilityAndSEO = document.getElementById("HTML-AccessibilityAndSEO");
+  let SEO = document.getElementById("SEO");
+
+  if (SEO.style.display === "block") {
+    SEO.style.display = "none";
+    HTMLAccessibilityAndSEO.style.display = "block";
+  }
+  else {
+    SEO.style.display = "block";
+    HTMLAccessibilityAndSEO.style.display = "none";
+  }
+}
+
+function WCAG() {
+  let HTMLAccessibilityAndSEO = document.getElementById("HTML-AccessibilityAndSEO");
+  let WCAG = document.getElementById("WCAG");
+
+  if (WCAG.style.display === "block") {
+    WCAG.style.display = "none";
+    HTMLAccessibilityAndSEO.style.display = "block";
+  }
+  else {
+    WCAG.style.display = "block";
+    HTMLAccessibilityAndSEO.style.display = "none";
+  }
+}
+
+function SemanticHTML() {
+  let HTMLAccessibilityAndSEO = document.getElementById("HTML-AccessibilityAndSEO");
+  let SemanticHTML = document.getElementById("Semantic-HTML");
+
+  if (SemanticHTML.style.display === "block") {
+    SemanticHTML.style.display = "none";
+    HTMLAccessibilityAndSEO.style.display = "block";
+  }
+  else {
+    SemanticHTML.style.display = "block";
+    HTMLAccessibilityAndSEO.style.display = "none";
+  }
+}
+
+function StructuralHierarchy() {
+  let HTMLAccessibilityAndSEO = document.getElementById("HTML-AccessibilityAndSEO");
+  let StructuralHierarchy = document.getElementById("Structural-Hierarchy");
+
+  if (StructuralHierarchy.style.display === "block") {
+    StructuralHierarchy.style.display = "none";
+    HTMLAccessibilityAndSEO.style.display = "block";
+  }
+  else {
+    StructuralHierarchy.style.display = "block";
+    HTMLAccessibilityAndSEO.style.display = "none";
+  }
+}
+
+function WAIARIA() {
+  let HTMLAccessibilityAndSEO = document.getElementById("HTML-AccessibilityAndSEO");
+  let WAIARIA = document.getElementById("WAI-ARIA");
+
+  if (WAIARIA.style.display === "block") {
+    WAIARIA.style.display = "none";
+    HTMLAccessibilityAndSEO.style.display = "block";
+  }
+  else {
+    WAIARIA.style.display = "block";
+    HTMLAccessibilityAndSEO.style.display = "none";
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////// LIST OF HTML ELEMENTS //////////////////////////////////////////////////////////////////////////

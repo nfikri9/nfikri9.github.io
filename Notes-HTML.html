@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <!--------------------------------------------------------------------- NAVIGATE BAR --------------------------------------------------------------------->
+    <!--------------------------------------------------------------------------- NAVIGATE BAR ---------------------------------------------------------------------------->
     <header>
       <nav class="My-Navigate-Bar">
         <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
@@ -40,14 +40,15 @@
     </header>
 
     <main>
-      <!------------------------------------------------------------------- TOPIC SELECTIONS ------------------------------------------------------------------->
+      <!------------------------------------------------------------------------- TOPIC SELECTIONS -------------------------------------------------------------------------->
       <section id="Box-Topic-Selections">
         <button onclick="HTMLIntroduction()">INTRODUCTION</button>
+        <button onclick="HTMLAccessibilityAndSEO()">ACCESSIBILITY & SEO</button>
         <button onclick="HTMLTags()">HTML TAGS</button>
         <button onclick="HTMLAttributes()">HTML ATTRIBUTES</button>
       </section>
 
-      <!------------------------------------------------------------------ HTML INTRODUCTION ------------------------------------------------------------------->
+      <!------------------------------------------------------------------------- HTML INTRODUCTION ------------------------------------------------------------------------->
       <section id="HTML-Introduction" class="Box-Contents">
         <h2>HTML INTRODUCTION</h2>
 
@@ -85,58 +86,90 @@
         <br><hr><br>
 
         <article id="HTML-Boilerplate">
-          <h3>HTML Boilerplate</h3>
+          <h2>HTML Boilerplate</h2>
           <div class="Box-Structures">
-            <div class="Indent-Level1"><code class="Highlighted">&lt;!DOCTYPE html&gt;</code></div>
-            <div class="Indent-Level1"><code class="Highlighted">&lt;html lang="en"&gt;</code></div>
-            <div class="Indent-Level2"><code class="Highlighted">&lt;head&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;!-- Browser Tab --&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;title&gt;<i>MyProjectName</i>&lt;/title&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;link rel="icon" type="image/x-icon" href="<i>MyLogo</i>"</code></div>
+            <div class="Indent-Level1"><code>&lt;!DOCTYPE html&gt;</code></div>
+            <div class="Indent-Level1"><code>&lt;html lang="en"&gt;</code></div>
+            <div class="Indent-Level2"><code>&lt;head&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;!-- Browser Tab --&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;title&gt;<i>MyProjectName</i>&lt;/title&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;link rel="icon" type="image/x-icon" href="<i>MyLogo</i>"</code></div>
             <br>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;!-- Metadata --&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="author" content="<i>MyName</i>"&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="description" content="<i>MyDescription</i>"&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="keywords" content="<i>Keyword1, Keyword2, ...</i>"&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta charset="utf-8"&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;link rel="stylesheet" href="<i>MyFile</i>"&gt;</code></div>
-            <div class="Indent-Level2"><code class="Highlighted">&lt;/head&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;!-- Metadata --&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta name="author" content="<i>MyName</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta name="description" content="<i>MyDescription</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta name="keywords" content="<i>Keyword1, Keyword2, ...</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta charset="utf-8"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;link rel="stylesheet" href="<i>MyFile</i>"&gt;</code></div>
+            <div class="Indent-Level2"><code>&lt;/head&gt;</code></div>
             <br>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;!-- Open Graph Protocol --&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta property="og:title" content="<i>MyTitle</i>"&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta property="og:type" content="website"&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta property="og:image" content="<i>MyLogo</i>"&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;meta property="og:url" content="<i>MyPageURL</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;!-- Open Graph Protocol --&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta property="og:title" content="<i>MyTitle</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta property="og:type" content="website"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta property="og:image" content="<i>MyLogo</i>"&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;meta property="og:url" content="<i>MyPageURL</i>"&gt;</code></div>
             <br>
-            <div class="Indent-Level2"><code class="Highlighted">&lt;body&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;header&gt;&lt;/header&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;main&gt;&lt;/main&gt;</code></div>
-            <div class="Indent-Level3"><code class="Highlighted">&lt;footer&gt;&lt;/footer&gt;</code></div>
-            <div class="Indent-Level2"><code class="Highlighted">&lt;/body&gt;</code></div>
-            <div class="Indent-Level1"><code class="Highlighted">&lt;/html&gt;</code></div>
+            <div class="Indent-Level2"><code>&lt;body&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;header&gt;&lt;/header&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;main&gt;&lt;/main&gt;</code></div>
+            <div class="Indent-Level3"><code>&lt;footer&gt;&lt;/footer&gt;</code></div>
+            <div class="Indent-Level2"><code>&lt;/body&gt;</code></div>
+            <div class="Indent-Level1"><code>&lt;/html&gt;</code></div>
           </div>
-          <p>HTML Boilerplate is a ready-made template for the webpages.</p>
-          <p>A boilerplate includes the basic structure and essential elements every HTML document needs.</p>
-          <p>It saves developer time and helps ensure the pages are set up properly.</p>
+          
+          <header>
+            <p>HTML Boilerplate is a ready-made template for the webpages.</p>
+            <p>A boilerplate includes the basic structure and essential elements every HTML document needs.</p>
+            <p>It saves developer time and helps ensure the pages are set up properly.</p>
+          </header>
 
-          <h4>Nesting & Indentation</h4>
-          <p>Nesting is placing elements inside another element.</p>
-          <p>Indentation is nested elements that placed two spaces further to the right of the element they are nested in.</p>
-          <p>It is used to make HTML easier to read.</p>
+          <div class="Box-Insights">
+            <span class="Highlight-Insights">Nesting & Indentation</span>
+            <p>Nesting is placing elements inside another element.</p>
+            <p>Indentation is nested elements that placed two spaces further to the right of the element they are nested in.</p>
+            <p>It is used to make HTML easier to read.</p>
+          </div>
 
-          <h4>The Important of HTML Boilerplate</h4>
-          <p>It ensures the pages are structured correctly and work well across different browsers.</p>
-          <p>Using a boilerplate helps developers avoid common mistakes and follow best practices.</p>
-          <p>It's a great starting point for any web project.</p>
-          <p>Plus, they can customize their own boilerplate to fit their needs.</p>
-          <p>As developer gain experience, they might add their own preferred elements or meta tags.</p>
+          <div class="Box-Insights">
+            <span class="Highlight-Insights">The Important of HTML Boilerplate</span>
+            <p>It ensures the pages are structured correctly and work well across different browsers.</p>
+            <p>Using a boilerplate helps developers avoid common mistakes and follow best practices.</p>
+            <p>It's a great starting point for any web project.</p>
+            <p>Plus, they can customize their own boilerplate to fit their needs.</p>
+            <p>As developer gain experience, they might add their own preferred elements or meta tags.</p>
+          </div>
         </article>
+      </section>
 
-        <br><hr><br>
+      <!----------------------------------------------------------------------- ACCESSIBILITY AND SEO ----------------------------------------------------------------------->
+      <section id="HTML-AccessibilityAndSEO" class="Box-Contents">
+        <input type="text" id="HTML-AccessibilityAndSEO-Input" onkeyup="SearchAccessibilityAndSEO()" placeholder="Find..">
+        <ul id="HTML-AccessibilityAndSEO-List">
+          <li><a onclick="Accessibility()">Accessibility</a></li>
+          <li><a onclick="SEO()">Seacrh Engine Optimization (SEO)</a></li>
+          <li><a onclick="WCAG()">Web Content Accessibility Guidelines (WCAG)</a></li>
+          <li><a onclick="SemanticHTML()">Semantic HTML</a></li>
+          <li><a onclick="StructuralHierarchy()">Structural Hierarchy</a></li>
+          <li><a onclick="WAIARIA()">Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA)</a></li>
+        </ul>
+      </section>
 
-        <article>
-          <h3>Search Engine Optimization (SEO)</h3>
+      <!--------------------------------------------------------------------------- ACCESSIBILITY --------------------------------------------------------------------------->
+      <section id="Accessibility" class="Box-Contents">
+        <header>
+          <h2 onclick="Accessibility()">ACCESSIBILITY</h2>
+          <p>Accessibility is making websites that everyone can understand and interact with, including people with visual, auditory, motor, and cognitive disabilities.</p>
+          <p>The following are group of people that has disabilities; Blindness, Low vision, Color blindness, Deafness, Difficulty using keyboards, mice, or touchscreens,
+             Attention disorders, Memory issues, Difficulty speaking or understanding spoken language and Sensitivity to flashing lights.
+          </p>
+        </header>
+      </section>
+
+      <!----------------------------------------------------------------- SEARCH ENGINE OPTIMIZATION (SEO) ------------------------------------------------------------------>
+      <section id="SEO" class="Box-Contents">
+        <header>
+          <h2 onclick="SEO()">SEARCH ENGINE OPTIMIZATION (SEO)</h2>
           <p>SEO is a practice that optimizes web pages so they become more visible and rank higher on search engines.</p>
           <p>Meta element is a great example to improve the site's SEO.</p>
           <p><code>&lt;meta name="description" content="<i>MyDescription</i>"&gt;</code></p>
@@ -145,105 +178,116 @@
           <p>It is recommended that the descriptions are short and concise.</p>
           <p>This is because search engines will often truncate the description based on the results page layout.</p>
           <p>The page description can be found in the search engine results page snippet.</p>
-          <p>The following elements make the webpage easier to read and help with SEO.</p>
-          <p><code>&lt;main&gt;, &lt;section&gt;, &lt;html lang="en"&gt;</code>.</p>
+        </header>
 
-          <h4>Open Graph Tag</h4>
+        <div class="Box-Insights">
+          <h3>Open Graph Tag</h3>
           <p>Open Graph Protocol enables developer to control how their website's content appears across various social media platforms.</p>
           <p>When the content is shared on social media, well-crafted OG properties can enhance the appearance for their content in users' feeds.</p>
-          <p>This can lead to higher click-through rates which could signal to search engines that the content is relevant and engaging.</p>
+          <p>This can lead to higher click-through rates which could signal to search engines that the content is relevant and engaging.</p> <br>
 
+          <span class="Highlight-Insights">Title</span> <br>
           <p><code>&lt;meta property="og:title" content="<i>MyTitle</i>"&gt;</code></p>
-          <p>This is where developer will write the title they want to be displayed for social media sites.</p>
+          <p>This is where developer will write the title they want to be displayed for social media sites.</p> <br>
 
+          <span class="Highlight-Insights">Type</span> <br>
           <p><code>&lt;meta property="og:type" content="website"&gt;</code></p>
           <p>This is used to represent the type of content being shared on social media.</p>
-          <p>Other examples could be articles, websites, videos, or music.</p>
+          <p>Other examples could be <code>articles, websites, videos, music</code>.</p> <br>
 
+          <span class="Highlight-Insights">Image</span> <br>
           <p><code>&lt;meta property="og:image" content="<i>MyLogo</i>"&gt;</code></p>
           <p>This open graph image is pointing to the image developer placed.</p>
           <p>All of these images should be high quality with good dimensions and ratios.</p>
           <p>Most social media platforms will include criteria for image requirements to help developer ensure that their content displays well on their site.</p>
           <p>Use images that are at least 1200 by 630 pixels for the best display on high resolution devices.</p>
-          <p>At the minimum, developer should use images that are 600 by 315 pixels to display link page posts with larger images.</p>
+          <p>At the minimum, developer should use images that are 600 by 315 pixels to display link page posts with larger images.</p> <br>
 
+          <span class="Highlight-Insights">URL</span> <br>
           <p><code>&lt;meta property="og:url" content="<i>MyPageURL</i>"&gt;</code></p>
-          <p>This open graph url is pointing to the URL of the page.</p>
+          <p>This open graph url is pointing to the URL of the page.</p> <br>
 
-          <p>There are many more OG properties that developer can set, like description, audio, video and locale.</p>
-        </article>
+          <p>There are many more OG properties that developer can set, like <code>description, audio, video, locale</code>.</p>
+        </div>
+      </section>
 
-        <br><hr><br>
-
-        <article>
-          <h2>Accessibility</h2>
-          <p>Accessibility is making websites that everyone can understand and interact with, including people with visual, auditory, motor, and cognitive disabilities.</p>
-          <p>The following are group of people that has disabilities; Blindness, Low vision, Color blindness, Deafness, Difficulty using keyboards, mice, or touchscreens,
-             Attention disorders, Memory issues, Difficulty speaking or understanding spoken language and Sensitivity to flashing lights.
-          </p> <br>
-
-          <h2>Web Content Accessibility Guidelines (WCAG)</h2>
+      <!--------------------------------------------------------------- WEB CONTENT ACCESSIBILITY GUIDELINES ---------------------------------------------------------------->
+      <section id="WCAG" class="Box-Contents">
+        <header>
+          <h2 onclick="WCAG()">WEB CONTENT ACCESSIBILITY GUIDELINES (WCAG)</h2>
           <p>World Wide Web Consortium (W3C) developed a set of international standards that developer can follow to make their websites more accessible  and easier to use
              for people with disabilities.
           </p>
           <p>These guidelines are designed with four core principles, known as POUR.</p>
-          <div class="Box-Insights">
-            <h3>[P] Perceivable</h3>
-            <p>Users must be able to perceive the information that developer are presenting.</p>
-            <p>For example, developer can provide alternative text for images, so users who access the website with a screen reader can understand them.</p>
-            <p><code>&lt;img alt="<i>MyAlternativeText</i>"&gt;</code>.</p>
-          </div>
+        </header>
 
-          <div class="Box-Insights">
-            <h3>[O] Operable</h3>
-            <p>Users must be able to interact with the user interface.</p>
-            <p>For example, developer can make sure that all functionality is accessible through the keyboard too, not just the mouse.</p>
-          </div>
+        <div class="Box-Insights">
+          <h3>[P] Perceivable</h3>
+          <p>Users must be able to perceive the information that developer are presenting.</p>
+          <p>For example, developer can provide alternative text for images, so users who access the website with a screen reader can understand them.</p>
+          <p><code>&lt;img alt="<i>MyAlternativeText</i>"&gt;</code>.</p>
+        </div>
 
-          <div class="Box-Insights">
-            <h3>[U] Understandable</h3>
-            <p>Users must be able to understand the information.</p>
-            <p>For example, developer can avoid complex sentences and use simple language as much as possible.</p>
-          </div>
+        <div class="Box-Insights">
+          <h3>[O] Operable</h3>
+          <p>Users must be able to interact with the user interface.</p>
+          <p>For example, developer can make sure that all functionality is accessible through the keyboard too, not just the mouse.</p>
+        </div>
 
-          <div class="Box-Insights">
-            <h3>[R] Robust</h3>
-            <p>A wide range of browsers and other tools, including assistive technologies, must be able to interpret the content.</p>
-          </div>
+        <div class="Box-Insights">
+          <h3>[U] Understandable</h3>
+          <p>Users must be able to understand the information.</p>
+          <p>For example, developer can avoid complex sentences and use simple language as much as possible.</p>
+        </div>
 
-          <br><hr><br>
+        <div class="Box-Insights">
+          <h3>[R] Robust</h3>
+          <p>A wide range of browsers and other tools, including assistive technologies, must be able to interpret the content.</p>
+        </div>
+      </section>
 
-          <h2>Semantic HTML</h2>
-          <p>The semantic meaning of an element refers to what special information that element conveys.</p>
+      <!--------------------------------------------------------------------------- SEMANTIC HTML --------------------------------------------------------------------------->
+      <section id="Semantic-HTML" class="Box-Contents">
+        <header>
+          <h2 onclick="SemanticHTML()">SEMANTIC HTML</h2>
           <p>It describes the content of the elements, so it's much easier to read, understand, and maintain.</p>
           <p>Search engines can easily understand the website when developer use semantic HTML.</p>
           <p>It's also helpful for accessibility purposes, because screen readers need semantic information to describe what's on the web page.</p>
           <p>For example, the semantic meaning of a <code>p</code> element, is a paragraph of text.</p>
-          <p>The <code>div</code> element is one of the very few that does not represent semantic HTML.</p> <br>
+          <p>The <code>div</code> element is one of the very few that does not represent semantic HTML.</p>
+        </header>
 
-          <h3>Benefits</h3>
+        <div class="Box-Insights">
+          <span class="Highlight-Insights">Benefits</span>
           <p>Using proper semantic HTML will improve accessibility and ensure the best experience for users with assistive technology like screen readers.</p>
           <p>It can also improves SEO.</p>
-          <p>Improve development experience.</p> <br>
+          <p>Improve development experience.</p>
+        </div>
+      </section>
 
-          <br><hr><br>
-
-          <h2>Structural Hierarchy</h2>
+      <!----------------------------------------------------------------------- STRUCTURAL HIERARCHY ------------------------------------------------------------------------>
+      <section id="Structural-Hierarchy" class="Box-Contents">
+        <header>
+          <h2 onclick="StructuralHierarchy()">STRUCTURAL HIERARCHY</h2>
           <p>The most important aspect of creating a structural hierarchy is the proper use of heading elements.</p>
           <p>Heading elements are numbered as <code>h1</code>, <code>h2</code>, <code>h3</code>, and so on.</p>
-          <p>These numbers represent the heading level for that element.</p> <br>
+          <p>These numbers represent the heading level for that element.</p>
+        </header>
 
-          <h3>Best Practices</h3>
+        <div class="Box-Insights">
+          <span class="Highlight-Insights">Best practices</span>
           <p>Ensure to use correct order in heading levels and never skip the level.</p>
-          <p>The <code>h1</code> element is a top-level heading and it should be exist only one per page that come before all of developer's content.</p>
+          <p>Each page should have a single h1 element representing the main topic or title.</p>
           <p>The <code>h2</code> element is a sub-heading and should be come after <code>h1</code> (it can have multiple <code>h2</code> per page).</p>
           <p>Use headings in a hierarchy that reflects clear organization.</p>
-          <p>For example, the page title should be an h1, major sections should be introduced with h2 headings, subsections with h3 , and so on, down to h6.</p>
-          <p>Don't skip from h1 to h3, or from h2 to h4, and so on.</p>
+          <p>Don't skip from <code>h1</code> to <code>h3</code>, or from <code>h2</code> to <code>h4</code>, and so on.</p>
           <p>Use clear and descriptive text that summarizes the content that follows each heading.</p>
           <p>Don't use a heading in isolation - some content must follow the heading.</p>
           <p>Use appropriate headings where necessary instead of formatting text to look like headings.</p>
-          <p>Each page should have a single h1 element representing the main topic or title.</p>
+        </div>
+
+        <div class="Box-Insights">
+          <span class="Highlight-Insights">Benefits</span>
           <p>Using the right hierarchy is important for accessibility.</p>
           <p>Assistive technologies, like screen readers, rely on the structure of a web page to determine how to parse and announce that web page to the user.</p>
           <p>Proper structure is also important for SEO.</p>
@@ -251,25 +295,26 @@
           <p>If the structure is malformed, search engines may not be able to rank very well in the relevant search results.</p>
           <p>Depending on how incorrect the structure is, the HTML may not even be technically valid.</p>
           <p>When this happens, the web browser has to effectively guess what the developer meant to do.</p>
-          <p>And what it guesses might not even be what the developer want at all.</p> <br>
+          <p>And what it guesses might not even be what the developer want at all.</p>
+        </div>
+      </section>
 
-          <br><hr><br>
-
-          <h2>Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA)</h2>
+      <!----------------------------------------- WEB ACCESSIBILITY INITIATIVE - ACCESSIBILE RICH INTERNET APPLICATIONS (WAI-ARIA) ------------------------------------------>
+      <section id="WAI-ARIA" class="Box-Contents">
+        <header>
+          <h2 onclick="WAIARIA()">WEB ACCESSIBILITY INITIATIVE - ACCESSIBILE RICH INTERNET APPLICATIONS (WAI-ARIA)</h2>
           <p>It's a specification that enhances accessibility for dynamic content and UI (User Interface) components.</p>
           <p>Note that WCAG and WAI-ARIA are not the same.</p>
-          <p>WCAG provides general guidelines for web accessibility, while WAI-ARIA offers specific rules for making dynamic and interactive content accessible
-             for users of assistive technologies.
+          <p>WCAG provides general guidelines for web accessibility, while WAI-ARIA offers specific rules for making dynamic and interactive content accessible for users of
+             assistive technologies.
           </p>
           <p>So, the primary purpose of WAI-ARIA is to improve accessibility for dynamic content and UI components that do not have native HTML equivalents.</p>
           <p>WAI-ARIA works by introducing a set of attributes developer can add to HTML elements to provide additional semantic information.</p>
           <p>These attributes are categorized into roles, states, and properties.</p>
-        </article>
+        </header>
 
-        <br><hr><br>
-
-        <article>
-          <h4>Role Attribute</h4>
+        <div class="Box-Insights">
+          <h3><code>role</code> Attribute</h3>
           <p>ARIA roles specify the semantic meaning of HTML elements.</p>
           <p>They're essential for making web content accessible to people who use assistive technologies, like screen readers.</p>
           <p>HTML has semantic and non-semantic elements, based on whether they convey meaning about their content.</p>
@@ -285,111 +330,105 @@
           <p>Merely giving this div a role of button will not make it act like a button.</p>
           <p>To make it look and behave like a button developer would need to use CSS and JavaScript to get the desired result.</p> <br>
 
-          <h5>Document Structure Roles</h5>
+          <span class="Highlight-Insights">Document Structure Roles</span>
           <p>Document structure roles define the overall structure of the web page.</p>
           <p>With these roles, assistive technologies can understand the relationships between different sections and help users navigate the content.</p>
-          <p>Examples; toolbar, tooltip, feed, math, presentation, none, note.</p>
+          <p>Examples; <code>toolbar, tooltip, feed, math, presentation, none, note</code>.</p>
           <p>However, most of the document structure roles are not used in modern web development because browsers already support equivalent semantic HTML elements,
              which should be prioritized whenever possible.
           </p>
-          <p>Example; <code>&lt;div role="math" aria-label="x squared + y squared = 3"&gt; x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; = 3 &lt;/div&gt;</code></p> 
+          <p>Example; <code>&lt;div role="math" aria-label="x squared + y squared = 3"&gt; x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; = 3 &lt;/div&gt;</code></p>
           <p>The aria-label attribute is used to represent the expression.</p> <br>
 
-          <h5>Widget Roles</h5>
+          <span class="Highlight-Insights">Widget Roles</span>
           <p>Widget roles define the purpose and functionality of interactive elements, like scrollbars.</p>
-          <p>Example; scrollbar, searchbox, separator (when focusable), slider, spinbutton, switch, tab, tabpanel, treeitem.</p> <br>
+          <p>Example; <code>scrollbar, searchbox, separator</code> (when focusable), <code>slider, spinbutton, switch, tab, tabpanel, treeitem</code>.</p> <br>
 
-          <h5>Landmark Roles</h5>
+          <span class="Highlight-Insights">Landmark Roles</span>
           <p>Landmark roles classify and label the primary sections of a web page.</p>
           <p>Screen readers use them to provide convenient navigation to important sections of a page.</p>
-          <p>Example; banner, complementary, contentinfo, form, main, navigation, region, search.</p>
-          <p>Each of these roles has a corresponding HTML equivalent, such as header, footer, aside, form, main, nav, section, and search.</p> <br>
+          <p>Example; <code>banner, complementary, contentinfo, form, main, navigation, region, search</code>.</p>
+          <p>Each of these roles has a corresponding HTML equivalent, such as <code>header, footer, aside, form, main, nav, section, and search</code>.</p> <br>
 
-          <h5>Live Region Roles</h5>
+          <span class="Highlight-Insights">Live Region Roles</span>
           <p>Live region roles define elements with content that will change dynamically.</p>
           <p>This way, screen readers and other assistive technologies can announce changes to users with visual disabilities.</p>
-          <p>Example; alert, log, marquee, status, and timer.</p> <br>
+          <p>Example; <code>alert, log, marquee, status, timer</code>.</p> <br>
 
-          <h5>Window Roles</h5>
+          <span class="Highlight-Insights">Window Roles</span>
           <p>Window roles define sub-windows, like pop up modal dialogues.</p>
-          <p>Example; alertdialog and dialog.</p>
-          <p>Please note that it is now considered a best practice to use the HTML dialog element and its associated JavaScript methods instead of manually creating a dialog</p> <br>
+          <p>Example; <code>alertdialog, dialog</code>.</p>
+          <p>It is a best practice to use the HTML dialog element and its associated JavaScript methods instead of manually creating a dialog</p> <br>
 
-          <h5>Abstract Roles</h5>
+          <span class="Highlight-Insights">Abstract Roles</span>
           <p>Abstract roles help organize the document.</p>
           <p>They're only meant to be used internally by the browser, not by developers, so you should know that they exist but you shouldn't use them
              on your websites or web applications.
-          </p> <br>
+          </p>
+        </div>
 
-          <h4>Aria-Labelledby Property</h4>
+        <div class="Box-Insights">
+          <h3><code>aria-labelledby</code> Property</h3>
           <p>The <code>aria-labelledby</code> property lets an element connect to a specific label.</p>
-          <p>Example; <br>
-             <code>
-              &lt;h2 id="header-id"&gt;About Me&lt;/h2&gt; <br>
-              &lt;button id="button-id" aria-labelledby="header-id button-id"&gt;Learn More&lt;/button&gt;
-             </code>
-          </p>
+          <code>&lt;h2 id="header-id"&gt;About Me&lt;/h2&gt; <br> &lt;button id="button-id" aria-labelledby="header-id button-id"&gt;Learn More&lt;/button&gt;</code>
           <p>This will make the elements understandable and navigable for users of assistive technologies.</p>
-          <p>To get the best out of WAI-ARIA, try to stick with native HTML whenever possible since it generally provides more accessibility out of the box.</p>
+          <p>To get the best out of WAI-ARIA, try to stick with native HTML whenever possible since it generally provides more accessibility out of the box.</p> <br>
 
-          <h4>aria-label vs aria-labelledby</h4>
-          <p>The aria-label attribute is an invisible label for interactive elements.</p>
+          <span class="Highlight-Insights"><code>aria-label</code> vs <code>aria-labelledby</code></span>
+          <p>The <code>aria-label</code> attribute is an invisible label for interactive elements.</p>
           <p>It adds a text label to an element that screen readers can read.</p>
-          <p>aria-label is especially useful for elements that do not have visible text but still need to be described by screen readers.</p>
-          <p>For input elements, the aria-label attribute provides a label directly if there isn't a visible label associated with the input.</p>
-
-          <p>The aria-labelledby attribute does the exact same thing as the aria-label attribute, but instead of defining the text directly in the attribute,
-             developer use a reference to text that already exists on the page.
+          <p>It is especially useful for elements that do not have visible text but still need to be described by screen readers.</p>
+          <p>For input elements, the <code>aria-label</code> attribute provides a label directly if there isn't a visible label associated with the input.</p> <br>
+          <p>The <code>aria-labelledby</code> attribute does the exact same thing as the <code>aria-label</code> attribute, but instead of defining the text directly
+             in the attribute, developer use a reference to text that already exists on the page.
           </p>
-          <p>The existing text must have an id attribute, which will be used for the reference value in the aria-labelledby attribute.</p>
-          <p>Example; <br>
-            <code>
-              &lt;input type="text" aria-labelledby="search-btn"&gt; <br>
-              &lt;button type="button" id="search-btn"&gt;Search&lt;/button&gt;
-            </code>
-          </p>
+          <p>The existing text must have an <code>id</code> attribute, which will be used for the reference value in the <code>aria-labelledby</code> attribute.</p>
+          <code>&lt;input type="text" aria-labelledby="search-btn"&gt; <br> &lt;button type="button" id="search-btn"&gt;Search&lt;/button&gt;</code>
           <p>In this case, the text for the button is being used as the label for the search input.</p>
           <p>Screen readers will announce the input as something like Search, edit.</p>
           <p>If developer later decide they  want to change the button text to Find, the label for the input will automatically be updated to the new text
              since it is referencing the button text.
           </p>
-          <p>Combining multiple id values into a single aria-labelledby attribute value is also possible.</p> <br>
+          <p>Combining multiple id values into a single <code>aria-labelledby</code> attribute value is also possible.</p> <br>
 
-          <h4>Benefits of using aria-labelledby over aria-label</h4>
-          <p>If someone is using a translation service to translate the content on the page, the text in an aria-label attribute may not always be translated.</p>
-          <p>Using aria-labelledby can also help prevent a mismatch between the visible label text and the invisible label for screen reader users since updating
+          <span class="Highlight-Insights"><code>aria-labelledby</code> is better than <code>aria-label</code></span>
+          <p>If someone is using a translation service to translate the content on the page, the text in an <code>aria-label</code> attribute may not always be translated.</p>
+          <p>Using <code>aria-labelledby</code> can also help prevent a mismatch between the visible label text and the invisible label for screen reader users since updating
              the visible text will automatically update the invisible label.
           </p>
-          <p>aria-labelledby can make it much easier to programmatically create complex invisible labels consisting of multiple sources of text.</p> <br>
+          <p><code>aria-labelledby</code> can make it much easier to programmatically create complex invisible labels consisting of multiple sources of text.</p>
+        </div>
 
-          <h4>aria-hidden Attribute</h4>
-          <p>aria-hidden attribute hides the element and all of its children from the accessibility tree, while keeping them visible on the page.</p>
+        <div class="Box-Insights">
+          <h3><code>aria-hidden</code> Attribute</h3>
+          <p>The attribute hides the element and all of its children from the accessibility tree, while keeping them visible on the page.</p>
+          <p>The attribute does not remove it from the DOM.</p>
           <p>Basic syntax: <code>aria-hidden="true"</code></p>
+          <p>Setting <code>aria-hidden</code> to false will not expose the element to assistive technologies if any of its parents has this attribute set to true.</p>
           <p>Common use cases include; Icons and images that only have a decorative purpose and Duplicated content.</p>
-          <p>It is important to remember that aria-hidden only hides content from assistive technology, such as screen readers.</p>
-          <p>Developer should never use aria-hidden to hide an element that is focusable with the keyboard.</p>
-          <p>The aria-hidden attribute only removes the element from the accessibility tree.</p>
-          <p>It does not remove it from the DOM.</p>
-          <p>No need to use aria-hidden when: <br>
-             The HTML element already has a hidden attribute. <br>
-             The element or the element's ancestor is already hidden with display: none. <br>
-             The element or the element's ancestor is already hidden with visibility: hidden.
-          </p>
-          <p>In these cases, the element is already removed from the DOM and thus hidden from the accessibility tree, so the aria-hidden attribute is not necessary.</p>
-          <p>Setting aria-hidden to false will not expose the element to assistive technologies if any of its parents has this attribute set to true.</p> <br>
+          <p>The attribute only hides content from assistive technology, such as screen readers.</p>
+          <p>Developer should never use <code>aria-hidden</code> to hide an element that is focusable with the keyboard.</p> <br>
 
-          <h4>aria-describedby Attribute</h4>
-          <p>The aria-describedby attribute is used to provide additional information about an element to screen reader users by referencing existing content on the page.</p>
+          <span class="Highlight-Insights">Cases where <code>aria-hidden</code> are not necessary to be used</span>
+          <p>The HTML element already has a <code>hidden</code> attribute.</p>
+          <p>The element or the element's ancestor is already hidden with <code>display: none</code>.</p>
+          <p>The element or the element's ancestor is already hidden with <code>visibility: hidden</code>.</p>
+          <p>For this, the element is already removed from the DOM and thus hidden from the accessibility tree, so the <code>aria-hidden</code> attribute is not necessary.</p>
+        </div>
+
+        <div class="Box-Insights">
+          <h3><code>aria-describedby</code> Attribute</h3>
+          <p>The attribute is used to provide additional information about an element to screen reader users by referencing existing content on the page.</p>
           <p>It creates a programmatic association between the element and the content (technically referred to as an accessible description),
              which screen readers can use to inform users of the additional information when they interact with the element.
           </p>
-          <p>The most common use for aria-describedby is to associate instructions and error messages with form inputs.</p>
+          <p>The most common use for <code>aria-describedby</code> is to associate instructions and error messages with form inputs.</p>
           <p>Due to the various methods screen reader users have for navigating a page, they may miss these messages when navigating between inputs.</p>
-          <p>Using aria-describedby helps ensure that they will hear them.</p>
-        </article>
+          <p>Using <code>aria-describedby</code> helps ensure that they will hear them.</p>
+        </div>
       </section>
 
-      <!--------------------------------------------------------------------- LIST OF HTML ELEMENTS ---------------------------------------------------------------------->
+      <!----------------------------------------------------------------------- LIST OF HTML ELEMENTS ----------------------------------------------------------------------->
       <section id="HTML-Elements" class="Box-Contents">
         <h2>LIST OF HTML TAGS</h2>
         <input type="text" id="HTML-Elements-Input" onkeyup="SearchHTMLElements()" placeholder="Find HTML tag..">
@@ -509,7 +548,7 @@
         </ul>
       </section>
 
-      <!-------------------------------------------------------------------------- HTML COMMENT -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- HTML COMMENT ---------------------------------------------------------------------------->
       <section id="Comment-Tag" class="Box-Contents">
         <header>
           <h2 onclick="CommentTag()">COMMENT TAG</h2>
@@ -520,7 +559,7 @@
         </header>
       </section>
 
-      <!------------------------------------------------------------------------ HTML DECLARATION ------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------- HTML DECLARATION -------------------------------------------------------------------------->
       <section id="HTML-Declaration" class="Box-Contents">
         <header>
           <h2 onclick="HTMLDeclaration()">HTML DECLARATION</h2>
@@ -538,7 +577,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------ ABBREVIATION TAG ------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------- ABBREVIATION TAG -------------------------------------------------------------------------->
       <section id="Abbreviation-Tag" class="Box-Contents">
         <header>
           <h2 onclick="AbbreviationTag()">ABBREVIATION ELEMENT</h2>
@@ -566,7 +605,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- ADDRESS TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- ADDRESS TAG ---------------------------------------------------------------------------->
       <section id="Address-Tag" class="Box-Contents">
         <header>
           <h2 onclick="AddressTag()">ADDRESS ELEMENT</h2>
@@ -586,7 +625,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- ANCHOR TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- ANCHOR TAG ----------------------------------------------------------------------------->
       <section id="Anchor-Tag" class="Box-Contents">
         <header>
           <h2 onclick="AnchorTag()">ANCHOR ELEMENT</h2>
@@ -633,10 +672,11 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- AREA TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- AREA TAG ------------------------------------------------------------------------------>
       <section id="Area-Tag" class="Box-Contents">
         <header>
           <h2 onclick="AreaTag()">AREA ELEMENT</h2>
+          <div id="MediaStructure-AreaTag" class="Box-Structures"></div>
           <p>The <code>&lt;area&gt;</code> tag defines an area inside an image map (an image map is an image with clickable areas).</p>
           <p><code>&lt;area&gt;</code> elements are always nested inside a <code>&lt;map&gt;</code> tag.</p>
         </header>
@@ -675,7 +715,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- ARTICLE TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- ARTICLE TAG ---------------------------------------------------------------------------->
       <section id="Article-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ArticleTag()">ARTICLE ELEMENT</code></h2>
@@ -695,7 +735,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- ASIDE TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- ASIDE TAG ----------------------------------------------------------------------------->
       <section id="Aside-Tag" class="Box-Contents">
         <header>
           <h2 onclick="AsideTag()">ASIDE ELEMENT</h2>
@@ -716,10 +756,11 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- AUDIO TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- AUDIO TAG ----------------------------------------------------------------------------->
       <section id="Audio-Tag" class="Box-Contents">
         <header>
           <h2 onclick="AudioTag()">AUDIO ELEMENT</h2>
+          <div id="MediaStructure-AudioTag" class="Box-Structures"></div>
           <p>The <code>&lt;audio&gt;</code> tag is used to embed sound content in a document, such as music or other audio streams.</p>
           <p>The <code>MyText</code> between the <code>&lt;audio&gt;</code> tags will only be displayed in browsers that do not support the audio element.</p>
           <p>There are three supported audio formats in HTML: MP3, WAV, and OGG.</p>
@@ -747,7 +788,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- BOLD TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- BOLD TAG ------------------------------------------------------------------------------>
       <section id="Bold-Tag" class="Box-Contents">
         <header>
           <h2 onclick="BoldTag()">BOLD ELEMENT</h2>
@@ -766,7 +807,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- BASE TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- BASE TAG ------------------------------------------------------------------------------>
       <section id="Base-Tag" class="Box-Contents">
         <header>
           <h2 onclick="BaseTag()">BASE ELEMENT</h2>
@@ -783,7 +824,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------ BI-DIRECTIONAL ISOLATION TAG ------------------------------------------------------------------>
+      <!------------------------------------------------------------------- BI-DIRECTIONAL ISOLATION TAG -------------------------------------------------------------------->
       <section id="Bi-Directional-Isolation-Tag" class="Box-Contents">
         <header>
           <h2 onclick="BiDirectionalIsolationTag()">BI-DIRECTIONAL ISOLATION ELEMENT</h2>
@@ -798,7 +839,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------ BI-DIRECTI0NAL OVERRIDE TAG ------------------------------------------------------------------->
+      <!-------------------------------------------------------------------- BI-DIRECTI0NAL OVERRIDE TAG -------------------------------------------------------------------->
       <section id="Bi-Directional-Override-Tag" class="Box-Contents">
         <header>
           <h2 onclick="BiDirectionalOverrideTag()">BI-DIRECTIONAL OVERRIDE ELEMENT</h2>
@@ -825,7 +866,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- BLOCKQUOTE TAG ------------------------------------------------------------------------->
+      <!-------------------------------------------------------------------------- BLOCKQUOTE TAG --------------------------------------------------------------------------->
       <section id="Blockquote-Tag" class="Box-Contents">
         <header>
           <h2 onclick="BlockquoteTag()">BLOCKQUOTE ELEMENT</h2>
@@ -845,7 +886,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- BODY TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- BODY TAG ------------------------------------------------------------------------------>
       <section id="Body-Tag" class="Box-Contents">
         <header>
           <h2 onclick="BodyTag()">BODY ELEMENT</h2>
@@ -867,7 +908,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- BREAK TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- BREAK TAG ----------------------------------------------------------------------------->
       <section id="Break-Tag" class="Box-Contents">
         <header>
           <h2 onclick="BreakTag()">BREAK ELEMENT</h2>
@@ -883,7 +924,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- BUTTON TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- BUTTON TAG ----------------------------------------------------------------------------->
       <section id="Button-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ButtonTag()">BUTTON ELEMENT</h2>
@@ -927,10 +968,11 @@
         </div>
       </section>
       
-      <!--------------------------------------------------------------------------- CANVAS TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- CANVAS TAG ----------------------------------------------------------------------------->
       <section id="Canvas-Tag" class="Box-Contents">
         <header>
           <h2 onclick="CanvasTag()">CANVAS ELEMENT</h2>
+          <div id="MiscStructure-CanvasTag" class="Box-Structures"></div>
           <p>The <code>&lt;canvas&gt;</code> tag is used to draw graphics, on the fly, via scripting (usually JavaScript).</p>
           <p>The <code>&lt;canvas&gt;</code> tag is transparent, and is only a container for graphics, user must use a script to actually draw the graphics.</p>
           <p>The <code>MyText</code> will be displayed in browsers with JavaScript disabled and in browsers that do not support canvas.</p>
@@ -950,7 +992,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- CAPTION TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- CAPTION TAG ---------------------------------------------------------------------------->
       <section id="Caption-Tag" class="Box-Contents">
         <header>
           <h2 onclick="CaptionTag()">CAPTION ELEMENT</h2>
@@ -970,7 +1012,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- CITE TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- CITE TAG ------------------------------------------------------------------------------>
       <section id="Cite-Tag" class="Box-Contents">
         <header>
           <h2 onclick="CiteTag()">CITE ELEMENT</h2>
@@ -990,7 +1032,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- CODE TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- CODE TAG ------------------------------------------------------------------------------>
       <section id="Code-Tag" class="Box-Contents">
         <header>
           <h2 onclick="CodeTag()">CODE ELEMENT</h2>
@@ -1009,7 +1051,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- COLUMN TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- COLUMN TAG ----------------------------------------------------------------------------->
       <section id="Column-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ColumnTag()">COLUMN ELEMENT</h2>
@@ -1031,7 +1073,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------ COLUMN GROUP TAG ------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------- COLUMN GROUP TAG -------------------------------------------------------------------------->
       <section id="Column-Group-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ColumnGroupTag()">COLUMN GROUP ELEMENT</h2>
@@ -1062,7 +1104,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- DATA TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- DATA TAG ------------------------------------------------------------------------------>
       <section id="Data-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DataTag()">DATA ELEMENT</h2>
@@ -1077,7 +1119,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- DATALIST TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- DATALIST TAG ---------------------------------------------------------------------------->
       <section id="Datalist-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DatalistTag()">DATALIST ELEMENT</h2>
@@ -1102,7 +1144,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- DEFINITION TAG ------------------------------------------------------------------------->
+      <!-------------------------------------------------------------------------- DEFINITION TAG --------------------------------------------------------------------------->
       <section id="Definition-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DefinitionTag()">DEFINITION ELEMENT</h2>
@@ -1122,7 +1164,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- DELETE TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- DELETE TAG ----------------------------------------------------------------------------->
       <section id="Delete-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DeleteTag()">DELETE ELEMENT</h2>
@@ -1143,7 +1185,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------- DESCRIPTION DATA TAG ---------------------------------------------------------------------->
+      <!----------------------------------------------------------------------- DESCRIPTION DATA TAG ------------------------------------------------------------------------>
       <section id="Description-Data-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DescriptionDataTag()">DESCRIPTION DATA ELEMENT</h2>
@@ -1164,7 +1206,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------- DESCRIPTION LIST TAG ----------------------------------------------------------------------->
+      <!----------------------------------------------------------------------- DESCRIPTION LIST TAG ------------------------------------------------------------------------>
       <section id="Description-List-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DescriptionListTag()">DESCRIPTION LIST ELEMENT</h2>
@@ -1185,7 +1227,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------- DESCRIPTION TERM TAG ----------------------------------------------------------------------->
+      <!----------------------------------------------------------------------- DESCRIPTION TERM TAG ------------------------------------------------------------------------>
       <section id="Description-Term-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DescriptionTermTag()">DESCRIPTION TERM ELEMENT</h2>
@@ -1206,10 +1248,11 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- DETAILS TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- DETAILS TAG ---------------------------------------------------------------------------->
       <section id="Details-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DetailsTag()">DETAILS ELEMENT</h2>
+          <div id="MiscStructure-DetailsTag" class="Box-Structures"></div>
           <p>The <code>&lt;details&gt;</code> tag specifies additional details that the user can open and close on demand.</p>
           <p>The <code>&lt;details&gt;</code> tag is often used to create an interactive widget that the user can open and close.</p>
           <p>By default, the widget is closed and when open, it expands, and displays the content within.</p>
@@ -1229,7 +1272,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- DIALOG TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- DIALOG TAG ----------------------------------------------------------------------------->
       <section id="Dialog-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DialogTag()">DIALOG ELEMENT</h2>
@@ -1245,7 +1288,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- DIVISION TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- DIVISION TAG ---------------------------------------------------------------------------->
       <section id="Division-Tag" class="Box-Contents">
         <header>
           <h2 onclick="DivisionTag()">DIVISION ELEMENT</h2>
@@ -1265,7 +1308,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- EMBED TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- EMBED TAG ----------------------------------------------------------------------------->
       <section id="Embed-Tag" class="Box-Contents">
         <header>
           <h2 onclick="EmbedTag()">EMBED ELEMENT</h3>
@@ -1288,7 +1331,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- EMPHASIZE TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- EMPHASIZE TAG --------------------------------------------------------------------------->
       <section id="Emphasize-Tag" class="Box-Contents">
         <header>
           <h2 onclick="EmphasizeTag()">EMPHASIZE ELEMENT</h2>
@@ -1308,7 +1351,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- FIELDSET TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- FIELDSET TAG ---------------------------------------------------------------------------->
       <section id="Fieldset-Tag" class="Box-Contents">
         <header>
           <h2 onclick="FieldsetTag()">FIELDSET ELEMENT</h2>
@@ -1340,10 +1383,11 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- FIGURE TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- FIGURE TAG ----------------------------------------------------------------------------->
       <section id="Figure-Tag" class="Box-Contents">
         <header>
           <h2 onclick="FigureTag()">FIGURE ELEMENT</h2>
+          <div id="MediaStructure-FigureTag" class="Box-Structures"></div>
           <p>The <code>&lt;figure&gt;</code> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</p>
           <p>While the content of the <code>&lt;figure&gt;</code> element is related to the main flow, its position is independent of the main flow.</p>
           <p>It should not affect the flow of the document if removed.</p>
@@ -1362,10 +1406,11 @@
         </div>
       </section>
 
-      <!----------------------------------------------------------------------- FIGURE CAPTION TAG ----------------------------------------------------------------------->
+      <!------------------------------------------------------------------------ FIGURE CAPTION TAG ------------------------------------------------------------------------->
       <section id="Figure-Caption-Tag" class="Box-Contents">
         <header>
           <h2 onclick="FigureCaptionTag()">FIGURE CAPTION ELEMENT</h2>
+          <div id="MediaStructure-FigureCaptionTag" class="Box-Structures"></div>
           <p>The <code>&lt;figcaption&gt;</code> tag defines a caption for a <code>&lt;figure&gt;</code> element.</p>
           <p>The <code>&lt;figcaption&gt;</code> element can be placed as the first or last child of the <code>&lt;figure&gt;</code> element.</p>
         </header>
@@ -1382,7 +1427,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- FOOTER TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- FOOTER TAG ----------------------------------------------------------------------------->
       <section id="Footer-Tag" class="Box-Contents">
         <header>
           <h2 onclick="FooterTag()">FOOTER ELEMENT</h2>
@@ -1410,7 +1455,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- FORM TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- FORM TAG ------------------------------------------------------------------------------>
       <section id="Form-Tag" class="Box-Contents">
         <header>
           <h2 onclick="FormTag()">FORM ELEMENT</h2>
@@ -1443,7 +1488,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- HEAD TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- HEAD TAG ------------------------------------------------------------------------------>
       <section id="Head-Tag" class="Box-Contents">
         <header>
           <h2 onclick="HeadTag()">HEAD ELEMENT</h2>
@@ -1464,7 +1509,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- HEADER TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- HEADER TAG ----------------------------------------------------------------------------->
       <section id="Header-Tag" class="Box-Contents">
         <header>
           <h2 onclick="HeaderTag()">HEADER ELEMENT</h2>
@@ -1494,7 +1539,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- HEADING TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- HEADING TAG ---------------------------------------------------------------------------->
       <section id="Heading-Tag" class="Box-Contents">
         <header>
           <h2 onclick="HeadingTag()">HEADING ELEMENT</h2>
@@ -1532,7 +1577,7 @@
         </div>
       </section>
 
-      <!----------------------------------------------------------------------- HEADING GROUP TAG ------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------- HEADING GROUP TAG ------------------------------------------------------------------------->
       <section id="Heading-Group-Tag" class="Box-Contents">
         <header>
           <h2 onclick="HeadingGroupTag()">HEADING GROUP ELEMENT</h2>
@@ -1552,7 +1597,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------- HORIZONTAL RULE TAG ----------------------------------------------------------------------->
+      <!------------------------------------------------------------------------ HORIZONTAL RULE TAG ------------------------------------------------------------------------>
       <section id="Horizontal-Rule-Tag" class="Box-Contents">
         <header>
           <h2 onclick="HorizontalRuleTag()">HORIZONTAL RULE ELEMENT</h2>
@@ -1572,7 +1617,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- HTML TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- HTML TAG ------------------------------------------------------------------------------>
       <section id="HTML-Tag" class="Box-Contents">
         <header>
           <h2 onclick="HTMLTag()">HTML ELEMENT</h2>
@@ -1602,10 +1647,11 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- IMAGE TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- IMAGE TAG ----------------------------------------------------------------------------->
       <section id="Image-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ImageTag()">IMAGE ELEMENT</h2>
+          <div id="MediaStructure-ImageTag" class="Box-Structures"></div>
           <p>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page.</p>
           <p>Images are not technically inserted into a web page, images are linked to web pages.</p>
           <p>The <code>&lt;img&gt;</code> tag creates a holding space for the referenced image.</p>
@@ -1701,7 +1747,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------ INLINE FRAME TAG ------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------- INLINE FRAME TAG -------------------------------------------------------------------------->
       <section id="Inline-Frame-Tag" class="Box-Contents">
         <header>
           <h2 onclick="InlineFrameTag()">INLINE FRAME ELEMENT</h2>
@@ -1739,7 +1785,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- INPUT TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- INPUT TAG ----------------------------------------------------------------------------->
       <section id="Input-Tag" class="Box-Contents">
         <header>
           <h2 onclick="InputTag()">INPUT ELEMENT</h2>
@@ -1815,7 +1861,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- INSERT TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- INSERT TAG ----------------------------------------------------------------------------->
       <section id="Insert-Tag" class="Box-Contents">
         <header>
           <h2 onclick="InsertTag()">INSERT ELEMENT</h2>
@@ -1836,7 +1882,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- IDIOMATIC TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- IDIOMATIC TAG --------------------------------------------------------------------------->
       <section id="Idiomatic-Tag" class="Box-Contents">
         <header>
           <h2 onclick="IdiomaticTag()">IDIOMATIC ELEMENT</h2>
@@ -1856,7 +1902,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- KEYBOARD TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- KEYBOARD TAG ---------------------------------------------------------------------------->
       <section id="Keyboard-Tag" class="Box-Contents">
         <header>
           <h2 onclick="KeyboardTag()">KEYBOARD ELEMENT</h2>
@@ -1875,7 +1921,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- LABEL TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- LABEL TAG ----------------------------------------------------------------------------->
       <section id="Label-Tag" class="Box-Contents">
         <header>
           <h2 onclick="LabelTag()">LABEL ELEMENT</h2>
@@ -1917,7 +1963,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- LEGEND TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- LEGEND TAG ----------------------------------------------------------------------------->
       <section id="Legend-Tag" class="Box-Contents">
         <header>
           <h2 onclick="LegendTag()">LEGEND ELEMENT</h2>
@@ -1937,7 +1983,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- LINK TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- LINK TAG ------------------------------------------------------------------------------>
       <section id="Link-Tag" class="Box-Contents">
         <header>
           <h2 onclick="LinkTag()">LINK ELEMENT</h2>
@@ -1998,7 +2044,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- LIST ITEM TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- LIST ITEM TAG --------------------------------------------------------------------------->
       <section id="List-Item-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ListItemTag()">LIST ITEM ELEMENT</h2>
@@ -2022,7 +2068,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- MAIN TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- MAIN TAG ------------------------------------------------------------------------------>
       <section id="Main-Tag" class="Box-Contents">
         <header>
           <h2 onclick="MainTag()">MAIN ELEMENT</h2>
@@ -2047,10 +2093,11 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- MAP TAG ----------------------------------------------------------------------------->
+      <!------------------------------------------------------------------------------ MAP TAG ------------------------------------------------------------------------------>
       <section id="Map-Tag" class="Box-Contents">
         <header>
           <h2 onclick="MapTag()">MAP ELEMENT</h2>
+          <div id="MediaStructure-MapTag" class="Box-Structures"></div>
           <p>The <code>&lt;map&gt;</code> tag is used to define an image map, where it is an image map with clickable areas.</p>
         </header>
 
@@ -2076,7 +2123,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- MARK TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- MARK TAG ------------------------------------------------------------------------------>
       <section id="Mark-Tag" class="Box-Contents">
         <header>
           <h2 onclick="MarkTag()">MARK ELEMENT</h2>
@@ -2095,7 +2142,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- MENU TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- MENU TAG ------------------------------------------------------------------------------>
       <section id="Menu-Tag" class="Box-Contents">
         <header>
           <h2 onclick="MenuTag()">MENU ELEMENT</h2>
@@ -2117,7 +2164,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- META TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- META TAG ------------------------------------------------------------------------------>
       <section id="Meta-Tag" class="Box-Contents">
         <header>
           <h2 onclick="MetaTag()">META ELEMENT</h2>
@@ -2148,7 +2195,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- METER TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- METER TAG ----------------------------------------------------------------------------->
       <section id="Meter-Tag" class="Box-Contents">
         <header>
           <h2 onclick="MeterTag()">METER ELEMENT</h2>
@@ -2179,7 +2226,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- NAVIGATE TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- NAVIGATE TAG ---------------------------------------------------------------------------->
       <section id="Navigate-Tag" class="Box-Contents">
         <header>
           <h2 onclick="NavigateTag()">NAVIGATE ELEMENT</h2>
@@ -2208,7 +2255,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- NO SCRIPT TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- NO SCRIPT TAG --------------------------------------------------------------------------->
       <section id="No-Script-Tag" class="Box-Contents">
         <header>
           <h2 onclick="NoScriptTag()">NO SCRIPT ELEMENT</h2>
@@ -2231,10 +2278,11 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- OBJECT TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- OBJECT TAG ----------------------------------------------------------------------------->
       <section id="Object-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ObjectTag()">OBJECT ELEMENT</h2>
+          <div id="MiscStructure-ObjectTag" class="Box-Structures"></div>
           <p>The <code>&lt;object&gt;</code> tag defines a container for an external resource.</p>
           <p>The external resource can be a web page, a picture, a media player, or a plug-in application.</p>
         </header>
@@ -2274,7 +2322,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- OPTION TAG ---------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- OPTION TAG ----------------------------------------------------------------------------->
       <section id="Option-Tag" class="Box-Contents">
         <header>
           <h2 onclick="OptionTag()">OPTION ELEMENT</h2>
@@ -2294,7 +2342,7 @@
         </div>
       </section>
 
-      <!----------------------------------------------------------------------- OPTION GROUP TAG ------------------------------------------------------------------------->
+      <!------------------------------------------------------------------------- OPTION GROUP TAG -------------------------------------------------------------------------->
       <section id="Option-Group-Tag" class="Box-Contents">
         <header>
           <h2 onclick="OptionGroupTag()">OPTION GROUP ELEMENT</h2>
@@ -2311,7 +2359,7 @@
         </div>
       </section>
 
-      <!----------------------------------------------------------------------- ORDERED LIST TAG ------------------------------------------------------------------------->
+      <!------------------------------------------------------------------------- ORDERED LIST TAG -------------------------------------------------------------------------->
       <section id="Ordered-List-Tag" class="Box-Contents">
         <header>
           <h2 onclick="OrderedListTag()">ORDERED LIST ELEMENT</h2>
@@ -2335,7 +2383,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- OUTPUT TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- OUTPUT TAG ----------------------------------------------------------------------------->
       <section id="Output-Tag" class="Box-Contents">
         <header>
           <h2 onclick="OutputTag()">OUTPUT ELEMENT</h2>
@@ -2358,7 +2406,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- PARAGRAPH TAG -------------------------------------------------------------------------->
+      <!-------------------------------------------------------------------------- PARAGRAPH TAG ---------------------------------------------------------------------------->
       <section id="Paragraph-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ParagraphTag()">PARAGRAPH ELEMENT</h2>
@@ -2378,10 +2426,11 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- PARAMETER TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- PARAMETER TAG --------------------------------------------------------------------------->
       <section id="Parameter-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ParameterTag()">PARAMETER ELEMENT</h2>
+          <div id="MiscStructure-ParameterTag" class="Box-Structures"></div>
           <p>The <code>&lt;param&gt;</code> tag is used to define parameters for an <code>&lt;object&gt;</code> element.</p>
         </header>
 
@@ -2399,7 +2448,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- PICTURE TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- PICTURE TAG ---------------------------------------------------------------------------->
       <section id="Picture-Tag" class="Box-Contents">
         <header>
           <h2 onclick="PictureTag()">PICTURE ELEMENT</h2>
@@ -2421,7 +2470,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- PREFORMAT TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- PREFORMAT TAG --------------------------------------------------------------------------->
       <section id="Preformat-Tag" class="Box-Contents">
         <header>
           <h2 onclick="PreformatTag()">PREFORMAT ELEMENT</h2>
@@ -2442,7 +2491,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- PROGRESS TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- PROGRESS TAG ---------------------------------------------------------------------------->
       <section id="Progress-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ProgressTag()">PROGRESS ELEMENT</h2>
@@ -2469,7 +2518,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- QUOTE TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- QUOTE TAG ----------------------------------------------------------------------------->
       <section id="Quote-Tag" class="Box-Contents">
         <header>
           <h2 onclick="QuoteTag()">QUOTE ELEMENT</h2>
@@ -2491,7 +2540,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- RUBY TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- RUBY TAG ------------------------------------------------------------------------------>
       <section id="Ruby-Tag"class="Box-Contents">
         <header>
           <h2 onclick="RubyTag()">RUBY ELEMENT</h2>
@@ -2518,7 +2567,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------- RUBY PARANTHESES TAG ---------------------------------------------------------------------->
+      <!----------------------------------------------------------------------- RUBY PARANTHESES TAG ------------------------------------------------------------------------>
       <section id="Ruby-Parantheses-Tag" class="Box-Contents">
         <header>
           <h2 onclick="RubyParanthesesTag()">RUBY PARANTHESES ELEMENT</h2>
@@ -2543,7 +2592,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- RUBY TEXT TAG -------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- RUBY TEXT TAG --------------------------------------------------------------------------->
       <section id="Ruby-Text-Tag" class="Box-Contents">
         <header>
           <h2 onclick="RubyTextTag()">RUBY TEXT ELEMENT</h2>
@@ -2573,7 +2622,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- SAMPLE TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- SAMPLE TAG ----------------------------------------------------------------------------->
       <section id="Sample-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SampleTag()">SAMPLE ELEMENT</h2>
@@ -2592,7 +2641,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------ SCALABLE VECTOR GRAPHIC TAG ------------------------------------------------------------------->
+      <!-------------------------------------------------------------------- SCALABLE VECTOR GRAPHIC TAG -------------------------------------------------------------------->
       <section id="Scalable-Vector-Graphic-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ScalableVectorGraphicTag()">SCALABLE VECTOR GRAPHIC ELEMENT</h2>
@@ -2648,7 +2697,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- SCRIPT TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- SCRIPT TAG ----------------------------------------------------------------------------->
       <section id="Script-Tag" class="Box-Contents">
         <header>
           <h2 onclick="ScriptTag()">SCRIPT ELEMENT</h2>
@@ -2692,7 +2741,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- SEARCH TAG ---------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- SEARCH TAG ----------------------------------------------------------------------------->
       <section id="Search-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SearchTag()">SEARCH ELEMENT</h2>
@@ -2712,7 +2761,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- SECTION TAG --------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- SECTION TAG ---------------------------------------------------------------------------->
       <section id="Section-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SectionTag()">SECTION ELEMENT</h2>
@@ -2732,7 +2781,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- SELECT TAG ---------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- SELECT TAG ----------------------------------------------------------------------------->
       <section id="Select-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SelectTag()">SELECT ELEMENT</h2>
@@ -2767,7 +2816,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- SMALL TAG ---------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- SMALL TAG ------------------------------------------------------------------------------>
       <section id="Small-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SmallTag()">SMALL ELEMENT</h2>
@@ -2786,10 +2835,11 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- SOURCE TAG ---------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- SOURCE TAG ----------------------------------------------------------------------------->
       <section id="Source-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SourceTag()">SOURCE ELEMENT</h2>
+          <div id="MediaStructure-SourceTag" class="Box-Structures"></div>
           <p>The <code>&lt;source&gt;</code> tag is used to specify multiple media resources for media elements, such as audio, video and picture.</p>
           <p>The <code>&lt;source&gt;</code> tag allows user to specify alternative files which the browser may choose from, based on browser support or viewport width.</p>
           <p>The browser will choose the first <code>&lt;source&gt;</code> it supports.</p>
@@ -2805,7 +2855,7 @@
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- SPAN TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- SPAN TAG ------------------------------------------------------------------------------>
       <section id="Span-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SpanTag()">SPAN ELEMENT</h2>
@@ -2820,7 +2870,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- STRIKE TAG ---------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- STRIKE TAG ----------------------------------------------------------------------------->
       <section id="Strike-Tag" class="Box-Contents">
         <header>
           <h2 onclick="StrikeTag()">STRIKE ELEMENT</h2>
@@ -2839,7 +2889,7 @@
         </div>
       </section>
 
-      <!-------------------------------------------------------------------------- STRONG TAG ---------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- STRONG TAG ----------------------------------------------------------------------------->
       <section id="Strong-Tag" class="Box-Contents">
         <header>
           <h2 onclick="StrongTag()">STRONG ELEMENT</h2>
@@ -2859,7 +2909,7 @@
         </div>
       </section>
 
-      <!--------------------------------------------------------------------------- STYLE TAG ---------------------------------------------------------------------------->
+      <!----------------------------------------------------------------------------- STYLE TAG ----------------------------------------------------------------------------->
       <section id="Style-Tag" class="Box-Contents">
         <header>
           <h2 onclick="StyleTag()">STYLE ELEMENT</h2>
@@ -2892,7 +2942,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------ SUBSCRIPT TAG --------------------------------------------------------------------------->
+      <!--------------------------------------------------------------------------- SUBSCRIPT TAG --------------------------------------------------------------------------->
       <section id="Subscript-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SubscriptTag()">SUBSCRIPT ELEMENT</h2>
@@ -2912,10 +2962,11 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------- SUMMARY TAG ---------------------------------------------------------------------------->
+      <!---------------------------------------------------------------------------- SUMMARY TAG ---------------------------------------------------------------------------->
       <section id="Summary-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SummaryTag()">SUMMARY ELEMENT</h2>
+          <div id="MiscStructure-SummaryTag" class="Box-Structures"></div>
           <p>The <code>&lt;summary&gt;</code> tag defines a visible heading for the <code>&lt;details&gt;</code> element.</p>
           <p>The heading can be clicked to view/hide the details.</p>
           <p>The <code>&lt;summary&gt;</code> element should be the first child element of the <code>&lt;details&gt;</code> element.</p>
@@ -2933,7 +2984,7 @@
         </div>
       </section>
 
-      <!------------------------------------------------------------------------ SUPERSCRIPT TAG ------------------------------------------------------------------------->
+      <!-------------------------------------------------------------------------- SUPERSCRIPT TAG -------------------------------------------------------------------------->
       <section id="Superscript-Tag" class="Box-Contents">
         <header>
           <h2 onclick="SuperscriptTag()">SUPERSCRIPT ELEMENT</h2>
@@ -3267,6 +3318,7 @@
       <section id="Track-Tag" class="Box-Contents">
         <header>
           <h2 onclick="TrackTag()">TRACK ELEMENT</h2>
+          <div id="MediaStructure-TrackTag" class="Box-Structures"></div>
           <p>The <code>&lt;track&gt;</code> tag specifies text tracks for <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> elements.</p>
           <p>This element is used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing.</p>
           <p>Tracks are formatted in WebVTT format (.vtt files).</p>
@@ -3349,6 +3401,7 @@
       <section id="Video-Tag" class="Box-Contents">
         <header>
           <h2 onclick="VideoTag()">VIDEO ELEMENT</h2>
+          <div id="MediaStructure-VideoTag" class="Box-Structures"></div>
           <p>The <code>&lt;video&gt;</code> tag is used to embed video content in a document, such as a movie clip or other video streams.</p>
           <p>The <code>MyText</code> between the <code>&lt;video&gt;</code> tags will only be displayed in browsers that do not support the video element.</p>
           <p>There are three supported video formats in HTML: MP4, WebM, and OGG.</p>
