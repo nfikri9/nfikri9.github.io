@@ -1,3 +1,149 @@
+//////////////////////////////////////////////////////////////////////////// TOPIC SELECTIONS ////////////////////////////////////////////////////////////////////////////
+function CSSIntroduction() {
+  let CSSIntroduction = document.getElementById("CSS-Introduction");
+  if (CSSIntroduction.style.display === "block") { CSSIntroduction.style.display = "none"; }
+  else { CSSIntroduction.style.display = "block"; }
+}
+
+function CSSProperties() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  if (CSSProperties.style.display === "block") { CSSProperties.style.display = "none"; }
+  else { CSSProperties.style.display = "block"; }
+}
+
+//////////////////////////////////////////////////////////////////////// LIST OF CSS PROPERTIES //////////////////////////////////////////////////////////////////////////
+function SearchCSSProperties() {
+  let input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("CSS-Properties-Input");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("CSS-Properties-List");
+  li = ul.getElementsByTagName("li");
+  
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) { li[i].style.display = ""; }
+    else { li[i].style.display = "none"; }
+  }
+}
+
+function TextAlignProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextAlignProperty = document.getElementById("Text-Align-Property");
+
+  if (TextAlignProperty.style.display === "block") {
+    TextAlignProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextAlignProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextAlignValue() {
+  let myTextAlign = document.getElementById("Input-Text-Align").value;
+  document.getElementsByClassName("Box-Model")[0].style.textAlign = myTextAlign;
+}
+
+
+
+
+
+
+
+
+
+function CSSBoxModel() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let CSSBoxModel = document.getElementById("CSS-Box-Model");
+
+  if (CSSBoxModel.style.display === "block") {
+    CSSBoxModel.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    CSSBoxModel.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////// CSS BOX MODEL //////////////////////////////////////////////////////////////////////////////
+function PropertyWidth() {
+  let myWidth = document.getElementById("Input-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.width = myWidth;
+}
+
+function PropertyMinWidth() {
+  let myMinWidth = document.getElementById("Input-Min-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.minWidth = myMinWidth;
+}
+
+function PropertyMaxWidth() {
+  let myMaxWidth = document.getElementById("Input-Max-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.maxWidth = myMaxWidth;
+}
+
+function PropertyPadding() {
+  let myPadding = document.getElementById("Input-Padding").value;
+  document.getElementsByClassName("Box-Model")[0].style.padding = myPadding;
+}
+
+function PropertyMargin() {
+  let myMargin = document.getElementById("Input-Margin").value;
+  document.getElementsByClassName("Box-Model")[0].style.margin = myMargin;
+}
+
+function PropertyBorderWidth() {
+  let myBorderWidth = document.getElementById("Input-Border-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.borderWidth = myBorderWidth;
+}
+
+function PropertyBorderStyle() {
+  let myBorderStyle = document.getElementById("Input-Border-Style").value;
+  document.getElementsByClassName("Box-Model")[0].style.borderStyle = myBorderStyle;
+}
+
+function PropertyBorderColor() {
+  let myBorderColor = document.getElementById("Input-Border-Color").value;
+  document.getElementsByClassName("Box-Model")[0].style.borderColor = myBorderColor;
+}
+
+function PropertyBorderRadius() {
+  let myBorderRadius = document.getElementById("Input-Border-Radius").value;
+  document.getElementsByClassName("Box-Model")[0].style.borderRadius = myBorderRadius;
+}
+
+function PropertyOutlineWidth() {
+  let myOutlineWidth = document.getElementById("Input-Outline-Width").value;
+  document.getElementsByClassName("Box-Model")[0].style.outlineWidth = myOutlineWidth;
+}
+
+function PropertyOutlineStyle() {
+  let myOutlineStyle = document.getElementById("Input-Outline-Style").value;
+  document.getElementsByClassName("Box-Model")[0].style.outlineStyle = myOutlineStyle;
+}
+
+function PropertyOutlineColor() {
+  let myOutlineColor = document.getElementById("Input-Outline-Color").value;
+  document.getElementsByClassName("Box-Model")[0].style.outlineColor = myOutlineColor;
+}
+
+function PropertyOutlineOffset() {
+  let myOutlineOffset = document.getElementById("Input-Outline-Offset").value;
+  document.getElementsByClassName("Box-Model")[0].style.outlineOffset = myOutlineOffset;
+}
+
+function PropertyBoxSizing() {
+  let myBoxSizing = document.getElementById("Input-Box-Sizing").value;
+  document.getElementsByClassName("Box-Model")[0].style.boxSizing = myBoxSizing;
+}
+
+function PropertyBoxShadow() {
+  let myBoxShadow = document.getElementById("Input-Box-Shadow").value;
+  document.getElementsByClassName("Box-Model")[0].style.boxShadow = myBoxShadow;
+}
+
 ///////////////////
 // CSS SELECTORS //
 ///////////////////
@@ -238,17 +384,6 @@ function AttributeSelector7() {
   else { myVisibility.style.display = "block"; }
 }
 
-///////////////////
-// CSS BOX MODEL //
-///////////////////
-function CSSBoxModel() {
-  let myVisibility = document.getElementById("CSS-Box-Model");
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
 ////////////////////
 // CSS BOX LAYOUT //
 ////////////////////
@@ -469,11 +604,6 @@ function CSSColorValues(){
 ////////////////////
 // WIDTH PROPERTY //
 ////////////////////
-function PropertyWidth() {
-  let myWidth = document.getElementById("Input-Width").value;
-  document.getElementsByClassName("Box-Model")[0].style.width = myWidth;
-}
-
 // WIDTH: CSS GLOBAL VALUES; //
 function WidthGlobalValues() {
   let myVisibility = document.getElementById("Width-Global-Values");
@@ -545,11 +675,6 @@ function WidthMaxContent() {
 ////////////////////////
 // MIN-WIDTH PROPERTY //
 ////////////////////////
-function PropertyMinWidth() {
-  let myMinWidth = document.getElementById("Input-Min-Width").value;
-  document.getElementsByClassName("Box-Model")[0].style.minWidth = myMinWidth;
-}
-
 // MIN-WIDTH: CSS GLOBAL VALUES; //
 function MinWidthGlobalValues() {
   let myVisibility = document.getElementById("Min-Width-Global-Values");
@@ -621,11 +746,6 @@ function MinWidthMaxContent() {
 ////////////////////////
 // MAX-WIDTH PROPERTY //
 ////////////////////////
-function PropertyMaxWidth() {
-  let myMaxWidth = document.getElementById("Input-Max-Width").value;
-  document.getElementsByClassName("Box-Model")[0].style.maxWidth = myMaxWidth;
-}
-
 // MAX-WIDTH: CSS GLOBAL VALUES; //
 function MaxWidthGlobalValues() {
   let myVisibility = document.getElementById("Max-Width-Global-Values");
@@ -970,11 +1090,6 @@ function AspectRatioAuto() {
 //////////////////////
 // PADDING PROPERTY //
 //////////////////////
-function PropertyPadding() {
-  let myPadding = document.getElementById("Input-Padding").value;
-  document.getElementsByClassName("Box-Model")[0].style.padding = myPadding;
-}
-
 // PADDING: CSS GLOBAL VALUES; //
 function PaddingGlobalValues() {
   let myVisibility = document.getElementById("Padding-Global-Values");
@@ -1001,11 +1116,6 @@ function PaddingLengthValues() {
 /////////////////////
 // MARGIN PROPERTY //
 /////////////////////
-function PropertyMargin() {
-  let myMargin = document.getElementById("Input-Margin").value;
-  document.getElementsByClassName("Box-Model")[0].style.margin = myMargin;
-}
-
 // MARGIN: CSS GLOBAL VALUES; //
 function MarginGlobalValues() {
   let myVisibility = document.getElementById("Margin-Global-Values");
@@ -1044,11 +1154,6 @@ function MarginAuto() {
 ///////////////////////////
 // BORDER-WIDTH PROPERTY //
 ///////////////////////////
-function PropertyBorderWidth() {
-  let myBorderWidth = document.getElementById("Input-Border-Width").value;
-  document.getElementsByClassName("Box-Model")[0].style.borderWidth = myBorderWidth;
-}
-
 // BORDER-WIDTH: CSS GLOBAL VALUES; //
 function BorderWidthGlobalValues() {
   let myVisibility = document.getElementById("Border-Width-Global-Values");
@@ -1111,11 +1216,6 @@ function BorderWidthThick() {
 ///////////////////////////
 // BORDER-STYLE PROPERTY //
 ///////////////////////////
-function PropertyBorderStyle() {
-  let myBorderStyle = document.getElementById("Input-Border-Style").value;
-  document.getElementsByClassName("Box-Model")[0].style.borderStyle = myBorderStyle;
-}
-
 // BORDER-STYLE: CSS GLOBAL VALUES; //
 function BorderStyleGlobalValues() {
   let myVisibility = document.getElementById("Border-Style-Global-Values");
@@ -1251,11 +1351,6 @@ function BorderStyleRidge() {
 ///////////////////////////
 // BORDER-COLOR PROPERTY //
 ///////////////////////////
-function PropertyBorderColor() {
-  let myBorderColor = document.getElementById("Input-Border-Color").value;
-  document.getElementsByClassName("Box-Model")[0].style.borderColor = myBorderColor;
-}
-
 // BORDER-COLOR: CSS GLOBAL VALUES; //
 function BorderColorGlobalValues() {
   let myVisibility = document.getElementById("Border-Color-Global-Values");
@@ -1307,11 +1402,6 @@ function BorderColorTransparent() {
 ////////////////////////////
 // BORDER-RADIUS PROPERTY //
 ////////////////////////////
-function PropertyBorderRadius() {
-  let myBorderRadius = document.getElementById("Input-Border-Radius").value;
-  document.getElementsByClassName("Box-Model")[0].style.borderRadius = myBorderRadius;
-}
-
 // BORDER-RADIUS: CSS GLOBAL VALUES; //
 function BorderRadiusGlobalValues() {
   let myVisibility = document.getElementById("Border-Radius-Global-Values");
@@ -1338,10 +1428,7 @@ function BorderRadiusLengthValues() {
 ////////////////////////////
 // OUTLINE-WIDTH PROPERTY //
 ////////////////////////////
-function PropertyOutlineWidth() {
-  let myOutlineWidth = document.getElementById("Input-Outline-Width").value;
-  document.getElementsByClassName("Box-Model")[0].style.outlineWidth = myOutlineWidth;
-}
+
 
 // OUTLINE-WIDTH: CSS GLOBAL VALUES; //
 function OutlineWidthGlobalValues() {
@@ -1405,11 +1492,6 @@ function OutlineWidthThick() {
 ////////////////////////////
 // OUTLINE-STYLE PROPERTY //
 ////////////////////////////
-function PropertyOutlineStyle() {
-  let myOutlineStyle = document.getElementById("Input-Outline-Style").value;
-  document.getElementsByClassName("Box-Model")[0].style.outlineStyle = myOutlineStyle;
-}
-
 // OUTLINE-STYLE: CSS GLOBAL VALUES; //
 function OutlineStyleGlobalValues() {
   let myVisibility = document.getElementById("Outline-Style-Global-Values");
@@ -1545,11 +1627,6 @@ function OutlineStyleRidge() {
 ////////////////////////////
 // OUTLINE-COLOR PROPERTY //
 ////////////////////////////
-function PropertyOutlineColor() {
-  let myOutlineColor = document.getElementById("Input-Outline-Color").value;
-  document.getElementsByClassName("Box-Model")[0].style.outlineColor = myOutlineColor;
-}
-
 // OUTLINE-COLOR: CSS GLOBAL VALUES; //
 function OutlineColorGlobalValues() {
   let myVisibility = document.getElementById("Outline-Color-Global-Values");
@@ -1601,11 +1678,6 @@ function OutlineColorTransparent() {
 /////////////////////////////
 // OUTLINE-OFFSET PROPERTY //
 /////////////////////////////
-function PropertyOutlineOffset() {
-  let myOutlineOffset = document.getElementById("Input-Outline-Offset").value;
-  document.getElementsByClassName("Box-Model")[0].style.outlineOffset = myOutlineOffset;
-}
-
 // OUTLINE-OFFSET: CSS GLOBAL VALUES; //
 function OutlineOffsetGlobalValues() {
   let myVisibility = document.getElementById("Outline-Offset-Global-Values");
@@ -1632,11 +1704,6 @@ function OutlineOffsetLengthValues() {
 /////////////////////////
 // BOX-SHADOW PROPERTY //
 /////////////////////////
-function PropertyBoxShadow() {
-  let myBoxShadow = document.getElementById("Input-Box-Shadow").value;
-  document.getElementsByClassName("Box-Model")[0].style.boxShadow = myBoxShadow;
-}
-
 // BOX-SHADOW: CSS GLOBAL VALUES; //
 function BoxShadowGlobalValues() {
   let myVisibility = document.getElementById("Box-Shadow-Global-Values");
@@ -1711,11 +1778,6 @@ function BoxShadowNone() {
 /////////////////////////
 // BOX-SIZING PROPERTY //
 /////////////////////////
-function PropertyBoxSizing() {
-  let myBoxSizing = document.getElementById("Input-Box-Sizing").value;
-  document.getElementsByClassName("Box-Model")[0].style.boxSizing = myBoxSizing;
-}
-
 // BOX-SIZING: CSS GLOBAL VALUES; //
 function BoxSizingGlobalValues() {
   let myVisibility = document.getElementById("Box-Sizing-Global-Values");
@@ -1750,15 +1812,6 @@ function BoxSizingContentBox() {
     document.getElementById("Box-Sizing-Content-Box").innerHTML =
       "<div>The <code>width</code> and <code>height</code> properties (and <code>min/max</code> properties) includes content, <code>padding</code> and <code>border</code></div>" +
       "<div>The element will appears bigger than intended to be</div>";
-  }
-  else { myVisibility.style.display = "none"; }
-}
-
-// BOX-MODEL INSIGHTS //
-function InsightsBoxModel() {
-  let myVisibility = document.getElementsByClassName("Display-Insights")[0];
-  if (myVisibility.style.display === "none") {
-    myVisibility.style.display = "block";
   }
   else { myVisibility.style.display = "none"; }
 }

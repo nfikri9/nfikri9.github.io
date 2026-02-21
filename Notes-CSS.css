@@ -1,9 +1,7 @@
-/**********/
-/* GLOBAL */
-/**********/
+/************************************************************ GLOBAL ************************************************************/
 :root {
-  --Main-Theme: rgb(211,211,211);
-  --Sub-Theme: aqua;
+  --Main-Theme: #6c757d;
+  --Sub-Theme : #f8f9fa;
 }
 
 * {
@@ -13,14 +11,11 @@
 }
 
 body { background-color: var(--Main-Theme); }
-h1 { text-align: center; }
+h1, h2 { text-align: center; }
 a { color: inherit; text-decoration: none; }
 a:hover { color: darksalmon; }
-.Highlighted:hover { border: 1px solid black; }
 
-/**********/
-/* HEADER */
-/**********/
+/************************************************************ HEADER ************************************************************/
 .My-Navigate-Bar {
   width: 100%;
   height: auto;
@@ -40,9 +35,7 @@ a:hover { color: darksalmon; }
   border-radius: 50%;
 }
 
-/************/
-/* CONTENTS */
-/************/
+/****************************************************** TOPIC SELECTIONS ********************************************************/
 #Box-Topic-Selections {
   max-width: 1150px;
   padding: 10px;
@@ -53,13 +46,68 @@ a:hover { color: darksalmon; }
   border: 1px solid black;
 }
 
+#CSS-Properties {
+  height: 83vh;
+  overflow: auto;
+}
+
+#CSS-Properties-Input {
+  background-image: url(https://www.w3schools.com/css/searchicon.png);
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#CSS-Properties-List {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#CSS-Properties-List li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+
+#CSS-Properties-List li a:hover:not(.header) { background-color: #eee; }
+
+#CSS-Properties-List code {
+  display: inline-block;
+  width: 23%;
+}
+
+#CSS-Properties-List span {
+  display: inline-block;
+  width: 76%;
+}
+
+/*********************************************************** CONTENTS ***********************************************************/
 .Box-Contents {
-  max-width: 720px;
+  max-width: 1150px;
   padding: 10px;
   margin: 20px auto;
   display: none;
   border: 1px solid black;
 }
+
+
+
+
+
+
+
+
+
 
 /* SUB BOX CONTENTS */
 .Sub-Topics { margin: 20px 0; }
@@ -71,7 +119,7 @@ a:hover { color: darksalmon; }
 
 /* SAMPLE BOX */
 .Box-Model {
-  width: 100px;
+  width: 150px;
   height: 100px;
   padding: 38px 0px 0px 6px;
   margin: 10px auto;
@@ -100,5 +148,6 @@ a:hover { color: darksalmon; }
 #Box-Relative-Length-Units { margin: 10px 0; }
 
 /* INSIGHTS */
-.Display-Insights { display: none; }
 .Item-Insights { margin: 10px 0; }
+
+.Highlighted:hover { border: 1px solid black; }

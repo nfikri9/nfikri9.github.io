@@ -8,48 +8,597 @@
     <!-- Metadata -->
     <meta name="author" content="Nabil Fikri">
     <meta name="description" content="CSS page, which includes notes that has been applied or covered.">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Notes">
+    <meta name="keywords" content="HTML5, CSS3, JS ES6, CSS3 Notes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="Notes-CSS.css">
 
     <!-- Open Graph Protocol -->
-    <meta property="og:title" content="Main page of the portfolio">
+    <meta property="og:title" content="IT Library - CSS3 Notes">
     <meta property="og:type" content="website">
     <meta property="og:image" content="Logo-NF.jpg">
     <meta property="og:url" content="nfikri9.github.io/">
   </head>
 
   <body>
-  <!------------------>
-  <!-- NAVIGATE BAR -->
-  <!------------------>
-  <nav class="My-Navigate-Bar">
-    <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
-    <div>
-      <a href="Notes-HTML.html">HTML</a>
-      <a href="Notes-CSS.html">CSS</a>
-      <a href="Notes-JavaScript.html">JAVASCRIPT</a>
-      <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
-      <a href="Notes-JQuery.html">JQUERY</a>
-      <a href="Notes-SASS.html">SASS</a>
-      <a href="Notes-React.html">REACT</a>
-      <a href="Notes-Redux.html">REDUX</a>
-      <a href="Notes-Git.html">GIT</a>
-    </div>
-  </nav>
+    <!--------------------------------------------------------------------------- NAVIGATE BAR ---------------------------------------------------------------------------->
+    <header>
+      <nav class="My-Navigate-Bar">
+        <a href="index.html"><img id="Logo-Brand" src="Logo-NF.jpg" alt="Brand Logo"></a>
+        <div>
+          <a href="Notes-HTML.html">HTML</a>
+          <a href="Notes-CSS.html">CSS</a>
+          <a href="Notes-JavaScript.html">JAVASCRIPT</a>
+          <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
+          <a href="Notes-JQuery.html">JQUERY</a>
+          <a href="Notes-SASS.html">SASS</a>
+          <a href="Notes-React.html">REACT</a>
+          <a href="Notes-Redux.html">REDUX</a>
+          <a href="Notes-Git.html">GIT</a>
+        </div>
+      </nav>
+    </header>
 
-<!---------------------->
-<!-- TOPIC SELECTIONS -->
-<!---------------------->
-<div id="Box-Topic-Selections">
-  <button onclick="CSSSelectors()">CSS SELECTORS</button>
-  <button onclick="CSSBoxModel()">BOX MODEL</button>
-  <button onclick="CSSBoxLayout()">BOX LAYOUT</button>
-  <button onclick="CSSAnimationTransition()">ANIMATION & TRANSITION</button>
-  <button onclick="CSSTypography()">TYPOGRAPHY</button>
-  <button onclick="rawnotes()">NOTES</button>
-</div>
+    <main>
+      <!------------------------------------------------------------------------ TOPIC SELECTIONS --------------------------------------------------------------------------->
+      <section id="Box-Topic-Selections">
+        <button onclick="CSSIntroduction()">CSS INTRODUCTION</button>
+        <button onclick="CSSProperties()">CSS PROPERTIES</button>
+        <button onclick="CSSSelectors()">CSS SELECTORS</button>
+        <button onclick="CSSBoxLayout()">BOX LAYOUT</button>
+        <button onclick="CSSAnimationTransition()">ANIMATION & TRANSITION</button>
+        <button onclick="CSSTypography()">TYPOGRAPHY</button>
+        <button onclick="rawnotes()">NOTES</button>
+      </section>
+
+      <!------------------------------------------------------------------------- CSS INTRODUCTION -------------------------------------------------------------------------->
+      <section id="CSS-Introduction" class="Box-Contents">
+        <header>
+          <h2>CSS INTRODUCTION</h2>
+          <p>CSS stands for Cascading Style Sheets.</p>
+          <p>It's a markup language used to apply styles for HTML.</p>
+          <p>CSS works by selecting HTML elements and applying styles to them.</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Role of CSS</h3>
+          
+          <span>Content Separated</span> <br>
+          <p>The primary role of CSS is to separate the content of a web page from its visual presentation.</p>
+          <p>This separation allows web developers to create more flexible and maintainable websites.</p>
+          <p>With CSS, developer can control the layout, colors, fonts, and overall visual appearance of web pages without altering the HTML structure.</p> <br>
+
+          <span>Responsive Web Design</span>
+          <p>One of the most powerful aspects of CSS is its ability to create responsive designs.</p>
+          <p>With CSS, developer can make the website look great on any device; like in a desktop computer, a tablet, or a smartphone.</p>
+          <p>CSS allows developer to adjust layouts, font sizes, and other visual elements based on the screen size of the device viewing the website.</p> <br>
+
+          <span>Cascading Nature</span>
+          <p>Another important feature of CSS is its cascading nature, which is where the "cascading" in its name comes from.</p>
+          <p>The styles can be inherited and overridden, allowing for a hierarchical structure of styling.</p>
+
+          <span>External Stylesheets</span>
+          <p>CSS also supports the use of external stylesheets.</p>
+          <p>Developer can keep all their styling rules in a separate file, which can then be linked to multiple HTML pages.</p>
+          <p>This feature greatly enhances the maintainability of websites, especially larger ones.</p>
+          <p>Instead of having to change styles on each individual page, you can make changes in one CSS file that will affect all linked pages.</p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Basic Syntax</h3>
+          <code>mySelector { myProperty: myValue; }</code>
+          <p>A CSS rule is made up of two main parts: a selector and a declaration block.</p>
+          <p>If developer want to apply the same set of styles to multiple selectors, they can create a selector list with each selector separated by a comma.</p>
+          <code><i>mySelector1, mySelector2, mySelector3</i> { myProperty1: myValue1; myProperty2: myValue2; myProperty3: myValue3; }</code> <br><br>
+          
+          <span>Selector</span> <br>
+          <p>A selector is a pattern used in CSS to identify and target specific HTML elements for styling.</p>
+          <p>Example; Type Selectors, Class Selectors, ID Selectors, Universal Selector, Attribute Selectors, and Combinator Selectors.</p> <br>
+
+          <span>Declaration Block</span> <br>
+          <p>The curly braces provided in the basic syntax are known as a declaration block.</p>
+          <p>A declaration block applies a set of styles for a given selector, or selectors.</p>
+          <p>Inside the declaration block, it will have a series of declarations.</p>
+          <p>Each declaration consists of a property and a value.</p>
+          <p>The property is the CSS identifier that specifies which feature is being styled.</p>
+          <p>The value would be the specific setting applied to that property</p>
+          <p>After each property name, developer need to place a colon, and after each value, they should have a semicolon.</p>
+        </div>
+
+        <br><hr><br>
+
+        <header>
+          <h2>CSS SELECTORS</h2>
+        </header>
+
+        <div class="Sub-Topics">
+          <span>Type Selectors</span> <br>
+        </div>
+
+        <div class="Sub-Topics">
+          <span>Class Selectors</span> <br>
+          <code><i>.myClass</i> { myProperty: myValue; }</code>
+          <p>All class selectors must start with a dot.</p>
+        </div>
+
+        <div class="Sub-Topics">
+          <span>ID Selectors</span> <br>
+          <code><i>#myId</i> { myProperty: myValue; }</code>
+          <p>All ID selectors must start with a hash symbol.</p>
+        </div>
+
+        <div class="Sub-Topics">
+          <span>Universal Selectors</span> <br>
+        </div>
+
+        <div class="Sub-Topics">
+          <span>Attribute Selectors</span> <br>
+        </div>
+
+        <div class="Sub-Topics">
+          <span>Combinator Selectors</span> <br>
+        </div>
+
+        <br><hr><br>
+
+        <div class="Sub-Topics">
+          <span>Inline CSS</span> <br>
+          <p>Inline CSS is written directly within an HTML element using the style attribute.</p>
+          <p>It applies styles to a specific element.</p>
+          <p>Inline CSS is generally used for quick, one-off styles or to override other styles for a specific element.</p>
+          <p>However, it should be avoided in most cases because it can clutter the HTML and make the code harder to maintain.</p> <br>
+
+          <span>Internal CSS</span> <br>
+          <p>Internal CSS is written within the style tags inside the head section of an HTML document.</p>
+          <p>It applies styles to the entire page and is useful when developer need to style a single document.</p>
+          <p>Internal CSS is best used when developer need to apply styles to a specific page rather than across multiple pages.</p>
+          <p>It's useful for single-page websites or when the styles don't need to be reused elsewhere.</p>
+          <p>However, there are some downsides, such as not promoting reusability across multiple pages.</p>
+          <p>Additionally, like inline CSS, it mixes HTML and CSS, making the code harder to maintain in larger projects.</p> <br>
+
+          <span>External CSS</span> <br>
+          <p>External CSS is written in a separate CSS file and linked to the HTML document using the link element in the head section.</p>
+          <p>It allows developer to style multiple pages consistently and is the preferred method in professional web development.</p>
+          <p>External CSS is ideal for large projects where you want to maintain a consistent style across multiple pages.</p>
+          <p>It promotes separation of concerns by having HTML handle the structure and CSS handle the styling, which makes the code more maintainable and scalable.</p>
+          <p>Most of the time, it's better to use external CSS to keep the styles organized and maintainable.</p>
+        </div>
+
+        <br><hr><br>
+
+        <h2>CSS UNITS</h2>
+        <p>Pixels are a fixed-size unit of measurement in CSS, providing precise control over dimensions.</p>
+      </section>
+
+      <!---------------------------------------------------------------------- LIST OF CSS PROPERTIES ----------------------------------------------------------------------->
+      <section id="CSS-Properties" class="Box-Contents">
+        <h2>LIST OF CSS PROPERTIES</h2>
+        <input type="text" id="CSS-Properties-Input" onkeyup="SearchCSSProperties()" placeholder="Find CSS property..">
+        <ul id="CSS-Properties-List">
+          <li><a onclick="CSSBoxModel()">CSS Box Model</a></li>
+          <li><a onclick="TextAlignProperty()"><code>text-align</code> <span>Specifies the horizontal alignment of text</span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+        </ul>
+      </section>
+
+      <!------------------------------------------------------------------------ TEXT ALIGN PROPERTY ------------------------------------------------------------------------>
+      <section id="Text-Align-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextAlignProperty()">TEXT ALIGN PROPERTY</h2>
+          <p>The <code>text-align</code> property specifies the horizontal alignment of text in an element.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model">My Contents!</div>
+          <input id="Input-Text-Align" type="text" placeholder="Enter valid text-align value"> <button onclick="TextAlignValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>center</code></p>
+          <p><code>end</code></p>
+          <p><code>justify</code></p>
+          <p><code>left</code></p>
+          <p><code>right</code></p>
+          <p><code>start</code></p>
+        </div>
+      </section>
+
+      <!-- CSS Global Values - calc() | inherit | initial | unset | var() -->
+
+      <!--------------------------------------------------------------------------- CSS BOX MODEL --------------------------------------------------------------------------->
+      <section id="CSS-Box-Model" class="Box-Contents">
+        <header>
+          <h2 onclick="CSSBoxModel()">CSS BOX MODEL</h2>
+          
+        </header>
+
+        <article id="Property-Width" class="Box-Property">
+          <p>The <code>width</code> property sets the width of an element.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Width" type="text" placeholder="Enter width value"> <button onclick="PropertyWidth()">MODIFY</button>
+            <div onclick="WidthGlobalValues()"><code class="Value-Box">width: <i>CSS Global Values</i>;</code><div id="Width-Global-Values"></div></div>
+            <div onclick="WidthLengthValues()"><code class="Value-Box">width: <i>CSS Length Values</i>;</code><div id="Width-Length-Values"></div></div>
+            <div onclick="WidthAuto()"><code class="Value-Box">width: auto;</code><div id="Width-Auto"></div></div>
+            <div onclick="WidthMinContent()"><code class="Value-Box">width: min-content;</code><div id="Width-Min-Content"></div></div>
+            <div onclick="WidthFitContent()"><code class="Value-Box">width: fit-content;</code><div id="Width-Fit-Content"></div></div>
+            <div onclick="WidthMaxContent()"><code class="Value-Box">width: max-content;</code><div id="Width-Max-Content"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Min-Width" class="Box-Property">
+          <p>The <code>min-width</code> property defines the minimum width of an element.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Min-Width" type="text" placeholder="Enter min-width value"> <button onclick="PropertyMinWidth()">MODIFY</button>
+            <div onclick="MinWidthGlobalValues()"><code class="Value-Box">min-width: <i>CSS Global Values</i>;</code><div id="Min-Width-Global-Values"></div></div>
+            <div onclick="MinWidthLengthValues()"><code class="Value-Box">min-width: <em>CSS Length Values</em>;</code><div id="Min-Width-Length-Values"></div></div>
+            <div onclick="MinWidthAuto()"><code class="Value-Box">min-width: auto;</code><div id="Min-Width-Auto"></div></div>
+            <div onclick="MinWidthMinContent()"><code class="Value-Box">min-width: min-content;</code><div id="Min-Width-Min-Content"></div></div>
+            <div onclick="MinWidthFitContent()"><code class="Value-Box">min-width: fit-content;</code><div id="Min-Width-Fit-Content"></div></div>
+            <div onclick="MinWidthMaxContent()"><code class="Value-Box">min-width: max-content;</code><div id="Min-Width-Max-Content"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Max-Width" class="Box-Property">
+          <p>The <code>max-width</code> property defines the maximum width of an element.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Max-Width" type="text" placeholder="Enter max-width value"> <button onclick="PropertyMaxWidth()">MODIFY</button>
+            <div onclick="MaxWidthGlobalValues()"><code class="Value-Box">max-width: <i>CSS Global Values</i>;</code><div id="Max-Width-Global-Values"></div></div>
+            <div onclick="MaxWidthLengthValues()"><code class="Value-Box">max-width: <i>CSS Length Values</i>;</code><div id="Max-Width-Length-Values"></div></div>
+            <div onclick="MaxWidthNone()"><code class="Value-Box">max-width: none;</code><div id="Max-Width-None"></div></div>
+            <div onclick="MaxWidthMinContent()"><code class="Value-Box">max-width: min-content;</code><div id="Max-Width-Min-Content"></div></div>
+            <div onclick="MaxWidthFitContent()"><code class="Value-Box">max-width: fit-content;</code><div id="Max-Width-Fit-Content"></div></div>
+            <div onclick="MaxWidthMaxContent()"><code class="Value-Box">max-width: max-content;</code><div id="Max-Width-Max-Content"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Height" class="Box-Property">
+          <p>The <code>height</code> property sets the height of an element.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Height" type="text" placeholder="Enter height value"> <button onclick="PropertyHeight()">MODIFY</button>
+            <div onclick="HeightGlobalValues()"><code class="Value-Box">height: <i>CSS Global Values</i>;</code><div id="Height-Global-Values"></div></div>
+            <div onclick="HeightLengthValues()"><code class="Value-Box">height: <i>CSS Length Values</i>;</code><div id="Height-Length-Values"></div></div>
+            <div onclick="HeightAuto()"><code class="Value-Box">height: auto;</code> <div id="Height-Auto"></div></div>
+            <div onclick="HeightMinContent()"><code class="Value-Box">height: min-content;</code><div id="Height-Min-Content"></div></div>
+            <div onclick="HeightFitContent()"><code class="Value-Box">height: fit-content;</code><div id="Height-Fit-Content"></div></div>
+            <div onclick="HeightMaxContent()"><code class="Value-Box">height: max-content;</code><div id="Height-Max-Content"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Min-Height" class="Box-Property">
+          <p>The <code>min-height</code> property defines the minimum height of an element.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Min-Height" type="text" placeholder="Enter min-height value"> <button onclick="PropertyMinHeight()">MODIFY</button>
+            <div onclick="MinHeightGlobalValues()"><code class="Value-Box">min-height: <i>CSS Global Values</i>;</code><div id="Min-Height-Global-Values"></div></div>
+            <div onclick="MinHeightLengthValues()"><code class="Value-Box">min-height: <i>CSS Length Values</i>;</code><div id="Min-Height-Length-Values"></div></div>
+            <div onclick="MinHeightAuto()"><code class="Value-Box">min-height: auto;</code> <div id="Min-Height-Auto"></div></div>
+            <div onclick="MinHeightMinContent()"><code class="Value-Box">min-height: min-content;</code><div id="Min-Height-Min-Content"></div></div>
+            <div onclick="MinHeightFitContent()"><code class="Value-Box">min-height: fit-content;</code><div id="Min-Height-Fit-Content"></div></div>
+            <div onclick="MinHeightMaxContent()"><code class="Value-Box">min-height: max-content;</code><div id="Min-Height-Max-Content"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Max-Height" class="Box-Property">
+          <p>The <code>max-height</code> property defines the maximum height of an element.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Max-Height" type="text" placeholder="Enter max-height value"> <button onclick="PropertyMaxHeight()">MODIFY</button>
+            <div onclick="MaxHeightGlobalValues()"><code class="Value-Box">max-height: <i>CSS Global Values</i>;</code><div id="Max-Height-Global-Values"></div></div>
+            <div onclick="MaxHeightLengthValues()"><code class="Value-Box">max-height: <i>CSS Length Values</i>;</code><div id="Max-Height-Length-Values"></div></div>
+            <div onclick="MaxHeightNone()"><code class="Value-Box">max-height: none;</code> <div id="Max-Height-None"></div></div>
+            <div onclick="MaxHeightMinContent()"><code class="Value-Box">max-height: min-content;</code><div id="Max-Height-Min-Content"></div></div>
+            <div onclick="MaxHeightFitContent()"><code class="Value-Box">max-height: fit-content;</code><div id="Max-Height-Fit-Content"></div></div>
+            <div onclick="MaxHeightMaxContent()"><code class="Value-Box">max-height: max-content;</code><div id="Max-Height-Max-Content"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Padding" class="Box-Property">
+          <p>The <code>padding</code> defines space around an element's content, inside of any defined border.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>padding: padding-top padding-right padding-bottom padding-left;</code> <br>
+             3 values &rarr; <code>padding: padding-top padding-<i>Horizontal</i> padding-bottom;</code> <br>
+             2 values &rarr; <code>padding: padding-<i>Vertical</i> padding-<i>Horizontal</i>;</code> <br>
+             1 value  &rarr; <code>padding: padding-<i>All</i>;</code>
+          </p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Padding" type="text" placeholder="Enter padding value"> <button onclick="PropertyPadding()">MODIFY</button>
+            <div onclick="PaddingGlobalValues()"><code class="Value-Box">padding: <i>CSS Global Values</i>;</code><div id="Padding-Global-Values"></div></div>
+            <div onclick="PaddingLengthValues()"><code class="Value-Box">padding: <i>CSS Length Values</i>;</code><div id="Padding-Length-Values"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Margin" class="Box-Property">
+          <p>The <code>margin</code> property specifies space around elements, outside of any defined border.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>margin: margin-top margin-right margin-bottom margin-left;</code> <br>
+             3 values &rarr; <code>margin: margin-top margin-<i>Horizontal</i> margin-bottom;</code> <br>
+             2 values &rarr; <code>margin: margin-<i>Vertical</i> margin-<i>Horizontal</i>;</code> <br>
+             1 value  &rarr; <code>margin: margin-<i>All</i>;</code>
+          </p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Margin" type="text" placeholder="Enter margin value"> <button onclick="PropertyMargin()">MODIFY</button>
+            <div onclick="MarginGlobalValues()"><code class="Value-Box">margin: <i>CSS Global Values</i>;</code><div id="Margin-Global-Values"></div></div>
+            <div onclick="MarginLengthValues()"><code class="Value-Box">margin: <i>CSS Length Values</i>;</code><div id="Margin-Length-Values"></div></div>
+            <div onclick="MarginAuto()"><code class="Value-Box">margin: auto;</code><div id="Margin-Auto"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Border-Width" class="Box-Property">
+          <p>The <code>border-width</code> property specifies the width of an element's borders.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>border-width: border-top-width border-right-width border-bottom-width border-left-width;</code> <br>
+             3 values &rarr; <code>border-width: border-top-width border-<i>Horizontal</i>-width border-bottom-width;</code> <br>
+             2 values &rarr; <code>border-width: border-<i>Vertical</i>-width border-<em>Horizontal</em>-width;</code> <br>
+             1 value  &rarr; <code>border-width: border-<em>All</em>-width;</code>
+          </p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Border-Width" type="text" placeholder="Enter border-width value"> <button onclick="PropertyBorderWidth()">MODIFY</button>
+            <div onclick="BorderWidthGlobalValues()"><code class="Value-Box">border-width: <i>CSS Global Values</i>;</code><div id="Border-Width-Global-Values"></div></div>
+            <div onclick="BorderWidthLengthValues()"><code class="Value-Box">border-width: <i>CSS Length Values</i>;</code><div id="Border-Width-Length-Values"></div></div>
+            <div onclick="BorderWidthMedium()"><code class="Value-Box">border-width: medium;</code><div id="Border-Width-Medium"></div></div>
+            <div onclick="BorderWidthThin()"><code class="Value-Box">border-width: thin;</code><div id="Border-Width-Thin"></div></div>
+            <div onclick="BorderWidthThick()"><code class="Value-Box">border-width: thick;</code><div id="Border-Width-Thick"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Border-Style" class="Box-Property">
+          <p>The <code>border-style</code> property specifies the style of an element's borders.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>border-style: border-top-style border-right-style border-bottom-style border-left-style;</code> <br>
+             3 values &rarr; <code>border-style: border-top-style border-<i>Horizontal</i>-style border-bottom-style;</code> <br>
+             2 values &rarr; <code>border-style: border-<i>Vertical</i>-style border-<i>Horizontal</i>-style;</code> <br>
+             1 value  &rarr; <code>border-style: border-<i>All</i>-style;</code>
+          </p>
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Border-Style" type="text" placeholder="Enter border-style value"> <button onclick="PropertyBorderStyle()">MODIFY</button>
+            <div onclick="BorderStyleGlobalValues()"><code class="Value-Box">border-style: <i>CSS Global Values</i>;</code><div id="Border-Style-Global-Values"></div></div>
+            <div onclick="BorderStyleNone()"><code class="Value-Box">border-style: none;</code><div id="Border-Style-None"></div></div>
+            <div onclick="BorderStyleSolid()"><code class="Value-Box">border-style: solid;</code><div id="Border-Style-Solid"></div></div>
+            <div onclick="BorderStyleDashed()"><code class="Value-Box">border-style: dashed;</code><div id="Border-Style-Dashed"></div></div>
+            <div onclick="BorderStyleDotted()"><code class="Value-Box">border-style: dotted;</code><div id="Border-Style-Dotted"></div></div>
+            <div onclick="BorderStyleDouble()"><code class="Value-Box">border-style: double;</code><div id="Border-Style-Double"></div></div>
+            <div onclick="BorderStyleHidden()"><code class="Value-Box">border-style: hidden;</code><div id="Border-Style-Hidden"></div></div>
+            <div onclick="BorderStyleGroove()"><code class="Value-Box">border-style: groove;</code><div id="Border-Style-Groove"></div></div>
+            <div onclick="BorderStyleInset()"><code class="Value-Box">border-style: inset;</code><div id="Border-Style-Inset"></div></div>
+            <div onclick="BorderStyleOutset()"><code class="Value-Box">border-style: outset;</code><div id="Border-Style-Outset"></div></div>
+            <div onclick="BorderStyleRidge()"><code class="Value-Box">border-style: ridge;</code><div id="Border-Style-Ridge"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Border-Color" class="Box-Property">
+          <p>The <code>border-color</code> property specifies the color of an element's borders.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>border-color: border-top-color border-right-color border-bottom-color border-left-color;</code> <br>
+             3 values &rarr; <code>border-color: border-top-color border-<i>Horizontal</i>-color border-bottom-color;</code> <br>
+             2 values &rarr; <code>border-color: border-<i>Vertical</i>-color border-<i>Horizontal</i>-color;</code> <br>
+             1 value  &rarr; <code>border-color: border-<i>All</i>-color;</code>
+          </p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Border-Color" type="text" placeholder="Enter border-color value"> <button onclick="PropertyBorderColor()">MODIFY</button>
+            <div onclick="BorderColorGlobalValues()"><code class="Value-Box">border-color: <i>CSS Global Values</i>;</code><div id="Border-Color-Global-Values"></div></div>
+            <div onclick="BorderColorColorValues()"><code class="Value-Box">border-color: <i>CSS Color Values</i>;</code><div id="Border-Color-Color-Values"></div></div>
+            <div onclick="BorderColorCurrentColor()"><code class="Value-Box">border-color: currentColor;</code><div id="Border-Color-Current-Color"></div></div>
+            <div onclick="BorderColorTransparent()"><code class="Value-Box">border-color: transparent;</code><div id="Border-Color-Transparent"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Border-Radius" class="Box-Property">
+          <p>The <code>border-radius</code> property defines the radius of the element's corners.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code> <br>
+             3 values &rarr; <code>border-radius: border-top-left-radius border-<i>Diagonal-Right-Left</i>-radius border-bottom-right-radius;</code> <br>
+             2 values &rarr; <code>border-radius: border-<i>Diagonal-Left-Right</i>-radius border-<i>Diagonal-Right-Left</i>-radius;</code> <br>
+             1 value &rarr; <code>border-radius: border-<i>All</i>-radius;</code>
+          </p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Border-Radius" type="text" placeholder="Enter border-radius value"> <button onclick="PropertyBorderRadius()">MODIFY</button>
+            <div onclick="BorderRadiusGlobalValues()"><code class="Value-Box">border-radius: <i>CSS Global Values</i>;</code><div id="Border-Radius-Global-Values"></div></div>
+            <div onclick="BorderRadiusLengthValues()"><code class="Value-Box">border-radius: <i>CSS Length Values</i>;</code><div id="Border-Radius-Length-Values"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Outline-Width" class="Box-Property">
+          <p>The <code>outline-width</code> property specifies the width of an outline, drawn around elements, outside the borders.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Outline-Width" type="text" placeholder="Enter outline-width value"> <button onclick="PropertyOutlineWidth()">MODIFY</button>
+            <div onclick="OutlineWidthGlobalValues()"><code class="Value-Box">outline-width: <i>CSS Global Values</i>;</code><div id="Outline-Width-Global-Values"></div></div>
+            <div onclick="OutlineWidthLengthValues()"><code class="Value-Box">outline-width: <i>CSS Length Values</i>;</code><div id="Outline-Width-Length-Values"></div></div>
+            <div onclick="OutlineWidthMedium()"><code class="Value-Box">outline-width: medium;</code><div id="Outline-Width-Medium"></div></div>
+            <div onclick="OutlineWidthThin()"><code class="Value-Box">outline-width: thin;</code><div id="Outline-Width-Thin"></div></div>
+            <div onclick="OutlineWidthThick()"><code class="Value-Box">outline-width: thick;</code><div id="Outline-Width-Thick"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Outline-Style" class="Box-Property">
+          <p>The <code>outline-style</code> property specifies the style of an outline, drawn around elements, outside the borders.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Outline-Style" type="text" placeholder="Enter outline-style value"> <button onclick="PropertyOutlineStyle()">MODIFY</button>
+            <div onclick="OutlineStyleGlobalValues()"><code class="Value-Box">outline-style: <i>CSS Global Values</i>;</code><div id="Outline-Style-Global-Values"></div></div>
+            <div onclick="OutlineStyleNone()"><code class="Value-Box">outline-style: none;</code><div id="Outline-Style-None"></div></div>
+            <div onclick="OutlineStyleSolid()"><code class="Value-Box">outline-style: solid;</code><div id="Outline-Style-Solid"></div></div>
+            <div onclick="OutlineStyleDashed()"><code class="Value-Box">outline-style: dashed;</code><div id="Outline-Style-Dashed"></div></div>
+            <div onclick="OutlineStyleDotted()"><code class="Value-Box">outline-style: dotted;</code><div id="Outline-Style-Dotted"></div></div>
+            <div onclick="OutlineStyleDouble()"><code class="Value-Box">outline-style: double;</code><div id="Outline-Style-Double"></div></div>
+            <div onclick="OutlineStyleHidden()"><code class="Value-Box">outline-style: hidden;</code><div id="Outline-Style-Hidden"></div></div>
+            <div onclick="OutlineStyleGroove()"><code class="Value-Box">outline-style: groove;</code><div id="Outline-Style-Groove"></div></div>
+            <div onclick="OutlineStyleInset()"><code class="Value-Box">outline-style: inset;</code><div id="Outline-Style-Inset"></div></div>
+            <div onclick="OutlineStyleOutset()"><code class="Value-Box">outline-style: outset;</code><div id="Outline-Style-Outset"></div></div>
+            <div onclick="OutlineStyleRidge()"><code class="Value-Box">outline-style: ridge;</code><div id="Outline-Style-Ridge"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Outline-Color" class="Box-Property">
+          <p>The <code>outline-color</code> property specifies the color of an outline, drawn around elements, outside the borders.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Outline-Color" type="text" placeholder="Enter outline-color value"> <button onclick="PropertyOutlineColor()">MODIFY</button>
+            <div onclick="OutlineColorGlobalValues()"><code class="Value-Box">outline-color: <i>CSS Global Values</i>;</code><div id="Outline-Color-Global-Values"></div></div>
+            <div onclick="OutlineColorColorValues()"><code class="Value-Box">outline-color: <i>CSS Color Values</i>;</code><div id="Outline-Color-Color-Values"></div></div>
+            <div onclick="OutlineColorCurrentColor()"><code class="Value-Box">outline-color: currentColor;</code><div id="Outline-Color-Current-Color"></div></div>
+            <div onclick="OutlineColorTransparent()"><code class="Value-Box">outline-color: transparent;</code><div id="Outline-Color-Transparent"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Outline-Offset" class="Box-Property">
+          <p>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element.</p>
+
+          <div class="Related-Values">Related Value(s)
+            <input id="Input-Outline-Offset" type="text" placeholder="Enter outline-offset value"> <button onclick="PropertyOutlineOffset()">MODIFY</button>
+            <div onclick="OutlineOffsetGlobalValues()"><code class="Value-Box">outline-offset: <i>CSS Global Values</i>;</code><div id="Outline-Offset-Global-Values"></div></div>
+            <div onclick="OutlineOffsetLengthValues()"><code class="Value-Box">outline-offset: <i>CSS Length Values</i>;</code><div id="Outline-Offset-Length-Values"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Box-Sizing" class="Box-Property">
+          <p>The <code>box-sizing</code> property defines how the width and height of an element are calculated in box dimensions</p>
+          <p>The padding and border also may be included.</p>
+
+          <div class="Related-Values" >Related Value(s)
+            <input id="Input-Box-Sizing" type="text" placeholder="Enter box-sizing value"> <button onclick="PropertyBoxSizing()">MODIFY</button>
+            <div onclick="BoxSizingGlobalValues()"><code class="Value-Box">box-sizing: <i>CSS Global Values</i>;</code><div id="Box-Sizing-Global-Values"></div></div>
+            <div onclick="BoxSizingBorderBox()"><code class="Value-Box">box-sizing: border-box;</code><div id="Box-Sizing-Border-Box"></div></div>
+            <div onclick="BoxSizingContentBox()"><code class="Value-Box">box-sizing: content-box;</code><div id="Box-Sizing-Content-Box"></div></div>
+          </div>
+        </article>
+
+        <article id="Property-Box-Shadow" class="Box-Property">
+          <p>The <code>box-shadow</code> property specifies one or multiple shadows to an element.</p>
+          <code>box-shadow: <i>H-Offset V-Offset Blur-Radius Spread-Radius Color</i> inset;</code> <br>
+
+          <div><code><i>H-Offset</i></code>
+            <p>Required parameter which specifies the horizontal offset of the shadow.</p>
+            <p>A positive value puts the shadow on the right side of the box.</p>
+            <p>A negative value puts the shadow on the left side of the box</p>
+          </div>
+
+          <div><code><i>V-Offset</i></code>
+            <p>Required parameter which specifies the vertical offset of the shadow.</p>
+            <p>A positive value puts the shadow below the box.</p>
+            <p>A negative value puts the shadow above the box.</p>
+          </div>
+
+          <div><code><i>Blur-Radius</i></code>
+            <p>Optional parameter which specifies the blur radius of the shadow.</p>
+            <p>The higher the number, the more blurred the shadow will be.</p>
+          </div>
+
+          <div><code><i>Spread-Radius</i></code>
+            <p>Optional parameter which specifies the spread radius of the shadow.</p>
+            <p>A positive value increases the size of the spread radius shadow.</p>
+            <p>A negative value decreases the size of the spread radius shadow.</p>
+          </div>
+
+          <div><code><i>Color</i></code>
+            <p>Optional parameter which specifies the color of the shadow.</p>
+          </div>
+          
+          <div><code>inset</code>
+            <p>Optional value which changes the shadow from an outer shadow to an inner shadow.</p>
+          </div>
+
+          <div id="Related-Values" >Related Value(s)
+            <input id="Input-Box-Shadow" type="text" placeholder="Enter box-shadow value"> <button onclick="PropertyBoxShadow()">MODIFY</button>
+            <div onclick="BoxShadowGlobalValues()"><code class="Value-Box">box-shadow: <i>CSS Global Values</i>;</code><div id="Box-Shadow-Global-Values"></div></div>
+            <div onclick="BoxShadowLengthValues()"><code class="Value-Box">box-shadow: <i>CSS Length Values</i>;</code><div id="Box-Shadow-Length-Values"></div></div>
+            <div onclick="BoxShadowColorValues()"><code class="Value-Box">box-shadow: <i>CSS Color Values</i>;</code><div id="Box-Shadow-Color-Values"></div></div>
+            <div onclick="BoxShadowCurrentColor()"><code class="Value-Box">box-shadow: currentColor;</code><div id="Box-Shadow-Current-Color"></div></div>
+            <div onclick="BoxShadowTransparent()"><code class="Value-Box">box-shadow: transparent;</code><div id="Box-Shadow-Transparent"></div></div>
+            <div onclick="BoxShadowNone()"><code class="Value-Box">box-shadow: none;</code><div id="Box-Shadow-None"></div></div>
+          </div>
+        </article>
+
+        <article class="Box-Insights" onclick="InsightsBoxModel()"><b>INSIGHTS</b>
+            <div><code>width</code> vs. <code>min-width</code> vs. <code>max-width</code>
+              <p><code>width</code> property overrides the original width of the element</p>
+              <p><code>min-width</code> overrides <code>width</code> when <code>min-width &gt; width</code></p>
+              <p><code>max-width</code> overrides <code>width</code> when <code>max-width &lt; width</code></p>
+              <p>Overall, <code>min-width</code> is the most top priority followed by <code>max-width, width</code> and the original width of the element</p>
+            </div>
+
+            <div class="Item-Insights"><code>height</code> vs. <code>min-height</code> vs. <code>max-height</code>
+              <p><code>height</code> property overrides the original height of the element</p>
+              <p><code>min-height</code> overrides <code>height</code> when <code>min-height &gt; height</code></p>
+              <p><code>max-height</code> overrides <code>height</code> when <code>max-height &lt; height</code></p>
+              <p>Overall, <code>min-height</code> is the most top priority followed by <code>max-height, height</code> and the original height of the element</p>
+            </div>
+
+            <div class="Item-Insights">Limited Size Box Dimensions
+              <p>The browser adjust the contents based on the width of the element first</p>
+              <p>If the content is larger than the width, it will always automatically change the height of the element (assuming <code>height: auto;</code>)</p>
+              <p>If not, the content is display on the next line within specified height</p>
+              <p>If the contents are not fit within the specified height, it will overflow</p>
+              <p>Use <code>overflow</code> property on the container to manage overflowed contents</p>
+            </div>
+
+            <div class="Item-Insights">Actual Size Box Dimensions
+              <p><code><i>Width Dimension</i> = "border-left-width" + "padding-left" + "width" + "padding-right" + "border-right-width"</code></p>
+              <p><code><i>Height Dimension</i> = "border-top-width" + "padding-top" + "height" + "padding-bottom" + "border-bottom-width"</code></p>
+              <p>The <code>outline</code> property does not affect the actual size box dimensions and may overlaps with other contents</p>
+              <p>The <code>box-sizing: border-box;</code> property is the best practice to be used for box dimensions</p>
+            </div>
+
+            <div class="Item-Insights">Margin collapse
+              <p>The margin collapse happens due to <code>margin-top</code> and <code>margin-bottom</code> collapsed into a single margin
+                   that is equal to the largest of those two margins
+              </p>
+              <p>The margin collapse only happens on vertical margin (top and bottom) but not on horizontal margin (left and right)</p>
+              <p>Example, if Element A has <code>margin-bottom: 20px;</code> and Element B has <code>margin-top: 30px;</code>
+                   the vertical margin between Element A and Element B would be <code>30px</code>
+              </p>
+              <p>Instead of being <code>50px</code> ( <code>20px</code> from Element A's bottom margin + <code>30px</code> from Element B's top margin),
+                   the actual vertical margin is <code>30px</code> due to margin collapse
+              </p>
+            </div>
+
+            <div class="Item-Insights"><code>border: border-width border-style border-color;</code>
+              <p>The <code>border-width</code> and <code>border-style</code> properties are required</p>
+              <p>The <code>border-color</code> is optional and when omitted, the border color applied will be the color of the text</p>
+              <p>The <code>border</code> property also can be written with side properties with their own shorthand property: <br>
+                 <code>border-top: border-top-width border-top-style border-top-color;</code> <br>
+                 <code>border-right: border-right-width border-right-style border-right-color;</code> <br>
+                 <code>border-bottom: border-bottom-width border-bottom-style border-bottom-color;</code> <br>
+                 <code>border-left: border-left-width border-left-style border-left-color;</code>
+              </p>
+            </div>
+
+            <div class="Item-Insights"><code>outline: outline-width outline-style outline-color;</code>
+              <p>The <code>outline-width</code> and <code>outline-style</code> properties are required</p>
+              <p>The <code>outline-color</code> is optional and when omitted, the outline color applied will be the color of the text</p>
+            </div>
+        </article>
+      </section>
+    </main>
+
+<section>
+<!-- ASPECT-RATIO
+<div id="Property-Aspect-Ratio" class="Box-Property">
+  <div>The <code>aspect-ratio</code> property defines the ratio between width and height of an element</div>
+
+  <div class="Related-Values">Related Value(s)
+    <input id="Input-Aspect-Ratio" type="text" placeholder="Enter width/height value">
+    <button onclick="PropertyAspectRatio()">MODIFY</button>
+    <div onclick="AspectRatioGlobalValues()"> <code class="Value-Box">aspect-ratio: <em>CSS Global Values</em>;</code> <div id="Aspect-Ratio-Global-Values"></div> </div>
+    <div onclick="AspectRatioNumbers()"> <code class="Value-Box">aspect-ratio: <em>Numbers</em>;</code> <div id="Aspect-Ratio-Numbers"></div> </div>
+    <div onclick="AspectRatioAuto()"> <code class="Value-Box">aspect-ratio: auto;</code> <div id="Aspect-Ratio-Auto"> </div> </div>
+  </div>
+</div>  -->
+</section>
 
 <!------------------->
 <!-- CSS SELECTORS -->
@@ -167,433 +716,6 @@
   <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-new</code> <div id=""></div> </div>
   <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-old</code> <div id=""></div> </div>
 </div>  -->
-</section>
-
-<!------------------->
-<!-- CSS BOX MODEL -->
-<!------------------->
-<section id="CSS-Box-Model" class="Box-Contents">
-<h1>BOX MODEL</h1>
-<div class="Box-Model">My Contents!</div>
-
-<!-- WIDTH -->
-<div id="Property-Width" class="Box-Property">
-  <div>The <code>width</code> property sets the width of an element</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Width" type="text" placeholder="Enter width value">
-    <button onclick="PropertyWidth()">MODIFY</button>
-    <div onclick="WidthGlobalValues()"> <code class="Value-Box">width: <em>CSS Global Values</em>;</code> <div id="Width-Global-Values"></div> </div>
-    <div onclick="WidthLengthValues()"> <code class="Value-Box">width: <em>CSS Length Values</em>;</code> <div id="Width-Length-Values"></div> </div>
-    <div onclick="WidthAuto()"> <code class="Value-Box">width: auto;</code> <div id="Width-Auto"> </div> </div>
-    <div onclick="WidthMinContent()"> <code class="Value-Box">width: min-content;</code> <div id="Width-Min-Content"></div> </div>
-    <div onclick="WidthFitContent()"> <code class="Value-Box">width: fit-content;</code> <div id="Width-Fit-Content"></div> </div>
-    <div onclick="WidthMaxContent()"> <code class="Value-Box">width: max-content;</code> <div id="Width-Max-Content"></div> </div>
-  </div>
-</div>
-
-<!-- MIN-WIDTH -->
-<div id="Property-Min-Width" class="Box-Property">
-  <div>The <code>min-width</code> property defines the minimum width of an element</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Min-Width" type="text" placeholder="Enter min-width value">
-    <button onclick="PropertyMinWidth()">MODIFY</button>
-    <div onclick="MinWidthGlobalValues()"> <code class="Value-Box">min-width: <em>CSS Global Values</em>;</code> <div id="Min-Width-Global-Values"></div> </div>
-    <div onclick="MinWidthLengthValues()"> <code class="Value-Box">min-width: <em>CSS Length Values</em>;</code> <div id="Min-Width-Length-Values"></div> </div>
-    <div onclick="MinWidthAuto()"> <code class="Value-Box">min-width: auto;</code> <div id="Min-Width-Auto"> </div> </div>
-    <div onclick="MinWidthMinContent()"> <code class="Value-Box">min-width: min-content;</code> <div id="Min-Width-Min-Content"></div> </div>
-    <div onclick="MinWidthFitContent()"> <code class="Value-Box">min-width: fit-content;</code> <div id="Min-Width-Fit-Content"></div> </div>
-    <div onclick="MinWidthMaxContent()"> <code class="Value-Box">min-width: max-content;</code> <div id="Min-Width-Max-Content"></div> </div>
-  </div>
-</div>
-
-<!-- MAX-WIDTH -->
-<div id="Property-Max-Width" class="Box-Property">
-  <div>The <code>max-width</code> property defines the maximum width of an element</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Max-Width" type="text" placeholder="Enter max-width value">
-    <button onclick="PropertyMaxWidth()">MODIFY</button>
-    <div onclick="MaxWidthGlobalValues()"> <code class="Value-Box">max-width: <em>CSS Global Values</em>;</code> <div id="Max-Width-Global-Values"></div> </div>
-    <div onclick="MaxWidthLengthValues()"> <code class="Value-Box">max-width: <em>CSS Length Values</em>;</code> <div id="Max-Width-Length-Values"></div> </div>
-    <div onclick="MaxWidthNone()"> <code class="Value-Box">max-width: none;</code> <div id="Max-Width-None"> </div> </div>
-    <div onclick="MaxWidthMinContent()"> <code class="Value-Box">max-width: min-content;</code> <div id="Max-Width-Min-Content"></div> </div>
-    <div onclick="MaxWidthFitContent()"> <code class="Value-Box">max-width: fit-content;</code> <div id="Max-Width-Fit-Content"></div> </div>
-    <div onclick="MaxWidthMaxContent()"> <code class="Value-Box">max-width: max-content;</code> <div id="Max-Width-Max-Content"></div> </div>
-  </div>
-</div>
-
-<!-- HEIGHT -->
-<div id="Property-Height" class="Box-Property">
-  <div>The <code>height</code> property sets the height of an element</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Height" type="text" placeholder="Enter height value">
-    <button onclick="PropertyHeight()">MODIFY</button>
-    <div onclick="HeightGlobalValues()"> <code class="Value-Box">height: <em>CSS Global Values</em>;</code> <div id="Height-Global-Values"></div> </div>
-    <div onclick="HeightLengthValues()"> <code class="Value-Box">height: <em>CSS Length Values</em>;</code> <div id="Height-Length-Values"></div> </div>
-    <div onclick="HeightAuto()"> <code class="Value-Box">height: auto;</code> <div id="Height-Auto"> </div> </div>
-    <div onclick="HeightMinContent()"> <code class="Value-Box">height: min-content;</code> <div id="Height-Min-Content"></div> </div>
-    <div onclick="HeightFitContent()"> <code class="Value-Box">height: fit-content;</code> <div id="Height-Fit-Content"></div> </div>
-    <div onclick="HeightMaxContent()"> <code class="Value-Box">height: max-content;</code> <div id="Height-Max-Content"></div> </div>
-  </div>
-</div>
-
-<!-- MIN-HEIGHT -->
-<div id="Property-Min-Height" class="Box-Property">
-  <div>The <code>min-height</code> property defines the minimum height of an element</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Min-Height" type="text" placeholder="Enter min-height value">
-    <button onclick="PropertyMinHeight()">MODIFY</button>
-    <div onclick="MinHeightGlobalValues()"> <code class="Value-Box">min-height: <em>CSS Global Values</em>;</code> <div id="Min-Height-Global-Values"></div> </div>
-    <div onclick="MinHeightLengthValues()"> <code class="Value-Box">min-height: <em>CSS Length Values</em>;</code> <div id="Min-Height-Length-Values"></div> </div>
-    <div onclick="MinHeightAuto()"> <code class="Value-Box">min-height: auto;</code> <div id="Min-Height-Auto"> </div> </div>
-    <div onclick="MinHeightMinContent()"> <code class="Value-Box">min-height: min-content;</code> <div id="Min-Height-Min-Content"></div> </div>
-    <div onclick="MinHeightFitContent()"> <code class="Value-Box">min-height: fit-content;</code> <div id="Min-Height-Fit-Content"></div> </div>
-    <div onclick="MinHeightMaxContent()"> <code class="Value-Box">min-height: max-content;</code> <div id="Min-Height-Max-Content"></div> </div>
-  </div>
-</div>
-
-<!-- MAX-HEIGHT -->
-<div id="Property-Max-Height" class="Box-Property">
-  <div>The <code>max-height</code> property defines the maximum height of an element</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Max-Height" type="text" placeholder="Enter max-height value">
-    <button onclick="PropertyMaxHeight()">MODIFY</button>
-    <div onclick="MaxHeightGlobalValues()"> <code class="Value-Box">max-height: <em>CSS Global Values</em>;</code> <div id="Max-Height-Global-Values"></div> </div>
-    <div onclick="MaxHeightLengthValues()"> <code class="Value-Box">max-height: <em>CSS Length Values</em>;</code> <div id="Max-Height-Length-Values"></div> </div>
-    <div onclick="MaxHeightNone()"> <code class="Value-Box">max-height: none;</code> <div id="Max-Height-None"> </div> </div>
-    <div onclick="MaxHeightMinContent()"> <code class="Value-Box">max-height: min-content;</code> <div id="Max-Height-Min-Content"></div> </div>
-    <div onclick="MaxHeightFitContent()"> <code class="Value-Box">max-height: fit-content;</code> <div id="Max-Height-Fit-Content"></div> </div>
-    <div onclick="MaxHeightMaxContent()"> <code class="Value-Box">max-height: max-content;</code> <div id="Max-Height-Max-Content"></div> </div>
-  </div>
-</div>
-
-<!-- ASPECT-RATIO
-<div id="Property-Aspect-Ratio" class="Box-Property">
-  <div>The <code>aspect-ratio</code> property defines the ratio between width and height of an element</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Aspect-Ratio" type="text" placeholder="Enter width/height value">
-    <button onclick="PropertyAspectRatio()">MODIFY</button>
-    <div onclick="AspectRatioGlobalValues()"> <code class="Value-Box">aspect-ratio: <em>CSS Global Values</em>;</code> <div id="Aspect-Ratio-Global-Values"></div> </div>
-    <div onclick="AspectRatioNumbers()"> <code class="Value-Box">aspect-ratio: <em>Numbers</em>;</code> <div id="Aspect-Ratio-Numbers"></div> </div>
-    <div onclick="AspectRatioAuto()"> <code class="Value-Box">aspect-ratio: auto;</code> <div id="Aspect-Ratio-Auto"> </div> </div>
-  </div>
-</div>  -->
-
-<!-- PADDING -->
-<div id="Property-Padding" class="Box-Property">
-  <div>The <code>padding</code> defines space around an element's content, inside of any defined border</div>
-  <div>There are some generic-side properties that can be written as its values
-    <div>4 values = <code>padding: padding-top padding-right padding-bottom padding-left;</code></div>
-    <div>3 values = <code>padding: padding-top padding-<em>Horizontal</em> padding-bottom;</code></div>
-    <div>2 values = <code>padding: padding-<em>Vertical</em> padding-<em>Horizontal</em>;</code></div>
-    <div>1 value = <code>padding: padding-<em>All</em>;</code></div>
-  </div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Padding" type="text" placeholder="Enter padding value">
-    <button onclick="PropertyPadding()">MODIFY</button>
-    <div onclick="PaddingGlobalValues()"> <code class="Value-Box">padding: <em>CSS Global Values</em>;</code> <div id="Padding-Global-Values"></div> </div>
-    <div onclick="PaddingLengthValues()"> <code class="Value-Box">padding: <em>CSS Length Values</em>;</code> <div id="Padding-Length-Values"></div> </div>
-  </div>
-</div>
-
-<!-- MARGIN -->
-<div id="Property-Margin" class="Box-Property">
-  <div>The <code>margin</code> property specifies space around elements, outside of any defined border</div>
-  <div>There are some generic-side properties that can be written as its values
-    <div>4 values = <code>margin: margin-top margin-right margin-bottom margin-left;</code></div>
-    <div>3 values = <code>margin: margin-top margin-<em>Horizontal</em> margin-bottom;</code></div>
-    <div>2 values = <code>margin: margin-<em>Vertical</em> margin-<em>Horizontal</em>;</code></div>
-    <div>1 value = <code>margin: margin-<em>All</em>;</code></div>
-  </div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Margin" type="text" placeholder="Enter margin value">
-    <button onclick="PropertyMargin()">MODIFY</button>
-    <div onclick="MarginGlobalValues()"> <code class="Value-Box">margin: <em>CSS Global Values</em>;</code> <div id="Margin-Global-Values"></div> </div>
-    <div onclick="MarginLengthValues()"> <code class="Value-Box">margin: <em>CSS Length Values</em>;</code> <div id="Margin-Length-Values"></div> </div>
-    <div onclick="MarginAuto()"> <code class="Value-Box">margin: auto;</code> <div id="Margin-Auto"></div> </div>
-  </div>
-</div>
-
-<!-- BORDER-WIDTH -->
-<div id="Property-Border-Width" class="Box-Property">
-  <div>The <code>border-width</code> property specifies the width of an element's borders</div>
-  <div>There are some generic-side properties that can be written as its values
-    <div>4 values = <code>border-width: border-top-width border-right-width border-bottom-width border-left-width;</code></div>
-    <div>3 values = <code>border-width: border-top-width border-<em>Horizontal</em>-width border-bottom-width;</code></div>
-    <div>2 values = <code>border-width: border-<em>Vertical</em>-width border-<em>Horizontal</em>-width;</code></div>
-    <div>1 value = <code>border-width: border-<em>All</em>-width;</code></div>
-  </div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Border-Width" type="text" placeholder="Enter border-width value">
-    <button onclick="PropertyBorderWidth()">MODIFY</button>
-    <div onclick="BorderWidthGlobalValues()"> <code class="Value-Box">border-width: <em>CSS Global Values</em>;</code> <div id="Border-Width-Global-Values"></div> </div>
-    <div onclick="BorderWidthLengthValues()"> <code class="Value-Box">border-width: <em>CSS Length Values</em>;</code> <div id="Border-Width-Length-Values"></div> </div>
-    <div onclick="BorderWidthMedium()"> <code class="Value-Box">border-width: medium;</code> <div id="Border-Width-Medium"></div> </div>
-    <div onclick="BorderWidthThin()"> <code class="Value-Box">border-width: thin;</code> <div id="Border-Width-Thin"></div> </div>
-    <div onclick="BorderWidthThick()"> <code class="Value-Box">border-width: thick;</code> <div id="Border-Width-Thick"></div> </div>
-  </div>
-</div>
-
-<!-- BORDER-STYLE -->
-<div id="Property-Border-Style" class="Box-Property">
-  <div>The <code>border-style</code> property specifies the style of an element's borders</div>
-  <div>There are some generic-side properties that can be written as its values
-    <div>4 values = <code>border-style: border-top-style border-right-style border-bottom-style border-left-style;</code></div>
-    <div>3 values = <code>border-style: border-top-style border-<em>Horizontal</em>-style border-bottom-style;</code></div>
-    <div>2 values = <code>border-style: border-<em>Vertical</em>-style border-<em>Horizontal</em>-style;</code></div>
-    <div>1 value = <code>border-style: border-<em>All</em>-style;</code></div>
-  </div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Border-Style" type="text" placeholder="Enter border-style value">
-    <button onclick="PropertyBorderStyle()">MODIFY</button>
-    <div onclick="BorderStyleGlobalValues()"> <code class="Value-Box">border-style: <em>CSS Global Values</em>;</code> <div id="Border-Style-Global-Values"></div> </div>
-    <div onclick="BorderStyleNone()"> <code class="Value-Box">border-style: none;</code> <div id="Border-Style-None"></div> </div>
-    <div onclick="BorderStyleSolid()"> <code class="Value-Box">border-style: solid;</code> <div id="Border-Style-Solid"></div> </div>
-    <div onclick="BorderStyleDashed()"> <code class="Value-Box">border-style: dashed;</code> <div id="Border-Style-Dashed"></div> </div>
-    <div onclick="BorderStyleDotted()"> <code class="Value-Box">border-style: dotted;</code> <div id="Border-Style-Dotted"></div> </div>
-    <div onclick="BorderStyleDouble()"> <code class="Value-Box">border-style: double;</code> <div id="Border-Style-Double"></div> </div>
-    <div onclick="BorderStyleHidden()"> <code class="Value-Box">border-style: hidden;</code> <div id="Border-Style-Hidden"></div> </div>
-    <div onclick="BorderStyleGroove()"> <code class="Value-Box">border-style: groove;</code> <div id="Border-Style-Groove"></div> </div>
-    <div onclick="BorderStyleInset()"> <code class="Value-Box">border-style: inset;</code> <div id="Border-Style-Inset"></div> </div>
-    <div onclick="BorderStyleOutset()"> <code class="Value-Box">border-style: outset;</code> <div id="Border-Style-Outset"></div> </div>
-    <div onclick="BorderStyleRidge()"> <code class="Value-Box">border-style: ridge;</code> <div id="Border-Style-Ridge"></div> </div>
-  </div>
-</div>
-
-<!-- BORDER-COLOR -->
-<div id="Property-Border-Color" class="Box-Property">
-  <div>The <code>border-color</code> property specifies the color of an element's borders</div>
-  <div>There are some generic-side properties that can be written as its values
-    <div>4 values = <code>border-color: border-top-color border-right-color border-bottom-color border-left-color;</code></div>
-    <div>3 values = <code>border-color: border-top-color border-<em>Horizontal</em>-color border-bottom-color;</code></div>
-    <div>2 values = <code>border-color: border-<em>Vertical</em>-color border-<em>Horizontal</em>-color;</code></div>
-    <div>1 value = <code>border-color: border-<em>All</em>-color;</code></div>
-  </div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Border-Color" type="text" placeholder="Enter border-color value">
-    <button onclick="PropertyBorderColor()">MODIFY</button>
-    <div onclick="BorderColorGlobalValues()"> <code class="Value-Box">border-color: <em>CSS Global Values</em>;</code> <div id="Border-Color-Global-Values"></div> </div>
-    <div onclick="BorderColorColorValues()"> <code class="Value-Box">border-color: <em>CSS Color Values</em>;</code> <div id="Border-Color-Color-Values"></div> </div>
-    <div onclick="BorderColorCurrentColor()"> <code class="Value-Box">border-color: currentColor;</code> <div id="Border-Color-Current-Color"></div> </div>
-    <div onclick="BorderColorTransparent()"> <code class="Value-Box">border-color: transparent;</code> <div id="Border-Color-Transparent"></div> </div>
-  </div>
-</div>
-
-<!-- BORDER-RADIUS -->
-<div id="Property-Border-Radius" class="Box-Property">
-  <div>The <code>border-radius</code> property defines the radius of the element's corners</div>
-  <div>There are some generic-side properties that can be written as its values
-    <div>4 values = <code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code></div>
-    <div>3 values = <code>border-radius: border-top-left-radius border-<em>Diagonal-Right-Left</em>-radius border-bottom-right-radius;</code></div>
-    <div>2 values = <code>border-radius: border-<em>Diagonal-Left-Right</em>-radius border-<em>Diagonal-Right-Left</em>-radius;</code></div>
-    <div>1 value = <code>border-radius: border-<em>All</em>-radius;</code></div>
-  </div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Border-Radius" type="text" placeholder="Enter border-radius value">
-    <button onclick="PropertyBorderRadius()">MODIFY</button>
-    <div onclick="BorderRadiusGlobalValues()"> <code class="Value-Box">border-radius: <em>CSS Global Values</em>;</code> <div id="Border-Radius-Global-Values"></div> </div>
-    <div onclick="BorderRadiusLengthValues()"> <code class="Value-Box">border-radius: <em>CSS Length Values</em>;</code> <div id="Border-Radius-Length-Values"></div> </div>
-  </div>
-</div>
-
-<!-- OUTLINE-WIDTH -->
-<div id="Property-Outline-Width" class="Box-Property">
-  <div>The <code>outline-width</code> property specifies the width of an outline, drawn around elements, outside the borders</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Outline-Width" type="text" placeholder="Enter outline-width value">
-    <button onclick="PropertyOutlineWidth()">MODIFY</button>
-    <div onclick="OutlineWidthGlobalValues()"> <code class="Value-Box">outline-width: <em>CSS Global Values</em>;</code> <div id="Outline-Width-Global-Values"></div> </div>
-    <div onclick="OutlineWidthLengthValues()"> <code class="Value-Box">outline-width: <em>CSS Length Values</em>;</code> <div id="Outline-Width-Length-Values"></div> </div>
-    <div onclick="OutlineWidthMedium()"> <code class="Value-Box">outline-width: medium;</code> <div id="Outline-Width-Medium"></div> </div>
-    <div onclick="OutlineWidthThin()"> <code class="Value-Box">outline-width: thin;</code> <div id="Outline-Width-Thin"></div> </div>
-    <div onclick="OutlineWidthThick()"> <code class="Value-Box">outline-width: thick;</code> <div id="Outline-Width-Thick"></div> </div>
-  </div>
-</div>
-
-<!-- OUTLINE-STYLE -->
-<div id="Property-Outline-Style" class="Box-Property">
-  <div>The <code>outline-style</code> property specifies the style of an outline, drawn around elements, outside the borders</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Outline-Style" type="text" placeholder="Enter outline-style value">
-    <button onclick="PropertyOutlineStyle()">MODIFY</button>
-    <div onclick="OutlineStyleGlobalValues()"> <code class="Value-Box">outline-style: <em>CSS Global Values</em>;</code> <div id="Outline-Style-Global-Values"></div> </div>
-    <div onclick="OutlineStyleNone()"> <code class="Value-Box">outline-style: none;</code> <div id="Outline-Style-None"></div> </div>
-    <div onclick="OutlineStyleSolid()"> <code class="Value-Box">outline-style: solid;</code> <div id="Outline-Style-Solid"></div> </div>
-    <div onclick="OutlineStyleDashed()"> <code class="Value-Box">outline-style: dashed;</code> <div id="Outline-Style-Dashed"></div> </div>
-    <div onclick="OutlineStyleDotted()"> <code class="Value-Box">outline-style: dotted;</code> <div id="Outline-Style-Dotted"></div> </div>
-    <div onclick="OutlineStyleDouble()"> <code class="Value-Box">outline-style: double;</code> <div id="Outline-Style-Double"></div> </div>
-    <div onclick="OutlineStyleHidden()"> <code class="Value-Box">outline-style: hidden;</code> <div id="Outline-Style-Hidden"></div> </div>
-    <div onclick="OutlineStyleGroove()"> <code class="Value-Box">outline-style: groove;</code> <div id="Outline-Style-Groove"></div> </div>
-    <div onclick="OutlineStyleInset()"> <code class="Value-Box">outline-style: inset;</code> <div id="Outline-Style-Inset"></div> </div>
-    <div onclick="OutlineStyleOutset()"> <code class="Value-Box">outline-style: outset;</code> <div id="Outline-Style-Outset"></div> </div>
-    <div onclick="OutlineStyleRidge()"> <code class="Value-Box">outline-style: ridge;</code> <div id="Outline-Style-Ridge"></div> </div>
-  </div>
-</div>
-
-<!-- OUTLINE-COLOR -->
-<div id="Property-Outline-Color" class="Box-Property">
-  <div>The <code>outline-color</code> property specifies the color of an outline, drawn around elements, outside the borders</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Outline-Color" type="text" placeholder="Enter outline-color value">
-    <button onclick="PropertyOutlineColor()">MODIFY</button>
-    <div onclick="OutlineColorGlobalValues()"> <code class="Value-Box">outline-color: <em>CSS Global Values</em>;</code> <div id="Outline-Color-Global-Values"></div> </div>
-    <div onclick="OutlineColorColorValues()"> <code class="Value-Box">outline-color: <em>CSS Color Values</em>;</code> <div id="Outline-Color-Color-Values"></div> </div>
-    <div onclick="OutlineColorCurrentColor()"> <code class="Value-Box">outline-color: currentColor;</code> <div id="Outline-Color-Current-Color"></div> </div>
-    <div onclick="OutlineColorTransparent()"> <code class="Value-Box">outline-color: transparent;</code> <div id="Outline-Color-Transparent"></div> </div>
-  </div>
-</div>
-
-<!-- OUTLINE-OFFSET -->
-<div id="Property-Outline-Offset" class="Box-Property">
-  <div>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element</div>
-
-  <div class="Related-Values">Related Value(s)
-    <input id="Input-Outline-Offset" type="text" placeholder="Enter outline-offset value">
-    <button onclick="PropertyOutlineOffset()">MODIFY</button>
-    <div onclick="OutlineOffsetGlobalValues()"> <code class="Value-Box">outline-offset: <em>CSS Global Values</em>;</code> <div id="Outline-Offset-Global-Values"></div> </div>
-    <div onclick="OutlineOffsetLengthValues()"> <code class="Value-Box">outline-offset: <em>CSS Length Values</em>;</code> <div id="Outline-Offset-Length-Values"></div> </div>
-  </div>
-</div>
-
-<!-- BOX-SIZING -->
-<div id="Property-Box-Sizing" class="Box-Property">
-  <div>The <code>box-sizing</code> property defines how the width and height of an element are calculated in box dimensions</div>
-  <div>The padding and border also may be included</div>
-
-  <div class="Related-Values" >Related Value(s)
-    <input id="Input-Box-Sizing" type="text" placeholder="Enter box-sizing value">
-    <button onclick="PropertyBoxSizing()">MODIFY</button>
-    <div onclick="BoxSizingGlobalValues()"> <code class="Value-Box">box-sizing: <em>CSS Global Values</em>;</code> <div id="Box-Sizing-Global-Values"></div> </div>
-    <div onclick="BoxSizingBorderBox()"> <code class="Value-Box">box-sizing: border-box;</code> <div id="Box-Sizing-Border-Box"></div> </div>
-    <div onclick="BoxSizingContentBox()"> <code class="Value-Box">box-sizing: content-box;</code> <div id="Box-Sizing-Content-Box"></div> </div>
-  </div>
-</div>
-
-<!-- BOX-SHADOW -->
-<div id="Property-Box-Shadow" class="Box-Property">
-  <div>The <code>box-shadow</code> property specifies one or multiple shadows to an element</div>
-  <div><code>box-shadow: <em>H-Offset V-Offset Blur-Radius Spread-Radius Color</em> inset;</code>
-
-    <div><code><em>H-Offset</em></code>
-      <div>Required parameter which specifies the horizontal offset of the shadow</div>
-      <div>A positive value puts the shadow on the right side of the box</div>
-      <div>A negative value puts the shadow on the left side of the box</div>
-    </div>
-
-    <div><code><em>V-Offset</em></code>
-      <div>Required parameter which specifies the vertical offset of the shadow</div>
-      <div>A positive value puts the shadow below the box</div>
-      <div>A negative value puts the shadow above the box</div>
-    </div>
-
-    <div><code><em>Blur-Radius</em></code>
-      <div>Optional parameter which specifies the blur radius of the shadow</div>
-      <div>The higher the number, the more blurred the shadow will be</div>
-    </div>
-
-    <div><code><em>Spread-Radius</em></code>
-      <div>Optional parameter which specifies the spread radius of the shadow</div>
-      <div>A positive value increases the size of the spread radius shadow</div>
-      <div>A negative value decreases the size of the spread radius shadow</div>
-    </div>
-
-    <div><code><em>Color</em></code>
-      <div>Optional parameter which specifies the color of the shadow</div>
-    </div>
-
-    <div><code>inset</code> <div>Optional value which changes the shadow from an outer shadow to an inner shadow</div> </div>
-  </div>
-
-  <div id="Related-Values" >Related Value(s)
-    <input id="Input-Box-Shadow" type="text" placeholder="Enter box-shadow value">
-    <button onclick="PropertyBoxShadow()">MODIFY</button>
-    <div onclick="BoxShadowGlobalValues()"> <code class="Value-Box">box-shadow: <em>CSS Global Values</em>;</code> <div id="Box-Shadow-Global-Values"></div> </div>
-    <div onclick="BoxShadowLengthValues()"> <code class="Value-Box">box-shadow: <em>CSS Length Values</em>;</code> <div id="Box-Shadow-Length-Values"></div> </div>
-    <div onclick="BoxShadowColorValues()"> <code class="Value-Box">box-shadow: <em>CSS Color Values</em>;</code> <div id="Box-Shadow-Color-Values"></div> </div>
-    <div onclick="BoxShadowCurrentColor()"> <code class="Value-Box">box-shadow: currentColor;</code> <div id="Box-Shadow-Current-Color"></div> </div>
-    <div onclick="BoxShadowTransparent()"> <code class="Value-Box">box-shadow: transparent;</code> <div id="Box-Shadow-Transparent"></div> </div>
-    <div onclick="BoxShadowNone()"> <code class="Value-Box">box-shadow: none;</code> <div id="Box-Shadow-None"></div> </div>
-  </div>
-</div>
-
-<!-- INSIGHTS BOX MODEL -->
-<div class="Box-Insights" onclick="InsightsBoxModel()"><b>INSIGHTS</b>
-  <div class="Display-Insights">
-
-    <div><code>width</code> vs. <code>min-width</code> vs. <code>max-width</code>
-      <div><code>width</code> property overrides the original width of the element</div>
-      <div><code>min-width</code> overrides <code>width</code> when <code>min-width &gt; width</code></div>
-      <div><code>max-width</code> overrides <code>width</code> when <code>max-width &lt; width</code></div>
-      <div>Overall, <code>min-width</code> is the most top priority followed by <code>max-width, width</code> and the original width of the element</div>
-    </div>
-
-    <div class="Item-Insights"><code>height</code> vs. <code>min-height</code> vs. <code>max-height</code>
-      <div><code>height</code> property overrides the original height of the element</div>
-      <div><code>min-height</code> overrides <code>height</code> when <code>min-height &gt; height</code></div>
-      <div><code>max-height</code> overrides <code>height</code> when <code>max-height &lt; height</code></div>
-      <div>Overall, <code>min-height</code> is the most top priority followed by <code>max-height, height</code> and the original height of the element</div>
-    </div>
-
-    <div class="Item-Insights">Limited Size Box Dimensions
-      <div>The browser adjust the contents based on the width of the element first</div>
-      <div>If the content is larger than the width, it will always automatically change the height of the element (assuming <code>height: auto;</code>)</div>
-      <div>If not, the content is display on the next line within specified height</div>
-      <div>If the contents are not fit within the specified height, it will overflow</div>
-      <div>Use <code>overflow</code> property on the container to manage overflowed contents</div>
-    </div>
-
-    <div class="Item-Insights">Actual Size Box Dimensions
-      <div><code><em>Width Dimension</em> = "border-left-width" + "padding-left" + "width" + "padding-right" + "border-right-width"</code></div>
-      <div><code><em>Height Dimension</em> = "border-top-width" + "padding-top" + "height" + "padding-bottom" + "border-bottom-width"</code></div>
-      <div>The <code>outline</code> property does not affect the actual size box dimensions and may overlaps with other contents</div>
-      <div>The <code>box-sizing: border-box;</code> property is the best practice to be used for box dimensions</div>
-    </div>
-
-    <div class="Item-Insights">Margin collapse
-      <div>The margin collapse happens due to <code>margin-top</code> and <code>margin-bottom</code> collapsed into a single margin
-           that is equal to the largest of those two margins
-      </div>
-      <div>The margin collapse only happens on vertical margin (top and bottom) but not on horizontal margin (left and right)</div>
-      <div>Example, if Element A has <code>margin-bottom: 20px;</code> and Element B has <code>margin-top: 30px;</code>
-           the vertical margin between Element A and Element B would be <code>30px</code>
-      </div>
-      <div>Instead of being <code>50px</code> ( <code>20px</code> from Element A's bottom margin + <code>30px</code> from Element B's top margin),
-           the actual vertical margin is <code>30px</code> due to margin collapse
-      </div>
-    </div>
-
-    <div class="Item-Insights"><code>border: border-width border-style border-color;</code>
-      <div>The <code>border-width</code> and <code>border-style</code> properties are required</div>
-      <div>The <code>border-color</code> is optional and when omitted, the border color applied will be the color of the text</div>
-      <div>The <code>border</code> property also can be written with side properties with their own shorthand property
-        <div><code>border-top: border-top-width border-top-style border-top-color;</code></div>
-        <div><code>border-right: border-right-width border-right-style border-right-color;</code></div>
-        <div><code>border-bottom: border-bottom-width border-bottom-style border-bottom-color;</code></div>
-        <div><code>border-left: border-left-width border-left-style border-left-color;</code></div>
-      </div>
-    </div>
-
-    <div class="Item-Insights"><code>outline: outline-width outline-style outline-color;</code>
-      <div>The <code>outline-width</code> and <code>outline-style</code> properties are required</div>
-      <div>The <code>outline-color</code> is optional and when omitted, the outline color applied will be the color of the text</div>
-    </div>
-  </div>
-</div>
 </section>
 
 <!-------------------->
