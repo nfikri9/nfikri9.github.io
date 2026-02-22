@@ -45,10 +45,6 @@
         <button onclick="CSSIntroduction()">CSS INTRODUCTION</button>
         <button onclick="CSSProperties()">CSS PROPERTIES</button>
         <button onclick="CSSSelectors()">CSS SELECTORS</button>
-        <button onclick="CSSBoxLayout()">BOX LAYOUT</button>
-        <button onclick="CSSAnimationTransition()">ANIMATION & TRANSITION</button>
-        <button onclick="CSSTypography()">TYPOGRAPHY</button>
-        <button onclick="rawnotes()">NOTES</button>
       </section>
 
       <!------------------------------------------------------------------------- CSS INTRODUCTION -------------------------------------------------------------------------->
@@ -175,8 +171,29 @@
         <h2>LIST OF CSS PROPERTIES</h2>
         <input type="text" id="CSS-Properties-Input" onkeyup="SearchCSSProperties()" placeholder="Find CSS property..">
         <ul id="CSS-Properties-List">
-          <li><a onclick="CSSBoxModel()">CSS Box Model</a></li>
+          <div><b>CSS BACKGROUND</b></div>
+          <li><a onclick="BackgroundColorProperty()"><code>background-color</code> <span>Specifies the background color of an element</span></a></li>
+          <li><a onclick="BackgroundImageProperty()"><code>background-image</code> <span>Specifies one or more background images for an element</span></a></li>
+          <div><b>CSS TYPOGRAPHY</b></div>
+          <li><a onclick="ColorProperty()"><code>color</code> <span>Sets the color of text</span></a></li>
+          <li><a onclick="FontFamilyProperty()"><code>font-family</code> <span>Specifies the font family for text</span></a></li>
+          <li><a onclick="FontSizeProperty()"><code>font-size</code> <span>Specifies the font size of text</span></a></li>
+          <li><a onclick="FontStyleProperty()"><code>font-style</code> <span>Specifies the font style for text</span></a></li>
           <li><a onclick="TextAlignProperty()"><code>text-align</code> <span>Specifies the horizontal alignment of text</span></a></li>
+          <div><b>CSS BOX MODEL</b></div>
+          <li><a onclick="BorderColorProperty()"><code>border-color</code> <span>Sets the color of the borders</span></a></li>
+          <li><a onclick="BorderWidthProperty()"><code>border-width</code> <span>Sets the width of the borders</span></a></li>
+          <li><a onclick="HeightProperty()"><code>height</code> <span>Sets the height of an element</span></a></li>
+          <li><a onclick="MarginProperty()"><code>margin</code> <span>Sets all the margin properties in one declaration</span></a></li>
+          <li><a onclick="MaximumWidthProperty()"><code>max-width</code> <span>Sets the maximum width of an element</span></a></li>
+          <li><a onclick="PaddingProperty()"><code>padding</code> <span>Sets the padding of an element</span></a></li>
+          <li><a onclick="WidthProperty()"><code>width</code> <span>Sets the width of an element</span></a></li>
+          <div><b>CSS BOX LAYOUT</b></div>
+          <li><a onclick="DisplayProperty()"><code>display</code> <span>Specifies how a certain HTML element should be displayed</span></a></li>
+          <div><b>UNCATEGORIZED</b></div>
+          <li><a onclick="CSSBoxModel()">CSS Box Model</a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
@@ -188,15 +205,342 @@
         </ul>
       </section>
 
-      <!------------------------------------------------------------------------ TEXT ALIGN PROPERTY ------------------------------------------------------------------------>
+      <!--------------------------------------------------------------------- BACKGROUND-COLOR PROPERTY --------------------------------------------------------------------->
+      <section id="Background-Color-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="BackgroundColorProperty()">BACKGROUND-COLOR PROPERTY</h2>
+          <p>The <code>background-color</code> property sets the background color of an element.</p>
+          <p>The background of an element is the total size of the element, including padding and border (but not the margin).</p>
+          <code id="Shorthand-Background-Color"></code>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Background-Color">My Contents!</div>
+          <input id="Input-Background-Color" type="text" placeholder="Enter valid background-color value"> <button onclick="BackgroundColorValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code>currentColor</code></p> 
+          <p><code>transparent</code></p>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------- BACKGROUND-IMAGE PROPERTY --------------------------------------------------------------------->
+      <section id="Background-Image-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="BackgroundImageProperty()">BACKGROUND-IMAGE PROPERTY</h2>
+          <p>The <code>background-image</code> property sets one or more background images for an element.</p>
+          <p>By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally.</p>
+          <p>The background of an element is the total size of the element, including padding and border (but not the margin).</p>
+          <code id="Shorthand-Background-Image"></code>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Background-Image">My Contents!</div>
+          <input id="Input-Background-Image" type="text" placeholder="Enter valid background-image value"> <button onclick="BackgroundImageValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>cross-fade()</code></p>
+          <p><code>element()</code></p>
+          <p><code>image()</code></p>
+          <p><code>image-set()</code></p>
+          <p><code>linear-gradient()</code></p>
+          <p><code>radial-gradient()</code></p>
+          <p><code>repeating-linear-gradient()</code></p>
+          <p><code>repeating-radial-gradient()</code></p>
+          <p><code>url()</code></p>
+          <p><code>none</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- BORDER-COLOR PROPERTY ----------------------------------------------------------------------->
+      <section id="Border-Color-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="BorderColorProperty()">BORDER-COLOR PROPERTY</h2>
+          <p>The <code>border-color</code> property sets the color of an element's borders.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>border-color: border-color-top border-color-right border-color-bottom border-color-left;</code> <br>
+             3 values &rarr; <code>border-color: border-color-top border-color-<i>Horizontal</i> border-color-bottom;</code> <br>
+             2 values &rarr; <code>border-color: border-color-<i>Vertical</i> border-color-<i>Horizontal</i>;</code> <br>
+             1 value  &rarr; <code>border-color: border-color-<i>All</i>;</code>
+          </p>
+          <code id="Shorthand-Border-Color"></code>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Border-Color">My Contents!</div>
+          <input id="Input-Border-Color" type="text" placeholder="Enter valid border-color value"> <button onclick="BorderColorValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code>currentColor</code></p> 
+          <p><code>transparent</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- BORDER-WIDTH PROPERTY ----------------------------------------------------------------------->
+      <section id="Border-Width-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="BorderWidthProperty()">BORDER-WIDTH PROPERTY</h2>
+          <p>The <code>border-width</code> property sets the width of an element's borders.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>border-width: border-width-top border-width-right border-width-bottom border-width-left;</code> <br>
+             3 values &rarr; <code>border-width: border-width-top border-width-<i>Horizontal</i> border-width-bottom;</code> <br>
+             2 values &rarr; <code>border-width: border-width-<i>Vertical</i> border-width-<i>Horizontal</i>;</code> <br>
+             1 value  &rarr; <code>border-width: border-width-<i>All</i>;</code>
+          </p>
+          <code id="Shorthand-Border-Width"></code>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Border-Width">My Contents!</div>
+          <input id="Input-Border-Width" type="text" placeholder="Enter valid border-width value"> <button onclick="BorderWidthValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>medium</code></p>
+          <p><code>thick</code></p>
+          <p><code>thin</code></p>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------------------------- COLOR PROPERTY --------------------------------------------------------------------------->
+      <section id="Color-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="ColorProperty()">COLOR PROPERTY</h2>
+          <p>The <code>color</code> property specifies the color of text.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Color">My Contents!</div>
+          <input id="Input-Color" type="text" placeholder="Enter valid color value"> <button onclick="ColorValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code>currentColor</code></p> 
+          <p><code>transparent</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- DISPLAY PROPERTY -------------------------------------------------------------------------->
+      <section id="Display-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="DisplayProperty()">DISPLAY PROPERTY</h2>
+          <p>The <code>display</code> property specifies the display behavior (the type of rendering box) of an element.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Display">My Contents!</div>
+          <input id="Input-Display" type="text" placeholder="Enter valid display value"> <button onclick="DisplayValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>block</code></p>
+          <p><code>contents</code></p>
+          <p><code>flex</code></p>
+          <p><code>flexbox</code></p>
+          <p><code>flow-root</code></p>
+          <p><code>grid</code></p>
+          <p><code>inline</code></p>
+          <p><code>inline-block</code></p>
+          <p><code>inline-flex</code></p>
+          <p><code>inline-flexbox</code></p>
+          <p><code>inline-table</code></p>
+          <p><code>list-item</code></p>
+          <p><code>none</code></p>
+          <p><code>ruby</code></p>
+          <p><code>ruby-base</code></p>
+          <p><code>ruby-base-container</code></p>
+          <p><code>ruby-text</code></p>
+          <p><code>ruby-text-container</code></p>
+          <p><code>run-in</code></p>
+          <p><code>table</code></p>
+          <p><code>table-caption</code></p>
+          <p><code>table-cell</code></p>
+          <p><code>table-column</code></p>
+          <p><code>table-column-group</code></p>
+          <p><code>table-footer-group</code></p>
+          <p><code>table-header-group</code></p>
+          <p><code>table-row</code></p>
+          <p><code>table-row-group</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------- FONT-FAMILY PROPERTY ------------------------------------------------------------------------->
+      <section id="Font-Family-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontFamilyProperty()">FONT-FAMILY PROPERTY</h2>
+          <p>The <code>font-family</code> property specifies the font for an element.</p>
+          <code id="Shorthand-Font-Family"></code>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Font-Family">My Contents!</div>
+          <input id="Input-Font-Family" type="text" placeholder="Enter valid font-family value"> <button onclick="FontFamilyValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>Arial</i></code></p>
+          <p><code><i>'Arial Narrow'</i></code></p>
+          <p><code><i>'Arial Narrow Bold'</i></code></p>
+          <p><code><i>Calibri</i></code></p>
+          <p><code><i>Cambria</i></code></p>
+          <p><code><i>Cochin</i></code></p>
+          <p><code><i>'Courier New'</i></code></p>
+          <p><code><i>Courier</i></code></p>
+          <p><code><i>cursive</i></code></p>
+          <p><code><i>fantasy</i></code></p>
+          <p><code><i>'Franklin Gothic Medium'</i></code></p>
+          <p><code><i>Geneva</i></code></p>
+          <p><code><i>Georgia</i></code></p>
+          <p><code><i>'Gill Sans'</i></code></p>
+          <p><code><i>'Gill Sans MT'</i></code></p>
+          <p><code><i>Haettenschweiler</i></code></p>
+          <p><code><i>Helvetica</i></code></p>
+          <p><code><i>Impact</i></code></p>
+          <p><code><i>'Lucida Grande'</i></code></p>
+          <p><code><i>'Lucida Sans'</i></code></p>
+          <p><code><i>'Lucida Sans Regular'</i></code></p>
+          <p><code><i>'Lucida Sans Unicode'</i></code></p>
+          <p><code><i>monospace</i></code></p>
+          <p><code><i>sans-serif</i></code></p>
+          <p><code><i>'Segoe UI'</i></code></p>
+          <p><code><i>serif</i></code></p>
+          <p><code><i>Tahoma</i></code></p>
+          <p><code><i>Times</i></code></p>
+          <p><code><i>'Times New Roman'</i></code></p>
+          <p><code><i>'Trebuchet MS'</i></code></p>
+          <p><code><i>Verdana</i></code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------ FONT-SIZE PROPERTY ------------------------------------------------------------------------->
+      <section id="Font-Size-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontSizeProperty()">FONT-SIZE PROPERTY</h2>
+          <p>The <code>font-size</code> property sets the size of a font.</p>
+          <code id="Shorthand-Font-Size"></code>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Font-Size">My Contents!</div>
+          <input id="Input-Font-Size" type="text" placeholder="Enter valid font-size value"> <button onclick="FontSizeValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>large</code></p>
+          <p><code>larger</code></p>
+          <p><code>medium</code></p>
+          <p><code>small</code></p>
+          <p><code>smaller</code></p>
+          <p><code>x-large</code></p>
+          <p><code>x-small</code></p>
+          <p><code>xx-large</code></p>
+          <p><code>xx-small</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------ FONT-STYLE PROPERTY ------------------------------------------------------------------------>
+      <section id="Font-Style-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontStyleProperty()">FONT-STYLE PROPERTY</h2>
+          <p>The <code>font-style</code> property specifies the font style for a text.</p>
+          <code id="Shorthand-Font-Style"></code>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Font-Style">My Contents!</div>
+          <input id="Input-Font-Style" type="text" placeholder="Enter valid font-style value"> <button onclick="FontStyleValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>italic</code></p>
+          <p><code>normal</code></p>
+          <p><code>oblique</code></p>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------------------------- HEIGHT PROPERTY -------------------------------------------------------------------------->
+      <section id="Height-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="HeightProperty()">HEIGHT PROPERTY</h2>
+          <p>The <code>height</code> property sets the height of an element.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Height">My Contents!</div>
+          <input id="Input-Height" type="text" placeholder="Enter valid height value"> <button onclick="HeightValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>auto</code></p>
+          <p><code>fit-content</code></p>
+          <p><code>max-content</code></p>
+          <p><code>min-content</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- MARGIN PROPERTY --------------------------------------------------------------------------->
+      <section id="Margin-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="MarginProperty()">MARGIN PROPERTY</h2>
+          <p>The <code>margin</code> property specifies space around elements, outside of any defined border.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>margin: margin-top margin-right margin-bottom margin-left;</code> <br>
+             3 values &rarr; <code>margin: margin-top margin-<i>Horizontal</i> margin-bottom;</code> <br>
+             2 values &rarr; <code>margin: margin-<i>Vertical</i> margin-<i>Horizontal</i>;</code> <br>
+             1 value  &rarr; <code>margin: margin-<i>All</i>;</code>
+          </p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Margin">My Contents!</div>
+          <input id="Input-Margin" type="text" placeholder="Enter valid margin value"> <button onclick="MarginValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>auto</code></p>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------- MAXIMUM-WIDTH PROPERTY ------------------------------------------------------------------------>
+      <section id="Maximum-Width-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="MaximumWidthProperty()">MAX-WIDTH PROPERTY</h2>
+          <p>The <code>max-width</code> property defines the maximum width of an element.</p>
+          <p>If the content is larger than the maximum width, it will automatically change the height of the element.</p>
+          <p>If the content is smaller than the maximum width, the <code>max-width</code> property has no effect.</p>
+          <p>This prevents the value of the <code>width</code> property from becoming larger than <code>max-width</code>.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Maximum-Width">My Contents!</div>
+          <input id="Input-Maximum-Width" type="text" placeholder="Enter valid max-width value"> <button onclick="MaximumWidthValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>fit-content</code></p>
+          <p><code>max-content</code></p>
+          <p><code>min-content</code></p>
+          <p><code>none</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- PADDING PROPERTY -------------------------------------------------------------------------->
+      <section id="Padding-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="PaddingProperty()">PADDING PROPERTY</h2>
+          <p>The <code>padding</code> defines space around an element's content, inside of any defined border.</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>padding: padding-top padding-right padding-bottom padding-left;</code> <br>
+             3 values &rarr; <code>padding: padding-top padding-<i>Horizontal</i> padding-bottom;</code> <br>
+             2 values &rarr; <code>padding: padding-<i>Vertical</i> padding-<i>Horizontal</i>;</code> <br>
+             1 value  &rarr; <code>padding: padding-<i>All</i>;</code>
+          </p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Padding">My Contents!</div>
+          <input id="Input-Padding" type="text" placeholder="Enter valid padding value"> <button onclick="PaddingValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------ TEXT-ALIGN PROPERTY ------------------------------------------------------------------------>
       <section id="Text-Align-Property" class="Box-Contents">
         <header>
-          <h2 onclick="TextAlignProperty()">TEXT ALIGN PROPERTY</h2>
+          <h2 onclick="TextAlignProperty()">TEXT-ALIGN PROPERTY</h2>
           <p>The <code>text-align</code> property specifies the horizontal alignment of text in an element.</p>
         </header>
 
         <div class="Related-Values">Related Value(s)
-          <div class="Box-Model">My Contents!</div>
+          <div class="Box-Model Text-Align">My Contents!</div>
           <input id="Input-Text-Align" type="text" placeholder="Enter valid text-align value"> <button onclick="TextAlignValue()">MODIFY</button>
           <p><code><i>CSS Global Values</i></code></p>
           <p><code>center</code></p>
@@ -208,28 +552,197 @@
         </div>
       </section>
 
-      <!-- CSS Global Values - calc() | inherit | initial | unset | var() -->
+      <!-------------------------------------------------------------------------- WIDTH PROPERTY --------------------------------------------------------------------------->
+      <section id="Width-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="WidthProperty()">WIDTH PROPERTY</h2>
+          <p>The <code>width</code> property sets the width of an element.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Width">My Contents!</div>
+          <input id="Input-Width" type="text" placeholder="Enter valid width value"> <button onclick="WidthValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>auto</code></p>
+          <p><code>fit-content</code></p>
+          <p><code>max-content</code></p>
+          <p><code>min-content</code></p>
+        </div>
+      </section>
+
+
+
+
+
+      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
+      <section id="EXAMPLE-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
+          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model EXAMPLE">My Contents!</div>
+          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
+      <section id="EXAMPLE-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
+          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model EXAMPLE">My Contents!</div>
+          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
+      <section id="EXAMPLE-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
+          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model EXAMPLE">My Contents!</div>
+          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
+      <section id="EXAMPLE-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
+          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model EXAMPLE">My Contents!</div>
+          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
+      <section id="EXAMPLE-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
+          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model EXAMPLE">My Contents!</div>
+          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
+      <section id="EXAMPLE-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
+          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model EXAMPLE">My Contents!</div>
+          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
+      <section id="EXAMPLE-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
+          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model EXAMPLE">My Contents!</div>
+          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
+      <section id="EXAMPLE-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
+          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model EXAMPLE">My Contents!</div>
+          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+          <p><code>value</code></p>
+        </div>
+      </section>
+
+
+
 
       <!--------------------------------------------------------------------------- CSS BOX MODEL --------------------------------------------------------------------------->
       <section id="CSS-Box-Model" class="Box-Contents">
         <header>
           <h2 onclick="CSSBoxModel()">CSS BOX MODEL</h2>
-          
         </header>
-
-        <article id="Property-Width" class="Box-Property">
-          <p>The <code>width</code> property sets the width of an element.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Width" type="text" placeholder="Enter width value"> <button onclick="PropertyWidth()">MODIFY</button>
-            <div onclick="WidthGlobalValues()"><code class="Value-Box">width: <i>CSS Global Values</i>;</code><div id="Width-Global-Values"></div></div>
-            <div onclick="WidthLengthValues()"><code class="Value-Box">width: <i>CSS Length Values</i>;</code><div id="Width-Length-Values"></div></div>
-            <div onclick="WidthAuto()"><code class="Value-Box">width: auto;</code><div id="Width-Auto"></div></div>
-            <div onclick="WidthMinContent()"><code class="Value-Box">width: min-content;</code><div id="Width-Min-Content"></div></div>
-            <div onclick="WidthFitContent()"><code class="Value-Box">width: fit-content;</code><div id="Width-Fit-Content"></div></div>
-            <div onclick="WidthMaxContent()"><code class="Value-Box">width: max-content;</code><div id="Width-Max-Content"></div></div>
-          </div>
-        </article>
 
         <article id="Property-Min-Width" class="Box-Property">
           <p>The <code>min-width</code> property defines the minimum width of an element.</p>
@@ -298,39 +811,6 @@
             <div onclick="MaxHeightMinContent()"><code class="Value-Box">max-height: min-content;</code><div id="Max-Height-Min-Content"></div></div>
             <div onclick="MaxHeightFitContent()"><code class="Value-Box">max-height: fit-content;</code><div id="Max-Height-Fit-Content"></div></div>
             <div onclick="MaxHeightMaxContent()"><code class="Value-Box">max-height: max-content;</code><div id="Max-Height-Max-Content"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Padding" class="Box-Property">
-          <p>The <code>padding</code> defines space around an element's content, inside of any defined border.</p>
-          <p>There are some generic-side properties that can be written as its values: <br>
-             4 values &rarr; <code>padding: padding-top padding-right padding-bottom padding-left;</code> <br>
-             3 values &rarr; <code>padding: padding-top padding-<i>Horizontal</i> padding-bottom;</code> <br>
-             2 values &rarr; <code>padding: padding-<i>Vertical</i> padding-<i>Horizontal</i>;</code> <br>
-             1 value  &rarr; <code>padding: padding-<i>All</i>;</code>
-          </p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Padding" type="text" placeholder="Enter padding value"> <button onclick="PropertyPadding()">MODIFY</button>
-            <div onclick="PaddingGlobalValues()"><code class="Value-Box">padding: <i>CSS Global Values</i>;</code><div id="Padding-Global-Values"></div></div>
-            <div onclick="PaddingLengthValues()"><code class="Value-Box">padding: <i>CSS Length Values</i>;</code><div id="Padding-Length-Values"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Margin" class="Box-Property">
-          <p>The <code>margin</code> property specifies space around elements, outside of any defined border.</p>
-          <p>There are some generic-side properties that can be written as its values: <br>
-             4 values &rarr; <code>margin: margin-top margin-right margin-bottom margin-left;</code> <br>
-             3 values &rarr; <code>margin: margin-top margin-<i>Horizontal</i> margin-bottom;</code> <br>
-             2 values &rarr; <code>margin: margin-<i>Vertical</i> margin-<i>Horizontal</i>;</code> <br>
-             1 value  &rarr; <code>margin: margin-<i>All</i>;</code>
-          </p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Margin" type="text" placeholder="Enter margin value"> <button onclick="PropertyMargin()">MODIFY</button>
-            <div onclick="MarginGlobalValues()"><code class="Value-Box">margin: <i>CSS Global Values</i>;</code><div id="Margin-Global-Values"></div></div>
-            <div onclick="MarginLengthValues()"><code class="Value-Box">margin: <i>CSS Length Values</i>;</code><div id="Margin-Length-Values"></div></div>
-            <div onclick="MarginAuto()"><code class="Value-Box">margin: auto;</code><div id="Margin-Auto"></div></div>
           </div>
         </article>
 

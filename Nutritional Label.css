@@ -1,0 +1,82 @@
+* { box-sizing: border-box; } /* Reset the box model to border box */
+
+html { font-size: 16px; } /* The font size is set to 16px */
+
+body { font-family: "Open Sans", sans-serif; } /* The font family is set to Open Sans, with fallback value of sans-serif */
+
+.label {
+  width: 270px; /* Fixed width of 270px */
+  border: 2px solid black; /* The border is solid black with 2px thickness */
+  margin: 20px auto; /* The margin has 20px vertically (top & bottom) and centered horizontally (left & right) */
+  padding: 0 7px;    /* The padding has 0 vertically (top & bottom) and 7px horizontally (left & right) */
+}
+
+header h1 {
+  text-align: center; /* Text alignment is centered relative to "label" class */
+  margin: -4px 0;     /* Remove margin vertical with -4px while set 0 for horizontal */
+  letter-spacing: 0.15px; /* Adjust the space between each character of text with 0.15px */
+}
+
+.divider {
+  border-bottom: 1px solid #888989; /* Bottom border has solid grey with 1px thickness */
+  margin: 2px 0; /* The margin is 2px vertically (top & bottom) and 0 horizontally (left & right) */
+}
+
+p {
+  margin: 0; /* Remove all margin sides */
+  display: flex; /* Set as flex container */
+  justify-content: space-between; /* Setting all the flex item on main axis as space between */
+}
+
+.bold { font-weight: 800; } /* Set the font bolder */
+
+.large { height: 10px; } /* Fixed height of 10px */
+
+.large, .medium {
+  background-color: black; /* The background color is set to black */
+  border: 0; /* Set no border */
+}
+
+.medium { height: 5px; } /* Fixed height of 5px */
+
+.small-text { font-size: 0.85rem; } /* The font size is set to 0.85rem relative to font size of "html" element */
+
+.calories-info {
+  display: flex;                  /* Set as flex container */
+  justify-content: space-between; /* Setting all the flex items on main axis as space between */
+  align-items: flex-end;          /* Setting all the flex items on cross axis as flex end */
+}
+
+.calories-info h2 { margin: 0; } /* Remove all the margin sides */
+
+.left-container p {
+  margin: -5px -2px; /* Remove all margin */
+  font-size: 2em;    /* The font size is 2em */
+  font-weight: 700;  /* The font weight is 700 */
+}
+
+.calories-info span {
+  font-size: 2.4em;  /* The font size is 2.4em */
+  font-weight: 700;  /* The font weight is 700 */
+  margin: -7px -2px; /* The margin is set to -7px vertically and -2px horizontally */
+}
+
+.right { justify-content: flex-end; } /* Setting the flex item on main axis at flex end */
+
+.indent { margin-left: 1em; } /* The left margin is set to 1em */
+
+.double-indent { margin-left: 2em; } /* The left margin is set to 2em */
+
+.daily-value p:not(.no-divider) { border-bottom: 1px solid #888989; } /* Set the border grey solid with 1px thickness */
+
+.note {
+  font-size: 0.6rem; /* The font size is 0.6rem */
+  margin: 5px 0;     /* The margin is set 5px vertically (top & bottom) and 0 horizontally (left & right) */
+  padding: 0 8px;    /* The padding 0 vertically (top & bottom) and 8px horiontally (left & right) */
+  text-indent: -8px; /* Set the text indent to -8px */
+}
+
+/*
+The rem unit stands for root em, and is relative to the font size of the html element.
+EXAMPLE; 0.85rem -> 85% of 16px (default font size for html element) -> 13.6px
+*/
