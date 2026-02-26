@@ -105,9 +105,11 @@ a:hover { color: darksalmon; }
 
 
 
+.Box-Value {
+  margin: 10px 0;
+}
 
-
-
+.Value { border: 1px solid black; }
 
 /* SUB BOX CONTENTS */
 .Sub-Topics { margin: 20px 0; }

@@ -1,13 +1,9 @@
 /////////////////////////////////////////////////////////////////////////////// SHORTHANDS ///////////////////////////////////////////////////////////////////////////////
 const Shorthand = {
   Background: "background: background-color background-image background-position background-size background-repeat background-origin background-clip background-attachment;",
-  Border: "border: border-width border-style border-color;",
-  Font: "font: font-style font-variant font-weight font-stretch font-size/line-height font-family;"
+  Border    : "border: border-width border-style border-color;",
+  Font      : "font: font-style font-variant font-weight font-stretch font-size/line-height font-family;"
 };
-
-document.getElementById("Shorthand-Border-Color").innerHTML    = Shorthand.Border;
-/* document.getElementById("Shorthand-Border-Style").innerHTML = Shorthand.Border; */
-document.getElementById("Shorthand-Border-Width").innerHTML    = Shorthand.Border;
 
 /* document.getElementById("Shorthand-Background-Attachment").innerHTML = Shorthand.Background; */
 document.getElementById("Shorthand-Background-Color").innerHTML         = Shorthand.Background;
@@ -17,6 +13,10 @@ document.getElementById("Shorthand-Background-Image").innerHTML         = Shorth
 /* document.getElementById("Shorthand-Background-Position").innerHTML   = Shorthand.Background; */
 /* document.getElementById("Shorthand-Background-Repeat").innerHTML     = Shorthand.Background; */
 /* document.getElementById("Shorthand-Background-Size").innerHTML       = Shorthand.Background; */
+
+document.getElementById("Shorthand-Border-Color").innerHTML = Shorthand.Border;
+document.getElementById("Shorthand-Border-Style").innerHTML = Shorthand.Border;
+document.getElementById("Shorthand-Border-Width").innerHTML = Shorthand.Border;
 
 /* document.getElementById("Shorthand-Line-Height").innerHTML  = Shorthand.Font; */
 document.getElementById("Shorthand-Font-Family").innerHTML     = Shorthand.Font;
@@ -39,7 +39,7 @@ function CSSProperties() {
   else { CSSProperties.style.display = "block"; }
 }
 
-//////////////////////////////////////////////////////////////////////// LIST OF CSS PROPERTIES //////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////// LIST OF CSS PROPERTIES /////////////////////////////////////////////////////////////////////////
 function SearchCSSProperties() {
   let input, filter, ul, li, a, i, txtValue;
   input = document.getElementById("CSS-Properties-Input");
@@ -115,6 +115,26 @@ function BorderColorValue() {
   document.getElementsByClassName("Border-Color")[0].style.borderColor = myBorderColor;
 }
 
+////////////////////////////////////////////////////////////////////////////// BORDER-STYLE //////////////////////////////////////////////////////////////////////////////
+function BorderStyleProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let BorderStyleProperty = document.getElementById("Border-Style-Property");
+
+  if (BorderStyleProperty.style.display === "block") {
+    BorderStyleProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    BorderStyleProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function BorderStyleValue() {
+  let myBorderStyle = document.getElementById("Input-Border-Style").value;
+  document.getElementsByClassName("Border-Style")[0].style.borderStyle = myBorderStyle;
+}
+
 ////////////////////////////////////////////////////////////////////////////// BORDER-WIDTH //////////////////////////////////////////////////////////////////////////////
 function BorderWidthProperty() {
   let CSSProperties = document.getElementById("CSS-Properties");
@@ -133,6 +153,26 @@ function BorderWidthProperty() {
 function BorderWidthValue() {
   let myBorderWidth = document.getElementById("Input-Border-Width").value;
   document.getElementsByClassName("Border-Width")[0].style.borderWidth = myBorderWidth;
+}
+
+/////////////////////////////////////////////////////////////////////////////// BOX-SHADOW ///////////////////////////////////////////////////////////////////////////////
+function BoxShadowProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let BoxShadowProperty = document.getElementById("Box-Shadow-Property");
+
+  if (BoxShadowProperty.style.display === "block") {
+    BoxShadowProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    BoxShadowProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function BoxShadowValue() {
+  let myBoxShadow = document.getElementById("Input-Box-Shadow").value;
+  document.getElementsByClassName("Box-Shadow")[0].style.boxShadow = myBoxShadow;
 }
 
 ///////////////////////////////////////////////////////////////////////////////// COLOR //////////////////////////////////////////////////////////////////////////////////
@@ -255,7 +295,7 @@ function HeightValue() {
   document.getElementsByClassName("Height")[0].style.height = myHeight;
 }
 
-//////////////////////////////////////////////////////////////////////////////// MARGIN //////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////// MARGIN /////////////////////////////////////////////////////////////////////////////////
 function MarginProperty() {
   let CSSProperties = document.getElementById("CSS-Properties");
   let MarginProperty = document.getElementById("Margin-Property");
@@ -275,7 +315,27 @@ function MarginValue() {
   document.getElementsByClassName("Margin")[0].style.margin = myMargin;
 }
 
-////////////////////////////////////////////////////////////////////////////// MAX-WIDTH /////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////// MAX-HEIGHT ///////////////////////////////////////////////////////////////////////////////
+function MaximumHeightProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let MaximumHeightProperty = document.getElementById("Maximum-Height-Property");
+
+  if (MaximumHeightProperty.style.display === "block") {
+    MaximumHeightProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    MaximumHeightProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function MaximumHeightValue() {
+  let myMaximumHeight = document.getElementById("Input-Maximum-Height").value;
+  document.getElementsByClassName("Maximum-Height")[0].style.maxHeight = myMaximumHeight;
+}
+
+/////////////////////////////////////////////////////////////////////////////// MAX-WIDTH ////////////////////////////////////////////////////////////////////////////////
 function MaximumWidthProperty() {
   let CSSProperties = document.getElementById("CSS-Properties");
   let MaximumWidthProperty = document.getElementById("Maximum-Width-Property");
@@ -293,6 +353,46 @@ function MaximumWidthProperty() {
 function MaximumWidthValue() {
   let myMaximumWidth = document.getElementById("Input-Maximum-Width").value;
   document.getElementsByClassName("Maximum-Width")[0].style.maxWidth = myMaximumWidth;
+}
+
+/////////////////////////////////////////////////////////////////////////////// MIN-HEIGHT ///////////////////////////////////////////////////////////////////////////////
+function MinimumHeightProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let MinimumHeightProperty = document.getElementById("Minimum-Height-Property");
+
+  if (MinimumHeightProperty.style.display === "block") {
+    MinimumHeightProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    MinimumHeightProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function MinimumHeightValue() {
+  let myMinimumHeight = document.getElementById("Input-Minimum-Height").value;
+  document.getElementsByClassName("Minimum-Height")[0].style.minHeight = myMinimumHeight;
+}
+
+/////////////////////////////////////////////////////////////////////////////// MIN-WIDTH ////////////////////////////////////////////////////////////////////////////////
+function MinimumWidthProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let MinimumWidthProperty = document.getElementById("Minimum-Width-Property");
+
+  if (MinimumWidthProperty.style.display === "block") {
+    MinimumWidthProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    MinimumWidthProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function MinimumWidthValue() {
+  let myMinimumWidth = document.getElementById("Input-Minimum-Width").value;
+  document.getElementsByClassName("Minimum-Width")[0].style.minWidth = myMinimumWidth;
 }
 
 //////////////////////////////////////////////////////////////////////////////// PADDING /////////////////////////////////////////////////////////////////////////////////
@@ -333,6 +433,26 @@ function TextAlignProperty() {
 function TextAlignValue() {
   let myTextAlign = document.getElementById("Input-Text-Align").value;
   document.getElementsByClassName("Text-Align")[0].style.textAlign = myTextAlign;
+}
+
+/////////////////////////////////////////////////////////////////////////////// TRANSFORM ////////////////////////////////////////////////////////////////////////////////
+function TransformProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TransformProperty = document.getElementById("Transform-Property");
+
+  if (TransformProperty.style.display === "block") {
+    TransformProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TransformProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TransformValue() {
+  let myTransform = document.getElementById("Input-Transform").value;
+  document.getElementsByClassName("Transform")[0].style.transform = myTransform;
 }
 
 ///////////////////////////////////////////////////////////////////////////////// WIDTH //////////////////////////////////////////////////////////////////////////////////
@@ -402,11 +522,6 @@ function PropertyMargin() {
 function PropertyBorderWidth() {
   let myBorderWidth = document.getElementById("Input-Border-Width").value;
   document.getElementsByClassName("Box-Model")[0].style.borderWidth = myBorderWidth;
-}
-
-function PropertyBorderStyle() {
-  let myBorderStyle = document.getElementById("Input-Border-Style").value;
-  document.getElementsByClassName("Box-Model")[0].style.borderStyle = myBorderStyle;
 }
 
 function PropertyBorderColor() {
@@ -503,20 +618,6 @@ function ClassSelectors() {
   else { myVisibility.style.display = "block"; }
 }
 
-// GROUP SELECTORS //
-function GroupSelectors() {
-  let myVisibility = document.getElementById("Group-Selectors");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    
-  }
-  else { myVisibility.style.display = "block"; document.getElementById("Group-Selectors").innerHTML =
-      "<div>The grouping selectors select all the HTML elements with the same style definitions</div>" +
-      "<div>To group selectors, separate each selector with a comma to minimize the code</div>" +
-      "<div><code>div, <em>#myId, .myClass { CSS Codes; }</em></code></div>"; }
-}
-
 // UNIVERSAL SELECTOR //
 function UniversalSelector() {
   let myVisibility = document.getElementById("Universal-Selector");
@@ -526,165 +627,6 @@ function UniversalSelector() {
     document.getElementById("Universal-Selector").innerHTML =
       "<div>The universal selector selects all HTML elements on the page</div>" +
       "<div><code><em>* { CSS Codes; }</em></code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// DESCENDANT COMBINATOR //
-function DescendantCombinator() {
-  let myVisibility = document.getElementById("Descendant-Combinator");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Descendant-Combinator").innerHTML =
-      "<div>The descendant combinator matches all elements that are descendants of a specified element</div>" +
-      "<div>As long as the matched elements are inside of a specified element, it is considered descendant combinator</div>" +
-      "<div><code>div p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; inside &lt;div&gt; * /<br></div>" +
-      "<div>section div span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; inside &lt;div&gt;, &lt;div&gt; inside &lt;section&gt; */</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// CHILD COMBINATOR //
-function ChildCombinator() {
-  let myVisibility = document.getElementById("Child-Combinator");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Child-Combinator").innerHTML =
-      "<div>The child combinator selects all elements that are the children of a specified element</div>" +
-      "<div>When there is another nested element of a specified element, that nested element is not considered child combinator, but it is descendant combinator</div>" +
-      "<div><code>div > p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; child of &lt;div&gt; */ <br></div>" +
-      "<div>section > ul > li { <em>CSS Codes;</em> } /* Selects all &lt;li&gt; child of &lt;ul&gt;, &lt;ul&gt; child of &lt;section&gt; */</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// NEXT SIBLING COMBINATOR //
-function NextSiblingCombinator() {
-  let myVisibility = document.getElementById("Next-Sibling-Combinator");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Next-Sibling-Combinator").innerHTML =
-      "<div>The next sibling combinator is used to select an element that is directly after another specific element</div>" +
-      "<div>Sibling elements must have the same parent element, and 'adjacent' means 'immediately following'</div>" +
-      "<div>If there is another element in between them, it will not work</div>" +
-      "<div><code>div + p { <em>CSS Codes;</em> } /* Select the first &lt;p&gt; right after &lt;div&gt; */ <br></div>" +
-      "<div>nav + div + a { <em>CSS Codes;</em> } /* Select the first &lt;a&gt; right after &lt;div&gt;, &lt;div&gt; is right after &lt;nav&gt; */</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// SUBSEQUENT-SIBLING COMBINATOR //
-function SubsequentSiblingCombinator() {
-  let myVisibility = document.getElementById("Subsequent-Sibling-Combinator");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Subsequent-Sibling-Combinator").innerHTML =
-      "<div>The subsequent-sibling combinator selects all elements that are next siblings of a specified element</div>" +
-      "<div><code>div ~ p { <em>CSS Codes;</em> } /* Selects all &lt;p&gt; after &lt;div&gt; */ <br></div>" +
-      "<div>div ~ p ~ span { <em>CSS Codes;</em> } /* Selects all &lt;span&gt; after &lt;p&gt;, &lt;p&gt; after &lt;div&gt; */</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// ATTRIBUTE SELECTOR 1 //
-function AttributeSelector1() {
-  let myVisibility = document.getElementById("Attribute-Selector1");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Attribute-Selector1").innerHTML =
-      "<div>The selector is used to select elements with a specified attribute</div>" +
-      "<div><code>a[target] { <em>CSS Codes;</em> } /* Selects all &lt;a&gt; with a target attribute */</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// ATTRIBUTE SELECTOR 2 //
-function AttributeSelector2() {
-  let myVisibility = document.getElementById("Attribute-Selector2");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Attribute-Selector2").innerHTML =
-      "<div>The selector is used to select elements with a specified attribute and value</div>" +
-      "<div><code>a[target = '_blank'] { <em>CSS Codes;</em> } /* Select all &lt;a&gt; with a target='_blank' attribute */</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// ATTRIBUTE SELECTOR 3 //
-function AttributeSelector3() {
-  let myVisibility = document.getElementById("Attribute-Selector3");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Attribute-Selector3").innerHTML =
-      "<div>The selector is used to select elements with the specified attribute</div>" +
-      "<div>The value containing atleast a specified word</div>" +
-      "<div>Example; <code>[class ~= 'test']</code> matches <code>[class = 'test'], [class = 'my test'], [class = 'test semester']</code></div>" +
-      "<div>It does not work for <code>[class = 'my-test'], [class = 'test-sample'], [class = 'tests']</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// ATTRIBUTE SELECTOR 4 //
-function AttributeSelector4() {
-  let myVisibility = document.getElementById("Attribute-Selector4");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Attribute-Selector4").innerHTML =
-      "<div>The selector is used to select elements with the specified attribute</div>" +
-      "<div>The value can be exactly the specified word, or the specified word followed by a hyphen (-)</div>" +
-      "<div>Example; <code>[class |= 'test']</code> matches <code>[class = 'test'], [class = 'test-sample']</code></div>" +
-      "<div>It does not work for <code>[class = 'my test'], [class = 'test semester'], [class = 'my-test'], [class = 'tests']</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// ATTRIBUTE SELECTOR 5 //
-function AttributeSelector5() {
-  let myVisibility = document.getElementById("Attribute-Selector5");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Attribute-Selector5").innerHTML =
-      "<div>The selector is used to select elements with the specified attribute, which the value starts with the specified value</div>" +
-      "<div>The value does not have to be a whole word</div>" +
-      "<div>Example; <code>[class ^= 'test']</code> matches <code>[class = 'test'], [class = 'test semester'], [class = 'test-sample'], [class = 'tests']</code></div>" +
-      "<div>It does not work for <code>[class = 'my test'], [class = 'my-test']</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// ATTRIBUTE SELECTOR 6 //
-function AttributeSelector6() {
-  let myVisibility = document.getElementById("Attribute-Selector6");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Attribute-Selector6").innerHTML =
-      "<div>The selector is used to select elements whose attribute value ends with a specified value</div>" +
-      "<div>The value does not have to be a whole word</div>" +
-      "<div>Example; <code>[class $= 'test']</code> matches <code>[class = 'test'], [class = 'my-test'], [class = 'mytest']</code></div>" +
-      "<div>It does not work for <code>[class = 'test semester'], [class = 'test-sample'], [class = 'tests']</code></div>";
-  }
-  else { myVisibility.style.display = "block"; }
-}
-
-// ATTRIBUTE SELECTOR 7 //
-function AttributeSelector7() {
-  let myVisibility = document.getElementById("Attribute-Selector7");
-  myVisibility.style.margin = "10px 0";
-  if (myVisibility.style.display === "block") {
-    myVisibility.style.display = "none";
-    document.getElementById("Attribute-Selector7").innerHTML =
-      "<div>The selector is used to select elements whose attribute value contains a specified value</div>" +
-      "<div>Example; <code>[class *= 'te']</code> matches <code>[class = 'test'], [class = 'cute']</code></div>";
   }
   else { myVisibility.style.display = "block"; }
 }

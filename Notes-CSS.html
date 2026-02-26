@@ -44,7 +44,6 @@
       <section id="Box-Topic-Selections">
         <button onclick="CSSIntroduction()">CSS INTRODUCTION</button>
         <button onclick="CSSProperties()">CSS PROPERTIES</button>
-        <button onclick="CSSSelectors()">CSS SELECTORS</button>
       </section>
 
       <!------------------------------------------------------------------------- CSS INTRODUCTION -------------------------------------------------------------------------->
@@ -104,55 +103,29 @@
         <br><hr><br>
 
         <header>
-          <h2>CSS SELECTORS</h2>
+          <h2>TYPE OF WRITTEN CSS</h2>
         </header>
 
         <div class="Sub-Topics">
-          <span>Type Selectors</span> <br>
-        </div>
-
-        <div class="Sub-Topics">
-          <span>Class Selectors</span> <br>
-          <code><i>.myClass</i> { myProperty: myValue; }</code>
-          <p>All class selectors must start with a dot.</p>
-        </div>
-
-        <div class="Sub-Topics">
-          <span>ID Selectors</span> <br>
-          <code><i>#myId</i> { myProperty: myValue; }</code>
-          <p>All ID selectors must start with a hash symbol.</p>
-        </div>
-
-        <div class="Sub-Topics">
-          <span>Universal Selectors</span> <br>
-        </div>
-
-        <div class="Sub-Topics">
-          <span>Attribute Selectors</span> <br>
-        </div>
-
-        <div class="Sub-Topics">
-          <span>Combinator Selectors</span> <br>
-        </div>
-
-        <br><hr><br>
-
-        <div class="Sub-Topics">
-          <span>Inline CSS</span> <br>
+          <h3>Inline CSS</h3>
           <p>Inline CSS is written directly within an HTML element using the style attribute.</p>
           <p>It applies styles to a specific element.</p>
           <p>Inline CSS is generally used for quick, one-off styles or to override other styles for a specific element.</p>
-          <p>However, it should be avoided in most cases because it can clutter the HTML and make the code harder to maintain.</p> <br>
+          <p>However, it should be avoided in most cases because it can clutter the HTML and make the code harder to maintain.</p>
+        </div>
 
-          <span>Internal CSS</span> <br>
+        <div class="Sub-Topics">
+          <h3>Internal CSS</h3>
           <p>Internal CSS is written within the style tags inside the head section of an HTML document.</p>
           <p>It applies styles to the entire page and is useful when developer need to style a single document.</p>
           <p>Internal CSS is best used when developer need to apply styles to a specific page rather than across multiple pages.</p>
           <p>It's useful for single-page websites or when the styles don't need to be reused elsewhere.</p>
           <p>However, there are some downsides, such as not promoting reusability across multiple pages.</p>
-          <p>Additionally, like inline CSS, it mixes HTML and CSS, making the code harder to maintain in larger projects.</p> <br>
+          <p>Additionally, like inline CSS, it mixes HTML and CSS, making the code harder to maintain in larger projects.</p>
+        </div>
 
-          <span>External CSS</span> <br>
+        <div class="Sub-Topics">
+          <h3>External CSS</h3>
           <p>External CSS is written in a separate CSS file and linked to the HTML document using the link element in the head section.</p>
           <p>It allows developer to style multiple pages consistently and is the preferred method in professional web development.</p>
           <p>External CSS is ideal for large projects where you want to maintain a consistent style across multiple pages.</p>
@@ -162,9 +135,177 @@
 
         <br><hr><br>
 
+        <header>
+          <h2>CSS SELECTORS</h2>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Type Selectors</h3>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Class Selectors</h3>
+          <code><i>.myClass</i> { myProperty: myValue; }</code>
+          <p>All class selectors must start with a dot.</p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>ID Selectors</h3>
+          <code><i>#myId</i> { myProperty: myValue; }</code>
+          <p>All ID selectors must start with a hash symbol.</p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Universal Selector</h3>
+          <code><i>*</i> { myProperty: myValue; }</code>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Attribute Selectors</h3>
+
+          <p><code>mySelector[<i>myAttribute</i>] { myProperty: myValue; }</code></p>
+          <p>It is used to select elements with the specified attribute.</p>
+
+          <p><code>mySelector[<i>myAttribute="myValue"</i>] { myProperty: myValue; }</code></p>
+          <p>It is used to select elements with the specified attribute and the exact value.</p>
+
+          <p><code>mySelector[<i>myAttribute~="myValue"</i>] { myProperty: myValue; }</code></p>
+          <p>It is used to select elements with an attribute value containing a specific word.</p>
+
+          <p><code>mySelector[<i>myAttribute|="myValue"</i>] { myProperty: myValue; }</code></p>
+          <p>It selects elements with the specified attribute with the exact specified value, or the exact specified value followed by a hyphen (-).</p>
+
+          <p><code>mySelector[<i>myAttribute^="myValue"</i>] { myProperty: myValue; }</code></p>
+          <p>It matches every element whose attribute value begins with the specified value.</p>
+
+          <p><code>mySelector[<i>myAttribute$="myValue"</i>] { myProperty: myValue; }</code></p>
+          <p>It matches every element whose attribute value ends with the specified value.</p>
+
+          <p><code>mySelector[<i>myAttribute*="myValue"</i>] { myProperty: myValue; }</code></p>
+          <p>It matches every element whose attribute value containing a specified value.</p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Combinator Selectors</h3>
+          <p>CSS combinators are used to define the relationship between selectors in CSS.</p>
+          <p>They help in selecting elements based on their relationship to other elements, which allows for more precise and efficient styling.</p> <br>
+
+          <p><span>Descendant Combinator</span></p>
+          <p><code><i>myAscendantSelector myDescendantSelector</i> { myProperty: myValue; }</code></p>
+          <p>A space is used between the parent and child selector.</p>
+          <p>A descendant combinator is used to target elements matched by the second selector if they are nested within an ancestor element that matches the first selector.</p>
+          <p>An ancestor can be a parent element or a parent's parent.</p> <br>
+
+          <p><span>Child Combinator</span></p>
+          <p><code><i>myParentSelector > myChildSelector</i> { myProperty: myValue; }</code></p>
+          <p>A child combinator is used to select elements that are direct children of a specified parent element.</p>
+          <p>This combinator targets only elements with a specific parent, making the CSS rules more precise and preventing unintended styling of deeper nested elements.</p> <br>
+
+          <p><span>Next-sibling Combinator</span></p>
+          <p><code><i>mySelector1 + mySelector2</i> { myProperty: myValue; }</code></p>
+          <p>A next-sibling combinator selects an element that immediately follows a specified sibling element.</p>
+          <p>This combinator is useful when you want to apply styles to an element that directly follows another element, allowing for targeted styling based on
+             the element's position relative to its siblings.
+          </p> <br>
+
+          <p><span>Subsequent-sibling Combinator</span></p>
+          <p><code><i>mySelector1 ~ mySelector2</i> { myProperty: myValue; }</code></p>
+          <p>A subsequent-sibling combinator selects all siblings of a specified element that come after it.</p>
+          <p>The combinator can target any siblings that follow the specified element, offering greater flexibility in styling.</p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Group Selectors</h3>
+          <p><code><i>mySelector1, mySelector2</i> { myProperty: myValue; }</code></p>
+          <p>A group selector select a group of selector that has same CSS rules.</p>
+          <p>Instead of writing the same CSS rule for each selector one by one, a group selector can be used to avoid time consume.</p>
+        </div>
+
+        <br><hr><br>
+
         <h2>CSS UNITS</h2>
         <p>Pixels are a fixed-size unit of measurement in CSS, providing precise control over dimensions.</p>
       </section>
+
+<!-- PSEUDO-CLASS SELECTORS
+<div id="Pseudo-Class-Selectors" class="Sub-Topics">
+  <h3>PSEUDO-CLASS SELECTORS</h3>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:active</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:any-link</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:auto-fill</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:checked</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:default</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:defined</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:dir()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:disabled</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:empty</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:enabled</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:first</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:first-child</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:first-of-type</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:focus</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:focus-visible</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:focus-within</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:fullscreen</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:has()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:hover</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:in-range</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:indeterminate</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:invalid</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:is()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:lang()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:last-child</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:last-of-type</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:left</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:link</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:modal</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:not()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:nth-child()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:nth-last-child()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:nth-last-of-type()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:nth-of-type()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:only-child</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:only-of-type</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:optional</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:out-of-range</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:placeholder-shown</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:popover-open</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:read-only</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:read-write</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:required</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:right</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:root</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:scope</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:state()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:target</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:user-invalid</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:user-valid</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:valid</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:visited</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>:where()</code> <div id=""></div> </div>
+</div>  -->
+
+<!-- PSEUDO-ELEMENT SELECTORS
+<div id="Pseudo-Element-Selectors" class="Sub-Topics">
+  <h3>PSEUDO-ELEMENT SELECTORS</h3>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::after</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::backdrop</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::before</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::file-selector-button</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::first-letter</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::first-line</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::grammar-error</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::highlight()</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::marker</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::placeholder</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::selection</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::spelling-error</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-group</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-image-pair</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-new</code> <div id=""></div> </div>
+  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-old</code> <div id=""></div> </div>
+</div>  -->
 
       <!---------------------------------------------------------------------- LIST OF CSS PROPERTIES ----------------------------------------------------------------------->
       <section id="CSS-Properties" class="Box-Contents">
@@ -182,25 +323,24 @@
           <li><a onclick="TextAlignProperty()"><code>text-align</code> <span>Specifies the horizontal alignment of text</span></a></li>
           <div><b>CSS BOX MODEL</b></div>
           <li><a onclick="BorderColorProperty()"><code>border-color</code> <span>Sets the color of the borders</span></a></li>
+          <li><a onclick="BorderStyleProperty()"><code>border-style</code> <span>Sets the style of the borders</span></a></li>
           <li><a onclick="BorderWidthProperty()"><code>border-width</code> <span>Sets the width of the borders</span></a></li>
           <li><a onclick="HeightProperty()"><code>height</code> <span>Sets the height of an element</span></a></li>
-          <li><a onclick="MarginProperty()"><code>margin</code> <span>Sets all the margin properties in one declaration</span></a></li>
+          <li><a onclick="MarginProperty()"><code>margin</code> <span>Sets all the margin of an element</span></a></li>
+          <li><a onclick="MaximumHeightProperty()"><code>max-height</code> <span>Sets the maximum height of an element</span></a></li>
           <li><a onclick="MaximumWidthProperty()"><code>max-width</code> <span>Sets the maximum width of an element</span></a></li>
+          <li><a onclick="MinimumHeightProperty()"><code>min-height</code> <span>Sets the minimum height of an element</span></a></li>
+          <li><a onclick="MinimumWidthProperty()"><code>min-width</code> <span>Sets the minimum width of an element</span></a></li>
           <li><a onclick="PaddingProperty()"><code>padding</code> <span>Sets the padding of an element</span></a></li>
           <li><a onclick="WidthProperty()"><code>width</code> <span>Sets the width of an element</span></a></li>
           <div><b>CSS BOX LAYOUT</b></div>
           <li><a onclick="DisplayProperty()"><code>display</code> <span>Specifies how a certain HTML element should be displayed</span></a></li>
           <div><b>UNCATEGORIZED</b></div>
+          <li><a onclick="BoxShadowProperty()"><code>box-shadow</code> <span>Attaches one or more shadows to an element</span></a></li>
+          <li><a onclick="TransformProperty()"><code>transform</code> <span>Applies a 2D or 3D transformation to an element</span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
+          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
           <li><a onclick="CSSBoxModel()">CSS Box Model</a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>PROPERTY</code> <span></span></a></li>
         </ul>
       </section>
@@ -275,6 +415,37 @@
         </div>
       </section>
 
+      <!----------------------------------------------------------------------- BORDER-STYLE PROPERTY ----------------------------------------------------------------------->
+      <section id="Border-Style-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="BorderStyleProperty()">BORDER-STYLE PROPERTY</h2>
+          <p>The <code>border-style</code> property sets the style of an element's borders</p>
+          <p>There are some generic-side properties that can be written as its values: <br>
+             4 values &rarr; <code>border-style: border-style-top border-style-right border-style-bottom border-style-left;</code> <br>
+             3 values &rarr; <code>border-style: border-style-top border-style-<i>Horizontal</i> border-style-bottom;</code> <br>
+             2 values &rarr; <code>border-style: border-style-<i>Vertical</i> border-style-<i>Horizontal</i>;</code> <br>
+             1 value  &rarr; <code>border-style: border-style-<i>All</i>;</code>
+          </p>
+          <code id="Shorthand-Border-Style"></code>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Border-Style">My Contents!</div>
+          <input id="Input-Border-Style" type="text" placeholder="Enter valid border-style value"> <button onclick="BorderStyleValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>dashed</code></p>
+          <p><code>dotted</code></p>
+          <p><code>double</code></p>
+          <p><code>groove</code></p>
+          <p><code>hidden</code></p>
+          <p><code>inset</code></p>
+          <p><code>none</code></p>
+          <p><code>outset</code></p>
+          <p><code>ridge</code></p>
+          <p><code>solid</code></p>
+        </div>
+      </section>
+
       <!----------------------------------------------------------------------- BORDER-WIDTH PROPERTY ----------------------------------------------------------------------->
       <section id="Border-Width-Property" class="Box-Contents">
         <header>
@@ -297,6 +468,64 @@
           <p><code>medium</code></p>
           <p><code>thick</code></p>
           <p><code>thin</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------ BOX-SHADOW PROPERTY ------------------------------------------------------------------------>
+      <section id="Box-Shadow-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="BoxShadowProperty()">BOX-SHADOW PROPERTY</h2>
+          <p>The <code>box-shadow</code> property specifies one or multiple shadows to an element.</p>
+          <p><code>box-shadow: <i>H-Offset V-Offset Blur-Radius Spread-Radius Color</i> inset;</code></p>
+        </header>
+
+        <div class="Related-Values">
+          <code><i>H-Offset</i></code>
+          <p>Required parameter which specifies the horizontal offset of the shadow.</p>
+          <p>A positive value puts the shadow on the right side of the box.</p>
+          <p>A negative value puts the shadow on the left side of the box.</p>
+        </div>
+
+        <div class="Related-Values">
+          <code><i>V-Offset</i></code>
+          <p>Required parameter which specifies the vertical offset of the shadow.</p>
+            <p>A positive value puts the shadow below the box.</p>
+            <p>A negative value puts the shadow above the box.</p>
+        </div>
+
+        <div class="Related-Values">
+          <code><i>Blur-Radius</i></code>
+          <p>Optional parameter which specifies the spread radius of the shadow.</p>
+          <p>A positive value increases the size of the spread radius shadow.</p>
+          <p>A negative value decreases the size of the spread radius shadow.</p>
+        </div>
+
+        <div class="Related-Values">
+          <code><i>Spread-Radius</i></code>
+          <p>Optional parameter which specifies the blur radius of the shadow.</p>
+          <p>The higher the number, the more blurred the shadow will be.</p>
+        </div>
+
+        <div class="Related-Values">
+          <code><i>Color</i></code>
+          <p>Optional parameter which specifies the color of the shadow.</p>
+        </div>
+
+        <div class="Related-Values">
+          <code>inset</code>
+          <p>Optional value which changes the shadow from an outer shadow to an inner shadow.</p>
+        </div>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Box-Shadow">My Contents!</div>
+          <input id="Input-Box-Shadow" type="text" placeholder="Enter valid box-shadow value"> <button onclick="BoxShadowValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>currentColor</code></p> 
+          <p><code>inset</code></p>
+          <p><code>none</code></p>
+          <p><code>transparent</code></p>
         </div>
       </section>
 
@@ -328,14 +557,31 @@
           <div class="Box-Model Display">My Contents!</div>
           <input id="Input-Display" type="text" placeholder="Enter valid display value"> <button onclick="DisplayValue()">MODIFY</button>
           <p><code><i>CSS Global Values</i></code></p>
-          <p><code>block</code></p>
+
+          <div class="Box-Value">
+            <code class="Value">block</code>
+            <p>Block-level elements behave like large containers or "blocks" that take up the full width of their parent container.</p>
+            <p>They always start on a new line, and their height and width can be adjusted.</p>
+          </div>
+          
           <p><code>contents</code></p>
           <p><code>flex</code></p>
           <p><code>flexbox</code></p>
           <p><code>flow-root</code></p>
           <p><code>grid</code></p>
-          <p><code>inline</code></p>
-          <p><code>inline-block</code></p>
+
+          <div class="Box-Value">
+            <code class="Value">inline</code>
+            <p>Inline elements only take up as much space as they need.</p>
+            <p>They flow within the surrounding content and do not break onto a new line.</p>
+          </div>
+
+          <div class="Box-Value">
+            <code class="Value">inline-block</code>
+            <p>The property is a hybrid of these two behaviors where it remain in the text flow without starting on a new line.</p>
+            <p>It can adjust the width and height of the element.</p>
+          </div>
+
           <p><code>inline-flex</code></p>
           <p><code>inline-flexbox</code></p>
           <p><code>inline-table</code></p>
@@ -489,6 +735,30 @@
         </div>
       </section>
 
+      <!------------------------------------------------------------------------ MAX-HEIGHT PROPERTY ------------------------------------------------------------------------>
+      <section id="Maximum-Height-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="MaximumHeightProperty()">MAX-HEIGHT PROPERTY</h2>
+          <p>The <code>max-height</code> property defines the maximum height of an element.</p>
+          <p>If the content is larger than the maximum height, it will overflow.</p>
+          <p>How the container will handle the overflowing content is defined by the <code>overflow</code> property.</p>
+          <p>If the content is smaller than the maximum height, the <code>max-height</code> property has no effect.</p>
+          <p>This prevents the value of the <code>height</code> property from becoming larger than <code>max-height</code>.</p>
+          <p>The value of the <code>max-height</code> property overrides the <code>height</code> property.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Maximum-Height">My Contents!</div>
+          <input id="Input-Maximum-Height" type="text" placeholder="Enter valid max-height value"> <button onclick="MaximumHeightValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>fit-content</code></p>
+          <p><code>max-content</code></p>
+          <p><code>min-content</code></p>
+          <p><code>none</code></p>
+        </div>
+      </section>
+
       <!--------------------------------------------------------------------- MAXIMUM-WIDTH PROPERTY ------------------------------------------------------------------------>
       <section id="Maximum-Width-Property" class="Box-Contents">
         <header>
@@ -497,6 +767,7 @@
           <p>If the content is larger than the maximum width, it will automatically change the height of the element.</p>
           <p>If the content is smaller than the maximum width, the <code>max-width</code> property has no effect.</p>
           <p>This prevents the value of the <code>width</code> property from becoming larger than <code>max-width</code>.</p>
+          <p>The value of the <code>max-width</code> property overrides the <code>width</code> property.</p>
         </header>
 
         <div class="Related-Values">Related Value(s)
@@ -508,6 +779,50 @@
           <p><code>max-content</code></p>
           <p><code>min-content</code></p>
           <p><code>none</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------- MINIMUM-HEIGHT PROPERTY ---------------------------------------------------------------------->
+      <section id="Minimum-Height-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="MinimumHeightProperty()">MIN-HEIGHT PROPERTY</h2>
+          <p>The <code>min-height</code> property defines the minimum height of an element.</p>
+          <p>If the content is smaller than the minimum height, the minimum height will be applied.</p>
+          <p>If the content is larger than the minimum height, the <code>min-height</code> property has no effect.</p>
+          <p>This prevents the value of the <code>height</code> property from becoming smaller than <code>min-height</code>.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Minimum-Height">My Contents!</div>
+          <input id="Input-Minimum-Height" type="text" placeholder="Enter valid min-height value"> <button onclick="MinimumHeightValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>auto</code></p>
+          <p><code>fit-content</code></p>
+          <p><code>max-content</code></p>
+          <p><code>min-content</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------- MINIMUM-WIDTH PROPERTY ----------------------------------------------------------------------->
+      <section id="Minimum-Width-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="MinimumWidthProperty()">MIN-WIDTH PROPERTY</h2>
+          <p>The <code>min-width</code> property defines the minimum width of an element.</p>
+          <p>If the content is smaller than the minimum width, the minimum width will be applied.</p>
+          <p>If the content is larger than the minimum width, the <code>min-width</code> property has no effect.</p>
+          <p>This prevents the value of the <code>width</code> property from becoming smaller than <code>min-width</code>.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Minimum-Width">My Contents!</div>
+          <input id="Input-Minimum-Width" type="text" placeholder="Enter valid min-width value"> <button onclick="MinimumWidthValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>auto</code></p>
+          <p><code>fit-content</code></p>
+          <p><code>max-content</code></p>
+          <p><code>min-content</code></p>
         </div>
       </section>
 
@@ -552,6 +867,42 @@
         </div>
       </section>
 
+      <!------------------------------------------------------------------------ TRANSFORM PROPERTY ------------------------------------------------------------------------->
+      <section id="Transform-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TransformProperty()">TRANSFORM PROPERTY</h2>
+          <p>The <code>transform</code> property applies a 2D or 3D transformation to an element.</p>
+        </header>
+
+        <div class="Related-Values">Related Value(s)
+          <div class="Box-Model Transform">My Contents!</div>
+          <input id="Input-Transform" type="text" placeholder="Enter valid transform value"> <button onclick="TransformValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>matrix()</code></p>
+          <p><code>matrix3d()</code></p>
+          <p><code>none</code></p>
+          <p><code>perspective()</code></p>
+          <p><code>rotate()</code></p>
+          <p><code>rotate3d()</code></p>
+          <p><code>rotateX()</code></p>
+          <p><code>rotateY()</code></p>
+          <p><code>rotateZ()</code></p>
+          <p><code>scale()</code></p>
+          <p><code>scale3d()</code></p>
+          <p><code>scaleX()</code></p>
+          <p><code>scaleY()</code></p>
+          <p><code>scaleZ()</code></p>
+          <p><code>skew()</code></p>
+          <p><code>skewX()</code></p>
+          <p><code>skewY()</code></p>
+          <p><code>translate()</code></p>
+          <p><code>translate3d()</code></p>
+          <p><code>translateX()</code></p>
+          <p><code>translateY()</code></p>
+          <p><code>translateZ()</code></p>
+        </div>
+      </section>
+
       <!-------------------------------------------------------------------------- WIDTH PROPERTY --------------------------------------------------------------------------->
       <section id="Width-Property" class="Box-Contents">
         <header>
@@ -574,127 +925,6 @@
 
 
 
-
-      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
-      <section id="EXAMPLE-Property" class="Box-Contents">
-        <header>
-          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
-          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
-        </header>
-
-        <div class="Related-Values">Related Value(s)
-          <div class="Box-Model EXAMPLE">My Contents!</div>
-          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
-          <p><code><i>CSS Global Values</i></code></p>
-          <p><code><i>CSS Color Values</i></code></p>
-          <p><code><i>CSS Length Values</i></code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-        </div>
-      </section>
-
-      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
-      <section id="EXAMPLE-Property" class="Box-Contents">
-        <header>
-          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
-          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
-        </header>
-
-        <div class="Related-Values">Related Value(s)
-          <div class="Box-Model EXAMPLE">My Contents!</div>
-          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
-          <p><code><i>CSS Global Values</i></code></p>
-          <p><code><i>CSS Color Values</i></code></p>
-          <p><code><i>CSS Length Values</i></code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-        </div>
-      </section>
-
-      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
-      <section id="EXAMPLE-Property" class="Box-Contents">
-        <header>
-          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
-          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
-        </header>
-
-        <div class="Related-Values">Related Value(s)
-          <div class="Box-Model EXAMPLE">My Contents!</div>
-          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
-          <p><code><i>CSS Global Values</i></code></p>
-          <p><code><i>CSS Color Values</i></code></p>
-          <p><code><i>CSS Length Values</i></code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-        </div>
-      </section>
-
-      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
-      <section id="EXAMPLE-Property" class="Box-Contents">
-        <header>
-          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
-          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
-        </header>
-
-        <div class="Related-Values">Related Value(s)
-          <div class="Box-Model EXAMPLE">My Contents!</div>
-          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
-          <p><code><i>CSS Global Values</i></code></p>
-          <p><code><i>CSS Color Values</i></code></p>
-          <p><code><i>CSS Length Values</i></code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-        </div>
-      </section>
-
-      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
-      <section id="EXAMPLE-Property" class="Box-Contents">
-        <header>
-          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
-          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
-        </header>
-
-        <div class="Related-Values">Related Value(s)
-          <div class="Box-Model EXAMPLE">My Contents!</div>
-          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
-          <p><code><i>CSS Global Values</i></code></p>
-          <p><code><i>CSS Color Values</i></code></p>
-          <p><code><i>CSS Length Values</i></code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-        </div>
-      </section>
-
-      <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
-      <section id="EXAMPLE-Property" class="Box-Contents">
-        <header>
-          <h2 onclick="EXAMPLEProperty()">EXAMPLE PROPERTY</h2>
-          <p>The <code>EXAMPLE</code> EXAMPLE.</p>
-        </header>
-
-        <div class="Related-Values">Related Value(s)
-          <div class="Box-Model EXAMPLE">My Contents!</div>
-          <input id="Input-EXAMPLE" type="text" placeholder="Enter valid EXAMPLE value"> <button onclick="EXAMPLEValue()">MODIFY</button>
-          <p><code><i>CSS Global Values</i></code></p>
-          <p><code><i>CSS Color Values</i></code></p>
-          <p><code><i>CSS Length Values</i></code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-          <p><code>value</code></p>
-        </div>
-      </section>
-
       <!------------------------------------------------------------------------- EXAMPLE PROPERTY -------------------------------------------------------------------------->
       <section id="EXAMPLE-Property" class="Box-Contents">
         <header>
@@ -738,272 +968,13 @@
 
 
 
-      <!--------------------------------------------------------------------------- CSS BOX MODEL --------------------------------------------------------------------------->
-      <section id="CSS-Box-Model" class="Box-Contents">
-        <header>
-          <h2 onclick="CSSBoxModel()">CSS BOX MODEL</h2>
-        </header>
-
-        <article id="Property-Min-Width" class="Box-Property">
-          <p>The <code>min-width</code> property defines the minimum width of an element.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Min-Width" type="text" placeholder="Enter min-width value"> <button onclick="PropertyMinWidth()">MODIFY</button>
-            <div onclick="MinWidthGlobalValues()"><code class="Value-Box">min-width: <i>CSS Global Values</i>;</code><div id="Min-Width-Global-Values"></div></div>
-            <div onclick="MinWidthLengthValues()"><code class="Value-Box">min-width: <em>CSS Length Values</em>;</code><div id="Min-Width-Length-Values"></div></div>
-            <div onclick="MinWidthAuto()"><code class="Value-Box">min-width: auto;</code><div id="Min-Width-Auto"></div></div>
-            <div onclick="MinWidthMinContent()"><code class="Value-Box">min-width: min-content;</code><div id="Min-Width-Min-Content"></div></div>
-            <div onclick="MinWidthFitContent()"><code class="Value-Box">min-width: fit-content;</code><div id="Min-Width-Fit-Content"></div></div>
-            <div onclick="MinWidthMaxContent()"><code class="Value-Box">min-width: max-content;</code><div id="Min-Width-Max-Content"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Max-Width" class="Box-Property">
-          <p>The <code>max-width</code> property defines the maximum width of an element.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Max-Width" type="text" placeholder="Enter max-width value"> <button onclick="PropertyMaxWidth()">MODIFY</button>
-            <div onclick="MaxWidthGlobalValues()"><code class="Value-Box">max-width: <i>CSS Global Values</i>;</code><div id="Max-Width-Global-Values"></div></div>
-            <div onclick="MaxWidthLengthValues()"><code class="Value-Box">max-width: <i>CSS Length Values</i>;</code><div id="Max-Width-Length-Values"></div></div>
-            <div onclick="MaxWidthNone()"><code class="Value-Box">max-width: none;</code><div id="Max-Width-None"></div></div>
-            <div onclick="MaxWidthMinContent()"><code class="Value-Box">max-width: min-content;</code><div id="Max-Width-Min-Content"></div></div>
-            <div onclick="MaxWidthFitContent()"><code class="Value-Box">max-width: fit-content;</code><div id="Max-Width-Fit-Content"></div></div>
-            <div onclick="MaxWidthMaxContent()"><code class="Value-Box">max-width: max-content;</code><div id="Max-Width-Max-Content"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Height" class="Box-Property">
-          <p>The <code>height</code> property sets the height of an element.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Height" type="text" placeholder="Enter height value"> <button onclick="PropertyHeight()">MODIFY</button>
-            <div onclick="HeightGlobalValues()"><code class="Value-Box">height: <i>CSS Global Values</i>;</code><div id="Height-Global-Values"></div></div>
-            <div onclick="HeightLengthValues()"><code class="Value-Box">height: <i>CSS Length Values</i>;</code><div id="Height-Length-Values"></div></div>
-            <div onclick="HeightAuto()"><code class="Value-Box">height: auto;</code> <div id="Height-Auto"></div></div>
-            <div onclick="HeightMinContent()"><code class="Value-Box">height: min-content;</code><div id="Height-Min-Content"></div></div>
-            <div onclick="HeightFitContent()"><code class="Value-Box">height: fit-content;</code><div id="Height-Fit-Content"></div></div>
-            <div onclick="HeightMaxContent()"><code class="Value-Box">height: max-content;</code><div id="Height-Max-Content"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Min-Height" class="Box-Property">
-          <p>The <code>min-height</code> property defines the minimum height of an element.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Min-Height" type="text" placeholder="Enter min-height value"> <button onclick="PropertyMinHeight()">MODIFY</button>
-            <div onclick="MinHeightGlobalValues()"><code class="Value-Box">min-height: <i>CSS Global Values</i>;</code><div id="Min-Height-Global-Values"></div></div>
-            <div onclick="MinHeightLengthValues()"><code class="Value-Box">min-height: <i>CSS Length Values</i>;</code><div id="Min-Height-Length-Values"></div></div>
-            <div onclick="MinHeightAuto()"><code class="Value-Box">min-height: auto;</code> <div id="Min-Height-Auto"></div></div>
-            <div onclick="MinHeightMinContent()"><code class="Value-Box">min-height: min-content;</code><div id="Min-Height-Min-Content"></div></div>
-            <div onclick="MinHeightFitContent()"><code class="Value-Box">min-height: fit-content;</code><div id="Min-Height-Fit-Content"></div></div>
-            <div onclick="MinHeightMaxContent()"><code class="Value-Box">min-height: max-content;</code><div id="Min-Height-Max-Content"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Max-Height" class="Box-Property">
-          <p>The <code>max-height</code> property defines the maximum height of an element.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Max-Height" type="text" placeholder="Enter max-height value"> <button onclick="PropertyMaxHeight()">MODIFY</button>
-            <div onclick="MaxHeightGlobalValues()"><code class="Value-Box">max-height: <i>CSS Global Values</i>;</code><div id="Max-Height-Global-Values"></div></div>
-            <div onclick="MaxHeightLengthValues()"><code class="Value-Box">max-height: <i>CSS Length Values</i>;</code><div id="Max-Height-Length-Values"></div></div>
-            <div onclick="MaxHeightNone()"><code class="Value-Box">max-height: none;</code> <div id="Max-Height-None"></div></div>
-            <div onclick="MaxHeightMinContent()"><code class="Value-Box">max-height: min-content;</code><div id="Max-Height-Min-Content"></div></div>
-            <div onclick="MaxHeightFitContent()"><code class="Value-Box">max-height: fit-content;</code><div id="Max-Height-Fit-Content"></div></div>
-            <div onclick="MaxHeightMaxContent()"><code class="Value-Box">max-height: max-content;</code><div id="Max-Height-Max-Content"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Border-Width" class="Box-Property">
-          <p>The <code>border-width</code> property specifies the width of an element's borders.</p>
-          <p>There are some generic-side properties that can be written as its values: <br>
-             4 values &rarr; <code>border-width: border-top-width border-right-width border-bottom-width border-left-width;</code> <br>
-             3 values &rarr; <code>border-width: border-top-width border-<i>Horizontal</i>-width border-bottom-width;</code> <br>
-             2 values &rarr; <code>border-width: border-<i>Vertical</i>-width border-<em>Horizontal</em>-width;</code> <br>
-             1 value  &rarr; <code>border-width: border-<em>All</em>-width;</code>
-          </p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Border-Width" type="text" placeholder="Enter border-width value"> <button onclick="PropertyBorderWidth()">MODIFY</button>
-            <div onclick="BorderWidthGlobalValues()"><code class="Value-Box">border-width: <i>CSS Global Values</i>;</code><div id="Border-Width-Global-Values"></div></div>
-            <div onclick="BorderWidthLengthValues()"><code class="Value-Box">border-width: <i>CSS Length Values</i>;</code><div id="Border-Width-Length-Values"></div></div>
-            <div onclick="BorderWidthMedium()"><code class="Value-Box">border-width: medium;</code><div id="Border-Width-Medium"></div></div>
-            <div onclick="BorderWidthThin()"><code class="Value-Box">border-width: thin;</code><div id="Border-Width-Thin"></div></div>
-            <div onclick="BorderWidthThick()"><code class="Value-Box">border-width: thick;</code><div id="Border-Width-Thick"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Border-Style" class="Box-Property">
-          <p>The <code>border-style</code> property specifies the style of an element's borders.</p>
-          <p>There are some generic-side properties that can be written as its values: <br>
-             4 values &rarr; <code>border-style: border-top-style border-right-style border-bottom-style border-left-style;</code> <br>
-             3 values &rarr; <code>border-style: border-top-style border-<i>Horizontal</i>-style border-bottom-style;</code> <br>
-             2 values &rarr; <code>border-style: border-<i>Vertical</i>-style border-<i>Horizontal</i>-style;</code> <br>
-             1 value  &rarr; <code>border-style: border-<i>All</i>-style;</code>
-          </p>
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Border-Style" type="text" placeholder="Enter border-style value"> <button onclick="PropertyBorderStyle()">MODIFY</button>
-            <div onclick="BorderStyleGlobalValues()"><code class="Value-Box">border-style: <i>CSS Global Values</i>;</code><div id="Border-Style-Global-Values"></div></div>
-            <div onclick="BorderStyleNone()"><code class="Value-Box">border-style: none;</code><div id="Border-Style-None"></div></div>
-            <div onclick="BorderStyleSolid()"><code class="Value-Box">border-style: solid;</code><div id="Border-Style-Solid"></div></div>
-            <div onclick="BorderStyleDashed()"><code class="Value-Box">border-style: dashed;</code><div id="Border-Style-Dashed"></div></div>
-            <div onclick="BorderStyleDotted()"><code class="Value-Box">border-style: dotted;</code><div id="Border-Style-Dotted"></div></div>
-            <div onclick="BorderStyleDouble()"><code class="Value-Box">border-style: double;</code><div id="Border-Style-Double"></div></div>
-            <div onclick="BorderStyleHidden()"><code class="Value-Box">border-style: hidden;</code><div id="Border-Style-Hidden"></div></div>
-            <div onclick="BorderStyleGroove()"><code class="Value-Box">border-style: groove;</code><div id="Border-Style-Groove"></div></div>
-            <div onclick="BorderStyleInset()"><code class="Value-Box">border-style: inset;</code><div id="Border-Style-Inset"></div></div>
-            <div onclick="BorderStyleOutset()"><code class="Value-Box">border-style: outset;</code><div id="Border-Style-Outset"></div></div>
-            <div onclick="BorderStyleRidge()"><code class="Value-Box">border-style: ridge;</code><div id="Border-Style-Ridge"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Border-Color" class="Box-Property">
-          <p>The <code>border-color</code> property specifies the color of an element's borders.</p>
-          <p>There are some generic-side properties that can be written as its values: <br>
-             4 values &rarr; <code>border-color: border-top-color border-right-color border-bottom-color border-left-color;</code> <br>
-             3 values &rarr; <code>border-color: border-top-color border-<i>Horizontal</i>-color border-bottom-color;</code> <br>
-             2 values &rarr; <code>border-color: border-<i>Vertical</i>-color border-<i>Horizontal</i>-color;</code> <br>
-             1 value  &rarr; <code>border-color: border-<i>All</i>-color;</code>
-          </p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Border-Color" type="text" placeholder="Enter border-color value"> <button onclick="PropertyBorderColor()">MODIFY</button>
-            <div onclick="BorderColorGlobalValues()"><code class="Value-Box">border-color: <i>CSS Global Values</i>;</code><div id="Border-Color-Global-Values"></div></div>
-            <div onclick="BorderColorColorValues()"><code class="Value-Box">border-color: <i>CSS Color Values</i>;</code><div id="Border-Color-Color-Values"></div></div>
-            <div onclick="BorderColorCurrentColor()"><code class="Value-Box">border-color: currentColor;</code><div id="Border-Color-Current-Color"></div></div>
-            <div onclick="BorderColorTransparent()"><code class="Value-Box">border-color: transparent;</code><div id="Border-Color-Transparent"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Border-Radius" class="Box-Property">
-          <p>The <code>border-radius</code> property defines the radius of the element's corners.</p>
-          <p>There are some generic-side properties that can be written as its values: <br>
-             4 values &rarr; <code>border-radius: border-top-left-radius border-top-right-radius border-bottom-right-radius border-bottom-left-radius;</code> <br>
-             3 values &rarr; <code>border-radius: border-top-left-radius border-<i>Diagonal-Right-Left</i>-radius border-bottom-right-radius;</code> <br>
-             2 values &rarr; <code>border-radius: border-<i>Diagonal-Left-Right</i>-radius border-<i>Diagonal-Right-Left</i>-radius;</code> <br>
-             1 value &rarr; <code>border-radius: border-<i>All</i>-radius;</code>
-          </p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Border-Radius" type="text" placeholder="Enter border-radius value"> <button onclick="PropertyBorderRadius()">MODIFY</button>
-            <div onclick="BorderRadiusGlobalValues()"><code class="Value-Box">border-radius: <i>CSS Global Values</i>;</code><div id="Border-Radius-Global-Values"></div></div>
-            <div onclick="BorderRadiusLengthValues()"><code class="Value-Box">border-radius: <i>CSS Length Values</i>;</code><div id="Border-Radius-Length-Values"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Outline-Width" class="Box-Property">
-          <p>The <code>outline-width</code> property specifies the width of an outline, drawn around elements, outside the borders.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Outline-Width" type="text" placeholder="Enter outline-width value"> <button onclick="PropertyOutlineWidth()">MODIFY</button>
-            <div onclick="OutlineWidthGlobalValues()"><code class="Value-Box">outline-width: <i>CSS Global Values</i>;</code><div id="Outline-Width-Global-Values"></div></div>
-            <div onclick="OutlineWidthLengthValues()"><code class="Value-Box">outline-width: <i>CSS Length Values</i>;</code><div id="Outline-Width-Length-Values"></div></div>
-            <div onclick="OutlineWidthMedium()"><code class="Value-Box">outline-width: medium;</code><div id="Outline-Width-Medium"></div></div>
-            <div onclick="OutlineWidthThin()"><code class="Value-Box">outline-width: thin;</code><div id="Outline-Width-Thin"></div></div>
-            <div onclick="OutlineWidthThick()"><code class="Value-Box">outline-width: thick;</code><div id="Outline-Width-Thick"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Outline-Style" class="Box-Property">
-          <p>The <code>outline-style</code> property specifies the style of an outline, drawn around elements, outside the borders.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Outline-Style" type="text" placeholder="Enter outline-style value"> <button onclick="PropertyOutlineStyle()">MODIFY</button>
-            <div onclick="OutlineStyleGlobalValues()"><code class="Value-Box">outline-style: <i>CSS Global Values</i>;</code><div id="Outline-Style-Global-Values"></div></div>
-            <div onclick="OutlineStyleNone()"><code class="Value-Box">outline-style: none;</code><div id="Outline-Style-None"></div></div>
-            <div onclick="OutlineStyleSolid()"><code class="Value-Box">outline-style: solid;</code><div id="Outline-Style-Solid"></div></div>
-            <div onclick="OutlineStyleDashed()"><code class="Value-Box">outline-style: dashed;</code><div id="Outline-Style-Dashed"></div></div>
-            <div onclick="OutlineStyleDotted()"><code class="Value-Box">outline-style: dotted;</code><div id="Outline-Style-Dotted"></div></div>
-            <div onclick="OutlineStyleDouble()"><code class="Value-Box">outline-style: double;</code><div id="Outline-Style-Double"></div></div>
-            <div onclick="OutlineStyleHidden()"><code class="Value-Box">outline-style: hidden;</code><div id="Outline-Style-Hidden"></div></div>
-            <div onclick="OutlineStyleGroove()"><code class="Value-Box">outline-style: groove;</code><div id="Outline-Style-Groove"></div></div>
-            <div onclick="OutlineStyleInset()"><code class="Value-Box">outline-style: inset;</code><div id="Outline-Style-Inset"></div></div>
-            <div onclick="OutlineStyleOutset()"><code class="Value-Box">outline-style: outset;</code><div id="Outline-Style-Outset"></div></div>
-            <div onclick="OutlineStyleRidge()"><code class="Value-Box">outline-style: ridge;</code><div id="Outline-Style-Ridge"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Outline-Color" class="Box-Property">
-          <p>The <code>outline-color</code> property specifies the color of an outline, drawn around elements, outside the borders.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Outline-Color" type="text" placeholder="Enter outline-color value"> <button onclick="PropertyOutlineColor()">MODIFY</button>
-            <div onclick="OutlineColorGlobalValues()"><code class="Value-Box">outline-color: <i>CSS Global Values</i>;</code><div id="Outline-Color-Global-Values"></div></div>
-            <div onclick="OutlineColorColorValues()"><code class="Value-Box">outline-color: <i>CSS Color Values</i>;</code><div id="Outline-Color-Color-Values"></div></div>
-            <div onclick="OutlineColorCurrentColor()"><code class="Value-Box">outline-color: currentColor;</code><div id="Outline-Color-Current-Color"></div></div>
-            <div onclick="OutlineColorTransparent()"><code class="Value-Box">outline-color: transparent;</code><div id="Outline-Color-Transparent"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Outline-Offset" class="Box-Property">
-          <p>The <code>outline-offset</code> property adds space between the outline and the edge or border of an element.</p>
-
-          <div class="Related-Values">Related Value(s)
-            <input id="Input-Outline-Offset" type="text" placeholder="Enter outline-offset value"> <button onclick="PropertyOutlineOffset()">MODIFY</button>
-            <div onclick="OutlineOffsetGlobalValues()"><code class="Value-Box">outline-offset: <i>CSS Global Values</i>;</code><div id="Outline-Offset-Global-Values"></div></div>
-            <div onclick="OutlineOffsetLengthValues()"><code class="Value-Box">outline-offset: <i>CSS Length Values</i>;</code><div id="Outline-Offset-Length-Values"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Box-Sizing" class="Box-Property">
-          <p>The <code>box-sizing</code> property defines how the width and height of an element are calculated in box dimensions</p>
-          <p>The padding and border also may be included.</p>
-
-          <div class="Related-Values" >Related Value(s)
-            <input id="Input-Box-Sizing" type="text" placeholder="Enter box-sizing value"> <button onclick="PropertyBoxSizing()">MODIFY</button>
-            <div onclick="BoxSizingGlobalValues()"><code class="Value-Box">box-sizing: <i>CSS Global Values</i>;</code><div id="Box-Sizing-Global-Values"></div></div>
-            <div onclick="BoxSizingBorderBox()"><code class="Value-Box">box-sizing: border-box;</code><div id="Box-Sizing-Border-Box"></div></div>
-            <div onclick="BoxSizingContentBox()"><code class="Value-Box">box-sizing: content-box;</code><div id="Box-Sizing-Content-Box"></div></div>
-          </div>
-        </article>
-
-        <article id="Property-Box-Shadow" class="Box-Property">
-          <p>The <code>box-shadow</code> property specifies one or multiple shadows to an element.</p>
-          <code>box-shadow: <i>H-Offset V-Offset Blur-Radius Spread-Radius Color</i> inset;</code> <br>
-
-          <div><code><i>H-Offset</i></code>
-            <p>Required parameter which specifies the horizontal offset of the shadow.</p>
-            <p>A positive value puts the shadow on the right side of the box.</p>
-            <p>A negative value puts the shadow on the left side of the box</p>
-          </div>
-
-          <div><code><i>V-Offset</i></code>
-            <p>Required parameter which specifies the vertical offset of the shadow.</p>
-            <p>A positive value puts the shadow below the box.</p>
-            <p>A negative value puts the shadow above the box.</p>
-          </div>
-
-          <div><code><i>Blur-Radius</i></code>
-            <p>Optional parameter which specifies the blur radius of the shadow.</p>
-            <p>The higher the number, the more blurred the shadow will be.</p>
-          </div>
-
-          <div><code><i>Spread-Radius</i></code>
-            <p>Optional parameter which specifies the spread radius of the shadow.</p>
-            <p>A positive value increases the size of the spread radius shadow.</p>
-            <p>A negative value decreases the size of the spread radius shadow.</p>
-          </div>
-
-          <div><code><i>Color</i></code>
-            <p>Optional parameter which specifies the color of the shadow.</p>
-          </div>
-          
-          <div><code>inset</code>
-            <p>Optional value which changes the shadow from an outer shadow to an inner shadow.</p>
-          </div>
-
-          <div id="Related-Values" >Related Value(s)
-            <input id="Input-Box-Shadow" type="text" placeholder="Enter box-shadow value"> <button onclick="PropertyBoxShadow()">MODIFY</button>
-            <div onclick="BoxShadowGlobalValues()"><code class="Value-Box">box-shadow: <i>CSS Global Values</i>;</code><div id="Box-Shadow-Global-Values"></div></div>
-            <div onclick="BoxShadowLengthValues()"><code class="Value-Box">box-shadow: <i>CSS Length Values</i>;</code><div id="Box-Shadow-Length-Values"></div></div>
-            <div onclick="BoxShadowColorValues()"><code class="Value-Box">box-shadow: <i>CSS Color Values</i>;</code><div id="Box-Shadow-Color-Values"></div></div>
-            <div onclick="BoxShadowCurrentColor()"><code class="Value-Box">box-shadow: currentColor;</code><div id="Box-Shadow-Current-Color"></div></div>
-            <div onclick="BoxShadowTransparent()"><code class="Value-Box">box-shadow: transparent;</code><div id="Box-Shadow-Transparent"></div></div>
-            <div onclick="BoxShadowNone()"><code class="Value-Box">box-shadow: none;</code><div id="Box-Shadow-None"></div></div>
-          </div>
-        </article>
-
-        <article class="Box-Insights" onclick="InsightsBoxModel()"><b>INSIGHTS</b>
+      <!--------------------------------------------------------------------------- 
+      outline-width
+      outline-style
+      outline-color
+      outline-offset
+      box-sizing
+      <article class="Box-Insights" onclick="InsightsBoxModel()"><b>INSIGHTS</b>
             <div><code>width</code> vs. <code>min-width</code> vs. <code>max-width</code>
               <p><code>width</code> property overrides the original width of the element</p>
               <p><code>min-width</code> overrides <code>width</code> when <code>min-width &gt; width</code></p>
@@ -1062,11 +1033,8 @@
               <p>The <code>outline-color</code> is optional and when omitted, the outline color applied will be the color of the text</p>
             </div>
         </article>
-      </section>
-    </main>
 
-<section>
-<!-- ASPECT-RATIO
+ASPECT-RATIO
 <div id="Property-Aspect-Ratio" class="Box-Property">
   <div>The <code>aspect-ratio</code> property defines the ratio between width and height of an element</div>
 
@@ -1077,126 +1045,9 @@
     <div onclick="AspectRatioNumbers()"> <code class="Value-Box">aspect-ratio: <em>Numbers</em>;</code> <div id="Aspect-Ratio-Numbers"></div> </div>
     <div onclick="AspectRatioAuto()"> <code class="Value-Box">aspect-ratio: auto;</code> <div id="Aspect-Ratio-Auto"> </div> </div>
   </div>
-</div>  -->
-</section>
-
-<!------------------->
-<!-- CSS SELECTORS -->
-<!------------------->
-<section id="CSS-Selectors" class="Box-Contents">
-<h1>CSS SELECTORS</h1>
-  
-<!-- SIMPLE SELECTORS -->
-<div id="Simple-Selectors" class="Sub-Topics">
-  <h3>SIMPLE SELECTORS</h3>
-  <div onclick="ElementSelectors()"> <span class="Highlighted">Element Selectors</span> <div id="Element-Selectors"></div> </div>
-  <div onclick="IdSelectors()"> <span class="Highlighted">Id Selectors (<code>#</code>)</span> <div id="Id-Selectors"></div> </div>
-  <div onclick="ClassSelectors()"> <span class="Highlighted">Class Selectors (<code>.</code>)</span> <div id="Class-Selectors"></div> </div>
-  <div onclick="GroupSelectors()"> <span class="Highlighted">Group Selectors (<code>,</code>)</span> <div id="Group-Selectors"></div> </div>
-  <div onclick="UniversalSelector()"> <span class="Highlighted">Universal Selector (<code>*</code>)</span> <div id="Universal-Selector"></div> </div>
-</div>
-
-<!-- COMBINATOR SELECTORS -->
-<div id="Combinator-Selectors" class="Sub-Topics">
-  <h3>COMBINATOR SELECTORS</h3>
-  <div onclick="DescendantCombinator()"> <span class="Highlighted">Descendant Combinator (<code><em>space</em></code>)</span> <div id="Descendant-Combinator"></div> </div>
-  <div onclick="ChildCombinator()"> <span class="Highlighted">Child Combinator (<code>></code>)</span> <div id="Child-Combinator"></div> </div>
-  <div onclick="NextSiblingCombinator()"> <span class="Highlighted">Next Sibling Combinator (<code>+</code>)</span> <div id="Next-Sibling-Combinator"></div> </div>
-  <div onclick="SubsequentSiblingCombinator()"> <span class="Highlighted">Subsequent-Sibling Combinator (<code>~</code>)</span> <div id="Subsequent-Sibling-Combinator"></div> </div>
-</div>
-
-<!-- ATTRIBUTE SELECTORS -->
-<div id="Attribute-Selectors" class="Sub-Topics">
-  <h3>ATTRIBUTE SELECTORS</h3>
-  <div onclick="AttributeSelector1()"><code class="Highlighted"><em>Selector</em>[<em>Attribute</em>]</code> <div id="Attribute-Selector1"></div> </div>
-  <div onclick="AttributeSelector2()"><code class="Highlighted"><em>Selector</em>[<em>Attribute</em> = "<em>Value</em>"]</code> <div id="Attribute-Selector2"></div> </div>
-  <div onclick="AttributeSelector3()"><code class="Highlighted"><em>Selector</em>[<em>Attribute</em> ~= "<em>Value</em>"]</code> <div id="Attribute-Selector3"></div> </div>
-  <div onclick="AttributeSelector4()"><code class="Highlighted"><em>Selector</em>[<em>Attribute</em> |= "<em>Value</em>"]</code> <div id="Attribute-Selector4"></div> </div>
-  <div onclick="AttributeSelector5()"><code class="Highlighted"><em>Selector</em>[<em>Attribute</em> ^= "<em>Value</em>"]</code> <div id="Attribute-Selector5"></div> </div>
-  <div onclick="AttributeSelector6()"><code class="Highlighted"><em>Selector</em>[<em>Attribute</em> $= "<em>Value</em>"]</code> <div id="Attribute-Selector6"></div> </div>
-  <div onclick="AttributeSelector7()"><code class="Highlighted"><em>Selector</em>[<em>Attribute</em> *= "<em>Value</em>"]</code> <div id="Attribute-Selector7"></div> </div>
-</div>
-
-<!-- PSEUDO-CLASS SELECTORS
-<div id="Pseudo-Class-Selectors" class="Sub-Topics">
-  <h3>PSEUDO-CLASS SELECTORS</h3>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:active</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:any-link</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:auto-fill</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:checked</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:default</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:defined</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:dir()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:disabled</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:empty</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:enabled</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:first</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:first-child</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:first-of-type</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:focus</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:focus-visible</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:focus-within</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:fullscreen</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:has()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:hover</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:in-range</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:indeterminate</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:invalid</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:is()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:lang()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:last-child</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:last-of-type</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:left</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:link</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:modal</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:not()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:nth-child()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:nth-last-child()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:nth-last-of-type()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:nth-of-type()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:only-child</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:only-of-type</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:optional</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:out-of-range</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:placeholder-shown</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:popover-open</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:read-only</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:read-write</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:required</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:right</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:root</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:scope</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:state()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:target</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:user-invalid</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:user-valid</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:valid</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:visited</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>:where()</code> <div id=""></div> </div>
-</div>  -->
-
-<!-- PSEUDO-ELEMENT SELECTORS
-<div id="Pseudo-Element-Selectors" class="Sub-Topics">
-  <h3>PSEUDO-ELEMENT SELECTORS</h3>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::after</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::backdrop</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::before</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::file-selector-button</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::first-letter</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::first-line</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::grammar-error</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::highlight()</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::marker</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::placeholder</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::selection</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::spelling-error</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-group</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-image-pair</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-new</code> <div id=""></div> </div>
-  <div onclick=""><code class="Highlighted"><em>Selector</em>::view-transition-old</code> <div id=""></div> </div>
-</div>  -->
-</section>
+</div
+      --------------------------------------------------------------------------->
+    </main>
 
 <!-------------------->
 <!-- CSS BOX LAYOUT -->
