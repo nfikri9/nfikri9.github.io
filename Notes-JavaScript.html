@@ -1,397 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Browser Tab -->
+    <title>JAVASCRIPT</title>
+    <link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
 
-<head>
-<!-- BROWSER TAB -->
-<title>JAVASCRIPT</title>
-<link rel="icon" type="image/x-icon" href="Logo-NF.jpg">
+    <!-- Metadata -->
+    <meta name="author" content="Nabil Fikri">
+    <meta name="description" content="JS page, which includes notes that has been applied or covered.">
+    <meta name="keywords" content="HTML5, CSS3, JS ES6, JS ES6 Notes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Notes-JavaScript.css">
 
-<!-- OTHERS -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="Notes-JavaScript.css">
-</head>
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="IT Library - JS ES6 Notes">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Logo-NF.jpg">
+    <meta property="og:url" content="nfikri9.github.io/">
+  </head>
 
-<body>
-<!------------------>
-<!-- NAVIGATE BAR -->
-<!------------------>
-<nav class="My-Navigate-Bar">
-  <a href="index.html"><img id="Logo-Brand" class="test" src="Logo-NF.jpg" alt="Brand Logo"></a>
-  <div>
-    <a href="Notes-HTML.html">HTML</a>
-    <a href="Notes-CSS.html">CSS</a>
-    <a href="Notes-JavaScript.html">JAVASCRIPT</a>
-    <a href="Notes-Bootstrap.html">BOOTSTRAP</a>
-    <a href="Notes-JQuery.html">JQUERY</a>
-    <a href="Notes-SASS.html">SASS</a>
-    <a href="Notes-React.html">REACT</a>
-    <a href="Notes-Redux.html">REDUX</a>
-    <a href="Notes-Git.html">GIT</a>
-  </div>
-</nav>
+  <body>
+    <!--------------------------------------------------------------------------- NAVIGATE BAR ---------------------------------------------------------------------------->
+    <header>
+      <nav class="My-Navigate-Bar">
+        <a href="index.html"><img id="Logo-Brand" src="Logo-NF.jpg" alt="Brand Logo"></a>
+        <div>
+          <a href="Notes-HTML.html">HTML</a>
+          <a href="Notes-CSS.html">CSS</a>
+          <a href="Notes-JavaScript.html">JAVASCRIPT</a>
+        </div>
+      </nav>
+    </header>
 
-<!---------------------->
-<!-- TOPIC SELECTIONS -->
-<!---------------------->
-<div id="Box-Topic-Selections">
-  <button onclick="JavaScriptIntroduction()">INTRODUCTION</button>
-  <button onclick="JavaScriptStatements()">STATEMENTS</button>
-  <button onclick="JavaScriptDataTypes()">DATA TYPES</button>
-  <button onclick="JavaScriptOperators()">OPERATORS</button>
-  <button onclick="rawnotes()">RAW NOTES</button>
-</div>
+    <main>
+      <!------------------------------------------------------------------------- TOPIC SELECTIONS -------------------------------------------------------------------------->
+      <section id="Box-Topic-Selections">
+        <button onclick="JavaScriptIntroduction()">INTRODUCTION</button>
+        <button onclick="JavaScriptStatements()">STATEMENTS</button>
+      </section>
 
-<!----------------------------->
-<!-- JAVASCRIPT INTRODUCTION -->
-<!----------------------------->
-<section id="JavaScript-Introduction" class="Box-Contents">
-<h1>INTRODUCTION</h1>
+      <!---------------------------------------------------------------------- JAVASCRIPT INTRODUCTION ---------------------------------------------------------------------->
+      <section id="JavaScript-Introduction" class="Box-Contents">
+        <header>
+          <h2>INTRODUCTION</h2>
+          <p>JavaScript is the programming language of the web.</p>
+        </header>
+      </section>
 
-<div class="Sub-Topics"> <h3>What is JavaScript?</h3>
-  <div>JavaScript is the programming language of the Web</div>
-</div>
-</section>
+      <!------------------------------------------------------------------------- IMPORTING JS FILE ------------------------------------------------------------------------->
+      <script src="Notes-JavaScript.js"></script>
+    </main>
 
-<!--------------------------->
-<!-- JAVASCRIPT STATEMENTS -->
-<!--------------------------->
-<section id="JavaScript-Statements" class="Box-Contents">
-<h1>STATEMENTS</h1>
-
-<div class="Sub-Topics">
-  <div>All JavaScript variables must be identified with unique names</div>
-  <div>These unique names are called identifiers</div>
-  <div>Identifiers can be short names (<code>x, y, z</code>) or more descriptive names (<code>age, sum, totalVolume</code>)</div>
-  <div>
-    <div>Names can contain letters, digits, underscores, and dollar signs (<code>$my_Identifier1</code>)</div>
-    <div>Names must begin with a letter, begin with numbers are invalid (<code>myIdentifier1</code>)</div>
-    <div>Names can also begin with $ and _ (<code>$myIdentifier, _myIdentifier</code>)</div>
-    <div>Names are case sensitive (<code>myIdentifier &ne; myidentifier</code>)</div>
-    <div>Reserved words cannot be used as names (<code>var, let, const, new</code> are invalid identifiers)</div>
-  </div>
-</div>
-
-<div class="Sub-Topics">
-  <h3>Automatically</h3>
-  <div>Any undeclared identifiers, they are automatically declared when first used</div>
-  <div><code><em>x</em> = 5;                       // <em>x</em> stores value 5</code></div>
-  <div><code><em>y</em> = 10;                      // <em>y</em> stores value 10</code></div>
-  <div><code><em>z</em> = <em>x</em> + <em>y</em>; // <em>z</em> performs addition of 5 and 10, stores value 15</code></div>
-  <div>Best practice to always declare identifiers before use</div>
-</div>
-
-<div class="Sub-Topics">
-  <h3><code>var <em>myIdentifier</em></code></h3>
-  <div><code>// Hoisted Identifiers</code></div>
-  <div><code><em>x</em> = 1;     // Identifier <em>x</em> stores value 1</code></div>
-  <div><code>var <em>x</em> = 2; // Identifier <em>x</em> is initialized with var keyword, stores new value 2</code></div>
-  <br>
-  <div><code>// Re-initialized Identifiers</code></div>
-  <div><code>var <em>x</em> = 1; // Identifier <em>x</em> is initialized with var keyword, stores value 1</code></div>
-  <div><code>var <em>x</em> = 2; // Identifier <em>x</em> is re-initialized with var keyword, stores new value 2</code></div>
-  <br>
-  <div><code>// Arithmetic Operations</code></div>
-  <div><code>var <em>x</em> = 1; // Identifier <em>x</em> is initialized with var keyword, stores value 1</code></div>
-  <div><code><em>x</em> += 2;    // Identifier <em>x</em> performs addition of 1 and 2, stores new value 3</code></div>
-  <br>
-  <div><code>// Global Scope</code></div>
-  <div><code>var <em>x</em> = 1;      // Identifier <em>x</em> is initialized with var keyword outside the block scope, stores value 1</code></div>
-  <div><code>{ var <em>x</em> = 2; }  // Identifier <em>x</em> is initialized with var keyword within the block scope, stores value 2</code></div>
-  <div><code>console.log(<em>x</em>); // Identifier <em>x</em> is 2, since the var keyword is a global scope</code></div>
-</div>
-
-<div class="Sub-Topics">
-  <h3><code>let <em>myIdentifier</em></code></h3>
-  <div><code>// Hoisted Identifiers</code></div>
-  <div><code><em>x</em> = 1;     // Identifier <em>x</em> stores value 1</code></div>
-  <div><code>let <em>x</em> = 2; // ReferenceError: Cannot access '<em>x</em>' before initialization</code></div>
-  <br>
-  <div><code>// Re-initialized Identifiers</code></div>
-  <div><code>let <em>x</em> = 1; // Identifier <em>x</em> is initialized with let keyword, stores value 1</code></div>
-  <div><code>let <em>x</em> = 2; // SyntaxError: Identifier '<em>x</em>' has already been declared</code></div>
-  <br>
-  <div><code>// Arithmetic Operations</code></div>
-  <div><code>let <em>x</em> = 1; // Identifier <em>x</em> is initialized with let keyword, stores value 1</code></div>
-  <div><code><em>x</em> += 2;    // Identifier <em>x</em> performs addition of 1 and 2, stores new value 3</code></div>
-  <br>
-  <div><code>// Block Scope</code></div>
-  <div><code>let <em>x</em> = 1;      // Identifier <em>x</em> is initialized with let keyword outside the block scope, stores value 1</code></div>
-  <div><code>{ let <em>x</em> = 2; }  // Identifier <em>x</em> is initialized with let keyword within the block scope, stores value 2</code></div>
-  <div><code>console.log(<em>x</em>); // Identifier <em>x</em> is 1, since the let keyword is a block scope</code></div>
-</div>
-
-<div class="Sub-Topics">
-  <h3><code>const <em>myIdentifier</em></code></h3>
-  <div><code>// Hoisted Identifiers</code></div>
-  <div><code><em>x</em> = 1;       // Identifier <em>x</em> stores value 1</code></div>
-  <div><code>const <em>x</em> = 2; // ReferenceError: Cannot access '<em>x</em>' before initialization</code></div>
-  <br>
-  <div><code>// Re-initialized Identifiers</code></div>
-  <div><code>const <em>x</em> = 1; // Identifier <em>x</em> is initialized with const keyword, stores value 1</code></div>
-  <div><code>const <em>x</em> = 2; // SyntaxError: Identifier '<em>x</em>' has already been declared</code></div>
-  <br>
-  <div><code>// Arithmetic Operations</code></div>
-  <div><code>const <em>x</em> = 1; // Identifier <em>x</em> is initialized with const keyword, stores value 1</code></div>
-  <div><code><em>x</em> += 2;      // TypeError: Assignment to constant variable</code></div>
-  <br>
-  <div><code>// Block Scope</code></div>
-  <div><code>const <em>x</em> = 1;     // Identifier <em>x</em> is initialized with const keyword outside the block scope, stores value 1</code></div>
-  <div><code>{ const <em>x</em> = 2; } // Identifier <em>x</em> is initialized with const keyword within the block scope, stores value 2</code></div>
-  <div><code>console.log(<em>x</em>);  // Identifier <em>x</em> is 1, since the const keyword is a block scope</code></div>
-</div>
-
-<div class="Sub-Topics">
-  <h3><code>function <em>myIdentifier</em></code></h3>
-  <div><code>function <em>myFunction</em>(<em>myArgument<sub>n</sub></em>) {</code></div>
-  <div><code>return null;</code></div>
-  <div><code>}</code></div>
-</div>
-</section>
-
-<!--------------------------->
-<!-- JAVASCRIPT DATA TYPES -->
-<!--------------------------->
-<section id="JavaScript-Data-Types" class="Box-Contents">
-<h1>DATA TYPES</h1>
-
-<div class="Sub-Topics">
-  <div>There are 2 categories of JavaScript data types; Primitive Value and Reference Value</div>
-  <div>Primitive values are data that are stored directly in an identifier (includes numbers, strings, booleans, <code>null</code>, <code>undefined</code>)</div>
-  <div>Reference values are objects that are stored in memory and accessed through a reference (includes arrays, objects, functions)</div>
-</div>
-
-<div class="Sub-Topics">
-  <h3 onclick="DataTypeNumber()"> <span class="Highlighted">Number</span> </h3>
-  <div id="Data-Type-Number" class="Sub-Contents">
-    <div>JavaScript Numbers are primitive values for storing number that can be written with or without decimals</div>
-    <div>JavaScript Numbers can also be written with scientific notation (exponent) for large/extra small numbers</div>
-    <div>Certain calculation will produce keywords like <code>NaN</code> (Not A Number), <code>Infinity</code> (positive infinity), <code>-Infinity</code> (negative infinity)</div>
-
-    <div class="Sub-Topics"> <span class="Topics">64-bit Floating Point</span>
-      <div>JavaScript Numbers does not define different types of numbers, like integers, short, long, floating-point, etc.</div>
-      <div>JavaScript Numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard</div>
-      <div>This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63</div>
-    </div>
-
-    <div class="Sub-Topics"> <span class="Topics">Integer Precision</span>
-      <div>Integers (numbers without a period or exponent notation) are accurate up to 15 digits</div>
-      <div>If the number exceed more than 20 digits, the numbers will be displayed as exponent </div>
-      <div><code>let myNumber1 = 999999999999999;       // myNumber1 = 999999999999999 (accurate up to 15 digits) </code></div>
-      <div><code>let myNumber2 = 9999999999999999;      // myNumber2 = 1000000000000000 (rounded up when exceed more than 15 digits)</code></div>
-      <div><code>let myNumber3 = 999999999999999999999; // myNumber3 = 1e+21 (rounded up when exceed more than 20 digits)</code></div>
-    </div>
-
-    <div class="Sub-Topics"> <span class="Topics">Decimal Point Precision</span>
-      <div>The maximum number of decimals are accurate up to 16 decimal points</div>
-      <div>The decimal will be rounded up when the last digit is <code>&ge;7</code></div>
-      <div>The decimal will be rounded down when the last digit is <code>&le;6</code></div>
-      <div><code>let myNumber1 = 0.9999999999999991;  // myNumber1 = 0.9999999999999991 (accurate up to 16 decimal points)</code></div>
-      <div><code>let myNumber2 = 0.99999999999999916; // myNumber2 = 0.9999999999999991 (rounded down when exceed more than 16)</code></div>
-      <div><code>let myNumber3 = 0.99999999999999917; // myNumber3 = 0.9999999999999992 (rounded up when exceed more than 16)</code></div>
-    </div>
-
-    <div class="Sub-Topics"> <span class="Topics">Base Number</span>
-      <div>By default, JavaScript displays numbers as base 10 decimals</div>
-      <div>If the numeric constants are preceded by <code>0x</code>, JavaScript inteprets it as a hexadecimal number</div>
-      <div>The hexadecimal numbers are NOT case sensitive</div>
-      <div><code>let myNumber1 = 0xff; // myNumber1 = 255</code></div>
-      <div><code>let myNumber2 = 0x1E; // myNumber2 = 30</code></div>
-    </div>
-
-    <div class="Sub-Topics"> <span class="Topics">JavaScript Number Methods & Properties</span>
-      <div><code onclick="ConstructorNumber()">constructor</code> <div id="Constructor-Number"></div> </div>
-      <div><code onclick="EpsilonProperty()">EPSILON</code> <div id="Epsilon-Property"></div> </div>
-      <div><code onclick="IsFiniteMethod()">isFinite()</code> <div id="IsFinite-Method"></div> </div>
-
-      <div id="test"></div> <script> let x = Number.EPSILON; document.getElementById("test").innerText = x;</script>
-      
-      <div><code onclick="IsintegerNumber()">isInteger()</code> <div id="Isinteger-Number"></div> </div>
-      <div><code onclick="IsnanNumber()">isNaN()</code> <div id="Isnan-Number"></div> </div>
-      <div><code onclick="IssafeintegerNumber()">isSafeInteger()</code> <div id="Issafeinteger-Number"></div> </div>
-      <div><code onclick="MaxsafeintegerNumber()">MAX_SAFE_INTEGER</code> <div id="Maxsafeinteger-Number"></div> </div>
-      <div><code onclick="MinsafeintegerNumber()">MIN_SAFE_INTEGER</code> <div id="Minsafeinteger-Number"></div> </div>
-      <div><code onclick="MaxvalueNumber()">MAX_VALUE</code> <div id="Maxvalue-Number"></div> </div>
-      <div><code onclick="MinvalueNumber()">MIN_VALUE</code> <div id="Minvalue-Number"></div> </div>
-      <div><code onclick="NanNumber()">NaN</code> <div id="Nan-Number"></div> </div>
-      <div><code onclick="NegativeinfinityNumber()">NEGATIVE_INFINITY</code> <div id="Negativeinfinity-Number"></div> </div>
-      <div><code onclick="PositiveinfinityNumber()">POSITIVE_INFINITY</code> <div id="Positiveinfinity-Number"></div> </div>
-      <div><code onclick="ParsefloatNumber()">parseFloat()</code> <div id="Parsefloat-Number"></div> </div>
-      <div><code onclick="ParseintNumber()">parseInt()</code> <div id="Parseint-Number"></div> </div>
-      <div><code onclick="PrototypeNumber()">prototype</code> <div id="Prototype-Number"></div> </div>
-      <div><code onclick="ToexponentialNumber()">toExponential(x)</code> <div id="Toexponential-Number"></div> </div>
-      <div><code onclick="TofixedNumber()">toFixed(x)</code> <div id="Tofixed-Number"></div> </div>
-      <div><code onclick="TolocalestringNumber()">toLocaleString()</code> <div id="Tolocalestring-Number"></div> </div>
-      <div><code onclick="ToprecisionNumber()">toPrecision(x)</code> <div id="Toprecision-Number"></div> </div>
-      <div><code onclick="TostringNumber()">toString()</code> <div id="Tostring-Number"></div> </div>
-      <div><code onclick="ValueofNumber()">valueOf()</code> <div id="Valueof-Number"></div> </div>
-    </div>
-  </div>
-</div>
-
-<div class="Sub-Topics">
-  <h3 onclick="DataTypeString()"> <span class="Highlighted">String</span> </h3>
-  <div id="Data-Type-String" class="Sub-Contents">
-    <div>JavaScript Strings are primitive values for storing text that can be written with either single quote or double quotes in single-line string</div>
-    <div><code>let myString1 = 'Hello World!';   // The string is written in single quote</code></div>
-    <div><code>let myString2 = "Hello World!";   // The string is written in double quotes</code></div>
-    <div><code>let myString3 = "";               // Empty string</code></div>
-
-    <div class="Sub-Topics"> <span class="Topics">Quotes inside string</span>
-      <div>Quotes can be used inside a string, as long as they don't match the quotes surrounding the string</div>
-      <div><code>let myString1 = "You're welcome"; // Valid string (The usage of single quote does not affect the structure of string)</code></div>
-      <div><code>let myString2 = "You"re welcome"; // Invalid string (The usage of double quotes does affect the structure of string)</code></div>
-    </div>
-
-    <div class="Sub-Topics"> <span class="Topics">Escape Characters</span>
-      <div>The backslash escape character (\) turns special characters into string characters</div>
-      <div>The characters like <code>\b, \f , \n, \r, \t, \v</code> were originally designed to control typewriters, teletypes, and fax machines (They do not make any sense in HTML)</div>
-      <div><code>let myString1 = "You\'re welcome"; // myString1 = You're welcome (display single quote)</code></div>
-      <div><code>let myString2 = "You\"re welcome"; // myString2 = You"re welcome (display double quotes)</code></div>
-      <div><code>let myString3 = "Format directory is C:\\documents\\CatPhoto.jpg"; // myString3 = C:\documents\CatPhoto.jpg (display backslash)</code></div>
-      <div><code>let myString4 = "Example1 \b Example2"; // The (\b) characters represent backspace</code></div>
-      <div><code>let myString5 = "Example1 \f Example2"; // The (\f) characters represent form feed</code></div>
-      <div><code>let myString6 = "Example1 \n Example2"; // The (\n) characters represent new line</code></div>
-      <div><code>let myString7 = "Example1 \r Example2"; // The (\r) characters represent carriage return</code></div>
-      <div><code>let myString8 = "Example1 \t Example2"; // The (\t) characters represent horizontal tabulator</code></div>
-      <div><code>let myString9 = "Example1 \v Example2"; // The (\v) characters represent vertical tabulator</code></div>
-    </div>
-
-    <div class="Sub-Topics"> <span class="Topics">Template String</span>
-      <div>Templates are strings enclosed in backticks</div>
-      <div>Templates allow single and double quotes inside a string</div>
-      <div>Templates allow multiline strings</div>
-      <div><code>let myString1 = `Arthur's great sword is called "Excalibur"`; // The string is written in backticks</code></div>
-    </div>
-
-    <div class="Sub-Topics"> <span class="Topics">JavaScript String Methods & Properties</span>
-      <div><span><code onclick="AtMethod()">at(<em>i</em>)</code></span> <div id="At-Method"></div> </div>
-      <div><span><code onclick="CharAtMethod()">charAt(<em>i</em>)</code></span> <div id="CharAt-Method"></div></div>
-      <div><span><code onclick="CharCodeAtMethod()">charCodeAt(<em>i</em>)</code></span> <div id="CharCodeAt-Method"></div> </div>
-      <div><span><code onclick="CodePointAtMethod()">codePointAt(<em>i</em>)</code></span> <div id="CodePointAt-Method"></div> </div>
-      <div><span><code onclick="ConcatMethod()">concat(<em>string<sub>n</sub></em>)</code></span> <div id="Concat-Method"></div> </div>
-      <div><span><code onclick="ConstructorString()">constructor</code></span> <div id="Constructor-String"></div> </div>
-      <div><span><code onclick="EndsWithMethod()">endsWith("<em>string</em>", <em>n</em>)</code></span> <div id="EndsWith-Method"></div> </div>
-      <div><span><code onclick="FromCharCodeMethod()">fromCharCode(<em>code<sub>n</sub></em>)</code></span> <div id="FromCharCode-Method"></div> </div>
-      <div><span><code onclick="IncludesMethod()">includes("<em>string</em>")</code></span> <div id="Includes-Method"></div> </div>
-      <div><span><code onclick="IndexOfMethod()">indexOf("<em>string</em>")</code></span> <div id="IndexOf-Method"></div> </div>
-      <div><span><code onclick="LastIndexOfMethod()">lastIndexOf("<em>string</em>")</code></span> <div id="LastIndexOf-Method"></div> </div>
-      <div><span><code onclick="LengthProperty()">length</code></span> <div id="Length-Property"></div> </div>
-      <div><span><code onclick="LocaleCompareMethod()">localeCompare("<em>string</em>")</code></span> <div id="LocaleCompare-Method"></div> </div>
-      <div><span><code onclick="MatchMethod()">match(<em>regex</em>)</code></span> <div id="Match-Method"></div> </div>
-      <div><span><code onclick="PadEndMethod()">padEnd(<em>n, "string"</em>)</code></span> <div id="PadEnd-Method"></div> </div>
-      <div><span><code onclick="PadStartMethod()">padStart(<em>n, "string"</em>)</code></span> <div id="PadStart-Method"></div> </div>
-      <div><span><code onclick="PrototypeProperty()">prototype</code></span> <div id="Prototype-Property"></div> </div>
-      <div><span><code onclick="RepeatMethod()">repeat(<em>n</em>)</code></span> <div id="Repeat-Method"></div> </div>
-      <div><span><code onclick="ReplaceMethod()">replace(<em>regex</em>)</code></span> <div id="Replace-Method"></div> </div>
-      <div><span><code onclick="ReplaceAllMethod()">replaceAll("<em>string</em>", "<em>string<sub>new</sub></em>")</code></span> <div id="ReplaceAll-Method"></div> </div>
-      <div><span><code onclick="SearchMethod()">search(<em>regex</em>)</code></span> <div id="Search-Method"></div> </div>
-      <div><span><code onclick="SliceMethod()">slice(<em>i, n</em>)</code></span> <div id="Slice-Method"></div> </div>
-      <div><span><code onclick="SplitMethod()">split(<em>"string", n</em>)</code></span> <div id="Split-Method"></div> </div>
-      <div><span><code onclick="StartsWithMethod()">startsWith("<em>string</em>")</code></span> <div id="StartsWith-Method"></div> </div>
-      <div><span><code onclick="SubstrMethod()">substr(<em>i, n</em>)</code></span> <div id="Substr-Method"></div> </div>
-      <div><span><code onclick="SubstringMethod()">substring(<em>i, n</em>)</code></span> <div id="Substring-Method"></div> </div>
-      <div><span><code onclick="ToLocaleLowerCaseMethod()">toLocaleLowerCase()</code></span> <div id="ToLocaleLowercase-Method"></div> </div>
-      <div><span><code onclick="ToLocaleUpperCaseMethod()">toLocaleUpperCase()</code></span> <div id="ToLocaleUpperCase-Method"></div> </div>
-      <div><span><code onclick="ToLowerCaseMethod()">toLowerCase()</code></span> <div id="ToLowerCase-Method"></div> </div>
-      <div><span><code onclick="ToStringMethod()">toString()</code></span> <div id="ToString-Method"></div> </div>
-      <div><span><code onclick="ToUpperCaseMethod()">toUpperCase()</code></span> <div id="ToUpperCase-Method"></div> </div>
-      <div><span><code onclick="TrimMethod()">trim()</code></span> <div id="Trim-Method"></div> </div>
-      <div><span><code onclick="TrimEndMethod()">trimEnd()</code></span> <div id="TrimEnd-Method"></div> </div>
-      <div><span><code onclick="TrimStartMethod()">trimStart()</code></span> <div id="TrimStart-Method"></div> </div>
-      <div><span><code onclick="ValueOfMethod()">valueOf()</code></span> <div id="ValueOf-Method"></div> </div>
-    </div>
-  </div>
-</div>
-
-<div class="Sub-Topics">
-  <h3 onclick="DataTypeBoolean()"> <span class="Highlighted">Boolean</span> </h3>
-  <div id="Data-Type-Boolean" class="Sub-Contents">
-    <div>JavaScript Boolean</div>
-  </div>
-</div>
-
-<div class="Sub-Topics">
-  <h3 onclick="DataTypeNull()"> <span class="Highlighted">Null</span> </h3>
-  <div id="Data-Type-Null" class="Sub-Contents">
-    <div>JavaScript Null (Datatype for <code>null</code> is object)</div>
-  </div>
-</div>
-
-<div class="Sub-Topics">
-  <h3 onclick="DataTypeUndefined()"> <span class="Highlighted">Undefined</span> </h3>
-  <div id="Data-Type-Undefined" class="Sub-Contents">
-    <div>JavaScript Undefined</div>
-  </div>
-</div>
-
-<div class="Sub-Topics">
-  <h3 onclick="DataTypeArray()"> <span class="Highlighted">Array</span> </h3>
-  <div id="Data-Type-Array" class="Sub-Contents">
-    <div>JavaScript Array</div>
-  </div>
-</div>
-
-<div class="Sub-Topics">
-  <h3 onclick="DataTypeObject()"> <span class="Highlighted">Object</span> </h3>
-  <div id="Data-Type-Object" class="Sub-Contents">
-    <div>JavaScript Object</div>
-  </div>
-</div>
-</section>
-
-<!-------------------------->
-<!-- JAVASCRIPT OPERATORS -->
-<!-------------------------->
-<section id="JavaScript-Operators" class="Box-Contents">
-<h1>OPERATORS</h1>
-
-<div class="Sub-Topics">
-  <h3>Arithmetic Operators</h3>
-  <div>Arithmetic operators perform arithmetic on numbers with either literals or identifiers</div>
-  <div>There are some cases where data types other than number can performs this operation as well</div>
-
-  <div class="Sub-Topics">
-    <div><code>let number1  = 4;       // The datatype is number</code></div>
-    <div><code>let number2  = 10;      // The datatype is number</code></div>
-    <div><code>let string1  = "Hello"; // The datatype is string</code></div>
-    <div><code>let string2  = "World"; // The datatype is string</code></div>
-    <div><code>let boolean1 = true;    // The datatype is boolean</code></div>
-    <div><code>let boolean2 = false;   // The datatype is boolean</code></div>
-  </div>
-  
-  <div><span class="Highlighted" onclick="Addition()">Addition (<code>+</code>)</span> <div id="Arithmetic-Addition"></div> </div>
-  <div><span class="Highlighted" onclick="Subtraction()">Subtraction (<code>-</code>)</span> <div id="Arithmetic-Subtraction"></div></div>
-  <div><span class="Highlighted" onclick="Multiplication()">Multiplication (<code>*</code>)</span> <div id="Arithmetic-Multiplication"></div></div>
-  <div><span class="Highlighted" onclick="Exponentiation()">Exponentiation (<code>**</code>)</span> <div id="Arithmetic-Exponentiation"></div></div>
-  <div><span class="Highlighted" onclick="Division()">Division (<code>/</code>)</span> <div id="Arithmetic-Division"></div></div>
-  <div><span class="Highlighted" onclick="Modulus()">Modulus (<code>%</code>)</span> <div id="Arithmetic-Modulus"></div></div>
-  <div><span class="Highlighted" onclick="Increment()">Increment (<code>++</code>)</span> <div id="Arithmetic-Increment"></div></div>
-  <div><span class="Highlighted" onclick="Decrement()">Decrement (<code>--</code>)</span> <div id="Arithmetic-Decrement"></div></div>
-</div>
-</section>
-
-<!-------------------------->
-<!-------------------------->
-<!-- JAVASCRIPT OPERATORS -->
-<section id="rawnotes" class="Box-Contents">
-<h1>RAW NOTES</h1>
-
-<h3><code><em>myIdentifier</em>.toString()</code></h3>
-<div>The <code>toString()</code> method returns any value as a string</div>
-<div>The <code>toString()</code> method does not change the original value</div>
-
-<div><code>let <em>myValue1</em> = 100;</code></div>
-<div><code>let <em>myValue2</em> = "Hello";</code></div>
-<div><code>let <em>myValue3</em> = true;</code></div>
-
-<div><code>console.log(typeof myValue1); // Number</code></div>
-<div><code>console.log(typeof myValue2); // String</code></div>
-<div><code>console.log(typeof myValue3); // Boolean</code></div>
-
-</section>
-
-<!-- IMPORTING JS FILE -->
-<script src="Notes-JavaScript.js"></script>
-</body>
+  </body>
 </html>

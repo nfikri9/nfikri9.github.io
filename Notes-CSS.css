@@ -1,4 +1,4 @@
-/************************************************************ GLOBAL ************************************************************/
+/******************************************************************************** GLOBAL ********************************************************************************/
 :root {
   --Main-Theme: #6c757d;
   --Sub-Theme : #f8f9fa;
@@ -15,7 +15,7 @@ h1, h2 { text-align: center; }
 a { color: inherit; text-decoration: none; }
 a:hover { color: darksalmon; }
 
-/************************************************************ HEADER ************************************************************/
+/******************************************************************************** HEADER ********************************************************************************/
 .My-Navigate-Bar {
   width: 100%;
   height: auto;
@@ -35,7 +35,7 @@ a:hover { color: darksalmon; }
   border-radius: 50%;
 }
 
-/****************************************************** TOPIC SELECTIONS ********************************************************/
+/*************************************************************************** TOPIC SELECTIONS ***************************************************************************/
 #Box-Topic-Selections {
   max-width: 1150px;
   padding: 10px;
@@ -91,7 +91,12 @@ a:hover { color: darksalmon; }
   width: 76%;
 }
 
-/*********************************************************** CONTENTS ***********************************************************/
+#CSS-Properties-Category {
+  font-weight: bolder;
+  margin: 10px;
+}
+
+/******************************************************************************* CONTENTS *******************************************************************************/
 .Box-Contents {
   max-width: 1150px;
   padding: 10px;
@@ -100,26 +105,6 @@ a:hover { color: darksalmon; }
   border: 1px solid black;
 }
 
-
-
-
-
-
-.Box-Value {
-  margin: 10px 0;
-}
-
-.Value { border: 1px solid black; }
-
-/* SUB BOX CONTENTS */
-.Sub-Topics { margin: 20px 0; }
-.Box-Property {
-  width: auto;
-  height: auto;
-  margin: 20px 0;
-}
-
-/* SAMPLE BOX */
 .Box-Model {
   width: 150px;
   height: 100px;
@@ -131,26 +116,17 @@ a:hover { color: darksalmon; }
   background-color: var(--Main-Theme);
 }
 
-/* SAMPLE ADDED BOX */
-.Added-Box-Model {
-  width: 100px;
-  height: 100px;
+.Typography-Model {
+  width: 50%;
+  height: auto;
+  padding: 10px;
+  margin: 10px auto;
   border: 1px solid black;
+  position: sticky;
+  top: 80px;
+  background-color: var(--Main-Theme);
 }
 
-/* RELATED VALUES */
-.Value-Box:hover { border: 1px solid black; }
-.Box-Value { margin: 10px 0; }
-#Box-Calculation { margin: 10px 0; }
-#Box-Initial { margin: 10px 0; }
-#Box-Inherit { margin: 10px 0; }
-#Box-Unset { margin: 10px 0; }
-#Box-Variable { margin: 10px 0; }
-#Box-Absolute-Length-Units { margin: 10px 0; }
-#Box-Relative-Length-Units { margin: 10px 0; }
-.Related-Values { margin: 20px 0; }
-
-/* INSIGHTS */
-.Item-Insights { margin: 10px 0; }
-
-.Highlighted:hover { border: 1px solid black; }
+/****************************************************************************** PROPERTIES ******************************************************************************/
+.Text-Align { text-align: justify; }
+.Text-Decoration { text-decoration-line: line-through; }
