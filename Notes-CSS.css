@@ -83,12 +83,12 @@ a:hover { color: darksalmon; }
 
 #CSS-Properties-List code {
   display: inline-block;
-  width: 23%;
+  width: 24%;
 }
 
 #CSS-Properties-List span {
   display: inline-block;
-  width: 76%;
+  width: 75%;
 }
 
 #CSS-Properties-Category {
@@ -128,5 +128,8 @@ a:hover { color: darksalmon; }
 }
 
 /****************************************************************************** PROPERTIES ******************************************************************************/
-.Text-Align { text-align: justify; }
-.Text-Decoration { text-decoration-line: line-through; }
+.Text-Align       { text-align: justify; }
+.Text-Decoration  { text-decoration-line: underline; }
+.Text-Emphasis    { text-emphasis-style: filled; }
+.Text-Orientation { writing-mode: vertical-lr; }
+.Text-Overflow    { white-space: nowrap; overflow: hidden; }

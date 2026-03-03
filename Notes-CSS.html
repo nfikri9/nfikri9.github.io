@@ -234,6 +234,17 @@
           <li><a onclick="TextDecorationLineProperty()"><code>text-decoration-line</code> <span>Specifies the type of line in a text-decoration</span></a></li>
           <li><a onclick="TextDecorationStyleProperty()"><code>text-decoration-style</code> <span>Specifies the style of the line in a text decoration</span></a></li>
           <li><a onclick="TextDecorationThicknessProperty()"><code>text-decoration-thickness</code> <span>Specifies the thickness of the decoration line</span></a></li>
+          <li><a onclick="TextEmphasisColorProperty()"><code>text-emphasis-color</code> <span>Specifies the color of emphasis marks</span></a></li>
+          <li><a onclick="TextEmphasisPositionProperty()"><code>text-emphasis-position</code> <span>Specifies the position of emphasis marks</span></a></li>
+          <li><a onclick="TextEmphasisStyleProperty()"><code>text-emphasis-style</code> <span>Specifies the style of emphasis marks</span></a></li>
+          <li><a onclick="TextIndentProperty()"><code>text-indent</code> <span>Specifies the indentation of the first line in a text-block</span></a></li>
+          <li><a onclick="TextJustifyProperty()"><code>text-justify</code> <span>Specifies the justification method used</span></a></li>
+          <li><a onclick="TextOrientationProperty()"><code>text-orientation</code> <span>Defines the orientation of characters in a line</span></a></li>
+          <li><a onclick="TextOverflowProperty()"><code>text-overflow</code> <span>Specifies what should happen when text overflows the containing element</span></a></li>
+          <li><a onclick="TextShadowProperty()"><code>text-shadow</code> <span>Adds shadow to text</span></a></li>
+          <li><a onclick="TextTransformProperty()"><code>text-transform</code> <span>Controls the capitalization of text</span></a></li>
+          <li><a onclick="TextUnderlineOffsetProperty()"><code>text-underline-offset</code> <span>Specifies the offset distance of the underline text decoration</span></a></li>
+          <li><a onclick="TextUnderlinePositionProperty()"><code>text-underline-position</code> <span>Specifies the position of the underline text decoration</span></a></li>
 
           <div id="CSS-Properties-Category">OTHERS</div>
           <li><a onclick="ExampleProperty()"><code>accent-color</code> <span></span></a></li>
@@ -553,18 +564,6 @@
           <li><a onclick="ExampleProperty()"><code>@supports</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>tab-size</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>table-layout</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-emphasis</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-emphasis-color</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-emphasis-position</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-emphasis-style</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-indent</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-justify</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-orientation</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-overflow</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-shadow</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-transform</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-underline-offset</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>text-underline-position</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>top</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>transform</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>transform-origin</code> <span></span></a></li>
@@ -683,7 +682,7 @@
         </div>
 
         <div class="Related-Values">
-          <p><code>mySelector { text-decoration-line: line-through; <b>text-decoration-color: <i>myVALUE</i></b>; }</code></p>
+          <p><code>mySelector { text-decoration-line: underline; <b>text-decoration-color: <i>myVALUE</i></b>; }</code></p>
           <input id="Input-Text-Decoration-Color" type="text" placeholder="Enter valid text-decoration-color value"> <button onclick="TextDecorationColorValue()">MODIFY</button>
           <p><code><i>CSS Global Values</i></code></p>
           <p><code><i>CSS Color Values</i></code></p>
@@ -732,7 +731,7 @@
         </div>
 
         <div class="Related-Values">
-          <p><code>mySelector { text-decoration-line: line-through; <b>text-decoration-style: <i>myVALUE</i></b>; }</code></p>
+          <p><code>mySelector { text-decoration-line: underline; <b>text-decoration-style: <i>myVALUE</i></b>; }</code></p>
           <input id="Input-Text-Decoration-Style" type="text" placeholder="Enter valid text-decoration-style value"> <button onclick="TextDecorationStyleValue()">MODIFY</button>
           <p><code><i>CSS Global Values</i></code></p>
           <p><code>dashed</code></p>
@@ -759,11 +758,280 @@
         </div>
 
         <div class="Related-Values">
-          <p><code>mySelector { text-decoration-line: line-through; <b>text-decoration-thickness: <i>myVALUE</i></b>; }</code></p>
+          <p><code>mySelector { text-decoration-line: underline; <b>text-decoration-thickness: <i>myVALUE</i></b>; }</code></p>
           <input id="Input-Text-Decoration-Thickness" type="text" placeholder="Enter valid text-decoration-thickness value">
           <button onclick="TextDecorationThicknessValue()">MODIFY</button>
           <p><code><i>CSS Global Values</i></code></p>
           <p><code><i>CSS Length Values</i></code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------- TEXT-EMPHASIS-COLOR PROPERTY -------------------------------------------------------------------->
+      <section id="Text-Emphasis-Color-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextEmphasisColorProperty()">TEXT-EMPHASIS-COLOR PROPERTY</h2>
+          <p>The <code>text-emphasis-color</code> property sets the color of emphasis marks.</p>
+          <p><code class="Shorthand-Text-Emphasis"></code></p>
+        </header>
+
+        <div class="Typography-Model Text-Emphasis">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { text-emphasis-style: filled; <b>text-emphasis-color: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Emphasis-Color" type="text" placeholder="Enter valid text-emphasis-color value"> <button onclick="TextEmphasisColorValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code>currentColor</code></p>
+          <p><code>transparent</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------ TEXT-EMPHASIS-POSITION PROPERTY ------------------------------------------------------------------>
+      <section id="Text-Emphasis-Position-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextEmphasisPositionProperty()">TEXT-EMPHASIS-POSITION PROPERTY</h2>
+          <p>The <code>text-emphasis-position</code> property specifies the position of the emphasis marks.</p>
+          <p>The <code>writing-mode</code> property is used to specify horizontal or vertical writing mode.</p>
+        </header>
+
+        <div class="Typography-Model Text-Emphasis">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { text-emphasis-style: filled; <b>text-emphasis-position: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Emphasis-Position" type="text" placeholder="Enter valid text-emphasis-position value"> <button onclick="TextEmphasisPositionValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>left</code></p>
+          <p><code>over</code></p>
+          <p><code>right</code></p>
+          <p><code>under</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------- TEXT-EMPHASIS-STYLE PROPERTY -------------------------------------------------------------------->
+      <section id="Text-Emphasis-Style-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextEmphasisStyleProperty()">TEXT-EMPHASIS-STYLE PROPERTY</h2>
+          <p>The <code>text-emphasis-style</code> property sets the style of emphasis marks.</p>
+          <p><code class="Shorthand-Text-Emphasis"></code></p>
+        </header>
+
+        <div class="Typography-Model Text-Emphasis">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>text-emphasis-style: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Emphasis-Style" type="text" placeholder="Enter valid text-emphasis-style value"> <button onclick="TextEmphasisStyleValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>circle</code></p>
+          <p><code>dot</code></p>
+          <p><code>double-circle</code></p>
+          <p><code>filled</code></p>
+          <p><code>none</code></p>
+          <p><code>open</code></p>
+          <p><code>sesame</code></p>
+          <p><code><i>String</i></code></p>
+          <p><code>triangle</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- TEXT-INDENT PROPERTY ------------------------------------------------------------------------>
+      <section id="Text-Indent-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextIndentProperty()">TEXT-INDENT PROPERTY</h2>
+          <p>The <code>text-indent</code> property specifies the indentation of the first line in a text-block.</p>
+          <p>Negative values are allowed where the first line will be indented to the left.</p>
+        </header>
+
+        <div class="Typography-Model Text-Indent">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>text-indent: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Indent" type="text" placeholder="Enter valid text-indent value"> <button onclick="TextIndentValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- TEXT-JUSTIFY PROPERTY ----------------------------------------------------------------------->
+      <section id="Text-Justify-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextJustifyProperty()">TEXT-JUSTIFY PROPERTY</h2>
+          <p>The <code>text-justify</code> property specifies the justification method of text</p>
+        </header>
+
+        <div class="Typography-Model Text-Align">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { text-align: justify; <b>text-justify: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Justify" type="text" placeholder="Enter valid text-justify value"> <button onclick="TextJustifyValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>auto</code></p>
+          <p><code>distribute</code></p>
+          <p><code>distribute-all-lines</code></p>
+          <p><code>inter-character</code></p>
+          <p><code>inter-cluster</code></p>
+          <p><code>inter-ideograph</code></p>
+          <p><code>inter-word</code></p>
+          <p><code>kashida</code></p>
+          <p><code>newspaper</code></p>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------- TEXT-ORIENTATION PROPERTY --------------------------------------------------------------------->
+      <section id="Text-Orientation-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextOrientationProperty()">TEXT-ORIENTATION PROPERTY</h2>
+          <p>The <code>text-orientation</code> property specifies the orientation of characters.</p>
+          <p>Works only when <code>writing-mode: vertical;</code> is set.</p>
+        </header>
+
+        <div class="Typography-Model Text-Orientation">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { writing-mode: vertical; <b>text-orientation: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Orientation" type="text" placeholder="Enter valid text-orientation value"> <button onclick="TextOrientationValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>sideways</code></p>
+          <p><code>sideways-right</code></p>
+          <p><code>upright</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------- TEXT-OVERFLOW PROPERTY ----------------------------------------------------------------------->
+      <section id="Text-Overflow-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextOverflowProperty()">TEXT-OVERFLOW PROPERTY</h2>
+          <p>The <code>text-overflow</code> property specifies how overflowed content that is not displayed should be signaled to the user.</p>
+        </header>
+
+        <div class="Typography-Model Text-Overflow">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { white-space: nowrap; overflow: hidden; <b>text-overflow: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Overflow" type="text" placeholder="Enter valid text-overflow value"> <button onclick="TextOverflowValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>clip</code></p>
+          <p><code>ellipsis</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- TEXT-SHADOW PROPERTY ------------------------------------------------------------------------>
+      <section id="Text-Shadow-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextShadowProperty()">TEXT-SHADOW PROPERTY</h2>
+          <p>The <code>text-shadow</code> property adds shadow to text.</p>
+        </header>
+
+        <div class="Typography-Model Text-Shadow">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>text-shadow: <i>Horizontal-Shadow Vertical-Shadow Blur-Radius-Shadow Color-Shadow</i></b>; }</code></p>
+          <input id="Input-Text-Shadow" type="text" placeholder="Enter valid text-shadow value"> <button onclick="TextShadowValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Color Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------- TEXT-TRANSFORM PROPERTY ---------------------------------------------------------------------->
+      <section id="Text-Transform-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextTransformProperty()">TEXT-TRANSFORM PROPERTY</h2>
+          <p>The <code>text-transform</code> property controls the capitalization of text.</p>
+        </header>
+
+        <div class="Typography-Model Text-Transform">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>text-transform: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Transform" type="text" placeholder="Enter valid text-transform value"> <button onclick="TextTransformValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>capitalize</code></p>
+          <p><code>lowercase</code></p>
+          <p><code>none</code></p>
+          <p><code>uppercase</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------ TEXT-UNDERLINE-OFFSET PROPERTY ------------------------------------------------------------------->
+      <section id="Text-Underline-Offset-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextUnderlineOffsetProperty()">TEXT-UNDERLINE-OFFSET PROPERTY</h2>
+          <p>The <code>text-underline-offset</code> property specifies the offset distance of underline text decorations.</p>
+        </header>
+
+        <div class="Typography-Model Text-Decoration">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { text-decoration-line: underline; <b>text-underline-offset: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Underline-Offset" type="text" placeholder="Enter valid text-underline-offset value"> <button onclick="TextUnderlineOffsetValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>auto</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------- TEXT-UNDERLINE-POSITION PROPERTY ------------------------------------------------------------------>
+      <section id="Text-Underline-Position-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="TextUnderlinePositionProperty()">TEXT-UNDERLINE-POSITION PROPERTY</h2>
+          <p>The <code>text-underline-position</code> property specifies the position of underline text decorations.</p>
+        </header>
+
+        <div class="Typography-Model Text-Decoration">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { text-decoration-line: underline; <b>text-underline-position: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Text-Underline-Position" type="text" placeholder="Enter valid text-underline-position value"> <button onclick="TextUnderlinePositionValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>above</code></p>
+          <p><code>auto</code></p>
+          <p><code>below</code></p>
+          <p><code>left</code></p>
+          <p><code>right</code></p>
         </div>
       </section>
 

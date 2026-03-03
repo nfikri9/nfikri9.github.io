@@ -1,12 +1,15 @@
 //////////////////////////////////////////////////////////////////////////////// PROPERTY ////////////////////////////////////////////////////////////////////////////////
 const Shorthand = {
-  TextDecoration: "text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;"
+  TextDecoration: "text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;",
+  TextEmphasis  : "text-emphasis: text-emphasis-style text-emphasis-color;"
 };
 
 document.getElementsByClassName("Shorthand-Text-Decoration")[0].innerHTML = Shorthand.TextDecoration;
 document.getElementsByClassName("Shorthand-Text-Decoration")[1].innerHTML = Shorthand.TextDecoration;
 document.getElementsByClassName("Shorthand-Text-Decoration")[2].innerHTML = Shorthand.TextDecoration;
 document.getElementsByClassName("Shorthand-Text-Decoration")[3].innerHTML = Shorthand.TextDecoration;
+document.getElementsByClassName("Shorthand-Text-Emphasis")[0].innerHTML = Shorthand.TextEmphasis;
+document.getElementsByClassName("Shorthand-Text-Emphasis")[1].innerHTML = Shorthand.TextEmphasis;
 
 //////////////////////////////////////////////////////////////////////////// TOPIC SELECTIONS ////////////////////////////////////////////////////////////////////////////
 function CSSIntroduction() {
@@ -175,6 +178,226 @@ function TextDecorationThicknessProperty() {
 function TextDecorationThicknessValue() {
   let myTextDecorationThickness = document.getElementById("Input-Text-Decoration-Thickness").value;
   document.getElementsByClassName("Text-Decoration")[3].style.textDecorationThickness = myTextDecorationThickness;
+}
+
+////////////////////////////////////////////////////////////////////// TEXT-EMPHASIS-COLOR PROPERTY //////////////////////////////////////////////////////////////////////
+function TextEmphasisColorProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextEmphasisColorProperty = document.getElementById("Text-Emphasis-Color-Property");
+
+  if (TextEmphasisColorProperty.style.display === "block") {
+    TextEmphasisColorProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextEmphasisColorProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextEmphasisColorValue() {
+  let myTextEmphasisColor = document.getElementById("Input-Text-Emphasis-Color").value;
+  document.getElementsByClassName("Text-Emphasis")[0].style.textEmphasisColor = myTextEmphasisColor;
+}
+
+//////////////////////////////////////////////////////////////////// TEXT-EMPHASIS-POSITION PROPERTY /////////////////////////////////////////////////////////////////////
+function TextEmphasisPositionProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextEmphasisPositionProperty = document.getElementById("Text-Emphasis-Position-Property");
+
+  if (TextEmphasisPositionProperty.style.display === "block") {
+    TextEmphasisPositionProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextEmphasisPositionProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextEmphasisPositionValue() {
+  let myTextEmphasisPosition = document.getElementById("Input-Text-Emphasis-Position").value;
+  document.getElementsByClassName("Text-Emphasis")[1].style.textEmphasisPosition = myTextEmphasisPosition;
+}
+
+////////////////////////////////////////////////////////////////////// TEXT-EMPHASIS-STYLE PROPERTY //////////////////////////////////////////////////////////////////////
+function TextEmphasisStyleProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextEmphasisStyleProperty = document.getElementById("Text-Emphasis-Style-Property");
+
+  if (TextEmphasisStyleProperty.style.display === "block") {
+    TextEmphasisStyleProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextEmphasisStyleProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextEmphasisStyleValue() {
+  let myTextEmphasisStyle = document.getElementById("Input-Text-Emphasis-Style").value;
+  document.getElementsByClassName("Text-Emphasis")[2].style.textEmphasisStyle = myTextEmphasisStyle;
+}
+
+////////////////////////////////////////////////////////////////////////// TEXT-INDENT PROPERTY //////////////////////////////////////////////////////////////////////////
+function TextIndentProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextIndentProperty = document.getElementById("Text-Indent-Property");
+
+  if (TextIndentProperty.style.display === "block") {
+    TextIndentProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextIndentProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextIndentValue() {
+  let myTextIndent = document.getElementById("Input-Text-Indent").value;
+  document.getElementsByClassName("Text-Indent")[0].style.textIndent = myTextIndent;
+}
+
+///////////////////////////////////////////////////////////////////////// TEXT-JUSTIFY PROPERTY //////////////////////////////////////////////////////////////////////////
+function TextJustifyProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextJustifyProperty = document.getElementById("Text-Justify-Property");
+
+  if (TextJustifyProperty.style.display === "block") {
+    TextJustifyProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextJustifyProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextJustifyValue() {
+  let myTextJustify = document.getElementById("Input-Text-Justify").value;
+  document.getElementsByClassName("Text-Align")[2].style.textJustify = myTextJustify;
+}
+
+/////////////////////////////////////////////////////////////////////// TEXT-ORIENTATION PROPERTY ////////////////////////////////////////////////////////////////////////
+function TextOrientationProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextOrientationProperty = document.getElementById("Text-Orientation-Property");
+
+  if (TextOrientationProperty.style.display === "block") {
+    TextOrientationProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextOrientationProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextOrientationValue() {
+  let myTextOrientation = document.getElementById("Input-Text-Orientation").value;
+  document.getElementsByClassName("Text-Orientation")[0].style.textOrientation = myTextOrientation;
+}
+
+///////////////////////////////////////////////////////////////////////// TEXT-OVERFLOW PROPERTY /////////////////////////////////////////////////////////////////////////
+function TextOverflowProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextOverflowProperty = document.getElementById("Text-Overflow-Property");
+
+  if (TextOverflowProperty.style.display === "block") {
+    TextOverflowProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextOverflowProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextOverflowValue() {
+  let myTextOverflow = document.getElementById("Input-Text-Overflow").value;
+  document.getElementsByClassName("Text-Overflow")[0].style.textOverflow = myTextOverflow;
+}
+
+////////////////////////////////////////////////////////////////////////// TEXT-SHADOW PROPERTY //////////////////////////////////////////////////////////////////////////
+function TextShadowProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextShadowProperty = document.getElementById("Text-Shadow-Property");
+
+  if (TextShadowProperty.style.display === "block") {
+    TextShadowProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextShadowProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextShadowValue() {
+  let myTextShadow = document.getElementById("Input-Text-Shadow").value;
+  document.getElementsByClassName("Text-Shadow")[0].style.textShadow = myTextShadow;
+}
+
+//////////////////////////////////////////////////////////////////////// TEXT-TRANSFORM PROPERTY /////////////////////////////////////////////////////////////////////////
+function TextTransformProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextTransformProperty = document.getElementById("Text-Transform-Property");
+
+  if (TextTransformProperty.style.display === "block") {
+    TextTransformProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextTransformProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextTransformValue() {
+  let myTextTransform = document.getElementById("Input-Text-Transform").value;
+  document.getElementsByClassName("Text-Transform")[0].style.textTransform = myTextTransform;
+}
+
+///////////////////////////////////////////////////////////////////// TEXT-UNDERLINE-OFFSET PROPERTY /////////////////////////////////////////////////////////////////////
+function TextUnderlineOffsetProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextUnderlineOffsetProperty = document.getElementById("Text-Underline-Offset-Property");
+
+  if (TextUnderlineOffsetProperty.style.display === "block") {
+    TextUnderlineOffsetProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextUnderlineOffsetProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextUnderlineOffsetValue() {
+  let myTextUnderlineOffset = document.getElementById("Input-Text-Underline-Offset").value;
+  document.getElementsByClassName("Text-Decoration")[4].style.textUnderlineOffset = myTextUnderlineOffset;
+}
+
+//////////////////////////////////////////////////////////////////// TEXT-UNDERLINE-POSITION PROPERTY ////////////////////////////////////////////////////////////////////
+function TextUnderlinePositionProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let TextUnderlinePositionProperty = document.getElementById("Text-Underline-Position-Property");
+
+  if (TextUnderlinePositionProperty.style.display === "block") {
+    TextUnderlinePositionProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    TextUnderlinePositionProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function TextUnderlinePositionValue() {
+  let myTextUnderlinePosition = document.getElementById("Input-Text-Underline-Position").value;
+  document.getElementsByClassName("Text-Decoration")[5].style.textUnderlinePosition = myTextUnderlinePosition;
 }
 
 //////////////////////////////////////////////////////////////////////////////// PROPERTY ////////////////////////////////////////////////////////////////////////////////
