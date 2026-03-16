@@ -1,9 +1,17 @@
 //////////////////////////////////////////////////////////////////////////////// PROPERTY ////////////////////////////////////////////////////////////////////////////////
 const Shorthand = {
+  Font          : "font: font-style font-variant font-weight font-stretch font-size/line-height font-family;",
   TextDecoration: "text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness;",
   TextEmphasis  : "text-emphasis: text-emphasis-style text-emphasis-color;"
 };
 
+document.getElementsByClassName("Shorthand-Font")[0].innerHTML = Shorthand.Font;
+document.getElementsByClassName("Shorthand-Font")[1].innerHTML = Shorthand.Font;
+document.getElementsByClassName("Shorthand-Font")[2].innerHTML = Shorthand.Font;
+document.getElementsByClassName("Shorthand-Font")[3].innerHTML = Shorthand.Font;
+document.getElementsByClassName("Shorthand-Font")[4].innerHTML = Shorthand.Font;
+document.getElementsByClassName("Shorthand-Font")[5].innerHTML = Shorthand.Font;
+document.getElementsByClassName("Shorthand-Font")[6].innerHTML = Shorthand.Font;
 document.getElementsByClassName("Shorthand-Text-Decoration")[0].innerHTML = Shorthand.TextDecoration;
 document.getElementsByClassName("Shorthand-Text-Decoration")[1].innerHTML = Shorthand.TextDecoration;
 document.getElementsByClassName("Shorthand-Text-Decoration")[2].innerHTML = Shorthand.TextDecoration;
@@ -58,6 +66,146 @@ function ColorProperty() {
 function ColorValue() {
   let myColor = document.getElementById("Input-Color").value;
   document.getElementsByClassName("Color")[0].style.color = myColor;
+}
+
+////////////////////////////////////////////////////////////////////////// FONT-FAMILY PROPERTY //////////////////////////////////////////////////////////////////////////
+function FontFamilyProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let FontFamilyProperty = document.getElementById("Font-Family-Property");
+
+  if (FontFamilyProperty.style.display === "block") {
+    FontFamilyProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    FontFamilyProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function FontFamilyValue() {
+  let myFontFamily = document.getElementById("Input-Font-Family").value;
+  document.getElementsByClassName("Font")[0].style.fontFamily = myFontFamily;
+}
+
+/////////////////////////////////////////////////////////////////////////// FONT-SIZE PROPERTY ///////////////////////////////////////////////////////////////////////////
+function FontSizeProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let FontSizeProperty = document.getElementById("Font-Size-Property");
+
+  if (FontSizeProperty.style.display === "block") {
+    FontSizeProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    FontSizeProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function FontSizeValue() {
+  let myFontSize = document.getElementById("Input-Font-Size").value;
+  document.getElementsByClassName("Font")[1].style.fontSize = myFontSize;
+}
+
+///////////////////////////////////////////////////////////////////////// FONT-STRETCH PROPERTY //////////////////////////////////////////////////////////////////////////
+function FontStretchProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let FontStretchProperty = document.getElementById("Font-Stretch-Property");
+
+  if (FontStretchProperty.style.display === "block") {
+    FontStretchProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    FontStretchProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function FontStretchValue() {
+  let myFontStretch = document.getElementById("Input-Font-Stretch").value;
+  document.getElementsByClassName("Font")[2].style.fontStretch = myFontStretch;
+}
+
+////////////////////////////////////////////////////////////////////////// FONT-STYLE PROPERTY ///////////////////////////////////////////////////////////////////////////
+function FontStyleProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let FontStyleProperty = document.getElementById("Font-Style-Property");
+
+  if (FontStyleProperty.style.display === "block") {
+    FontStyleProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    FontStyleProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function FontStyleValue() {
+  let myFontStyle = document.getElementById("Input-Font-Style").value;
+  document.getElementsByClassName("Font")[3].style.fontStyle = myFontStyle;
+}
+
+///////////////////////////////////////////////////////////////////////// FONT-VARIANT PROPERTY //////////////////////////////////////////////////////////////////////////
+function FontVariantProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let FontVariantProperty = document.getElementById("Font-Variant-Property");
+
+  if (FontVariantProperty.style.display === "block") {
+    FontVariantProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    FontVariantProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function FontVariantValue() {
+  let myFontVariant = document.getElementById("Input-Font-Variant").value;
+  document.getElementsByClassName("Font")[4].style.fontVariant = myFontVariant;
+}
+
+////////////////////////////////////////////////////////////////////////// FONT-WEIGHT PROPERTY //////////////////////////////////////////////////////////////////////////
+function FontWeightProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let FontWeightProperty = document.getElementById("Font-Weight-Property");
+
+  if (FontWeightProperty.style.display === "block") {
+    FontWeightProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    FontWeightProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function FontWeightValue() {
+  let myFontWeight = document.getElementById("Input-Font-Weight").value;
+  document.getElementsByClassName("Font")[5].style.fontWeight = myFontWeight;
+}
+
+////////////////////////////////////////////////////////////////////////// LINE-HEIGHT PROPERTY //////////////////////////////////////////////////////////////////////////
+function LineHeightProperty() {
+  let CSSProperties = document.getElementById("CSS-Properties");
+  let LineHeightProperty = document.getElementById("Line-Height-Property");
+
+  if (LineHeightProperty.style.display === "block") {
+    LineHeightProperty.style.display = "none";
+    CSSProperties.style.display = "block";
+  }
+  else {
+    LineHeightProperty.style.display = "block";
+    CSSProperties.style.display = "none";
+  }
+}
+
+function LineHeightValue() {
+  let myLineHeight = document.getElementById("Input-Line-Height").value;
+  document.getElementsByClassName("Line-Height")[0].style.lineHeight = myLineHeight;
 }
 
 ////////////////////////////////////////////////////////////////////////// TEXT-ALIGN PROPERTY ///////////////////////////////////////////////////////////////////////////

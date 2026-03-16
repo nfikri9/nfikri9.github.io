@@ -228,6 +228,13 @@
         <ul id="CSS-Properties-List">
           <div id="CSS-Properties-Category">CSS TYPOGRAPHY</div>
           <li><a onclick="ColorProperty()"><code>color</code> <span>Sets the color of text</span></a></li>
+          <li><a onclick="FontFamilyProperty()"><code>font-family</code> <span>Specifies the font family for text</span></a></li>
+          <li><a onclick="FontSizeProperty()"><code>font-size</code> <span>Specifies the font size of text</span></a></li>
+          <li><a onclick="FontStretchProperty()"><code>font-stretch</code> <span>Selects a normal, condensed, or expanded face from a font family</span></a></li>
+          <li><a onclick="FontStyleProperty()"><code>font-style</code> <span>Specifies the font style for text</span></a></li>
+          <li><a onclick="FontVariantProperty()"><code>font-variant</code> <span>Specifies whether or not a text should be displayed in a small-caps font</span></a></li>
+          <li><a onclick="FontWeightProperty()"><code>font-weight</code> <span>Specifies the weight of a font</span></a></li>
+          <li><a onclick="LineHeightProperty()"><code>line-height</code> <span>Sets the line height</span></a></li>
           <li><a onclick="TextAlignProperty()"><code>text-align</code> <span>Specifies the horizontal alignment of text</span></a></li>
           <li><a onclick="TextAlignLastProperty()"><code>text-align-last</code> <span>Specifies the horizontal alignment of the last line text</span></a></li>
           <li><a onclick="TextDecorationColorProperty()"><code>text-decoration-color</code> <span>Specifies the color of the text-decoration</span></a></li>
@@ -382,19 +389,12 @@
           <li><a onclick="ExampleProperty()"><code>flex-shrink</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>flex-wrap</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>float</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>font</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>@font-face</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>font-family</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>font-feature-settings</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>font-kerning</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>@font-palette-values</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>font-size</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>font-size-adjust</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>font-stretch</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>font-style</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>font-variant</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>font-variant-caps</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>font-weight</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>gap</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>grid</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>grid-area</code> <span></span></a></li>
@@ -434,7 +434,6 @@
           <li><a onclick="ExampleProperty()"><code>@layer</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>left</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>letter-spacing</code> <span></span></a></li>
-          <li><a onclick="ExampleProperty()"><code>line-height</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>list-style</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>list-style-image</code> <span></span></a></li>
           <li><a onclick="ExampleProperty()"><code>list-style-position</code> <span></span></a></li>
@@ -610,6 +609,224 @@
           <p><code><i>CSS Color Values</i></code></p>
           <p><code>currentColor</code></p>
           <p><code>transparent</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- FONT-FAMILY PROPERTY ------------------------------------------------------------------------>
+      <section id="Font-Family-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontFamilyProperty()">FONT-FAMILY PROPERTY</h2>
+          <p>The <code>font-family</code> property specifies the font for an element.</p>
+          <p>The <code>font-family</code> property can hold several font names as a "fallback" system.</p>
+          <p>If the browser does not support the first font, it tries the next font.</p>
+          <p>There are two types of font family names:
+             <p>Family-Name (The name of a font-family): <code>"times", "courier", "arial"</code>, etc.</p>
+             <p>Generic-Family (The name of a generic-family): <code>"serif", "sans-serif", "cursive", "fantasy", "monospace"</code></p>
+          </p>
+          <p><code class="Shorthand-Font"></code></p>
+        </header>
+
+        <div class="Typography-Model Font">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>font-family: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Font-Family" type="text" placeholder="Enter valid font-family value"> <button onclick="FontFamilyValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>Arial</code></p>
+          <p><code>'Arial Narrow'</code></p>
+          <p><code>'Arial Narrow Bold'</code></p>
+          <p><code>Calibri</code></p>
+          <p><code>Cambria</code></p>
+          <p><code>Cochin</code></p>
+          <p><code>Courier</code></p>
+          <p><code>'Courier New'</code></p>
+          <p><code>cursive</code></p>
+          <p><code>fantasy</code></p>
+          <p><code>'Franklin Gothic Medium'</code></p>
+          <p><code>Geneva</code></p>
+          <p><code>Georgia</code></p>
+          <p><code>'Gill Sans'</code></p>
+          <p><code>'Gill Sans MT'</code></p>
+          <p><code>Haettenschweiler</code></p>
+          <p><code>Helvetica</code></p>
+          <p><code>Impact</code></p>
+          <p><code>'Lucida Grande'</code></p>
+          <p><code>'Lucida Sans'</code></p>
+          <p><code>'Lucida Sans Regular'</code></p>
+          <p><code>'Lucida Sans Unicode'</code></p>
+          <p><code>monospace</code></p>
+          <p><code>sans-serif</code></p>
+          <p><code>'Segoe UI'</code></p>
+          <p><code>serif</code></p>
+          <p><code>Tahoma</code></p>
+          <p><code>Times</code></p>
+          <p><code>'Times New Roman'</code></p>
+          <p><code>'Trebuchet MS'</code></p>
+          <p><code>Verdana</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------ FONT-SIZE PROPERTY ------------------------------------------------------------------------->
+      <section id="Font-Size-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontSizeProperty()">FONT-SIZE PROPERTY</h2>
+          <p>The <code>font-size</code> property sets the size of a font.</p>
+          <p><code class="Shorthand-Font"></code></p>
+        </header>
+
+        <div class="Typography-Model Font">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>font-size: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Font-Size" type="text" placeholder="Enter valid font-size value"> <button onclick="FontSizeValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>large</code></p>
+          <p><code>larger</code></p>
+          <p><code>medium</code></p>
+          <p><code>small</code></p>
+          <p><code>smaller</code></p>
+          <p><code>x-large</code></p>
+          <p><code>x-small</code></p>
+          <p><code>xx-large</code></p>
+          <p><code>xx-small</code></p> 
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- FONT-STRETCH PROPERTY ----------------------------------------------------------------------->
+      <section id="Font-Stretch-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontStretchProperty()">FONT-STRETCH PROPERTY</h2>
+          <p>The <code>font-stretch</code> property allows the text narrower (condensed) or wider (expanded).</p>
+          <p>Some fonts provide additional faces; condensed faces and expanded faces.</p>
+          <p>This property has no effect if the selected font does not offer condensed or expanded faces.</p>
+          <p><code class="Shorthand-Font"></code></p>
+        </header>
+
+        <div class="Typography-Model Font">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>font-stretch: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Font-Stretch" type="text" placeholder="Enter valid font-stretch value"> <button onclick="FontStretchValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>condensed</code></p>
+          <p><code>expanded</code></p>
+          <p><code>extra-condensed</code></p>
+          <p><code>extra-expanded</code></p>
+          <p><code>narrower</code></p>
+          <p><code>normal</code></p>
+          <p><code>semi-condensed</code></p>
+          <p><code>semi-expanded</code></p>
+          <p><code>ultra-condensed</code></p>
+          <p><code>ultra-expanded wider</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------ FONT-STYLE PROPERTY ------------------------------------------------------------------------>
+      <section id="Font-Style-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontStyleProperty()">FONT-STYLE PROPERTY</h2>
+          <p>The <code>font-style</code> property specifies the font style for a text.</p>
+          <p><code class="Shorthand-Font"></code></p>
+        </header>
+
+        <div class="Typography-Model Font">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>font-style: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Font-Style" type="text" placeholder="Enter valid font-style value"> <button onclick="FontStyleValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>italic</code></p>
+          <p><code>normal</code></p>
+          <p><code>oblique</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- FONT-VARIANT PROPERTY ----------------------------------------------------------------------->
+      <section id="Font-Variant-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontVariantProperty()">FONT-VARIANT PROPERTY</h2>
+          <p>The <code>font-variant</code> property specifies whether or not a text should be displayed in a small-caps font.</p>
+          <p><code class="Shorthand-Font"></code></p>
+        </header>
+
+        <div class="Typography-Model Font">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>font-variant: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Font-Variant" type="text" placeholder="Enter valid font-variant value"> <button onclick="FontVariantValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>normal</code></p>
+          <p><code>small-caps</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- FONT-WEIGHT PROPERTY ------------------------------------------------------------------------>
+      <section id="Font-Weight-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="FontWeightProperty()">FONT-WEIGHT PROPERTY</h2>
+          <p>The <code>font-weight</code> property sets how thick or thin characters in text should be displayed.</p>
+          <p><code class="Shorthand-Font"></code></p>
+        </header>
+
+        <div class="Typography-Model Font">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>font-weight: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Font-Weight" type="text" placeholder="Enter valid font-weight value"> <button onclick="FontWeightValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code>bold</code></p>
+          <p><code>bolder</code></p>
+          <p><code>lighter</code></p>
+          <p><code>normal</code></p>
+          <p><code><i>Numbers</i> (100 to 900)</code></p>
+        </div>
+      </section>
+
+      <!----------------------------------------------------------------------- LINE-HEIGHT PROPERTY ------------------------------------------------------------------------>
+      <section id="Line-Height-Property" class="Box-Contents">
+        <header>
+          <h2 onclick="LineHeightProperty()">LINE-HEIGHT PROPERTY</h2>
+          <p>The <code>line-height</code> property specifies the height of a line.</p>
+          <p><code class="Shorthand-Font"></code></p>
+        </header>
+
+        <div class="Typography-Model Line-Height">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+
+        <div class="Related-Values">
+          <p><code>mySelector { <b>line-height: <i>myVALUE</i></b>; }</code></p>
+          <input id="Input-Line-Height" type="text" placeholder="Enter valid line-height value"> <button onclick="LineHeightValue()">MODIFY</button>
+          <p><code><i>CSS Global Values</i></code></p>
+          <p><code><i>CSS Length Values</i></code></p>
+          <p><code>normal</code></p>
         </div>
       </section>
 
