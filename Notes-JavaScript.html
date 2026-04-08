@@ -43,615 +43,6 @@
       <!---------------------------------------------------------------------- JAVASCRIPT INTRODUCTION ---------------------------------------------------------------------->
       <section id="JavaScript-Introduction" class="Box-Contents">
         <h2>What Is JavaScript, and How Does It Work with HTML and CSS?</h2>
-        <p>JavaScript provides interactive functionality and dynamic behavior for the web page.</p>
-        <p>JavaScript interacts with the page to change content and styles dynamically.</p>
-        <p>HTML and CSS are markup languages, while JavaScript is a programming language.</p>
-        <p>Overall, HTML provides structure, CSS adds styling, and JavaScript enables behavior, creating a complete and interactive web experience.</p>
-
-        <br><hr><br>
-
-        <h2>What Is a Data Type, and What Are the Different Data Types in JavaScript?</h2>
-        <p>Data type is the type of value for a variable.</p>
-        <p>A variable is a named container that stores a value of a specific data type, allowing developer to reference and manipulate it throughout their code.</p>
-        <p>Data types help the program understand the kind of data it's working with, whether it's a number, text, or something else.</p>
-        <br>
-        <h3>Number</h3>
-        <p>The Number data type represents a numeric value.</p>
-        <p>A <b>Number</b> represents both integers and floating-point values.</p>
-        <p>Numbers are one of the primitive data types in the language.</p>
-        <p>Examples of integers include <code>x = 7; y = 19; z = 90;</code></p>
-        <p>A floating point number is a number with a decimal point.</p>
-        <p>Examples of floating point numbers include <code>x = 3.14; y = 5.2; z = 56.8;</code></p>
-        <p>Number type includes various kinds of numeric values, ranging from simple integers and floating-point numbers to special cases like Infinity and NaN, or "Not a Number".</p>
-        <p>Infinity is a special value that represents an infinite quantity, it's used to denote numbers that are larger than any finite number.</p>
-        <br>
-        <h3>String</h3>
-        <p>A <b>String</b> is a sequence of characters used to represent text data, enclosed in quotes.</p>
-        <p>Strings are one of the primitive data types in the language.</p>
-        <p>Strings are immutable, which is once something is created, it cannot be changed.</p>
-        <p>As example, changing <code>luck</code> into <code>duck</code> can not be done as it is immutable.</p>
-        <p>Example of a string that enclosed in double quotes: <code>x = "Hello World!";</code></p>
-        <p>Example of a string that enclosed in single quotes: <code>y = 'Hello World!';</code></p> <br>
-
-        <div>
-          <span class="Topics">String Concatenation</span> <br>
-          <p>String concatenation is a process where string is combined or joined pieces of text together.</p>
-          <p>The <code>+</code> operator is one of the simplest and most frequently used methods to concatenate strings.</p>
-          <p>It allows developer to join multiple strings or combine strings with variables that hold text.</p>
-          <p><code>let x = "Hello"; <br> let y = "World"; <br> let z = x + " " + y; // Hello World</code></p> <br>
-          <p>If developer need to add or append to an existing string, then they can use the <code>+=</code> operator.</p>
-          <p>This is helpful when developer want to build upon a string by adding more text to it over time.</p>
-          <p><code>let x = "Hello"; <br> x += " World"; // Hello World</code></p> <br>
-          <p>Using the <code>concat()</code> method to join two strings together.</p>
-          <p><code>let x = "Hello"; <br> let y = "World"; <br> let z = x.concat(" ", y); // Hello World</code></p>
-        </div>
-        <br>
-        <h3>Boolean</h3>
-        <p>A <b>Boolean</b> represents one of two values: <code>x = true;</code> or <code>y = false;</code></p>
-        <p>Booleans are a data type with only true and false values.</p>
-        <p>Booleans are one of the primitive data types in the language.</p>
-        <p>They're useful because they allow developer to do something based on some conditions.</p>
-        <p>To compare two values, developer can use either the equality or strict equality operator.</p>
-        <p>The result of the comparison will be a boolean of either true or false.</p>
-        <p>The equality operator is represented by a double equals sign (==).</p>
-        <p>The strict equality operator will check if the types are the same and if the values are the same.</p>
-        <p>This operator is represented by a triple equals sign (===).</p>
-        <p>The inequality or strict inequality operators performs check if something is not equal to another value.</p>
-        <p>This operator is represented by a triple equals sign (!=).</p>
-        <p>The strict inequality operator is represented by an exclamation mark followed by two equal signs (!==).</p>
-        <p>It is considered best practice to use strict inequality and equality operators whenever possible, as they do not perform type coercion.</p>
-        <br>
-        <h3>Undefined</h3>
-        <p><code>undefined</code> means a variable has been declared but hasn't been given a value yet.</p>
-        <p>it is one of the primitive data types in the language.</p>
-        <br>
-        <h3>Null</h3>
-        <p><code>null</code> means the variable has been intentionally set to "nothing" and does not hold any value.</p>
-        <p>It is one of the primitive data types in the language.</p>
-        <br>
-        <h3>Object</h3>
-        <p>An <b>Object</b> is a collection of key-value pairs.</p>
-        <p>Objects are great for grouping related information together.</p>
-        <p>Example of include <code>x = { name: "Nabil", age: 50 };</code></p>
-        <br>
-        <h3>Symbol</h3>
-        <p>A <code>Symbol()</code> is a special type of value in JavaScript that is always unique and cannot be changed.</p>
-        <p>Example like <code>Symbol('<i>mySymbol</i>');</code></p>
-        <br>
-        <h3>BigInt</h3>
-        <p><b>BigInt</b> is used for very large numbers that exceed the limit of the <b>Number</b> type.</p>
-        <p>Example like <code>x = 1234567890123456789012345678901234567890n;</code></p>
-
-        <br><hr><br>
-        <h2>What Are Variables, and What Are Guidelines for Naming JavaScript Variables?</h2>
-        <p>Variables act as containers for storing data that developer can access and modify throughout the program.</p>
-        <p>One way to declare a variable in JavaScript is to use the <code>let</code> keyword.</p>
-        <p>Example, <code>let age; let x; let myVariable;</code></p>
-        <br>
-        <h3>Naming Variable Convention</h3>
-        <p>There are some rules and best practices to ensure the code is readable and functional.</p>
-        <p>The variable names should describe what the data represents. (instead of <code>x</code>, use more descriptive name like <code>age, name, item, </code> etc.)</p>
-        <p>Must begin with either a letter, an underscore (_), or a dollar sign ($). (let myVariable; let _myVariable; let $myVariable;)</p>
-        <p>Cannot start with number. (don't use name like <code>3myVariable</code>)</p>
-        <p>Variable names are case-sensitive (<code>myVariable</code> is not the same with <code>MyVariable</code>)</p>
-        <P>Avoid using special characters (! or @ symbols)</P>
-        <p>All <b>reserved</b> words cant be use as a variable (<code>let, var, const, function, return</code>)</p>
-        <p>Best practice to apply camelCase (the first word is all lowercase and each subsequent word starts with an uppercase letter; <code>myVariable, itemName, notActive</code>)</p>
-
-        <br><hr><br>
-        <h2>How Do let and const Work Differently When It Comes to Variable Declaration, Assignment, and Reassignment?</h2>
-        <br>
-        <h3><code>var</code></h3>
-        <p>The <code>var</code> keyword can be use, but it's not as recommended anymore.</p>
-        <br>
-        <h3><code>let</code></h3>
-        <p>It can be declared without initialization.</p>
-        <p><code>let x; // Variable 'x' is declared with 'let' keyword and value is undefined since the variable is not initialized</code></p> <br>
-        <p>It can not be reinitialized again and the program will produce error.</p>
-        <p><code>let x; // Variable 'x' is declared with 'let' keyword <br> let x = 10; // SyntaxError: Identifier 'x' has already been declared</code></p> <br>
-        <p>It can be updated or reassigned with new value.</p>
-        <p><code>let x = 20; // x is 20 <br> x = 30; // x now is 30</code></p> <br>
-        <p>The <code>let</code> keyword is block scope.</p>
-        <p><code>let x = 40; // x is 40 <br> { let x = 50; } // x is 50 since this is in block scope</code></p>
-        <br>
-        <h3><code>const</code></h3>
-        <p>It must be assigned a value at the time of declaration, if not, will get an error.</p>
-        <p><code>const x; // SyntaxError: Missing initializer in const declaration</code></p> <br>
-        <p>It can not be reinitialized again.</p>
-        <p><code>const x = 10; // Variable 'x' is initialized with 'const' keyword and the value of 10 <br>
-                 const x = 20; // SyntaxError: Identifier 'x' has already been declared</code>
-        </p> <br>
-        <p>It can not be updated or reassigned to new value.</p>
-        <p><code>const x = 30; // x is 30 <br> x = 40; // TypeError: Assignment to constant variable</code></p> <br>
-        <p>It is block scope.</p>
-        <p><code>const x = 50; // x is 50 <br> { const x = 60; } // x is 60 since this is in block scope</code></p>
-
-        <br><hr><br>
-        <h2>What Is console.log Used For, and How Does It Work?</h2>
-        <p><code>console.log()</code> is a function that outputs information to the console, which is a part of the web browser used for debugging code.</p>
-        <p>It is a tool used to display messages or output information to the browser's console.</p>
-        <p>It's mostly used by developers to debug and inspect code while working on their programs.</p>
-        <p>It is commonly used by developers for debugging and inspecting values or expressions in their code during development.</p>
-
-        <br><hr><br>
-        <h2>What Is the Role of Semicolons in JavaScript, and Programming in General?</h2>
-        <p>In JavaScript, a semicolon (;) is used to indicate the end of a statement.</p>
-        <p>A semicolon signifies the end of an executable line of code.</p>
-        <p>This allows the JavaScript engine to distinguish between separate commands.</p>
-        <p>This helps the JavaScript engine understand the separation of individual instructions, which is important for correct execution.</p>
-        <p>While JavaScript has Automatic Semicolon Insertion (ASI) that can add semicolons automatically,
-           explicitly including them improves code clarity and helps prevent errors that may arise from unexpected ASI behavior.
-        </p>
-        <p>By clearly delineating statements, semicolons contribute to the readability and maintainability of code.</p>
-        <p>Semicolons help prevent ambiguities in code execution and ensure that statements are correctly terminated.</p>
-        <p>They mark the end of statements, improve code readability, and help avoid errors related to ASI.</p>
-
-        <br><hr><br>
-        <h2>What Are Comments in JavaScript, and When Should You Use Them?</h2>
-        <p>The <code>//</code> symbols are used to add comments in the code which dictates notes for developers or other programmers that are ignored when the code runs.</p>
-        <p>Comments in programming are used to provide additional context for the code or leave notes for yourself and others.</p>
-        <p>Comments are lines or blocks of text that are ignored by the JavaScript engine when your code is executed.</p>
-        <p>Single-line comments are created using two forward slashes (//).</p>
-        <p>Multi-line comments (/**/) are useful when you need to write longer descriptions, explanations, or notes in your code.</p>
-        <p>The goal for comment is to enhance readability, not clutter the code with unnecessary explanations.</p>
-
-        <br><hr><br>
-        <h2>What Is Dynamic Typing in JavaScript, and How Does It Differ from Statically Typed Languages?</h2>
-        <p>JavaScript is a dynamically typed language, meaning developer don't need to specify the data type of a variable when they declare it.</p>
-        <p>Instead, the type is determined based on the value assigned to the variable while the program is running.</p>
-        <p>This allows developer to change the type of a variable throughout the program.</p>
-        <p>The flexibility of dynamic typing makes JavaScript more forgiving and easy to work with for quick scripting,
-           but it can also introduce bugs that may be harder to catch, especially as the program grows larger.
-        </p>
-        <p>In statically typed languages like C# or C++, developer must declare the data type of a variable when they create it, and that type cannot change.</p>
-        <p>The difference between dynamic typing and static typing lies in the flexibility vs. the safety of the code.</p>
-        <p>Dynamically typed languages offer flexibility but at the cost of potential runtime errors.</p>
-        <p>Statically typed languages enforce stricter rules that can prevent certain errors, but they require more upfront declaration
-           and offer less flexibility in changing types.
-        </p>
-
-        <br><hr><br>
-        <h2>How Does the typeof Operator Work, and What Is the typeof null Bug in JavaScript?</h2>
-        <p>The <code>typeof</code> operator in JavaScript is a simple yet powerful tool that lets developer see the data type of a variable or value.</p>
-        <p>It always returns a string indicating the type.</p>
-        <p>Using the <code>typeof</code> operator can be especially useful when developer are debugging or trying to understand what kind of data they're working with in the code.</p>
-
-        <br><hr><br>
-        <h2>What Is Bracket Notation, and How Do You Access Characters from a String?</h2>
-        <p>In JavaScript, strings are treated as sequences of characters, and each character in a string can be accessed using bracket notation.</p>
-        <p>This allows developer to retrieve a specific character from a string based on its position, which is called its index.</p>
-        <p>An index is the position of a character within a string, and it is zero-based.</p>
-        <p>This means that the first character of a string has an index of 0, the second character has an index of 1, and so on.</p>
-        <p>Bracket notation uses square brackets ([]) and the index of the character developer want to access.</p>
-        <p><code>let x = "hello"; <br> console.log(x[1]); // "e"</code></p> <br>
-        <p>The <code>length</code> property of a string displays how many characters it contains.</p>
-        <p>To get the last character of a string, use the length of the string minus one.</p>
-        <p><code>console.log(x[x.length-1]); // "o"</code></p>
-
-        <br><hr><br>
-        <h2>How Do You Create a Newline in Strings and Escape Strings?</h2>
-        <p>Escape Sequence allows developer to create a newline in a string using a special character.</p>
-        <p><code>\n</code> = New line</p>
-        <p><code>\'</code> = Single quote</p>
-        <p><code>\"</code> = Double quotes</p>
-        <p><code>\\</code> = Backslash</p>
-
-        <br><hr><br>
-        <h2>What Are Template Literals, and What Is String Interpolation?</h2>
-        <p>Template literals are defined with backticks (`).</p>
-        <p>They allow for easier string manipulation, including embedding variables directly inside a string,
-           a feature known as string interpolation <code>${<i>myVariable</i>}</code>.
-        </p>
-        <p>Template literals make it easier to create strings that span multiple lines or include expressions (like variables or even JavaScript code) directly within the string.</p>
-        <p><code>const name = "John"; <br> let greeting = `Hello, ${name}!`; // Hello, John!</code></p>
-        <p>String interpolation allows developer to embed variables and expressions inside a string.</p>
-        <p><code>const name = "John"; <br> const age = 25; <br> let bio = `My name is ${name} and I am ${age} age years old.`</code></p>
-        <p>Another great feature of template literals is that they support multiline strings.</p>
-
-        <br><hr><br>
-        <h2>How Can You Find the Position of a Substring in a String?</h2>
-        <p>To locate the position of a substring inside of a string, the indexOf() method can be used.</p>
-        <p>If the substring is found, indexOf() returns the index (or position) of the first occurrence of that substring.</p>
-        <p>If the substring is not found, indexOf() returns -1, which indicates that the search was unsuccessful.</p>
-        <p>The indexOf method is case-sensitive.</p>
-        <p>The indexOf() method takes two arguments.</p>
-        <p>The first is the substring developer want to find within the larger string, and the second is an option starting position for the search.</p>
-
-        <br><hr><br>
-        <h2>What Is the prompt() Method, and How Does It Work?</h2>
-        <p>The prompt() method is a dialog box that asks the user for some input, and then it returns the text entered by the user as a string.</p>
-        <p>The prompt() method takes two arguments: The first one is the message which will appear inside the dialog box, typically prompting the user to enter information.</p>
-        <p>The second one is a default value which is optional and will fill the input field initially.</p>
-        <p><code>prompt(message, default);</code></p>
-        <p>The prompt() method will halt the execution of the script until the user interacts with the dialog box.</p>
-        <p>The prompt method returns null when the user cancels the prompt dialog box.</p>
-        <p>This means the rest of the JavaScript code won't run until the user either provides input and clicks "OK", or cancels the prompt.</p>
-        <p>Even when the prompt() is useful for quick testing or small applications, it's generally avoided in modern, complex web applications
-           due to its disruptive nature and inconsistent behavior across different browsers.
-        </p>
-
-        <br><hr><br>
-        <h2>What Is ASCII, and How Does It Work with charCodeAt() and fromCharCode()?</h2>
-        <p>ASCII, short for American Standard Code for Information Interchange, is a character encoding standard used in computers to represent text.</p>
-        <p>It assigns a numeric value to each character, which is universally recognized by machines.</p>
-        <p>While JavaScript strings use Unicode (UTF-16) internally, ASCII values match the first 128 Unicode characters, which is why ASCII-based examples work in JavaScript.</p>
-        <p>ASCII is a system for encoding characters such as letters, digits, and symbols into numerical values.</p>
-        <p>Each character is mapped to a specific number.</p>
-        <p>The ASCII standard covers 128 characters including: Uppercase and lowercase English letters (A-Z, a-z), Numbers (0-9),
-           Common punctuation marks and symbols (!, @, #, and so on), Control characters (such as newline and tab)
-        </p>
-        <p>The charCodeAt() method allows access the numeric code of a character.</p>
-        <p>This method returns the UTF-16 code unit of the character at a specified index.</p>
-        <p>For the first 128 characters, this value matches the ASCII code.</p>
-        <p>The fromCharCode() method allows developer to convert a UTF-16 code unit (which matches ASCII for basic characters) into its corresponding character.</p>
-
-        <br><hr><br>
-        <h2>How Can You Test if a String Contains a Substring?</h2>
-        <p>The includes() method is used to check if a string contains a specific substring.</p>
-        <p>If the substring is found within the string, the method returns true otherwise, it returns false.</p>
-        <p><code><i>string</i>.includes(<i>searchValue</i>);</code></p>
-        <p>The includes() method is case-sensitive.</p>
-        <p>The includes() method can be used to check for a substring starting at a specific index in the string by providing a second parameter.</p>
-
-        <br><hr><br>
-        <h2>How Can You Extract a Substring from a String?</h2>
-        <p>The slice() method allows you to extract a portion of a string and returns a new string, without modifying the original string.</p>
-        <p>It takes two parameters: the starting index and the optional ending index.</p>
-        <p>startIndex is the position where the extraction starts.</p>
-        <p>endIndex is where the extraction ends.</p>
-        <p>If not provided, slice() extracts until the end of the string.</p>
-
-        <br><hr><br>
-        <h2>How Can You Change the Casing for a String?</h2>
-        <p>The toUpperCase() method converts all the characters to uppercase letters and returns a new string with all uppercase characters.</p>
-        <p>This is useful when developer want to emphasize text or create consistency in the format of strings.</p>
-        <p>The toLowerCase() method converts all characters in a string to lowercase.</p>
-        <p>This is helpful when developer need to standardize input, such as when comparing user-provided text or making case-insensitive checks.</p>
-        <p>These methods are particularly useful for standardizing text input, making case-insensitive comparisons, and ensuring design consistency.</p>
-
-        <br><hr><br>
-        <h2>How Can You Trim Whitespace from a String?</h2>
-        <p>Whitespace refers to spaces, tabs, or line breaks that occur in a string but are not visible characters.</p>
-        <p><code>let greeting = "   Hello   ";</code></p>
-        <p>The trim() method is the most commonly used way to remove whitespace from both the beginning and the end of a string.</p>
-        <p><code>console.log(greeting.trim()); // "Hello"</code></p>
-        <p>trimStart() removes whitespace from the beginning (or start) of the string.</p>
-        <p><code>console.log(greeting.trimStart()); // "Hello   "</code></p>
-        <p>trimEnd() removes whitespace from the end of the string.</p>
-        <p><code>console.log(greeting.trimEnd()); // "   Hello"</code></p>
-
-        <br><hr><br>
-        <h2>How Can You Replace Parts of a String with Another?</h2>
-        <p>The replace() method to find a specified value (like a word or character) in a string and replace it with another value.</p>
-        <p>The method returns a new string with the replacement and leaves the original unchanged because JavaScript strings are immutable.</p>
-        <p><code><i>string</i>.replace(<i>searchValue, newValue</i>);</code></p>
-        <p>searchValue is the desired value to search for in the string.</p>
-        <p>It can be either a string or a regular expression (regex), which describes patterns in text.</p>
-        <p>The replace() method is case-sensitive, meaning that it will only find exact matches of the searchValue.</p>
-        <p>By default, the replace() method will only replace the first occurrence of the searchValue.</p>
-        <p>If the value appears multiple times in the string, only the first one will be replaced.</p>
-
-        <br><hr><br>
-        <h2>How Can You Repeat a String x Number of Times?</h2>
-        <p>The repeat() method is a built-in function in JavaScript that allows developer to repeat a string a specified number of times.</p>
-        <p><code><i>string</i>.repeat(<i>count</i>);</code></p>
-        <p>string is the string developer want to repeat, and count is the number of times developer want the string to be repeated.</p>
-        <p>The count parameter must be a non-negative number, if pass a negative number, JavaScript will throw a RangeError.</p>
-        <p>The count must be a finite number, if repeating a string with an infinite number of times, developer will also get a RangeError.</p>
-        <p>If the count is not an integer (such as a decimal like 2.5), the repeat() method will round it down to the nearest integer.</p>
-        <p>If developer pass 0 as the count, the repeat() method will return an empty string.</p>
-
-        <br><hr><br>
-        <h2>What Are the Different Arithmetic Operators in JavaScript?</h2>
-        <p>All these tools are called arithmetic operators.</p>
-        <p>The addition operator is a plus sign (+).</p>
-        <p>The addition operator allows you to find the total of two or more numbers.</p>
-        <p>The subtraction operator is a minus sign (-).</p>
-        <p>It allows you to find the difference between two numbers.</p>
-        <p>the multiplication operator is represented by an asterisk (*).</p>
-        <p>IT is used to find the product of two or more numbers.</p>
-        <p>the division operator is a slash (/).</p>
-        <p>The remainder operator, represented by a percentage sign (%), returns the remainder of a division.</p>
-        <p>The exponentiation operator, represented by a double asterisk (**).</p>
-
-        <br><hr><br>
-        <h2>What Happens When You Try to Do Calculations with Numbers and Strings?</h2>
-        <p>When developer use + with a number and a string, JavaScript decides to treat them both as strings and joins them together.</p>
-        <p>Type coercion is when a value from one data type is converted into another.</p>
-        <p>When both data type number and string is performed arithmetic, it converts the number to a string and concatenates them.</p>
-        <p>If the string doesn't look like a number, it will result NaN.</p>
-
-        <br><hr><br>
-        <h2>How Does Operator Precedence Work?</h2>
-        <p>Operator precedence determines the order in which operations are evaluated in an expression.</p>
-        <p>Operators with higher precedence are evaluated before those with lower precedence.</p>
-        <p>JavaScript evaluated math expression from left to right.</p>
-        <p>Operator precedenc prioritize division and multiplication happen before addition and subtraction.</p>
-        <p>Anything inside parentheses is evaluated first, no matter what.</p>
-        <p>As for the exponent operator, it is right-to-left associative.</p>
-
-        <br><hr><br>
-        <h2>How Do the Increment and Decrement Operators Work?</h2>
-        <p>The increment and decrement operators are represented by ++ and --, respectively.</p>
-        <p>They both allows to adjust the value of a variable by 1.</p>
-        <p>For the increment operator, prefix is ++x and postfix is x++.</p>
-        <p>Prefix (++x) increases the value of the variable first, then returns a new value.</p>
-        <p>Postfix (x++) returns the current value of the variable first, then increases it.</p>
-        <p>The decrement operator does the same thing as increment, except it decreases the value by 1.</p>
-        <p>Prefix (--x) decreases the value of the variable first, then returns the new value.</p>
-        <p>Postfix (x--) returns the current value first, then decreases it</p>
-
-        <br><hr><br>
-        <h2>What Are Compound Assignment Operators in JavaScript, and How Do They Work?</h2>
-        <p>Compound assignment operators provide a concise shorthand for an operation on a variable followed by storing the result in that same variable.</p>
-        <p>Addition assignment operator (+=) lets developer add a value to an existing variable.</p>
-        <p>Subtraction assignment operator (-=) lets developer subtract a value to an existing variable.</p>
-        <p>Multiplication assignment operator (*=) lets developer multiply a value to an existing variable.</p>
-        <p>Division assignment operator (/=) lets developer divide a value to an existing variable.</p>
-        <p>Remainder assignment operator (%=), which divides a variable by the specified number and assigns the remainder to the variable.</p>
-        <p>Exponent assignment operator (**=), which raises a variable to the power of the specified number and reassigns the result to the variable.</p>
-        <p>Bitwise AND assignment operator (&=), which performs a bitwise AND operation with the specified number and reassigns the result to the variable.</p>
-        <p>Bitwise OR assignment operator (|=), which performs a bitwise OR operation with the specified number and reassigns the result to the variable.</p>
-
-        <br><hr><br>
-        <h2>What Are Comparison Operators, and How Do They Work?</h2>
-        <p>Comparison operators allow developer to compare two values and return a true or false result.</p>
-        <p>Developer use comparisons in if statements, loops, and many other situations where they need to make decisions based on certain conditions.</p>
-        <p>The greater than operator, represented by a right-angle bracket (>), checks if the value on the left is greater than the one on the right.</p>
-        <p>The greater than or equal operator, represented by a right-angle bracket and the equals sign (>=),
-           checks if the value on the left is either greater than or equal to the one on the right.
-        </p>
-        <p>The lesser than operator, represented by a left-angle bracket (&lt;), checks if the value on the left is smaller than the one on the right.</p>
-        <p>The less than or equal operator, represented by a left-angle bracket and the equals sign (&lt;=)
-           checks if the value on the left is smaller than or equal to the one on the right.
-        </p>
-
-        <br><hr><br>
-        <h2>What Are Unary Operators, and How Do They Work?</h2>
-        <p>Unary operators act on a single operand to perform operations like type conversion, value manipulation, or checking certain conditions.</p>
-        <p>The unary plus operator converts its operand into a number and If the operand is already a number, it remains unchanged.</p>
-        <p>The logical NOT operator, represented by an exclamation mark (!) is another unary operator.</p>
-        <p>It flips the boolean value of its operand.</p>
-        <p>The bitwise NOT operator is a less commonly used unary operator.</p>
-        <p>Represented by a tilde, ~, it inverts the binary representation of a number.</p>
-        <p>The void keyword is a unary operator that evaluates an expression and returns undefined.</p>
-        <p>void is also commonly used in hyperlinks to prevent navigation.</p>
-
-        <br><hr><br>
-        <h2>What Are Bitwise Operators, and How Do They Work?</h2>
-        <p>Bitwise operators are special operators that work on the binary representations of numbers.</p>
-        <p>In computing, a bit is the most basic unit of information.</p>
-        <p>It can have only two values: 0 or 1. Binary is a number system that uses only these two digits to represent all numbers.</p>
-        <p>The bitwise AND (&) operator returns a 1 in each bit position for which the corresponding bits of both operands are 1.</p>
-        <p>The bitwise OR (|) operator returns a 1 in each bit position for which the corresponding bits of either or both operands are 1.</p>
-        <p>The bitwise XOR (^) operator returns a 1 in each bit position for which the corresponding bits of either, but not both, operands are 1.</p>
-        <p>The bitwise NOT (~) operator inverts all the bits of its operand.</p>
-        <p>The left shift (&lt;&lt;) operator shifts all bits to the left by a specified number of positions.</p>
-        <p>The right shift (>>) operator shifts all bits to the right.</p>
-        <p>Bitwise operators are often used in low-level programming and cryptography.</p>
-
-        <br><hr><br>
-        <h2>What Are Conditional Statements, and How Do If/Else If/Else Statements Work?</h2>
-        <p>Conditional statements let you make decisions in your JavaScript code.</p>
-        <p>An if statement takes a condition and runs a block of code if that condition is truthy.</p>
-        <p>Truthy values are any values that result in true when evaluated in a Boolean context like an if statement.</p>
-        <p>Non-empty strings ("Hello")</p>
-        <p>Any number other than 0 and -0, for example, 4, -5, and others</p>
-        <p>The boolean true</p>
-        <p>Arrays</p>
-        <p>Objects</p>
-        <p>Falsy values are values that evaluate to false in a boolean context.</p>
-        <p>Empty string ("")</p>
-        <p>Zero (0)</p>
-        <p>Boolean false</p>
-        <p>null, undefined, NaN</p>
-        <p>The ternary operator is a compact way to write simple if/else statements.</p>
-        <p>It has three parts: a condition, a result if the condition is true, and a result if it is false.</p>
-        <p><code>condition ? expressionIfTrue : expressionIfFalse;</code></p>
-
-        <br><hr><br>
-        <h2>What Are Binary Logical Operators, and How Do They Work?</h2>
-        <p>Binary logical operators evaluate two expressions and return a result based on their truthiness.</p>
-        <p>The logical AND operator is represented by a double ampersand (&&).</p>
-        <p>It checks if both operands are true and returns a result.</p>
-        <p>If both operands are truthy, it returns the second value, that is, the one on the right.</p>
-        <p>The logical AND operator is useful when you want to check multiple conditions and ensure that all are true before proceeding.</p>
-        <p>The logical OR operator checks if at least one of the operands is truthy.</p>
-        <p>If the first operand is truthy, it returns that value.</p>
-        <p>The nullish coalescing operator is more sophisticated than logical OR and logical AND.</p>
-        <p>Represented by a double question mark (??), it helps in scenarios where developer want to return a value only if the first one is null or undefined.</p>
-
-        <br><hr><br>
-        <h2>What Is the Math Object in JavaScript, and What Are Some Common Methods?</h2>
-        <p>The Math.random() method generates a random floating-point number between 0 (inclusive) and 1 (exclusive).</p>
-        <p>This means the possible output can be 0, but it will never actually reach 1.</p>
-        <p>Math.min() and Math.max() both take a set of numbers and return the minimum and maximum value, respectively.</p>
-        <p>The Math.ceil() and Math.floor() methods allows developer to round numbers up or down to the nearest whole integer.</p>
-        <p>Math.trunc() removes the decimal part of a number, returning only the integer portion, without rounding.</p>
-        <p>If you need to get the square root or cube root of a number, you can use the Math.sqrt() and Math.cbrt() methods, respectively.</p>
-        <p>If you need to get the absolute value of a number, you can use the Math.abs() method.</p>
-        <p>Math.abs() returns the absolute value of a number, turning negatives into positives.</p>
-        <p>Math.pow() takes two numbers and raise the first to the power of the second.</p>
-        <p>The formula to generate a random number between two values: <code>Math.random() * (maximum - minimum) + minimum;</code></p>
-        <p>The formula to generate a random integer between two values: <code>Math.floor(Math.random() * (maximum - minimum) + minimum);</code></p>
-
-        <br><hr><br>
-        <h2>How Does isNaN Work?</h2>
-        <p>NaN stands for "Not a Number".</p>
-        <p>It's a special value that represents an unrepresentable or undefined numerical result.</p>
-        <p>NaN is a property of the global object, and it's also considered a type of number in JavaScript, which might seem counterintuitive at first.</p>
-        <p>NaN is typically the result of operations that should return a number but can't produce a meaningful numerical value.</p>
-        <p>The isNaN() function property is used to determine whether a value is NaN or not.</p>
-        <p>isNaN() first attempts to convert the parameter to a number.</p>
-        <p>If it can't be converted, it returns true.</p>
-        <p>This behavior can lead to some surprising results, especially when dealing with strings that can be coerced into numbers.</p>
-        <p>Number.isNaN() method does not attempt to convert the parameter to a number before testing. It only returns true if the value is exactly NaN.</p>
-        <p>Number.isNaN() provides a more reliable way to check for NaN values, especially in cases where type coercion might lead to unexpected results
-           with the global isNaN() function.
-        </p>
-
-        <br><hr><br>
-        <h2>How Do the parseFloat() and parseInt() Methods Work?</h2>
-        <p>parseFloat() and parseInt() are two essential methods in JavaScript for converting strings to numbers.</p>
-        <p>parseFloat() method parses a string argument and returns a floating-point number.</p>
-        <p>It's designed to extract a number from the beginning of a string, even if the string contains non-numeric characters later on.</p>
-        <p>parseFloat() starts parsing from the beginning of the string and continues until it encounters a character that can't be part of a floating-point number.</p>
-        <p>If it can't find a valid number at the start of the string, it returns NaN.</p>
-        <p>parseInt() method parses a string argument and returns an integer.</p>
-        <p>It starts from the beginning of the string, but it stops at the first non-digit character.</p>
-        <p>For floating-point numbers, it returns only the integer part.</p>
-        <p>If it can't find a valid integer at the start of the string, it returns NaN.</p>
-        <p>It's worth noting that while these methods are powerful, they have some limitations.</p>
-        <p>For instance, they don't handle all number formats, such as scientific notation, directly.</p>
-        <p>For more complex parsing needs, you might need to use additional techniques or libraries.</p>
-
-        <br><hr><br>
-        <h2>What Is the toFixed() Method, and How Does It Work?</h2>
-        <p>The .toFixed() method is a built-in JavaScript function that formats a number using fixed-point notation.</p>
-        <p>It's particularly useful when you need to control the number of decimal places in a number, especially for displaying currency values or
-           when working with precise measurements.
-        </p>
-        <p>The .toFixed() method is called on a number and takes one optional argument, which is the number of digits to appear after the decimal point.</p>
-        <p>It returns a string representation of the number with the specified number of decimal places.</p>
-        <p>It's important to note that .toFixed() returns a string, not a number.</p>
-        <p>The .toFixed() method rounds the number to the nearest value that can be represented with the specified number of decimal places.</p>
-        <p>The .toFixed() method can be particularly useful when working with financial calculations or displaying prices.</p>
-
-        <br><hr><br>
-        <h2>How Do Comparisons Work with Null and Undefined Data Types?</h2>
-        <p>null and undefined are two distinct data types that represent the absence of a value, but they behave differently in comparisons.</p>
-        <p>A variable is undefined when it has been declared but hasn't been assigned a value.</p>
-        <p>It's the default value of uninitialized variables and function parameters that weren't provided an argument.</p>
-        <p>The null type, is an assignment value that represents a deliberate non-value.</p>
-        <p>It's often used to indicate that a variable intentionally has no value.</p>
-        <p>null and undefined are considered equal when comparing them using the equality operator (==).</p>
-        <p>However, when using the strict equality operator (===), which checks both value and type without performing type coercion, null and undefined are not equal.</p>
-        <p>undefined, always converts to NaN in numeric contexts, which makes all numeric comparisons with undefined return false</p>
-
-        <br><hr><br>
-        <h2>What Are Switch Statements and How Do They Differ from If/Else Chains?</h2>
-        <p>switch statements and if/else if/else chains are both control flow structures in programming that allow us to execute different code blocks
-           based on certain conditions.
-        </p>
-        <p>However, they have distinct characteristics and use cases.</p>
-        <p>A switch statement evaluates an expression and matches its value against a series of case clauses.</p>
-        <p>When a match is found, the code block associated with that case is executed.</p>
-        <p>The break statement at the end of each case is crucial.</p>
-        <p>It tells the program to exit the switch block once a matching case has been executed.</p>
-        <p>Without it, the program would continue executing subsequent cases, a behavior known as "fall-through".</p>
-        <p>switch statements are typically used when you're comparing a single variable against multiple possible values.</p>
-        <p>They're especially useful when you have many potential conditions to check against a single variable.</p>
-        <p>switch statements can be more readable and concise when dealing with many possible values for a single variable.</p>
-        <p>if/else if statements on the other hand are more flexible.</p>
-        <p>They can evaluate complex conditions and different variables in each clause.</p>
-        <p>This makes them suitable for a wider range of scenarios.</p>
-
-        <br><hr><br>
-        <h2>What Is the Purpose of Functions, and How Do They Work?</h2>
-        <p>A function is a reusable block of code that performs a specific task and can be called with various inputs.</p>
-        <p>Functions are reusable pieces of code that perform a specific task or calculate a value.</p>
-        <p>An argument is a value developer give to a function or method when they call it, enabling that function or method to perform its task
-           using the specific information you provide.
-        </p>
-        <p>A function call, or invocation, is when we actually use or execute the function.</p>
-        <p>To call a function, you will need to reference the function name followed by a set of parentheses.</p>
-        <p>Parameters act as placeholders for the values that will be passed to the function when it is called.</p>
-        <p>They allow functions to accept input and work with that input.</p>
-        <p>Arguments are the actual values passed to the function when it is called.</p>
-        <p>When a function finishes its execution, it will always return a value and by default, the return value will be undefined.</p>
-        <p>If you need your function to return a specific value, then you will need to use the return statement.</p>
-        <p>An anonymous function is a function without a name that can be assigned to a variable</p>
-        <p>Functions support default parameters, allowing you to set default values for parameters.</p>
-        <p>These default values are used if the function is called without an argument for that parameter.</p>
-
-        <br><hr><br>
-        <h2>What Are Arrow Functions, and How Do They Work?</h2>
-        <p>Most of the syntax will look familiar to you except for the missing function keyword and the addition of the arrow (=>) between the name parameter and the function body.</p>
-        <p>If your parameter list only has one parameter in it, then you can remove the parentheses.</p>
-        <p>If your arrow function has no parameters, then you must use the parentheses.</p>
-        <p>When first learning about functions, you had to wrap the function body in curly braces.</p>
-        <p>But if your function body only contains a single line of code, you can remove the curly braces.</p>
-        <p>It is important to note that removing the parentheses and curly braces for regular function syntax will not work.</p>
-        <p>These types of one line functions only work if you are using the arrow function syntax.</p>
-        <p>Another key concept is the return statement.</p>
-
-        <br><hr><br>
-        <h2>What Is Scope in Programming, and How Does Global, Local, and Block Scope Work?</h2>
-        <p>Scope in programming refers to the visibility and accessibility of variables in different parts of your code.</p>
-        <p>It determines where variables can be accessed or modified.</p>
-        <p>There are three main types of scope: global scope, local scope, and block scope.</p>
-        <p>Global scope is the outermost scope in a JavaScript program.</p>
-        <p>Variables declared in the global scope are accessible from anywhere in your code, including within functions and blocks.</p>
-        <p>These variables are often called global variables.</p>
-        <p>While global variables can be convenient, they should be used sparingly as they can lead to naming conflicts and make your code harder to maintain.</p>
-        <p>Local scope, on the other hand, refers to variables that are only accessible within a function.</p>
-        <p>Block scope is a concept introduced with the let and const keywords in ES6.</p>
-        <p>A block is any code section within curly braces, {}, such as in if statements, for loops, or while loops.</p>
-        <p>Variables declared with let or const inside a block are only accessible within that block.</p>
-
-        <br><hr><br>
-        <h2>What Are the Key Characteristics of JavaScript Arrays?</h2>
-        <p>An array in JavaScript is an ordered collection of values, each identified by a numeric index.</p>
-        <p>The values in a JavaScript array can be of different data types, including numbers, strings, booleans, objects, and even other arrays.</p>
-        <p>Another key characteristic of arrays in JavaScript is that they are dynamic, meaning that their size can change after they are created.</p>
-        <p>JavaScript arrays are versatile and useful when it comes to data storage inside your programs.</p>
-
-        <br><hr><br>
-        <h2>How Do You Access and Update Elements in an Array?</h2>
-        <p>Since arrays are zero based indexed, the first element will be at index 0, the second index will be at index 1, etc.</p>
-
-        <br><hr><br>
-        <h2>How Do You Add and Remove Elements from the Beginning and End of an Array?</h2>
-        <p>There are four main methods for adding and removing elements from the beginning and end of an array: push(), pop(), shift(), and unshift().</p>
-        <p>The push() method is used to add one or more elements to the end of an array.</p>
-        <p>The return value for the push() method is the new length of the array.</p>
-        <p>The pop() method removes the last element from an array and returns that element.</p>
-        <p>It also modifies the original array.</p>
-        <p>The unshift() method adds one or more elements to the beginning of an array and returns its new length.</p>
-        <p>It works similarly to push(), but modifies the start of the array instead of the end.</p>
-        <p>we use unshift() to add the number 1 to the beginning of the numbers array.</p>
-        <p>The method returns the new length of the array, which is 3.</p>
-        <p>the shift() method removes the first element from an array and returns that element.</p>
-        <p>It's similar to pop(), but it works at the beginning of the array instead of the end.</p>
-        <p>Note that while push() and unshift() can add multiple elements at once, pop() and shift() remove only one element at a time.</p>
-
-        <br><hr><br>
-        <h2>What Is the Difference Between One-Dimensional and Two-Dimensional Arrays?</h2>
-        <p>A one-dimensional array, often called an array, is like a single row of boxes.</p>
-        <p>A two-dimensional array is like a grid of lockers - multiple rows and columns, essentially an array of arrays.</p>
-
-        <br><hr><br>
-        <h2>What Is Array Destructuring, and How Does It Work?</h2>
-        <p>Array destructuring is a feature in JavaScript that allows you to extract values from arrays and assign them to variables in a more concise and readable way.</p>
-        <p>It provides a convenient syntax for unpacking array elements into distinct variables.</p>
-        <p>This technique is particularly useful when working with arrays and functions that return multiple values.</p>
-        <p><code>let fruits = ["apple", "banana", "orange"];</code></p>
-        <p><code>let [first, second, third] = fruits;</code></p>
-        <p><code>console.log(first);  // "apple" <br> console.log(second); // "banana" <br> console.log(third);  // "orange"</code></p>
-        <p>Array destructuring also allows developer to skip elements they're not interested in by using commas.</p>
-        <p>Another powerful feature of array destructuring is the ability to use default values</p>
-        <p>Rest syntax, denoted by three dots (...).</p>
-        <p>It allows you to capture the remaining elements of an array that haven't been destructured into a new array.</p>
-
-        <br><hr><br>
-        <h2>How Can You Use String and Array Methods to Reverse a String?</h2>
-        <p>The split() method reversing a string is to convert it into an array of individual characters.</p>
-        <p>The split() method divides a string into an array of substrings and specifies where each split should happen based on a given separator.</p>
-        <p>If no separator is provided, the method returns an array containing the original string as a single element.</p>
-        <p>An empty string (""), which splits the string into individual characters.</p>
-        <p>A single space (" "), which splits the string wherever spaces occur.</p>
-        <p>A dash ("-"), which splits the string at each dash.</p>
-        <p>Once we have an array of characters, we can use the reverse() method to reverse the order of elements in the array.</p>
-        <p>The reverse() method is an array method that reverses an array in place. This means it modifies the original array rather than creating a new one.</p>
-        <p>The final step is to convert the reversed array of characters back into a string. We can accomplish this using the join() method.</p>
-        <p>The join() method creates and returns a new string by concatenating all of the elements in an array, separated by a specified separator string.</p>
-
-        <br><hr><br>
-        <h2>MISC</h2>
-        <p>A method is a type of function that is associated with an object, meaning it operates on the data contained within that object.</p>
-        <p>An argument is a value developer give to a function or method when they call it, enabling that function or method to perform its task
-           using the specific information you provide.
-        </p>
       </section>
 
       <!----------------------------------------------------------------------- JAVASCRIPT REFERENCES ----------------------------------------------------------------------->
@@ -659,6 +50,18 @@
         <h2>JAVASCRIPT REFERENCE</h2>
         <input type="text" id="JavaScript-References-Input" onkeyup="SearchJavaScriptReferences()" placeholder="Find JavaScript references..">
         <ul id="JavaScript-References-List">
+          <div class="Category"><b>ARRAY</b></div>
+          <li><a onclick="FillMethod()"><code>fill()</code> <span>Fills specified elements in an <b>array</b> with a value</span></a></li>
+          <li><a onclick="JoinMethod()"><code>join()</code> <span>Returns an <b>array</b> as a string</span></a></li>
+          <li><a onclick="PopMethod()"><code>pop()</code> <span>Removes the last element of an <b>array</b></span></a></li>
+          <li><a onclick="PushMethod()"><code>push()</code> <span>Adds new items to the end of an <b>array</b></span></a></li>
+          <li><a onclick="ReverseMethod()"><code>reverse()</code> <span>Reverses the order of the elements in an <b>array</b></span></a></li>
+          <li><a onclick="ShiftMethod()"><code>shift()</code> <span>Removes the first item of an <b>array</b></span></a></li>
+          <li><a onclick="ToReversedMethod()"><code>toReversed()</code> <span>Reverses the order of the elements in an <b>array</b></span></a></li>
+          <li><a onclick="UnshiftMethod()"><code>unshift()</code> <span>Adds new elements to the beginning of an <b>array</b></span></a></li>
+          <li><a onclick="WithMethod()"><code>with()</code> <span>Updates a specified element of an <b>array</b></span></a></li>
+
+          <div class="Category"><b>OTHERS</b></div>
           <li><a onclick="Example()"><code>[]</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>assign()</code> <span>Object</span></a></li>
           <li><a onclick="Example()"><code>at()</code> <span>String - Array</span></a></li>
@@ -677,7 +80,6 @@
           <li><a onclick="Example()"><code>entries()</code> <span>Array - Object</span></a></li>
           <li><a onclick="Example()"><code>EPSILON</code> <span>Number</span></a></li>
           <li><a onclick="Example()"><code>every()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>fill()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>filter()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>find()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>findIndex()</code> <span>Array</span></a></li>
@@ -694,6 +96,8 @@
           <li><a onclick="Example()"><code>getOwnPropertyDescriptors()</code> <span>Object</span></a></li>
           <li><a onclick="Example()"><code>getOwnPropertyNames()</code> <span>Object</span></a></li>
           <li><a onclick="Example()"><code>groupBy()</code> <span>Object</span></a></li>
+          <li><a onclick="Example()"><code>hasOwnProperty()</code> <span>Object</span></a></li>
+          <li><a onclick="Example()"><code>in</code> <span>Object</span></a></li>
           <li><a onclick="Example()"><code>includes()</code> <span>String - Array</span></a></li>
           <li><a onclick="Example()"><code>indexOf()</code> <span>String - Array</span></a></li>
           <li><a onclick="Example()"><code>isArray()</code> <span>Array</span></a></li>
@@ -705,7 +109,6 @@
           <li><a onclick="Example()"><code>isSafeInteger()</code> <span>Number</span></a></li>
           <li><a onclick="Example()"><code>isSealed()</code> <span>Object</span></a></li>
           <li><a onclick="Example()"><code>isWellFormed()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>join()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>keys()</code> <span>Array - Object</span></a></li>
           <li><a onclick="Example()"><code>lastIndexOf()</code> <span>String - Array</span></a></li>
           <li><a onclick="Example()"><code>length</code> <span>String - Array</span></a></li>
@@ -727,19 +130,15 @@
           <li><a onclick="Example()"><code>padStart()</code> <span>String</span></a></li>
           <li><a onclick="Example()"><code>parseFloat()</code> <span>Number</span></a></li>
           <li><a onclick="Example()"><code>parseInt()</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>pop()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>preventExtensions()</code> <span>Object</span></a></li>
           <li><a onclick="Example()"><code>prototype</code> <span>Number - String - Boolean - Array - Object</span></a></li>
-          <li><a onclick="Example()"><code>push()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>reduce()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>reduceRight()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>repeat()</code> <span>String</span></a></li>
           <li><a onclick="Example()"><code>replace()</code> <span>String</span></a></li>
           <li><a onclick="Example()"><code>replaceAll()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>reverse()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>seal()</code> <span>Object</span></a></li>
           <li><a onclick="Example()"><code>search()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>shift()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>slice()</code> <span>String - Array</span></a></li>
           <li><a onclick="Example()"><code>some()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>sort()</code> <span>Array</span></a></li>
@@ -754,7 +153,6 @@
           <li><a onclick="Example()"><code>toLocaleUpperCase()</code> <span>String</span></a></li>
           <li><a onclick="Example()"><code>toLowerCase()</code> <span>String</span></a></li>
           <li><a onclick="Example()"><code>toPrecision(x)</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>toReversed()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>toSorted()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>toSpliced()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>toString()</code> <span>Number - String - Boolean - Array - Object</span></a></li>
@@ -763,23 +161,163 @@
           <li><a onclick="Example()"><code>trim()</code> <span>String</span></a></li>
           <li><a onclick="Example()"><code>trimEnd()</code> <span>String</span></a></li>
           <li><a onclick="Example()"><code>trimStart()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>unshift()</code> <span>Array</span></a></li>
           <li><a onclick="Example()"><code>valueOf()</code> <span>Number - String - Boolean - Array - Object</span></a></li>
           <li><a onclick="Example()"><code>values()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>with()</code> <span>Array</span></a></li>
-          <!--
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          <li><a onclick="Example()"><code>EXAMPLE</code> <span></span></a></li>
-          -->
         </ul>
+      </section>
+
+      <!---------------------------------------------------------------------------- FILL METHOD ---------------------------------------------------------------------------->
+      <section id="Fill-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="FillMethod()"><code><i>myArray</i>.fill(<i>myElement</i>, <i>myIndex</i>, <i>myPosition</i>)</code></h2>
+          <p>The <code>fill()</code> method fills specified elements in an array with a value.</p>
+          <p>The <code>fill()</code> method overwrites the original array.</p>
+          <p>The <code>myIndex</code> and <code>myPosition</code> can be specified. (if omitted, all elements will be filled)</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.fill("Dahlia"); // ['Dahlia', 'Dahlia', 'Dahlia']</code></p>
+          <p><code>myArray.fill("Dahlia", 1, 3); // ['Apple', 'Dahlia', 'Dahlia']</code></p>
+          <p><code>myArray.fill("Dahlia", 1, 4); // ['Apple', 'Dahlia', 'Dahlia']</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- JOIN METHOD ---------------------------------------------------------------------------->
+      <section id="Join-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="JoinMethod()"><code><i>myArray</i>.join("<i>mySeparator</i>")</code></h2>
+          <p>The <code>join()</code> method returns an array as a string.</p>
+          <p>The <code>join()</code> method does not change the original array.</p>
+          <p>Any separator can be specified. (the default is comma)</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.join(); // Apple,Banana,Carbonara</code></p>
+          <p><code>myArray.join(", "); // Apple, Banana, Carbonara</code></p>
+          <p><code>myArray.join(" - "); // Apple - Banana - Carbonara</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- POP METHOD ----------------------------------------------------------------------------->
+      <section id="Pop-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="PopMethod()"><code><i>myArray</i>.pop()</code></h2>
+          <p>The <code>pop()</code> method removes the last element of an array.</p>
+          <p>The <code>pop()</code> method changes the original array.</p>
+          <p>The <code>pop()</code> method returns the removed element.</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.pop(); // Carbonara</code></p>
+          <p><code>console.log(myArray); // ['Apple', 'Banana']</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- PUSH METHOD ---------------------------------------------------------------------------->
+      <section id="Push-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="PushMethod()"><code><i>myArray</i>.push(<i>myElement<sub>1</sub>, myElement<sub>2</sub>, ..., myElement<sub>n</sub></i>)</code></h2>
+          <p>The <code>push()</code> method adds new items to the end of an array.</p>
+          <p>The <code>push()</code> method changes the length of the array.</p>
+          <p>The <code>push()</code> method returns the new length.</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.push("Dahlia"); // 4</code></p>
+          <p><code>console.log(myArray); // ['Apple', 'Banana', 'Carbonara', 'Dahlia']</code></p>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------------------------- REVERSE METHOD --------------------------------------------------------------------------->
+      <section id="Reverse-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="ReverseMethod()"><code><i>myArray</i>.reverse()</code></h2>
+          <p>The <code>reverse()</code> method reverses the order of the elements in an array.</p>
+          <p>The <code>reverse()</code> method overwrites the original array.</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.reverse(); // ['Carbonara', 'Banana', 'Apple']</code></p>
+          <p><code>console.log(myArray); // ['Carbonara', 'Banana', 'Apple']</code></p>
+        </div>
+      </section>
+
+      <!--------------------------------------------------------------------------- SHIFT METHOD ---------------------------------------------------------------------------->
+      <section id="Shift-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="ShiftMethod()"><code><i>myArray</i>.shift()</code></h2>
+          <p>The <code>shift()</code> method removes the first item of an array.</p>
+          <p>The <code>shift()</code> method changes the original array.</p>
+          <p>The <code>shift()</code> method returns the shifted element.</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.shift(); // Apple</code></p>
+          <p><code>console.log(myArray); // ['Banana', 'Carbonara']</code></p>
+        </div>
+      </section>
+
+      <!------------------------------------------------------------------------ TOREVERSED METHOD -------------------------------------------------------------------------->
+      <section id="ToReversed-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="ToReversedMethod()"><code><i>myArray</i>.toReversed()</code></h2>
+          <p>The <code>toReversed()</code> method reverses the order of the elements in an array.</p>
+          <p>The <code>toReversed()</code> method returns a new array.</p>
+          <p>The <code>toReversed()</code> method does not overwrites the original array.</p>
+          <p>The <code>toReversed()</code> method is the copying version of the <code>reverse()</code> method</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.toReversed(); // ['Carbonara', 'Banana', 'Apple']</code></p>
+          <p><code>console.log(myArray); // ['Apple', 'Banana', 'Carbonara']</code></p>
+        </div>
+      </section>
+
+      <!-------------------------------------------------------------------------- UNSHIFT METHOD --------------------------------------------------------------------------->
+      <section id="Unshift-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="UnshiftMethod()"><code><i>myArray</i>.unshift(<i>myElement<sub>1</sub>, myElement<sub>2</sub>, ..., myElement<sub>n</sub></i>)</code></h2>
+          <p>The <code>unshift()</code> method adds new elements to the beginning of an array.</p>
+          <p>The <code>unshift()</code> method overwrites the original array.</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.unshift("Dahlia"); // 4</code></p>
+          <p><code>console.log(myArray); // ['Dahlia', 'Apple', 'Banana', 'Carbonara']</code></p>
+        </div>
+      </section>
+
+      <!---------------------------------------------------------------------------- WITH METHOD ---------------------------------------------------------------------------->
+      <section id="With-Method" class="Box-Contents">
+        <header>
+          <h2 onclick="WithMethod()"><code><i>myArray</i>.with(<i>myIndex</i>, <i>myElement</i>)</code></h2>
+          <p>The <code>with()</code> method updates a specified array element.</p>
+          <p>The <code>with()</code> method returns a new array.</p>
+          <p>The <code>with()</code> method does not change the original array.</p>
+        </header>
+
+        <div class="Sub-Topics">
+          <h3>Demo</h3>
+          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
+          <p><code>myArray.with(2, "Dahlia"); // ['Apple', 'Banana', 'Dahlia']</code></p>
+          <p><code>console.log(myArray); // ['Apple', 'Banana', 'Carbonara']</code></p>
+        </div>
       </section>
 
       <!------------------------------------------------------------------------- IMPORTING JS FILE ------------------------------------------------------------------------->
