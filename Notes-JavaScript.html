@@ -36,13 +36,13 @@
     <main>
       <!------------------------------------------------------------------------- TOPIC SELECTIONS -------------------------------------------------------------------------->
       <section id="Box-Topic-Selections">
-        <button onclick="JavaScriptIntroduction()">NOTES</button>
+        <button onclick="JavaScriptIntroduction()">INTRODUCTION</button>
         <button onclick="JavaScriptReferences()">JS REFERENCES</button>
       </section>
 
       <!---------------------------------------------------------------------- JAVASCRIPT INTRODUCTION ---------------------------------------------------------------------->
       <section id="JavaScript-Introduction" class="Box-Contents">
-        <h2>What Is JavaScript, and How Does It Work with HTML and CSS?</h2>
+        <h2>INTRODUCTION</h2>
       </section>
 
       <!----------------------------------------------------------------------- JAVASCRIPT REFERENCES ----------------------------------------------------------------------->
@@ -50,273 +50,149 @@
         <h2>JAVASCRIPT REFERENCE</h2>
         <input type="text" id="JavaScript-References-Input" onkeyup="SearchJavaScriptReferences()" placeholder="Find JavaScript references..">
         <ul id="JavaScript-References-List">
+          <div class="Category"><b>NUMBER</b></div>
+          <li><a onclick="ConstructorProperty()"><code>constructor</code><span>Returns the function that created JavaScript's data type prototype</span></a></li>
+          <li><a onclick="EpsilonProperty()"><code>EPSILON</code><span>Returns the difference between 1 and the smallest number greater than 1</span></a></li>
+          <li><a onclick="IsFiniteMethod()"><code>isFinite()</code><span>Checks whether a value is a finite number</span></a></li>
+
+          <div class="Category"><b>STRING</b></div>
+          <li><a onclick="EXAMPLE()"><code>EXAMPLE</code><span></span></a></li>
+
+          <div class="Category"><b>BOOLEAN</b></div>
+          <li><a onclick="EXAMPLE()"><code>EXAMPLE</code><span></span></a></li>
+
           <div class="Category"><b>ARRAY</b></div>
-          <li><a onclick="FillMethod()"><code>fill()</code> <span>Fills specified elements in an <b>array</b> with a value</span></a></li>
-          <li><a onclick="JoinMethod()"><code>join()</code> <span>Returns an <b>array</b> as a string</span></a></li>
-          <li><a onclick="PopMethod()"><code>pop()</code> <span>Removes the last element of an <b>array</b></span></a></li>
-          <li><a onclick="PushMethod()"><code>push()</code> <span>Adds new items to the end of an <b>array</b></span></a></li>
-          <li><a onclick="ReverseMethod()"><code>reverse()</code> <span>Reverses the order of the elements in an <b>array</b></span></a></li>
-          <li><a onclick="ShiftMethod()"><code>shift()</code> <span>Removes the first item of an <b>array</b></span></a></li>
-          <li><a onclick="ToReversedMethod()"><code>toReversed()</code> <span>Reverses the order of the elements in an <b>array</b></span></a></li>
-          <li><a onclick="UnshiftMethod()"><code>unshift()</code> <span>Adds new elements to the beginning of an <b>array</b></span></a></li>
-          <li><a onclick="WithMethod()"><code>with()</code> <span>Updates a specified element of an <b>array</b></span></a></li>
+          <li><a onclick="EXAMPLE()"><code>EXAMPLE</code><span></span></a></li>
+
+          <div class="Category"><b>OBJECT</b></div>
+          <li><a onclick="EXAMPLE()"><code>EXAMPLE</code><span></span></a></li>
 
           <div class="Category"><b>OTHERS</b></div>
-          <li><a onclick="Example()"><code>[]</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>assign()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>at()</code> <span>String - Array</span></a></li>
-          <li><a onclick="Example()"><code>Boolean()</code> <span>Boolean</span></a></li>
-          <li><a onclick="Example()"><code>charAt()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>charCodeAt()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>codePointAt()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>concat()</code> <span>String - Array</span></a></li>
-          <li><a onclick="Example()"><code>constructor</code> <span>Number - String - Boolean - Array - Object</span></a></li>
-          <li><a onclick="Example()"><code>copyWithin()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>create()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>defineProperties()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>defineProperty()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>delete</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>endsWith()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>entries()</code> <span>Array - Object</span></a></li>
-          <li><a onclick="Example()"><code>EPSILON</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>every()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>filter()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>find()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>findIndex()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>findLast()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>findLastIndex()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>flat()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>flatMap()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>forEach()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>freeze()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>from()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>fromCharCode()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>fromEntries()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>getOwnPropertyDescriptor()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>getOwnPropertyDescriptors()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>getOwnPropertyNames()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>groupBy()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>hasOwnProperty()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>in</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>includes()</code> <span>String - Array</span></a></li>
-          <li><a onclick="Example()"><code>indexOf()</code> <span>String - Array</span></a></li>
-          <li><a onclick="Example()"><code>isArray()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>isExtensible()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>isFinite()</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>isFrozen()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>isInteger()</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>isNaN()</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>isSafeInteger()</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>isSealed()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>isWellFormed()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>keys()</code> <span>Array - Object</span></a></li>
-          <li><a onclick="Example()"><code>lastIndexOf()</code> <span>String - Array</span></a></li>
-          <li><a onclick="Example()"><code>length</code> <span>String - Array</span></a></li>
-          <li><a onclick="Example()"><code>localeCompare()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>map()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>match()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>matchAll()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>MAX_SAFE_INTEGER</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>MIN_SAFE_INTEGER</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>MAX_VALUE</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>MIN_VALUE</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>NaN</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>NEGATIVE_INFINITY</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>new Array()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>new Boolean()</code> <span>Boolean</span></a></li>
-          <li><a onclick="Example()"><code>of()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>POSITIVE_INFINITY</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>padEnd()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>padStart()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>parseFloat()</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>parseInt()</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>preventExtensions()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>prototype</code> <span>Number - String - Boolean - Array - Object</span></a></li>
-          <li><a onclick="Example()"><code>reduce()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>reduceRight()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>repeat()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>replace()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>replaceAll()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>seal()</code> <span>Object</span></a></li>
-          <li><a onclick="Example()"><code>search()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>slice()</code> <span>String - Array</span></a></li>
-          <li><a onclick="Example()"><code>some()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>sort()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>splice()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>split()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>startsWith()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>substring()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>toExponential(x)</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>toFixed(x)</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>toLocaleLowerCase()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>toLocaleString()</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>toLocaleUpperCase()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>toLowerCase()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>toPrecision(x)</code> <span>Number</span></a></li>
-          <li><a onclick="Example()"><code>toSorted()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>toSpliced()</code> <span>Array</span></a></li>
-          <li><a onclick="Example()"><code>toString()</code> <span>Number - String - Boolean - Array - Object</span></a></li>
-          <li><a onclick="Example()"><code>toUpperCase()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>toWellFormed()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>trim()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>trimEnd()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>trimStart()</code> <span>String</span></a></li>
-          <li><a onclick="Example()"><code>valueOf()</code> <span>Number - String - Boolean - Array - Object</span></a></li>
-          <li><a onclick="Example()"><code>values()</code> <span>Object</span></a></li>
+          <li><a onclick="EXAMPLE()"><code>EXAMPLE</code><span></span></a></li>
         </ul>
       </section>
 
-      <!---------------------------------------------------------------------------- FILL METHOD ---------------------------------------------------------------------------->
-      <section id="Fill-Method" class="Box-Contents">
+      <!----------------------------------------------------------------------- CONSTRUCTOR PROPERTY ------------------------------------------------------------------------>
+      <section id="Constructor-Property" class="Box-Contents">
         <header>
-          <h2 onclick="FillMethod()"><code><i>myArray</i>.fill(<i>myElement</i>, <i>myIndex</i>, <i>myPosition</i>)</code></h2>
-          <p>The <code>fill()</code> method fills specified elements in an array with a value.</p>
-          <p>The <code>fill()</code> method overwrites the original array.</p>
-          <p>The <code>myIndex</code> and <code>myPosition</code> can be specified. (if omitted, all elements will be filled)</p>
+          <h2 onclick="ConstructorProperty()"><code>constructor</code> Property</h2>
+          <p>The <code>constructor</code> property returns the function that created the specific data type prototype.</p>
         </header>
 
         <div class="Sub-Topics">
-          <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.fill("Dahlia"); // ['Dahlia', 'Dahlia', 'Dahlia']</code></p>
-          <p><code>myArray.fill("Dahlia", 1, 3); // ['Apple', 'Dahlia', 'Dahlia']</code></p>
-          <p><code>myArray.fill("Dahlia", 1, 4); // ['Apple', 'Dahlia', 'Dahlia']</code></p>
+          <h3>Demo for Datatype Number</h3>
+          <p><code>
+            let <i>myNumber</i> = 100; <br>
+            <i>myNumber</i>.constructor; // [Function: Number]
+          </code></p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Demo for Datatype String</h3>
+          <p><code>
+            let <i>myString</i> = "Hello"; <br>
+            <i>myString</i>.constructor; // [Function: String]
+          </code></p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Demo for Datatype Boolean</h3>
+          <p><code>
+            let <i>myBoolean</i> = true; <br>
+            <i>myBoolean</i>.constructor; // [Function: Boolean]
+          </code></p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Demo for Datatype Array</h3>
+          <p><code>
+            let <i>myArray</i> = [30, "Hi", false]; <br>
+            <i>myArray</i>.constructor; // [Function: Array]
+          </code></p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Demo for Datatype Object</h3>
+          <p><code>
+            let <i>myObject</i> = { name: "John", age: 25, availability: true }; <br>
+            <i>myObject</i>.constructor; // [Function: Object]
+          </code></p>
+        </div>
+
+        <div class="Sub-Topics">
+          <h3>Demo for <code>null</code> & <code>undefined</code></code></h3>
+          <p><code>
+            let <i>myVariable1</i> = null; <br>
+            <i>myVariable1</i>.constructor; // TypeError: Cannot read properties of null (reading 'constructor') <br><br>
+
+            let <i>myVariable2</i> = undefined; <br>
+            <i>myVariable2</i>.constructor; // TypeError: Cannot read properties of undefined (reading 'constructor')
+          </code></p>
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- JOIN METHOD ---------------------------------------------------------------------------->
-      <section id="Join-Method" class="Box-Contents">
+      <!------------------------------------------------------------------------- EPSILON PROPERTY -------------------------------------------------------------------------->
+      <section id="Epsilon-Property" class="Box-Contents">
         <header>
-          <h2 onclick="JoinMethod()"><code><i>myArray</i>.join("<i>mySeparator</i>")</code></h2>
-          <p>The <code>join()</code> method returns an array as a string.</p>
-          <p>The <code>join()</code> method does not change the original array.</p>
-          <p>Any separator can be specified. (the default is comma)</p>
+          <h2 onclick="EpsilonProperty()"><code>EPSILON</code> Property</h2>
+          <p>The <code>EPSILON</code> returns the difference between the smallest floating point number greater than 1 and 1.</p>
+          <p>If <code><i>myVariable</i>.EPSILON</code> is written, it will return <code>undefined</code>.</p>
+          <p>Therefore, need to write exactly like <code>Number.EPSILON</code>, which has the value of <code>2.220446049250313e-16</code>.</p>
         </header>
 
         <div class="Sub-Topics">
           <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.join(); // Apple,Banana,Carbonara</code></p>
-          <p><code>myArray.join(", "); // Apple, Banana, Carbonara</code></p>
-          <p><code>myArray.join(" - "); // Apple - Banana - Carbonara</code></p>
+          <p><code>
+            let <i>myVariable</i> = 100; <br>
+            <i>myVariable</i>.EPSILON; // undefined <br><br>
+            Number.EPSILON; // 2.220446049250313e-16
+          </code></p>
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- POP METHOD ----------------------------------------------------------------------------->
-      <section id="Pop-Method" class="Box-Contents">
+      <!------------------------------------------------------------------------- ISFINITE() METHOD ------------------------------------------------------------------------->
+      <section id="IsFinite-Method" class="Box-Contents">
         <header>
-          <h2 onclick="PopMethod()"><code><i>myArray</i>.pop()</code></h2>
-          <p>The <code>pop()</code> method removes the last element of an array.</p>
-          <p>The <code>pop()</code> method changes the original array.</p>
-          <p>The <code>pop()</code> method returns the removed element.</p>
+          <h2 onclick="IsFiniteMethod()"><code>isFinite()</code> Method</h2>
+          <p>The <code>isFinite()</code> method returns true if a <b>value</b> is a finite number.</p>
+          <p>The <code>isFinite()</code> method converts the value to a number before testing it.</p>
+          <p>Otherwise it returns <code>false</code>.</p> <br>
+
+          <p>The <code>Number.isFinite()</code> method returns true if a <b>number</b> is a finite number.</p>
+          <p>If the data type is not in number data type, it returns <code>false</code>.</p>
         </header>
 
         <div class="Sub-Topics">
           <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.pop(); // Carbonara</code></p>
-          <p><code>console.log(myArray); // ['Apple', 'Banana']</code></p>
+          <p><code>
+            let <i>myNumber1</i> = 100; // number <br>
+            isFinite(<i>myNumber1</i>); // true <br>
+            Number.isFinite(<i>myNumber1</i>); // true <br><br>
+
+            let <i>myNumber2</i> = "100"; // string <br>
+            isFinite(<i>myNumber2</i>); // true <br>
+            Number.isFinite(<i>myNumber2</i>); // false <br><br>
+
+            let <i>myNumber3</i> = Infinity; // number <br>
+            isFinite(<i>myNumber3</i>); // false <br>
+            Number.isFinite(<i>myNumber3</i>); // false <br><br>
+
+            let <i>myNumber4</i> = true; // boolean <br>
+            isFinite(<i>myNumber4</i>); // true <br>
+            Number.isFinite(<i>myNumber4</i>); // false
+          </code></p>
         </div>
       </section>
 
-      <!---------------------------------------------------------------------------- PUSH METHOD ---------------------------------------------------------------------------->
-      <section id="Push-Method" class="Box-Contents">
+      <!------------------------------------------------------------------------------ EXAMPLE ------------------------------------------------------------------------------>
+      <section id="EXAMPLE-Method" class="Box-Contents">
         <header>
-          <h2 onclick="PushMethod()"><code><i>myArray</i>.push(<i>myElement<sub>1</sub>, myElement<sub>2</sub>, ..., myElement<sub>n</sub></i>)</code></h2>
-          <p>The <code>push()</code> method adds new items to the end of an array.</p>
-          <p>The <code>push()</code> method changes the length of the array.</p>
-          <p>The <code>push()</code> method returns the new length.</p>
+          <h2 onclick="EXAMPLE()"><code>example</code> Method</h2>
+          <p></p>
         </header>
 
         <div class="Sub-Topics">
           <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.push("Dahlia"); // 4</code></p>
-          <p><code>console.log(myArray); // ['Apple', 'Banana', 'Carbonara', 'Dahlia']</code></p>
-        </div>
-      </section>
-
-      <!-------------------------------------------------------------------------- REVERSE METHOD --------------------------------------------------------------------------->
-      <section id="Reverse-Method" class="Box-Contents">
-        <header>
-          <h2 onclick="ReverseMethod()"><code><i>myArray</i>.reverse()</code></h2>
-          <p>The <code>reverse()</code> method reverses the order of the elements in an array.</p>
-          <p>The <code>reverse()</code> method overwrites the original array.</p>
-        </header>
-
-        <div class="Sub-Topics">
-          <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.reverse(); // ['Carbonara', 'Banana', 'Apple']</code></p>
-          <p><code>console.log(myArray); // ['Carbonara', 'Banana', 'Apple']</code></p>
-        </div>
-      </section>
-
-      <!--------------------------------------------------------------------------- SHIFT METHOD ---------------------------------------------------------------------------->
-      <section id="Shift-Method" class="Box-Contents">
-        <header>
-          <h2 onclick="ShiftMethod()"><code><i>myArray</i>.shift()</code></h2>
-          <p>The <code>shift()</code> method removes the first item of an array.</p>
-          <p>The <code>shift()</code> method changes the original array.</p>
-          <p>The <code>shift()</code> method returns the shifted element.</p>
-        </header>
-
-        <div class="Sub-Topics">
-          <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.shift(); // Apple</code></p>
-          <p><code>console.log(myArray); // ['Banana', 'Carbonara']</code></p>
-        </div>
-      </section>
-
-      <!------------------------------------------------------------------------ TOREVERSED METHOD -------------------------------------------------------------------------->
-      <section id="ToReversed-Method" class="Box-Contents">
-        <header>
-          <h2 onclick="ToReversedMethod()"><code><i>myArray</i>.toReversed()</code></h2>
-          <p>The <code>toReversed()</code> method reverses the order of the elements in an array.</p>
-          <p>The <code>toReversed()</code> method returns a new array.</p>
-          <p>The <code>toReversed()</code> method does not overwrites the original array.</p>
-          <p>The <code>toReversed()</code> method is the copying version of the <code>reverse()</code> method</p>
-        </header>
-
-        <div class="Sub-Topics">
-          <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.toReversed(); // ['Carbonara', 'Banana', 'Apple']</code></p>
-          <p><code>console.log(myArray); // ['Apple', 'Banana', 'Carbonara']</code></p>
-        </div>
-      </section>
-
-      <!-------------------------------------------------------------------------- UNSHIFT METHOD --------------------------------------------------------------------------->
-      <section id="Unshift-Method" class="Box-Contents">
-        <header>
-          <h2 onclick="UnshiftMethod()"><code><i>myArray</i>.unshift(<i>myElement<sub>1</sub>, myElement<sub>2</sub>, ..., myElement<sub>n</sub></i>)</code></h2>
-          <p>The <code>unshift()</code> method adds new elements to the beginning of an array.</p>
-          <p>The <code>unshift()</code> method overwrites the original array.</p>
-        </header>
-
-        <div class="Sub-Topics">
-          <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.unshift("Dahlia"); // 4</code></p>
-          <p><code>console.log(myArray); // ['Dahlia', 'Apple', 'Banana', 'Carbonara']</code></p>
-        </div>
-      </section>
-
-      <!---------------------------------------------------------------------------- WITH METHOD ---------------------------------------------------------------------------->
-      <section id="With-Method" class="Box-Contents">
-        <header>
-          <h2 onclick="WithMethod()"><code><i>myArray</i>.with(<i>myIndex</i>, <i>myElement</i>)</code></h2>
-          <p>The <code>with()</code> method updates a specified array element.</p>
-          <p>The <code>with()</code> method returns a new array.</p>
-          <p>The <code>with()</code> method does not change the original array.</p>
-        </header>
-
-        <div class="Sub-Topics">
-          <h3>Demo</h3>
-          <p><code>let myArray = ["Apple", "Banana", "Carbonara"]; // ['Apple', 'Banana', 'Carbonara']</code></p>
-          <p><code>myArray.with(2, "Dahlia"); // ['Apple', 'Banana', 'Dahlia']</code></p>
-          <p><code>console.log(myArray); // ['Apple', 'Banana', 'Carbonara']</code></p>
         </div>
       </section>
 
