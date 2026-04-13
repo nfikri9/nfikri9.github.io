@@ -55,6 +55,62 @@ function EpsilonProperty() {
   }
 }
 
+function MaxSafeIntegerProperty() {
+  let MaxSafeIntegerProperty = document.getElementById("MaxSafeInteger-Property");
+  let JavaScriptReferences = document.getElementById("JavaScript-References");
+
+  if (MaxSafeIntegerProperty.style.display === "block") {
+    MaxSafeIntegerProperty.style.display = "none";
+    JavaScriptReferences.style.display = "block";
+  }
+  else {
+    MaxSafeIntegerProperty.style.display = "block";
+    JavaScriptReferences.style.display = "none";
+  }
+}
+
+function MinSafeIntegerProperty() {
+  let MinSafeIntegerProperty = document.getElementById("MinSafeInteger-Property");
+  let JavaScriptReferences = document.getElementById("JavaScript-References");
+
+  if (MinSafeIntegerProperty.style.display === "block") {
+    MinSafeIntegerProperty.style.display = "none";
+    JavaScriptReferences.style.display = "block";
+  }
+  else {
+    MinSafeIntegerProperty.style.display = "block";
+    JavaScriptReferences.style.display = "none";
+  }
+}
+
+function MaxValueProperty() {
+  let MaxValueProperty = document.getElementById("MaxValue-Property");
+  let JavaScriptReferences = document.getElementById("JavaScript-References");
+
+  if (MaxValueProperty.style.display === "block") {
+    MaxValueProperty.style.display = "none";
+    JavaScriptReferences.style.display = "block";
+  }
+  else {
+    MaxValueProperty.style.display = "block";
+    JavaScriptReferences.style.display = "none";
+  }
+}
+
+function MinValueProperty() {
+  let MinValueProperty = document.getElementById("MinValue-Property");
+  let JavaScriptReferences = document.getElementById("JavaScript-References");
+
+  if (MinValueProperty.style.display === "block") {
+    MinValueProperty.style.display = "none";
+    JavaScriptReferences.style.display = "block";
+  }
+  else {
+    MinValueProperty.style.display = "block";
+    JavaScriptReferences.style.display = "none";
+  }
+}
+
 ///////////////////////////////////////////////////////////////////////////////// METHOD /////////////////////////////////////////////////////////////////////////////////
 function IsFiniteMethod() {
   let IsFiniteMethod = document.getElementById("IsFinite-Method");
@@ -66,6 +122,62 @@ function IsFiniteMethod() {
   }
   else {
     IsFiniteMethod.style.display = "block";
+    JavaScriptReferences.style.display = "none";
+  }
+}
+
+function IsIntegerMethod() {
+  let IsIntegerMethod = document.getElementById("IsInteger-Method");
+  let JavaScriptReferences = document.getElementById("JavaScript-References");
+
+  if (IsIntegerMethod.style.display === "block") {
+    IsIntegerMethod.style.display = "none";
+    JavaScriptReferences.style.display = "block";
+  }
+  else {
+    IsIntegerMethod.style.display = "block";
+    JavaScriptReferences.style.display = "none";
+  }
+}
+
+function IsNanMethod() {
+  let IsNanMethod = document.getElementById("IsNan-Method");
+  let JavaScriptReferences = document.getElementById("JavaScript-References");
+
+  if (IsNanMethod.style.display === "block") {
+    IsNanMethod.style.display = "none";
+    JavaScriptReferences.style.display = "block";
+  }
+  else {
+    IsNanMethod.style.display = "block";
+    JavaScriptReferences.style.display = "none";
+  }
+}
+
+function IsSafeIntegerMethod() {
+  let IsSafeIntegerMethod = document.getElementById("IsSafeInteger-Method");
+  let JavaScriptReferences = document.getElementById("JavaScript-References");
+
+  if (IsSafeIntegerMethod.style.display === "block") {
+    IsSafeIntegerMethod.style.display = "none";
+    JavaScriptReferences.style.display = "block";
+  }
+  else {
+    IsSafeIntegerMethod.style.display = "block";
+    JavaScriptReferences.style.display = "none";
+  }
+}
+
+function ParseFloatMethod() {
+  let ParseFloatMethod = document.getElementById("ParseFloat-Method");
+  let JavaScriptReferences = document.getElementById("JavaScript-References");
+
+  if (ParseFloatMethod.style.display === "block") {
+    ParseFloatMethod.style.display = "none";
+    JavaScriptReferences.style.display = "block";
+  }
+  else {
+    ParseFloatMethod.style.display = "block";
     JavaScriptReferences.style.display = "none";
   }
 }
